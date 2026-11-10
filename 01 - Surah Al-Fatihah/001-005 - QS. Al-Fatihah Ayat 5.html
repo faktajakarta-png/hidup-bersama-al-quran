@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-005 - QS. Al-Fatihah Ayat 5 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="001-004 - QS. Al-Fatihah Ayat 4.html">&larr; Ayat Sebelumnya (QS. 1:4)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="001-006 - QS. Al-Fatihah Ayat 6.html">Ayat Berikutnya (QS. 1:6) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Poros 2 (Jantung Al-Fatihah): Kontrak Ubudiyyah & Isti'anah</span>
+        <span class="badge">4 Kata | 19 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 5</h1>
+    <div class="transliteration">
+        "Iyyāka na'budu wa iyyāka nasta'īn."
+    </div>
+    <div class="thematic-title">
+        Poros Eksistensial Al-Qur'an: Revolusi Sapaan Langsung (Iltifāt), Eksklusivitas Tauhid Ibadah (Iyyāka Na'budu) dan Tauhid Tawakal (Wa Iyyāka Nasta'īn), serta Pembebasan Jiwa dari Riya' dan Kibriya'
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 2: Titik Temu Antara Hak Allah dan Permohonan Hamba)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝٥
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Hanya kepada Engkau-lah kami menyembah (menundukkan diri dengan puncak kecintaan dan kepatuhan), dan hanya kepada Engkau-lah kami memohon pertolongan (dalam menjalankan ketaatan dan seluruh urusan hidup kami)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Kata <em>Iyyāka</em> adalah objek (<em>maf'ūl bih</em>) yang dikedepankan mendahului kata kerjanya, sehingga dalam Bahasa Indonesia wajib diterjemahkan dengan partikel pengkhususan <strong>"Hanya kepada Engkau-lah"</strong> (<em>Lā na'budu illā iyyāka, wa lā nasta'īnu illā bika</em>). Selain itu, kata kerja <em>Na'budu</em> dan <em>Nasta'īn</em> berbentuk <em>fi'il mudhāri'</em> dengan subjek jamak <strong>"Kami"</strong>, yang mengikrarkan kesadaran komunal jamaah kaum beriman bersama para malaikat dan seluruh makhluk yang bertasbih.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>إِيَّاكَ</strong><br>(<em>Iyyāka</em>)</td>
+                <td>
+                    <strong>Hamzah Qatha'</strong> di awal kata dibaca kasrah tegas (<em>taḥqīq</em>) dari pangkal tenggorokan.<br>
+                    <strong>Huruf Yā' Bertasydid (Nabrah):</strong> Wajib ditekan dengan jelas (<em>tasydīd wa nabr</em>) dari tengah lidah tanpa mengubahnya menjadi ghunnah hidung; para ulama tajwid memperingatkan agar tidak melemahkan tasydid <em>Yā'</em> karena jika dibaca tanpa tasydid (<em>iyāka</em>), maknanya dalam bahasa Arab berubah drastis menjadi "cahaya matahari"!<br>
+                    <strong>Mad Thabi'i</strong> 2 harakat diikuti <em>Kāf</em> fathah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat bulat (<em>ijma'</em>) membaca <em>Iyyāka</em> dengan kasrah pada hamzah dan tasydid penuh pada <em>Yā'</em>.<br>
+                    Dalam riwayat qira'at syadzah (di luar mutawatirah): 'Amr bin Fa'id membaca <em>Iyāka</em> (tanpa tasydid, yang ditolak oleh jumhur ulama karena merusak makna); Al-Fadhl Ar-Raqasyi membaca <em>Ayyāka</em> (dengan fathah hamzah); dan Abu السوار Al-Ghanawi membaca <em>Hiyyāka</em> (mengganti hamzah dengan ha').
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>نَعْبُدُ</strong><br>(<em>Na'budu</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain Sukun:</strong> Keluar dari tengah tenggorokan (<em>wasthul halq</em>) dengan sifat <strong>Tawassuth / Bainiyyah</strong> (aliran suara sedang, tidak tercekik keras/syiddah dan tidak memantul/qalqalah).<br>
+                    <strong>Huruf Bā'</strong> dan <strong>Dāl</strong> dibaca dhommah sempurna (<em>itmamudh-dhamm</em>) dengan memonyongkan kedua bibir secara proporsional tanpa menyeret dhommah <em>Dāl</em> menjadi huruf wawu mad (jangan dibaca <em>na'budū</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Na'budu</em> dengan dhommah pada <em>Dāl</em> sebagai fi'il mudhari' marfu'. Dalam qira'at syadzah diriwayatkan bacaan <em>Yu'badu</em> (mabni majhul).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَإِيَّاكَ</strong><br>(<em>Wa iyyāka</em>)</td>
+                <td>
+                    <strong>Huruf Wāw</strong> fathah diikuti <em>Hamzah Qatha'</em> kasrah dan <em>Yā'</em> bertasydid yang kuat (<em>nabr</em>) serta <em>Mad Thabi'i</em> 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat mengulang kata <em>Iyyāka</em> kedua kalinya dengan bacaan yang identik dengan yang pertama.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>نَسْتَعِينُ</strong><br>(<em>Nasta'īnu</em>)</td>
+                <td>
+                    <strong>Huruf Sīn Sukun:</strong> Memiliki sifat <em>hams</em>, <em>rikhwah</em>, dan <em>shafir</em> (desis jernih).<br>
+                    <strong>Huruf Tā'</strong> fathah tipis (<em>tarqiq</em>, hati-hati jangan menebalkannya menjadi <em>Thā'</em>).<br>
+                    <strong>Huruf 'Ain</strong> kasrah murni diikuti <em>Yā' Mad</em>.<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Saat waqaf dibaca 2, 4, atau 6 harakat dengan penghentian suara <em>tawassuth</em> pada <em>Nūn</em> sukun.
+                </td>
+                <td>
+                    <strong>Perbedaan Qira'at pada Harakat Nūn Pertama:</strong><br>
+                    • Seluruh sepuluh imam mutawatirah membaca dengan <strong>fathah pada Nūn</strong> (<em>Nasta'īnu</em>) sesuai bahasa Quraisy dan Hijaz.<br>
+                    • Tercatat dalam riwayat dari Yahya bin Watstsab dan Al-A'masy (dialek Bani Asad, Tamim, dan Qais) pembacaan kasrah pada <em>Nūn</em> (<em>Nista'īnu</em>) untuk menunjukkan bahwa huruf asal fi'il tsulatsinya adalah <em>'Awn</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Sahih & Atsar Salaf tentang Poros Ubudiyyah</h3>
+    <div class="hadith-box">
+        <strong>1. Lanjutan Hadits Qudsi Sahih Muslim (No. 395) dari Abu Hurairah r.a. — Titik Pertemuan Antara Allah dan Hamba-Nya:</strong><br>
+        Rasulullah ﷺ bersabda bahwa Allah Ta'ala berfirman: <em>"Fa-idzā qāla: 'Iyyāka na'budu wa iyyāka nasta'īn', qāla: 'Hādzā baynī wa bayna 'abdī, wa li'abdī mā sa'ala'..."</em> (Apabila hamba mengucapkan: <em>"Iyyāka na'budu wa iyyāka nasta'īn"</em>, maka Allah berfirman: <strong>"Inilah bagian yang terbagi antara Aku dan hamba-Ku, dan bagi hamba-Ku apa yang ia mohonkan!"</strong>). Separuh kalimat ini (<em>Iyyāka na'budu</em>) adalah hak Allah (tauhid uluhiyyah), dan separuh keduanya (<em>Wa iyyāka nasta'īn</em>) adalah permohonan pertolongan hamba yang dijamin pengabulannya oleh Allah.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Riwayat Tirmidzi (No. 2516, Hasan Sahih) dan Ahmad dari Ibnu Abbas r.a. — Wasiat Agung Nabi ﷺ tentang Hakikat Ayat 5:</strong><br>
+        Rasulullah ﷺ berwasiat kepada Ibnu Abbas r.a.: <em>"Yā ghulām, innī u'allimuka kalimātin: Iḥfazhillāha yaḥfazhka, iḥfazhillāha tajid-hu tujāhaka; idzā sa'alta fas'alillāha, wa idzasta'anta fasta'in billāh!"</em> (Wahai anak muda, sesungguhnya aku akan mengajarkan kepadamu beberapa kalimat: Jagalah hak Allah niscaya Dia menjagamu; apabila engkau meminta maka mintalah kepada Allah, dan <strong>apabila engkau memohon pertolongan maka mohonlah pertolongan kepada Allah</strong>!).
+    </div>
+    <div class="hadith-box">
+        <strong>3. Atsar Al-Hasan Al-Bashri dan Ibnu Qayyim Al-Jauziyyah — Rahasia Seluruh Kitab Suci Bermuara pada Ayat Ini:</strong><br>
+        Diriwayatkan dari Al-Hasan Al-Bashri dan dijabarkan oleh Ibnu Qayyim dalam <em>Madārijus-Sālikīn</em> (1/78): <em>"Allah menurunkan 104 kitab suci dari langit; seluruh rahasia kitab-kitab itu terhimpun di dalam tiga kitab (Taurat, Injil, Zabur), dan ketiganya terhimpun di dalam Al-Qur'an, dan rahasia Al-Qur'an terhimpun di dalam Al-Fatihah, dan seluruh rahasia Al-Fatihah terhimpun di dalam dua kalimat ini: <strong>Iyyāka na'budu wa iyyāka nasta'īn</strong>!"</em>
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Iyyāka (إِيَّاكَ):</strong><br>
+            Merupakan <em>dhamīr munfashil</em> (kata ganti terpisah) khusus untuk kedudukan objek (<em>nashab</em>). Ulama Nahwu (Sibawaih dan Al-Khalil) menetapkan bahwa kata dasarnya adalah <em>Iyyā</em>, sedangkan huruf <em>Kāf</em> adalah <em>harf khithāb</em> (penanda lawan bicara tunggal). Pemakaian <em>Iyyāka</em> di awal kalimat berfungsi memusatkan seluruh perhatian dan menafikan sekutu (<em>al-ikhtishāsh wal-ḥashr</em>).
+        </li>
+        <li>
+            <strong>Na'budu (نَعْبُدُ — Akar Kata: ع-ب-د):</strong><br>
+            Berakar dari <em>'Ain-Bā'-Dāl</em> yang secara leksikal memiliki makna <strong>ketundukan, kerendahan hati, dan perataan jalan</strong> (seperti ungkapan Arab: <em>tharīqun mu'abbadun</em> = jalan yang telah diratakan dan diinjak-injak sehingga mudah dilalui, dan <em>ba'īrun mu'abbadun</em> = unta yang telah jinak dan patuh sepenuhnya).<br>
+            Secara terminologi syariat dan semantik Al-Qur'an, sebagaimana dirumuskan oleh Syaikhul Islam Ibnu Taimiyyah dan Ibnu Qayyim: <strong>Al-'Ibādah adalah perpaduan antara puncak kecintaan (ghāyatul-ḥubb) dengan puncak ketundukan dan perendahan diri (ghāyatudz-dzull)</strong>. Seseorang yang mencintai sesuatu namun tidak tunduk kepadanya belum disebut menyembahnya; demikian pula orang yang tunduk kepada penguasa tetapi membencinya tidak disebut menyembahnya. Ibadah kepada Allah hanya sah apabila menghimpun cinta tertinggi (yang lahir dari Ayat 3: <em>Ar-Raḥmānir-Raḥīm</em>) dan ketundukan tertinggi (yang lahir dari Ayat 4: <em>Māliki yawmid-dīn</em>)!
+        </li>
+        <li>
+            <strong>Nasta'īn (نَسْتَعِينُ — Akar Kata: ع-و-ن):</strong><br>
+            Berakar dari <em>'Ain-Wāw-Nūn</em> (<em>al-'awn</em> = pertolongan dan dukungan kekuatan). Masuk ke dalam wazan <em>Istaf'ala – Yastaf'ilu</em> (ٱسْتَفْعَلَ) yang memiliki fungsi morfologis <strong>Ath-Thalab</strong> (meminta dan mencari dengan sungguh-sungguh). Maka <em>Nasta'īn</em> bermakna: kami memohon pertolongan, taufik, dan kekuatan dari-Mu semata karena kami sadar kami tidak memiliki daya dan upaya (<em>lā ḥawla wa lā quwwata illā billāh</em>).
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>إِيَّاكَ</strong></td>
+                <td>
+                    <em>Iyyā</em>: Dhamir nashab munfashil.<br>
+                    <em>-ka</em>: Harf khithab mudzakkar mufrad.
+                </td>
+                <td>
+                    <strong>Maf'ūl Bih Muqaddam</strong> (objek yang dikedepankan wajib karena dhamir munfashil) bagi fi'il <em>na'budu</em>, mabni 'alas-sukun fi mahalli nashb; dan <em>Kāf</em> adalah harf khithab mabni 'alal-fath <em>lā maḥalla lahū minal-i'rāb</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>نَعْبُدُ</strong></td>
+                <td>
+                    Fi'il mudhari' dari tsulatsi mujarrad <em>'abada - ya'budu</em> (Bab <em>Nashara</em>).
+                </td>
+                <td>
+                    <strong>Fi'il Mudhāri'</strong> marfu' karena bebas dari amil nashab dan jazm, tanda rafa'-nya dhommah zhahirah. <strong>Fā'il</strong>-nya dhamir mustatir wujuban takdirnya <em>Naḥnu</em> (Kami). Jumlah fi'liyyah <em>lā maḥalla lahā minal-i'rāb</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَإِيَّاكَ</strong></td>
+                <td>
+                    <em>Wa-</em>: Huruf 'athaf.<br>
+                    <em>Iyyāka</em>: Dhamir nashab munfashil + harf khithab.
+                </td>
+                <td>
+                    <em>Wa-</em> huruf 'athaf mabni 'alal-fath. <em>Iyyāka</em> <strong>Maf'ūl Bih Muqaddam</strong> bagi fi'il <em>nasta'īnu</em>, mabni fi mahalli nashb.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>نَسْتَعِينُ</strong></td>
+                <td>
+                    Fi'il mudhari' mazid tsulatsi (3 huruf tambahan: hamzah, sin, ta') dari <em>ista'āna - yasta'īnu</em> (asalnya <em>nastaw'inu</em>, terjadi <em>i'lāl bin-naql wal-qalb</em>: harakat kasrah wawu dipindah ke 'ain dan wawu diubah menjadi ya' mad).
+                </td>
+                <td>
+                    <strong>Fi'il Mudhāri'</strong> marfu' dengan tanda dhommah zhahirah, dan <strong>Fā'il</strong>-nya dhamir mustatir wujuban takdirnya <em>Naḥnu</em>. Jumlah kedua ini ma'thufah kepada jumlah pertama <em>Iyyāka na'budu</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi') — Enam Rahasia Retorika Agung Ayat 5</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Keindahan "Al-Iltifāt" dari Ghaib (Orang Ketiga) ke Mukhathab (Lawan Bicara Langsung):</strong><br>
+            Pada Ayat 1 hingga Ayat 4, Allah disebut dengan kata ganti orang ketiga (<em>ghaib</em>): <em>Bismillāh... Al-ḥamdu lillāh...</em> Seolah-olah hamba sedang berbicara *tentang* Allah dari kejauhan. Namun ketika hamba telah merenungi kasih sayang-Nya (Ayat 3) dan keagungan Hari Pembalasan-Nya (Ayat 4), jarak batin itu runtuh! Hamba merasakan kehadiran Allah begitu dekat di hadapannya (<em>maqām al-iḥsān wal-mushāhadah</em>), sehingga ia tidak lagi sanggup berkata <em>"Iyyāhu na'budu"</em> (Hanya kepada-Nya kami menyembah), melainkan langsung menyapa-Nya: <strong>"Iyyāka na'budu!"</strong> (Hanya kepada Engkau-lah kami menyembah!). Ini adalah salah satu puncak keindahan <em>Iltifāt</em> tertinggi dalam seluruh Al-Qur'an.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Pengedepanan Objek ("Taqdīm mā Ḥaqquhut-Ta'khīr") untuk Faedah Al-Ḥashr:</strong><br>
+            Kalimat biasa berbunyi <em>"Na'buduka wa nasta'īnuka"</em> (Kami menyembah-Mu dan memohon pertolongan-Mu), namun kalimat itu masih membuka celah bahwa selain menyembah Allah, seseorang mungkin juga menyembah selain-Nya. Dengan membalik struktur menjadi <strong>"Iyyāka na'budu wa iyyāka nasta'īn"</strong>, lahirlah kaidah <em>Al-Qashr</em> (pembatasan mutlak): meniadakan segala bentuk syirik dalam ibadah dan syirik dalam ketergantungan hati.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Mengapa Kata "Iyyāka" Diulang Dua Kali?</strong><br>
+            Mengapa tidak diringkas menjadi <em>"Iyyāka na'budu wa nasta'īn"</em>? Az-Zamakhsyari dan Ar-Razi menjelaskan: pengulangan <em>Iyyāka</em> menegaskan bahwa pengkhususan (<em>al-ḥashr</em>) berlaku secara independen untuk kedua hal: sebagaimana kita <strong>hanya</strong> menyembah Allah, maka dalam memohon pertolongan pun kita <strong>hanya</strong> bersandar kepada Allah semata.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Mengapa "Na'budu" (Ibadah) Didahulukan atas "Nasta'īn" (Permohonan Pertolongan)?</strong><br>
+            Padahal secara urutan waktu, hamba membutuhkan pertolongan Allah terlebih dahulu agar mampu beribadah! Para ulama menjelaskan empat hikmah mendalam:<br>
+            • <em>Na'budu</em> adalah <strong>tujuan akhir penciptaan (Al-Ghāyah — QS. Adz-Dzariyat: 56)</strong>, sedangkan <em>Nasta'īn</em> adalah <strong>sarana (Al-Wasīlah)</strong>; tujuan selalu lebih mulia untuk didahulukan daripada sarana.<br>
+            • <em>Na'budu</em> adalah hak Allah atas hamba, sedangkan <em>Nasta'īn</em> adalah kebutuhan hamba kepada Allah; adab seorang hamba adalah mendahulukan hak Tuhannya sebelum mengajukan permintaannya.<br>
+            • Mendahulukan <em>Na'budu</em> adalah tawassul dengan amal saleh agar permohonan <em>Nasta'īn</em> dan <em>Ihdinas-shirāthal-mustaqīm</em> segera dikabulkan.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Mengapa "Nasta'īn" Tidak Disebutkan Objek Permohonannya (<em>Ḥadzful-Muta'allaq lil-'Umūm</em>)?</strong><br>
+            Allah tidak membatasi kalimat dengan <em>"Wa iyyāka nasta'īnu 'alal-'ibādah"</em> (Hanya kepada-Mu kami memohon pertolongan atas ibadah saja), melainkan membiarkannya mutlak: <strong>"Wa iyyāka nasta'īn"</strong>. Tujuannya agar permohonan pertolongan itu bersifat <strong>universal (lil-'umūm)</strong>: kami memohon pertolongan-Mu dalam urusan ibadah, keluarga, rezeki, kesehatan, perjuangan, hingga sakaratul maut!
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia Penggunaan Dhamir Jamak "Kami" (<em>Na'budu / Nasta'īn</em>), Bukan Tunggal "Aku" (<em>A'budu / Asta'īn</em>):</strong><br>
+            Mengapa seorang Muslim yang sedang shalat sendirian di kamar tetap mengucapkan <em>"Kami menyembah"</em> dan bukan <em>"Aku menyembah"</em>? Karena dalam Islam, seorang mukmin tidak pernah berdiri sendirian dengan keangkuhan individualistiknya; ia meleburkan dirinya yang lemah ke dalam barisan besar seluruh hamba Allah yang saleh, para nabi, dan para malaikat, sehingga doanya diangkat bersama doa jamaah kaum beriman di seluruh penjuru bumi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Muara dari Ayat 1–4):</strong><br>
+            Ayat 1–4 memperkenalkan siapa Allah: Dzat yang penuh berkah (Ayat 1), Pencipta dan Pendidik semesta (Ayat 2), Pemilik kasih sayang luas dan abadi (Ayat 3), serta Penguasa Hari Pembalasan (Ayat 4). Setelah mengenal Allah melalui keempat ayat tersebut, Ayat 5 lahir sebagai kesimpulan aksiologis yang tak terelakkan: Dzat dengan sifat-sifat sedemikian agung itulah satu-satunya yang berhak disembah dan dimintai pertolongan!
+        </li>
+        <li>
+            <strong>Siyāq (Engsel Poros Tengah Surah Al-Fatihah):</strong><br>
+            Sebagaimana dinyatakan dalam Hadits Qudsi Sahih Muslim (No. 395), Ayat 5 adalah titik tengah yang membagi Surah Al-Fatihah menjadi dua bagian simetris: kalimat <em>Iyyāka na'budu</em> menyempurnakan bagian hak Allah (Ayat 1–4), dan kalimat <em>Wa iyyāka nasta'īn</em> membuka bagian doa dan hajat hamba (Ayat 6–7).
+        </li>
+        <li>
+            <strong>Liḥāq (Pengantar Langsung Menuju Doa Agung Ayat 6–7):</strong><br>
+            Setelah hamba mengikrarkan pada akhir Ayat 5: <em>"Wa iyyāka nasta'īn"</em> (Dan hanya kepada-Mu kami memohon pertolongan), seakan-akan muncul pertanyaan: <em>"Pertolongan apakah yang paling utama dan paling mendesak yang kalian minta?"</em> Maka Ayat 6–7 langsung menjawab sebagai <em>bayān</em> (perincian) dari permohonan pertolongan tersebut: <strong>"Ihdinas-shirāthal-mustaqīm!"</strong> (Tunjukilah kami jalan yang lurus!). Pertolongan terbesar bukanlah harta atau jabatan, melainkan hidayah di atas jalan yang lurus.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Pembebasan Manusia dari Perbudakan Berhala dan Oligarki</h3>
+    <p>
+        Dalam masyarakat Arab Jahiliyah maupun peradaban kuno lainnya, perbudakan manusia terjadi karena dua hal: penyembahan spiritual kepada berhala/penguasa (<em>syirkul-'ibādah</em>) dan ketergantungan nasib secara mutlak kepada patron oligarki (<em>syirkul-isti'ānah</em>). Kaum lemah di Makkah seperti Bilal bin Rabah, Khabbab bin Al-Arats, dan keluarga Yasir dipaksa menundukkan kepala kepada para bangsawan Quraisy karena dianggap menggantungkan hidup dan keamanan kepada mereka.<br>
+        Ketika kalimat <strong>"Iyyāka na'budu wa iyyāka nasta'īn"</strong> dikumandangkan, terjadilah emansipasi kemanusiaan terbesar dalam sejarah: seorang budak dan seorang bangsawan berdiri sejajar dalam satu shaf, mengikrarkan bahwa mereka tidak menyembah siapa pun selain Allah dan tidak menggantungkan nasib kepada siapa pun selain Allah.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān</em>:</strong><br>
+        At-Tabari menafsirkan <em>Iyyāka na'budu</em> berdasarkan riwayat Ibnu Abbas r.a.: <em>"Iyyāka nuwaḥḥidu wa nakhāfu wa narjū yā Rabbanā lā ghayraka"</em> (Hanya Engkau semata yang kami esakan, kami takuti, dan kami harapkan wahai Tuhan kami, bukan selain-Mu), dengan makna dasar <em>al-'ubūdiyyah</em> sebagai ketundukan dan kepatuhan (<em>adz-dzillah wath-thā'ah</em>). Sedangkan <em>Wa iyyāka nasta'īn</em> bermakna: <em>"Kami memohon pertolongan-Mu atas ketaatan kami kepada-Mu dan dalam seluruh urusan kami, bukan kepada berhala-berhala yang disembah oleh orang-orang kafir yang tidak mampu memberi manfaat maupun mudarat."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em>:</strong><br>
+        Ibnu Katsir merumuskan intisari teologis yang sangat tajam: <strong>"Kalimat yang pertama (Iyyāka na'budu) adalah pelepasan diri dari kemusyrikan dan riya' (tabarru' minasy-syirki war-riyā'), sedangkan kalimat yang kedua (Wa iyyāka nasta'īn) adalah pelepasan diri dari pengandalan daya dan kekuatan diri sendiri serta penyerahan urusan sepenuhnya kepada Allah عز وجل (tabarru' minal-ḥawli wal-quwwati wat-tafwīdhu ilallāh)."</strong> Beliau juga menukil bahwa ibadah adalah maqam paling mulia, sehingga ketika Allah menyebut Rasulullah ﷺ pada peristiwa tertinggi (Isra' Mi'raj dan penurunan Al-Qur'an), Allah menyifati beliau dengan gelar <em>'Abduhu</em> (Hamba-Nya — QS. Al-Isra': 1, QS. Al-Kahfi: 1).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi menjelaskan hikmah penggunaan kata ganti jamak <em>Na'budu</em> (Kami menyembah): seorang mukmin diperintahkan untuk tidak memisahkan diri dari jamaah kaum beriman. Dalam aspek hukum, Al-Qurthubi menekankan keutamaan shalat berjamaah dan persatuan umat yang tersirat langsung dari redaksi plural ayat ini.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Ibnu Qayyim Al-Jauziyyah (w. 751 H) — <em>Al-Kasysyāf</em> & <em>Madārijus-Sālikīn</em>:</strong><br>
+        Ibnu Qayyim menulis karya monumentalnya tiga jilid penuh (<em>Madārijus-Sālikīn bayna Manāzili Iyyāka Na'budu wa Iyyāka Nasta'īn</em>) khusus untuk membedah satu ayat ini! Beliau membagi manusia menjadi <strong>empat golongan</strong> berdasarkan ayat ini:<br>
+        1) <strong>Ahli Ibadah dan Isti'anah (Golongan Terbaik / Para Nabi & Mukmin Sejati):</strong> Menyembah hanya kepada Allah dan memohon pertolongan hanya kepada-Nya.<br>
+        2) <strong>Golongan yang Tidak Beribadah dan Tidak Ber-isti'anah:</strong> Orang-orang kafir yang sombong dan berpaling.<br>
+        3) <strong>Golongan yang Beribadah Tanpa Isti'anah yang Benar:</strong> Orang yang mengandalkan kekuatan dirinya sendiri (Qadariyyah atau orang yang ujub dengan amalnya).<br>
+        4) <strong>Golongan yang Meminta Pertolongan (Kekuatan/Kekeramatan) Tanpa Ibadah Syariat:</strong> Para pemuja hawa nafsu atau kebatinan menyimpang yang mencari kesaktian tanpa tunduk pada hukum Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Quraish Shihab menggarisbawahi dimensi kesadaran sosial dari kata <em>"Kami"</em> pada <em>Na'budu</em> dan <em>Nasta'īn</em>: Islam mendidik pemeluknya agar tidak menjadi saleh sendirian. Bahkan di saat paling privat ketika seorang hamba berbisik kepada Tuhannya di tengah malam, ia tetap membawa serta saudara-saudara seimannya dalam kata <em>"Kami"</em>. Ibadah ritual harus melahirkan solidaritas sosial.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka menegaskan bahwa <em>Iyyāka na'budu wa iyyāka nasta'īn</em> adalah fondasi kemerdekaan jiwa (<em>al-ḥurriyyah</em>) dalam Islam. Seseorang yang benar-benar menghayati ayat ini tidak akan pernah menjual imannya demi jabatan, tidak akan meminta-minta kepada kuburan atau dukun, dan tidak akan merendahkan harga dirinya di hadapan pemilik modal, karena ia tahu hanya Allah tempat ia mengabdi dan hanya Allah tempat ia bergantung.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian</th>
+                <th>Titik Kesepakatan (Ijma')</th>
+                <th>Ragaman Perspektif Ulama (Ikhtilaf & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Fungsi Kalimat "Iyyāka Na'budu"</strong></td>
+                <td>Sepakat menetapkan kemurnian Tauhid Uluhiyyah (Ikhlas) dan membatalkan segala bentuk syirik serta riya'.</td>
+                <td>Ulama Fiqih menekankan ketaatan lahiriah pada rukun syariat; Ulama Tasawuf/Suluk (Ibnu Qayyim, Al-Ghazali) menekankan perpaduan puncak cinta (<em>ghāyatul-ḥubb</em>) dan puncak ketundukan (<em>ghāyatudz-dzull</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Dhamir Jamak ("Kami")</strong></td>
+                <td>Sah diucapkan oleh orang yang shalat berjamaah maupun shalat sendirian (<em>munfarid</em>).</td>
+                <td>Sebagian mufassir memaknainya sebagai bentuk <em>tawadhu'</em> hamba yang menyertakan dirinya bersama jamaah mukminin dan malaikat; sebagian lain melihatnya sebagai syiar persatuan umat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Terapi Kognitif atas Dua Penyakit Kronis Jiwa: Riya' dan Ujub/Kبر</h3>
+    <p>
+        Dalam psikologi spiritual Islam, terdapat dua jebakan halus yang paling sering merusak amal manusia: (1) melakukan kebaikan agar dilihat dan dipuji orang lain (<strong>Riya'</strong>), dan (2) merasa bangga bahwa keberhasilan amal itu adalah hasil kecerdasan dan kehebatan dirinya sendiri (<strong>'Ujub / Kibr</strong>). Ayat 5 merancang sistem imun ganda untuk menyembuhkan kedua penyakit tersebut sekaligus:
+    </p>
+    <ul>
+        <li><strong>"Iyyāka Na'budu" Menyembuhkan Riya':</strong> Karena tujuan ibadah dikunci secara eksklusif hanya untuk Allah, maka penilaian manusia menjadi tidak relevan lagi bagi ketenangan batin seorang mukmin.</li>
+        <li><strong>"Wa Iyyāka Nasta'īn" Menyembuhkan 'Ujub dan Burnout:</strong> Ketika seseorang menyadari bahwa ia tidak sanggup mengangkat dahinya dari sujud atau menyelesaikan pekerjaannya tanpa pertolongan Allah (<em>isti'ānah</em>), mustahil ia menyombongkan amalnya. Secara neuropsikologis, perpaduan antara ikhtiar aktif (<em>na'budu</em>) dan penyerahan hasil/permohonan bantuan kepada Tuhan (<em>nasta'īn</em>) mencegah sindrom kelelahan mental (<em>burnout</em>) karena manusia tidak memikul beban semesta di pundaknya sendirian.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Berhala-Berhala Modern & Krisis Individualisme Hiper-Kompetitif</h3>
+    <ul>
+        <li>
+            <strong>Dekonstruksi "Berhala Kontemporer" (Uang, Algoritma, Kekuasaan, dan Hawa Nafsu):</strong> Manusia modern mungkin tidak lagi menyembah patung batu, namun banyak yang tanpa sadar jatuh ke dalam penghambaan (<em>'ubūdiyyah</em>) kepada harta (<em>'abdul-dirham wad-dīnār</em>), popularitas, atasan yang korup, atau hawa nafsu (QS. Al-Jatsiyah: 23). Ketika perintah Allah bertabrakan dengan tuntutan keuntungan finansial atau tren sosial, kepada siapakah kita tunduk? Ayat 5 memanggil kita kembali untuk memurnikan orientasi hidup hanya kepada Allah.
+        </li>
+        <li>
+            <strong>Melawan Alienasi Individualisme dengan Semangat "Kami" (Jama'ah):</strong> Budaya modern mengisolasi manusia dalam ruang individualisme ekstrem ("urusanmu adalah urusanmu, urusanku adalah urusanku"). Dengan mewajibkan setiap Muslim mengucapkan <em>"Kami menyembah dan kami memohon pertolongan"</em> sebanyak 17 kali sehari, Al-Qur'an menanamkan kesadaran kolektif: seorang Muslim wajib peduli pada kondisi iman, ekonomi, dan keselamatan komunitasnya.
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Memiliki "Amal Rahasia" (<em>Khabī'ah minal-'Amal</em>) Murni untuk Allah:</strong> Sebagai bukti nyata dari ikrar <em>Iyyāka na'budu</em>, tetapkan minimal satu amal kebaikan rutin (seperti sedekah diam-diam, shalat malam, atau mendoakan orang lain secara sembunyi-sembunyi) yang tidak diketahui oleh siapa pun kecuali Allah, bahkan oleh keluarga terdekat maupun media sosial.
+            </li>
+            <li>
+                <strong>Menghidupkan Zikir Isti'anah dalam Setiap Tugas Berat:</strong> Setiap kali menghadapi masalah rumit, beban kerja berat, atau godaan maksiat, padukan ikhtiar terbaik dengan memperbanyak zikir <em>"Lā ḥawla wa lā quwwata illā billāh"</em> dan doa Nabi ﷺ: <em>"Yā Ḥayyu yā Qayyūm, bi-raḥmatika astaghīts"</em>.
+            </li>
+            <li>
+                <strong>Memperkuat Ibadah Berjamaah & Kolaborasi Kebaikan:</strong> Wujudkan kata ganti jamak <em>"Kami"</em> pada <em>Na'budu wa nasta'īn</em> dengan menjaga shalat berjamaah di masjid atau bersama keluarga di rumah, serta aktif berkolaborasi dalam kegiatan sosial-keumatan.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika aku mengucapkan <em>"Iyyāka na'budu"</em> (Hanya kepada-Mu kami menyembah), benarkah hatiku sudah bersih dari menyembah penilaian manusia, uang, jabatan, dan hawa nafsuku sendiri?
+            </li>
+            <li>
+                Saat menghadapi kesulitan hidup, kepada siapakah hatiku pertama kali berlari mencari pertolongan: apakah langsung bersimpuh kepada Allah (<em>Wa iyyāka nasta'īn</em>), ataukah sibuk mengemis bantuan makhluk hingga melupakan Sang Pencipta?
+            </li>
+            <li>
+                Apakah ibadahku akan tetap sama khusyuk dan tekunnya di saat tidak ada satu pun manusia yang melihatku sebagaimana saat aku dilihat orang banyak?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma a'innā 'alā dzikrika wa syukrika wa ḥusni 'ibādatik — Ya Allah, tolonglah kami untuk senantiasa mengingat-Mu, bersyukur kepada-Mu, dan mempersembahkan ibadah terbaik kepada-Mu. Murnikanlah pengabdian kami dari kotoran syirik dan riya', serta bebaskanlah hati kami dari keangkuhan mengandalkan kekuatan diri sendiri. Janganlah Engkau serahkan urusan kami kepada diri kami sendiri walau sekejap mata pun. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="001-004 - QS. Al-Fatihah Ayat 4.html">&larr; Ayat Sebelumnya (QS. 1:4)</a>
+        <span><strong>QS. Al-Fātiḥah [1]: 5</strong></span>
+        <a href="001-006 - QS. Al-Fatihah Ayat 6.html">Lanjut ke Ayat 6 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-002 - QS. Al-Fatihah Ayat 2 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="001-001 - QS. Al-Fatihah Ayat 1.html">&larr; Ayat Sebelumnya (QS. 1:1)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="001-003 - QS. Al-Fatihah Ayat 3.html">Ayat Berikutnya (QS. 1:3) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Poros 1: Fondasi Tauhid, Rububiyyah & Rahmat Ilahi</span>
+        <span class="badge">4 Kata | 17 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 2</h1>
+    <div class="transliteration">
+        "Al-ḥamdu lillāhi Rabbil-'ālamīn."
+    </div>
+    <div class="thematic-title">
+        Teologi Pujian Semesta dan Kedaulatan Rububiyyah: Eksklusivitas "Al-Ḥamd" bagi Allah, Paradigma Tarbiyah Kosmik "Rabb", serta Kesatuan Ekosistem Seluruh Alam ('Ālamīn) di Bawah Pemeliharaan Ilahi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 1: Fondasi Tauhid, Rububiyyah & Rahmat Ilahi)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ۝٢
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Segala puji dan sanjungan kesempurnaan hanyalah milik Allah semata, Tuhan Yang Maha Menciptakan, Memiliki, Mengatur, dan Mendidik seluruh alam semesta."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Kata <em>Al-Ḥamdu</em> tidak sekadar bermakna "terima kasih" (<em>asy-syukr</em>), melainkan pujian tulus yang lahir dari pengagungan dan cinta atas keindahan serta kesempurnaan Dzat dan sifat-sifat Allah, baik sebelum maupun sesudah menerima nikmat. Kata <em>Rabb</em> mencakup makna Pencipta, Pemilik mutlak, Penguasa tertinggi, sekaligus Pendidik (<em>Al-Murabbī</em>) yang menumbuhkan setiap makhluk secara bertahap menuju kesempurnaannya.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱلْحَمْدُ</strong><br>(<em>Al-ḥamdu</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Saat memulai bacaan (<em>ibtida'</em>), dibaca fathah (<em>Al-</em>) karena menyertai <em>Lam Ta'rif</em>.<br>
+                    <strong>Idzhar Qamariyyah:</strong> <em>Lam Qamariyyah</em> sukun dibaca jelas dengan sifat <em>tawassuth</em> (aliran suara sedang) karena bertemu huruf <em>Ḥā'</em>.<br>
+                    <strong>Huruf Ḥā'</strong> fathah keluar dari <em>wasthul halq</em> dengan sifat <em>hams</em> bersih.<br>
+                    <strong>Idzhar Syafawi:</strong> <em>Mīm</em> sukun bertemu <em>Dāl</em> dibaca jelas di bibir tanpa ghunnah berlebih. Huruf <em>Dāl</em> dhommah sempurna tanpa memantul karena berharakat hidup.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat bulat (<em>ijma'</em>) membaca <em>Al-ḥamdu</em> dengan <strong>rafa' (dhommah pada Dāl)</strong> sebagai <em>mubtada'</em> kalimat berita (<em>jumlah khabariyyah</em>) yang menetapkan kemutlakan pujian.<br>
+                    Dalam riwayat qira'at syadzah (di luar mutawatirah): Sufyan bin 'Uyainah dan Ru'bah membaca <em>Al-ḥamda lillāhi</em> (nashab sebagai maf'ul muthlaq dari fi'il <em>Aḥmadu</em>); Ibnu Abi 'Ablah membaca <em>Al-ḥamdu lillāha</em>; dan Ibrahim bin Abi 'Ablah membaca <em>Al-ḥamdi lillāhi</em> (itba' kasrah). Bacaan mutawatir <em>Al-ḥamdu</em> dengan rafa' jauh lebih tinggi nilai balaghahnya karena menunjukkan ketetapan abadi (<em>ats-tsubūt wad-dawām</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>لِلَّهِ</strong><br>(<em>Lillāhi</em>)</td>
+                <td>
+                    <strong>Huruf Lām Jarr</strong> berharakat kasrah murni.<br>
+                    <strong>Lam Lafzhul Jalalah:</strong> Dibaca <strong>Tarqiq</strong> (tipis) karena didahului oleh kasrah pada <em>Lām Jarr</em>. Terdapat <em>Mad Thabi'i</em> 2 harakat.<br>
+                    <strong>Rasm Utsmani:</strong> Hamzah washal dan satu lam dihapus dalam rasm sehingga ditulis <strong>لِلَّهِ</strong> agar tidak berkumpul tiga huruf lam berturut-turut.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca <em>Lillāhi</em> dengan kasrah pada lam pertama dan kasrah pada ha' di akhir kata, disertai tarqiq penuh pada Lam Lafzhul Jalalah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>رَبِّ</strong><br>(<em>Rabbi</em>)</td>
+                <td>
+                    <strong>Huruf Rā'</strong> berharakat fathah dibaca <strong>Tafkhim</strong> (tebal).<br>
+                    <strong>Huruf Bā'</strong> bertasydid kasrah memiliki sifat <em>jahr</em> dan <em>syiddah</em> (tekanan tasydid yang mantap di kedua bibir tanpa qalqalah karena berharakat kasrah).
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah membaca <em>Rabbi</em> dengan <strong>jarr (kasrah pada Bā')</strong> sebagai <em>na'at</em> atau <em>badal</em> dari Lafzhul Jalalah <em>lillāhi</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلْعَـٰلَمِينَ</strong><br>(<em>Al-'ālamīna</em>)</td>
+                <td>
+                    <strong>Idzhar Qamariyyah</strong> pada <em>Lam Ta'rif</em> sukun bertemu huruf <em>'Ain</em>.<br>
+                    <strong>Huruf 'Ain</strong> fathah keluar dari tengah tenggorokan dengan sifat <em>tawassuth</em> disertai <em>Mad Thabi'i</em> (2 harakat pada alif khanjaraniyyah).<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Saat waqaf pada <em>Al-'ālamīn</em>, <em>Yā' Mad</em> bertemu <em>Nūn</em> yang disukunkan, dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuth</em> di ujung <em>Nūn</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at sepakat membaca <em>Al-'ālamīna</em> dengan jarr oleh <em>Yā'</em> (karena <em>mulḥaq bi-jam'il-mudzakkaris-sālim</em>), dan apabila disambung (<em>washal</em>) ke Ayat 3 maka <em>Nūn</em> dibaca fathah (<em>Al-'ālamīnar-Raḥmānir-Raḥīm</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Sahih Penjelas & Kedudukan Agung Tahmid</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Qudsi Sahih Muslim (No. 395) dari Abu Hurairah r.a. — Dialog Langsung Allah dengan Hamba Saat Membaca Al-Fatihah:</strong><br>
+        Rasulullah ﷺ bersabda bahwa Allah عز وجل berfirman: <em>"Qasamtush-shalāta baynī wa bayna 'abdī nishfayni, wa li'abdī mā sa'ala. Fa-idzā qālal-'abdu: 'Al-ḥamdu lillāhi Rabbil-'ālamīn', qālallāhu Ta'ālā: 'Ḥamidanī 'abdī'..."</em> (Aku telah membagi shalat [Surah Al-Fatihah] antara Aku dan hamba-Ku menjadi dua bagian, dan bagi hamba-Ku apa yang ia minta. Apabila seorang hamba mengucapkan: <em>"Al-ḥamdu lillāhi Rabbil-'ālamīn"</em>, maka Allah Ta'ala menjawab langsung: <strong>"Hamba-Ku telah memuji-Ku!"</strong>).
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 223) dari Abu Malik Al-Asy'ari r.a. & Sunan Ibnu Majah (No. 3800) — Tahmid Memenuhi Timbangan Amal dan Sebaik-baik Doa:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Ath-thuhūru syathrul-īmān, wal-ḥamdu lillāhi tamla'ul-mīzān, wa subḥānallāhi wal-ḥamdu lillāhi tamla'āni — aw tamla'u — mā baynas-samāwāti wal-ardh."</em> (Kesucian itu setengah dari iman, kalimat <em>Al-ḥamdu lillāh</em> memenuhi timbangan amal kebaikan, dan kalimat <em>Subḥānallāh wal-ḥamdu lillāh</em> memenuhi ruang antara langit dan bumi). Dalam riwayat Tirmidzi (No. 3383, hasan) dari Jabir bin Abdillah r.a.: <em>"Afdhaludz-dzikri Lā ilāha illallāh, wa afdhalud-du'ā'i Al-ḥamdu lillāh."</em> (Sebaik-baik zikir adalah <em>Lā ilāha illallāh</em>, dan sebaik-baik doa adalah <em>Al-ḥamdu lillāh</em>).
+    </div>
+    <div class="hadith-box">
+        <strong>3. Atsar Riwayat At-Tabari (1/135) dan An-Nasa'i dari Ibnu Abbas r.a. — Kalimat Syukur Seluruh Makhluk:</strong><br>
+        Ibnu Abbas r.a. berkata: <em>"Al-ḥamdu lillāhi kalimatani kullu syākirin..."</em> (<em>Al-ḥamdu lillāh</em> adalah kalimat setiap hamba yang bersyukur; ketika Nabi Adam a.s. bersin setelah ditiupkan ruh, kalimat pertama yang diajarkan Allah kepadanya adalah <em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em>; demikian pula kalimat Nuh a.s. saat selamat di atas bahtera [QS. Al-Mu'minun: 28], kalimat Ibrahim a.s. [QS. Ibrahim: 39], dan kalimat pamungkas penghuni surga [QS. Yunus: 10]).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Al-Ḥamdu (ٱلْحَمْدُ — Akar Kata: ح-م-د):</strong><br>
+            Berakar dari <em>Ḥā'-Mīm-Dāl</em> yang bermakna <em>ats-tsanā' bil-lisān 'alal-jamīl al-ikhtiyārī 'alā jihatit-ta'zhīm wal-maḥabbah</em> (sanjungan dengan lisan dan hati atas keindahan sifat maupun tindakan sukarela disertai pengagungan dan kecintaan).<br>
+            Dalam semantik Al-Qur'an (Ar-Raghib Al-Ashfahani dalam <em>Al-Mufradāt</em> dan Ibnu Faris dalam <em>Maqāyīs al-Lughah</em>), terdapat perbedaan tajam antara tiga kata serumpun:<br>
+            1) <strong>Al-Ḥamd vs Al-Madḥ (المدح):</strong> <em>Al-Madḥ</em> adalah pujian umum yang bisa ditujukan kepada benda mati (seperti memuji keindahan permata) dan kadang diucapkan secara palsu/menjilat tanpa rasa cinta. Sedangkan <strong>Al-Ḥamd</strong> hanya ditujukan kepada Dzat yang hidup, berkehendak, dan berbuat kebaikan secara sadar, serta wajib disertai rasa cinta dan pengagungan batin.<br>
+            2) <strong>Al-Ḥamd vs Asy-Syukr (الشكر):</strong> <em>Asy-Syukr</em> hanya dilakukan sebagai respons setelah seseorang menerima nikmat (sebabnya lebih sempit, namun medianya bisa dengan hati, lisan, dan anggota badan). Sedangkan <strong>Al-Ḥamd</strong> sebabnya jauh lebih luas: kita memuji Allah dengan <em>Al-Ḥamd</em> bukan hanya karena Dia memberi kita nikmat, tetapi juga karena <strong>kesempurnaan Dzat dan sifat-sifat-Nya sendiri</strong> (<em>Al-Ḥamdu 'alā kamālidz-dzāt wash-shifāt</em>), bahkan di saat seorang hamba sedang diuji kesulitan sekali pun!
+        </li>
+        <li>
+            <strong>Rabb (رَبّ — Akar Kata: ر-ب-ب):</strong><br>
+            Berakar dari <em>Rā'-Bā'-Bā'</em> (<em>rabba - yarubbu - rabban</em>). Secara morfologis, <em>Rabb</em> adalah <em>mashdar</em> yang digunakan sebagai <em>shifat musyabbahah</em> untuk menunjukkan kemutlakan. Medan semantik kata <em>Rabb</em> menghimpun lima pilar makna:<br>
+            1) <strong>Al-Khāliq (الموجد):</strong> Pencipta dari ketiadaan.<br>
+            2) <strong>Al-Mālik (المالك):</strong> Pemilik mutlak yang memegang hak penuh.<br>
+            3) <strong>As-Sayyid al-Muthā' (السيد المطاع):</strong> Penguasa tertinggi yang wajib ditaati.<br>
+            4) <strong>Al-Mudabbir wal-Mushliḥ (المدبر والمصلح):</strong> Pengatur dan pemelihara keteraturan kosmos.<br>
+            5) <strong>Al-Murabbī (المربي):</strong> Pendidik yang mengasuh dan mengembangkan sesuatu setahap demi setahap dari titik kelemahan awal menuju puncak kesempurnaannya (<em>tablīghusy-syay'i ilā kamālihi syay'an fa-syay'an</em>). Kata <em>Rabb</em> tanpa idhafah hanya boleh digunakan untuk Allah SWT.
+        </li>
+        <li>
+            <strong>Al-'Ālamīn (ٱلْعَـٰلَمِينَ — Akar Kata: ع-ل-م):</strong><br>
+            Jamak dari kata <em>'Ālam</em> (عَالَم) yang seakar dengan kata <em>'Ilm</em> (عِلْم = pengetahuan) dan <em>'Alāmah</em> (عَلَامَة = tanda/jejak). Mengapa seluruh jagat raya dan seluruh spesies makhluk disebut <em>'Ālam</em>? Karena <strong>setiap entitas di alam semesta adalah tanda ('alāmah) yang menunjuk pada keberadaan, keesaan, dan kebijaksanaan Sang Pencipta</strong>! Bentuk jamak <em>'Ālamīn</em> menggunakan akhiran <em>-īn</em> (jamak mudzakkar salim untuk makhluk berakal) berdasarkan kaidah <em>at-taghlīb</em> (memenangkan penyebutan makhluk berakal yaitu manusia, jin, dan malaikat di atas makhluk tak berakal), sekaligus mengisyaratkan bahwa terdapat beraneka ragam alam: alam manusia, alam malaikat, alam tumbuhan, alam kuantum, hingga alam galaksi yang tak terhitung jumlahnya.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱلْحَمْدُ</strong></td>
+                <td>
+                    <em>Al-</em>: Alif-Lam Jinsiyyah lil-Istighrāq (mencakup seluruh jenis dan satuan pujian).<br>
+                    <em>Ḥamdu</em>: Mashdar dari <em>ḥamida - yaḥmadu - ḥamdan</em>.
+                </td>
+                <td>
+                    <strong>Mubtada'</strong> (subjek kalimat nominal) marfu' dengan tanda dhommah zhahirah di akhir kata.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>لِلَّهِ</strong></td>
+                <td>
+                    <em>Li-</em>: Huruf jarr bermakna <em>Al-Istiḥqāq</em> (keberhakan mutlak) dan <em>Al-Ikhtishāsh</em> (pengkhususan).<br>
+                    <em>Allāhi</em>: Lafzhul Jalalah Isim 'Alam.
+                </td>
+                <td>
+                    <em>Li-</em> huruf jarr mabni 'alal-kasr. <em>Allāhi</em> Lafzhul Jalalah majrur dengan kasrah zhahirah.<br>
+                    <strong>Ta'alluq:</strong> <em>Jār wa Majrūr</em> berhubungan dengan <em>khabar mubtada'</em> yang dibuang (<em>wājibul-ḥadzf</em>), takdirnya: <em>tsābitun</em> atau <em>mustaḥaqqun lillāh</em> (tetap dan mutlak milik Allah).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>رَبِّ</strong></td>
+                <td>
+                    Shifat Musyabbahah di atas bentuk mashdar <em>fa'l</em> (رَبّ) dari <em>rabba - yarubbu</em>.
+                </td>
+                <td>
+                    <strong>Na'at</strong> (sifat) pertama bagi Lafzhul Jalalah <em>Allāhi</em> (atau <em>Badal</em> darinya), majrur dengan tanda kasrah zhahirah, dan ia berkedudukan sebagai <em>mudhāf</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَـٰلَمِينَ</strong></td>
+                <td>
+                    Isim jamak dari <em>'ālam</em> (wazan <em>fā'al</em>), <em>mulḥaq bi-jam'il-mudzakkaris-sālim</em>.
+                </td>
+                <td>
+                    <strong>Mudhāfun Ilayh</strong> majrur dengan tanda huruf <em>Yā'</em> karena mulhaq dengan jamak mudzakkar salim; huruf <em>Nūn</em> adalah pengganti tanwin pada isim mufrad.<br>
+                    <strong>Kedudukan Jumlah:</strong> <em>Jumlah Ismiyyah</em> isti'nafiyyah <em>lā maḥalla lahā minal-i'rāb</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Peralihan ke Jumlah Ismiyyah untuk Makna Keabadian (<em>Ad-Dawām wats-Tsubūt</em>):</strong><br>
+            Mengapa Al-Qur'an tidak menggunakan kalimat kerja (<em>Jumlah Fi'liyyah</em>) seperti <em>"Aḥmadullāha"</em> (Aku memuji Allah) atau <em>"Naḥmadullāha"</em> (Kami memuji Allah), melainkan menggunakan kalimat benda (<em>Jumlah Ismiyyah</em>): <strong>"Al-ḥamdu lillāh"</strong>? Para ulama Balaghah menjelaskan: jika menggunakan kata kerja (<em>fi'il</em>), maka pujian itu terikat oleh waktu dan bergantung pada eksistensi subjek manusia yang memuji (jika manusia berhenti memuji, pujian terputus). Namun dengan <em>Jumlah Ismiyyah</em> <strong>"Al-ḥamdu lillāh"</strong>, Al-Qur'an menyatakan sebuah fakta ontologis yang kekal: baik manusia memuji-Nya maupun kufur kepada-Nya, sejak azali hingga abadi, segala pujian tetaplah milik Allah!
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia "Al-Istighrāq" dan "Lām Al-Istiḥqāq":</strong><br>
+            Imbuhan <em>Alif-Lam</em> pada <em>Al-Ḥamdu</em> berfungsi sebagai <em>Al-Istighrāq</em> (menyerap habis seluruh jenis pujian yang ada di semesta), kemudian dipadukan dengan huruf <em>Lām</em> pada <em>Lillāh</em> yang bermakna <em>Al-Istiḥqāq wal-Ikhtishāsh</em> (kepemilikan eksklusif). Implikasinya sangat menggetarkan: ketika kita memuji kecerdasan ilmuwan, kelembutan seorang ibu, atau keindahan lukisan alam, hakikatnya pujian itu bermuara dan kembali kepada Allah karena Dialah yang menciptakan ilmu, kasih sayang, dan keindahan tersebut.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Ta'līl bil-Washf (Penyertaan Alasan melalui Sifat "Rabbil-'Ālamīn"):</strong><br>
+            Menyebut sifat <em>Rabbil-'ālamīn</em> tepat setelah <em>Al-ḥamdu lillāh</em> mengandung kaidah <em>Ta'līl al-Ḥukm</em> (memberikan alasan rasional atas ketetapan): "Mengapa segala puji mutlak milik Allah? Karena Dialah yang menciptakan, mendidik, dan memelihara seluruh alam semesta tanpa henti sedetik pun!"
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Hubungan Kausalitas dengan Ayat 1):</strong><br>
+            Pada Ayat 1, hamba memohon pertolongan dengan menyebut nama Allah Yang Maha Pengasih (<em>Ar-Raḥmān</em>) lagi Maha Penyayang (<em>Ar-Raḥīm</em>). Begitu pertolongan dan rahmat itu disadari, kalimat pertama yang lahir sebagai buah dari Basmalah adalah <em>Tahmid</em> (<em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em>). Basmalah adalah permohonan hidayah untuk memulai, dan Hamdalah adalah syukur atas terlaksananya permulaan tersebut.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Surah Al-Fatihah):</strong><br>
+            Ayat 2 adalah fondasi pertama dari tiga pilar ma'rifatullah dalam Surah Al-Fatihah: (1) Mengenal Allah melalui ciptaan dan pemeliharaan-Nya (<em>Rabbil-'ālamīn</em> — Ayat 2); (2) Mengenal Allah melalui kasih sayang-Nya (<em>Ar-Raḥmānir-Raḥīm</em> — Ayat 3); dan (3) Mengenal Allah melalui keadilan dan kedaulatan Hari Pembalasan-Nya (<em>Māliki yawmid-dīn</em> — Ayat 4). Ketiga ayat ini mempersiapkan jiwa hamba sebelum mengucapkan ikrar puncak: <em>Iyyāka na'budu wa iyyāka nasta'īn</em>.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Logis Menuju Ayat 3):</strong><br>
+            Kata <em>Rabb</em> (Penguasa dan Pemilik) dalam benak manusia sering kali diasosiasikan dengan kekuasaan yang keras dan mengintimidasi. Agar manusia tidak salah memahami kepemimpinan Allah atas alam semesta, Ayat 2 langsung disambung oleh Ayat 3: <em>Ar-Raḥmānir-Raḥīm</em>! Artinya, <em>Rubūbiyyah</em> (pengaturan dan pendidikan) Allah terhadap alam semesta sepenuhnya berlandaskan kasih sayang, bukan kesewenang-wenangan.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Meruntuhkan Kosmologi Politeistik dan Tribalisme Sempit</h3>
+    <p>
+        Pada abad ke-7 Masehi, kosmologi masyarakat dunia terbelah oleh politeisme dan chauvinisme kesukuan. Di Makkah, meskipun kaum musyrikin mengakui Allah sebagai Pencipta langit dan bumi (QS. Al-'Ankabut: 61), mereka membagi-bagi otoritas pemeliharaan harian (<em>Rubūbiyyah</em>) kepada dewa-dewa lokal dan berhala klan: ada berhala khusus untuk hujan, perang, kesuburan, dan perdagangan. Di luar Jazirah Arab, kekaisaran Persia menganut dualisme (Tuhan Terang vs Tuhan Gelap), sementara sebagian komunitas keagamaan mengklaim bahwa Tuhan hanyalah "Tuhan bangsa atau kelompok mereka saja".<br>
+        Proklamasi <strong>"Al-ḥamdu lillāhi Rabbil-'ālamīn"</strong> mengguncang seluruh bangunan kosmologi tersebut:
+        <br>1) <strong>Kosmologi Tauhidik Terpadu:</strong> Hanya ada satu <em>Rabb</em> yang memelihara seluruh lapis galaksi hingga partikel terkecil; tidak ada ruang bagi dewa-dewa perantara.
+        <br>2) <strong>Egalitarianisme Universal ('Ālamīn):</strong> Allah bukanlah "Tuhan suku Quraisy" atau "Tuhan bangsa Arab" semata, melainkan <strong>Rabb seluruh alam dan seluruh umat manusia</strong>. Kesadaran ini melahirkan persaudaraan kemanusiaan universal dan tanggung jawab ekologis atas seluruh makhluk.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān</em>:</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>Al-ḥamdu lillāh</em> adalah: <em>"Asy-syukru khālishan lillāhi dūna sā'iri mā yu'badu min dūnihī, wa dūna kulli mā bara'a min khalqihī"</em> (Syukur dan pujian murni hanyalah bagi Allah semata, bukan bagi segala sesuatu yang disembah selain-Nya, dan bukan pula bagi makhluk ciptaan-Nya atas segala nikmat yang tak terhitung). Tentang kata <em>Al-'ālamīn</em>, At-Tabari meriwayatkan dari Ibnu Abbas, Sa'id bin Jubair, dan Qatadah bahwa <em>al-'ālam</em> adalah seluruh jenis makhluk yang diciptakan Allah di dunia maupun di akhirat; setiap generasi dan spesies adalah satu <em>'ālam</em>.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em>:</strong><br>
+        Ibnu Katsir mengutip penjelasan Abu Ja'far bin Jarir dan para ulama salaf bahwa <em>Al-Ḥamd</em> lebih umum daripada <em>Asy-Syukr</em>, karena <em>Al-Ḥamd</em> adalah pujian atas sifat-sifat zat yang melekat (<em>ash-shifāt al-lāzimah</em>) sekaligus sifat-sifat perbuatan yang melimpah kepada makhluk (<em>ash-shifāt al-muta'addiyah</em>). Ibnu Katsir juga mengutip perkataan Fir'aun saat bertanya kepada Musa: <em>"Wa mā Rabbul-'ālamīn?"</em> (QS. Asy-Syu'ara: 23), yang dijawab oleh Musa a.s.: <em>"Rabbus-samāwāti wal-ardhi wa mā baynahumā"</em> (Tuhan Pencipta dan Pengatur langit, bumi, dan segala yang ada di antara keduanya).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi menguraikan bahwa Allah SWT membuka kitab-Nya dengan memuji Diri-Nya sendiri (<em>ḥamida nafsah</em>) sebagai pengajaran adab bagi para hamba-Nya: seandainya seluruh makhluk di langit dan bumi bersatu untuk memuji Allah dengan pujian yang sepadan dengan keagungan-Nya, niscaya mereka tidak akan mampu, sehingga Allah mengajarkan langsung rumusan kalimat pujian terbaik yaitu <em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em>. Dalam aspek fiqih, Al-Qurthubi membahas kewajiban memulai khutbah Jumat, khutbah nikah, dan doa dengan <em>Tahmid</em> berdasarkan hadits: <em>"Kullu khuthbatin laysa fīhā تشهد (wa fī riwāyah: لَا يُبْدَأُ فِيهَا بِالْحَمْدِ لِلَّهِ) fahiya كاليَدِ الجَذْمَاء"</em>.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em>:</strong><br>
+        Fakhruddin Ar-Razi membedah argumen kosmologis-teologis dari kata <em>Rabbil-'ālamīn</em>: mengapa setelah menyebut <em>Allāh</em>, sifat pertama yang diperkenalkan adalah <em>Rabbil-'ālamīn</em>? Karena jalan paling rasional bagi akal manusia untuk mengenal keberadaan Tuhan (<em>Wājidul-Wujūd</em>) adalah dengan mengamati keteraturan, desain presisi, dan keterbutuhan alam semesta (<em>al-'ālamīn</em>) terhadap Sang Pencipta dan Pemelihara. Alam semesta yang bersifat <em>mumkinul-wujūd</em> (mungkin ada dan mungkin tiada) serta selalu berubah adalah bukti empiris paling nyata atas adanya <em>Rabb</em> Yang Maha Esa.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Quraish Shihab menyoroti dimensi pendidikan (<em>tarbiyah</em>) dari kata <em>Rabb</em>: Allah tidak sekadar menciptakan alam semesta lalu membiarkannya berjalan sendiri sebagaimana klaim filsafat Deisme ("Tuhan Pembuat Jam"), melainkan Dia terus-menerus memelihara, mengarahkan, dan mendidik setiap ciptaan-Nya menuju tujuan hidupnya. Oleh sebab itu, ujian, kesulitan, maupun keberhasilan yang dialami manusia dalam hidup sejatinya adalah bagian dari kurikulum <em>Tarbiyah Rabbaniyyah</em> untuk mendewasakan jiwa manusia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka menekankan bahwa kalimat <em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em> membebaskan manusia dari penyakit feodalisme dan kultus individu. Manusia boleh berterima kasih kepada sesama manusia (<em>man lā yasykurin-nāsa lā yasykurillāh</em>), tetapi <strong>segala puji yang mutlak (Al-ḥamdu) hanyalah milik Allah</strong>. Tidak ada penguasa, bangsawan, atau tokoh mana pun yang berhak dipuja secara absolut.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian</th>
+                <th>Titik Kesepakatan (Ijma')</th>
+                <th>Ragaman Perspektif Ulama (Ikhtilaf & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sifat Kalimat "Al-ḥamdu lillāh"</strong></td>
+                <td>Sepakat bahwa kalimat ini berbentuk <em>khabar</em> (pernyataan) yang bermakna <em>insyā'</em> (perintah bagi hamba untuk memuji Allah).</td>
+                <td>Ulama Lughah (At-Tabari) menyamakan cakupan praktis <em>Al-Ḥamd</em> dan <em>Asy-Syukr</em>; Ulama Bayan & Kalam (Ar-Razi, Ibnu Katsir) membedakan <em>Al-Ḥamd</em> (pujian atas sifat & nikmat) dari <em>Asy-Syukr</em> (balasan khusus atas nikmat).</td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan Makna "Al-'Ālamīn"</strong></td>
+                <td>Sepakat mencakup segala sesuatu selain Allah (<em>mā siwallāh</em>).</td>
+                <td>Sebagian salaf (Ibnu Abbas) memfokuskan pada makhluk berakal (jin, manusia, malaikat); jumhur mufassirin mencakup seluruh entitas kosmos, spesies biologis, dan dimensi eksistensi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Neuropsikologi Syukur & Tahmid: Rekonstruksi Persepsi Positif ("Gratitude Rewiring")</h3>
+    <p>
+        Dalam ilmu saraf modern (<em>affective neuroscience</em>), otak manusia memiliki kecenderungan evolusioner yang disebut <strong>Negativity Bias</strong> (bias negatif): otak lebih cepat merekam ancaman, kekurangan, dan keluhan dibandingkan nikmat yang sudah ada. Namun Al-Qur'an melatih seorang mukmin untuk mengulang kalimat <em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em> minimal 17 kali sehari.
+    </p>
+    <ul>
+        <li><strong>Melampaui "Conditional Gratitude" menuju "Ontological Praise":</strong> Psikologi sekuler hanya mengajarkan <em>gratitude</em> (rasa syukur bersyarat) saat keadaan menyenangkan. Ketika bencana datang, <em>conditional gratitude</em> runtuh. Sebaliknya, konsep <strong>Al-Ḥamd</strong> kepada <em>Rabbil-'ālamīn</em> mengajarkan <em>ontological praise</em>: seorang mukmin tetap mampu mengucapkan <em>Al-ḥamdu lillāh 'alā kulli ḥāl</em> di tengah badai ujian karena ia yakin bahwa Sang <em>Rabb</em> (Pendidik Terbaik) tidak pernah menetapkan sesuatu kecuali ada hikmah pendidikan di baliknya.</li>
+        <li><strong>Imunitas terhadap Penyakit Ujub dan Haus Validasi:</strong> Mengembalikan seluruh pujian kepada Allah (<em>Al-ḥamdu lillāh</em>) menyembuhkan jiwa dari kecanduan pujian manusia (<em>approval addiction</em>). Saat dipuji orang, ia tidak lupa diri karena sadar pujian itu milik Allah; saat dicela atau tidak dihargai manusia, ia tidak patah semangat karena ia bekerja untuk <em>Rabbil-'ālamīn</em>.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Krisis Ekologis Antroposentris & Budaya Narsisisme Digital</h3>
+    <ul>
+        <li>
+            <strong>Ekologi Tauhidik ("Rabbil-'Ālamīn") vs Eksploitasi Alam:</strong> Krisis perubahan iklim dan kehancuran biodiversitas abad ke-21 berakar pada kesombongan antroposentris yang memandang alam semesta hanya sebagai objek mati untuk dieksploitasi. Ayat 2 menegaskan bahwa Allah adalah <em>Rabbil-'ālamīn</em>—Tuhan dan Pemelihara bagi seluruh alam (alam hutan, alam lautan, alam satwa, dan generasi mendatang), sebagaimana firman-Nya: <em>"Dan tidaklah binatang-binatang di bumi dan burung-burung yang terbang dengan kedua sayapnya melainkan umat-umat (juga) seperti kamu"</em> (QS. Al-An'am: 38). Merusak ekosistem berarti merusak tatanan yang sedang dipelihara oleh <em>Rabbil-'ālamīn</em>.
+        </li>
+        <li>
+            <strong>Kritik atas "Personal Branding" & Kultus Pemujaan Diri di Era Algoritma:</strong> Media sosial kontemporer mendorong manusia untuk terus-menerus memamerkan pencapaian demi mengumpulkan <em>likes</em> dan pujian bagi dirinya sendiri. Kalimat <em>Al-ḥamdu lillāh</em> hadir sebagai penawar peradaban: mengembalikan kejernihan jiwa bahwa segala bakat, harta, dan prestasi adalah titipan Allah yang wajib disyukuri dengan kontribusi nyata, bukan dipamerkan untuk kesombongan ego.
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Jurnal & Zikir Tahmid Tiga Dimensi (Hati, Lisan, Amal):</strong> Setiap pagi saat bangun tidur dan setiap malam sebelum memejamkan mata, ucapkan <em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em> sambil menyebutkan secara spesifik minimal 3 nikmat Allah hari itu (nikmat iman, kesehatan tubuh, keluarga, atau pelajaran dari ujian) lalu wujudkan syukur itu dengan menggunakan nikmat tersebut untuk ketaatan.
+            </li>
+            <li>
+                <strong>Mengembalikan Pujian Manusia kepada Allah:</strong> Setiap kali menerima pujian atau apresiasi dari orang lain atas keberhasilan kerja atau karya, segera ucapkan di dalam hati dan lisan: <em>"Al-ḥamdu lillāh, ini semua murni karunia dan pertolongan Allah"</em> agar hati steril dari penyakit ujub dan riya'.
+            </li>
+            <li>
+                <strong>Konservasi Ekologis sebagai Wujud Kesadaran "Rabbil-'Ālamīn":</strong> Menghormati hak-hak alam semesta ciptaan Allah dengan menghentikan pemborosan air, listrik, dan makanan, serta menjaga kebersihan dan kelestarian lingkungan sekitar sebagai amanah dari Pemelihara seluruh alam.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Apakah lisanku hanya mudah mengucapkan <em>"Al-ḥamdu lillāh"</em> ketika keinginanku terpenuhi, namun segera berubah menjadi keluh kesah dan protes ketika Allah sedang mendidikku (<em>tarbiyah</em>) melalui ujian hidup?
+            </li>
+            <li>
+                Sejauh mana hatiku masih haus akan pujian, tepuk tangan, dan pengakuan manusia, padahal aku telah berikrar setiap hari bahwa segala puji hanyalah milik Allah semata?
+            </li>
+            <li>
+                Sudahkah aku memperlakukan keluargaku, sesama manusia, dan alam lingkungan di sekitarku dengan penuh tanggung jawab sebagai sesama ciptaan yang diasuh oleh <em>Rabbil-'ālamīn</em>?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, Tuhan Pemelihara dan Pendidik seluruh alam semesta, bagi-Mu segala puji sepenuh langit dan sepenuh bumi, serta sepenuh apa saja yang Engkau kehendaki setelah itu. Jadikanlah kami hamba-hamba-Mu yang pandai bersyukur di kala lapang dan tetap memuji-Mu dengan penuh ridha di kala sempit. Didiklah jiwa kami dengan Tarbiyah Rabbaniyyah-Mu hingga kami kembali menghadap-Mu dalam keadaan Engkau ridhai. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="001-001 - QS. Al-Fatihah Ayat 1.html">&larr; Ayat Sebelumnya (QS. 1:1)</a>
+        <span><strong>QS. Al-Fātiḥah [1]: 2</strong></span>
+        <a href="001-003 - QS. Al-Fatihah Ayat 3.html">Lanjut ke Ayat 3 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-102 - QS. Al-Baqarah Ayat 102 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: justify;
+        line-height: 2.4;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 15.5px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+        line-height: 1.8;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-101 - QS. Al-Baqarah Ayat 101.html">&larr; Ayat Sebelumnya (QS. 2:101)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-103 - QS. Al-Baqarah Ayat 103.html">Ayat Berikutnya (QS. 2:103) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 3 (Ayat 40–141) | Klaster: Dialektika, Kritik Moral & Pembongkaran Okultisme Bani Israil (Ayat 101–103)</span>
+        <span class="badge">74 Kata | 350 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 102</h1>
+    <div class="transliteration">
+        "Wattaba‘ū mā tatlusy-syayāṭīnu ‘alā mulki Sulaimāna wa mā kafara Sulaimānu wa lākinnasy-syayāṭīna kafarū yu‘allimūnan-nāsas-siḥra wa mā unzila ‘alal-malakaini bi-Bābila Hārūta wa Mārūta, wa mā yu‘allimāni min aḥadin ḥattā yaqūlā innamā naḥnu fitnatun falā takfur, fayata‘allamūna minhumā mā yufarriqūna bihī bainal-mar'i wa zaujihī, wa mā hum biḍārrīna bihī min aḥadin illā bi'iżnillāh(i), wa yata‘allamūna mā yaḍurruhum wa lā yanfa‘uhum, wa laqad ‘alimū lamanisytarāhu mā lahū fil-ākhirati min khalāq(in), wa labi'sa mā syarau bihī anfusahum, lau kānū ya‘lamūn(a)"
+    </div>
+    <div class="thematic-title">
+        Dekonstruksi Okultisme & Ilusi Kontrol: Pembongkaran Fitnah Sihir Babel, Purifikasi Kenabian Sulaiman AS, dan Jebakan Transaksional Kerusakan Jiwa
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa v2.0 (Surah Al-Baqarah: Ayat 40–141 | Blok 3: Sejarah, Kritik, & Dialektika Bani Israil + Kiblat Ibrahim AS)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَٱتَّبَعُوا۟ مَا تَتْلُوا۟ ٱلشَّيَـٰطِينُ عَلَىٰ مُلْكِ سُلَيْمَـٰنَ ۖ وَمَا كَفَرَ سُلَيْمَـٰنُ وَلَـٰكِنَّ ٱلشَّيَـٰطِينَ كَفَرُوا۟ يُعَلِّمُونَ ٱلنَّاسَ ٱلسِّحْرَ وَمَآ أُنزِلَ عَلَى ٱلْمَلَكَيْنِ بِبَابِلَ هَـٰرُوتَ وَمَـٰرُوتَ ۚ وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّىٰ يَقُولَآ إِنَّمَا نَحْنُ فِتْنَةٌۭ فَلَا تَكْفُرْ ۖ فَيَتَعَلَّمُونَ مِنْهُمَا مَا يُفَرِّقُونَ بِهِۦ بَيْنَ ٱلْمَرْءِ وَزَوْجِهِۦ ۚ وَمَا هُم بِضَآرِّينَ بِهِۦ مِنْ أَحَدٍ إِلَّا بِإِذْنِ ٱللَّهِ ۚ وَيَتَعَلَّمُونَ مَا يَضُرُّهُمْ وَلَا يَنفَعُهُمْ ۚ وَلَقَدْ عَلِمُوا۟ لَمَنِ ٱشْتَرَىٰهُ مَا لَهُۥ فِى ٱلْـَٔاخِرَةِ مِنْ خَلَـٰقٍۢ ۚ وَلَبِئْسَ مَا شَرَوْا۟ بِهِۦٓ أَنفُسَهُمْ ۚ لَوْ كَانُوا۟ يَعْلَمُونَ ۝١٠٢
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Dan mereka mengikuti apa yang dibacakan (direka-reka dan disebarkan secara dusta) oleh setan-setan pada masa kerajaan Sulaiman. Padahal Sulaiman sama sekali tidak kafir (tidak pernah mempraktikkan atau mengajarkan sihir), melainkan setan-setan itulah yang kafir; mereka mengajarkan sihir kepada manusia dan apa yang diturunkan kepada dua malaikat di negeri Babilonia, yaitu Harut dan Marut. Padahal keduanya tidak mengajarkan (sesuatu pun dari ilmu itu) kepada seorang pun sebelum memperingatkan: 'Sesungguhnya kami ini hanyalah cobaan (ujian keimanan bagimu), maka janganlah engkau menjadi kafir (dengan menyalahgunakan ilmu ini untuk kejahatan).' Maka mereka mempelajari dari keduanya sesuatu yang dengan ilmu itu mereka dapat memecah belah antara seorang suami dan istrinya. Padahal mereka sama sekali tidak dapat mencelakakan siapa pun dengan ilmu sihir itu melainkan dengan izin (kauniyah) Allah. Dan mereka mempelajari sesuatu yang justru mendatangkan mudarat bagi diri mereka sendiri serta tidak memberi manfaat apa pun kepada mereka. Dan sungguh, mereka benar-benar telah mengetahui bahwa barangsiapa yang menukarnya (kitabullah dengan sihir itu), niscaya tidak ada baginya bagian keuntungan sedikit pun di akhirat kelak. Dan sungguh, alangkah sangat buruknya perbuatan mereka menjual diri mereka sendiri dengannya, sekiranya mereka mengetahui (kebenaran hakiki dengan kesadaran yang menggerakkan amal)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Penggunaan kata <em>tatlū</em> berwazan mudhari' mengandung makna <em>istihdhār ash-shūrah</em> (menghadirkan visualisasi dramatis atas kebiasaan setan yang terus-menerus membaca, mereka-reka mantra, dan mendiktekan kebohongan). Frasa <em>‘alā mulki Sulaimān</em> bermakna perlawanan dan pendustaan terhadap kekuasaan sah kenabian Sulaiman a.s., sekaligus membersihkan beliau secara tanzīh mutlak melalui klausa <em>wa mā kafara Sulaimān</em>. Frasa <em>illā bi'idznillāh</em> menegaskan batas tegas antara hukum kausalitas semu dengan tauhid rububiyyah: tidak ada bahaya sihir yang dapat terlaksana tanpa ketetapan izin takdir penciptaan (<em>idzn kauni khalqi</em>) dari Allah Ta'ala, sehingga memupus ketakutan irasional pada kekuatan makhluk. Kata <em>syarau</em> menunjukkan transaksi ontologis yang tragis: menukar keselamatan abadi jiwa demi delusi kekuasaan semu di dunia.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَٱتَّبَعُوا۟ مَا تَتْلُوا۟</strong><br>(<em>Wattaba‘ū mā tatlū</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal.<br>
+                    <strong>Tā' Musyaddadah:</strong> Terjadi proses idgham mutaqaribain/mutajanisain dari wazan <em>ifta‘ala</em> (akar <em>tabi‘a</em>). Dibaca syiddah dan hams.<br>
+                    <strong>Mad Jaiz Munfashil:</strong> Huruf Wawu mad bertemu hamzah washal/kata berikutnya; pada <em>mā tatlū</em> terdapat mad thabi'i 2 harakat.<br>
+                    <strong>Makhraj Tā':</strong> Ujung lidah bertemu pangkal gigi seri atas dengan sifat <em>hams</em> dan <em>syiddah</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il madhi <em>ittaba‘ū</em> berharakat dhammah pada wawu jama'ah, serta fi'il mudhari' <em>tatlū</em> dengan wawu sukun. Ditulis dengan rasm Utsmani menambahkan alif pelindung (alif fariqah) setelah wawu jama'ah (وَٱتَّبَعُوا۟) dan alif setelah wawu pada <em>tatlū</em> (تَتْلُوا۟) menurut konvensi rasm Kufah/Madinah.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلشَّيَـٰطِينُ</strong><br>(<em>Asy-Syayāṭīnu</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah:</strong> Lam ta'rif lebur ke dalam huruf Syin musyaddadah. Syin memiliki sifat <em>tafasy-syi</em> (hamburan angin luas di mulut) dan <em>hams</em>.<br>
+                    <strong>Yā' Lin & Mad Thabi'i:</strong> Ya pertama berharakat fathah disusul alif khanjaraniyyah (2 harakat); Tha' memiliki sifat <em>isti‘lā’</em> dan <em>ithbaq</em> (tafkhim tingkat tertinggi karena fathah/alif).
+                </td>
+                <td>
+                    Dibaca rafa' dengan tanda dhammah (<em>asy-syayāṭīnu</em>) sebagai fa'il dari kata kerja <em>tatlū</em> oleh seluruh imam qira'at mutawatirah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>عَلَىٰ مُلْكِ سُلَيْمَـٰنَ</strong><br>(<em>‘Alā mulki Sulaimāna</em>)</td>
+                <td>
+                    <strong>Alif Maqshurah:</strong> Mad Thabi'i 2 harakat.<br>
+                    <strong>Lām Sukun pada Mulk:</strong> Memiliki sifat <em>tawassuth</em> (antara syiddah dan rikhwah) serta <em>idzhār</em> murni.<br>
+                    <strong>Sulaimān:</strong> Isim ghairu munsharif (karena 'alamiyyah dan wazan fa'lan / ziyadah alif-nun), berharakat fathah pada nun pengganti kasrah karena majrur idhafah.
+                </td>
+                <td>
+                    Seluruh imam qira'at sepakat membaca fathah pada huruf Nun di kata <em>Sulaimāna</em> (mamnu' minash-sharf). Dalam riwayat Warsy 'an Nafi', terjadi tarqiq pada ra' di tempat lain, namun lafaz Sulaiman dibaca standar oleh seluruh thariq.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَلَـٰكِنَّ ٱلشَّيَـٰطِينَ</strong><br>(<em>Wa lākinnasy-syayāṭīna</em>)</td>
+                <td>
+                    <strong>Mad Thabi'i Alif Khanjaraniyyah:</strong> Pada lafaz <em>lākin</em> dibaca 2 harakat.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nun bertasydid ditahan 2 harakat sempurna (<em>akmalu mā takūn</em>) bagi bacaan jumhur.<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif zhahir (وَلَـٰكِنَّ).
+                </td>
+                <td>
+                    <strong>Ikhtilaf Mutawatir Besar:</strong><br>
+                    • <strong>Ibnu ‘Amir, Hamzah, Al-Kisa'i, dan Khalaf al-‘Asyir:</strong> Membaca dengan takhfif nun yang disukun lalu dikasrahkan karena bertemu sukun berikutnya: <em>"wa lākinisy-syayāṭīnu kafarū"</em> (وَلَكِنِ الشَّيَاطِينُ), dan merafa'kan kata <em>asy-syayāṭīnu</em> sebagai fa'il dari fi'il <em>kafarū</em>.<br>
+                    • <strong>Nafi', Ibnu Katsir, Abu ‘Amr, ‘Ashim, Abu Ja'far, dan Ya'qub:</strong> Membaca dengan tasydid nun berharakat fathah: <em>"wa lākinnasy-syayāṭīna kafarū"</em> (وَلَـٰكِنَّ الشَّيَـٰطِينَ), dan menashabkan kata <em>asy-syayāṭīna</em> sebagai isim dari <em>lākinna</em>.<br>
+                    <em>Implikasi Makna:</em> Bacaan jumhur (tasydid) menguatkan fungsi <em>istidrāk</em> penegasan kontras personal bahwa setanlah poros kekafiran itu, sedangkan bacaan takhfif merajut klausa kalimat secara verbal aksiologis.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>يُعَلِّمُونَ ٱلنَّاسَ ٱلسِّحْرَ</strong><br>(<em>Yu‘allimūnan-nāsas-siḥra</em>)</td>
+                <td>
+                    <strong>Lām Bertasydid:</strong> Dibaca tarkib tasyri' sifat tawassuth.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Pada kata <em>an-nāsa</em> akibat Idgham Syamsiyyah pada Nun.<br>
+                    <strong>Huruf Ḥā' pada As-Siḥr:</strong> Keluar dari <em>wasathul halq</em> (tengah tenggorokan), memiliki sifat <em>hams</em> dan <em>rikhwah</em>; huruf Ra' berharakat fathah dibaca <strong>Tafkhim</strong>.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca nashab pada <em>an-nāsa</em> (maf'ul bih pertama) dan <em>as-siḥra</em> (maf'ul bih kedua).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَمَآ أُنزِلَ</strong><br>(<em>Wa mā unzila</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfashil:</strong> Huruf mad bertemu hamzah qatha' di kata lain. Panjang bacaan bergantung madzhab qira'at (Qashr 2 harakat: Ibnu Katsir, As-Susi, Abu Ja'far, Ya'qub; Tawassuth 4 harakat: Qalun, Ad-Duri, 'Ashim; Thul 6 harakat: Warsy dan Hamzah).<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Zai, ditahan dengan dengung tipis (<em>tarqiq</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca <em>wa mā unzila</em> dengan shighah mabni lil-majhul (dhammah pada hamzah, kasrah pada za', fathah pada lam).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>عَلَى ٱلْمَلَكَيْنِ بِبَابِلَ هَـٰرُوتَ وَمَـٰرُوتَ</strong><br>(<em>‘Alal-malakaini bi-Bābila Hārūta wa Mārūta</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Pada kata <em>al-malakaini</em>.<br>
+                    <strong>Yā' Lin:</strong> Huruf Ya sukun setelah fathah pada isim tatsniyah.<br>
+                    <strong>Mamnu' minash-Sharf:</strong> <em>Bābila, Hārūta, Mārūta</em> seluruhnya berakhiran fathah saat majrur karena 'alamiyyah dan 'ujmah (nama non-Arab).
+                </td>
+                <td>
+                    <strong>Penetapan Mutawatir:</strong> Seluruh 10 imam qira'at mutawatirah sepakat membaca <em>al-malakaini</em> (berharakat fathah pada lam, bentuk dual/tatsniyah: dua malaikat). Diriwayatkan bacaan syadzah (bukan mutawatir) dari Ibnu Abbas dan Al-Hasan Al-Bashri yang membaca <em>al-malikaini</em> (kasrah pada lam: dua raja manusia), namun qira'at ini tertolak secara riwayat mutawatir mushaf Utsmani. Seluruh imam membaca <em>Hārūta wa Mārūta</em> dengan fathah tanpa tanwin.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>حَتَّىٰ يَقُولَآ إِنَّمَا</strong><br>(<em>Ḥattā yaqūlā innamā</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfashil:</strong> Alif tatsniyah pada <em>yaqūlā</em> bertemu hamzah qatha'.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nun pada <em>innamā</em> ditahan 2 harakat sempurna.
+                </td>
+                <td>
+                    Seluruh imam membaca dengan alif mutsanna (<em>yaqūlā</em>) sebagai tanda dua pelaku (Harut dan Marut). Ukuran mad munfashil mengikuti madzhab masing-masing perawi.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>فَيَتَعَلَّمُونَ مِنْهُمَا مَا يُفَرِّقُونَ بِهِۦ</strong><br>(<em>Fa-yata‘allamūna minhumā mā yufarriqūna bihī</em>)</td>
+                <td>
+                    <strong>Idzhār Ḥalqi:</strong> Nun sukun bertemu Ha' pada <em>minhumā</em>.<br>
+                    <strong>Tarkīq Huruf Rā':</strong> Huruf Ra' berharakat kasrah pada <em>yufarriqūna</em> dibaca tipis (tarqiq).<br>
+                    <strong>Shilah Shughrā:</strong> Pada ha' dhamir <em>bihī</em> dipanjangkan 2 harakat karena terletak di antara dua huruf hidup.
+                </td>
+                <td>
+                    Kesepakatan mutawatir pada lafaz ini. Huruf Ya' pada awal kata dibaca fathah dan wazan tafa‘‘ala menunjukkan proses belajar yang bertahap dan penuh kesengajaan.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>بَيْنَ ٱلْمَرْءِ وَزَوْجِهِۦ</strong><br>(<em>Bainal-mar'i wa zaujihī</em>)</td>
+                <td>
+                    <strong>Yā' Lin & Wawu Lin:</strong> Pada <em>baina</em> dan <em>zaujihī</em>.<br>
+                    <strong>Hamzah Sukun Muta'akhkhirah:</strong> Huruf Ra' berharakat sukun tafkhim diikuti hamzah kasrah.<br>
+                    <strong>Shilah Shughrā:</strong> Pada dhamir <em>zaujihī</em> (2 harakat).
+                </td>
+                <td>
+                    • <strong>Imam Hamzah (saat waqaf pada al-mar'):</strong> Membaca tashil hamzah atau ibdal menjadi ya' sukun/naql harakat kasrah ke huruf ra' (<em>al-mari</em>). Saat washal, seluruh imam membaca tahqiq hamzah kasrah (<em>al-mar'i</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>بِضَآرِّينَ بِهِۦ مِنْ أَحَدٍ</strong><br>(<em>Biḍārrīna bihī min aḥadin</em>)</td>
+                <td>
+                    <strong>Mad Lāzim Kalimī Mutsaqqal:</strong> Huruf mad Alif bertemu huruf Ra' bertasydid dalam satu kata; wajib dibaca panjang <strong>6 harakat</strong> murni oleh seluruh ulama tajwid dan qira'at tanpa kecuali.<br>
+                    <strong>Ikhfā' Syafawī:</strong> Mim sukun pada <em>wa mā hum</em> bertemu Ba' pada <em>biḍārrīna</em>.<br>
+                    <strong>Idzhār Ḥalqi:</strong> Nun sukun pada <em>min</em> bertemu hamzah pada <em>aḥadin</em>.
+                </td>
+                <td>
+                    Seluruh imam sepakat atas panjang 6 harakat mad lazim pada <em>biḍārrīna</em>. Pilihan hukum ikhfa syafawi diamalkan dengan merapatkan dua bibir tanpa tekanan berlebih (inbithah/ithbaq asy-syafah).
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>لَمَنِ ٱشْتَرَىٰهُ</strong><br>(<em>Lamanisytarāhu</em>)</td>
+                <td>
+                    <strong>Kashrah ‘Āridhah:</strong> Nun sukun pada <em>man</em> diberi kasrah untuk menghindari pertemuan dua sukun (<em>iltiqā' as-sākinain</em>).<br>
+                    <strong>Tafkhīm Huruf Rā':</strong> Ra' fathah dibaca tebal.
+                </td>
+                <td>
+                    <strong>Kaidah Imālah & Taqlīl pada Alif Zawatil-Yā':</strong><br>
+                    • <strong>Hamzah, Al-Kisa'i, dan Khalaf al-‘Asyir:</strong> Membaca <strong>Imālah Kubrā</strong> pada huruf Ra' dan Alif: <em>lamanisytarēhu</em>.<br>
+                    • <strong>Warsy ‘an Nafi':</strong> Membaca dengan dua wajah (Fath dan Taqlīl/Bayna-bayna): <em>lamanisytarèhu</em>.<br>
+                    • <strong>Abu ‘Amr:</strong> Membaca Taqlil pada sebagian riwayat.<br>
+                    • <strong>Ibnu Katsir, ‘Ashim, Ibnu ‘Amir, Abu Ja'far, dan Ya'qub:</strong> Membaca <strong>Fath</strong> murni tanpa imalah.
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>وَلَبِئْسَ مَا شَرَوْا۟</strong><br>(<em>Wa labi'sa mā syarau</em>)</td>
+                <td>
+                    <strong>Hamzah Sākinah:</strong> Hamzah sukun dengan sifat syiddah murni tertahan di tenggorokan.<br>
+                    <strong>Wawu Lin:</strong> Pada kata <em>syarau</em> diucapkan lunak tanpa mad panjang saat washal.
+                </td>
+                <td>
+                    • <strong>Warsy ‘an Nafi', Abu Ja'far, dan Hamzah (saat waqaf):</strong> Membaca <strong>Ibdāl</strong> hamzah sukun menjadi huruf Ya mad sukun: <em>"wa labīsa mā syarau"</em> (وَلَبِيسَ).<br>
+                    • <strong>Jumhur (termasuk Hafsh ‘an ‘Ashim):</strong> Membaca <strong>Taḥqīq Hamzah</strong> sukun: <em>"wa labi'sa"</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <p>
+        Ayat 102 dari Surah Al-Baqarah ini diturunkan di Madinah sebagai <strong>dekonstruksi epistemik dan purifikasi teologis</strong> atas fitnah yang dilancarkan oleh para rabi Yahudi Madinah terhadap Nabi Sulaiman a.s. Para pemuka Yahudi berusaha mendelegitimasi kenabian Nabi Muhammad ﷺ yang memuji Sulaiman a.s. dalam Al-Qur'an.
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Riwayat Ibnu Abi Hatim, At-Tabari, dan Ibnu Ishaq dengan Sanad Jayyid dari Syahr bin Hausyab & Sa'id bin Jubair:</strong><br>
+        Diriwayatkan bahwa ketika Rasulullah ﷺ menyebut Nabi Sulaiman a.s. di antara deretan para nabi dan rasul Allah, para rabi Yahudi di Madinah mencemooh seraya berkata kepada kaumnya: <em>"Tidakkah kalian heran kepada Muhammad? Dia mengklaim bahwa Sulaiman bin Daud adalah seorang nabi! Demi Allah, Sulaiman itu tiada lain hanyalah seorang penyihir yang menguasai angin, jin, dan kerajaannya semata-mata dengan ilmu sihirnya!"</em> Maka Allah Ta'ala menurunkan ayat ini (QS. 2:102) secara eksplisit untuk membantah fitnah mereka, memproklamasikan kesucian Sulaiman (<em>wa mā kafara Sulaimān</em>), dan membongkar bahwa sihir adalah produk kekufuran setan yang mereka warisi dari peradaban Babel kuno.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 2766) & Sahih Muslim (No. 89) dari Abu Hurairah r.a. — Sihir Termasuk Tujuh Dosa Pembinasa (Al-Mūbiqāt):</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Ijtanibū as-sab‘al-mūbiqāt!"</em> Qālū: <em>"Yā Rasūlallāh, wa mā hunna?"</em> Qāla: <em>"Asy-Syirku billāh, was-siḥru, wa qatlun-nafsillatī ḥarramallāhu illā bil-ḥaqq, wa akkur-ribā, wa akku mālil-yatīm, wat-tawallī yaumaz-zaḥfi, wa qadzul-muḥshanātil-mu'minātil-ghāfilāt."</em><br>
+        (Jauhilah tujuh dosa yang membinasakan! Para sahabat bertanya: "Wahai Rasulullah, apa saja dosa itu?" Beliau menjawab: "Menyekutukan Allah, <strong>mempraktikkan sihir</strong>, membunuh jiwa yang diharamkan Allah kecuali dengan hak, memakan riba, memakan harta anak yatim, melarikan diri dari medan perang, dan menuduh wanita mukminah yang suci berzina"). Penempatan sihir tepat setelah syirik menegaskan hakikat sihir sebagai pembatal akidah dan perusak tauhid.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Musnad Ahmad (No. 9536), Sunan Abu Daud (No. 3904), Sunan At-Tirmidzi (No. 135) dari Abu Hurairah r.a. — Konsekuensi Epistemik Datang ke Dukun/Penyihir:</strong><br>
+        Rasulullah ﷺ menegaskan batas keterputusan iman: <em>"Man atā kāhinan aw ‘arrāfan fa-shaddaqahū bimā yaqūlu faqad kafara bimā unzila ‘alā Muḥammad ﷺ."</em><br>
+        (Barangsiapa mendatangi dukun atau peramal lalu membenarkan apa yang dikatakannya, maka sungguh ia telah kafir terhadap apa yang diturunkan kepada Muhammad ﷺ). Riwayat ini mengonfirmasi klausa <em>falā takfur</em> dan <em>lamanisytarāhu mā lahū fil-ākhirati min khalāq</em>: interaksi legitimatif dengan okultisme meruntuhkan ikatan Islam dari dada pelakunya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Muslim (No. 2813) dari Jabir bin Abdillah r.a. — Misi Tertinggi Iblis adalah Perceraian Pasutri:</strong><br>
+        Rasulullah ﷺ membeberkan strategi taktis setan: <em>"Inna Iblīsa yaḍa‘u ‘arsyahū ‘alal-mā', tsumma yab‘atsu sarāyāhu, fa-adnāhum minhu manzilat(an) a‘zhamuhum fitnah. Yajī'u aḥaduhum fayaqūlu: fa‘altu kadzā wa kadzā, fayaqūlu: mā shana‘ta syay'an. Tsumma yajī'u aḥaduhum fayaqūlu: mā taraktuhū ḥattā farraqtu bainahū wa baina imra'atih, fayadnīhi minhu wa yaqūlu: ni‘ma anta! Fayaltazimuh."</em><br>
+        (Sesungguhnya Iblis meletakkan singgasananya di atas air, kemudian ia mengutus pasukannya. Maka yang paling dekat kedudukannya dengan Iblis adalah yang paling besar fitnah/kerusakannya. Datanglah salah satu prajuritnya melapor: "Aku telah melakukan ini dan itu." Iblis berkata: "Engkau belum melakukan apa-apa." Lalu datang prajurit lain seraya berkata: <strong>"Aku tidak meninggalkannya sampai aku berhasil memisahkan antara dia dan istrinya."</strong> Maka Iblis mendekatkannya kepada dirinya dan memeluknya seraya berkata: "Sebaik-baik prajurit adalah engkau!"). Hadits ini menjadi penjelas autentik mengapa ayat 102 menyebut daya rusak sihir yang paling digandrungi setan adalah <em>mā yufarriqūna bihī bainal-mar'i wa zaujih</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>5. Purifikasi Kritis Riwayat Harut & Marut dari Racun Israiliyyat:</strong><br>
+        Para imam tahqiq (Ibnu Katsir dalam <em>Tafsīr al-Qur'ān al-‘Aẓīm</em>, Al-Qadhi ‘Iyadh dalam <em>Asy-Syifā</em>, Ibnu Hazm dalam <em>Al-Fishal</em>, dan Syaikh As-Sa'di) menegaskan dengan fatwa qath'i: seluruh riwayat yang menceritakan bahwa Harut dan Marut adalah malaikat yang tergoda oleh wanita cantik bernama Zukhrah, lalu meminum khamar, berzina, membunuh bayi, dan disiksa di sumur Babel dengan digantung terbalik adalah <strong>riwayat batil, munkar, dan murni khurafat Israiliyyat</strong> yang bertentangan secara diametral dengan nash mutawatir tentang kemaksuman malaikat (<em>‘ishmatul-malā'ikah</em>) yang tidak pernah bermaksiat kepada Allah (QS. At-Tahrim: 6, Al-Anbiya: 26–27). Hakikat keduanya adalah malaikat yang diutus murni membawa ujian epistemik untuk membedakan antara mukjizat nabi dan tipuan sihir.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Mu'jam Maqāyīs al-Lughah & Lisān al-‘Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. T-L-W (ت-ل-و — Tatlū):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> merumuskan poros makna asal dari <em>Tā'-Lām-Wāw</em> pada dua prinsip: <em>ittibā‘u syay'in syay'an</em> (mengikuti sesuatu secara berurutan di belakangnya) dan <em>al-qirā'ah wal-kasyf</em> (membacakan teks). Dari akar ini muncul kata <em>tilāwah</em>. Namun, ketika disandingkan dengan setan (<em>tatlusy-syayāṭīn</em>), maknanya bergeser secara semantik menjadi: <strong>membacakan mantra-mantra dusta, mereka-reka narasi palsu, dan menyandarkan kebohongan secara beruntun seolah-olah ia adalah kitab wahyu</strong>. Orang Arab berkata: <em>talā ‘alā fulān</em> artinya ia mengada-ada kedustaan atas nama seseorang.
+        </li>
+        <li>
+            <strong>2. S-Ḥ-R (س-ح-ر — As-Siḥr):</strong><br>
+            Menurut Ibnu Faris dan Ibn Manzhur dalam <em>Lisān al-‘Arab</em>, akar huruf <em>Sīn-Ḥā'-Rā'</em> berporos pada makna dasar: <em>kullu mā luṭufa ma'khadzuhū wa daqqa, wa shurifa ‘an ḥaqīqatih</em> (segala sesuatu yang sebab-sebab terjadinya sangat samar, tersembunyi, halus, membelokkan sesuatu dari hakikat aslinya menuju ilusi manipulatif). Dinamakan waktu <em>saḥar</em> (sepertiga malam terakhir) karena pada saat itu gelap dan remang-remang berbaur halus. Si penyihir dinamakan <em>sāḥir</em> karena ia menyajikan kebatilan dalam bungkusan yang tampak nyata melalui tipuan persepsi, manipulasi sugesti, serta bantuan entitas metafisika jahat (setan).
+        </li>
+        <li>
+            <strong>3. F-T-N (ف-ت-ن — Fitnah):</strong><br>
+            Poros makna <em>Fā'-Tā'-Nūn</em> berakar pada perlakuan metalurgi kuno: <em>waḍ‘ud-dzahabi fin-nāri litaẓhara jawdatuhū min khabatsih</em> (memasukkan dan membakar bijih emas ke dalam tungku api yang berkobar untuk memisahkan emas murni berkilau dari terak kotoran yang menempel). Oleh sebab itu, <strong>Fitnah</strong> bukanlah sekadar gosip atau tuduhan (sebagaimana reduksi makna dalam bahasa Indonesia modern), melainkan <strong>krisis eksistensial, ujian kelayakan moral, dan laboratorium pemilah keimanan</strong>. Ketika Harut dan Marut berkata <em>innamā naḥnu fitnah</em>, artinya: kehadiran kami adalah instrumen penguji integritas tauhidmu; apakah engkau teguh memilih kebenaran ataukah engkau memilih tergelincir menjadi terak kekafiran.
+        </li>
+        <li>
+            <strong>4. Sy-R-Y (ش-ر-ي — Isytarā & Syarau):</strong><br>
+            Akar kata <em>Syīn-Rā'-Yā'</em> dalam leksikografi Arab tergolong kata berlawanan makna sekaligus (<em>alfāzh al-adhdād</em>), yang mencakup makna <em>bā‘a</em> (menjual) dan <em>ibta‘a</em> (membeli/menukar). Pada klausa <em>lamanisytarāhu</em>, maknanya adalah membeli atau mengambil alternatif (menukar wahyu dengan sihir). Sementara pada klausa <em>wa labi'sa mā syarau bihī anfusahum</em>, maknanya adalah menjual dan menggadaikan jiwa mereka kepada azab neraka. Penjualan ini adalah transaksi paling merugi dalam sejarah eksistensi manusia.
+        </li>
+        <li>
+            <strong>5. Kh-L-Q (خ-ل-ق — Khalāq):</strong><br>
+            Akar <em>Khā'-Lām-Qāf</em> selain bermakna menciptakan dalam ukuran pasti, juga bermakna <em>an-nashīb wal-ḥaẓẓu min al-khair</em> (bagian keberuntungan, jatah keselamatan, atau modal kebajikan). Frasa <em>mā lahū fil-ākhirati min khalāq</em> bermakna kebangkrutan mutlak (<em>total spiritual bankruptcy</em>): ia sama sekali tidak memiliki sisa saldo pahala atau bagian rahmat apa pun di akhirat kelak.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَٱتَّبَعُوا۟</strong></td>
+                <td>Fi‘il māḍī berwazan <em>ifta‘ala</em> dari akar <em>t-b-‘</em>, dhamir Wawu Jama'ah sebagai fā‘il.</td>
+                <td>Wawu ‘āthifah menyambungkan ke ayat sebelumnya (<em>nabadza farīqun</em>). Fi‘il mabni ‘aḍ-ḍamm fi maḥalli jazm/raf‘, Wawu fā‘il mabni ‘as-sukūn.</td>
+            </tr>
+            <tr>
+                <td><strong>مَا</strong></td>
+                <td>Isim maushūl bermakna <em>alladzī</em>.</td>
+                <td>Mabni ‘as-sukūn fī maḥalli nashbin <strong>Maf‘ūl bih</strong> dari fi‘il <em>ittaba‘ū</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>تَتْلُوا۟ ٱلشَّيَـٰطِينُ</strong></td>
+                <td><em>Tatlū</em>: Fi‘il muḍāri' mu'tal lām (wāwī). <em>Asy-Syayāṭīnu</em>: Isim jamak taksīr berwazan <em>fa‘ālīl</em>.</td>
+                <td><em>Tatlū</em> marfū' dengan ḍammah muqaddarah ‘alal-wāw; jumlah <em>tatlusy-syayāṭīnu</em> adalah <strong>Shilah Maushūl</strong> (lā maḥalla lahā min al-i‘rāb). <em>Asy-Syayāṭīnu</em> fā‘il marfū' bil-dhammah.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَىٰ مُلْكِ سُلَيْمَـٰنَ</strong></td>
+                <td><em>‘Alā</em>: Ḥarf jarr. <em>Mulk</em>: Isim mashdar. <em>Sulaimān</em>: Isim 'alam mamnū‘ min ash-sharf.</td>
+                <td>Jār wa majrūr <em>muta‘alliq</em> dengan fi‘il <em>tatlū</em>. <em>Sulaimāna</em> mudhāf ilaih majrūr bil-fat-ḥah niyābatan ‘anil-kasrah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا كَفَرَ سُلَيْمَـٰنُ</strong></td>
+                <td><em>Mā</em>: Ḥarf nafyi muthlaq. <em>Kafara</em>: Fi‘il māḍī tsulātsī. <em>Sulaimān</em>: Fā‘il.</td>
+                <td>Jumlah ḥāliyyah atau isti'nāfiyyah: <em>Mā</em> nāfiyah, <em>kafara</em> fi‘il māḍī mabnī ‘alal-fat-ḥi, <em>Sulaimānu</em> fā‘il marfū' bil-dhammah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَـٰكِنَّ ٱلشَّيَـٰطِينَ كَفَرُوا۟</strong></td>
+                <td><em>Lākinna</em>: Ḥarf istidrāk wa naṣb (akhawātu Inna). <em>Kafarū</em>: Fi‘il māḍī + fā‘il.</td>
+                <td><em>Asy-Syayāṭīna</em> isim <em>Lākinna</em> manṣūb bil-fat-ḥah. Jumlah fi‘liyyah <em>kafarū</em> fī maḥalli raf‘in <strong>Khabar Lākinna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>يُعَلِّمُونَ ٱلنَّاسَ ٱلسِّحْرَ</strong></td>
+                <td><em>Yu‘allimūna</em>: Fi‘il muḍāri' bab <em>fa‘‘ala</em> (muta‘addī ke 2 maf‘ūl).</td>
+                <td>Jumlah fī maḥalli nashbin <strong>Ḥāl</strong> dari fā‘il <em>kafarū</em> atau badal bayān. <em>An-Nāsa</em> maf‘ūl bih awwal, <em>as-siḥra</em> maf‘ūl bih tsānī.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَآ أُنزِلَ</strong></td>
+                <td><em>Mā</em>: Isim maushūl ma‘thūf. <em>Unzila</em>: Fi‘il māḍī mabnī lil-majhūl.</td>
+                <td>Ma‘thūf kepada <em>as-siḥra</em> fī maḥalli nashbin (atau ma‘thūf kepada <em>mā tatlū</em>). Na'ibul fā‘il dhamīr mustatir <em>huwa</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَى ٱلْمَلَكَيْنِ بِبَابِلَ</strong></td>
+                <td><em>Al-Malakaini</em>: Isim mutsannā. <em>Bābila</em>: Isim 'alam mamnū‘ min ash-sharf.</td>
+                <td>Jār wa majrūr majrūr bil-Yā' muta‘alliq bi <em>unzila</em>. <em>Bi-Bābila</em> majrūr bil-fat-ḥah berkedudukan sebagai ḥāl.</td>
+            </tr>
+            <tr>
+                <td><strong>هَـٰرُوتَ وَمَـٰرُوتَ</strong></td>
+                <td>Isim 'alam 'ujmah mamnū‘ min ash-sharf.</td>
+                <td><strong>Badal</strong> atau <strong>‘Athaf Bayān</strong> dari <em>al-malakaini</em>, majrūr bil-fat-ḥah tanpa tanwin.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ</strong></td>
+                <td><em>Mā</em>: Nāfiyah. <em>Yu‘allimāni</em>: Fi‘il muḍāri' af‘ālul khamsah. <em>Min</em>: Zā'idah li-ta'kīdin-nafyi.</td>
+                <td><em>Yu‘allimāni</em> marfū' bi-tsubūtin-nūn, alif tatsniyah fā‘il. <em>Aḥadin</em> majrūr laf-zhan manṣūb maḥallan sebagai maf‘ūl bih.</td>
+            </tr>
+            <tr>
+                <td><strong>حَتَّىٰ يَقُولَآ</strong></td>
+                <td><em>Ḥattā</em>: Ḥarf ghāyah wa nashb. <em>Yaqūlā</em>: Fi‘il muḍāri' manṣūb bi-An muḍmarah.</td>
+                <td>Fi‘il muḍāri' manṣūb bi-hadzfin-nūn, Alif tatsniyah fā‘il.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّمَا نَحْنُ فِتْنَةٌۭ فَلَا تَكْفُرْ</strong></td>
+                <td><em>Innamā</em>: Kaffah wa makfūfah (adātul ḥashr). <em>Nahnu</em>: Mubtada'. <em>Fitnatun</em>: Khabar. <em>Lā takfur</em>: Nahyi.</td>
+                <td>Jumlah maqūlul qaul fī maḥalli nashbin. Fā' ‘āthifah jazā'iyyah, <em>Lā</em> nāhiyah jāzimah, <em>takfur</em> fi‘il mudhari' majzūm bis-sukūn.</td>
+            </tr>
+            <tr>
+                <td><strong>فَيَتَعَلَّمُونَ مِنْهُمَا</strong></td>
+                <td>Fā' ‘āthifah sababiyyah, <em>yata‘allamūna</em>: Fi‘il muḍāri' marfū' bi-tsubūtin-nūn.</td>
+                <td>Jumlah ma‘thūfah kepada <em>yu‘allimūnan-nāsa</em> atau isti'nāfiyah khabariyyah. <em>Minhumā</em> muta‘alliq bi <em>yata‘allamūna</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَا يُفَرِّقُونَ بِهِۦ</strong></td>
+                <td><em>Mā</em>: Isim maushūl (maf‘ūl bih). <em>Yufarriqūna</em>: Fi‘il muḍāri' (shilah maushūl).</td>
+                <td><em>Mā</em> fī maḥalli nashbin maf‘ūl bih. Dhamir <em>hī</em> pada <em>bihī</em> adalah 'ā'id maushūl.</td>
+            </tr>
+            <tr>
+                <td><strong>بَيْنَ ٱلْمَرْءِ وَزَوْجِهِۦ</strong></td>
+                <td><em>Baina</em>: Zharf makān manṣūb muta‘alliq bi <em>yufarriqūna</em>. <em>Al-Mar'i</em>: Mudhāf ilaih.</td>
+                <td><em>Al-Mar'i</em> majrūr bil-kasrah, Wawu ‘āthifah, <em>zaujihī</em> mudhāf ilaih majrūr bil-kasrah wa hā' mudhāf ilaih.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا هُم بِضَآرِّينَ بِهِۦ</strong></td>
+                <td><em>Mā</em>: Ḥijāziyyah (musyabbahah bi Laisa) atau Tamīmiyyah. <em>Bā'</em>: Zā'idah fī khabar mā.</td>
+                <td><em>Hum</em> dhamir munfashil fī maḥalli raf‘in isim Mā. <em>Biḍārrīna</em> khabar Mā majrūr laf-zhan bil-Yā' manṣūb maḥallan.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنْ أَحَدٍ إِلَّا بِإِذْنِ ٱللَّهِ</strong></td>
+                <td><em>Min</em>: Zā'idah. <em>Illā</em>: Adāt ḥashr/istitsnā' mufarragh. <em>Idznillāh</em>: Jār wa majrūr.</td>
+                <td><em>Aḥadin</em> maf‘ūl bih bagi isim fā‘il <em>ḍārrīna</em> majrūr laf-zhan. <em>Bi-idznillāh</em> syibhul jumlah fī maḥalli nashbin <strong>Ḥāl</strong> (istitsnā' mufarragh).</td>
+            </tr>
+            <tr>
+                <td><strong>وَيَتَعَلَّمُونَ مَا يَضُرُّهُمْ وَلَا يَنفَعُهُمْ</strong></td>
+                <td>Wawu ‘athaf, <em>mā</em> isim maushūl, <em>yaḍurruhum</em> fi‘il + fā‘il + maf‘ūl, <em>lā yanfa‘uhum</em> ma‘thūf.</td>
+                <td>Penegasan kemudharatan mutlak yang tiada diimbangi oleh satu pun kemanfaatan hakiki.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَقَدْ عَلِمُوا۟</strong></td>
+                <td>Wawu qasam/isti'nāf, Lām muwaṭṭi'ah lil-qasam, <em>Qad</em> ḥarf taḥqīq, <em>‘Alimū</em> fi‘il māḍī.</td>
+                <td>Menunjukkan kepastian mutlak bahwa para rabi Yahudi secara sadar mengetahui hukum syariat ini.</td>
+            </tr>
+            <tr>
+                <td><strong>لَمَنِ ٱشْتَرَىٰهُ</strong></td>
+                <td>Lām ibtidā' / mu‘allaqah ‘anil-‘amal. <em>Man</em>: Isim syarth atau maushūl (mubtada').</td>
+                <td>Jumlah <em>Isytarāhu</em> shilah atau syarat. Kalimat tersuspensi dari amal lafzhi oleh lam ibtida' (ta‘līqul ‘ilm).</td>
+            </tr>
+            <tr>
+                <td><strong>مَا لَهُۥ فِى ٱلْـَٔاخِرَةِ مِنْ خَلَـٰقٍۢ</strong></td>
+                <td><em>Mā</em>: Nāfiyah. <em>Lahū</em>: Khabar muqaddam. <em>Min khalāq</em>: Mubtada' mu'akhkhar majrūr laf-zhan.</td>
+                <td>Jumlah fī maḥalli raf‘in <strong>Khabar Mubtada'</strong> dari <em>man</em>, atau jawāb syarth.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَبِئْسَ مَا شَرَوْا۟ بِهِۦٓ أَنفُسَهُمْ</strong></td>
+                <td>Lām muwaṭṭi'ah lil-qasam, <em>Bi'sa</em>: Fi‘il jāmid lidz-dzamm. <em>Mā</em>: Nakirah tāmmah tamyīz atau fā‘il.</td>
+                <td>Bentuk celaan ekstrem (dzamm balīgh) atas kehancuran transaksi eksistensial jiwa mereka.</td>
+            </tr>
+            <tr>
+                <td><strong>لَوْ كَانُوا۟ يَعْلَمُونَ</strong></td>
+                <td><em>Lau</em>: Ḥarf imtinā‘ li-imtinā‘ (menolak terjadinya sesuatu karena tidak adanya syarat).</td>
+                <td>Jawāb <em>lau</em> maḥdzūf (taqdīruhū: <em>lamā fa‘alū dzālik</em> = niscaya mereka tidak akan pernah menjual diri mereka kepada sihir).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Tanzīh Taqdīmī & As-Salb al-Qāthi' (Pembersihan Nama Baik Sebelum Tuduhan):</strong><br>
+            Perhatikan urutan redaksional Ilahi: <em>Wa mā kafara Sulaimānu wa lākinnasy-syayāṭīna kafarū</em>. Mengapa Allah mendahulukan kalimat penafian kekafiran Sulaiman sebelum memvonis kekafiran setan? Dalam kaidah balaghah, ini disebut <em>Mubādarah bi-tanzīh sāḥatil-anbiyā'</em> (bersegera membersihkan kesucian martabat para nabi sebelum menjelaskan anatomi kejahatan musuh). Allah tidak berfirman "Sulaiman tidak menyihir", melainkan langsung menafikan akar terdalamnya: <strong>Sulaiman tidak kafir</strong>, karena sihir adalah salah satu cabang kekufuran; ketika pokok kekafiran dinafikan, secara otomatis seluruh cabangnya runtuh seketika.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Isti'ārah & Majaz dalam "Tatlū" dan "Syarau Anfusahum":</strong><br>
+            Kata <em>tatlū</em> (membacakan secara berkelanjutan) adalah <em>Isti‘ārah Tashrīḥiyyah</em>: Allah meminjam istilah pembacaan kitab suci untuk menggambarkan bagaimana setan mendiktekan dan memalsukan lembaran mantra. Adapun klausa <em>syarau bihī anfusahum</em> menghadirkan <strong>Tamtsīl ‘Aqlī (Metafora Transaksional)</strong> yang sangat mengerikan: manusia diposisikan sebagai pedagang yang membawa komoditas paling berharga di alam semesta—yaitu jiwa, fitrah, dan keselamatannya di akhirat—lalu menukarkannya dengan kotoran sihir yang tidak berharga.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Qashr wal-Ḥashr via "Innamā":</strong><br>
+            Ucapan Harut dan Marut: <em>Innamā naḥnu fitnatun falā takfur</em> menggunakan instrumen pembatasan mutlak <strong>Innamā</strong> (<em>adāt qashr mawshūf ‘alā shifah</em>). Fungsinya adalah memotong segala prasangka bahwa kedua malaikat tersebut adalah agen kejahatan atau promotor kesesatan. Mereka murni instrumen seleksi moral. Peringatan <em>falā takfur</em> adalah penegasan tanggung jawab personal (<em>free will</em>) manusia: pintu kejahatan telah dikunci dengan peringatan keras, sehingga siapa pun yang tetap melangkah memasukinya, dialah arsitek mutlak kebinasaannya sendiri.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Muqābalah & Thibāq:</strong><br>
+            Terdapat kontras simetris yang tajam pada frasa <em>yaḍurruhum wa lā yanfa‘uhum</em> (mendatangkan bahaya dan sama sekali tidak mendatangkan manfaat). Mengapa setelah menyatakan "mendatangkan bahaya", Allah masih menegaskan "tidak mendatangkan manfaat"? Para pakar balaghah menjelaskan: ada perkara duniawi yang membahayakan namun memiliki secercah manfaat parsial (sebagaimana khamar dan judi dalam QS. 2:219: <em>itsmuhumā akbaru min naf‘ihimā</em>). Namun sihir secara radikal dinafikan seluruh spektrum manfaatnya: <strong>ia adalah bahaya murni (dharar maḥdh) tanpa ada sedikit pun kebaikan di dalamnya</strong>.
+        </li>
+        <li>
+            <strong>Ilmu Badi' & I'jaz Shauti — Dinamika Fonetika & Paradoks Kognitif "Lau Kānū Ya'lamūn":</strong><br>
+            Perhatikan penutup ayat yang menghadirkan paradoks menakjubkan: di pertengahan ayat Allah menegaskan <em>Wa laqad ‘alimū</em> (Sungguh mereka telah mengetahui secara yakin hukumnya), namun di ujung ayat Allah menutup dengan <em>Lau kānū ya‘lamūn</em> (Sekiranya mereka mengetahui). Para mufassir menjelaskan rahasia balaghah ini: ilmu pertama adalah <strong>Al-‘Ilm an-Nazharī ash-Shūrī</strong> (pengetahuan teoritis di kepala bahwa sihir itu haram dan membinasakan), sedangkan ketiadaan ilmu di penutup ayat adalah ketiadaan <strong>Al-‘Ilm an-Nāfi‘ al-Khasy-ya‘ī</strong> (ilmu yang menancap di kalbu dan membuahkan amal penundukan diri). Seseorang yang mengetahui bahaya racun mematikan namun tetap menenggaknya, status eksistensialnya sama persis dengan orang yang bodoh total (<em>manzilatun-nāzir manzilatal-jāhil</em>).
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Konteks Teks Mendahului — Hubungan Kausalitas Mutlak dengan Ayat 101):</strong><br>
+            Terdapat korelasi hukum psikososial yang mencengangkan antara Ayat 101 dan Ayat 102. Pada ayat 101, Allah membeberkan perilaku mentalitas para pemuka Yahudi:<br>
+            <em>"Nabadza farīqun minal-ladzīna ūtul-kitāba kitāballāhi warā'a zhuhūrihim ka'annahum lā ya‘lamūn"</em> (Segolongan orang yang diberi kitab melemparkan Kitab Allah ke belakang punggung mereka seakan-akan mereka tidak tahu).<br>
+            Hukum fitrah menetapkan: <strong>Jiwa manusia tidak dapat hidup dalam ruang hampa spiritual (spiritual vacuum)</strong>. Begitu mereka membuang Kitabullah (Taurat dan Al-Qur'an) ke belakang punggung, kekosongan itu seketika diisi oleh sampah okultisme setan: <em>Wattaba‘ū mā tatlusy-syayāṭīnu ‘alā mulki Sulaimān</em>. Kaidah sibāq ini memancarkan hukum abadi: <em>Siapa yang berpaling dari petunjuk wahyu, niscaya akan dijadikan budak oleh khurafat dan manipulasi setan.</em>
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 3: Ayat 40–141):</strong><br>
+            Ayat 102 bertindak sebagai klimaks pembongkaran hipokrisi dan kerusakan epistemik Bani Israil dalam Klaster Dialektika Madaniyah. Sepanjang ayat 40 hingga 100, Al-Qur'an membedah sejarah pelanggaran perjanjian, pembunuhan nabi-nabi, kecintaan menyembah anak sapi, dan kekerasan hati mereka yang membatu. Pada ayat 101–103, Al-Qur'an membuka kedok kejahatan intelektual mereka yang paling busuk: mereka membanggakan diri sebagai keturunan para nabi pilihan, namun di balik layar mereka mempraktikkan tradisi sihir terlarang, memfitnah Nabi Sulaiman a.s. sebagai bapak okultisme mereka, dan menjual masa depan akhirat demi agenda manipulasi politik rendahan.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 103 — Kontras Solutif):</strong><br>
+            Ayat 102 memaparkan kehancuran transaksi klenik (<em>wa labi'sa mā syarau bihī anfusahum</em>), lalu seketika disambung oleh Ayat 103 yang menyodorkan perniagaan ilahi yang sejati:<br>
+            <em>"Wa lau annahum āmanū wat-taqau lamatsūbatun min ‘indillāhi khair, lau kānū ya‘lamūn"</em> (Dan sekiranya mereka itu beriman dan bertakwa, tentulah pahala dari sisi Allah jauh lebih baik, sekiranya mereka mengetahui).<br>
+            Hubungan ini menciptakan antitesis benderang: transaksi sihir menghasilkan laknat dan kebangkrutan akhirat, sedangkan modal iman dan takwa membuahkan kemuliaan hakiki yang abadi di sisi Allah.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Dari Lembah Babel Kuno hingga Konspirasi Madinah</h3>
+    <p>
+        Untuk memahami kedalaman ayat 102, kita harus merekonstruksi lintasan sejarah peradaban Timur Tengah kuno yang membentang selama lebih dari satu milenium:
+    </p>
+    <ul>
+        <li>
+            <strong>Zaman Keemasan Sulaiman AS (Abad ke-10 SM di Yerusalem):</strong> Allah menganugerahi Nabi Sulaiman a.s. kerajaan adidaya yang tak tertandingi, menundukkan jin dan angin sebagai mukjizat kenabian. Namun, pasca wafatnya Sulaiman, setan-setan menyebarkan disinformasi masif: mereka mengubur naskah-naskah sihir di bawah singgasana Sulaiman lalu membongkarnya di hadapan khalayak seraya memfitnah: <em>"Bukan dengan mukjizat Sulaiman menguasai dunia, melainkan dengan kitab mantra sihir ini!"</em> Sebagian kalangan Bani Israil yang berpenyakit hati menelan mentah-mentah konspirasi ini.
+        </li>
+        <li>
+            <strong>Peristiwa Pembuangan Babilonia (Babylonian Exile, 586 SM):</strong> Ketika Nebukadnezar II (Bakhtanashar) menghancurkan Haikal Sulaiman dan menyeret puluhan ribu elite Yahudi ke Babel (Mesopotamia), mereka terasimilasi secara mendalam dengan peradaban Kasdim (Chaldean) kuno yang masyhur sebagai episentrum ilmu sihir, astrologi perbintangan, dan pemujaan setan. Di sanalah sebagian rabi mengadopsi tradisi mistisisme gelap (yang kelak berevolusi menjadi literatur Kabbalah esoterik) dan mencampurkannya dengan naskah-naskah kuno.
+        </li>
+        <li>
+            <strong>Misi Dua Malaikat (Harut & Marut) di Babilonia:</strong> Di tengah memuncaknya kebingungan masyarakat Babel yang tidak dapat membedakan antara sihir ilusi dan mukjizat kenabian, Allah menurunkan Harut dan Marut. Keduanya membedah anatomi sihir secara transparan agar manusia memahami hakikat kepalsuannya, seraya memberikan peringatan keras agar ilmu itu tidak disalahgunakan untuk merusak tatanan moral. Namun masyarakat yang korup justru memburu teknik pemisahan suami-istri demi memuaskan nafsu destruktif mereka.
+        </li>
+        <li>
+            <strong>Konflik Intelektual di Madinah (622 M):</strong> Ketika Nabi Muhammad ﷺ berhijrah ke Madinah, para rabi Yahudi memanfaatkan hegemoni literasi mereka untuk mengintimidasi kaum Muslimin. Mereka membanggakan mantra-mantra rahasia warisan Babel dan menuduh Islam tidak memahami sejarah kuno. Ayat 102 turun bagaikan halilintar: membongkar sumber sihir mereka dari setan, membersihkan kehormatan Sulaiman, dan membongkar kepalsuan klaim spiritualitas mereka di hadapan publik Madinah.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi‘ al-Bayān ‘an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur & Kritik Riwayat):</strong><br>
+        At-Tabari memaparkan riwayat-riwayat mutashil mengenai bagaimana setan memalsukan lembaran sihir pasca wafatnya Nabi Sulaiman a.s. Beliau menegaskan bahwa firman Allah <em>wa mā kafara Sulaimān</em> adalah deklarasi pembebasan mutlak dari Allah terhadap nabi-Nya dari noda syirik dan sihir. Terkait kedudukan <em>wa mā unzila ‘alal-malakain</em>, At-Tabari menganalisis perdebatan gramatikal: apakah <em>mā</em> di situ bermakna <em>nafy</em> (tidak diturunkan kepada dua malaikat) ataukah bermakna <em>maushūl</em> (dan apa yang diturunkan kepada dua malaikat). At-Tabari memilih pendapat rajih bahwa <em>mā</em> adalah isim maushul: Allah memang menurunkan ilmu tersebut kepada Harut dan Marut sebagai <em>balā' wa ikhtibār</em> (ujian dan saringan keimanan) bagi umat manusia, bukan untuk diamalkan, melainkan agar mereka mampu mengenali kepalsuan sihir dan menjauhinya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-‘Aẓīm</em> (Teologi Atsari & Pemurnian Akidah):</strong><br>
+        Ibnu Katsir melancarkan kritik tajam tanpa kompromi terhadap riwayat-riwayat Israiliyyat yang mencemari kisah Harut dan Marut. Beliau menegaskan bahwa kisah malaikat berzina dengan wanita bernama Zukhrah adalah cerita batil yang tidak boleh diyakini seorang muslim. Ibnu Katsir mendasarkan tafsirnya pada ayat-ayat Al-Qur'an lain: bagaimana mungkin malaikat yang disifati <em>lā ya‘shūnallāha mā amarahum</em> dapat melakukan dosa-dosa besar? Ibnu Katsir juga menetapkan hukum fiqih akidah bahwa praktik sihir adalah kekufuran yang mengeluarkan pelakunya dari Islam berdasarkan ketegasan dua kalimat dalam ayat ini: <em>wa lākinnasy-syayāṭīna kafarū yu‘allimūnan-nāsas-siḥr</em> dan sabda dua malaikat <em>innamā naḥnu fitnatun falā takfur</em>. Beliau mengutip ijma' para sahabat, di antaranya Umar bin Khattab r.a., yang memerintahkan hukuman mati bagi tukang sihir demi melindungi keselamatan akidah dan ketertiban masyarakat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi‘ li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih & Analisis Komparasi Mazhab):</strong><br>
+        Al-Qurthubi membedah tuntas dimensi yuridis ayat ini:
+        <ul>
+            <li><strong>Status Hukum Penyihir:</strong> Mazhab Malik, Abu Hanifah, dan Ahmad berpendapat bahwa penyihir menjadi kafir semata-mata karena mempelajari dan mempraktikkan sihir, dan sanksi hukumnya adalah hukuman mati (<em>haddan</em>). Sedangkan Imam Asy-Syafi'i merinci: penyihir ditanya mengenai mantra yang digunakannya; jika mantranya mengandung kalimat kekufuran atau pemujaan setan, ia dihukum mati karena murtad; jika tidak mengandung kekufuran melainkan racun atau ilusi, ia dikenai hukuman qishash apabila sihirnya membunuh orang, atau dihukum ta'zir keras jika tidak membunuh.</li>
+            <li><strong>Hakikat Realitas Sihir:</strong> Al-Qurthubi membantah kaum Mu'tazilah yang mengklaim bahwa sihir hanyalah trik mata murni tanpa realitas fisik. Al-Qurthubi menegaskan pandangan Ahlus Sunnah wal Jama'ah: sihir memiliki realitas hakiki (<em>ḥaqīqah</em>) yang dapat menimbulkan penyakit fisik, kegilaan batin, dan perceraian, namun pengaruh kausalitas tersebut tidak bekerja secara mandiri melainkan mutlak tunduk di bawah ketetapan <strong>Izin Kauniyah Allah</strong> (<em>illā bi'idznillāh</em>).</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Balaghah Mu'tazilah & Filsafat Epistemologi):</strong><br>
+        Az-Zamakhsyari membedah keagungan retorika ayat: bagaimana gaya bahasa Al-Qur'an secara telak membalikkan tuduhan kaum Yahudi kepada wajah mereka sendiri. Setanlah yang mengada-ada atas kerajaan Sulaiman, dan para rabi itulah pewaris sejati setan.<br>
+        Fakhruddin Ar-Razi menyusun disertasi filosofis monumental mengenai sihir dalam <em>Mafātīḥul-Ghayb</em>, membaginya ke dalam 8 kategori rasional: (1) Sihir astronomi/perbintangan Kasdim kuno, (2) Sihir ilusi optik dan sugesti psikologis bawah sadar (<em>wahm</em>), (3) Sihir kerja sama dengan entitas jin/ruhaniyyat, (4) Sihir manipulasi mekanik dan sulap tangan (<em>al-akhadzah bil-‘uyūn</em>), (5) Sihir rekayasa zat kimia, anestesi, dan racun, (6) Sihir penipuan komunikasi dan jimat palsu, (7) Sihir adu domba dan manipulasi informasi (<em>an-namīmah</em>), dan (8) Sihir hipnosis. Ar-Razi menegaskan pembelaan mutlak atas kemaksuman malaikat (<em>‘ishmatul malā'ikah</em>) dan membuktikan secara logika teologis bahwa posisi Harut dan Marut adalah guru penguji (<em>imtiḥān</em>), bagaikan dokter yang menjelaskan zat racun mematikan agar pasiennya tidak meminumnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Kajian Tematik & Kontekstual Modern):</strong><br>
+        Quraish Shihab menggarisbawahi mengapa Al-Qur'an mengangkat isu pemisahan suami-istri (<em>mā yufarriqūna bihī bainal-mar'i wa zaujih</em>) sebagai tolok ukur kejahatan sihir. Perkawinan adalah ikatan suci yang dinamakan Allah sebagai <em>mītsāqan ghalīzhā</em> (perjanjian yang sangat kokoh). Jika ikatan paling sakral, paling intim, dan paling kuat dalam struktur biologis-sosial manusia ini dapat dihancurkan oleh fitnah sihir, maka tatanan masyarakat yang lebih luas (suku, bangsa, dan negara) akan jauh lebih mudah untuk diporakporandakan. Beliau juga membedah makna "Izin Allah" ke dalam dua dimensi fundamental: <strong>Izin Syar'i</strong> (keridhaan dan perintah agama) dan <strong>Izin Kauni</strong> (hukum keteraturan alam semesta). Sihir tidak pernah mendapat izin syar'i dari Allah, namun ia terjadi dalam kerangka izin kauni sebagai bagian dari dinamika ujian moral di dunia fana.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka — <em>Tafsir Al-Azhar</em> (Spiritualitas Nusantara & Perang Melawan Klenik):</strong><br>
+        Buya Hamka menulis dengan nada keprihatinan mendalam melihat realitas umat Islam di Nusantara yang kerap terperosok ke dalam lumpur perdukunan, jimat, pesugihan, dan santet. Hamka menyatakan: <em>"Bani Israil hancur karena meninggalkan Taurat lalu memegang kitab klenik sihir Babel. Umat Islam di Tanah Air pun akan jatuh ke lembah kehinaan apabila meninggalkan tuntunan Al-Qur'an dan Sunnah, lalu pergi ke dukun untuk mencari pangkat, menundukkan jodoh dengan pelet, atau menghancurkan lawan politik dengan santet!"</em> Hamka menegaskan bahwa ayat 102 adalah proklamasi emansipasi tauhid: Al-Qur'an membebaskan jiwa manusia dari ketakutan semu kepada dukun dan jin, seraya mengembalikan seluruh rasa takut dan harap semata-mata kepada Allah Yang Maha Kuasa.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') & Dinamika Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Analisis & Sudut Pandang Khusus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Kesucian Nabi Sulaiman AS (Tanzīh)</strong></td>
+                <td>Sepakat bulat bahwa Nabi Sulaiman a.s. bersih total dari sihir, syirik, dan kekufuran.</td>
+                <td>At-Tabari & Ibnu Katsir: Fokus pada pembatalan fitnah naskah palsu yang dikubur setan. Ar-Razi: Menegaskan kemaksuman nabi secara dalil akal dan naqal (mustahil nabi menyihir).</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Harut & Marut di Babel</strong></td>
+                <td>Keduanya diutus sebagai instrumen ujian (fitnah/balā') bagi keimanan manusia, bukan agen kejahatan.</td>
+                <td>Ibnu Katsir & Ar-Razi: Menolak mutlak mitos Zukhrah sebagai dongeng batil Israiliyyat. At-Tabari: Menafsirkan <em>wa mā unzila</em> sebagai ilmu yang diturunkan untuk membedakan sihir dari mukjizat. Sebagian mufassir minoritas: Mencoba memaknai <em>mā</em> sebagai penafian (tidak diturunkan), namun ditolak jumhur.</td>
+            </tr>
+            <tr>
+                <td><strong>Hukum Praktik & Belajar Sihir</strong></td>
+                <td>Haram mutlak dengan ancaman kebinasaan akhirat (<em>mā lahū fil-ākhirati min khalāq</em>).</td>
+                <td>Malik, Abu Hanifah, Ahmad: Pelaku sihir kafir murtad dan dihukum mati secara mutlak. Asy-Syafi'i: Dilihat unsur mantranya, jika tidak ada kekufuran maka dihukum ta'zir atau qishash bila menelan korban jiwa.</td>
+            </tr>
+            <tr>
+                <td><strong>Efektivitas Bahaya Sihir (Illā bi'idznillāh)</strong></td>
+                <td>Sihir tidak memiliki kekuatan otonom mutlak; bahayanya hanya terjadi atas kehendak dan takdir Allah.</td>
+                <td>Ahlus Sunnah (Qurthubi, Tabari, Ibnu Katsir): Sihir punya realitas objektif yang mempengaruhi fisik dan psikis. Mu'tazilah: Sihir murni muslihat optik dan psikologis. Quraish Shihab: Penekanan distingsi izin takwini vs izin tasyri'i.</td>
+            </tr>
+            <tr>
+                <td><strong>Dampak Terburuk: Pemisahan Pasutri</strong></td>
+                <td>Kejahatan sosial paling puncak adalah meruntuhkan fondasi keluarga inti.</td>
+                <td>Ibnu Katsir: Menghubungkan langsung dengan hadits takhta Iblis di atas air. Quraish Shihab & Hamka: Menyoroti kerapuhan peradaban jika institusi keluarga hancur akibat hilangnya saling percaya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+    <p>
+        <em>Catatan Metodologis: Analisis kognitif, model mental, dan neuropsikologis berikut ini merupakan pembacaan hermeneutis kontemporer (analisis kualitatif), bukan wahyu syariat yang bersifat mutlak, serta terbebas dari cocoklogi sains yang spekulatif.</em>
+    </p>
+
+    <h3>1. Dekonstruksi "Illusion of Control" & Mentalitas Jalan Pintas (Shortcut Mentality)</h3>
+    <p>
+        Secara psikologi evolusioner dan neurokognitif, ketertarikan manusia terhadap sihir dan okultisme berakar pada <strong>Illusion of Control (Ilusi Kendali)</strong> dan kecemasan eksistensial terhadap ketidakpastian masa depan. Ketika manusia menghadapi kegagalan, persaingan hidup yang keras, atau ketakutan akan kehilangan status sosial, sistem limbik otak (khususnya <em>amygdala</em>) memicu sinyal bahaya yang intens. Otak primitif membenci ketidakpastian dan secara alami mencari <strong>jalur pintas berenergi rendah (cognitive short-cut / cognitive ease)</strong>.
+    </p>
+    <p>
+        Sihir menawarkan ilusi kontrol instan: kemampuan menaklukkan lawan, memikat pasangan, atau mengeruk kekayaan tanpa harus menempuh proses kausalitas sunnatullah yang melelahkan (belajar tekun, bekerja profesional, menahan nafsu, dan bersabar). Ayat 102 membongkar tipuan ini: mereka yang mencari jalan pintas okultisme sejatinya sedang terjebak dalam disonansi kognitif yang membinasakan. Al-Qur'an memulihkan kesehatan akal budi dengan merestorasi <strong>Prinsip Kausalitas Sunnatullah & Tawakal Tauhid</strong>: keberhasilan sejati hanya dapat diraih melalui ikhtiar nyata yang halal, disertai kepasrahan total kepada kedaulatan mutlak Allah Ta'ala.
+    </p>
+
+    <h3>2. "Faustian Bargain" & Jebakan Sunk Cost Fallacy Spiritual</h3>
+    <p>
+        Klausa <em>wa labi'sa mā syarau bihī anfusahum</em> adalah diagnosis sempurna atas fenomena psikologis <strong>Faustian Bargain (Perjanjian Menjual Jiwa)</strong> dan <strong>Sunk Cost Fallacy</strong> dalam skala spiritual eksistensial:
+    </p>
+    <ul>
+        <li><strong>Transaksionalitas yang Merusak Diri (Self-Destructive Trade-off):</strong> Demi ilusi pengaruh temporal di dunia yang sempit, manusia rela menukar integritas nurani, kemerdekaan jiwa, dan keselamatan abadinya di akhirat. Setiap kali seseorang melangkah ke dunia kegelapan okultisme, ia harus membayar harga psikologis yang sangat mahal: paranoia kronis, rasa bersalah yang mengikis harga diri, dan ketergantungan patologis pada bisikan setan.</li>
+        <li><strong>Eskalasi Komitmen Toksik:</strong> Sebagaimana mentalitas penjudi yang terus menambah taruhan setelah mengalami kekalahan beruntun (<em>sunk cost fallacy</em>), para pemburu sihir yang menyadari kerugian mereka (<em>wa laqad ‘alimū</em>) bukannya berhenti, melainkan justru semakin tenggelam dalam kegelapan karena ego mereka menolak mengakui kebodohan transaksi awal mereka.</li>
+    </ul>
+
+    <h3>3. Kerentanan Jalinan Sosial (Social Fabric Vulnerability) & Neurobiologi Relasi Pasutri</h3>
+    <p>
+        Mengapa sasaran utama ilmu pemecah belah yang diajarkan setan berfokus pada <em>mā yufarriqūna bihī bainal-mar'i wa zaujih</em> (memisahkan antara suami dan istrinya)?
+    </p>
+    <ul>
+        <li><strong>Keluarga sebagai Fondasi Kestabilan Neuro-Sosial:</strong> Hubungan perkawinan adalah ikatan emosional dan neurobiologis terdalam yang memfasilitasi pelepasan hormon oksitosin (kepercayaan dan keintiman) serta dopamin (kebahagiaan stabil). Dari keluarga yang sakīnah lahirlah generasi yang sehat secara mental dan tangguh secara spiritual.</li>
+        <li><strong>Eksploitasi Bias Kognitif oleh Bisikan Setan:</strong> Sihir pemisah bekerja dengan menyuntikkan racun <em>su'uzh-zhān</em> (prasangka buruk kronis), melebih-lebihkan kekurangan pasangan (<em>negativity bias</em>), serta memicu amarah reaktif yang melumpuhkan fungsi kendali emosi di <strong>Prefrontal Cortex (PFC)</strong>. Ketika pasangan suami-istri terjebak dalam amarah yang membabi buta, rasa empati terputus seketika, membuka jalan bagi perceraian yang menghancurkan struktur mental anak-anak dan meruntuhkan benteng moral masyarakat.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21 & Kritik Peradaban)</h2>
+
+    <h3>1. Metamorfosis Okultisme Modern di Era Pasca-Sekuler: Pseudo-Spiritualitas & Algoritma Digital</h3>
+    <p>
+        Di abad ke-21, sihir tidak lagi selalu berwujud kemenyan, dupa, atau rajah di atas kulit binatang. Okultisme telah mengalami <strong>re-packaging dan modernisasi canggih</strong> di tengah masyarakat pasca-industri:
+    </p>
+    <ul>
+        <li><strong>Industri New Age & "Manifestation" Tanpa Ikhtiar:</strong> Di platform media sosial global (TikTok, Instagram, YouTube), jutaan generasi muda terpapar oleh gerakan kultus modern seperti astrologi algoritma, pembacaan kartu tarot digital, kristal energi gaib, hingga teknik <em>manifestation</em> klenik yang menjanjikan kekayaan instan melalui manipulasi "frekuensi kosmik". Ini adalah wujud kontemporer dari <em>tatlusy-syayāṭīn</em>: memasarkan ilusi kontrol kepada generasi yang cemas akan masa depannya.</li>
+        <li><strong>Komodifikasi Klenik & Eksploitasi Publik di Dunia Ketiga:</strong> Di Indonesia dan dunia berkembang, praktik perdukunan bertransformasi menjadi industri bernilai triliunan rupiah: dukun bersertifikat, pesugihan berkedok investasi gaib, penjualan jimat berlabel agama, hingga maraknya konten-konten horor dan mistisisme eksploitatif di media penyiaran yang secara sistematis membodohi nalar publik dan melanggengkan kemunduran peradaban.</li>
+    </ul>
+
+    <h3>2. "Algoritma Pemecah Belah": Bentuk Baru Pemisahan Pasutri di Abad Digital</h3>
+    <p>
+        Peringatan Al-Qur'an tentang <em>mā yufarriqūna bihī bainal-mar'i wa zaujih</em> menemukan padanan fenomenologis yang sangat mengerikan dalam arsitektur digital kontemporer:
+    </p>
+    <ul>
+        <li><strong>Algoritma Keterlibatan Berbasis Polarisasi (Engagement-Driven Polarization):</strong> Media sosial dirancang oleh korporasi teknologi dengan mengeksploitasi algoritma yang memicu amarah, kecemburuan, dan perpecahan demi mempertahankan retensi layar (<em>screen time</em>). Ribuan rumah tangga hari ini hancur bukan semata karena mantra dukun di malam hari, melainkan oleh "mantra digital": algoritma pornografi yang merusak keintiman intim suami-istri, budaya pamer kemewahan semu (<em>hedonic treadmill</em>) yang memicu tuntutan ekonomi tak realistis, serta perselingkuhan mikro (<em>micro-cheating</em>) melalui aplikasi pesan instan.</li>
+        <li><strong>Epidemi Perceraian Global:</strong> Lonjakan angka perceraian di era modern adalah buah dari kehancuran etika komunikasi dan lunturnya rasa takwa. Ketika manusia lebih memercayai narasi toksik di media sosial daripada komitmen ikatan suci di hadapan Allah, mereka sejatinya sedang mengulang tragedi Babel: membiarkan kekuatan destruktif luar mencabik-cabik keharmonisan rumah tangga mereka.</li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Audit & Purifikasi Total Ruang Domestik dari Simbol/Praktik Okultisme:</strong> Lakukan pemeriksaan menyeluruh di lingkungan rumah, tempat usaha, dan gawai pribadi. Buang, bakar, atau hancurkan segala bentuk jimat, rajah, keris yang dikeramatkan, bacaan mantera, aplikasi ramalan/zodiak, atau kontak dukun/paranormal. Bentengi rumah setiap hari dengan merutinkan membaca Al-Qur'an secara lisan, khususnya membaca Surah Al-Baqarah secara utuh atau minimal ayat-ayat pembenteng (Ayat Kursi dan dua ayat terakhir Al-Baqarah) serta dzikir pagi-petang (Al-Mu'awwidzatain).
+            </li>
+            <li>
+                <strong>Protokol Imunisasi Rumah Tangga (Weekly Conjugal Deep-Talk & Anti-Separation Shield):</strong> Tetapkan waktu khusus minimal 45 menit setiap pekan bersama pasangan hidup tanpa sentuhan gawai pintar (<em>digital detox conversation</em>). Evaluasi dinamika emosi, selesaikan friksi kecil melalui dialog tabayyun sebelum matahari terbenam, saling meminta maaf secara tulus, dan bersama-sama memperbarui niat ibadah pernikahan demi menutup celah bagi setan pemecah belah rumah tangga.
+            </li>
+            <li>
+                <strong>Pemberlakuan "The Anti-Shortcut Rule" dalam Karir, Keuangan, dan Pengobatan:</strong> Tolak secara mutlak segala tawaran penyelesaian masalah hidup yang menggunakan jalur pintas haram atau mistik (mulai dari menolak pesugihan, pengobatan klenik berkedok doa/hizib yang tidak syar'i, suap/risywah untuk kenaikan jabatan, hingga skema penipuan cepat kaya). Hadapi segala kebuntuan hidup dengan meningkatkan kompetensi profesional, berikhtiar halal sesuai hukum kausalitas sunnatullah, dan memperkuat sujud istikharah.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika aku menghadapi jalan buntu dalam urusan jodoh, rezeki, atau karir, apakah di sudut hatiku yang terdalam masih pernah terbersit godaan untuk mencari bantuan kekuatan gaib, ramalan masa depan, atau cara-cara manipulatif yang membuktikan betapa rapuhnya tawakalku kepada Allah Yang Maha Kuasa?
+            </li>
+            <li>
+                Apakah caraku berkomunikasi dengan pasangan hidupku hari ini lebih banyak mencerminkan kasih sayang yang menyejukkan batin, ataukah tanpa kusadari lisanku telah menjadi perpanjangan tangan setan yang menebar kecurigaan, mencaci, dan meretakkan ikatan suci pernikahan kami?
+            </li>
+            <li>
+                Jika aku menimbang seluruh ambisi duniawi yang kukejar siang dan malam, apakah aku sedang menukarkan waktu berharga, kesucian nurani, dan nasib abadiku di akhirat demi sesuatu yang sejatinya mendatangkan bahaya dan sama sekali tidak memberi manfaat hakiki di hadapan mahkamah Allah kelak?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Hayyu Yā Qayyūm, Yā Mālikal-Mulk, Yā Man bi-yadihī malakūtu kulli syay'. Kami memohon perlindungan kepada-Mu dengan kalimat-kalimat-Mu yang sempurna dari segala kejahatan setan, racun sihir, tipu daya dukun, dan pandangan mata yang dengki. Bersihkanlah hati kami dari segala bentuk syirik, ketergantungan kepada makhluk, dan ilusi jalan pintas yang merusak akidah. Jagalah ikatan suci pernikahan kami dan seluruh kaum muslimin dari makar setan yang ingin memecah belah; satukanlah hati kami di atas ketakwaan, kecintaan, dan kesabaran. Jadikanlah kami hamba-hamba-Mu yang teguh bertawakal hanya kepada-Mu, rida atas takdir-Mu, dan tidak menjual bagian akhirat kami demi kenikmatan semu duniawi. Āmīn Yā Rabbal-‘Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-101 - QS. Al-Baqarah Ayat 101.html">&larr; Kembali ke Ayat 101 (QS. 2:101)</a>
+        <span><strong>QS. Al-Baqarah [2]: 102</strong></span>
+        <a href="002-103 - QS. Al-Baqarah Ayat 103.html">Lanjut ke Ayat 103 (QS. 2:103) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

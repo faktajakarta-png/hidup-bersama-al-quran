@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-015 - QS. Al-Baqarah Ayat 15 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .footer-nav a:hover {
+        background: #bee3f8;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-014 - QS. Al-Baqarah Ayat 14.html">&larr; QS. Al-Baqarah Ayat 14</a>
+        <span>Hidup Bersama Al-Qur'an: Kerangka 7 Lensa v2.0</span>
+        <a href="002-016 - QS. Al-Baqarah Ayat 16.html">QS. Al-Baqarah Ayat 16 &rarr;</a>
+    </div>
+
+    <div class="badge-meta">
+        <span class="badge">Surah ke-2</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge badge-gold">Blok 1 Klaster 3: Patologi Kaum Munafik (Ayat 8–20)</span>
+        <span class="badge">6 Kata</span>
+        <span class="badge">36 Huruf Rasm</span>
+    </div>
+
+    <h1>QS. Al-Baqarah Ayat 15</h1>
+    <div class="transliteration">"Allāhu yastahzi'u bihim wa yamudduhum fī ṭugyānihim ya'mahūn(a)"</div>
+    <div class="thematic-title">Keadilan Pembalasan Ilahi & Jebakan Istidrāj: Hakikat "Allāhu Yastahzi'u Bihim", Pembiaran dalam Kesesatan Buta (Ya'mahūn), dan Dekonstruksi Rasa Aman Semu Para Pendosa</div>
+    <div class="subtitle">Kajian Komprehensif Tafsir 7 Lensa: Filologi, Qira'at, Balaghah, Teologi Pembalasan (Musyākalah), Kognisi Sistemik Istidrāj, dan Praksis Kewaspadaan Ruhani</div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Hadits</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks & Maqasid</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Mufassir</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Mental Model</a>
+        <a href="#lensa-6">Lensa 6: Realitas Abad ke-21</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Doa</a>
+    </div>
+
+    <!-- LENSA 1: TEKS & HADITS -->
+    <h2 id="lensa-1">Lensa 1: Teks Kitabullah, Tajwid, Qira'at Mutawatirah & Takhrij Hadits</h2>
+
+    <div class="arabic">
+        ٱللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِى طُغْيَٰنِهِمْ يَعْمَهُونَ
+    </div>
+
+    <div class="translation">
+        "Allah memperolok-olokkan mereka dan membiarkan mereka terombang-ambing dalam kesesatan mereka yang melampaui batas secara membabi buta."
+    </div>
+
+    <h3>1. Analisis Fonetika, Tajwid & Makharijul Huruf Word-by-Word</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafal Rasm Utsmani</th>
+                <th>Kaidah Tajwid</th>
+                <th>Makhraj & Sifat Huruf Dominan</th>
+                <th>Catatan Fonetik & Waqaf</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱللَّهُ</strong><br><em>Allāhu</em></td>
+                <td>Tafkhim (tebal) pada Lam Jalalah karena diawali harakat fathah pada hamzah washal yang dibaca 'A'.</td>
+                <td>Lam (ujung lidah bertemu gusi atas), Ha (pangkal tenggorokan / aqshal halq). Sifat Hams dan Rakhawah pada huruf Ha.</td>
+                <td>Dibaca tebal dan agung (tafkhim) untuk menghadirkan keagungan subjek mutlak Penguasa Alam Semesta.</td>
+            </tr>
+            <tr>
+                <td><strong>يَسْتَهْزِئُ</strong><br><em>Yastahzi'u</em></td>
+                <td>Hams dan Shafir pada Sin (س), Hams dan Rakhawah pada Ha (هـ), Tahqiq Hamzah (ء) pada akhir kata.</td>
+                <td>Sin dari ujung lidah di atas gigi seri bawah; Zay dari ujung lidah bersuara desis tajam; Hamzah dari aqshal halq (pangkal tenggorokan).</td>
+                <td>Transisi dari desis halus (س) ke desis bergetar (ز) lalu dihentikan tegas dengan hamzah (ء) melambangkan pemutusan arogansi ejekan secara tiba-tiba.</td>
+            </tr>
+            <tr>
+                <td><strong>بِهِمْ</strong><br><em>Bihim</em></td>
+                <td>Izhar Syafawi pada Mim Sakinah bertemu Waw (و). Harus diucapkan jelas tanpa ghunnah berlebih, dengan kehati-hatian ekstra agar mim tidak terlebur ke dalam waw.</td>
+                <td>Ba dari kedua bibir tertutup rapat (asy-syafatain); Ha dari tenggorokan bagian dalam; Mim dari pertemuan kedua bibir disertai ghunnah khafifah.</td>
+                <td>Peringatan tajwid: <em>Ahdzar an takhtafiya 'indal waw</em> (waspadalah jangan sampai mim tersamarkan ketika bertemu huruf waw karena kedekatan makhraj).</td>
+            </tr>
+            <tr>
+                <td><strong>وَيَمُدُّهُمْ</strong><br><em>Wa yamudduhum</em></td>
+                <td>Idgham Mutamatsilain Shaghir / Tasydid ashli pada huruf Dal ganda (مُدْدُهُمْ &rarr; مُدُّهُمْ). Izhar Syafawi pada Mim Sakinah bertemu Fa (ف).</td>
+                <td>Dal dari ujung lidah menempel pada pangkal gigi seri atas (sifat Syiddah dan Jahr); Mim dari bibir.</td>
+                <td>Penekanan tasydid pada huruf Dal (<em>nabr</em> ringan) memberikan efek fonetik pemanjangan tempo dan tarikan tali pembiaran yang tidak terputus.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى طُغْيَٰنِهِمْ</strong><br><em>Fī ṭugyānihim</em></td>
+                <td>Mad Thabi'i pada 'Fii' (2 harakat); Isti'la' dan Ithbaq tingkat tinggi pada huruf Tha (ط); Isti'la' dan Rakhawah pada huruf Ghain (غ); Mad Thabi'i pada Alif khanjariyah (طُغْيَانِهِمْ); Izhar Syafawi pada Mim bertemu Ya (ي).</td>
+                <td>Tha dari ujung lidah bertemu pangkal gigi seri atas dengan rongga mulut terangkat maksimal (Ithbaq); Ghain dari adnal halq (tenggorokan bagian luar dekat rongga mulut).</td>
+                <td>Bunyi berat dan bergejolak antara Tha dan Ghain menciptakan resonansi auditori tentang arus luapan yang merusak dan melanggar batas kemanusiaan.</td>
+            </tr>
+            <tr>
+                <td><strong>يَعْمَهُونَ</strong><br><em>Ya'mahūn</em></td>
+                <td>Tawasuth pada 'Ain (ع); Hams pada Ha (هـ); Mad 'Aridh Lissukun pada Waw sebelum Nun waqaf (dibolehkan 2, 4, atau 6 harakat, diutamakan tawassuth 4 harakat).</td>
+                <td>'Ain dari wasathal halq (tengah tenggorokan); Ha dari aqshal halq; Nun dari ujung lidah bertemu gusi atas disertai ghunnah.</td>
+                <td>Penutupan fashilah ayat dengan bunyi dengung panjang yang berakhir pada huruf Nun melukiskan keadaan tersesat yang tiada berujung dalam kehampaan batin.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Ragam Qira'at Mutawatirah 10 Imam & Implikasi Semantik</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafal / Kalimah</th>
+                <th>Ragam Qira'at & Imam Perawi</th>
+                <th>Deskripsi Kaidah Fonologis</th>
+                <th>Implikasi Makna & Retorika</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>يَسْتَهْزِئُ</strong></td>
+                <td>
+                    <strong>Jumhur (Nafi', Ibnu Katsir, Abu 'Amr, Ashim, Ibnu 'Amir, Kisa'i, Khalaf, Ya'qub, Abu Ja'far):</strong><br>
+                    Membaca dengan <em>Tahqiq Hamzah</em> saat washal maupun waqaf.<br><br>
+                    <strong>Imam Hamzah (Kufah):</strong><br>
+                    Ketika <em>washal</em> membaca dengan tahqiq hamzah. Namun saat <em>waqaf</em>, Imam Hamzah memiliki wajah khusus: (1) <em>Tashil hamzah bayna-bayna</em> disertai <em>raum</em>; (2) <em>Ibdal hamzah</em> menjadi Ya' sukun atau maddah (<em>yastahzii</em>); (3) <em>Hazf hamzah</em> (dihilangkan) dengan men-dhammakan zay (<em>yastahzū</em>).
+                </td>
+                <td>Kaidah peringan hamzah (<em>takhfif al-hamzah</em>) pada dialek Kufah madzhab Hamzah az-Zayyat. Hamzah berharakat dhammah setelah kasrah di akhir kata sangat berat diucapkan lidah Arab kuno.</td>
+                <td>Tahqiq jumhur menegaskan kepastian mutlak hantaman ejekan balik dari Allah yang mengejutkan. Sedangkan wajah ibdal dan hazf menurut riwayat Hamzah waqafan memberikan nuansa kelonggaran semu yang berangsur-angsur melebur sebelum pembalasan akhir tiba.</td>
+            </tr>
+            <tr>
+                <td><strong>وَيَمُدُّهُمْ</strong></td>
+                <td>
+                    <strong>Jumhur 10 Imam:</strong><br>
+                    Membaca dengan harakat fathah pada Ya dan dhommah pada Dal bertasydid: <em>wa yamudduhum</em> (dari fi'il tsulatsi: <em>madda - yamuddu</em>).<br><br>
+                    <strong>Riwayat Syadz (Ibnu Abbas, Abu Ja'far dalam riwayat di luar Asyrah):</strong><br>
+                    Membaca <em>wa yumidduhum</em> (dari fi'il ruba'i: <em>amadda - yumiddu</em>).
+                </td>
+                <td>Perbedaan wazan antara <em>fa'ala-yaf'ulu</em> (tsulatsi) dan <em>af'ala-yuf'ilu</em> (ruba'i).</td>
+                <td>Dalam dialek Quraisy murni, <em>madda fi syarr</em> (membiarkan terkatung-katung dalam keburukan), sedangkan <em>amadda fi khair</em> (memberikan bantuan logistik militer atau karunia kebaikan). Bacaan mutawatirah jumhur <em>yamudduhum</em> secara tepat mengindikasikan pembiaran dalam kebinasaan tanpa pertolongan hakiki.</td>
+            </tr>
+            <tr>
+                <td><strong>طُغْيَٰنِهِمْ</strong></td>
+                <td>
+                    <strong>Jumhur:</strong> <em>Fathah</em> murni pada huruf Ya.<br>
+                    <strong>Imam Warsy 'an Nafi':</strong> Membaca dengan <em>Taqleel</em> (bayna-bayna) ringan pada alif karena adanya sebab kasrah pada Ha sesudahnya dalam sebagian jalur thariq Thayyibah.
+                </td>
+                <td>Sudut kemiringan vokal fonetik alif ke arah Ya.</td>
+                <td>Nuansa vokal taqlil memperhalus transisi, melukiskan bagaimana kesesatan tersebut terasa halus dan terdegradasi tanpa disadari oleh para pelakunya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Takhrij Hadits Nabawi & Atsar Shahih</h3>
+    <div class="hadith-box">
+        <p><strong>Hadits 1: Hakikat Istidrāj (Pemberian Nikmat di Tengah Kemaksiatan)</strong></p>
+        <p style="direction: rtl; font-family: 'Traditional Arabic', serif; font-size: 20px; line-height: 2;">
+            عَنْ عُقْبَةَ بْنِ عَامِرٍ رَضِيَ اللَّهُ عَنْهُ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «إِذَا رَأَيْتَ اللَّهَ يُعْطِي الْعَبْدَ مِنَ الدُّنْيَا عَلَى مَعَاصِيهِ مَا يُحِبُّ، فَإِنَّمَا ذَاكَ مِنْهُ اسْتِدْرَاجٌ» ثُمَّ تَلَا رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: {فَلَمَّا نَسُوا مَا ذُكِّرُوا بِهِ فَتَحْنَا عَلَيْهِمْ أَبْوَابَ كُلِّ شَيْءٍ حَتَّىٰ إِذَا فَرِحُوا بِمَا أُوتُوا أَخَذْنَاهُم بَغْتَةً فَإِذَا هُم مُّبْلِسُونَ}
+        </p>
+        <p>
+            <strong>Terjemahan:</strong> Dari 'Uqbah bin 'Amir <em>radhiyallahu 'anhu</em>, dari Nabi ﷺ, beliau bersabda: <em>"Apabila engkau melihat Allah memberikan kepada seorang hamba kenikmatan duniawi yang ia sukai di atas kemaksiatan-kemaksiatannya, maka sesungguhnya itu tidak lain adalah istidrāj (jebakan pembiaran berangsur-angsur menuju kebinasaan)."</em> Kemudian Rasulullah ﷺ membaca firman-Nya: <em>"Maka tatkala mereka melupakan peringatan yang telah diberikan kepada mereka, Kami pun membukakan semua pintu kesenangan untuk mereka; sehingga apabila mereka bergembira dengan apa yang telah diberikan kepada mereka, Kami siksa mereka dengan sekonyong-konyong, maka ketika itu mereka terdiam berputus asa."</em> (QS. Al-An'am: 44).
+        </p>
+        <p>
+            <strong>Takhrij & Status Sanad:</strong> Diriwayatkan oleh Imam Ahmad dalam <em>Al-Musnad</em> (No. 17311), Ibnu Jarir At-Tabari dalam <em>Tafsir-nya</em> (11/365), Al-Baghawi dalam <em>Syarh as-Sunnah</em> (14/405), dan Al-Baihaqi dalam <em>Syu'ab al-Iman</em> (No. 4514). Sanadnya dinilai <strong>Hasan / Shahih Lighairihi</strong> oleh Syaikh Al-Albani dalam <em>Shahih Al-Jami' Ash-Shaghir</em> (No. 561) dan <em>Silsilah Al-Ahadits Ash-Shahihah</em> (No. 413).
+        </p>
+    </div>
+
+    <div class="hadith-box">
+        <p><strong>Hadits 2: Penangguhan Hukuman bagi Kaum yang Berbuat Zalim (Al-Imlā' lizh-Zhālim)</strong></p>
+        <p style="direction: rtl; font-family: 'Traditional Arabic', serif; font-size: 20px; line-height: 2;">
+            عَنْ أَبِي مُوسَى الْأَشْعَرِيِّ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «إِنَّ اللَّهَ لَيُمْلِي لِلظَّالِمِ حَتَّى إِذَا أَخَذَهُ لَمْ يُفْلِتْهُ» ثُمَّ قَرَأَ: {وَكَذَٰلِكَ أَخْذُ رَبِّكَ إِذَا أَخَذَ الْقُرَىٰ وَهِيَ ظَالِمَةٌ ۚ إِنَّ أَخْذَهُ أَلِيمٌ شَدِيدٌ}
+        </p>
+        <p>
+            <strong>Terjemahan:</strong> Dari Abu Musa Al-Asy'ari <em>radhiyallahu 'anhu</em>, ia berkata: Rasulullah ﷺ bersabda: <em>"Sesungguhnya Allah benar-benar mengulur waktu (menangguhkan hukuman) bagi orang yang berbuat zalim. Hingga apabila Dia telah menyiksanya, Dia tidak akan melepaskannya lagi sedikit pun."</em> Kemudian Nabi ﷺ membaca ayat: <em>"Dan begitulah siksaan Tuhanmu ketika Dia menyiksa negeri-negeri yang berbuat zalim. Sesungguhnya azab-Nya itu sangat pedih lagi sangat keras."</em> (QS. Hud: 102).
+        </p>
+        <p>
+            <strong>Takhrij & Status Sanad:</strong> Diriwayatkan oleh Imam Al-Bukhari dalam <em>Shahih Al-Bukhari</em>, Kitab Tafsir Surah Hud, Bab <em>Wa Kadzalika Akhdzu Rabbika</em> (No. 4686) dan Imam Muslim dalam <em>Shahih Muslim</em>, Kitab Al-Birr wash-Shilah wal-Adab, Bab <em>Tahrim azh-Zhulm</em> (No. 2583). Hadits ini disepakati keshahihannya (<strong>Muttafaq 'Alaih</strong>).
+        </p>
+    </div>
+
+    <!-- LENSA 2: BAHASA & BALAGHAH -->
+    <h2 id="lensa-2">Lensa 2: Leksikografi Bahasa Arab, Morfosintaksis & Retorika Balaghah</h2>
+
+    <h3>1. Etimologi & Medan Semantik Berdasarkan Mu'jam Otoritatif</h3>
+    <p>
+        Penelusuran akar kata dalam <em>Mu'jam Maqāyīs al-Lughah</em> karya Ibnu Faris dan <em>Lisān al-'Arab</em> karya Ibnu Manzhur mengungkap signifikansi semantik yang luar biasa presisi dari keempat pilar lafal dalam ayat ini:
+    </p>
+    <ul>
+        <li>
+            <strong>H-Z-A (هـ ز أ) &rarr; Al-Istihzā' (الِاسْتِهْزَاءُ):</strong> Ibnu Faris mencatat: <em>"Al-Haa' waz-Zay wal-Hamzah ashlun yadullu 'ala as-sakhariyyah wal-istikhfaf"</em> (Akar kata ini menunjukkan makna penghinaan, perendahan, dan perolokan secara halus di mana korban tidak menyadari bahwa dirinya sedang diperdaya). Asy-Syarif Al-Jurjani dalam <em>At-Ta'rifat</em> membedakan antara <em>as-sukhriyyah</em> (mengejek secara frontal di depan muka) dan <em>al-istihza'</em> (memperolok-olok dengan menampilkan kebaikan atau kesepakatan secara lahiriah, padahal batinnya menyimpan jebakan untuk mempermalukan). Ketika lafal ini disandarkan kepada Allah (<em>Allāhu yastahzi'u bihim</em>), ia tidak boleh dimaknai sebagai sifat main-main atau cacat moral (Maha Suci Allah dari hal itu), melainkan pembalasan setimpal (<em>jaza' al-istihza'</em>) di mana Allah memperlakukan mereka sesuai tipu daya mereka hingga mereka terjerumus ke jurang kehinaan mutlak.
+        </li>
+        <li>
+            <strong>M-D-D (م د د) &rarr; Al-Madd (الْمَدُّ):</strong> Ibnu Manzhur menegaskan: <em>"Ashlu al-madd: al-basthu wat-tathwil fiz-zaman awil-makan"</em> (Akar kata ini berarti membentangkan, mengulur, dan memanjangkan dalam ukuran ruang atau tempo waktu). Bahasa Arab klasik membuat demarkasi tegas: fi'il tsulatsi <em>madda - yamuddu</em> lazim digunakan untuk pembiaran dalam keburukan dan kebinasaan (seperti firman-Nya dalam QS. Maryam: 75: <em>fal-yamdud lahup-Rahmanu madda</em>), sedangkan fi'il ruba'i <em>amadda - yumiddu</em> secara umum dipakai untuk penambahan bantuan, karunia materi, atau suplai bala bantuan dalam kebaikan (seperti QS. Ali 'Imran: 124: <em>bi-tsalatsati alafin minal mala'ikati munzalin</em>). Maka pilihan lafal <em>yamudduhum</em> dalam ayat ini menunjukkan pelepasan tali kekang agar mereka terus melangkah tanpa rem menuju kehancuran.
+        </li>
+        <li>
+            <strong>Th-Gh-Y (ط غ ي) &rarr; Ath-Thugyān (الطُّغْيَانُ):</strong> Makna dasarnya adalah melampaui batas kewajaran dan keluar dari orbit hukum (<em>mujawazatul hadd fil 'ishyan</em>). Bangsa Arab berkata <em>thoghol-ma'u</em> apabila air bah meluap melewati tanggul penahannya (sebagaimana firman-Nya: <em>Inna lamma thoghol-ma'u hamalnakum fil jariyah</em>, QS. Al-Haqqah: 11). Dalam konteks jiwa manusia, <em>thugyan</em> adalah arogansi eksistensial seorang makhluk yang bertindak melampaui batas kodrat kehambaannya, merasa dirinya otonom, tidak membutuhkan Tuhan, dan bebas menipu sesamanya.
+        </li>
+        <li>
+            <strong>'-M-H (ع م ه) &rarr; Al-'Amah (الْعَمَهُ):</strong> Ibnu Faris mencatat: <em>"Al-'Aynu wal-Mimu wal-Haa' ashlun yadullu 'alal-tahayyur wat-taraddud"</em> (Akar kata ini merujuk pada kebingungan ekstrem, kebimbangan, dan kegamangan arah). Para pakar bahasa membedakan secara tajam antara <em>Al-'Ama</em> (الْعَمَى) dengan alif maqshurah dan <em>Al-'Amah</em> (الْعَمَهُ) dengan ha'. <em>Al-'Ama</em> adalah hilangnya penglihatan mata lahiriah (fisik), atau bisa juga metafora untuk buta batin. Sedangkan <em>Al-'Amah</em> KHUSUS digunakan untuk kebutaan mata batin (<em>bashirah</em>), disorientasi akal budi, dan hilangnya kompas navigasi spiritual di mana seseorang berjalan terhuyung-huyung tanpa mengetahui ke mana arah pulang. Maka <em>ya'mahun</em> melukiskan orang munafik yang matanya sehat secara biologis, namun jiwanya buta total di tengah labirin kebohongan yang mereka bangun sendiri.
+        </li>
+    </ul>
+
+    <h3>2. Tabel Analisis Morfosintaksis & I'rab Syamil</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafal</th>
+                <th>Bentuk Kata / Wazan</th>
+                <th>Kedudukan Sintaksis (I'rab)</th>
+                <th>Ta'alluq & Keterangan Kaidah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Isim 'Alam / Isim Jalalah</td>
+                <td>Mubtada' marfu' dengan dhammah zhahirah pada akhirnya (علامة رفعه الضمة الظاهرة).</td>
+                <td>Menjadi musnad ilaih; posisinya di awal jumlah ismiyyah memberikan faedah <em>al-qashr</em> atau <em>at-takhshish</em>: Hanya Allah semata yang membalas ejekan mereka, bukan orang-orang mukmin yang mereka perolok.</td>
+            </tr>
+            <tr>
+                <td><strong>يَسْتَهْزِئُ</strong></td>
+                <td>Fi'il Mudhari' Tsulatsi Mazid (Wazan <em>Istaf'ala / Yastaf'ilu</em>)</td>
+                <td>Fi'il mudhari' marfu' karena terbebas dari 'amil nashab dan jazam. Fa'il-nya dhomir mustatir jawazan taqdiruhu <em>Huwa</em> kembali kepada lafzhul jalalah.</td>
+                <td>Jumlah fi'liyyah (<em>yastahzi'u</em> beserta fa'il-nya) berada dalam posisi rafa' (<em>fī maḥalli raf'in</em>) sebagai Khabar dari mubtada' <em>Allāhu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِهِمْ</strong></td>
+                <td>Huruf Jar (Ba) + Isim Dhomir</td>
+                <td>Ba huruf jar lil-muta'addiyah/ash-shilah; Ha dhomir muttashil mabni 'alal kasr fi mahalli jarr, Mim tanda jamak mudzakkar.</td>
+                <td>Jar wa majrur <em>bihim</em> muta'alliq (berkaitan langsung) dengan fi'il <em>yastahzi'u</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَيَمُدُّهُمْ</strong></td>
+                <td>Wawu 'Athaf + Fi'il Mudhari' Mudha'af + Dhomir Maf'ul</td>
+                <td>Wawu huruf athaf; <em>Yamuddu</em> fi'il mudhari' marfu' ma'thuf atas <em>yastahzi'u</em>. Fa'il mustatir taqdiruhu <em>Huwa</em>. Dhomir <em>Hum</em> (Ha dan Mim) mabni fis-sukun fi mahalli nashbin maf'ul bih.</td>
+                <td>Jumlah ma'thufah atas khabar pertama. Tasydid pada dal menunjukkan intensitas dan keberlanjutan tindakan penguluran waktu.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى طُغْيَٰنِهِمْ</strong></td>
+                <td>Huruf Jar (Fii) + Isim Majrur + Mudhaf Ilaih</td>
+                <td><em>Fii</em> huruf jar lizh-zharfiyyah al-majaziyyah; <em>Thugyani</em> isim majrur bil kasrah wa huwa mudhaf; Dhomir <em>Him</em> mudhaf ilaih fi mahalli jarr.</td>
+                <td>Jar wa majrur muta'alliq dengan fi'il <em>yamudduhum</em>. Zharfiyyah menunjukkan bahwa kesesatan itu melingkupi mereka bagaikan wadah yang mengurung penghuninya.</td>
+            </tr>
+            <tr>
+                <td><strong>يَعْمَهُونَ</strong></td>
+                <td>Fi'il Mudhari' Tsulatsi Mujarrad (Wazan <em>Fa'ila / Yaf'alu</em>)</td>
+                <td>Fi'il mudhari' marfu' bi tsubutin-nun (ثبوت النون) karena termasuk Al-Af'alul Khamsah. Wawu al-Jama'ah mabni fis-sukun fi mahalli raf'in fa'il.</td>
+                <td>Jumlah fi'liyyah <em>ya'mahūn</em> berada dalam posisi nashab (<em>fī maḥalli naṣbin</em>) sebagai <strong>Hal</strong> (keadaan) dari dhomir maf'ul bih pada lafal <em>yamudduhum</em>; artinya: "Allah membiarkan mereka dalam keadaan buta batin dan terombang-ambing."</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Kajian Retorika Balaghah: Ma'ani, Bayan & Badi'</h3>
+    <ul>
+        <li>
+            <strong>Struktur Ma'ani (Struktur Klausa & Penegasan):</strong> Penggunaan <em>Jumlah Ismiyyah</em> yang diawali lafadz agung <em>Allāhu</em> berfungsi menghancurkan ilusi superioritas kaum munafik. Di ayat 14 mereka membanggakan diri dengan jumlah ismiyyah: <em>"Innamā naḥnu mustahzi'ūn"</em> (Sesungguhnya kami hanyalah memperolok-olok). Maka Allah menjawabnya bukan sekadar dengan fi'il, melainkan dengan memajukan nama-Nya: <em>"Allāhu yastahzi'u bihim"</em>. Struktur ini menetapkan bahwa yang menjadi lawan tanding mereka bukanlah kaum mukminin yang lemah di Madinah, melainkan Dzat Pemilik Keagungan Mutlak.
+        </li>
+        <li>
+            <strong>Balaghah al-Badi' (Al-Musyākalah al-Lafzhiyyah):</strong> Ayat ini merupakan contoh agung dalam ilmu badi' untuk gaya bahasa <em>Musyākalah</em>, yakni menyebutkan suatu perbuatan dengan lafal perbuatan orang lain karena adanya kesamaan situasi atau sebagai bentuk pembalasan yang setimpal (<em>Dzikru asy-syai' bi lafzhi ghairihi li wuqu'ihi fi shuhbatihi aw jaza'an lahu</em>). Ejekan munafik adalah kedustaan, penghinaan, dan makar kotor. Sedangkan "ejekan" dari Allah adalah keadilan murni, penyingkapan tabir aib mereka, serta penimpakan siksa yang tidak mereka duga. Dinamakan <em>istihza'</em> agar mereka merasakan bahwa senjata ejekan yang mereka banggakan berbalik menusuk jantung mereka sendiri.
+        </li>
+        <li>
+            <strong>Gaya Bayan (Isti'arah Makniyyah & Tamsyiliyyah):</strong> Pemilihan kata <em>fī ṭugyānihim</em> menghadirkan <em>Isti'arah bi at-Tab'iyyah</em> di mana kesesatan diserupakan dengan samudra lumpur hitam atau sangkar besi yang memerangkap seseorang. Ditambah dengan lafal <em>yamudduhum</em>, tergambar sebuah tamsil yang mengerikan: laksana seekor binatang buas yang diikat dengan tali panjang; sang binatang mengira dirinya bebas berlari kian kemari di padang rumput, padahal ujung tali berada di genggaman sang penakluk yang siap menyentaknya sewaktu-waktu hingga lehernya patah.
+        </li>
+        <li>
+            <strong>Dinamika Kontinuitas (At-Tajaddud wal-Istimrār):</strong> Pergantian dari bentuk isim fa'il (<em>mustahzi'ūn</em>) di ayat 14 ke bentuk fi'il mudhari' (<em>yastahzi'u, yamudduhum, ya'mahūn</em>) di ayat 15 memberikan pesan dinamis bahwa hukuman dan istidraj Allah tidak bersifat statis, melainkan terus diperbarui setiap kali kaum munafik memperbarui manuver tipu daya mereka.
+        </li>
+    </ul>
+
+    <!-- LENSA 3: KONTEKS & MAQASID -->
+    <h2 id="lensa-3">Lensa 3: Konteks Eksegetis (2S & 1L), Sosio-Historis & Maqashid As-Surah</h2>
+
+    <h3>1. Analisis Konteks Tiga Dimensi: Sibaq, Siyaq, dan Lihaq</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Kausalitas Tekstual Sebelumnya):</strong> Pada ayat 14, kaum munafik memperagakan kepribadian belah (<em>split personality</em>). Ketika berhadapan dengan orang beriman, mereka bersumpah: <em>"Āmannā"</em> (Kami telah beriman). Namun ketika menyelinap kembali ke sarang konspirasi bersama setan-setan mereka (para pembesar Yahudi dan tokoh munafik senior), mereka mendeklarasikan: <em>"Innamā naḥnu mustahzi'ūn"</em> (Kami sesungguhnya bersama kalian; kami hanya memperolok-olok orang beriman!). Ayat 15 hadir sebagai bantahan seketika (<em>faslul khithab</em>) yang meremukkan klaim mereka.
+        </li>
+        <li>
+            <strong>Siyāq (Dinamika Internal Ayat):</strong> Ayat 15 memegang peran sentral dalam meruntuhkan rasa aman palsu kaum munafik. Kemenangan taktis yang mereka rasakan saat berhasil membohongi para sahabat Nabi dibongkar hakikatnya: itu bukanlah kecerdasan politik, melainkan jebakan kosmis di mana Allah sendiri yang mengambil alih perkara untuk mempermalukan mereka di panggung sejarah dunia dan akhirat.
+        </li>
+        <li>
+            <strong>Liḥāq (Konsekuensi Tekstual Sesudahnya):</strong> Di ayat 16, Allah menjatuhkan vonis ekonomi-spiritual atas perilaku mereka: <em>"Ūlā'ikalladzīnasy-tarawuḍ-ḍalālata bil-hudā famā rabiḥat tijāratuhum"</em> (Merekalah orang-orang yang membeli kesesatan dengan mengorbankan petunjuk, maka tiadalah beruntung perniagaan mereka). Keadaan buta (<em>ya'mahun</em>) pada ayat 15 menjelaskan mengapa di ayat 16 mereka bisa mengambil keputusan transaksi moral yang sedemikian bodoh dan merugikan.
+        </li>
+    </ul>
+
+    <h3>2. Latar Sosio-Historis Madinah al-Munawwarah</h3>
+    <p>
+        Setelah peristiwa Hijrah dan kemenangan telak kaum muslimin dalam Perang Badar (2 H), peta geopolitik Yatsrib (Madinah) berubah drastis. Tokoh aristokrat Madinah seperti Abdullah bin Ubay bin Salul yang sebelumnya hampir dinobatkan sebagai raja Madinah mendadak kehilangan otoritas politiknya. Menghadapi dominasi Islam yang semakin mengakar, para elite oportunis ini tidak berani lagi menentang secara terbuka. Mereka menyusun strategi kamuflase: mengucapkan syahadat di hadapan publik demi mengamankan status sosial, harta kekayaan, dan nyawa mereka, namun diam-diam berkoalisi dengan komunitas Yahudi Bani Qainuqa', Bani Nadhir, dan Bani Quraizhah yang memusuhi dakwah tauhid.
+    </p>
+    <p>
+        Dalam pertemuan-pertemuan rahasia, kaum munafik menertawakan ketulusan para sahabat Muhajirin dan Anshar yang miskin, menganggap diri mereka adalah para pemikir canggih dan diplomat ulung. Ayat 15 turun di Madinah untuk menyingkap bahwa manuver politik dua muka tersebut sepenuhnya berada di bawah radar pengawasan Ilahi, dan bahwa kelonggaran yang mereka nikmati hanyalah fatamorgana sebelum kehancuran total.
+    </p>
+
+    <h3>3. Korelasi dengan Maqāṣid As-Sūrah (Tujuan Agung Surah Al-Baqarah)</h3>
+    <p>
+        Surah Al-Baqarah memiliki maqashid agung: <em>I'dad al-ummah li istikhlafil ardh</em> (Mempersiapkan umat Islam untuk memikul amanah kekhalifahan di muka bumi dengan menegakkan tatanan hukum, tauhid, dan keadilan). Untuk mengemban misi peradaban ini, fondasi umat harus steril dari kanker internal kemunafikan. Ayat 15 menegaskan doktrin kedaulatan mutlak hukum Allah (<em>Siyadah asy-Syari'ah wal-Qadha' al-Ilahi</em>): peradaban tidak dapat dibangun di atas kepura-puraan, pragmatisme kotor, dan ejekan terhadap nilai-nilai sakral. Allah menjamin bahwa konspirasi yang merongrong umat dari dalam akan digulung oleh keadilan Ilahi melalui sunnatullah <em>istidraj</em>.
+    </p>
+
+    <!-- LENSA 4: TAFSIR 6 MUFASSIR -->
+    <h2 id="lensa-4">Lensa 4: Eksegesis Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <p><strong>1. Abu Ja'far Muhammad bin Jarir At-Tabari (Wafat 310 H) &mdash; <em>Jāmi' al-Bayān 'an Ta'wīl Ayi al-Qur'ān</em></strong></p>
+        <p>
+            Imam At-Tabari mengurai hakikat <em>istihza'</em> Allah dengan metode periwayatan sanad yang sangat kokoh. Beliau mengutip riwayat dari Ibnu Mas'ud dan sejumlah sahabat bahwa ejekan Allah kepada orang munafik memiliki dua tahapan manifestasi:
+        </p>
+        <p>
+            <em>Pertama</em>, di dunia: Allah memperlakukan mereka secara lahiriah sebagaimana kaum mukminin; darah mereka terlindungi dari pedang, harta mereka aman dari perampasan, dan mereka diberi bagian ghanimah. Namun di balik perlindungan semu itu, Allah menyiapkan siksa pedih di kerak neraka yang paling bawah (<em>ad-dark al-asfal minan-nar</em>). 
+            <em>Kedua</em>, di akhirat: Allah membuka pintu-pintu surga bagi mereka saat mereka berada di dalam neraka. Ketika mereka berenang susah payah di dalam lautan api menuju pintu tersebut dengan harapan selamat, tepat ketika mereka sampai di ambang pintu, pintu surga tersebut dibanting tertutup di depan wajah mereka. Orang-orang mukmin yang duduk di atas dipan-dipan surga menyaksikan pemandangan itu dan tertawa melihat kehinaan mereka, sebagaimana firman-Nya: <em>"Fal-yawmalladzina amanu minal kuffari yadh-hakun"</em> (QS. Al-Muthaffifin: 34).
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>2. Al-Hafizh 'Imaduddin Ismail bin Katsir (Wafat 774 H) &mdash; <em>Tafsīr al-Qur'ān al-'Azhīm</em></strong></p>
+        <p>
+            Ibnu Katsir menekankan pemaknaan ayat ini melalui kaidah <em>Tafsīr al-Qur'ān bil-Qur'ān</em>. Beliau menolak anggapan bahwa Allah memiliki sifat memperolok sebagaimana makhluk-Nya yang sarat kelemahan. Penamaan pembalasan Allah dengan kata <em>istihza'</em> adalah bentuk <em>muqābalah</em> (penyetaraan retoris), setara dengan firman-Nya: <em>"Wa makaru wa makarallah, wallahu khairul makirin"</em> (QS. Ali 'Imran: 54) dan <em>"Yukhadi'unallaha wa huwa khadi'uhum"</em> (QS. An-Nisa: 142).
+        </p>
+        <p>
+            Terkait lafal <em>wa yamudduhum fī ṭugyānihim ya'mahūn</em>, Ibnu Katsir mengutip Mujahid, Abu Al-'Aliyah, dan Qatadah: Allah memperpanjang umur mereka, menumpahkan nikmat duniawi kepada mereka, dan membiarkan mereka larut dalam kesesatan serta kekafiran tanpa ditegur secara instan. Kata <em>al-'amah</em> ditafsirkan oleh Ibnu Abbas sebagai <em>adh-dhalalah</em> (kesesatan) dan <em>at-taraddud</em> (terombang-ambing tanpa arah), melukiskan bagaimana mereka tidak pernah menemukan pintu keluar menuju ketenangan jiwa.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>3. Abu Abdillah Muhammad bin Ahmad Al-Qurthubi (Wafat 671 H) &mdash; <em>Al-Jāmi' li Ahkām al-Qur'ān</em></strong></p>
+        <p>
+            Al-Qurthubi membedah dimensi akidah dan ushul fiqih dari ayat ini. Beliau menguraikan bahwa para ulama ahlus sunnah bersepakat: mustahil bagi Allah bersifat memperolok secara mutlak yang berkonotasi kebatilan, dusta, atau main-main. Maka kata <em>istihza'</em> di sini adalah <em>Majaz Mursal</em> atau <em>Musyakalah</em> yang bermakna <em>Jazā'ul Istihzā'</em> (balasan atas ejekan) atau <em>Istidrāj</em> (penjebakan berencana).
+        </p>
+        <p>
+            Al-Qurthubi juga menyoroti aspek psikologis hukum: orang yang dihukum secara langsung ketika berbuat salah masih memiliki kesempatan untuk sadar karena alarm rasa sakit menyadarkannya. Namun hukuman dalam bentuk <em>al-madd fit-thugyan</em> (pembiaran dalam keleluasaan) adalah bentuk hukuman yang paling mematikan (<em>asyaddu 'uqubah</em>), karena ia mencabut sensitivitas nurani sehingga pelaku dosa merayakan kebinasaannya sendiri dengan penuh sukacita.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>4. Az-Zamakhsyari (Wafat 538 H) & Fakhruddin Ar-Razi (Wafat 606 H) &mdash; <em>Al-Kasysyāf & Mafātīḥ al-Ghaib</em></strong></p>
+        <p>
+            Az-Zamakhsyari menyajikan analisis balaghah yang sangat memukau: penyandaran perbuatan ejekan langsung kepada Allah (<em>Allāhu yastahzi'u bihim</em>) tanpa perantara bertujuan menghadirkan <em>al-istikhfaf bihim</em> (kehinaan mutlak bagi kaum munafik) dan <em>at-tashghir li sya'nihim</em> (mengkerdilkan eksistensi mereka sehina-hinanya di hadapan alam semesta).
+        </p>
+        <p>
+            Imam Fakhruddin Ar-Razi dalam <em>Mafātīḥ al-Ghaib</em> mengkaji aspek teologis: Mengapa Allah membiarkan mereka (<em>yamudduhum</em>)? Ar-Razi menjelaskan bahwa pembiaran ini adalah konsekuensi dari <em>sunnatullah</em> taklif (beban ujian moral kehendak bebas). Allah tidak memaksa hamba-Nya untuk beriman secara deterministik. Ketika seseorang berkali-kali memilih jalan penolakan dan memperolok kebenaran, hukum kausalitas jiwa yang ditetapkan Allah akan mengunci mata hatinya. Ar-Razi menegaskan bahwa kata <em>ya'mahun</em> melukiskan kondisi akal yang kehilangan pijakan aksiomatis (<em>tahayyur al-'aql</em>), sehingga penalaran kaum munafik menjadi cacat logika permanen.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>5. Prof. Dr. Muhammad Quraish Shihab &mdash; <em>Tafsir Al-Mishbah</em></strong></p>
+        <p>
+            Quraish Shihab menyoroti ayat ini dengan pendekatan psikologi modern dan sosiologis keindonesiaan. Beliau menggarisbawahi bahwa memperolok orang lain sering kali lahir dari rasa percaya diri yang berlebihan (<em>overconfidence</em>) dan perasaan bahwa diri sendiri lebih pintar dan superior. Orang munafik Madinah merasa sangat licik karena berhasil mengelabui dua kubu sekaligus.
+        </p>
+        <p>
+            Kata <em>yamudduhum</em> oleh Quraish Shihab dianalogikan seperti melepaskan tali layang-layang atau mengulur tali kekang hewan gembala. Si hewan merasa dirinya bebas menjelajah padang rumput yang subur, padahal ia sedang diarahkan menuju rumah jagal. Pembiaran Allah ini menciptakan ilusi kenyamanan (<em>false sense of security</em>) yang membius nurani. Beliau mengingatkan bahwa jika kita terus berbuat dosa namun karir semakin melesat, kekayaan makin berlimpah, dan pujian publik semakin mengalir, itu bukanlah tanda ridha Ilahi, melainkan tanda bahwa tali layang-layang kita sedang diulur setinggi-tingginya sebelum diputus mendadak menuju kehancuran.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>6. Buya Hamka (Prof. Dr. Abdul Malik Karim Amrullah) &mdash; <em>Tafsir Al-Azhar</em></strong></p>
+        <p>
+            Buya Hamka melukiskan pemandangan ayat ini dengan gaya sastra Melayu tinggi yang menyentuh sanubari. Hamka menuliskan: <em>"Alangkah hinanya orang yang menyangka dirinya cerdik, mempermainkan orang-orang yang tulus ikhlas, padahal Yang Maha Kuasa sendiri yang sedang mempermainkannya!"</em>
+        </p>
+        <p>
+            Hamka mengibaratkan orang munafik yang <em>ya'mahun</em> (meraba-raba dalam kegelapan) laksana orang mabuk yang berjalan di tepi jurang pada malam gulita. Karena pengaruh arak keangkuhan, ia merasa sedang menari di atas permadani megah di istana raja. Sahabat-sahabat Nabi yang melihat dari kejauhan merasa iba dan cemas melihat langkahnya yang sempoyongan, tetapi si mabuk malah tertawa mengejek orang-orang yang memperingatkannya. Selangkah lagi kakinya akan terperosok ke dalam jurang kehancuran yang tak berdasar, dan pada saat itulah tawanya akan berubah menjadi jeritan penyesalan abadi.
+        </p>
+    </div>
+
+    <h3>Matriks Komparasi: Titik Temu (Ijma') & Dinamika Penafsiran (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Bahasan</th>
+                <th>Titik Temu Konsensus (Ijma' Mufassirin)</th>
+                <th>Dinamika Nuansa & Titik Tekan (Ikhtilaf)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat "Allāhu Yastahzi'u Bihim"</strong></td>
+                <td>Sepakat mutlak bahwa Allah Maha Suci dari sifat bermain-main, dusta, atau merendahkan tanpa hak. Istilah ini adalah bentuk <em>Jazā'ul Istihzā'</em> (pembalasan setimpal) dan <em>Musyākalah</em> bahasa.</td>
+                <td>At-Tabari & Ibnu Katsir menitikberatkan pada manifestasi fisik eskatologis (pintu surga yang dibanting di neraka dan pemadaman cahaya di shirath). Az-Zamakhsyari & Ar-Razi menekankan aspek kehinaan status ontologis dan balaghah perendahan martabat.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Pembiaran (Yamudduhum)</strong></td>
+                <td>Konsensus bahwa makna kata ini adalah <em>Al-Imlā' wal-Istidrāj</em>: penundaan azab, pemanjangan usia, dan pemberian kenikmatan lahiriah yang menjadi perangkap.</td>
+                <td>Al-Qurthubi meninjau bahaya hilangnya rasa sakit spiritual sebagai siksa terberat. Quraish Shihab & Hamka mengontekstualisasikannya ke dalam dinamika psikologi modern berupa ilusi rasa aman semu kaum koruptor dan manipulator.</td>
+            </tr>
+            <tr>
+                <td><strong>Karakteristik 'Amah (Ya'mahūn)</strong></td>
+                <td>Sepakat bahwa <em>al-'amah</em> adalah kebutaan khusus pada mata batin (<em>bashirah</em>) dan kebingungan arah hidup, bukan kebutaan indra mata fisik.</td>
+                <td>Ar-Razi memandangnya sebagai kerusakan epistemologis akal yang kehilangan kemampuan verifikasi kebenaran. Hamka memandangnya sebagai mabuk arogansi yang melumpuhkan naluri bertahan hidup spiritual.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI & MENTAL MODEL -->
+    <h2 id="lensa-5">Lensa 5: Sintesis Kognitif, Model Mental & Neuropsikologi Tazkiyatun Nafs</h2>
+
+    <h3>1. Pergeseran Paradigma Kognitif (Old Mindset vs Quranic Mindset)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Evaluasi</th>
+                <th>Paradigma Lama (Sekuler / Linier Naif)</th>
+                <th>Paradigma Qur'ani (QS. Al-Baqarah: 15)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Indikator Keberhasilan Moral</strong></td>
+                <td>Mengukur keselamatan perbuatan semata-mata dari tiadanya sanksi hukum langsung atau ketiadaan petaka instan ("Saya melanggar aturan dan aman-aman saja, berarti cara saya berhasil").</td>
+                <td>Menyadari hukum <strong>Istidrāj</strong>: Ketiadaan teguran instan saat bermaksiat bukanlah bukti persetujuan Ilahi, melainkan kemungkinan besar alarm darurat bahwa Allah sedang membiarkan kita terperosok lebih dalam.</td>
+            </tr>
+            <tr>
+                <td><strong>Memandang Kelihaian Memanipulasi</strong></td>
+                <td>Menganggap kelicikan politik, kemampuan bermuka dua, dan rekayasa pencitraan sebagai kecerdasan taktis (<em>street smart</em> / <em>Machiavellian intelligence</em>).</td>
+                <td>Melihat kemunafikan sebagai bentuk disorientasi kognitif paling tragis: sang manipulator sesungguhnya sedang memakan umpan perangkapnya sendiri di hadapan keadilan Ilahi.</td>
+            </tr>
+            <tr>
+                <td><strong>Fungsi Waktu dan Penundaan</strong></td>
+                <td>Mengartikan waktu luang dan penundaan krisis sebagai kebebasan tanpa batas untuk menumpuk keuntungan haram.</td>
+                <td>Memahami waktu penundaan (<em>al-imla'</em>) sebagai masa ujian kritis; setiap detik pembiaran yang tidak diiringi taubat akan mengakumulasi daya ledak azab yang jauh lebih dahsyat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Model Mental Sistemik: The Boiling Frog Syndrome & The Positive Feedback Loop of Sin</h3>
+    <p>
+        Ayat ini memberikan dasar teoritis bagi dua model mental sistemik yang sangat relevan untuk membaca perilaku manusia:
+    </p>
+    <ul>
+        <li>
+            <strong>The Boiling Frog Syndrome of Sin (Sindrom Katak Rebus Spiritual):</strong> Jika seekor katak dilemparkan ke dalam air yang mendidih seketika, ia akan langsung melompat keluar menyelamatkan diri. Namun jika ia diletakkan di dalam panci berisi air dingin yang dipanaskan secara sangat perlahan, suhu air yang naik secara gradual membuatnya merasa nyaman dan terbiasa, hingga saraf motoriknya lumpuh dan ia mati terebus tanpa pernah mencoba melompat. Kata <em>wa yamudduhum fī ṭugyānihim</em> adalah gambaran akurat dari pemanasan gradual tersebut: Allah tidak langsung menghukum pendosa dengan petir seketika, melainkan memberi keleluasaan waktu. Akibatnya, pelaku dosa merasa nyaman dengan air dosanya yang kian memanas, hingga ketika titik didih azab tiba, seluruh kemampuan taubatnya telah lumpuh total.
+        </li>
+        <li>
+            <strong>The Positive Feedback Loop of Unchecked Transgression (Umpan Balik Penguatan Kesesatan):</strong> Dalam teori sistem dinamik, <em>positive feedback loop</em> adalah lingkaran sebab-akibat yang saling menguatkan ke satu arah secara eksponensial. Ketika kaum munafik mengejek kebenaran &rarr; tidak ada azab langsung yang menimpa mereka &rarr; mereka menyimpulkan bahwa kebohongan mereka berhasil &rarr; rasa percaya diri palsu mereka meningkat &rarr; mereka meningkatkan dosis kezaliman dan ejekan (<em>ṭugyān</em>) &rarr; Allah memperpanjang tali pembiaran (<em>yamudduhum</em>) &rarr; mata batin mereka mengalami kebutaan total (<em>ya'mahūn</em>) &rarr; mereka semakin melaju kencang menuju jurang kehancuran.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Moral & Dinamika Tazkiyatun Nafs: Erosi Bashīrah Batiniah</h3>
+    <p>
+        Kondisi <em>Al-'Amah</em> (kebutaan mata batin yang melahirkan disorientasi eksistensial) dapat dijelaskan melalui mekanisme neuropsikologi desensitisasi kognitif:
+    </p>
+    <p>
+        Ketika seseorang pertama kali melakukan kebohongan atau pengkhianatan nurani, amigdala (pusat pemrosesan emosi dan rasa takut di otak) memicu respon stres, kecemasan, dan rasa bersalah yang kuat. Namun jika perilaku manipulatif tersebut diulang berkali-kali tanpa adanya konsekuensi negatif langsung, otak mengalami proses habituasi neurobiologis. Respon amigdala meredup secara drastis, sementara jalur dopaminergik di striatum ventral memberikan sinyal kepuasan atas "keberhasilan" mengecoh orang lain.
+    </p>
+    <p>
+        Dalam perspektif Tazkiyatun Nafs, inilah hakikat tertutupnya <em>bashīrah</em> (mata batin) oleh karat dosa (<em>ar-rān</em>). Ketika prefrontal cortex kehilangan sensitivitas moralnya akibat pembiasaan dosa, kalbu manusia kehilangan fungsi navigasi spiritualnya. Manusia tersebut menjadi <em>ya'mahūn</em>: mereka memiliki mata biologis yang mampu melihat grafik saham, angka kekayaan, dan strategi politik secara sangat tajam, namun di hadapan realitas kebenaran hakiki, mereka berjalan sempoyongan seperti orang buta di tengah badai gurun yang pekat.
+    </p>
+
+    <!-- LENSA 6: REALITAS ABAD KE-21 -->
+    <h2 id="lensa-6">Lensa 6: Diagnosis Realitas Kontemporer Abad ke-21 & Dekonstruksi Paradigma Sekuler</h2>
+
+    <h3>1. Fenomena Delusi Impunitas: Oligarki Koruptif & Kejahatan Kerah Putih</h3>
+    <p>
+        Manifestasi paling nyata dari QS. Al-Baqarah ayat 15 di abad ke-21 adalah fenomena <em>delusion of impunity</em> (delusi kekebalan hukum) yang menjangkiti para pelaku korupsi sistemik, mafia peradilan, dan manipulator finansial global.
+    </p>
+    <p>
+        Seorang koruptor sering kali memulai kejahatannya dari nominal kecil. Ketika aksinya lolos dari audit, ia merasa sistem pengawasan negara bodoh dan mudah diakali (persis seperti klaim munafik: <em>"Innamā naḥnu mustahzi'ūn"</em>). Ia menaikkan skala kejahatannya menjadi ratusan miliar bahkan triliunan rupiah. Ia membangun jejaring bekingan, menyuap aparat penegak hukum, dan memamerkan gaya hidup mewah (<em>flexing</em>) di media sosial bersama keluarganya seolah-olah kekayaannya adalah hasil kerja keras yang terhormat.
+    </p>
+    <p>
+        Masyarakat awam sering kali bertanya-tanya dengan putus asa: <em>"Mengapa Tuhan membiarkan orang sejahat ini hidup makmur dan berkuasa?"</em> Ayat 15 memberikan jawaban pamungkas: Allah sedang menjalankan sunnah <em>yamudduhum fī ṭugyānihim</em>. Allah sedang mengulur tali layang-layang kezaliman mereka setinggi-tingginya. Ketiadaan penangkapan di awal bukanlah tanda perlindungan, melainkan bagian dari skenario penyingkapan aib yang jauh lebih kolosal. Ketika saatnya tiba, sebuah kecerobohan kecil atau operasi tangkap tangan mendadak membongkar seluruh dinasti kejahatan mereka dalam semalam, mencampakkan mereka dari puncak kemegahan ke dalam jeruji besi dan kehinaan sosial yang meremukkan seluruh keturunan mereka.
+    </p>
+
+    <h3>2. Toksisitas Ruang Digital: Algoritma Echosphere & Kaum Cyber-Troll</h3>
+    <p>
+        Di era revolusi informasi, industri disinformasi dan budaya <em>trolling</em> online menjadi wadah baru kemunafikan modern. Buzzer bayaran dan pembuat narasi kebencian sering kali memperolok nilai-nilai kesucian agama, memfitnah ulama yang lurus, atau memelintir data demi kepentingan politik kekuasaan.
+    </p>
+    <p>
+        Ketika postingan manipulatif mereka mendulang jutaan penayangan (<em>views</em>), algoritma media sosial yang berbasis sensasi membanjiri mereka dengan monetisasi, <em>endorsement</em>, dan tepuk tangan dari gelembung kelompoknya (<em>echo chamber</em>). Mereka tertawa puas di balik akun anonim, mengira telah memenangkan perang opini. Tanpa disadari, mereka sedang terperangkap dalam <em>ya'mahūn</em> digital: jiwa mereka mengalami kekeringan spiritual akut, insomnia kronis, kecemasan eksistensial, dan ketergantungan patologis pada validasi digital semu, sementara di alam kubur dan akhirat rekaman jejak digital tersebut siap mendakwa mereka tanpa ampun.
+    </p>
+
+    <h3>3. Dekonstruksi Paradigma Positivisme-Materialisme Sekuler</h3>
+    <p>
+        Filsafat sekuler modern yang bertumpu pada positivisme logis menolak realitas apa pun yang tidak dapat diverifikasi secara empiris inderawi. Dalam domain moralitas, filsafat ini memandang bahwa benar atau salah hanyalah konstruksi sosial kesepakatan manusia, dan tidak ada keadilan metafisik di luar ruang sidang pengadilan manusia.
+    </p>
+    <p>
+        Ayat 15 mendekonstruksi kerangka berpikir yang picik ini. Kaum sekuler sering kali berargumen: <em>"Jika Tuhan itu adil dan berkuasa, mengapa Dia tidak menyambar para tiran dan penjahat perang dengan petir saat mereka menandatangani perintah pembantaian?"</em> Karena tidak melihat petir turun secara empiris, mereka menyimpulkan Tuhan tidak ada atau tidak peduli. 
+        Al-Qur'an membalikkan logika dangkal tersebut: ketiadaan petir seketika bukanlah kelemahan Tuhan, melainkan wujud kesempurnaan hikmah dan strategi Ilahi. Allah tidak bertindak tergesa-gesa laksana manusia yang takut kehabisan waktu atau takut mangsanya melarikan diri. Bagi Allah, para pendosa itu berada dalam cengkeraman kekuasaan-Nya setiap detik. Penundaan azab (<em>imla'</em>) adalah instrumen keadilan mutlak untuk memastikan bahwa para pelaku kejahatan menghabiskan seluruh alasan pembelaan mereka, sehingga saat hukuman dijatuhkan, tiada satu makhluk pun yang dapat membantah keadilan-Nya.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS & MUHASABAH -->
+    <h2 id="lensa-7">Lensa 7: Transformasi Praksis, Muhasabah & Doa Tadabbur</h2>
+
+    <h3>1. Tiga Tindakan Mikro-Aksi Nyata (Actionable Steps)</h3>
+    <div class="highlight-box">
+        <ol>
+            <li>
+                <strong>Pemberlakuan Protokol "Waspada Istidrāj" atas Kelancaran Rezeki (Istidrāj Alarm Protocol):</strong>
+                Kapan pun Anda menerima lonjakan rezeki finansial, kenaikan jabatan, kemudahan fasilitas hidup, atau popularitas publik di saat Anda menyadari sedang lalai dari shalat malam, mulai berani memakan yang syubhat, atau sering meninggalkan shalat fardhu berjamaah: <em>JANGAN PERNAH merayakannya sebagai tanda karunia atau ridha Allah!</em> Seketika itu juga, pasang alarm kewaspadaan spiritual tertinggi. Lakukan sujud taubat, perbanyak istighfar minimal 100 kali sehari, keluarkan sedekah pembersih dari harta tersebut, dan paksa jiwa Anda untuk kembali ke atas rel ketaatan sebelum tali pembiaran itu disentak oleh Allah Ta'ala.
+            </li>
+            <li>
+                <strong>Audit Lisan & Digital terhadap Dosa Pelecehan (Zero-Mockery Code of Conduct):</strong>
+                Tetapkan disiplin tanpa toleransi (<em>zero-tolerance policy</em>) dalam percakapan lisan maupun interaksi digital Anda untuk tidak pernah memperolok, menjadikan bahan lelucon, atau menertawakan orang lain—terutama mereka yang sedang berjuang menegakkan agama Allah dalam kesederhanaan. Hapus seluruh stiker obrolan, meme bernada merendahkan martabat fisik/ekonomi sesama manusia, serta keluar dari grup obrolan yang membiasakan ghibah dan ejekan. Ingatlah ancaman mengerikan: memperolok orang lain adalah pintu tercepat untuk menarik ejekan balik dari Allah yang membuat kita terperosok ke dalam kehinaan yang sama.
+            </li>
+            <li>
+                <strong>Pemeriksaan Kompas Batin Mingguan (Weekly Spiritual Calibration):</strong>
+                Alokasikan waktu hening selama 30 menit setiap malam Jumat untuk menguji apakah Anda sedang mengalami gejala <em>'Amah</em> (kebisingan batin dan hilangnya navigasi jiwa). Evaluasi tiga indikator: (1) Apakah air mata Anda masih bisa menetes saat mendengar ayat-ayat peringatan Al-Qur'an? (2) Apakah kalbu Anda merasa sesak dan tersiksa saat terlanjur melakukan maksiat kecil? (3) Apakah Anda merasakan kenikmatan dalam munajat kesendirian? Jika jawaban ketiga indikator ini adalah "Tidak", segera lakukan 'karantina spiritual' melalui puasa sunnah, tilawah tartil, dan pergaulan intensif dengan orang-orang shalih yang tulus.
+            </li>
+        </ol>
+    </div>
+
+    <h3>2. Tiga Pertanyaan Refleksi Batin (Muhasabah Mendalam)</h3>
+    <div class="reflection-box">
+        <ol>
+            <li>
+                <em>Ketika saya melakukan dosa rahasia di balik pintu yang terkunci rapat dan Allah menutupi aib tersebut dari pandangan manusia tanpa menimpakan musibah langsung kepada saya, apakah saya menafsirkannya sebagai kecerdikan saya dalam menyembunyikan jejak, ataukah saya gemetar menyadari bahwa itu adalah kelembutan penangguhan Ilahi yang sedang menguji ketulusan taubat saya?</em>
+            </li>
+            <li>
+                <em>Pernahkah terlintas dalam benak saya perasaan lebih pintar, lebih maju, atau lebih beradab dibandingkan orang-orang beriman yang polos dan taat, sehingga tanpa sadar saya memandang mereka dengan pandangan meremehkan yang mengundang murka dan ejekan balik dari Sang Khaliq?</em>
+            </li>
+            <li>
+                <em>Jika seluruh kenikmatan, fasilitas, kesehatan, dan kemudahan hidup yang saya nikmati hari ini ternyata adalah bentuk istidrāj &mdash; penguluran tali pengikat sebelum hukuman dijatuhkan &mdash; bekal taubat apa yang telah saya persiapkan seandainya malaikat maut mencabut nyawa saya pada detik ini juga?</em>
+            </li>
+        </ol>
+    </div>
+
+    <h3>3. Munajat & Doa Tadabbur Ayat</h3>
+    <div class="doa-box">
+        <p style="text-align: center; font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 24px; line-height: 2; margin-bottom: 15px; direction: rtl;">
+            اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أَسْتَدْرَجَ بِنِعْمَتِكَ، أَوْ أُغْتَرَّ بِسِتْرِكَ، أَوْ أَتَمَادَى فِي عِصْيَانِكَ. اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ، وَلَا تَمْدُدْنِي فِي طُغْيَانِي، وَأَعِذْنِي مِنْ عَمَهِ الْبَصِيرَةِ، وَحَيْرَةِ الضَّلَالَةِ، وَمَكْرِ الِاسْتِدْرَاجِ. اللَّهُمَّ اجْعَلْنَا مِنَ الَّذِينَ إِذَا أَعْطَيْتَهُمْ شَكَرُوا، وَإِذَا ابْتَلَيْتَهُمْ صَبَرُوا، وَإِذَا أَذْنَبُوا اسْتَغْفَرُوا، وَلَا تَجْعَلْنَا مِنَ الْمُسْتَهْزِئِينَ فَتَسْتَهْزِئَ بِنَا يَوْمَ الدِّينِ.
+        </p>
+        <p style="font-style: italic; color: #78350f; margin-bottom: 0;">
+            "Ya Allah, Penguasa Tunggal semesta alam yang keadilan-Nya mutlak! Aku berlindung kepada-Mu dari jebakan istidrāj melalui limpahan nikmat-Mu, dari terperdaya oleh tabir penutup aib yang Engkau bentangkan atas dosaku, dan dari keterusan dalam membangkang terhadap hukum-Mu. Wahai Rabb, jangan pernah Engkau serahkan diriku kepada hawa nafsuku walau hanya sekejap mata. Janganlah Engkau ulur diriku dalam kesesatan yang melampaui batas, dan selamatkanlah aku dari kebutaan mata batin (al-'amah), dari kebingungan ketersesatan arah hidup, serta dari makar pembiaran yang membinasakan. Ya Allah, jadikanlah kami hamba-hamba-Mu yang apabila diberi kenikmatan bersyukur dengan penuh kerendahan hati, apabila diuji bersabar dengan keteguhan iman, dan apabila tergelincir berbuat dosa segera bersimpuh memohon ampunan. Janganlah Engkau biarkan kami menjadi golongan yang memperolok kebenaran dan hamba-hamba-Mu yang beriman, sehingga Engkau memperolok dan menghinakan kami di Hari Pembalasan kelak. Terangilah mata hati kami dengan nur petunjuk-Mu hingga kami kembali menghadap-Mu dalam keadaan selamat. Āmīn Yā Rabbal 'Ālamīn."
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-014 - QS. Al-Baqarah Ayat 14.html">&larr; Kembali: QS. Al-Baqarah Ayat 14</a>
+        <span><strong>Kajian Ensiklopedis Surah Al-Baqarah [2]: 15</strong></span>
+        <a href="002-016 - QS. Al-Baqarah Ayat 16.html">Lanjut: QS. Al-Baqarah Ayat 16 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

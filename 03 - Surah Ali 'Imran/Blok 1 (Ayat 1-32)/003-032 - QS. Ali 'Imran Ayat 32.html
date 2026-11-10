@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-032 - QS. Ali 'Imran Ayat 32 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-031 - QS. Ali 'Imran Ayat 31.html">&larr; Ayat Sebelumnya (QS. 3:31)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="../Blok 2 (Ayat 33-63)/003-033 - QS. Ali 'Imran Ayat 33.html">Ayat Berikutnya (QS. 3:33) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 4 (Ayat 26–32): Kedaulatan Mutlak Allah, Konsekuensi Loyalitas & Imperatif Ketaatan</span>
+        <span class="badge">11 Kata | 46 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 32</h1>
+    <div class="transliteration">
+        "Qul athī'ullāha war-rasūl(a), fa-in tawallaw fa-innallāha lā yuḥibbul-kāfirīn(a)."
+    </div>
+    <div class="thematic-title">
+        Imperatif Ketaatan Mutlak kepada Allah dan Rasul: Konsekuensi Riil Cinta Ilahi, Penegasan Otoritas Sunnah, dan Vonis Teologis atas Pembangkangan
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Penutup Blok 1: Ayat 1–32 | Klaster 4: Puncak Pembuktian Akidah & Loyalitas Otoritatif)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        قُلْ أَطِيعُوا۟ ٱللَّهَ وَٱلرَّسُولَ ۖ فَإِن تَوَلَّوْا۟ فَإِنَّ ٱللَّهَ لَا يُحِبُّ ٱلْكَـٰفِرِينَ ۝٣٢
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Katakanlah (wahai Nabi Muhammad): 'Taatilah Allah dan Rasul!' Maka jika mereka berpaling (menolak untuk patuh dan berserah diri kepada ketetapan syariat), sesungguhnya Allah tidak mencintai orang-orang kafir (mereka yang mengingkari kebenaran wahyu dan membangkang terhadap otoritas kenabian).'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat 32 merupakan kulminasi yuridis, teologis, dan operasional dari seluruh bangunan argumentasi Blok 1 (Ayat 1–32). Jika ayat 31 (<em>Āyatul-Miḥnah</em> / Ayat Penguji) meletakkan cinta kepada Allah di atas landasan kepengikutan praktis kepada Rasulullah ﷺ (<em>ittibā'</em>), maka ayat 32 melangkah lebih jauh dengan mentransformasikan cinta tersebut menjadi <strong>imperatif ketaatan mutlak (<em>ṭhā'ah muṭhlaqah</em>)</strong>. Penggabungan lafaz Allah dan Rasul dalam satu kata kerja perintah (<em>athī'ū</em>) menegaskan bahwa ketaatan kepada Rasulullah ﷺ bukanlah opsi tambahan sekunder, melainkan intisari dari ketaatan kepada Allah itu sendiri. Penutupan ayat dengan vonis <em>fa-innallāha lā yuḥibbul-kāfirīn</em> menetapkan batas demarkasi ontologis: pembangkangan terhadap sunnah dan hukum yang dibawa oleh Nabi Muhammad ﷺ bukan sekadar pelanggaran etika biasa, melainkan sebentuk pengingkaran (kekafiran) yang memutus jalinan kasih sayang Ilahi.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>قُلْ</strong><br>(<em>Qul</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Makhraj pangkal lidah (aqshal-lisan) bertemu langit-langit lunak, bersifat isti'la' (tafkhim tingkat tiga karena berharakat dhammah), jahr, dan syiddah.<br>
+                    <strong>Huruf Lām Sukun:</strong> Lām fi'il berharakat sukun asli, dibaca <strong>Idzhār Muthlaq / Idzhār Lām al-Fi'li</strong> secara terang dan jelas dengan mematangkan sifat tawassuth (antara syiddah dan rikhwah).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat membaca dengan fi'il amr mabni 'alas-sukun: <em>Qul</em>, menegaskan fungsi Rasulullah ﷺ sebagai penyampai wahyu langsung (<em>muballigh</em>) yang terikat pada titah mandat Ilahi.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>أَطِيعُوا۟</strong><br>(<em>Athī'ū</em>)</td>
+                <td>
+                    <strong>Hamzah Qatha':</strong> Tahqiq fathah dari aqshal-halq.<br>
+                    <strong>Huruf Ṭhā':</strong> Isti'la' dan ithbaq mutlak, kasrah tafkhim nisbi.<br>
+                    <strong>Mad Ṭhabī'ī & Gugurnya Mad Fonetik:</strong> Huruf Yā' mad dibaca 2 harakat. Huruf Wawu mad bertemu hamzah washal pada lafaz jalalah; secara fonetik vokal panjang gugur saat washal (<em>Iltiqā'us-Sākinayn</em>) langsung masuk ke Lam Jalalah berharakat sukun (<em>Athī'ul-lāh</em>).
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca fi'il amr jama' mudzakkar: <em>Athī'ū</em>. Wawu jama'ah ditetapkan dalam rasm mushaf Utsmani dengan alif fariqah di ujungnya.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱللَّهَ</strong><br>(<em>Allāha</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal dari kata sebelumnya.<br>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Karena huruf sebelum lam jalalah adalah Wawu jama'ah yang berharakat dhammah (<em>athī'u</em>), maka Lam Jalalah wajib dibaca tebal (tafkhim) secara konsensus tajwid.
+                </td>
+                <td>
+                    Seluruh imam membaca manshub bil-fathah pada ha' jalalah sebagai maf'ul bih (<em>Allāha</em>), dengan ketebalan penuh pada artikulasi Lam Jalalah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَٱلرَّسُولَ ۖ</strong><br>(<em>War-rasūla</em>)</td>
+                <td>
+                    <strong>Wawu 'Athaf:</strong> Fathah istifal.<br>
+                    <strong>Idghām Syamsiyyah & Tafkhīm ar-Rā':</strong> Lam ta'rif melebur sempurna ke dalam huruf Rā' bertasydid fathah, dibaca tebal disertai sifat takrir yang terkendali.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wawu mad jatuh setelah dhammah dibaca 2 harakat.<br>
+                    <strong>Waqaf Shala (الوصل أولى):</strong> Boleh waqaf secara ikhtiyari dengan mad 'aridh lis-sukun pada huruf Lam, namun washal jauh lebih diutamakan.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca manshub bil-fathah (<em>ar-Rasūla</em>) sebagai ma'thuf atas ism jalalah <em>Allāha</em>. Penyatuan ini membuktikan secara linguistik kesatuan kepatuhan hukum kepada Allah dan Rasul-Nya.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَإِن</strong><br>(<em>Fa-in</em>)</td>
+                <td>
+                    <strong>Fā' Isti'nāfiyyah / Jāzi'ah:</strong> Fathah ringan.<br>
+                    <strong>Hamzah Qath' Kasrah:</strong> Tahqiq tajam.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Tā' dibaca samar-samar disertai ghunnah muraqqaqah (dengung tipis) sepanjang 2 harakat.
+                </td>
+                <td>
+                    Sepuluh imam membaca tahqiq hamzah kasrah pada <em>Fa-in</em> saat washal. (Imam Hamzah memiliki kaidah khusus tahqiq atau tashil/takhfif hamzah saat waqaf ikhtibari/idhthirari sesuai kaidah ushul-nya).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>تَوَلَّوْا۟</strong><br>(<em>Tawallaw</em>)</td>
+                <td>
+                    <strong>Huruf Tā':</strong> Makhraj ujung lidah dengan hams.<br>
+                    <strong>Lām Musyaddadah:</strong> Memiliki sifat tawassuth dengan tekanan nabr yang presisi.<br>
+                    <strong>Huruf Līn:</strong> Wawu sukun jatuh setelah harakat fathah pada lam bertasydid, dilafalkan mengalir lembut tanpa tersendat.<br>
+                    <strong>Alif Fāriqah:</strong> Tertulis dalam rasm mushaf, tidak dibaca secara fonetik.
+                </td>
+                <td>
+                    • Seluruh sepuluh imam mutawatirah sepakat membaca dengan takhfif (tanpa tasydid pada ta'): <em>tawallaw</em>.<br>
+                    • Ditinjau dari transmisi qira'at dan i'rab, mayoritas mengukuhkannya sebagai fi'il madhi (telah berpaling), sementara sebagian ahli nahwu memandangnya sebagai fi'il mudhari' yang dibuang salah satu huruf ta'-nya untuk meringankan bacaan (asalnya <em>tatawallaw</em>). Kedua analisis menghasilkan makna peringatan yang menggetarkan.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>فَإِنَّ ٱللَّهَ</strong><br>(<em>Fa-innallāha</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid pada <em>inna</em> wajib dibaca ghunnah akmal ma takun sepanjang 2 harakat penuh.<br>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Karena huruf nun bertasydid berharakat fathah, maka dua Lam pada lafaz jalalah dibaca tebal (tafkhim/taghlizh).
+                </td>
+                <td>
+                    Seluruh imam membaca fathah pada huruf Nun bertasydid dan fathah pada Ha' jalalah (<em>fa-innallāha</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>لَا يُحِبُّ</strong><br>(<em>Lā yuḥibbu</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Huruf Lā nafiyah dipanjangkan 2 harakat.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar bersih dari wasathul-halq dengan sifat hams dan rikhwah.<br>
+                    <strong>Bā' Musyaddadah:</strong> Bā' bertasydid dhammah disertai sifat syiddah, jahr, dan <strong>Nabr</strong> (hentakan vokal tajam agar ganda huruf Ba' terdengar kokoh).
+                </td>
+                <td>
+                    Konsensus mutawatir membaca <em>lā yuḥibbu</em> dengan marfu' bil-dhammah pada huruf Ba' bertasydid sebagai fi'il mudhari' nafi.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>ٱلْكَـٰفِرِينَ ۝٣٢</strong><br>(<em>Al-kāfirīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca terang sebelum huruf Kāf.<br>
+                    <strong>Alif Khinjariyyah (Dagger Alif):</strong> Dalam rasm mushaf ditulis tanpa alif sharihah (<em>al-kafirin</em>), dibaca mad ashli 2 harakat.<br>
+                    <strong>Tarqīq ar-Rā':</strong> Huruf Rā' berharakat kasrah wajib dibaca tipis (muraqqaqah).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Yā' mad bertemu Nūn sukun karena waqaf di akhir ayat, dibaca 2, 4, atau 6 harakat dengan menyempurnakan sifat tawassuth pada huruf Nūn.
+                </td>
+                <td>
+                    Ragam dialek fonetik mutawatir pada lafaz <em>Al-Kāfirīn</em> (karena alif jatuh sebelum Ra' kasrah):<br>
+                    • <strong>Abū 'Amr al-Baṣhrī (Ad-Dūrī & As-Sūsī), Ad-Dūrī 'an Al-Kisā'ī, Ruwais 'an Ya'qūb, dan Aṣh-Ṣhūrī 'an Ibni Dzakwān:</strong> Membaca dengan <strong>Imālah Kubrā (Mahdhah)</strong>: <em>Al-Kēfirīn</em> (memiringkan bunyi fathah ke arah kasrah dan alif ke arah ya' secara penuh).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqlīl / Imālah Ṣhughrā (Bayna-bayna)</strong>: membunyikan vokal di antara fathah murni dan imalah kubra.<br>
+                    • <strong>Jumhur Imam (Qālūn, Ibnu Katsīr, 'Āṣhim [Ḥafṣh & Syu'bah], Ḥamzah, Abū Ja'far, Rauh 'an Ya'qūb, Al-Akhfasy 'an Ibni Dzakwān, dan Hisyām):</strong> Membaca dengan <strong>Fat-ḥah Muḥaqqaqah (Tafkhim murni)</strong>: <em>Al-Kāfirīn</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbāb an-Nuzūl: Dekonstruksi Tuduhan Kaum Munafik & Penegasan Otoritas Kerasulan:</strong><br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        عَنِ ابْنِ عَبَّاسٍ رَضِيَ اللهُ عَنْهُمَا قَالَ: كَانَ أَهْلُ الْكِتَابِ وَالْمُنَافِقُونَ يَزْعُمُونَ أَنَّهُمْ يُحِبُّونَ اللهَ، فَلَمَّا أَنْزَلَ اللهُ تَعَالَى: {قُلْ إِنْ كُنْتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي}، قَالُوا: "إِنَّ مُحَمَّدًا يُرِيدُ أَنْ نَتَّخِذَهُ رَبًّا كَمَا اتَّخَذَتِ النَّصَارَى عِيسَى ابْنَ مَرْيَمَ!"، فَأَنْزَلَ اللهُ تَعَالَى عَقِيبَهَا: {قُلْ أَطِيعُوا اللَّهَ وَالرَّسُولَ فَإِنْ تَوَلَّوْا فَإِنَّ اللَّهَ لَا يُحِبُّ الْكَافِرِينَ}
+        </span>
+        Diriwayatkan oleh Ibnu Abi Hatim dalam <em>Tafsīr-nya</em> (No. 3848), Al-Wahidi dalam <em>Asbāb an-Nuzūl</em>, dan disebutkan oleh Ibnu Katsir serta At-Tabari dari jalur Muhammad bin Ja'far bin Az-Zubair dan Sahabat Abdullah bin Abbas radhiyallahu 'anhuma:<br>
+        Ketika ayat 31 turun (<em>Katakanlah jika kalian mencintai Allah maka ikutilah aku...</em>), kaum munafik di Madinah (dipimpin Abdullah bin Ubay bin Salul) dan sebagian tokoh Yahudi serta delegasi Kristen Najran berkomentar sinis untuk menghasut massa: <em>"Tidakkah kalian melihat Muhammad? Ia menuntut agar kita menjadikannya sesembahan dan tuhan yang dipuja sebagaimana kaum Nasrani mempertuhankan Isa putra Maryam!"</em><br>
+        Maka seketika itu pula Allah menurunkan QS. Ali 'Imran: 32 untuk menepis fitnah keji tersebut. Ayat ini menegaskan bahwa perintah mengikuti Nabi bukanlah penuhanan figur manusia, melainkan <strong>penegakan ketaatan kepada Risalah Ilahi</strong>. Menaati Rasul adalah bagian mutlak dari menaati Allah. Siapa yang berpaling menolak ketaatan tersebut divonis sebagai orang kafir yang tidak mendapatkan cinta Allah.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Ṣhaḥīḥ Al-Bukhārī (No. 7280) dari Sahabat Abū Hurairah r.a. — Konsekuensi Pembangkangan terhadap Kerasulan:</strong><br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللهُ عَنْهُ، أَنَّ رَسُولَ اللهِ ﷺ قَالَ: "كُلُّ أُمَّتِي يَدْخُلُونَ الْجَنَّةَ إِلَّا مَنْ أَبَى". قَالُوا: يَا رَسُولَ اللهِ، وَمَنْ يَأْبَى؟ قَالَ: "مَنْ أَطَاعَنِي دَخَلَ الْجَنَّةَ، وَمَنْ عَصَانِي فَقَدْ أَبَى"
+        </span>
+        Dari Abu Hurairah radhiyallahu 'anhu, bahwasanya Rasulullah ﷺ bersabda:<br>
+        <em>"Setiap umatku pasti akan masuk surga kecuali orang yang enggan!"</em> Para sahabat bertanya terheran-heran: <em>"Wahai Rasulullah, siapakah gerangan orang yang enggan itu?"</em> Beliau ﷺ menjawab: <em>"Barangsiapa yang menaatiku ia pasti masuk surga, dan barangsiapa yang mendurhakaiku (berpaling dari petunjukku) maka sungguh dialah orang yang enggan!"</em><br>
+        <strong>Derajat Hadits:</strong> Sahih secara mutlak (HR. Al-Bukhari, Kitab <em>Al-I'tisham bil-Kitab was-Sunnah</em>).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Ṣhaḥīḥ Al-Bukhārī (No. 7137) & Ṣhaḥīḥ Muslim (No. 1835) dari Abū Hurairah r.a. — Kesatuan Ketaatan kepada Allah dan Rasul:</strong><br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        قَالَ رَسُولُ اللهِ ﷺ: "مَنْ أَطَاعَنِي فَقَدْ أَطَاعَ اللهَ، وَمَنْ عَصَانِي فَقَدْ عَصَى اللهَ..."
+        </span>
+        Rasulullah ﷺ menegaskan poros epistemologi otoritas wahyu:<br>
+        <em>"Barangsiapa menaatiku, sungguh ia telah menaati Allah. Dan barangsiapa mendurhakaiku, sungguh ia telah mendurhakai Allah..."</em><br>
+        Hadits ini adalah dalil nash qath'i yang membedah korelasi integral antara ketaatan kepada Allah dan ketaatan kepada Rasul sebagaimana termaktub dalam QS. Ali 'Imran: 32.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sunan Abī Dāwūd (No. 4604), Jāmi' At-Tirmidzī (No. 2664) & Musnad Aḥmad (No. 17174) — Hadits Al-Arīkah (Peringatan Keras terhadap Pengingkar Sunnah):</strong><br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        عَنِ الْمِقْدَامِ بْنِ مَعْدِيكَرِبَ رَضِيَ اللهُ عَنْهُ، عَنْ رَسُولِ اللهِ ﷺ أَنَّهُ قَالَ: "أَلَا إِنِّي أُوتِيتُ الْكِتَابَ وَمِثْلَهُ مَعَهُ، أَلَا يُوشِكُ رَجُلٌ شَبْعَانُ عَلَى أَرِيكَتِهِ يَقُولُ: عَلَيْكُمْ بِهَذَا الْقُرْآنِ فَمَا وَجَدْتُمْ فِيهِ مِنْ حَلَالٍ فَأَحِلُّوهُ، وَمَا وَجَدْتُمْ فِيهِ مِنْ حَرَامٍ فَحَرِّمُوهُ..."
+        </span>
+        Dari Al-Miqdam bin Ma'dikarib radhiyallahu 'anhu, Rasulullah ﷺ bersabda:<br>
+        <em>"Ketahuilah, sesungguhnya aku dianugerahi Al-Kitab (Al-Qur'an) dan yang semisalnya bersamanya (yakni As-Sunnah)! Ingatlah, hampir tiba suatu masa di mana ada seorang lelaki kenyang yang duduk bersandar santai di atas sofa mewahnya lalu berkata: 'Cukuplah bagi kalian Al-Qur'an ini; apa yang kalian jumpai di dalamnya berupa perkara halal maka halalkanlah, dan apa yang kalian dapati haram maka haramkanlah (tanpa perlu merujuk hadits Nabi)...'"</em><br>
+        <strong>Derajat Hadits:</strong> Sahih menurut Imam At-Tirmidzi, Ibnu Hibban, Al-Hakim, dan disepakati oleh Adz-Dzahabi. Hadits ini membongkar bahaya ideologi ingkar sunnah yang berpaling dari perintah <em>athī'ur-rasūl</em>.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Q-W-L (ق-و-ل — Qul):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros semantiknya pada: <strong>Al-Khiffah wal-Harakah wal-Ibrāz bis-Shawt (الخفة والحركة وإبراز الصوت الدال على المعنى - gerakan artikulasi organ tutur yang mengeluarkan suara bermakna secara terbuka dan tegas)</strong>. Perintah <em>Qul</em> di awal ayat berfungsi sebagai pemakluman proklamasi Ilahiah: Rasulullah ﷺ tidak berbicara atas inisiatif emosi pribadinya, melainkan menyampaikan teks mandat mutlak dari Tuhan semesta alam.
+        </li>
+        <li><strong>2. TH-W-' (ط-و-ع — Athī'ū / Aṭh-Ṭhā'ah):</strong>
+            Poros semantiknya adalah: <strong>Al-Inqiyād wal-Muwāfaqaḥ bi-Riḍhā wa Suhūlah bi-Khilāfil-Kurh (الانقياد والموافقة بطواعية وسلاسة - ketundukan sukarela, kepatuhan yang lahir dari kesadaran batin tanpa paksaan keras, dan penerimaan penuh atas instruksi pihak yang ditaati)</strong>. Kata <em>aṭh-ṭhā'ah</em> adalah antonim langsung dari <em>al-ikrāh</em> (keterpaksaan) dan <em>al-ma'ṣhiyah</em> (pembangkangan). Ketaatan sejati dalam Islam bukanlah kepatuhan buta bernuansa tirani, melainkan penyerahan diri secara harmonis kepada kebenaran syariat yang membawa maslahat bagi jiwa.
+        </li>
+        <li><strong>3. R-S-L (ر-س-ل — Ar-Rasūl / Risālah):</strong>
+            Poros semantiknya adalah: <strong>Al-Inbi'āts 'alā Tu'adah wal-Imtidād fī Amrin bi-Ittisāq (الانبعاث والامتداد ومتابعة الشيء برفق - pengutusan yang bergerak secara terarah dan tertib mengemban misi pembawa berita)</strong>. Kata <em>ar-rasūl</em> menggunakan wazan <em>fa'ūl</em> bermakna <em>maf'ūl</em> (yang diutus resmi) sekaligus mengandung nuansa mubalaghah (sosok yang mendedikasikan seluruh tarikan nafas dan hidupnya demi menuntaskan amanah risalah). Mengaitkan ketaatan pada figur Rasulullah ﷺ adalah jaminan keselamatan karena sang utusan terjaga dari dosa pembelokan wahyu (<em>ma'ṣhūm</em>).
+        </li>
+        <li><strong>4. W-L-Y (و-ل-ي — Tawallaw / At-Tawallī):</strong>
+            Poros semantiknya adalah <strong>Al-Qurb wad-Dunūw (الولاء والقرب - kedekatan dan keterikatan)</strong>. Namun manakala kata ini bertransformasi ke wazan <em>tafa''ala</em> (<em>tawallā – yatawallā</em>) dan dirangkaikan dengan penolakan perintah, maknanya berbalik secara dramatis menjadi <strong>Al-I'rādh wal-Idbār bil-Badan wal-Qalb (الإعراض والانصراف وتولية الظهر - berpaling membelakangi kebenaran, memutuskan ikatan loyalitas, dan melarikan diri dari kewajiban)</strong>. Penggunaan kata <em>tawallaw</em> melukiskan arogansi mental manusia yang tidak hanya menolak secara lisan, melainkan membalikkan punggungnya dengan penuh kesombongan di hadapan cahaya petunjuk.
+        </li>
+        <li><strong>5. Ḥ-B-B (ح-ب-ب — Yuḥibbu / Al-Maḥabbah):</strong>
+            Poros semantiknya berputar pada dua esensi: <strong>Al-Luzūm wal-Tsubāt (ketetapan yang melekat erat tak terpisahkan)</strong> dan <strong>Shafā'ul-Lubb (kemurnian intisari kalbu yang bening laksana benih tanaman)</strong>. Kecintaan Allah kepada hamba adalah ridha, rahmat, pemuliaan, dan limpahan pahala-Nya. Ketika ayat menegaskan <em>lā yuḥibbu</em> (Allah tidak mencintai), ini menandakan terputusnya akses rahmat khusus dan hadirnya kemurkaan mutlak.
+        </li>
+        <li><strong>6. K-F-R (ك-ف-ر — Al-Kāfirīn / Al-Kufr):</strong>
+            Poros semantiknya adalah <strong>As-Satru wal-Taghthiyah (الستر والتغطية - menutupi, menyembunyikan, dan mengubur sesuatu)</strong>. Bangsa Arab menyebut petani sebagai <em>kāfir</em> karena ia menutupi benih dengan tanah. Orang kafir dinamai demikian karena mereka menutupi fitrah keimanan dalam dadanya, menyembunyikan kebenaran bukti-bukti kerasulan, serta menolak mensyukuri nikmat wahyu melalui pembangkangan terhadap perintah Allah dan Rasul-Nya.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>قُلْ</strong></td>
+                <td>Fi'il amr tsulatsi mujarrad ajwaf wawi (<em>qāla – yaqūlu</em>), mabni 'alas-sukun li-'adami ittishalihi bi-syay'.</td>
+                <td>Fi'il amr, fa'il-nya adalah dhamir mustatir wujuban takdirnya: <strong>Anta (أَنْتَ)</strong> kembali kepada Nabi Muhammad ﷺ. Seluruh jumlah fi'liyyah berkedudukan sebagai <strong>Isti'nāfiyyah</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>أَطِيعُوا۟</strong></td>
+                <td>Fi'il amr tsulatsi mazid bi-hamzah dari bab <em>if'āl</em> (<em>aṭhā'a – yuṭhī'u – aṭhi'</em>), wazan jama' <em>af'ilū</em> (<em>athī'ū</em>).</td>
+                <td>Fi'il amr mabni 'alā <strong>ḥadzhfin-nūn</strong> lianna mudhari'ahu minal-af'ālil-khamsah. Wawu jama'ah adalah dhamir muttashil mabni 'alas-sukun fī maḥalli raf'in <strong>Fā'il</strong>. Alif di ujungnya adalah alif fāriqah. Jumlah fi'liyyah ini fī maḥalli nashbin <strong>Maqūlul-Qawl</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Isim 'alam jalalah.</td>
+                <td><strong>Maf'ūl bih</strong> manshub bil-fathah azh-zhahirah 'ala akhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلرَّسُولَ ۖ</strong></td>
+                <td>Wawu 'athaf muthlaqul-jam'i. <em>Ar-Rasūl</em>: isim mufrad mudzakkar sifat musyabbahah wazan <em>fa'ūl</em>.</td>
+                <td><strong>Ma'ṭhūf</strong> atas lafaz jalalah <em>Allāha</em>, manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِن</strong></td>
+                <td>Fā' fashīḥah (atau fā' rabithah / isti'nafiyyah). <em>In</em>: harf syarth jazim yajzimu fi'layni.</td>
+                <td><em>In</em> harf syarth jazim mabni 'alas-sukun lā maḥalla lahū minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>تَوَلَّوْا۟</strong></td>
+                <td>Fi'il tsulatsi mazid bi-harfayn (bab <em>tafa''ala</em>: <em>tawallā – yatawallā – tawalliyan</em>).</td>
+                <td><strong>Fi'lus-Syarth</strong>: Berstatus fi'il madhi mabni 'alad-dhammi al-muqaddar 'alal-alif al-mahdzufah li-iltiqa'is-sakinain, fī maḥalli jazmin bi-in. Wawu jama'ah adalah <strong>Fā'il</strong> mabni 'alas-sukun. (Atau fi'il mudhari' hadzf ihda at-ta'ain majzum bi-hadzhfin-nun).</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِنَّ</strong></td>
+                <td>Fā' rabithah li-jawabis-syarth (wajib masuk karena jawab syarth berupa jumlah ismiyyah). <em>Inna</em>: harf taukid wa nashab.</td>
+                <td><em>Inna</em> mabni 'alal-fath tanshibul-isma wa tarfa'ul-khabar.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Isim jalalah.</td>
+                <td><strong>Ismu Inna</strong> manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>لَا</strong></td>
+                <td>Harf nafy ghayru 'āmil.</td>
+                <td>Mabni 'alas-sukun lā maḥalla lahū minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>يُحِبُّ</strong></td>
+                <td>Fi'il mudhari' tsulatsi mazid mudha''af (<em>aḥabba – yuḥibbu</em>).</td>
+                <td>Fi'il mudhari' marfu' bil-dhammah azh-zhahirah; fa'il-nya adalah dhamir mustatir jawazan takdirnya: <strong>Huwa (هُوَ)</strong> kembali kepada Allah. Jumlah fi'liyyah <em>lā yuḥibbu</em> fī maḥalli raf'in <strong>Khabar Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْكَـٰفِرِينَ ۝٣٢</strong></td>
+                <td>Jam'u mudzakkar salim dari isim fa'il <em>kāfir</em>.</td>
+                <td><strong>Maf'ūl bih</strong> bagi fi'il <em>yuḥibbu</em>, manshub bil-yā' liannahu jam'u mudzakkar sālim. Jumlah ismiyyah <em>fa-innallāha lā yuḥibbul-kāfirīn</em> fī maḥalli jazmin <strong>Jawābus-Syarth</strong>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Penyatuan Allah dan Rasul dalam Satu Kata Kerja Perintah (Wahdatul-Amr):</strong>
+            Perhatikan diksi: <em>Athī'ullāha war-rasūl</em>. Berbeda dengan surah An-Nisa: 59 yang mengulang fi'il (<em>Athī'ullāha wa athī'ur-rasūla wa ulil-amri minkum</em>), di sini fi'il amr <em>athī'ū</em> hanya disebutkan SATU KALI untuk mencakup Allah dan Rasul secara simultan. Dalam kaidah ilmu ma'ani, ini adalah <strong>Uslūb al-Ijmā' wal-Ilzām al-Muthlaq</strong>: ketaatan kepada Rasulullah ﷺ dileburkan secara mutlak ke dalam ketaatan kepada Allah; menaati Rasul bukan cabang sekunder yang berdiri sendiri, melainkan manifestasi langsung dari kepatuhan kepada Sang Pencipta wahyu itu sendiri.
+        </li>
+        <li><strong>Ilmu Ma'ani — Iẓhhār fī Maqāmil-Iḍhmār (Penetapan Vonis Teologis atas Pembangkangan):</strong>
+            Secara susunan lahiriah kalimat (<em>zahir al-kalam</em>), kalimat jawab syarth semestinya berbunyi: <em>"fa-in tawallaw fa-innallāha lā yuḥibbuhum"</em> (jika mereka berpaling, sesungguhnya Allah tidak mencintai mereka). Namun Al-Qur'an secara mengejutkan beralih dari kata ganti (dhamir <em>hum</em>) menuju isim zhahir yang eksplisit dan tajam: <strong>Al-Kāfirīn</strong>!
+            Para pakar balaghah (seperti Az-Zamakhsyari dan Fakhruddin Ar-Razi) menjelaskan rahasia agung uslub ini:
+            <ul>
+                <li><strong>At-Tasjīl bil-Kufr:</strong> Memberikan legalitas vonis teologis bahwa menolak otoritas syariat Nabi Muhammad ﷺ adalah pembangkangan yang berstatus <strong>kekafiran</strong> (<em>kufr</em>).</li>
+                <li><strong>At-Ta'līl bil-Washf:</strong> Menegaskan kausalitas hukum (<em>'illat</em>): alasan mengapa Allah tidak mencintai mereka adalah karena sifat kekafiran dan penolakan mereka terhadap sunnah dan wahyu.</li>
+            </ul>
+        </li>
+        <li><strong>Ilmu Bayan — Al-Kināyah al-Balāghiyyah pada Frasa "Lā Yuḥibbu":</strong>
+            Kalimat <em>Lā yuḥibbullāhul-kāfirīn</em> bukan sekadar pernyataan netral tentang ketiadaan rasa cinta, melainkan <strong>Kināyah 'an Ghaḍhabillāh wa Sukhṭhihī wa Syiddati 'Iqābih (kebencian yang teramat murka, penolakan mutlak, dan kepastian azab neraka)</strong>. Dalam tradisi bahasa Arab tinggi, apabila Dzat Yang Maha Pengasih lagi Maha Penyayang menyatakan diri-Nya tidak mencintai suatu kaum, maknanya adalah kaum tersebut telah diharamkan dari naungan rahmat dan perlindungan-Nya di dunia dan di akhirat.
+        </li>
+        <li><strong>Ilmu Badi' — Aṭh-Ṭhibāq al-Ma'nawī & Tanāsub al-Fawāṣhil:</strong>
+            Terjalin harmoni seni badi' yang mempertemukan dua kutub sikap batin: <strong>Athī'ū</strong> (ketaatan aktif sukarela) berhadapan kontras secara maknawi dengan <strong>Tawallaw</strong> (keberpalingan dan pembangkangan ego). Ayat ditutup dengan rima fawashil bertipikal Madaniyah yang berwibawa: huruf Yā' dan Nūn pada <strong>Al-Kāfirīn</strong>, memberikan gema peringatan yang menutup pintu bantahan para penentang risalah.
+        </li>
+        <li><strong>I'jaz Fonetik — Dinamika Ketegasan Dikte Ilahi Menuju Hentakan Nabr:</strong>
+            Ayat dimulai dengan letupan tajam huruf Qaf sukun pada <em>Qul</em>, disusul suara tebal huruf Tha' pada <em>athī'ū</em>, dan meluncur megah pada lafaz jalalah <em>Allāha war-rasūl</em>. Ritme berubah drastis saat memasuki klausul syarat: desis ikhfa' yang hening pada <em>fa-in</em> mendadak ditabrak oleh kelembutan yang menipu pada <em>tawallaw</em>, lalu diledakkan oleh penegasan ghunnah bertasydid <em>fa-innallāha</em>, hentakan keras sifat <strong>Nabr</strong> pada Ba' bertasydid <em>lā yuḥibbu</em>, dan dipungkas secara mutlak oleh hembusan nafas tarqiq pada <em>Al-Kāfirīn</em>. Susunan fonetik ini secara psikologis menyuntikkan rasa gentar (<em>haybah</em>) ke dalam dada setiap pendengarnya.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 31 — Ujian Klaim Cinta):</strong>
+            Ayat 31 meletakkan premis aksiologis: <em>"Jika kalian benar-benar mencintai Allah, maka ikutilah aku (fattabi'ūnī)..."</em>. Namun kaum munafik dan Ahlul Kitab mencoba berkelit dengan membedakan antara mencintai Tuhan dan menaati perintah Muhammad. Maka ayat 32 hadir sebagai <strong>syarat mutlak kepatuhan hukum</strong>: cinta tidak bernilai tanpa ketaatan (<em>ṭhā'ah</em>). Ketaatan kepada Rasulullah ﷺ adalah parameter empiris tunggal yang membedakan cinta sejati dari sekadar ilusi batin dan bualan retorika kosong.
+        </li>
+        <li><strong>Siyāq (Posisi Ayat 32 sebagai Puncak Khatimah Blok 1: Ayat 1–32):</strong>
+            Ayat 32 adalah <strong>Kunci Penutup (Grand Finale / Khatimah) dari Blok 1 Surah Ali 'Imran</strong>:
+            <ol>
+                <li><strong>Fondasi Akidah (Ayat 1–9):</strong> Menegakkan tauhid mutlak (<em>Al-Hayyul-Qayyum</em>) dan adab terhadap ayat muhkamat serta mutasyabihat.</li>
+                <li><strong>Peringatan Sejarah & Penolakan Hukum (Ayat 10–25):</strong> Memperingatkan nasib Fir'aun, menelanjangi kesombongan Yahudi yang menolak bertahkim kepada Kitabullah, dan menetapkan keadilan mutlak.</li>
+                <li><strong>Kedaulatan Kosmis & Ujian Loyalitas (Ayat 26–30):</strong> Allah mendeklarasikan Diri sebagai Pemilik Tunggal kekuasaan dan alam semesta, disusul larangan loyalitas batin (<em>muwālāh</em>) kepada kaum kafir.</li>
+                <li><strong>Klimaks Pembuktian (Ayat 31–32):</strong> Seluruh dialektika keimanan, perdebatan teologi dengan Kristen Najran, dan polemik dengan Yahudi Madinah dikerucutkan pada satu muara konklusif: <em>"Taatilah Allah dan Rasul! Jika kalian berpaling, kalian adalah orang kafir yang tidak dicintai Allah!"</em> Ini adalah proklamasi final pemutus segala keraguan.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Menuju Blok 2: Ayat 33–63 — Genealogi Nubuwah Keluarga Pilihan):</strong>
+            Tepat setelah menutup pintu bagi pembangkangan di ayat 32, Al-Qur'an membuka Blok 2 pada ayat 33: <em>"Innallāhash-thafā Ādama wa Nūḥaw-wa Āla Ibrāhīma wa Āla 'Imrāna 'alal-'ālamīn..."</em> (Sesungguhnya Allah telah memilih Adam, Nuh, keluarga Ibrahim, dan keluarga 'Imran melebihi seluruh alam). Korelasinya sangat mendalam:
+            Ketika ayat 32 memerintahkan ketaatan mutlak kepada Rasulullah ﷺ, kaum musyrikin dan Ahlul Kitab mempertanyakan keabsahan risalah beliau: <em>"Mengapa kami harus menaati seorang anak yatim keturunan Quraisy?"</em> Ayat 33 langsung menjawab bahwa kerasulan Muhammad ﷺ bukanlah fenomena kebetulan, melainkan mata rantai puncak dari garis silsilah para nabi dan keluarga suci terpilih yang telah dipersiapkan Allah sepanjang sejarah peradaban manusia!
+        </li>
+        <li><strong>Rekonstruksi Sosio-Historis: Patahnya Argumen Delegasi Najran & Yahudi Madinah:</strong>
+            Delegasi Kristen Najran mengklaim bahwa pemuliaan mereka terhadap Nabi Isa AS adalah ekspresi cinta tertinggi kepada Allah. Namun ketika Nabi Muhammad ﷺ membacakan syariat tauhid yang steril dari trinitas, mereka berpaling dan menolak syariat tersebut. Di sisi lain, para rabi Yahudi Madinah mengklaim mereka adalah kekasih-kekasih Allah (<em>aḥibbā'ullāh</em>), namun mereka mendustakan kenabian Muhammad karena beliau bukan dari bangsa Bani Israil. Ayat 32 menghancurkan klaim kedua kelompok tersebut: siapapun yang menolak kepemimpinan Rasulullah ﷺ telah kehilangan status kehambaan yang dicintai Allah dan secara sah tergolong ke dalam kafir pembangkang.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭ-Ṭhabarī (w. 310 H) — Tafsir bil-Ma'tsur & Deklarasi Fiqih Akidah:</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>, At-Tabari menegaskan bahwa firman Allah <em>Qul athī'ullāha war-rasūl</em> adalah instruksi langsung kepada Nabi Muhammad ﷺ untuk menegaskan kepada seluruh manusia: patuhilah Allah dalam apa saja yang Dia fardhukan atas kalian di dalam Al-Qur'an, dan patuhilah Rasul-Nya dalam apa saja yang ia sunnahkan dan putuskan bagi kalian. Mengenai potongan <em>fa-in tawallaw</em>, At-Tabari memaparkan: <em>"Jika mereka berpaling dari ketaatan kepada Allah dan ketaatan kepada Rasul-Nya serta enggan menerima kebenaran yang engkau serukan, maka sesungguhnya Allah tidak menyukai orang-orang yang mengingkari (al-kāfirīn), yakni mereka yang mendustakan ayat-ayat-Nya dan menolak beriman kepada para rasul-Nya."</em> At-Tabari menggarisbawahi bahwa penamaan mereka sebagai <em>kāfirīn</em> adalah bukti bahwa penolakan terhadap ketaatan nabawiyyah mengeluarkan seseorang dari wilayah keimanan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Hakim Pemutus Klaim Dusta:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir mengelaborasi ayat ini dengan sangat tajam: <em>"Ayat yang mulia ini adalah pemutus (ḥākim) bagi setiap orang yang mengklaim mencintai Allah padahal ia tidak berada di atas manhaj dan tarekat kenabian Muhammad ﷺ. Ia adalah pembohong dalam klaimnya tersebut sampai ia mengikuti syariat Rasulullah ﷺ dalam seluruh ucapan, perbuatan, dan ketetapannya."</em> Lebih lanjut beliau menulis tentang <em>fa-innallāha lā yuḥibbul-kāfirīn</em>: <em>"Ini menunjukkan bahwa menyalahi Rasulullah ﷺ dalam petunjuknya adalah kekafiran, dan Allah tidak mencintai orang yang menyandang sifat demikian, betapapun orang tersebut berkoar-koar bahwa ia mencintai Allah dan mendekatkan diri kepada-Nya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Fiqih Otoritas Sunnah & Pembongkaran Argumen Pembangkang:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah implikasi hukum ketaatan. Beliau menegaskan bahwa ayat ini adalah dalil fundamental atas kehujjahan Sunnah (<em>ḥujjiyyatussunnah</em>). Menjadikan ketaatan kepada Rasul bergandengan dengan ketaatan kepada Allah membuktikan bahwa apa yang dihalalkan oleh Rasulullah ﷺ sama status hukumnya dengan apa yang dihalalkan oleh Allah, dan apa yang beliau haramkan sama statusnya dengan apa yang diharamkan oleh Allah. Al-Qurthubi mengutip peringatan keras para ulama salaf terhadap orang-orang yang hanya ingin berpegang pada Al-Qur'an dan mencampakkan hadits-hadits shahih, seraya menegaskan bahwa sikap demikian adalah wujud nyata dari <em>at-tawallī</em> (berpaling) yang dicela oleh ayat ini.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Rasional & Balaghah Izhhar:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi menjawab keraguan kaum ateis dan musyrikin yang menuduh Nabi Muhammad menduplikasi otoritas Tuhan: <em>"Ketaatan kepada Rasul pada hakikatnya adalah ketaatan kepada Allah itu sendiri, karena Rasul tidak memerintahkan sesuatu dari hawa nafsunya melainkan atas dasar wahyu Ilahi. Maka barangsiapa menolak sang utusan, sejatinya ia telah memberontak kepada Raja yang mengutusnya."</em><br>
+        Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti keindahan balaghah <em>waḍh'u azh-zhāhir mawḍhi'al-muḍhmar</em> pada kata <em>Al-Kāfirīn</em>: <em>"Al-Qur'an tidak mengatakan 'fa-innallāha lā yuḥibbuhum', melainkan menggunakan isim zahir 'al-kāfirīn' untuk mengajari kita dua hal: pertama, bahwa tindakan berpaling dari ketaatan kepada Rasulullah adalah kekafiran murni; kedua, bahwa kemurkaan Allah kepada mereka bersumber dari kekafiran tersebut, karena Allah mustahil mencintai orang yang ingkar."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Kohesi Sosial Politik Umat:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur memaparkan bahwa ayat 32 dirancang sebagai pengikat konstitusional masyarakat Madinah yang baru tumbuh. Sebuah komunitas peradaban tidak akan mampu bertahan kokoh menghadapi perang ideologi dan konspirasi militer tanpa adanya <strong>ketaatan sentral yang terlembagakan</strong>. Mengaitkan ketaatan kepada Rasulullah ﷺ dengan cinta kepada Allah berfungsi meleburkan loyalitas personal sahabat menjadi kepatuhan spiritual yang suci. Bagi Ibnu 'Asyur, <em>at-tawallī</em> di sini mencakup sabotase politis kaum munafik yang merongrong keputusan-keputusan kenabian di Madinah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Sentuhan Jiwa Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan dengan sangat menyentuh: <em>"Banyak orang menyangka bahwa cinta kepada Tuhan itu cukup dirasakan di dalam kalbu, cukup dengan air mata yang mengalir di saat sunyi atau bernyanyi memuji kebesaran-Nya. Datanglah ayat ini memecahkan khayalan itu! Cinta bukanlah igauan perasaan. Cinta adalah disiplin. Jika engkau cinta kepada Allah, tunduklah kepada aturan-Nya, ikutilah langkah Rasul-Nya. Jangan engkau buat syariat sendiri menurut seleramu. Orang yang berpaling dari sunnah Rasul tetapi mengaku cinta Tuhan adalah orang yang tertipu oleh nafsunya sendiri."</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menguraikan bahwa ketaatan kepada Rasulullah ﷺ menuntut pemahaman kontekstual terhadap petunjuk beliau: ketaatan yang memadukan kepatuhan lahiriah syariat dengan kedalaman akhlak batin. Kemenag RI menegaskan bahwa ayat ini adalah benteng pertahanan umat dari paham ingkar sunnah kontemporer serta penegasan bahwa identitas seorang muslim diukur dari sejauh mana hidupnya dibimbing oleh Al-Qur'an dan Sunnah.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hukum Ketaatan kepada Rasulullah ﷺ</strong></td>
+                <td>Sepakat bulat (ijma' qath'i) bahwa menaati Rasulullah ﷺ dalam perkara hukum syariah adalah fardhu 'ain dan rukun mutlak keimanan.</td>
+                <td>
+                    • <strong>Mayoritas Ulama Ushul:</strong> Ketaatan berlaku pada seluruh ketetapan tasyri' (perintah bernilai wajib dan larangan bernilai haram).<br>
+                    • <strong>Rincian Fiqih Perbuatan Nabi:</strong> Para fuqaha membedakan antara tindakan nabi sebagai Rasul (wajib diikuti), sebagai hakim/qadhi (mengikat pihak berperkara), dan sebagai pemimpin politik atau kebiasaan manusiawi biasa (jibiliyyah).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Analisis Gramatikal & Makna "Tawallaw"</strong></td>
+                <td>Sepakat bahwa <em>tawallaw</em> bermakna membelakangi kebenaran, menolak ketetapan hukum, dan melarikan diri dari komitmen Islam.</td>
+                <td>
+                    • <strong>Pendekatan Fi'il Madhi (At-Tabari, Ibnu Katsir):</strong> Memaknai sebagai bentuk lampau yang mencakup orang-orang munafik dan kafir terdahulu yang telah nyata-nyata berpaling.<br>
+                    • <strong>Pendekatan Fi'il Mudhari' Hadzf at-Ta' (Az-Zamakhsyari):</strong> Asalnya <em>tatawallaw</em>, bermakna prospektif: peringatan keras bagi generasi mukminin di masa depan agar tidak berani berpaling dari sunnah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Konsekuensi Teologis Frasa "Al-Kāfirīn"</strong></td>
+                <td>Sepakat bahwa orang yang menolak ketaatan kepada Rasulullah ﷺ karena mendustakan (<em>takdzīb</em>) atau menghalalkan pembangkangan (<em>istiḥlāl</em>) divonis Kufur Akbar.</td>
+                <td>
+                    • <strong>Jumhur Mufassir Klasik:</strong> Kata <em>Al-Kāfirīn</em> ditujukan secara tekstual kepada kaum kafir asli dan munafik zindiq yang menolak kenabian Muhammad ﷺ.<br>
+                    • <strong>Ulama Salaf & Ahli Tahqiq:</strong> Memberikan peringatan bahwa seorang muslim yang bermaksiat meninggalkan sunnah karena dorongan hawa nafsu (bukan karena menentang kewajibannya) tidak keluar dari Islam (kufur asghar), namun ia terancam kehilangan cinta dan ridha Allah secara proporsional.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Sentimentalitas Subjektif vs Pola Pikir Qur'ani Konsekuensial</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Antinomianisme / Sentimentalitas Semu</th>
+                <th>Pola Pikir Qur'ani Konsekuensial (QS. 3:32)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Definisi & Parameter Cinta</strong></td>
+                <td><em>Affective & Subjektif:</em> Cinta dianggap semata-mata gejolak rasa di dada ("yang penting niat baik", "hati saya bersih"); menolak aturan perilaku eksternal.</td>
+                <td><em>Behavioral & Otoritatif:</em> Cinta adalah komitmen aksi nyata; validitas cinta kepada Allah diuji melalui kepatuhan konkret pada syariat yang dibawa Rasulullah ﷺ.</td>
+            </tr>
+            <tr>
+                <td><strong>Relasi terhadap Otoritas Kenabian</strong></td>
+                <td><em>Selective Deconstruction (Cherry-Picking):</em> Mengakui Tuhan secara abstrak, tetapi menyaring ajaran Rasul sesuai selera akal modern atau kenyamanan ego pribadi.</td>
+                <td><em>Integral Epistemology:</em> Ketaatan kepada Allah dan Rasul dipandang sebagai satu kesatuan sistemik tak terpisahkan (<em>wahdatul-inqiyād</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Persepsi terhadap Batasan Syariat</strong></td>
+                <td><em>Constraining & Opresif:</em> Memandang hukum halal-haram sebagai pengekang kebebasan individu dan formalisme kaku yang menghambat kebahagiaan.</td>
+                <td><em>Liberating & Preservative:</em> Memandang hukum syariat sebagai pagar pelindung fitrah yang membebaskan manusia dari perbudakan hawa nafsu dan kehancuran jiwa.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Tiga Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Behavioral Proof of Affection" (Hukum Validasi Cinta Melalui Tindakan):</strong>
+            Dalam ilmu psikologi kognitif dan teori relasi, sebuah komitmen afektif (cinta) yang tidak diejawantahkan dalam keselarasan perilaku (<em>behavioral alignment</em>) dikategorikan sebagai delusi diri (<em>self-delusion</em>) atau manipulasi emosional. QS. 3:32 merumuskan kaidah berpikir fundamental: <strong>Cinta sejati selalu menuntut penundukan ego di hadapan keinginan pihak yang dicintai</strong>. Seorang hamba yang mengaku mencintai Allah namun enggan menjalankan shalat, enggan memakan yang halal, dan mengabaikan etika kenabian sejatinya sedang memuja nafsunya sendiri, bukan mencintai Allah.
+        </li>
+        <li><strong>Mental Model 2: "The Indivisible Authority Matrix" (Prinsip Otoritas Tak Terpisahkan):</strong>
+            Secara epistemologis, Al-Qur'an adalah teks konstitusi makro, sedangkan Sunnah Nabawiyyah adalah cetak biru operasional (<em>operational blueprint</em>) sekaligus visualisasi praktisnya. Menolak Sunnah seraya mengaku berpegang pada Al-Qur'an adalah kekacauan nalar yang fatal. Mental model ini mendidik akal seorang mukmin untuk tidak mendikotomikan antara "hukum Allah" dan "hukum Rasul", karena Rasulullah ﷺ adalah instrumen resmi yang ditunjuk oleh Allah untuk mendemonstrasikan bagaimana Al-Qur'an dihidupkan dalam realitas sejarah manusia.
+        </li>
+        <li><strong>Mental Model 3: "The Anti-Cherry-Picking Protocol" (Protokol Penundukan Bias Selektif):</strong>
+            Otak manusia secara evolusioner memiliki bias kognitif <em>convenience bias</em>: cenderung menerima aturan yang mudah dan menguntungkan status sosialnya, namun menolak aturan yang menuntut pengorbanan finansial atau pembatasan syahwat. Frasa <em>fa-in tawallaw</em> membongkar bahaya bias ini: kepatuhan yang parsial dan selektif bukanlah ketaatan, melainkan penurutan hawa nafsu bertopeng agama. Ketaatan hakiki baru teruji ketika syariat memerintahkan sesuatu yang bertentangan dengan preferensi ego pribadi.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengatasi Disonansi Kognitif Batin</h3>
+    <p>
+        Secara neurobiologis, ketika seseorang mengaku meyakini suatu nilai moral (misalnya mengklaim mencintai Allah) namun tindakannya sehari-hari bertentangan secara diametral dengan nilai tersebut (membangkang terhadap perintah Rasul), otak manusia mengalami ketegangan saraf akut yang dikenal sebagai <strong>Disonansi Kognitif (Cognitive Dissonance)</strong>. Ketegangan antara sistem limbik (dorongan impuls insting hewani) dan korteks prefrontal (kesadaran moral) ini sering kali diselesaikan oleh manusia dengan cara merasionalisasi dosa, menyepelekan hukum agama, atau memusuhi syariat itu sendiri.
+    </p>
+    <p>
+        QS. 3:32 membedah akar penyakit ini melalui terapi <strong>Tazkiyatun Nafs berbasis Penyerahan Diri Total (Al-Istislām)</strong>. Ketika seorang mukmin mengambil keputusan sadar untuk patuh: <em>Athī'ullāha war-rasūl</em>, korteks prefrontal terlatih untuk memegang kendali eksekutif, menertibkan impuls emosional, dan menyelaraskan aksi raga dengan keyakinan tauhid di kalbu. Keutuhan integritas antara ucapan lidah, keyakinan hati, dan tindakan fisik melahirkan ketenangan jiwa yang mendalam (<em>ithmi'nānun-nafs</em>) serta membentengi manusia dari penyakit kemunafikan batin.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Wabah "Spiritual But Not Religious" (SBNR) & De-Autoritas Syariat</h3>
+    <p>
+        Dalam lanskap sosiologis abad ke-21, terutama di kalangan generasi urban dan milenial global, merebak fenomena yang dikenal sebagai <em>Spiritual But Not Religious</em> (SBNR). Jutaan orang menyatakan percaya kepada Tuhan, merasa terkoneksi dengan energi alam semesta, dan mengklaim mencintai Sang Pencipta, namun secara agresif menolak institusi agama, menolak nabi, dan menolak hukum syariat yang mengikat. Mereka menginginkan "Tuhan yang permisif"—Tuhan yang memvalidasi seluruh gaya hidup hedonis mereka tanpa pernah menuntut kepatuhan moral.
+    </p>
+    <p>
+        QS. 3:32 menelanjangi ilusi kultural ini secara telak: spiritualitas tanpa kepatuhan syariat kenabian adalah kebohongan eksistensial. Menolak ketaatan kepada Rasul dengan dalih "yang penting saya berbuat baik" adalah jebakan arogansi modern yang menempatkan ego manusia di atas kebijaksanaan wahyu Ilahi.
+    </p>
+
+    <h3>2. Gelombang "Hadith-Skepticism" & Neokoraniyah (Ingkar Sunnah Digital)</h3>
+    <p>
+        Di era algoritma media sosial, muncul kebangkitan kembali gerakan Ingkar Sunnah (<em>Qur'an-Only Movement</em> / Neokoraniyah) yang dipoles dengan narasi rasionalisme semu dan dekonstruksi sejarah kritis. Melalui konten-konten video pendek dan artikel daring, para pegiat gerakan ini menyebarkan keraguan terhadap kitab-kitab hadits shahih, mencemooh sanad, dan menyerukan agar umat mencampakkan As-Sunnah seraya mengklaim hanya bersandar pada Al-Qur'an.
+    </p>
+    <p>
+        Dampak peradaban dari gerakan ini sangat mengerikan: ketika Sunnah Nabi ﷺ dilucuti, Al-Qur'an kehilangan instrumen penafsir resminya dan segera menjadi teks lentur yang dapat ditafsirkan seenak perut oleh ideologi sekuler, liberal, maupun feminisme radikal. Shalat kehilangan jumlah rakaatnya, zakat kehilangan nishabnya, dan hukum halal-haram kehilangan definisinya. QS. 3:32 mematahkan racun epistemologis ini: Al-Qur'an itu sendiri yang memerintahkan secara qath'i: <em>Athī'ullāha war-rasūl</em>! Siapa yang membuang Sunnah Rasulullah ﷺ sejatinya telah mencampakkan Al-Qur'an itu sendiri dan masuk ke dalam kategori <em>al-kāfirīn</em>.
+    </p>
+
+    <h3>3. Budaya Antinomianisme & Subjektivisme Moral Ekstrem</h3>
+    <p>
+        Peradaban modern pascamodernisme (<em>postmodernism</em>) merayakan <strong>Antinomianisme</strong> (penolakan terhadap segala bentuk hukum moral objektif). Slogan-slogan seperti <em>"My Body, My Choice"</em>, <em>"Follow Your Heart"</em>, dan <em>"Love is Love"</em> telah mendewakan perasaan subjektif di atas tatanan nilai absolut. Kebenaran tidak lagi ditentukan oleh wahyu, melainkan oleh konsensus hawa nafsu massa.
+    </p>
+    <p>
+        Akibatnya, peradaban mengalami degradasi institusi keluarga, epidemic kesepian, dan krisis identitas gender yang merusak tatanan sosial kemanusiaan. QS. 3:32 hadir sebagai kompas pemulihan peradaban: keselamatan manusia hanya bisa diraih manakala akal dan hawa nafsu kembali bersujud di bawah panduan wahyu yang dibawa oleh Rasulullah ﷺ.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol Sunnah Harian & Ikrar Ketaatan Subuh:</strong>
+                <br>• Setiap pagi tepat setelah salam shalat Subuh, bacalah dengan penuh ketundukan dzikir penegas loyalitas ketaatan (3 kali):
+                <br><em>"Raḍhītu billāhi Rabbā, wa bil-Islāmi dīnā, wa bi-Muḥammadin ﷺ nabiyyā wa rasūlā"</em> (Aku ridha Allah sebagai Tuhanku, Islam sebagai agamaku, dan Muhammad ﷺ sebagai nabi dan rasul panutanku).
+                <br>• Pilih <strong>satu sunnah mikro Nabi ﷺ</strong> yang selama ini Anda abaikan untuk dihidupkan hari ini secara disiplin (misal: adab makan dan minum dengan tangan kanan sambil duduk, mendahulukan kaki kanan saat masuk masjid, atau menjaga lisan dari ghibah selama 24 jam penuh).
+            </li>
+            <li><strong>Protokol Keputusan (The Sunnah Filter Protocol) dalam Dilema Kehidupan:</strong>
+                <br>• Manakala Anda dihadapkan pada persimpangan keputusan karier, peluang bisnis, atau konflik rumah tangga:
+                <br>&nbsp;&nbsp;1. Ajukan pertanyaan filter kepatuhan: <em>"Apakah keputusan ini selaras dengan sunnah dan ketetapan Rasulullah ﷺ, ataukah saya sedang mengikuti ambisi gengsi nafsu pribadi?"</em>
+                <br>&nbsp;&nbsp;2. Jika sebuah peluang finansial terbukti mengandung riba, penipuan, atau pelanggaran syariat, ambil keputusan tegas untuk membatalkannya demi mematuhi Allah dan Rasul-Nya, seraya meyakini bahwa Allah tidak akan pernah menelantarkan hamba yang taat.
+            </li>
+            <li><strong>Komitmen Literasi & Penegakan Sunnah Keluarga (The Prophetic Household Commitment):</strong>
+                <br>• Alokasikan waktu 15 menit setiap pekan bersama keluarga atau lingkaran sahabat terdekat untuk membaca dan mengkaji satu hadits shahih dari kitab <em>Riyāḍhuṣh-Ṣhāliḥīn</em> (karya Imam An-Nawawi) mengenai adab dan akhlak kenabian.
+                <br>• Bersihkan perpustakaan digital dan ruang keluarga dari konten-konten pemikiran yang melecehkan hadits nabawi atau menormalisasi paham ingkar sunnah, serta bangun ekosistem rumah tangga yang bangga menghidupkan tradisi Rasulullah ﷺ.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Ketika firman Allah dan sabda shahih Rasulullah ﷺ berbenturan langsung dengan kepentingan materi, gengsi keluarga, atau selera nafsuku, pihak manakah yang secara refleks aku menangkan di dalam hatiku?</li>
+            <li>Apakah aku selama ini bersikap selektif (<em>cherry-picking</em>) dalam menjalankan agama: mengambil perintah yang mudah dan sesuai dengan selera modernitas, namun berpaling (<em>tawallaw</em>) ketika syariat menuntut pengorbanan hawa nafsu dan kesabaran?</li>
+            <li>Sejauh mana klaim cintaku kepada Allah dan Rasul tercermin dalam kedisiplinan shalatku, kejujuran transaksiku di tempat kerja, serta kelembutan dan kesantunan akhlakku kepada pasangan, orang tua, dan sesama manusia?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Muqallibal-qulūb, tsabbit qulūbanā 'alā dīnik, wa 'alā ṭhā'atika wa ṭhā'ati rasūlik ﷺ.
+            <br><br>
+            Ya Allah Tuhan Yang Membolak-balikkan hati, Yang Maha Suci dari segala kekurangan, Yang Mengutus Nabi Muhammad ﷺ sebagai rahmat bagi seluruh alam semesta.
+            <br><br>
+            Kami bersimpuh di hadapan keagungan-Mu dengan mengakui kelemahan iman dan kelalaian amal kami. Ya Rabb, karuniakanlah kepada kami manisnya ketaatan kepada-Mu dan kepada Rasul-Mu. Bersihkanlah dada kami dari benih-benih kesombongan, keraguan, dan kecenderungan untuk berpaling dari bimbingan wahyu-Mu. Jangan Engkau biarkan hawa nafsu kami memperdaya diri kami dengan klaim cinta palsu yang hampa dari kepatuhan syariat.
+            <br><br>
+            Allāhumma aḥyinā 'alā sunnati nabiyyik, wa amitnā 'alā millatih, wa a'idznā min mudhillātil-fitan. Ya Allah, hidupkanlah kami senantiasa di atas jalan sunnah Nabi-Mu Muhammad ﷺ, wafatkanlah kami kelak di atas akidah dan millah beliau yang lurus, kumpulkanlah kami di padang mahsyar di bawah panji kemuliaan beliau, dan berilah kami anugerah untuk meminum air dari telaga Al-Kautsar langsung dari tangan beliau yang mulia, seteguk air suci yang membuat kami tidak akan pernah merasakan dahaga untuk selama-lamanya.
+            <br><br>
+            Lindungilah kami, keluarga kami, dan anak keturunan kami dari fitnah kekafiran, fitnah pembangkangan, dan fitnah ingkar sunnah di akhir zaman. Jadikanlah kami hamba-hamba-Mu yang setia mendengar dan patuh (samī'nā wa aṭha'nā) hingga hembusan nafas terakhir kami. Rabbanā tawaffanā muslimīn wa alḥiqnā biṣh-ṣhāliḥīn. Āmīn Yā Mujības-Sā'ilīn, Yā Dzal-Jalāli wal-Ikrām."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-031 - QS. Ali 'Imran Ayat 31.html">&larr; Kembali ke Ayat 31 (QS. 3:31)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 32</strong> (Penutup Blok 1: Puncak Ketaatan & Keteguhan Akidah)</span>
+        <a href="../Blok 2 (Ayat 33-63)/003-033 - QS. Ali 'Imran Ayat 33.html">Lanjut ke Blok 2: Ayat 33 (QS. 3:33) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

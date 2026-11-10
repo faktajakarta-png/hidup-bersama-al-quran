@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-257 - QS. Al-Baqarah Ayat 257 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-256 - QS. Al-Baqarah Ayat 256.html">&larr; Ayat Sebelumnya (QS. 2:256 - Kebebasan Nurani & Al-'Urwah Al-Wutsqā)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="002-258 - QS. Al-Baqarah Ayat 258.html">Ayat Berikutnya (QS. 2:258 - Debat Ibrahim & Raja Namrud) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Sapi Betina)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Klaster Wilāyah Ilāhiyyah & Dialektika Cahaya-Kegelapan (Puncak Ayat Kursi)</span>
+        <span class="badge">Juz 3 | 24 Kata | 110 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 257</h1>
+    <div class="transliteration">
+        "Allāhu waliyyul-ladzīna āmanū yukhrijuhum minazh-zhulumāti ilan-nūr, wal-ladzīna kafarū awliyā'uhumuth-thāghūtu yukhrijūnahum minan-nūri ilazh-zhulumāt, ulā'ika aṣ-ḥābun-nāri hum fīhā khālidūn."
+    </div>
+    <div class="thematic-title">
+        Doktrin Wilāyah Ilāhiyyah dan Kosmologi Epistemik Dua Arah: Ontologi Perlindungan Allah (Al-Walī), Dialektika Singularitas Kebenaran (An-Nūr) vis-à-vis Pluralitas Ilusi Kesesatan (Azh-Zhulumāt), serta Dekonstruksi Hegemoni Thaghut dalam Keterasingan Neraka Abadi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa v2.0 (Surah Al-Baqarah: Ayat 255–257 | Trilogi Puncak Tauhid: Kedaulatan Mutlak Kursi, Kemerdekaan Nurani, dan Transformasi Gelap Menuju Cahaya)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَـٰتِ إِلَى ٱلنُّورِ ۖ وَٱلَّذِينَ كَفَرُوٓا۟ أَوْلِيَآؤُهُمُ ٱلطَّـٰغُوتُ يُخْرِجُونَهُم مِّنَ ٱلنُّورِ إِلَى ٱلظُّلُمَـٰتِ ۗ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ ۖ هُمْ فِيهَا خَـٰلِدُونَ ۝٢٥٧
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Allah adalah Pelindung, Pengasuh, dan Pemimpin (Wali) bagi orang-orang yang beriman; Dia mengeluarkan mereka secara bertahap dan menyeluruh dari aneka lapis kegelapan (kebodohan, keraguan, kesyirikan, dan kegelisahan jiwa) menuju satu-satunya cahaya benderang (tauhid, kepastian hidayah, dan kedamaian sejati). Adapun orang-orang yang kafir (mengingkari kebenaran), maka para pelindung dan tuan mereka adalah thāghūt (segala tirani tandingan Allah, setan, ideologi berhala, dan pemujaan hawa nafsu) yang mengeluarkan mereka dari cahaya (fitrah akal sehat dan bukti kebenaran) menuju aneka lapis kegelapan. Mereka itulah para penghuni neraka; mereka kekal berdiam di dalamnya."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Ayat ini membangun antitesis teologis yang sangat radikal. Diksi <em>Waliyy</em> (وَلِيّ) dalam bentuk tunggal (<em>mufrad</em>) menegaskan bahwa pusat kepemimpinan, perlindungan, dan loyalitas kaum beriman bersifat monoteistik mutlak—hanya Allah semata yang menyatukan seluruh gerak eksistensi hamba-Nya. Sebaliknya, pada pihak kekufuran, kata yang digunakan adalah jamak: <em>Awliyā'uhum</em> (أَوْلِيَاؤُهُمُ), yang menggarisbawahi fragmentasi psikologis dan sosial orang-orang kafir yang diperbudak oleh ribuan berhala kepentingan, ilusi hawa nafsu, dan tirani duniawi. Selain itu, penggunaan bentuk jamak pada kata <em>Azh-Zhulumāt</em> (ٱلظُّلُمَـٰتِ) berlawanan dengan bentuk tunggal pada <em>An-Nūr</em> (ٱلنُّورِ) menandaskan bahwa jalan kebenaran hakiki (tauhid) hanyalah satu garis lurus yang tunggal dan koheren, sedangkan lorong kesesatan itu berbilang, terpecah-belah, dan saling bertabrakan.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Variasi Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱللَّهُ وَلِىُّ</strong><br>(<em>Allāhu waliyyu</em>)</td>
+                <td>
+                    <strong>Lam Lafzhul Jalalah:</strong> Dibaca <em>Tafkhim</em> (tebal) karena berkedudukan sebagai Mubtada' berharakat fathah diawali hamzah washal.<br>
+                    <strong>Wawu & Lam pada Waliyy:</strong> Huruf <em>Wāw</em> keluar dari dua bibir (<em>asy-syafatain</em>), <em>Lām</em> berharakat kasrah dibaca tarqiq, dan huruf <em>Yā'</em> bertasydid (<em>Musyaddadah</em>) diucapkan dengan sentuhan <strong>Nabr</strong> (tekanan fonetik terukur) agar getaran tasydidnya terdengar utuh tanpa terputus.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca rafa' (dhammah) pada <em>Allāhu</em> sebagai mubtada' dan rafa' pada <em>Waliyyu</em> sebagai khabar. Tidak ada perselisihan riwayat dalam struktur nominatif sakral ini.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلَّذِينَ ءَامَنُوا۟</strong><br>(<em>Alladzīna āmanū</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Terbaca fathah saat ibtida' dan gugur saat washal.<br>
+                    <strong>Dzal Mu'jamah:</strong> Keluar dari ujung lidah bertemu ujung gigi seri atas dengan sifat <em>jahr</em> dan <em>rikhwah</em>.<br>
+                    <strong>Mad Badal pada ءَامَنُوا:</strong> Pertemuan hamzah berharakat dengan alif mad asli pengganti hamzah sukun (asalnya <em>'a'manū</em>).
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (9 Imam):</strong> Membaca mad badal secara <em>Qashr</em> (2 harakat).<br>
+                    • <strong>Imam Warsy 'an Nafi':</strong> Memiliki tiga wajah bacaan mad badal: <em>Qashr</em> (2 harakat), <em>Tawassuth</em> (4 harakat), dan <em>Thūl/Isybā'</em> (6 harakat). Panjangnya mad badal pada bacaan Warsy secara fonetik menghadirkan kedalaman perenungan atas hakikat iman.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>يُخْرِجُهُم مِّنَ</strong><br>(<em>Yukhrijuhum mina</em>)</td>
+                <td>
+                    <strong>Huruf Khā' Sukun:</strong> Keluar dari ujung tenggorokan (<em>adnāl halq</em>) dengan sifat <em>hams</em>, <em>rikhwah</em>, dan <em>isti'lā'</em> (tafkhim tingkat keempat/sukun).<br>
+                    <strong>Huruf Rjim & Jim:</strong> <em>Rā'</em> berharakat kasrah dibaca <em>Tarqiq</em> (tipis); <em>Jīm</em> berharakat dhammah diucapkan dengan <em>syiddah</em> sempurna.<br>
+                    <strong>Idgham Mitslain Shaghir:</strong> Pertemuan <em>Mīm</em> sukun pada <em>yukhrijuhum</em> dengan <em>Mīm</em> berharakat kasrah pada <em>mina</em> melebur menjadi idgham mutamatsilain sempurna disertai ghunnah 2 harakat.
+                </td>
+                <td>
+                    • <strong>Imam Ibnu Katsir & Abu Ja'far:</strong> Membaca shilah pada mim jamak secara mutlak jika bertemu huruf berharakat: <em>Yukhrijuhumū mina</em>.<br>
+                    • <strong>Imam Qalun 'an Nafi':</strong> Memiliki dua wajah: sukun mim jamak (seperti mayoritas) atau membaca shilah mim jamak 2 harakat.<br>
+                    • <strong>Imam Lainnya:</strong> Membaca sukun mim jamak yang diidghamkan ke mim berikutnya dengan ghunnah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلظُّلُمَـٰتِ إِلَى</strong><br>(<em>Azh-zhulumāti ilā</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah:</strong> Lam ta'rif melebur sepenuhnya ke dalam huruf <em>Zhā'</em> bertasydid.<br>
+                    <strong>Huruf Zhā' (ظ):</strong> Keluar dari ujung lidah bertemu ujung gigi seri atas; memiliki empat sifat agung sekaligus: <em>jahr</em>, <em>rikhwah</em>, <em>isti'lā'</em>, dan <em>ithbāq</em> (huruf paling tebal).<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif tegak setelah lam dan mim (الظلمت) dengan <em>alif khanjaraniyyah</em>.<br>
+                    <strong>Kasrah Ta' Ma'tuhah:</strong> Majrur dengan kasrah sempurna karena jamak mu'annats salim.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca kasrah pada huruf <em>Tā'</em> (<em>azh-zhulumāti</em>) sebagai isim majrur. Imam Warsy mentafkhimkan huruf lam yang diapit oleh zha' sesuai kaidah khususnya (namun pada kata zhulumat, lam berharakat dhammah sehingga dibaca tartil murni).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱلنُّورِ ۖ</strong><br>(<em>An-Nūri</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah:</strong> Lam ta'rif melebur ke huruf <em>Nūn</em> bertasydid disertai ghunnah akmalu mā takūn.<br>
+                    <strong>Mad Thabi'i:</strong> Panjang 2 harakat pada wawu sukun setelah dhammah saat washal; menjadi <strong>Mad 'Aridh Lissukun</strong> jika waqaf (2, 4, atau 6 harakat).<br>
+                    <strong>Huruf Rā' Majrur:</strong> Saat washal dibaca <em>Tarqiq</em> (tipis); saat waqaf sukun setelah wawu mad dibaca <em>Tafkhim</em> (tebal). Tanda waqaf <em>Al-Washlu Awlā</em> (ۖ).
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca kasrah pada huruf <em>Rā'</em> saat washal. Tidak ada variasi furusy, menunjukkan ketetapan qath'i atas konsep Cahaya Tunggal Ilahi.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَٱلَّذِينَ كَفَرُوٓا۟ أَوْلِيَآؤُهُمُ</strong><br>(<em>Wal-ladzīna kafarū awliyā'uhumu</em>)</td>
+                <td>
+                    <strong>Mad Ja'iz Munfashil:</strong> Huruf mad (<em>wāw</em> pada <em>kafarū</em>) bertemu hamzah pada kata terpisah (<em>awliyā'uhum</em>).<br>
+                    <strong>Mad Wajib Muttashil:</strong> Huruf mad (<em>alif</em> pada <em>awliyā'</em>) bertemu hamzah dalam satu kata.<br>
+                    <strong>Huruf Hamzah Dhammah:</strong> Ditulis di atas huruf wawu (أَوْلِيَاؤُهُمُ) menunjukkan kedudukan i'rab rafa'.
+                </td>
+                <td>
+                    • <strong>Mad Munfashil:</strong> Qashr (2 harakat) pada Ibnu Katsir, Abu Ja'far, dan Suwaisi; Tawassuth (4 harakat) pada 'Ashim, Kisa'i, Khalaf; Thul (6 harakat) pada Warsy dan Hamzah.<br>
+                    • <strong>Mad Muttashil:</strong> 4-5 harakat pada mayoritas imam; 6 harakat mutlak pada Warsy dan Hamzah.<br>
+                    • <strong>Shilah Mim Jamak:</strong> Ibnu Katsir dan Abu Ja'far membaca <em>awliyā'uhumuth-thāghūtu</em> dengan dhammah mim washal tanpa shilah karena bertemu sukun.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلطَّـٰغُوتُ</strong><br>(<em>Ath-thāghūtu</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah:</strong> Lam ta'rif melebur ke huruf <em>Thā'</em> bertasydid fathah.<br>
+                    <strong>Huruf Thā' (ط):</strong> Huruf paling kuat dalam abjad Arab (<em>syiddah</em>, <em>jahr</em>, <em>isti'lā'</em>, <em>ithbāq</em>, <em>qalqalah</em>). Keluar dari pangkal gigi seri atas bertemu punggung ujung lidah.<br>
+                    <strong>Huruf Ghayn:</strong> Keluar dari ujung tenggorokan dengan sifat <em>isti'lā'</em> dan <em>rikhwah</em>.<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif setelah tha' (الطغوت).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca rafa' dengan dhammah pada huruf <em>Tā'</em> (<em>ath-thāghūtu</em>) sebagai khabar mubtada'.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>يُخْرِجُونَهُم مِّنَ ٱلنُّورِ</strong><br>(<em>Yukhrijūnahum minan-nūri</em>)</td>
+                <td>
+                    <strong>Wawu Jama'ah:</strong> Menandakan pelaku jamak (para thaghut/setan).<br>
+                    <strong>Idgham Mitslain Shaghir:</strong> Mim sukun pada <em>yukhrijūnahum</em> bertemu mim kasrah pada <em>mina</em> menghasilkan leburan ghunnah 2 harakat.<br>
+                    <strong>Idgham Syamsiyyah:</strong> Pada <em>an-nūri</em> dengan ghunnah sempurna.
+                </td>
+                <td>
+                    Sebagaimana segmen sebelumnya, perbedaan riwayat bertumpu pada kaidah ushul shilah mim jamak pada Ibnu Katsir, Qalun (wajh kedua), dan Abu Ja'far ketika diwashalkan dengan huruf hidup.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>إِلَى ٱلظُّلُمَـٰتِ ۗ</strong><br>(<em>Ilazh-zhulumāt</em>)</td>
+                <td>
+                    <strong>Hamzah Qatha' pada Ilā:</strong> Kasrah murni; huruf <em>Alif Layyinah</em> (alif maqshurah) gugur dalam pengucapan saat disambung dengan lam sukun syamsiyyah yang mengidgham ke zha'.<br>
+                    <strong>Tanda Waqaf Lazim/Ja'iz (ۗ):</strong> Sangat dianjurkan waqaf untuk memisahkan antara deskripsi perbuatan thaghut dengan vonis nasib akhir mereka di akhirat.
+                </td>
+                <td>
+                    Seluruh imam membaca kasrah pada huruf <em>Tā'</em> saat washal. Jika waqaf, huruf ta' sukun memiliki sifat <em>hams</em> (desis lembut udara) tanpa berlebihan.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ ۖ</strong><br>(<em>Ulā'ika aṣ-ḥābun-nār</em>)</td>
+                <td>
+                    <strong>Wawu Ziyadah:</strong> Huruf wawu setelah alif pada <em>ulā'ika</em> hanyalah tanda rasm (<em>ziyādatul-wāw rasman</em>) dan sama sekali tidak dibaca panjang.<br>
+                    <strong>Mad Wajib Muttashil:</strong> Pada <em>ulā'ika</em> (4-6 harakat).<br>
+                    <strong>Huruf Shād:</strong> Sifat <em>isti'lā'</em>, <em>ithbāq</em>, dan <em>shafīr</em> pada <em>ash-ḥābu</em>.<br>
+                    <strong>Huruf Nūn Tasydid & Rā' Kasrah:</strong> Ghunnah sempurna pada nun; <em>Rā'</em> dibaca tarqiq saat washal.
+                </td>
+                <td>
+                    • <strong>Imalah Huruf Alif sebelum Rā' Majrur pada ٱلنَّارِ:</strong><br>
+                    - <strong>Imam Abu 'Amr Al-Bashri & Warsy 'an Nafi':</strong> Membaca <em>Taqīl/Imālah Sughrā</em> (antara fathah dan kasrah) pada kata <em>an-nāri</em>.<br>
+                    - <strong>Imam Hamzah, Al-Kisā'ī, dan Khalaf Al-'Āsyir:</strong> Membaca <em>Imālah Kubrā</em> murni (condong ke arah kasrah/huruf e).<br>
+                    - <strong>Sisa Imam (Ibnu Katsir, 'Ashim, Ibnu 'Amir, Abu Ja'far, Ya'qub):</strong> Membaca <em>Fathah</em> murni tanpa imalah.
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>هُمْ فِيهَا خَـٰلِدُونَ ۝٢٥٧</strong><br>(<em>Hum fīhā khālidūn</em>)</td>
+                <td>
+                    <strong>Izhar Syafawi Muakkad:</strong> Mim sukun pada <em>hum</em> bertemu huruf <em>Fā'</em>; wajib diidz-harkan secara sangat tegas (<em>asyaddu izh-hāran</em>) agar makhraj mim tidak terseret ke dalam makhraj fa' atau tertukar menjadi ikhfa'.<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Pada penutup ayat (<em>khālidūn</em>), boleh dibaca 2, 4, atau 6 harakat diakhiri sukun nun dengan sifat <em>tawassuth</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca rafa' dengan wawu pada <em>khālidūn</em>. Waqaf tam di akhir ayat merupakan ijma' qurra' sebagai pemutus siklus deskripsi takdir kafirin.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul, Sejarah Pewahyuan & Hadits Sahih Penjelas</h3>
+    <p>
+        Ayat ini diturunkan di Madinah pada fase konsolidasi masyarakat Islam pasca-Hijrah. Mufassirin terkemuka (At-Tabari, Al-Wahidi, dan As-Suyuthi) meriwayatkan bahwa ayat ini memiliki keterkaitan historis dengan dua kelompok masyarakat Madinah:
+        <br>1) <strong>Kaum Mukminin dari kalangan Ahli Kitab:</strong> Orang-orang Yahudi yang sebelum diutusnya Rasulullah ﷺ telah mengimani kabar nubuwah beliau dalam Taurat (mereka berada dalam naungan cahaya hidayah nubuwah pertama). Namun ketika Nabi Muhammad ﷺ benar-benar diutus, sebagian dari mereka justru mengingkarinya karena dengki dan kesombongan etnosentrisme, dipimpin oleh para pemuka mereka yang bersikap thaghut seperti Ka'ab bin Al-Asyraf dan Huyay bin Akhthab, sehingga mereka terlempar ke dalam kegelapan kekufuran.
+        <br>2) <strong>Dinamika Sahabat Anshar dan Keluarganya:</strong> Sebagai kelanjutan dari asbabun nuzul QS. 2:256, ayat ini memberikan penegasan teologis bahwa siapa pun yang memilih iman, Allah Sendiri yang mengambil alih urusan dan penjagaannya; sedangkan mereka yang bersikeras dalam kekufuran telah menyerahkan kedaulatan dirinya kepada thaghut yang pasti membinasakannya.
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Musnad Ahmad (No. 4142), Sunan An-Nasa'i dalam Al-Kubrā (No. 11175), & Sunan Ibnu Majah (No. 11) dari Abdullah bin Mas'ud r.a. — Visualisasi Kosmik: Garis Lurus (An-Nūr) vis-à-vis Garis-Garis Bercabang (Azh-Zhulumāt):</strong><br>
+        عَنْ عَبْدِ اللَّهِ بْنِ مَسْعُودٍ رَضِيَ اللَّهُ عَنْهُ قَالَ: خَطَّ رَسُولُ اللَّهِ ﷺ خَطًّا بِيَدِهِ، ثُمَّ قَالَ: «هَذَا سَبِيلُ اللَّهِ مُسْتَقِيمًا»، ثُمَّ خَطَّ خُطُوطًا عَنْ يَمِينِهِ وَعَنْ شِمَالِهِ، ثُمَّ قَالَ: «هَذِهِ السُّبُلُ، لَيْسَ مِنْهَا سَبِيلٌ إِلَّا عَلَيْهِ شَيْطَانٌ يَدْعُو إِلَيْهِ»، ثُمَّ قَرَأَ: ﴿وَأَنَّ هَـٰذَا صِرَ ٰ⁠طِی مُسۡتَقِیمࣰا فَٱتَّبِعُوهُۖ وَلَا تَتَّبِعُوا۟ ٱلسُّبُلَ فَتَفَرَّقَ بِكُمۡ عَن سَبِيلِهِۦ﴾ [الأنعام: ١٥٣].<br>
+        <em>Artinya:</em> "Rasulullah ﷺ membuat sebuah garis lurus dengan tangannya di atas tanah, lalu bersabda: 'Ini adalah jalan Allah yang lurus.' Kemudian beliau membuat garis-garis lain di sebelah kanan dan kirinya, lalu bersabda: 'Ini adalah jalan-jalan bercabang (as-subul), tidak ada satu pun dari jalan-jalan itu melainkan terdapat setan yang menyeru manusia kepadanya.' Kemudian beliau membaca firman-Nya: 'Dan sungguh, inilah jalan-Ku yang lurus, maka ikutilah ia dan jangan ikuti jalan-jalan lain yang mencerai-beraikan kalian dari jalan-Nya' (QS. Al-An'am: 153)."<br>
+        <strong>Derajat Sanad:</strong> Hadits <strong>Sahih</strong> (dishahihkan oleh Al-Hakim 2/318, Adz-Dzahabi, Al-Albani dalam <em>Misykātul Mashābīḥ</em> no. 166, dan Syaikh Syu'aib Al-Arna'uth). Hadits ini adalah tafsir nabawi paling autentik atas singularitas kata <em>An-Nūr</em> (satu jalan terang) berhadapan dengan pluralitas kata <em>Azh-Zhulumāt</em> (ribuan lorong kesesatan setan).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 79) & Sahih Muslim (No. 2282) dari Abu Musa Al-Asy'ari r.a. — Perumpamaan Transformasi Cahaya Ilmu dan Hidayah:</strong><br>
+        عَنْ أَبِي مُوسَى عَنِ النَّبِيِّ ﷺ قَالَ: «مَثَلُ مَا بَعَثَنِي اللَّهُ بِهِ مِنَ الْهُدَى وَالْعِلْمِ كَمَثَلِ الْغَيْثِ الْكَثِيرِ أَصَابَ أَرْضًا، فَكَانَ مِنْهَا نَقِيَّةٌ قَبِلَتِ الْمَاءَ فَأَنْبَتَتِ الْكَلأَ وَالْعُشْبَ الْكَثِيرَ، وَكَانَتْ مِنْهَا أَجَادِبُ أَمْسَكَتِ الْمَاءَ فَنَفَعَ اللَّهُ بِهَا النَّاسَ فَشَرِبُوا وَسَقَوْا وَزَرَعُوا، وَأَصَابَتْ مِنْهَا طَائِفَةً أُخْرَى إِنَّمَا هِيَ قِيعَانٌ لا تُمْسِكُ مَاءً وَلا تُنْبِتُ كَلأً، فَذَلِكَ مَثَلُ مَنْ فَقُهَ فِي دِينِ اللَّهِ وَنَفَعَهُ مَا بَعَثَنِي اللَّهُ بِهِ فَعَلِمَ وَعَلَّمَ، وَمَثَلُ مَنْ لَمْ يَرْفَعْ بِذَلِكَ رَأْسًا وَلَمْ يَقْبَلْ هُدَى اللَّهِ الَّذِي أُرْسِلْتُ بِهِ».<br>
+        <em>Artinya:</em> "Perumpamaan petunjuk dan ilmu yang dengannya Allah mengutusku adalah laksana hujan lebat yang menyirami bumi. Di antara tanah itu ada yang subur menyerap air dan menumbuhkan rumput yang banyak. Ada pula tanah tandus berbatu yang menahan air sehingga Allah memberi manfaat kepada manusia untuk minum, mengairi ternak, dan bercocok tanam. Dan ada pula tanah tandus licin yang tidak menahan air dan tidak menumbuhkan rumput. Demikianlah perumpamaan orang yang memahami agama Allah dan mengambil manfaat dari wahyu yang diutus Allah kepadaku, lalu ia mengetahui dan mengajarkannya; serta perumpamaan orang yang tidak menghiraukannya sedikit pun dan tidak mau menerima petunjuk Allah yang aku bawa."<br>
+        <strong>Derajat Sanad:</strong> Hadits <strong>Muttafaq 'Alayh (Sahih Bukhari & Muslim)</strong>. Menjelaskan proses epistemik <em>yukhrijuhum minazh-zhulumāti ilan-nūr</em> sebagai penyerapan ilmu wahyu yang menghidupkan nalar dan jiwa.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhari (No. 6316) & Sahih Muslim (No. 763) dari Abdullah bin Abbas r.a. — Munajat Cahaya Universal Rasulullah ﷺ:</strong><br>
+        عَنِ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ النَّبِيَّ ﷺ كَانَ يَقُولُ فِي دُعَائِهِ إِذَا قَامَ مِنَ اللَّيْلِ: «اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا، وَعَنْ يَمِينِي نُورًا، وَعَنْ يَسَارِي نُورًا، وَفَوْقِي نُورًا، وَتَحْتِي نُورًا، وَأَمَامِي نُورًا، وَخَلْفِي نُورًا، وَاجْعَلْ لِي نُورًا، وَأَعْظِمْ لِي نُورًا».<br>
+        <em>Artinya:</em> "Nabi ﷺ dalam shalat malamnya senantiasa berdoa: 'Ya Allah, jadikanlah di dalam hatiku cahaya, pada penglihatanku cahaya, pada pendengaranku cahaya, di sebelah kananku cahaya, di sebelah kiriku cahaya, di atasku cahaya, di bawahku cahaya, di depanku cahaya, di belakangku cahaya; jadikanlah bagiku cahaya, dan agungkanlah bagiku cahaya!'"<br>
+        <strong>Derajat Sanad:</strong> Hadits <strong>Sahih Muttafaq 'Alayh</strong>. Menegaskan bahwa hakikat <em>An-Nūr</em> yang dianugerahkan oleh Allah sebagai <em>Waliyy</em> adalah cahaya multilinear yang memproteksi seluruh dimensi sensorik, rasional, dan spiritual manusia.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Waliyy (وَلِيّ — Akar Kata: و - ل - ي):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (jilid 6, entri: و-ل-ي) menegaskan bahwa akar kata ini berporos pada satu konsep primordial yang kokoh: <strong>al-qurbu wad-dunūw</strong> (kedekatan yang amat intim tanpa ada perantara atau pembatas). Dari poros ini lahir dua cabang makna agung: <em>al-Walāyah</em> (kedekatan cinta, pembelaan, dan pertolongan) serta <em>al-Wilāyah</em> (kewenangan, kekuasaan memimpin, dan hak pengasuhan). Ketika Allah menyatakan Diri-Nya sebagai <em>Waliyy</em> bagi orang-orang beriman, maknanya adalah Dia mengambil alih seluruh urusan hamba-Nya dengan kedekatan yang mutlak, merawat mereka dengan rahmat, menuntun langkah mereka, dan membela mereka dari setiap marabahaya eksistensial. Berbeda dengan penguasa duniawi yang jauh dari rakyatnya, Allah sebagai <em>Waliyy</em> hadir lebih dekat kepada orang beriman daripada urat leher mereka sendiri.
+        </li>
+        <li>
+            <strong>Zhulumāt (ظُلُمَات — Akar Kata: ظ - ل - م):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> menjelaskan dua prinsip asal dari akar kata ini: pertama, ketiadaan cahaya (<em>dhiddu an-nūr</em>); kedua, meletakkan sesuatu bukan pada tempat semestinya yang adil (<em>wad'usy-syay'i fī ghayri mawdhi'ih</em>) yang melahirkan kata <em>azh-zhulm</em> (kezaliman). Di dalam Al-Qur'an, kata <em>zhulumāt</em> selalu disebutkan dalam bentuk jamak (<em>pluriform</em>), merangkum spektrum kegelapan yang berlapis-lapis: kegelapan keraguan epistemik (syubhat), kegelapan syahwat hewani, kegelapan tirani sosiopolitik, kegelapan bid'ah, dan puncak kegelapan yakni kemusyrikan. Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menambahkan bahwa bangsa Arab menyebut malam yang tanpa rembulan sebagai <em>laylah zhalmā'</em>, lambang ketersesatan jiwa yang kehilangan panduan kosmik.
+        </li>
+        <li>
+            <strong>Nūr (نُور — Akar Kata: ن - و - ر):</strong><br>
+            Ibnu Faris merumuskan poros maknanya pada keterang-benderangan, penyingkapan hakikat, dan ketenangan (<em>adh-dhiyā' wal-inbilāj</em>). Dalam leksikografi klasik, <em>an-nūr</em> didefinisikan secara filosofis: <em>azh-zhāhiru fī nafsihi al-muzh-hiru li-ghayrih</em> (sesuatu yang terang dengan sendirinya dan menerangkan segala sesuatu yang lain). Menariknya, Al-Qur'an tidak pernah menyebut <em>an-nūr</em> dalam bentuk jamak (<em>anwār</em>) ketika berbicara tentang hidayah Allah. Mengapa? Karena hakikat kebenaran metafisik itu tunggal, memancar dari Dzat Yang Maha Esa (<em>Allāhu nūrus-samāwāti wal-ardh</em>), dan tidak pernah mengalami disintegrasi internal.
+        </li>
+        <li>
+            <strong>Thāghūt (طَاغُوت — Akar Kata: ط - غ - ي):</strong><br>
+            Akar kata <em>Thā'-Ghayn-Yā'</em> berporos pada makna <em>al-mujāwazah fil-hadd</em> (melampaui batas kewajaran dan kodrat). Secara morfologis, kata <em>thāghūt</em> berakar dari bentuk <em>thughyān</em> yang mengalami transformasi metatesis fonetik (<em>al-qalb al-makānī</em>) di atas wazan superlatif <strong>فَعْلُوت (Fa'lūt)</strong>, wazan yang menunjukkan keekstreman melampaui batas (seperti <em>jabarūt</em> dan <em>malakūt</em>). Secara semantik, thaghut adalah segala entitas—baik berhala, sistem tirani, ideologi hegemonik, setan, maupun ego narsistik manusia—yang menuntut ketaatan mutlak yang seharusnya hanya diperuntukkan bagi Allah semata.
+        </li>
+        <li>
+            <strong>Khuld (خُلْد — Akar Kata: خ - ل - د):</strong><br>
+            Ibnu Faris menetapkan porosnya pada kelanggengan yang tidak terputus dan tidak rusak oleh perjalanan waktu (<em>ats-tsubūt wal-baqā' fī dārin lā yazūlu 'anhā</em>). Bangsa Arab menamai perhiasan gelang dan anting sebagai <em>khilād</em> karena sifat logamnya yang awet tidak lapuk dimakan usia. Dalam ayat ini, <em>khālidūn</em> adalah vonis status ontologis abadi para pengikut thaghut di neraka jahanam.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz / Kalimat</th>
+                <th>Tinjauan Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Isim 'Alam Jamid khusus bagi Dzat Yang Maha Suci Wajibul Wujud.</td>
+                <td><strong>Mubtada' Awwal:</strong> Marfu' dengan tanda dhammah zhahirah di akhirnya (<em>Allāhu</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَلِىُّ</strong></td>
+                <td>Shifat Musyabbahah bi Ismil Fa'il di atas wazan فَعِيل (<em>Fa'īl</em>) bermakna fa'il (pelindung aktif).</td>
+                <td><strong>Khabar Awwal bagi Mubtada':</strong> Marfu' dengan tanda dhammah zhahirah, dan ia berkedudukan sebagai <em>Mudhāf</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong></td>
+                <td>Isim Maushul jamak mudzakkar mabni 'alal fath.</td>
+                <td>Fi mahalli jarr berkedudukan sebagai <strong>Mudhāfun Ilayh</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ءَامَنُوا۟</strong></td>
+                <td>Fi'il Madhi berimbuhan wawu jama'ah, wazan أَفْعَلَ (<em>Af'ala</em>: <em>āmana - yu'minu</em>).</td>
+                <td>Fi'il madhi mabni 'aladh-dhamm lii-ttishalihi bi-wawil jama'ah; <em>Wawu</em> adalah dlamir muttashil fi mahalli raf' <strong>Fā'il</strong>. Jumlah fi'liyyah ini adalah <strong>Shilah Maushūl</strong> yang <em>lā maḥalla lahā minal i'rāb</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>يُخْرِجُهُم</strong></td>
+                <td>Fi'il Mudhari' Tsulatsi Mazid bi Harf (wazan أَفْعَلَ: <em>akhraja - yukhriju</em>), bermakna pemindahan aktif.</td>
+                <td>Fi'il mudhari' marfu' bi-dhammah zhahirah; fa'il-nya dhamir mustatir jawazan taqdiruhu <em>Huwa</em> (kembali ke Allah). <em>Hā'</em> dhamir muttashil fi mahalli nashab <strong>Maf'ūl bih</strong>, <em>Mīm</em> tanda jamak. Jumlah fi'liyyah ini berada <strong>fī maḥalli raf' Khabar Tsānī</strong> bagi lafazh <em>Allāhu</em> (atau fi mahalli nashab Hal dari dhamir Waliyy).</td>
+            </tr>
+            <tr>
+                <td><strong>مِّنَ ٱلظُّلُمَـٰتِ</strong></td>
+                <td><em>Min</em> harf jarr; <em>Azh-zhulumāt</em> jamak mu'annats salim dari mufrad <em>zhulmah</em>.</td>
+                <td><em>Min</em> harf jarr; <em>Azh-zhulumāt</em> isim majrur bil-kasrah zhahirah. Jār wa Majrūr ini <strong>muta'alliq</strong> (terikat secara semantik) pada fi'il <em>yukhriju</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَى ٱلنُّورِ</strong></td>
+                <td><em>Ilā</em> harf jarr penunjuk batas akhir tujuan (<em>al-intihā'</em>); <em>An-Nūr</em> isim mufrad mudzakkar.</td>
+                <td>Jār wa Majrūr majrur bil-kasrah, <strong>muta'alliq</strong> pada fi'il <em>yukhriju</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلَّذِينَ كَفَرُوٓا۟</strong></td>
+                <td><em>Wawu</em> ist'ināfiyyah / 'athaf muqābalah; <em>Alladzīna</em> isim maushul; <em>Kafarū</em> fi'il madhi + fa'il wawu.</td>
+                <td><em>Alladzīna</em> fi mahalli raf' <strong>Mubtada' Awwal</strong> pada kalimat tandingan. Jumlah <em>kafarū</em> adalah shilah maushul.</td>
+            </tr>
+            <tr>
+                <td><strong>أَوْلِيَآؤُهُمُ</strong></td>
+                <td>Jamak taksir dari <em>waliyy</em> di atas wazan أَفْعِلَاء (<em>Af'ilā'</em>), mudhaf + dhamir jamak mudhaf ilayh.</td>
+                <td><strong>Mubtada' Tsānī:</strong> Marfu' dengan tanda dhammah zhahirah pada hamzah; dhamir <em>hum</em> fi mahalli jarr mudhaf ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلطَّـٰغُوتُ</strong></td>
+                <td>Isim jenis bermakna superlatif, wazan فَعْلُوت (<em>Fa'lūt</em>).</td>
+                <td><strong>Khabar bagi Mubtada' Tsānī:</strong> Marfu' bi-dhammah zhahirah. Seluruh <strong>Jumlah Ismiyyah</strong> (<em>Awliyā'uhumuth-thāghūtu</em>) berada <strong>fī maḥalli raf' Khabar</strong> bagi mubtada' pertama (<em>Wal-ladzīna kafarū</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>يُخْرِجُونَهُم</strong></td>
+                <td>Fi'il Mudhari' dari <em>akhraja</em> bersambung dengan wawu jama'ah (Af'ālul Khamsah).</td>
+                <td>Fi'il mudhari' marfu' dengan tanda <strong>tsubūtun nūn</strong>; <em>Wāw</em> adalah fa'il; dhamir <em>hum</em> maf'ul bih. Jumlah fi'liyyah ini berkedudukan sebagai <strong>Khabar Tsānī</strong> atau Hal muakkadah.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّنَ ٱلنُّورِ إِلَى ٱلظُّلُمَـٰتِ</strong></td>
+                <td>Dua frasa preposisional (<em>Jār wa Majrūr</em>) yang membalik arah pergerakan eksistensial.</td>
+                <td>Keduanya <strong>muta'alliq</strong> pada fi'il <em>yukhrijūnahum</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ</strong></td>
+                <td><em>Ulā'ika</em> isim isyarah jamak ba'īd; <em>Ash-ḥābu</em> jamak taksir dari <em>shāhib</em> (sahabat karib/penghuni lekat).</td>
+                <td><em>Ulā'ika</em> fi mahalli raf' <strong>Mubtada'</strong>; <em>Ash-ḥābu</em> <strong>Khabar</strong> marfu' mudhaf; <em>An-Nāri</em> mudhaf ilayh majrur bil-kasrah.</td>
+            </tr>
+            <tr>
+                <td><strong>هُمْ فِيهَا خَـٰلِدُونَ</strong></td>
+                <td><em>Hum</em> dhamir munfashil; <em>Fīhā</em> jar majrur; <em>Khālidūn</em> isim fa'il jamak mudzakkar salim.</td>
+                <td><em>Hum</em> <strong>Mubtada'</strong>; <em>Khālidūn</em> <strong>Khabar</strong> marfu' bil-wawu; <em>Fīhā</em> muta'alliq bi <em>khālidūn</em>. Jumlah ismiyyah ini berkedudukan sebagai <strong>Khabar Tsānī</strong> bagi <em>ulā'ika</em> atau Hal lazimah yang mengunci vonis keabadian azab.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani: Mahakarya Muqābalah Murakkabah (Simetri Pertentangan Dua Kubu):</strong><br>
+            Ayat ini memamerkan arsitektur <em>muqābalah</em> (kontras berimbang) paling paripurna dalam stilistika Al-Qur'an. Allah memperhadapkan dua kutub secara berurutan dan simetris:
+            <br>• Kubu Pertama: <em>Allāhu</em> (Dzat Maha Esa) $\leftrightarrow$ Kubu Kedua: <em>Ath-Thāghūt</em> (Tirani jamak).
+            <br>• <em>Waliyy</em> (Tunggal-Monoteistik) $\leftrightarrow$ <em>Awliyā'uhum</em> (Jamak-Terpecah belah).
+            <br>• <em>Alladzīna āmanū</em> (Komunitas Iman) $\leftrightarrow$ <em>Alladzīna kafarū</em> (Komunitas Kufur).
+            <br>• <em>Yukhrijuhum</em> (Tindakan Ilahi yang perkasa dan tunggal) $\leftrightarrow$ <em>Yukhrijūnahum</em> (Tindakan keroyokan para tiran thaghut).
+            <br>• <em>Minazh-zhulumāti ilan-nūr</em> (Vektor pembebasan menuju terang) $\leftrightarrow$ <em>Minan-nūri ilazh-zhulumāt</em> (Vektor involusi menuju kegelapan gulita).
+        </li>
+        <li>
+            <strong>Ilmu Bayan: Isti'ārah Tashrīḥiyyah Ashliyyah:</strong><br>
+            Al-Qur'an meminjam kata <em>Azh-Zhulumāt</em> untuk merepresentasikan kekafiran, keraguan (syubhat), kebodohan, dan dekadensi moral; serta meminjam kata <em>An-Nūr</em> untuk menggambarkan tauhid, keyakinan yakin (bashirah), keadilan, dan ketenteraman batin. Pemilihan metafora visual "gelap vs cahaya" ini bukan sekadar kiasan estetis, melainkan <em>isti'ārah tamtsīliyyah</em> yang menggambarkan bahwa hidup di luar bimbingan Allah adalah kebutaan sensorik dan disorientasi ruang, sementara hidup bersama Allah adalah kejernihan penglihatan dan navigasi yang presisi.
+        </li>
+        <li>
+            <strong>Rahasia Ifrād (Tunggal) pada An-Nūr dan Jam' (Jamak) pada Azh-Zhulumāt:</strong><br>
+            Para ulama balaghah (Az-Zamakhsyari dan Al-Jurjani) menggarisbawahi keajaiban distingsi numerik ini: <em>Al-Haqqu Wāḥid</em> (Kebenaran itu esa dan mutlak menyatu), laksana satu garis lurus terpendek yang menghubungkan dua titik. Sebaliknya, <em>Al-Bāṭilu Muta'addid</em> (Kebatilan itu beraneka ragam dan tercerai-berai), karena hawa nafsu, takhayul, filsafat materialisme, dan godaan setan memiliki ribuan lorong gelap yang saling bertentangan satu sama lain.
+        </li>
+        <li>
+            <strong>I'jāz Shautī (Fonetik Sakral & Karakter Suara):</strong><br>
+            Perhatikan transisi getaran huruf: saat mendeskripsikan kegelapan, muncul konsonan <em>Zhā'</em> (ظ) yang memiliki sifat <em>ithbāq</em> dan <em>isti'lā'</em>—menghasilkan gema suara yang berat, sempit, dan menekan rongga mulut, menghadirkan efek psikologis sesak dan terisolasi. Namun ketika beralih ke kata <em>An-Nūr</em> (النُّور), vokal panjang <em>ū</em> yang diapit bunyi nasal lembut <em>Nūn</em> dan getaran getar <em>Rā'</em> menciptakan resonansi fonetik yang lapang, sejuk, dan membebaskan pendengaran dari tekanan.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Organis dengan Ayat Kursi 255 & Prinsip Kebebasan 256):</strong><br>
+            Tiga ayat ini (QS. 2:255, 256, dan 257) membentuk "Trilogi Akbar Kedaulatan Tauhid":
+            <br>1) <strong>QS. 2:255 (Ayat Kursi):</strong> Memproklamasikan Kedaulatan Kosmik Mutlak Allah Yang Maha Hidup, Berdiri Sendiri (<em>Al-Qayyūm</em>), dan memiliki Kursi yang meliputi langit dan bumi.
+            <br>2) <strong>QS. 2:256:</strong> Menurunkan kedaulatan tersebut ke ranah martabat manusia: karena Tuhan Mahabesar dan jalan kebenaran telah benderang terpisah dari kesesatan, maka <em>tidak ada paksaan dalam agama</em> (<em>Lā ikrāha fid-dīn</em>), dan manusia diajak menggenggam simpul tali terkuat (<em>Al-'Urwah Al-Wutsqā</em>).
+            <br>3) <strong>QS. 2:257 (Ayat ini):</strong> Menjawab pertanyaan eksistensial: <em>"Siapakah yang memegang ujung tali kokoh itu?"</em> Jawabannya: <strong>Allāhu Waliyyul-ladzīna āmanū!</strong> Allah Sendiri yang memegang tangan hamba-Nya yang beriman, menarik mereka keluar dari kubangan kegelapan menuju cahaya-Nya. Ayat 257 adalah realisasi proteksi aktif dari Dzat Pemilik Kursi pada Ayat 255 bagi mereka yang memilih tali keimanan pada Ayat 256.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 5 Surah Al-Baqarah):</strong><br>
+            Ayat ini berposisi di jantung Blok 5 (Ayat 253–286), yakni klaster pemantapan tatanan masyarakat Madinah pasca-perang Badar dan Uhud. Di tengah ancaman sabotase internal kaum munafik dan konspirasi elite Yahudi, Allah menegaskan doktrin <em>Al-Walā' wal-Barā'</em> berbasis etika spiritual: loyalitas hakiki seorang mukmin hanya boleh diserahkan kepada Allah, bukan kepada kekuatan thaghut imperialis atau patronase suku.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas menuju Kisah Ibrahim vs Raja Namrud pada Ayat 258):</strong><br>
+            Konsep abstrak pada Ayat 257 langsung diuji dan dibuktikan secara empiris-historis pada ayat berikutnya (QS. 2:258). Siapakah figur nyata dari orang beriman yang Walinya adalah Allah yang mengeluarkannya dari kegelapan menuju cahaya? Dialah <strong>Nabi Ibrahim 'alayhissalam</strong>! Dan siapakah figur nyata dari orang kafir yang dipimpin oleh thaghut hingga dikeluarkan dari cahaya nalar menuju kegelapan kebodohan? Dialah <strong>Raja Namrud</strong>, yang mengklaim dirinya tuhan yang sanggup menghidupkan dan mematikan manusia, hingga dibungkam seketika ketika Ibrahim menantangnya menerbitkan matahari dari barat!
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis & Kosmologi Peradaban Madinah Abad ke-7</h3>
+    <p>
+        Masyarakat Yatsrib (Madinah) pra-Islam hidup di bawah hegemoni sistemik yang mencekik: perpecahan suku Aus dan Khazraj yang saling membantai selama puluhan tahun (Perang Bu'ats), eksploitasi ekonomi berbasis riba oleh pemuka klan Yahudi (Bani Qainuqa, Bani Nadhir, Bani Quraizhah), serta ketergantungan psikologis pada para peramal, dukun, dan tiran lokal (<em>thāghūt</em>). Sistem tribalisme jahiliyah menuntut seorang individu berpasrah mutlak kepada kepala sukunya, sekalipun sang pemimpin memerintahkan kezaliman.<br>
+        Turunnya proklamasi <em>Allāhu Waliyyul-ladzīna āmanū</em> melakukan <strong>disrupsi peradaban total</strong>:
+        <br>1) <strong>Emanisipasi Jiwa dari Perbudakan Patronase:</strong> Ayat ini memerdekakan kaum tertindas, budak (seperti Bilal dan Salman), dan warga biasa dari cengkeraman oligarki Quraisy maupun pemuka agama yang korup. Mereka kini berada di bawah perlindungan langsung Penguasa Semesta Alam.
+        <br>2) <strong>Dekomisioning Thaghut Sosial:</strong> Setiap hukum yang melegitimasi penindasan, diskriminasi rasial, dan manipulasi agama dilucuti status sakralitasnya dan dilabeli sebagai <em>thāghūt</em> yang wajib diingkari demi meraih simpul keselamatan sejati.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir Riwayat Klasik):</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>Waliyy</em> adalah: <em>"Nashīruhum wa mu'īnuhum wa yatawallā umūrahum bi-hifzhihī wa kilā'atih"</em> (Penolong mereka, Pembantu mereka, dan Dzat yang mengurus seluruh urusan mereka dengan pemeliharaan dan penjagaan-Nya). Mengenai frasa <em>"yukhrijūnahum minan-nūri ilazh-zhulumāt"</em> bagi orang kafir, At-Tabari meriwayatkan ikhtilaf salaf dan mentarjih bahwa orang kafir tersebut sebelumnya berada dalam "cahaya fitrah" tauhid asal penciptaan atau berada dalam cahaya pengetahuan Taurat/Injil yang memberitakan kedatangan Nabi Muhammad ﷺ. Namun ketika thaghut menguasai hati mereka, mereka mencampakkan cahaya itu dan memilih kegelapan syirik dan kekufuran nyata.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat & Teologi Salaf):</strong><br>
+        Ibnu Katsir menegaskan bahwa Allah mengabarkan bahwa Dia-lah yang membimbing orang-orang yang mengikuti keridhaan-Nya menuju jalan-jalan keselamatan (<em>subulas-salām</em>), mengeluarkan hamba-Nya dari kegelapan syak, keraguan, dan kebingungan menuju cahaya kebenaran yang benderang. Ibnu Katsir menyitir firman Allah dalam QS. Al-An'am [6]: 122: <em>"Dan apakah orang yang sudah mati (hatinya) kemudian Kami hidupkan dan Kami berikan kepadanya cahaya yang membuatnya dapat berjalan di tengah orang banyak, serupa dengan orang yang berada dalam kegelapan yang sama sekali tidak dapat keluar darinya?"</em> Ibnu Katsir menegaskan bahwa thaghut adalah setan yang menghias-hiasi jalan kebatilan sehingga orang kafir mengira dirinya berada di atas kebenaran padahal sedang terjun ke neraka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Eksegesis Fiqih & Ahkam Syariah):</strong><br>
+        Al-Qurthubi memfokuskan kajian pada konsekuensi hukum syariat dari ikrar <em>Wilāyah</em>. Menurut beliau, penetapan bahwa Allah adalah satu-satunya Wali kaum mukminin mengharamkan secara qath'i bagi orang beriman untuk memberikan <em>muwālāt</em> (loyalitas batin dan kepatuhan hukum yang menentang syariat) kepada orang-orang kafir atau institusi thaghut (merujuk QS. Ali 'Imran: 28 dan An-Nisa': 144). Al-Qurthubi juga membedah bentuk kata <em>thāghūt</em> yang secara leksikal dapat bermakna mufrad maupun jamak, membuktikan bahwa sekecil apa pun bentuk thaghut, ia memiliki daya rusak yang meruntuhkan keimanan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Rasionalitas & Balaghah Spekulatif):</strong><br>
+        Az-Zamakhsyari membedah keajaiban semantik: thaghut secara lafaz adalah isim mufrad muzakkar, namun dhamir yang merujuk kepadanya menggunakan kata jamak <em>yukhrijūnahum</em> (bukan <em>yukhrijuhum</em>), karena makna substansial thaghut mencakup seluruh berhala, dedongkot kesesatan, dan setan-setan yang bersekongkol. Sementara Fakhruddin Ar-Razi menyusun argumentasi epistemologis filosofis: mengapa Allah menyatukan cahaya (<em>An-Nūr</em>) dan menjamakkan kegelapan (<em>Azh-Zhulumāt</em>)? Ar-Razi menjelaskan bahwa proposisi kebenaran metafisik hanya mengenal satu titik temu (<em>an-nuqthah al-markaziyyah</em>), sebagaimana satu garis lurus terpendek antara dua kutub. Sementara kesalahan dan ilusi tidak memiliki batas, berpecah menjadi ribuan cabang bid'ah, ateisme, agnostisisme, dan materialisme.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Kontekstual Adabi Ijtima'i Nusantara):</strong><br>
+        Quraish Shihab menguraikan bahwa kata <em>Waliyy</em> menuntut adanya kedekatan emosional dan timbal balik. Allah tidak hanya menjadi penguasa dari kejauhan, melainkan mengayomi manusia layaknya seorang sahabat karib yang menggandeng tangan anak kecil di tengah malam gulita. Quraish Shihab menegaskan penggunaan fi'il mudhari' pada kata <em>yukhrijuhum</em> (mengeluarkan secara berkelanjutan): proses keluar dari kegelapan menuju cahaya bukanlah peristiwa sekali jadi, melainkan <strong>perjalanan transformasi spiritual seumur hidup (tadrijiyyan)</strong>. Seseorang mungkin telah keluar dari gelapnya syirik, namun ia masih harus terus dituntun Allah untuk keluar dari gelapnya riya', dengki, ketamakan, dan kecemasan mental.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em> (Tasawuf Modern & Ketahanan Jiwa Bangsa):</strong><br>
+        Buya Hamka melukiskan drama eksistensial manusia modern: mereka yang tidak bertuhan bagaikan musafir yang terperangkap di dalam gua gelap tanpa kompas; setiap kali mereka menyalakan korek api thaghut berupa kekayaan atau teknologi, api itu padam seketika dan meninggalkan mata mereka semakin buta dalam pekatnya malam. Hamka menegaskan bahwa orang yang menjadikan Allah sebagai Walinya akan memiliki ketenangan baja (<em>jiwa muthma'innah</em>), tidak goyah oleh badai politik atau fitnah zaman. Tafsir Kemenag RI menambahkan bahwa ayat ini adalah amanah bagi umat Islam untuk memimpin peradaban dengan membawa misi pencerahan ilmu, menghapus kebodohan, dan melawan ketidakadilan struktural.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian Eksegesis</th>
+                <th>Titik Kesepakatan Ulama (Ijma' Mufassirīn)</th>
+                <th>Ragam Sudut Pandang Khusus (Ikhtilaf Tanawwu' & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Wilāyah Allah</strong></td>
+                <td>Sepakat bahwa Wilayah Allah adalah pemeliharaan, pertolongan, dan hidayah mutlak bagi mukminin yang tidak dapat disaingi oleh makhluk mana pun.</td>
+                <td>• <strong>At-Tabari & Ibnu Katsir:</strong> Menekankan pertolongan takdir dan pembelaan di akhirat.<br>• <strong>Ar-Razi & Az-Zamakhsyari:</strong> Menekankan anugerah akal budi dan bukti rasional.<br>• <strong>Quraish Shihab & Hamka:</strong> Menekankan keintiman cinta personal dan stabilitas psikologis hamba.</td>
+            </tr>
+            <tr>
+                <td><strong>Tafsir: "Mengeluarkan Orang Kafir dari Cahaya ke Kegelapan"</strong></td>
+                <td>Sepakat bahwa orang kafir berakhir dalam kegelapan mutlak, namun mereka berbeda mengenai "cahaya apa" yang semula mereka miliki sebelum dikeluarkan.</td>
+                <td>• <strong>Pendapat 1 (Salaf/At-Tabari):</strong> Cahaya iman kaum Yahudi pada Taurat yang hilang saat mereka mendustakan Nabi Muhammad ﷺ.<br>• <strong>Pendapat 2 (Ar-Razi & Jumhur):</strong> Cahaya fitrah primordial (<em>mitsaq</em>) dan potensi akal sehat yang dirusak oleh doktrin thaghut.<br>• <strong>Pendapat 3 (Metaforis):</strong> Cahaya petunjuk umum yang ada di alam semesta yang mereka tolak sendiri.</td>
+            </tr>
+            <tr>
+                <td><strong>Singularitas Cahaya vs Pluralitas Kegelapan</strong></td>
+                <td>Sepakat bahwa penyebutan <em>An-Nūr</em> secara tunggal dan <em>Azh-Zhulumāt</em> secara jamak adalah mukjizat balaghah Al-Qur'an.</td>
+                <td>• <strong>Ulama Aqidah:</strong> Tauhid adalah jalan tunggal keselamatan, sedangkan sekte kesesatan berjumlah 72 golongan.<br>• <strong>Ulama Filsafat Islam:</strong> Kebenaran bersifat objektif-ontologis (satu), sedangkan kebatilan adalah ketiadaan wujud hakiki yang terdistorsi dalam ilusi indrawi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Model Sintesis Sistemik: "The Dual-Attractor Epistemic System"</h3>
+    <p>
+        Secara kognitif, QS. Al-Baqarah ayat 257 memetakan arsitektur kesadaran manusia ke dalam dua sistem atraktor (medan gravitasi mental) yang saling bertolak belakang:
+    </p>
+    <ul>
+        <li>
+            <strong>Medan Gravitasi Ilahi (Waliyy-Centric Attractor):</strong><br>
+            Ketika seorang individu menetapkan Allah sebagai pusat otoritas hidupnya (<em>Allāhu Waliyy</em>), sistem kognisinya mengalami proses <strong>konvergensi mental</strong>. Segala ambisi, kecemasan, dan persepsi disaring melalui satu lensa tunggal: keridhaan Ilahi. Hal ini menurunkan beban kognitif (<em>cognitive load reduction</em>), mengeliminasi disonansi moral, dan menghasilkan integrasi kepribadian yang utuh (<em>integrity of the self</em>). Vektor geraknya bersifat emansipatoris: bergerak dari lapisan-lapisan kegelapan kebingungan menuju titik temu cahaya kebenaran (<em>yukhrijuhum minazh-zhulumāti ilan-nūr</em>).
+        </li>
+        <li>
+            <strong>Medan Gravitasi Thaghut (Thāghūt-Centric Attractor):</strong><br>
+            Sebaliknya, ketika manusia melepaskan pegangannya dari Allah, jiwanya tidak menjadi bebas, melainkan jatuh ke dalam perangkap tirani multipel (<em>awliyā'uhumuth-thāghūt</em>). Sistem mentalnya terfragmentasi karena harus melayani banyak majikan sekaligus: opini publik, algoritma kepopuleran, tuntutan konsumerisme, ketakutan finansial, dan ambisi ego yang liar. Hal ini melahirkan disonansi kognitif kronis, kepribadian terbelah, dan kecemasan eksistensial. Vektor geraknya bersifat entropis: merusak cahaya fitrah akal dan menjerumuskannya ke dalam labirin kegelapan yang pekat.
+        </li>
+    </ul>
+
+    <h3>2. Neuropsikologi Epistemik: Beban Kognitif Kegelapan vs Kejernihan Cahaya</h3>
+    <p>
+        Dalam neurosains modern, mempertahankan ilusi, kepalsuan, dan kejahatan menuntut konsumsi energi biologis glukosa yang sangat tinggi di <em>prefrontal cortex</em>. Otak harus terus-menerus memproduksi alibi, merekayasa narasi palsu, dan mengantisipasi ancaman terbongkarnya kebohongan—inilah representasi neurobiologis dari <em>azh-zhulumāt</em> (rantai kegelapan yang menumpuk stres kronis). Sebaliknya, kebenaran (<em>an-nūr</em>) bersifat mandiri, stabil, dan tidak menuntut rekayasa mental. Ketika seseorang berserah diri di bawah <em>Wilāyah</em> Allah, sistem saraf parasimpatis aktif, hiperaktivitas <em>amygdala</em> (pusat rasa panik dan paranoid) diredam, dan otak memasuki kondisi kejernihan berpikir tingkat tinggi (<em>homeostasis kognitif</em>).
+    </p>
+
+    <h3>3. Arsitektur Jiwa (Tazkiyatun Nafs): Dinamika Transformasi Tiga Nafsu</h3>
+    <p>
+        Ayat ini menggambarkan lintasan evolusi jiwa manusia dalam tradisi tasawuf:
+        <br>• <strong>Nafs Ammārah bis-Sū':</strong> Jiwa yang diperbudak thaghut dan terperangkap di dasar kegelapan syahwat.
+        <br>• <strong>Nafs Lawwāmah:</strong> Jiwa yang mulai ditarik oleh Allah keluar dari kegelapan; ia mengalami pergulatan batin sengit, terkadang melihat kilatan cahaya hidayah, terkadang kembali tergelincir ke dalam keremangan dosa.
+        <br>• <strong>Nafs Muthma'innah:</strong> Jiwa yang telah mencapai samudera <em>An-Nūr</em> di bawah dekapan <em>Wilāyah</em> Allah; ia merasakan kedamaian hakiki, bebas dari rasa takut akan masa depan (<em>lā khawfun 'alayhim</em>) dan bebas dari kesedihan atas masa lalu (<em>wa lā hum yaḥzanūn</em>).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Reinkarnasi Thaghut Abad ke-21: Fenomenologi Tirani Tak Kasat Mata</h3>
+    <p>
+        Di abad ke-21, thaghut tidak lagi menampakkan diri dalam bentuk patung batu seperti Hubal atau Manat, melainkan telah bermetamorfosis menjadi sistem dan struktur peradaban yang canggih:
+    </p>
+    <ul>
+        <li>
+            <strong>Thaghut Algoritmik & Penjara Dopamin:</strong> Korporasi teknologi global merancang arsitektur media sosial dengan algoritma adiktif yang secara sengaja membajak perhatian manusia demi monetisasi ekonomi atensi. Manusia modern merasa bebas menentukan pilihan, padahal preferensi, cara pandang, dan emosi mereka telah didekte oleh mesin. Ini adalah proses nyata <em>"yukhrijūnahum minan-nūri ilazh-zhulumāt"</em>: mengeluarkan manusia dari cahaya perenungan batin dan interaksi nyata menuju kegelapan kecanduan gawai, depresi komparasi sosial, dan ilusi validasi semu.
+        </li>
+        <li>
+            <strong>Thaghut Konsumerisme & Imperialisme Korporat:</strong> Sistem kapitalisme predatorik memprogram pikiran massa bahwa nilai kemanusiaan diukur dari apa yang dibeli dan dipamerkan. Akibatnya, jutaan manusia modern rela terjerat pinjaman online, korupsi, dan burnout kerja hanya demi menyembah gaya hidup yang didikte oleh iklan.
+        </li>
+        <li>
+            <strong>Thaghut Relativisme Moral & Posmodernisme Radikal:</strong> Dekonstruksi kebenaran absolut yang mengklaim bahwa tidak ada standar moral yang universal telah menjerumuskan peradaban ke dalam kabut kegelapan nihilisme. Ketika kebenaran dianggap sekadar konstruksi kuasa, manusia kehilangan kompas etika, memicu krisis identitas gender, kehancuran institusi keluarga, dan hilangnya empati kemanusiaan.
+        </li>
+    </ul>
+
+    <h3>2. Kritik Peradaban Modern: Paradoks Kemajuan Material di Tengah Kebutaan Eksistensial</h3>
+    <p>
+        Peradaban sekuler Barat membanggakan era renaisans dan *enlightenment* (pencerahan rasional) yang melahirkan sains modern dan eksplorasi antariksa. Namun karena kemajuan sains tersebut dipisahkan dari <em>Wilāyah Ilāhiyyah</em> dan dipandu oleh thaghut keserakahan manusia, peradaban ini justru melahirkan bencana eksistensial yang mengancam kepunahan bumi: krisis iklim global, perang proksi bernuklir, ketimpangan ekonomi ekstrem di mana 1% populasi menguasai mayoritas kekayaan dunia, serta epidemik depresi dan bunuh diri global. Ayat 257 mendiagnosis fenomena ini dengan ketajaman luar biasa: kemajuan lahiriah yang menyangkal Allah sejatinya bukanlah pencerahan (*enlightenment*), melainkan involusi peradaban yang menggelapkan jiwa manusia menuju kebinasaan.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata Terukur (Aksi Konkret Harian)</h3>
+        <ol>
+            <li>
+                <strong>Audit Kedaulatan Spiritual Harian (The Morning Sovereignty Audit) — <em>Mikro-Habit &lt; 5 Menit</em>:</strong><br>
+                Setiap pagi setelah shalat Subuh, luangkan waktu 3 menit dalam keheningan untuk melakukan deklarasi pemutusan hubungan dengan thaghut internal dan pengukuhan Wilayah Allah: <em>"Radhītu billāhi Rabban, wa bil-Islāmi dīnan, wa bi-Muḥammadin Nabiyyan wa Rasūlā"</em>. Niatkan secara sadar di dalam hati: "Hari ini aku tidak akan menjadi budak dari validasi media sosial, tidak akan tunduk pada intimidasi manusia, dan tidak akan menjual integritasku demi uang; aku melangkah sepenuhnya di bawah pengasuhan dan perlindungan Allah Al-Waliyy."
+            </li>
+            <li>
+                <strong>Protokol 'Uji Cahaya' dalam Setiap Pengambilan Keputusan (The Light Filter Decision Protocol):</strong><br>
+                Sebelum menandatangani dokumen bisnis, menyetujui kontrak kerja, atau mengunggah pernyataan di ruang publik, jalankan uji filter etik dua arah: <em>"Apakah keputusan ini membimbing diriku dan masyarakat menuju An-Nūr (cahaya kejujuran, keadilan, dan kemaslahatan), ataukah sedang menyeretku masuk ke dalam Azh-Zhulumāt (kegelapan manipulasi, syubhat, dan penzaliman hak orang lain)?"</em> Jika keputusan tersebut tercium aroma thaghut keserakahan, batalkan seketika tanpa kompromi.
+            </li>
+            <li>
+                <strong>Puasa Detoks Digital Terjadwal (Deconstructing Algorithmic Thāghūt):</strong><br>
+                Tetapkan zona waktu bebas teknologi selama minimal 60 menit setiap malam sebelum tidur dan 60 menit setelah bangun tidur (matikan gawai atau aktifkan mode pesawat). Manfaatkan ruang sunyi ini untuk membaca Al-Qur'an dengan tadabbur, muhasabah diri, dan menjalin dialog berkualitas dengan keluarga. Tindakan ini secara empiris memutus rantai hegemoni thaghut digital yang menyedot atensi dan menggelapkan pikiran.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Siapakah "Wali" Sejati yang Menyetir Keputusan Hidupku?</strong><br>
+                Ketika aku merasa cemas memikirkan masa depan karier, rezeki, atau status sosial, kepada siapakah jiwaku pertama kali bersandar—apakah kepada Allah Yang Maha Mengurus segala perkara, ataukah aku diam-diam telah mengangkat atasan, relasi bisnis, atau saldo rekeningku sebagai "tandingan tuhan" yang mendikte rasa aman dan takutku?
+            </li>
+            <li>
+                <strong>Apakah Arah Hidupku Sedang Maju Menuju Terang atau Mundur Menuju Gelap?</strong><br>
+                Jika aku membandingkan diriku dengan lima tahun yang lalu, apakah pertambahan usiaku, gelarku, dan hartaku membuat hatiku semakin bersih, rendah hati, dan bercahaya dalam ketaatan; ataukah sebaliknya, aku justru semakin sombong, sinis, rakus, dan semakin jauh terperosok ke dalam kegelapan duniawi?
+            </li>
+            <li>
+                <strong>Berhala Thaghut Apa yang Masih Diam-Diam Kusembah di Ruang Batin?</strong><br>
+                Di balik ibadah formal yang kulakukan, apakah masih ada kepentingan ego, kecanduan pengakuan manusia, atau loyalitas buta pada kelompok yang membuatku berani mengorbankan kebenaran dan keadilan yang telah Allah terangkan dengan benderang?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Waliyyal-mu'minīn, Yā Nūras-samāwāti wal-ardh. Ya Allah, Dzat Pelindung dan Pengasuh orang-orang yang beriman, Cahaya penerang langit dan bumi. Kami memohon kepada-Mu dengan segala kerendahan jiwa kami: peliharalah diri kami, keluarga kami, dan umat kami di bawah naungan Wilāyah-Mu yang suci. Bimbing dan keluarkanlah jiwa kami secara bertahap dari pekatnya berbagai lapis kegelapan—kegelapan syubhat keraguan, kegelapan syahwat hawa nafsu, kegelapan narsisme ego, dan kegelapan kezhaliman zaman—menuju benderangnya satu-satunya cahaya petunjuk-Mu, cahaya tauhid yang menenteramkan sanubari.<br><br>
+            Ya Allah, lindungilah kami dari tipu daya dan hegemoni thāghūt modern yang memperdaya akal dan merampas kemerdekaan nurani kami. Jangan pernah Engkau serahkan urusan kami kepada diri kami sendiri atau kepada makhluk-Mu walau hanya sekejap mata. Jadikanlah akhir hidup kami dalam dekapan cahaya keimanan yang husnul khatimah, dan selamatkanlah kami dari siksa neraka jahanam, tempat kembali mereka yang berpaling dari cahaya-Mu. Rabbanā atmim lanā nūranā waghfir lanā, innaka 'alā kulli syay'in qadīr. Āmīn yā Mujības-sā'ilīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-256 - QS. Al-Baqarah Ayat 256.html">&larr; QS. 2:256 (Kebebasan Nurani & Al-'Urwah Al-Wutsqā)</a>
+        <span><strong>QS. Al-Baqarah [2]: 257</strong> (Doktrin Wilāyah: Cahaya vs Kegelapan)</span>
+        <a href="002-258 - QS. Al-Baqarah Ayat 258.html">QS. 2:258 (Debat Nabi Ibrahim & Raja Namrud) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

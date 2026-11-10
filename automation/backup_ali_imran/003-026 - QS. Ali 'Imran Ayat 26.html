@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-026 - QS. Ali 'Imran Ayat 26 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-025 - QS. Ali 'Imran Ayat 25.html">&larr; Ayat Sebelumnya (QS. 3:25)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-027 - QS. Ali 'Imran Ayat 27.html">Ayat Berikutnya (QS. 3:27) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 4 (Ayat 26–27): Doa Kedaulatan Mutlak: Monopoli Kekuasaan, Rotasi Peradaban, Dialektika Kemuliaan-Kehinaan & Kosmologi Hidup-Mati</span>
+        <span class="badge">25 Kata | 104 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 26</h1>
+    <div class="transliteration">
+        "Qulillāhumma Mālikal-mulki tu'til-mulka man tasyā'u wa tanzi'ul-mulka mimman tasyā'u wa tu'izzu man tasyā'u wa tudzillu man tasyā'(u), biyadikal-khayr(u), innaka 'alā kulli syay'in qadīr(un)."
+    </div>
+    <div class="thematic-title">
+        Proklamasi Kedaulatan Tunggal Monopoli Kekuasaan Semesta: Dekonstruksi Oligarki Duniawi, Rotasi Takhta Peradaban, Dialektika Al-'Izzah dan Adz-Dzillat, serta Kepasrahan Radikal pada "Biyadikal-Khayr"
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 4: Teologi Kedaulatan Politik-Transenden, Kosmologi Takdir & Rekayasa Sejarah Ilahi)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        قُلِ ٱللَّهُمَّ مَـٰلِكَ ٱلْمُلْكِ تُؤْتِى ٱلْمُلْكَ مَن تَشَآءُ وَتَنزِعُ ٱلْمُلْكَ مِمَّن تَشَآءُ وَتُعِزُّ مَن تَشَآءُ وَتُذِلُّ مَن تَشَآءُ ۖ بِيَدِكَ ٱلْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ ۝٢٦
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Katakanlah (wahai Muhammad): 'Wahai Allah, Pemilik segala kekuasaan dan kedaulatan mutlak! Engkau anugerahkan kekuasaan kepada siapa pun yang Engkau kehendaki, dan Engkau cabut kekuasaan dari siapa pun yang Engkau kehendaki. Engkau muliakan siapa pun yang Engkau kehendaki, dan Engkau hinakan siapa pun yang Engkau kehendaki. Di tangan-Mulah (segala hakikat) kebajikan. Sesungguhnya Engkau Maha Kuasa atas segala sesuatu'."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini adalah deklarasi kedaulatan politik-spiritual tertinggi dalam Al-Qur'an. Struktur munajat ini meruntuhkan berhala kekuasaan manusiawi melalui beberapa ketetapan doktrinal yang fundamental:
+    </p>
+    <ul>
+        <li><strong>Qulillāhumma (قُلِ اللَّهُمَّ):</strong> Perintah <em>Qul</em> (Katakanlah) menegaskan bahwa proklamasi ini bukan ambisi politik pribadi Nabi Muhammad ﷺ, melainkan doktrin wahyu transenden yang wajib dideklarasikan ke muka bumi. Bentuk <em>Allāhumma</em> adalah seruan puncak ketundukan yang menghimpun seluruh asmaul husna dalam satu desah nafas penghambaan.</li>
+        <li><strong>Mālikal-Mulk (مَالِكَ الْمُلْكِ):</strong> Bukan sekadar <em>Malik</em> (raja di atas takhta), melainkan <em>Mālik</em> (Pemilik mutlak dari eksistensi kekuasaan itu sendiri). Seluruh takhta, imperium, kursi kepresidenan, dan dinasti politik hanyalah pinjaman sementara (<em>'āriyah</em>) yang status kepemilikan aslinya tidak pernah bergeser satu milimeter pun dari tangan Allah.</li>
+        <li><strong>Dialektika Tu'tī (تُؤْتِي) vs Tanzi'u (تَنزِعُ):</strong> Mengapa pemberian kekuasaan menggunakan kata <em>anugerah</em> (<em>tu'tī</em>), sedangkan pengambilannya menggunakan kata <em>mencabut dengan paksa</em> (<em>tanzi'u</em>)? Karena watak dasar manusia adalah tamak dan melekat erat pada kekuasaan; kekuasaan tidak pernah dilepaskan oleh penguasa secara sukarela, melainkan harus direnggut paksa oleh dinamika takdir, revolusi sosial, kudeta, atau kematian yang meremukkan.</li>
+        <li><strong>Dialektika Tu'izzu (تُعِزُّ) vs Tudzillu (تُذِلُّ):</strong> Kekuasaan struktural (<em>al-mulk</em>) tidak serta-merta identik dengan kemuliaan batiniah (<em>al-'izzah</em>). Betapa banyak penguasa duduk di kursi kepresidenan namun batin dan rekam jejaknya berlumur kehinaan (<em>dzillat</em>); dan betapa banyak hamba yang terpenjara atau miskin jelata namun dianugerahi kemuliaan tak terpatahkan di hadapan langit dan bumi.</li>
+        <li><strong>Biyadikal-Khayr (بِيَدِكَ الْخَيْرُ):</strong> Monopoli mutlak kebaikan berada di tangan Allah. Pengabaian penyebutan kata "keburukan" (<em>asy-syarr</em>) di samping kebaikan merupakan adab tanzīh tertinggi: bahwa pencabutan kekuasaan dari tangan para tiran dan penghinaan terhadap kaum durhaka pada hakikatnya adalah kebaikan dan rahmat semesta demi tegaknya keseimbangan kosmik dan keadilan peradaban.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>قُلِ</strong><br>(<em>Quli</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Pangkal lidah (<em>aqshal-lisān</em>) menempel pada langit-langit lunak; bersifat isti'lā' (tebal/tafkhīm), syiddah, dan jahar.<br>
+                    <strong>Kasrah 'Āridhah pada Lām:</strong> Huruf Lām asalnya berharakat sukun (<em>qul</em>), namun diberi kasrah insidental guna menghindari bertemunya dua sukun (<em>iltiqā'us-sākinayn</em>) saat washal ke Lam Jalālah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca <em>Quli</em> dengan kasrah pada Lām saat washal ke lafaz berikutnya tanpa ikhtilaf.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱللَّهُمَّ</strong><br>(<em>Allāhumma</em>)</td>
+                <td>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Meskipun didahului Lām kasrah pada <em>quli</em>, Lām Jalālah tetap dibaca <strong>Tafkhīm</strong> oleh konsensus mutawatir karena kasrah tersebut adalah kasrah 'aridhah.<br>
+                    <strong>Ghunnah Akmal mā Yakūn:</strong> Mīm Musyaddadah wajib dibaca dengung sempurna selama 2 harakat penuh dari rongga hidung (<em>khaisyūm</em>).
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca tafkhīm pada Lam Jalālah dalam frasa <em>Qulillāhumma</em> dan menyempurnakan ghunnah mīm musyaddadah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>مَـٰلِكَ</strong><br>(<em>Mālika</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjariyyah setelah Mīm fathah dipanjangkan 2 harakat.<br>
+                    <strong>Tarqīq Lām & Hams Kāf:</strong> Huruf Lām kasrah dibaca tipis; huruf Kāf fathah memiliki sifat syiddah disusul desis hams lembut.
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat membaca kata ini dengan alif (<em>Mālika</em>) dalam status nashab sebagai munada mudhaf. Berbeda dengan surah Al-Fatihah di mana terdapat qira'at <em>Maliki</em> tanpa alif, pada ayat ini seluruh imam membaca <strong>Mālika</strong> secara mutawatir.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلْمُلْكِ</strong><br>(<em>Al-Mulki</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lām ta'rīf dibaca jelas.<br>
+                    <strong>Tawassuṭh Lām Sukun:</strong> Lām sukun di tengah kata dialirkan suaranya dengan tempo sedang (tidak tertahan kaku dan tidak memantul).<br>
+                    <strong>Tarqīq Kāf Kasrah:</strong> Diucapkan tipis di ujung kata sebagai mudhaf ilayh.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca idzhār qamariyyah dan meng-kasrahkan huruf Kāf.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>تُؤْتِى</strong><br>(<em>Tu'tī</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah Sukun:</strong> Hamzah sukun keluar dari pangkal tenggorokan (<em>aqshal-halq</em>) dengan sifat syiddah dan jahar (tertahan total aliran suara dan nafas).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' mad setelah Tā' kasrah dibaca 2 harakat saat waqaf; saat washal huruf mad gugur secara fonetis karena bertemu sukun pada <em>al-mulka</em>.
+                </td>
+                <td>
+                    • <strong>Abū Ja'far, Warsy 'an Nāfi', & As-Sūsī 'an Abī 'Amr:</strong> Membaca dengan <strong>Ibdāl Hamzah</strong> menjadi huruf Wāwu mad sukun: (<strong>تُوتِي</strong> — <em>Tūtī</em>). Kaidah ibdal ini melunakkan bacaan tanpa mengurangi ketegasan makna.<br>
+                    • <strong>Tujuh Imam Lainnya (termasuk 'Āṣhim riwayat Ḥafṣh, Ḥamzah, Ibnu Katsīr):</strong> Membaca dengan <strong>Taḥqīq Hamzah Sukun</strong> murni (<strong>تُؤْتِي</strong> — <em>Tu'tī</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>ٱلْمُلْكَ</strong><br>(<em>Al-Mulka</em>)</td>
+                <td>
+                    <strong>Isqāṭhul-Mad saat Washal:</strong> Yā' mad pada <em>tu'tī</em> gugur guna menghindari <em>iltiqā'us-sākinayn</em>.<br>
+                    <strong>Idzhār Qamariyyah & Fat-ḥah Kāf:</strong> Lām sukun dibaca jelas, huruf Kāf berharakat fat-ḥah tegak sebagai tanda maf'ūl bih awal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca manshub dengan fat-ḥah pada huruf Kāf.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>مَن تَشَآءُ</strong><br>(<em>Man tasyā'u</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu Tā' disamarkan dengan dengung 2 harakat disertai tarqīq (lidah mendekati makhraj Tā' tanpa menempel ketat).<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf Alif mad bertemu hamzah dalam satu kata.<br>
+                    <strong>Tafasysyī Huruf Syīn:</strong> Hamburan angin menyebar di tengah rongga mulut.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca Mad Muttashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf:</strong> Membaca dengan kadar <strong>Tawassuṭh / Fuwayqis-Tawassuth (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn, Ibnu Katsīr, Abū 'Amr, Abū Ja'far, Ya'qūb:</strong> Membaca dengan kadar <strong>4 Harakat</strong>.<br>
+                    • <em>Hamzah saat Waqaf:</em> Imam Hamzah memiliki wajah tashil dan ibdal hamzah saat waqaf di ujung kata <em>tasyā'</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَتَنزِعُ</strong><br>(<em>Wa tanzi'u</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu Zā' disamarkan dengan dengung tipis.<br>
+                    <strong>Huruf Zā':</strong> Memiliki sifat <strong>Shafīr</strong> (desis tajam mirip suara lebah), jahar, dan rakhāwah.<br>
+                    <strong>Huruf 'Ain Dhommah:</strong> Keluar dari tengah tenggorokan (<em>wasathul-halq</em>) dengan sifat tawassuth.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca ikhfa' haqiqi pada nun sukun dan mendhommahkan huruf 'Ain dalam bentuk fi'il mudhari' marfu'.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>مِمَّن تَشَآءُ</strong><br>(<em>Mimman tasyā'u</em>)</td>
+                <td>
+                    <strong>Idghām Bighunnah Kāmilah (Idghām Mutamātsilayn):</strong> Nūn sukun pada <em>min</em> melebur utuh ke dalam Mīm pada <em>man</em>.<br>
+                    <strong>Ghunnah Akmal mā Yakūn:</strong> Dengung 2 harakat penuh pada Mīm tasydid.<br>
+                    <strong>Ikhfā' Ḥaqīqī & Mad Wājib Muttaṣhil:</strong> Nūn sukun bertemu Tā' disamarkan; mad wajib dipanjangkan sesuai tingkatan imam.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca idgham kamil pada <em>mimman</em> dan ikhfa' pada pertemuan nun dengan ta'.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>وَتُعِزُّ</strong><br>(<em>Wa tu'izzu</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain Kasrah:</strong> Makhraj wasathul halq.<br>
+                    <strong>Zā' Musyaddadah:</strong> Tasydid dengan sifat shafir tajam dan dhommah murni di akhir kata.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca tasydid pada Zā' dhommah dalam bentuk fi'il mudhari' muta'addi.
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>وَتُذِلُّ</strong><br>(<em>Wa tudzillu</em>)</td>
+                <td>
+                    <strong>Huruf Dzāl Kasrah:</strong> Ujung lidah bertemu ujung gigi seri atas, memiliki sifat jahar dan rakhāwah (aliran suara lembut tanpa desis tajam).<br>
+                    <strong>Lām Musyaddadah:</strong> Tasydid dengan dhommah murni.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca tasydid pada Lām dhommah secara mutawatir.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>بِيَدِكَ ٱلْخَيْرُ</strong><br>(<em>Biyadikal-khayr</em>)</td>
+                <td>
+                    <strong>Tarqīq Bā' & Dāl:</strong> Diucapkan tipis dan ringan.<br>
+                    <strong>Idzhār Qamariyyah pada Al-Khayr:</strong> Lām ta'rīf dibaca bersih.<br>
+                    <strong>Huruf Khā':</strong> Isti'lā' di pangkal tenggorokan (<em>adnāl-halq</em>).<br>
+                    <strong>Yā' Līn:</strong> Yā' sukun setelah fathah diucapkan lembut.<br>
+                    <strong>Tafkhīm Rā' saat Washal:</strong> Berharakat dhommah. Jika waqaf, menjadi <strong>Mad Līn 'Āridh lis-Sukūn</strong> (2, 4, atau 6 harakat) dan huruf Rā' dibaca <strong>Tafkhīm</strong> (atau tarqiq menurut mazhab Warsy karena didahului Ya' lin).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca <strong>Tarqīq pada huruf Rā'</strong> (tipis) baik saat washal maupun waqaf karena didahului oleh huruf Yā' sukun (kaidah masyhur Warsy dalam bab <em>tarqīq ar-rā'āt</em>).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca <strong>Tafkhīm pada huruf Rā'</strong> saat washal karena berharakat dhommah.
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>إِنَّكَ</strong><br>(<em>Innaka</em>)</td>
+                <td>
+                    <strong>Taḥqīq Hamzah Kasrah:</strong> Tegas di pangkal tenggorokan.<br>
+                    <strong>Ghunnah Akmal:</strong> Nūn Musyaddadah 2 harakat penuh.<br>
+                    <strong>Kāf Khiṭhāb:</strong> Fathah tipis dengan hams lembut.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca tahqīq hamzah dan menyempurnakan ghunnah nūn musyaddadah.
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><strong>عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ ۝٢٦</strong><br>(<em>'Alā kulli syay'in qadīr</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī pada 'Alā:</strong> 2 harakat.<br>
+                    <strong>Syiddah Kaf & Lam Musyaddadah:</strong> Ditekankan dengan rapi.<br>
+                    <strong>Iqlāb / Ikhfā' pada Tanwīn:</strong> Tanwīn kasrah pada <em>syay'in</em> bertemu Qāf dibaca <strong>Ikhfā' Ḥaqīqī Mufakhkham</strong> (dengung tebal karena huruf Qāf adalah huruf isti'lā').<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Yā' mad bertemu Rā' sukun di akhir ayat, dibaca 2, 4, atau 6 harakat dengan <strong>Tafkhīm Rā'</strong> saat waqaf.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca <strong>Mad Līn Mahmūz</strong> pada kata <em>syay'in</em> dengan pilihan panjang <strong>Tawassuṭh (4 Harakat)</strong> atau <strong>Ṭhūl (6 Harakat)</strong>; serta membaca <strong>Tarqīq pada huruf Rā'</strong> pada kata <em>qadīr</em> karena didahului Yā' mad sukun.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca <em>syay'in</em> tanpa pemanjangan lin mahmuz saat washal, dan membaca tafkhīm pada huruf Rā' kata <em>qadīr</em> saat waqaf (menurut mayoritas thariq) atau tarqīq karena pengaruh ya' mad sebelumnya.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Utama: Mukjizat Pemecahan Batu Khandaq & Kabar Gembira Runtuhnya Imperium Persia dan Romawi (Tafsīr At-Ṭhabarī No. 6720, As-Sīrah an-Nabawiyyah karya Ibnu Isḥāq, & Dalā'il an-Nubuwwah karya Al-Bayhaqī dari Sahabat Salmān al-Fārisī, Ibnu 'Abbās, dan Anas bin Mālik r.a.):</strong><br>
+        Tatkala Rasulullah ﷺ bersama para sahabat menggali parit (<em>khandaq</em>) untuk mempertahankan Madinah dari serbuan koalisi pasukan Ahzab, para sahabat terhalang oleh sebuah batu cadas raksasa putih yang sangat keras hingga patah semua beliung besi mereka. Mereka mengadukannya kepada Rasulullah ﷺ. Nabi turun ke dalam parit, mengambil beliung, lalu memukulkannya ke batu tersebut seraya mengucap <em>Bismillāh</em>.<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        فَضَرَبَ ضَرْبَةً فَكَسَرَ ثُلُثَ الصَّخْرَةِ، وَخَرَجَ مِنْهَا نُورٌ أَضَاءَ مَا بَيْنَ لَابَتَيْهَا، فَقَالَ: "اللَّهُ أَكْبَرُ! أُعْطِيتُ مَفَاتِيحَ الشَّامِ، وَاللَّهِ إِنِّي لَأُبْصِرُ قُصُورَهَا الْحُمْرَ السَّاعَةَ!" ثُمَّ ضَرَبَ الثَّانِيَةَ فَقَالَ: "اللَّهُ أَكْبَرُ! أُعْطِيتُ مَفَاتِيحَ فَارِسَ، وَاللَّهِ إِنِّي لَأُبْصِرُ مَدَائِنَ كِسْرَى وَقَصْرَهُ الْأَبْيَضَ!" ثُمَّ ضَرَبَ الثَّالِثَةَ فَقَالَ: "اللَّهُ أَكْبَرُ! أُعْطِيتُ مَفَاتِيحَ الْيَمَنِ، وَاللَّهِ إِنِّي لَأُبْصِرُ أَبْوَابَ صَنْعَاءَ!"
+        </span>
+        <em>Nabi memukul sekali, maka terbelah sepertiga batu itu dan memancarlah kilatan cahaya terang yang menerangi seantero Madinah. Nabi bertakbir: "Allahu Akbar! Aku dianugerahi kunci-kunci negeri Syam (Romawi)! Demi Allah, sungguh saat ini aku melihat istana-istananya yang merah!" Kemudian beliau memukul kedua kalinya dan bertakbir: "Allahu Akbar! Aku dianugerahi kunci-kunci negeri Persia! Demi Allah, sungguh saat ini aku melihat kota Madain dan istana putih Kisra!" Lalu beliau memukul ketiga kalinya dan bertakbir: "Allahu Akbar! Aku dianugerahi kunci-kunci Yaman! Demi Allah, sungguh saat ini aku melihat pintu-pintu gerbang kota Shan'a!"</em><br>
+        Mendengar kabar gembira itu, orang-orang munafik dan Yahudi Madinah mengejek dengan sinis: <em>"Tidakkah kalian heran melihat Muhammad? Dia menjanjikan kalian istana Kisra dan Kaisar Romawi, padahal saat ini kalian sedang ketakutan setengah mati, menggali parit, bahkan tidak aman sekadar untuk pergi buang air!"</em> Maka Allah menurunkan ayat pembungkam ini: <strong>Qulillāhumma Mālikal-mulki tu'til-mulka man tasyā'u wa tanzi'ul-mulka mimman tasyā'...</strong> menegaskan bahwa pergiliran kekuasaan adidaya dunia berada mutlak di bawah titah Allah.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Asbabun Nuzul Kedua: Dekonstruksi Monopoli Keagamaan Ahli Kitab (Riwayat Mujahid, Qatadah, dan As-Suddi via Tafsir Ibnu Abi Hatim & Ibnu Katsir):</strong><br>
+        Para elit rabi Yahudi dan tokoh Nasrani mengklaim bahwa kenabian, kepemimpinan spiritual, dan kemuliaan syariat adalah hak waris biologis eksklusif Bani Israil yang mustahil berpindah kepada bangsa lain. Ketika Nabi Muhammad ﷺ yang berasal dari bangsa Arab Ismailiyah diutus membawa risalah pamungkas, mereka menolaknya karena rasa dengki (<em>hasad</em>). Ayat ini turun untuk menegaskan bahwa Allah adalah Pemilik Kedaulatan Mutlak: Dia berhak mencabut mahkota kenabian dan kemuliaan dari Bani Israil yang membangkang, lalu menganugerahkannya kepada Nabi Muhammad ﷺ dan umatnya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Shahīh Riwayat Al-Bukhārī (No. 844) & Muslim (No. 593) dari Al-Mughīrah bin Syu'bah r.a. — Wirid Ketundukan Kedaulatan Pasca-Shalat:</strong><br>
+        Rasulullah ﷺ setiap kali selesai melaksanakan shalat fardhu senantiasa membaca doa kedaulatan tauhid yang sejiwa dengan QS. Ali 'Imran: 26:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ."
+        </span>
+        <em>"Tidak ada tuhan selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nyalah segala kerajaan dan bagi-Nyalah segala pujian, dan Dia Maha Kuasa atas segala sesuatu. Ya Allah, tidak ada yang dapat menghalangi apa yang Engkau berikan, dan tidak ada yang dapat memberi apa yang Engkau halangi. Dan tidaklah bermanfaat kekayaan dan kedudukan orang yang memiliki kemegahan di hadapan azab-Mu."</em>
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Shahīh Muslim (No. 771) dari Sahabat 'Alī bin Abī Ṭhālib r.a. — Rahasia Adab "Biyadikal-Khayr":</strong><br>
+        Dalam doa iftitah shalat malamnya, Rasulullah ﷺ melantunkan kaidah adab akidah yang agung:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "لَبَّيْكَ وَسَعْدَيْكَ، وَالْخَيْرُ كُلُّهُ فِي يَدَيْكَ، وَالشَّرُّ لَيْسَ إِلَيْكَ، أَنَا بِكَ وَإِلَيْكَ، تَبَارَكْتَ وَتَعَالَيْتَ..."
+        </span>
+        <em>"Aku penuhi panggilan-Mu dengan penuh kepatuhan dan kebahagiaan. Dan segala kebaikan berada sepenuhnya di kedua tangan-Mu, sedangkan keburukan tidaklah disandarkan kepada-Mu. Eksistensiku adalah karena-Mu dan kembali kepada-Mu. Maha Berkah Engkau dan Maha Luhur Engkau..."</em> Hadits ini adalah tafsir nabawi langsung atas frasa <em>biyadikal-khayr</em>.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Q-W-L (ق-و-ل — Qul):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> menerangkan bahwa poros maknanya adalah <em>ithlāqush-shawt bil-kalām al-mufīd</em> (melepaskan suara yang memuat pesan bermakna dan teratur). Perintah <em>Qul</em> di awal ayat menegaskan bahwa pernyataan ini bukan karangan atau aspirasi politis Muhammad ﷺ, melainkan doktrin objektif wahyu samawi yang wajib disuarakan secara lantang kepada seluruh penguasa bumi.
+        </li>
+        <li><strong>2. A-L-H (أ-ل-ه — Allāhumma):</strong>
+            Akar katanya bermakna <em>as-sukun wal-walāh wal-'ibādah</em> (keterikatan kalbu yang penuh kekaguman, kerinduan, dan ketundukan mutlak). Menurut pakar nahwu Bashrah (Sibawaih dan Al-Khalil bin Ahmad), lafaz <em>Allāhumma</em> asalnya adalah <em>Yā Allāh</em>, di mana huruf nida' <em>Yā</em> dibuang lalu digantikan dengan <em>Mīm Musyaddadah</em> di akhir kata sebagai kompensasi fonetis (<em>'iwadh</em>). Tambahan huruf Mim musyaddadah ini menyiratkan penghimpunan seluruh nama-nama Allah dan konsentrasi total permohonan hamba ke hadirat Ilahi.
+        </li>
+        <li><strong>3. M-L-K (م-ل-ك — Mālika, Al-Mulk):</strong>
+            Porosnya berkisar pada <strong>Quwwatus-Syay' wa Shihhatul-Iḥtiwā' (القوة وصحة الاحتواء - kekuatan, ketahanan, serta penguasaan yang sah dan menyeluruh)</strong>. Kata <em>al-milku</em> (dengan kasrah) bermakna kepemilikan materi/aset; <em>al-mulku</em> (dengan dhommah) bermakna kedaulatan, kekuasaan politik, dan wewenang mengatur tatanan masyarakat; sedangkan <em>al-malakūtu</em> bermakna kedaulatan kosmik gaib semesta raya. Menggabungkan <em>Mālik</em> (isim fa'il pemilik) dengan <em>Al-Mulk</em> (kedaulatan) menghasilkan konsep <strong>Mālikul-Mulk</strong>: Zat Yang memiliki substansi kekuasaan itu sendiri, di mana seluruh raja dan penguasa duniawi pada hakikatnya hanyalah debu yang dipinjami wewenang sesaat.
+        </li>
+        <li><strong>4. A-T-Y (أ-ت-ي — Tu'tī):</strong>
+            Porosnya adalah <em>al-maji'u bi-yusr</em> (kedatangan sesuatu dengan kemudahan dan keanggunan). Allah menggunakan bentuk <em>tu'tī</em> (Engkau menganugerahkan) untuk kekuasaan guna menegaskan bahwa jabatan dan otoritas di dunia adalah murni anugerah dan amanah ujian (<em>ibtilā'</em>) dari Allah, bukan semata-mata hasil rekayasa manuver politik manusia.
+        </li>
+        <li><strong>5. N-Z-' (ن-ز-ع — Tanzi'u):</strong>
+            Ibnu Faris mencatat poros maknanya adalah <strong>Jadzbus-syay' min maqirrihī bi quwwah wa syiddah (جذب الشيء من مقره بقوة - mencabut, merenggut, atau mengelupas sesuatu dari tempat tertancapnya dengan paksa dan keras)</strong>. Kata ini digunakan untuk mencabut nyawa saat sekarat (<em>an-naz'u</em>), mencabut busur panah dari sarungnya, atau mencabut pohon dari akarnya. Mengapa untuk hilangnya kekuasaan digunakan kata <em>tanzi'u</em>? Karena kekuasaan itu sangat dicintai nafsu manusia dan telah menghunjam ke dalam ego sang penguasa bagaikan akar pohon purba. Penguasa yang tiran tidak akan pernah menyerahkan jabatannya dengan senyum sukarela; ia harus dicabut secara paksa oleh skenario takdir Ilahi melalui kejatuhan yang tragis, revolusi berdarah, pemakzulan, atau serangan maut.
+        </li>
+        <li><strong>6. '-Z-Z (ع-ز-ز — Tu'izzu):</strong>
+            Poros maknanya adalah <strong>As-Syiddah, al-Qahr, wal-Imtinā' (الشدة والقهر والامتناع - kekuatan yang kokoh, perkasa, langka, tak terkalahkan, dan tidak mempan direndahkan)</strong>. Tanah yang sangat keras dan tidak bisa ditembus air disebut <em>ardhun 'azāz</em>. Sesuatu yang sangat mulia dan langka disebut <em>'azīz</em>. <em>Tu'izzu</em> berarti Allah membangun benteng kehormatan pada diri seorang hamba sehingga ia memiliki integritas batiniah yang merdeka dan bermartabat, yang tidak bisa dibeli oleh kekayaan atau ditundukkan oleh ancaman manusia.
+        </li>
+        <li><strong>7. DZ-L-L (ذ-ل-ل — Tudzillu):</strong>
+            Kebalikan total dari 'Azzaz; porosnya adalah <em>al-istirkha' wal-huwān wal-khudhū'</em> (kelemahan, kehinaan, ketundukan yang terpaksa, dan kondisi diinjak-injak). Jalan yang rata karena diinjak-injak telapak kaki manusia disebut <em>tharīq mudzallal</em>. <em>Tudzillu</em> bermakna Allah mencabut wibawa dari diri seseorang dan menelanjangi kepalsuannya hingga ia menjadi hina dina, terhina di hadapan nuraninya sendiri, dan menjadi cemoohan sejarah.
+        </li>
+        <li><strong>8. Y-D-Y (ي-د-ي — Biyadika):</strong>
+            Secara semantik lisan Arab, kata <em>al-yad</em> (tangan) memiliki medan makna hakiki dan majazi: kekuatan (<em>al-quwwah</em>), anugerah nikmat (<em>an-ni'mah wal-in'ām</em>), dan kendali wewenang penuh (<em>at-tasharruf wat-tadalluq</em>). Menisbatkan kebaikan kepada tangan Allah (<em>biyadikal-khayr</em>) adalah penegasan bahwa seluruh perbendaharaan kebaikan berada dalam genggaman pengaturan-Nya yang mutlak.
+        </li>
+        <li><strong>9. KH-Y-R (خ-ي-ر — Al-Khayr):</strong>
+            Porosnya adalah <strong>Mā yurghabu fīhi wa yaṣhluḥu bihī ḥālul-insān (ما يرغب فيه - apa pun yang dirindukan fitrah murni manusia, membawa kemaslahatan paripurna, dan steril dari kerusakan)</strong>. Alif lam pada <em>al-khayr</em> adalah <em>al-istighrāqiyyah</em>, mencakup seluruh jenis kebaikan spiritual, material, duniawi, dan ukhrawi.
+        </li>
+        <li><strong>10. Q-D-R (ق-د-ر — Qadīr):</strong>
+            Porosnya adalah <em>nihāyatul-quwwah al-muḥīṭhah bi-kulli syay' ma'al-iḥkām wat-taqdīr</em> (puncak kekuasaan yang meliputi segala sesuatu disertai perhitungan yang presisi, cermat, dan berkeadilan sempurna).
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>قُلِ</strong></td>
+                <td>Fi'il amr lil-mufrad al-mudzakkar dari <em>qāla – yaqūlu</em> (akar Q-W-L).</td>
+                <td><strong>Fi'il Amr</strong> mabni 'alas-sukun yang di-kasrahkan karena <em>iltiqā'us-sākinayn</em>. Fa'il-nya dhamir mustatir wujūban taqdīruhu <em>anta</em> (Muhammad ﷺ). Jumlah fi'liyyah <em>qul</em> adalah <strong>Isti'nāfiyyah</strong> lā maḥalla lahā.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُمَّ</strong></td>
+                <td>Lafaz Jalālah tersusun dari munada dan mim musyaddadah 'iwadh harf nida'.</td>
+                <td><strong>Munādā</strong> mabni 'aladh-dhammi fī maḥalli naṣhbin bi harfi nida' mahdzūf. Huruf Mīm musyaddadah mabni 'alal-fath 'iwadh 'an harfin-nidā'. Jumlah nida' fī maḥalli naṣhbin <strong>Maqūlul-Qawl</strong> bagi fi'il <em>qul</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَـٰلِكَ</strong></td>
+                <td>Isim fā'il dari <em>malaka – yamliku</em>, wazan <em>fā'il</em>, mudhāf manshūb.</td>
+                <td><strong>Munādā Tsānī</strong> (munada kedua) manshūb bil-fat-ḥah azh-zhāhirah karena berstatus mudhāf, atau berkedudukan sebagai <strong>Na'at / Ṣhifah</strong> bagi lafaz <em>Allāhumma</em> fī maḥalli naṣhb.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُلْكِ</strong></td>
+                <td>Isim masdar bi ma'nal-khalq / as-sulthān, mufrad mudzakkar majrūr.</td>
+                <td><strong>Mudhāf Ilayh</strong> majrūr bil-kasrah azh-zhāhirah fī ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>تُؤْتِى</strong></td>
+                <td>Fi'il mudhari' wazan <em>af'ala</em> (<em>ātā – yu'tī</em>), akar A-T-Y, mu'tallul-lām.</td>
+                <td><strong>Fi'il Mudhari' Marfū'</strong> bi dhommah muqaddarah 'alal-yā' li ats-tsiqal. Fa'il-nya dhamir mustatir wujūban taqdīruhu <em>anta</em> (Engkau, ya Allah). Jumlah fi'liyyah fī maḥalli naṣhbin <strong>Ḥāl</strong> dari munada atau <strong>Isti'nāf Bayānī</strong> fī jawābin-nidā'.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُلْكَ</strong></td>
+                <td>Isim ma'rifat bil-alif wal-lām, manshūb.</td>
+                <td><strong>Maf'ūl bih Awwal</strong> manshūb bil-fat-ḥah azh-zhāhirah bagi fi'il <em>tu'tī</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن</strong></td>
+                <td>Isim maushūl 'āqil mabni 'alas-sukūn.</td>
+                <td>Isim maushūl fī maḥalli naṣhbin <strong>Maf'ūl bih Tsānī</strong> bagi fi'il <em>tu'tī</em> (karena fi'il <em>ātā</em> memutuhkan dua maf'ul).</td>
+            </tr>
+            <tr>
+                <td><strong>تَشَآءُ</strong></td>
+                <td>Fi'il mudhari' dari <em>syā'a – yasyā'u</em> (akar Sy-Y-').</td>
+                <td>Fi'il mudhari' marfū' bil-dhammah. Fa'il dhamir mustatir <em>anta</em>. Jumlah fi'liyyah <em>tasyā'u</em> adalah <strong>Ṣhilatul-Mawṣhūl</strong> lā maḥalla lahā, dengan 'ā'id mahdzūf (taqdiruhu: <em>man tasyā'u an tu'tiyahul-mulk</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَتَنزِعُ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' tsulatsi mujarrad (<em>naza'a – yanzi'u</em>).</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>tu'tī</em>, marfū' bil-dhammah azh-zhāhirah. Fa'il dhamir mustatir <em>anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُلْكَ</strong></td>
+                <td>Isim ma'rifat manshūb.</td>
+                <td><strong>Maf'ūl bih</strong> manshūb bil-fat-ḥah azh-zhāhirah bagi fi'il <em>tanzi'u</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِمَّن</strong></td>
+                <td><em>Min</em> (harf jarr) di-idghamkan ke <em>man</em> (isim maushūl).</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tanzi'u</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>تَشَآءُ</strong></td>
+                <td>Fi'il mudhari' marfū' bil-dhammah.</td>
+                <td><strong>Ṣhilatul-Mawṣhūl</strong> bagi <em>man</em> kedua, lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>وَتُعِزُّ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' wazan <em>af'ala</em> (<em>a'azza – yu'izzu</em>).</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā fi'il sebelumnya, marfū' bil-dhammah azh-zhāhirah. Fa'il dhamir mustatir <em>anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن تَشَآءُ</strong></td>
+                <td><em>Man</em>: isim maushul maf'ul bih. <em>Tasyā'u</em>: fi'il mudhari' fa'il mustatir.</td>
+                <td><em>Man</em> fī maḥalli naṣhbin <strong>Maf'ūl bih</strong> bagi <em>tu'izzu</em>. Jumlah <em>tasyā'u</em> adalah <strong>Ṣhilatul-Mawṣhūl</strong> lā maḥalla lahā.</td>
+            </tr>
+            <tr>
+                <td><strong>وَتُذِلُّ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' wazan <em>af'ala</em> (<em>adzalla – yudzillu</em>).</td>
+                <td><strong>Ma'ṭhūf</strong> marfū' bil-dhammah azh-zhāhirah. Fa'il dhamir mustatir <em>anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن تَشَآءُ</strong></td>
+                <td><em>Man</em>: isim maushul maf'ul bih. <em>Tasyā'u</em>: fi'il mudhari' fa'il mustatir.</td>
+                <td><em>Man</em> fī maḥalli naṣhbin <strong>Maf'ūl bih</strong> bagi <em>tudzillu</em>. Jumlah <em>tasyā'u</em> adalah <strong>Ṣhilatul-Mawṣhūl</strong> lā maḥalla lahā.</td>
+            </tr>
+            <tr>
+                <td><strong>بِيَدِكَ</strong></td>
+                <td>Bā' harf jarr. <em>Yadi</em> isim majrur mudhaf. <em>Kāf</em> dhamir muttashil mudhaf ilayh.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>fī maḥalli raf'in Khabar Muqaddam</strong> (didahulukan untuk faidah hashr/qashr).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْخَيْرُ</strong></td>
+                <td>Isim jins ma'rifat marfū'.</td>
+                <td><strong>Mubtada' Mu'akhkhar</strong> marfū' bil-dhammah azh-zhāhirah. Jumlah ismiyyah (<em>biyadikal-khayr</em>) adalah <strong>Jumlah Musta'nafah</strong> atau ta'līliyyah.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّكَ</strong></td>
+                <td><em>Inna</em> harf taukid wa nashab. <em>Kāf</em> dhamir khitab fī maḥalli nashbin ismu Inna.</td>
+                <td>Amil taukid yang menashabkan isim dan merafakkan khabar.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَىٰ كُلِّ شَىْءٍۢ</strong></td>
+                <td><em>'Alā</em> harf jarr. <em>Kulli</em> majrur mudhaf. <em>Syay'in</em> mudhaf ilayh majrur.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi khabar Inna (<em>qadīr</em>). Taqdim jarr-majrur berfungsi menguatkan keumuman cakupan qudrah.</td>
+            </tr>
+            <tr>
+                <td><strong>قَدِيرٌ ۝٢٦</strong></td>
+                <td>Shighah mubalaghah wazan <em>fa'īl</em> dari akar Q-D-R.</td>
+                <td><strong>Khabar Inna</strong> marfū' bil-dhammah azh-zhāhirah fī ākhirih. Seluruh jumlah <em>innaka 'alā kulli syay'in qadīr</em> adalah <strong>Ta'līl Mutlak</strong> bagi seluruh isi ketetapan sebelumnya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Al-Qashr wal-Ḥashr bi Taqdīm mā Ḥaqquhut-Ta'khīr (Monopoli Tunggal Kebaikan):</strong>
+            Pada klausa <em>Biyadikal-khayr</em>, struktur kalimat aslinya menurut gramatika baku adalah <em>Al-Khayru biyadika</em> (Mubtada' mendahului Khabar). Namun Al-Qur'an secara sengaja mendahulukan Jar-Majrur (<em>Biyadika</em> - Khabar Muqaddam). Kaidah ilmu Ma'ani menegaskan: <em>Taqdīmu mā ḥaqquhut-ta'khīr yufīdul-ḥaṣhr wal-ikhtiṣhāṣh</em> (Mendahulukan komponen yang semestinya di belakang berfungsi membatasi dan mengkhususkan). Maknanya bukan sekadar "Di tangan-Mu ada kebaikan", melainkan: <strong>"Hanya di tangan-Mulah semata segala hakikat kebaikan itu terhimpun, tidak ada sedikit pun kebaikan independen di tangan para raja, kaisar, maupun manusia!"</strong>
+        </li>
+        <li><strong>Ilmu Badi' — Muqābalah Murakkabah Arbā'iyyah (Simetri Empat Pilar Takdir Sejarah):</strong>
+            Ayat ini menampilkan keagungan seni <em>Muqābalah</em> (penjajaran antitesis yang berlapis dan simetris) yang mempertemukan empat poros peradaban manusia:
+            <br>• Pilar 1: <strong>تُؤْتِي الْمُلْكَ</strong> (Memberi kekuasaan) berhadapan secara kontras dengan Pilar 2: <strong>وَتَنزِعُ الْمُلْكَ</strong> (Mencabut kekuasaan).
+            <br>• Pilar 3: <strong>وَتُعِزُّ</strong> (Memuliakan martabat) berhadapan secara kontras dengan Pilar 4: <strong>وَتُذِلُّ</strong> (Menghinakan derajat).
+            <br>Kombinasi ini melahirkan kesadaran filosofis bahwa roda sejarah manusia bergerak di antara empat kutub ini di bawah satu poros kendali kehendak Ilahi (<em>Masyī'atullāh</em>).
+        </li>
+        <li><strong>Ilmu Bayan — Isti'ārah Tashrīḥiyyah / Tamtsīliyyah pada Kata "Tanzi'u" (Kedahsyatan Pencabutan Takhta):</strong>
+            Penggunaan fi'il <em>tanzi'u</em> meminjam citraan fisik pencabutan akar pohon purba yang menancap kokoh di bebatuan atau pencabutan nyawa dari jasad. Al-Qur'an menggambarkan bahwa para penguasa bumi membangun cengkeraman kekuasaan mereka dengan dinasti, militer, dan benteng hukum; mereka merasa tidak akan pernah bisa digulingkan. Namun tatkala masa edar kekuasaannya habis, Allah mencabut takhta tersebut dengan kedahsyatan yang merobek seluruh fondasi kekuasaan mereka hingga tumbang tak bersisa.
+        </li>
+        <li><strong>Ilmu Badi' & Adab Tanzīh — Ḥusnut-Ta'līl wal-Adab ma'allāh fī "Biyadikal-Khayr":</strong>
+            Setelah memaparkan dua kutub kontras (memberi dan mencabut, memuliakan dan menghinakan), Al-Qur'an tidak mengatakan: <em>"Biyadikal-khayru wasy-syarr"</em> (Di tangan-Mu kebaikan dan keburukan). Al-Qur'an secara eksklusif hanya menyebutkan: <strong>Biyadikal-Khayr</strong>! Ini adalah puncak adab tauhid yang diajarkan Al-Qur'an:
+            <br>• Di mata manusia yang dangkal, pencabutan kekuasaan dan kejatuhan status tampak sebagai "bencana / keburukan".
+            <br>• Namun dalam desain arsitektur keadilan Ilahi, pencabutan kekuasaan dari para penindas dan penghinaan terhadap para tiran sejatinya adalah <strong>kebaikan murni (khayr mahdh)</strong> yang menyelamatkan jutaan umat manusia dan menegakkan kembali neraca moral semesta. Keburukan tidak pernah memiliki eksistensi mandiri di hadapan kebijaksanaan Allah.
+        </li>
+        <li><strong>Ilmu Ma'ani — Tikrār (Repetisi Sakral) "Man Tasyā'u" Sebanyak Empat Kali:</strong>
+            Pengulangan klausula <em>man tasyā'u</em> (siapa yang Engkau kehendaki) sebanyak 4 kali berturut-turut merupakan teknik <em>ithnāb bi at-tikrār</em> untuk menanamkan doktrin kedaulatan mutlak ke dalam alam bawah sadar manusia. Repetisi ini merontokkan klaim determinisme genealogis (seperti anggapan bahwa kasta tertentu berhak menjadi raja abadi) dan menegaskan bahwa rotasi takhta semesta sepenuhnya digerakkan oleh Hak Prerogatif Ilahi yang Maha Adil dan Maha Mengetahui.
+        </li>
+        <li><strong>I'jaz Fonetik & Rima Akhir (Fāṣhilah):</strong>
+            Ayat ini ditutup dengan fashilah huruf Rā' yang didahului Yā' mad (<em>Qadīr</em>), yang beresonansi harmonis dengan ayat-ayat di sekitarnya. Bunyi vokal panjang berpadu getaran Rā' tafkhim/tarqiq menghadirkan efek kewibawaan yang menenangkan kalbu orang-orang beriman sekaligus menggetarkan nyali para penguasa yang sombong.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 21–25):</strong>
+            Pada rangkaian Ayat 21 hingga 25, Al-Qur'an membedah patologi kejiwaan elit Ahli Kitab: membunuh para nabi, membantai para aktivis keadilan sosial, membelakangi hukum Taurat saat diajak berhukum secara adil, serta memiliki ilusi rasisme teologis bahwa neraka tidak akan menyentuh mereka kecuali hanya beberapa hari saja karena mereka menganggap diri mereka ras suci pemilik surga.
+            <br>Timbul pertanyaan mendasar: <em>"Apakah kemuliaan agama dan kepemimpinan bumi akan selamanya dimonopoli oleh klan yang telah membangkang dan mengkhianati wahyu itu?"</em>
+            <br>Ayat 26 seketika hadir sebagai deklarasi pemungkas: <strong>Sekali-kali tidak! Kekuasaan dan kemuliaan bukanlah milik biologis Bani Israil!</strong> Allah adalah <em>Mālikul-Mulk</em>; Dia berhak dan telah memutuskan untuk mencabut mahkota kepemimpinan dari bangsa yang korup tersebut, lalu memindahkannya kepada hamba-hamba-Nya yang beriman di bawah panji Nabi Muhammad ﷺ.
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis Geopolitik Abad ke-7 Masehi):</strong>
+            Ayat ini turun di Madinah ketika peta peradaban dunia terbagi menjadi dua kekuatan adidaya (<em>superpowers</em>):
+            <ol>
+                <li><strong>Imperium Sasaniyah Persia di Timur:</strong> Berpusat di Ctesiphon (Madain), bersendikan teologi Majusi (Zoroaster), menguasai jalur sutra Asia Tengah dan Mesopotamia dengan kekuatan kavaleri lapis baja yang tak tertandingi.</li>
+                <li><strong>Imperium Byzantium Romawi Timur di Barat:</strong> Berpusat di Konstantinopel, menguasai Mediterania, Syam, dan Mesir dengan hegemoni militer dan teologi Kristen ortodoks.</li>
+                <li><strong>Kondisi Kaum Muslimin di Madinah:</strong> Berada di kawasan padang pasir gersang yang terisolasi, miskin logistik, dan saat peristiwa Khandaq (Tahun 5 H) berada dalam kepungan 10.000 pasukan sekutu Quraisy-Ghathafan-Yahudi. Kaum muslimin menahan lapar dengan mengganjal perut memakai batu.</li>
+                <li><strong>Dekonstruksi Geopolitik Wahyu:</strong> Di tengah situasi yang secara kasat mata tampak mustahil dan di ujung tanduk kepunahan, perintah <em>Qulillāhumma Mālikal-mulki...</em> dideklarasikan! Wahyu ini meruntuhkan pesimisme materialistik. Allah memberi tahu kaum mukminin bahwa imperium Persia dan Romawi bukanlah tuhan-tuhan abadi; keduanya hanyalah wayang sejarah yang takhtanya akan segera dicabut (<em>tanzi'ul-mulk</em>) dan digantikan oleh peradaban tauhid Islam yang membawa keadilan semesta. Terbukti, kurang dari dua dekade setelah ayat ini turun, takhta Persia runtuh total dan imperium Romawi terpukul mundur dari bumi Syam dan Mesir!</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Korelasi Organik Menuju Ayat 27):</strong>
+            Setelah Ayat 26 menetapkan hukum pergiliran kekuasaan di ranah sosial-politik manusia (<em>'Ālamul-Ijtimā' wal-Insān</em>), Ayat 27 seketika menyajikan bukti empiris tak terbantahkan dari ranah keteraturan makrokosmos alam semesta (<em>'Ālamul-Kawn</em>):
+            <br><em>"Tūlijul-layla fin-nahāri wa tūlijun-nahāra fil-layli, wa tukhrijul-ḥayya minal-mayyiti wa tukhrijul-mayyita minal-ḥayyi..."</em>
+            <br>(Engkau masukkan malam ke dalam siang dan Engkau masukkan siang ke dalam malam; Engkau keluarkan yang hidup dari yang mati dan Engkau keluarkan yang mati dari yang hidup...).
+            <br>Logika dialektisnya sangat memukau: Zat Yang Mahakuasa menggulung kegelapan malam menjadi fajar yang benderang dan sanggup menumbuhkan vegetasi hidup dari biji-biji yang mati di padang pasir gersang, tentulah sangat mudah bagi-Nya untuk mencabut takhta para kaisar zalim dan menerbitkan fajar kemuliaan bagi kaum mustadh'afin yang beriman!
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭhabarī (w. 310 H) — Dokumentasi Riwayat Salaf & Perpindahan Kepemimpinan Global:</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīli Āy Al-Qur'ān</em>, At-Tabari memaparkan sanad-sanad muktamad seputar sabab nuzul pemecahan batu Khandaq dan bantahan terhadap kaum munafik. At-Tabari mendefinisikan <em>Mālikal-Mulk</em> sebagai: <em>"Zat yang memiliki seluruh kekuasaan kerajaan dunia dan akhirat, yang wewenang pengaturannya berlaku mutlak bagi seluruh makhluk-Nya tanpa ada sekutu yang dapat menandingi atau membatalkan keputusan-Nya."</em> Menafsirkan <em>tu'til-mulka man tasyā'u</em>, At-Tabari menegaskan bahwa Allah mencabut kemuliaan nubuwah dan kepemimpinan politik dari keturunan Ya'qub (Bani Israil) dan para kaisar Persia-Romawi, lalu menyerahkannya kepada Nabi Muhammad ﷺ dan umatnya yang sebelumnya dipandang sebelah mata oleh dunia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Manifestasi Rasa Syukur, Takdir Sejarah & Hakikat Kenikmatan:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir menguraikan bahwa ayat ini mengandung pengajaran langsung dari Allah kepada hamba-Nya tentang cara bersyukur dan memuji-Nya atas nikmat terbesar yang dilimpahkan kepada umat ini. Ibnu Katsir menegaskan: <em>"Allah SWT mengingatkan hamba dan Rasul-Nya, Muhammad ﷺ, agar senantiasa bersujud syukur atas nikmat dialihkannya kenabian dan kepemimpinan peradaban dari bangsa-bangsa terdahulu kepada beliau. Allah-lah yang memberi kekuasaan kepada siapa yang Dia kehendaki dan mencabutnya dari siapa yang Dia kehendaki. Segala tindakan-Nya berpijak pada keadilan dan hikmah yang sempurna, bukan kesewenang-wenangan."</em> Ayat ini menanamkan optimisme tak tergoyahkan bagi kaum beriman tatkala menghadapi masa-masa sulit dalam perjuangan dakwah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Perspektif Fiqih Siyāsah, Hakikat Istikhlāf & Teologi Kebaikan Transenden:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah implikasi fiqih ketatanegaraan Islam:
+        <ul>
+            <li><strong>Kekuasaan Manusia Hanyalah Mandat Titipan (Istikhlāf):</strong> Kata <em>Mālikal-Mulk</em> menjadi dalil bahwa tidak ada seorang raja atau pemimpin pun di muka bumi yang berstatus sebagai pemilik hakiki atas negerinya. Jabatan kekuasaan hanyalah pinjaman bersyarat. Jika sang penguasa menjalankan amanah dengan adil, ia menuai pahala; jika ia zalim dan mengkhianati rakyat, Allah pasti mencabutnya (<em>tanzi'ul-mulk</em>) dengan kehinaan.</li>
+            <li><strong>Mengapa Menggunakan Diksi "Biyadikal-Khayr"?</strong> Al-Qurthubi mengutip dialog teologis mendalam: jika Allah juga mencabut kekuasaan dan menghinakan manusia, mengapa hanya kebaikan yang disandarkan kepada tangan-Nya? Beliau menjawab: <em>"Karena keburukan (asy-syarr) bukanlah sifat zat Allah dan bukan tujuan akhir dari penciptaan. Pencabutan kekuasaan dari tangan seorang tiran adalah kebaikan besar bagi semesta; dan pemberian cobaan kepada orang beriman adalah kebaikan untuk mengangkat derajatnya. Maka seluruh ketetapan takdir Allah pada hakikatnya berujung pada kebaikan hakiki (Al-Khayr)."</em></li>
+            <li><strong>Kewajiban Rakyat saat Menghadapi Penguasa Zalim:</strong> Menyadari bahwa hati para penguasa berada di antara dua jari kekuasaan Allah, kaum muslimin tidak boleh bertawakkal kepada kekuatan makhluk, melainkan wajib kembali memperbaiki hubungan spiritual dengan Allah sembari menegakkan amar ma'ruf nahi munkar secara beradab.</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Hermeneutika Rasional & Dekonstruksi Determinisme:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi membedah problem filosofis hubungan antara kehendak bebas manusia (<em>ikhtiyār</em>) dengan kehendak mutlak Tuhan (<em>masyī'atullāh</em>). Mengapa Allah mengulang frasa <em>man tasyā'u</em> sebanyak empat kali? Ar-Razi menjelaskan bahwa manusia sering terperangkap dalam ilusi kausalitas semu: para penguasa mengira kekuasaannya lestari karena kelihaian manuver politik, besarnya militer, atau tumpukan modal finansial mereka. Al-Qur'an memotong rantai persepsi materialistik ini: seluruh sebab duniawi hanyalah sarana perantara (<em>wasā'il</em>), sedangkan Penentu akhir yang mencabut dan menobatkan kekuasaan adalah <em>Musabbibul-Asbāb</em> (Allah SWT). Sementara Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti balaghah lafaz <em>tu'tī</em> vs <em>tanzi'u</em>: betapa agungnya Al-Qur'an membedakan antara pemberian anugerah yang lembut dengan pencabutan kekuasaan yang mengerikan bagi jiwa mereka yang mabuk duniawi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Filsafat Sejarah, Sosiologi Politik & Hukum Peradaban (Sunanul-'Umrān):</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur mengkorelasikan ayat ini dengan teori kebangkitan dan keruntuhan peradaban (selaras dengan mukaddimah Ibnu Khaldun):
+        <br><em>Al-Mulk</em> (kekuasaan) dan <em>Al-'Izzah</em> (kemuliaan) diberikan Allah kepada suatu bangsa melalui hukum kausalitas historis (<em>Sunanullāh fī Khalqihī</em>). Suatu bangsa diangkat menjadi adidaya manakala mereka memiliki solidaritas sosial (<em>'ashabiyyah / ukhuwah</em>) yang kokoh, moralitas luhur, penegakan hukum yang adil, dan kerja keras intelektual. Sebaliknya, proses <em>tanzi'ul-mulk</em> (pencabutan kekuasaan) terjadi secara bertahap manakala bangsa tersebut telah terjangkit penyakit kemewahan hedonistik (<em>at-taraf</em>), ketidakadilan sosial, korupsi elit, dan perpecahan internal. Ayat ini adalah peringatan abadi bagi umat Islam: kekuasaan bukan jaminan yang diwariskan otomatis; jika umat Islam meninggalkan syariat keadilan, Allah tidak segan-segan mencabut kepemimpinan dari tangan mereka dan memberikannya kepada bangsa lain!
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Cermin Kontekstual & Penawar Racun Arogansi:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan pasang-surut kekuasaan dunia dengan narasi yang sangat menyentuh:<br>
+        <em>"Lihatlah jalannya sejarah manusia! Ke mana perginya Firaun yang pernah menepuk dadanya seraya berkata: 'Akulah tuhanmu yang paling tinggi'? Ke mana perginya Namrud, Nebukadnezar, Julius Caesar, Napoleon, Hitler, dan Mussolini? Mereka semua pernah menggoncangkan bumi dengan bala tentaranya, namun tatkala datang titah 'wa tanzi'ul-mulka mimman tasyā'', mereka tersungkur ke liang kubur dengan kehinaan yang tiada tara! Bagi orang yang beriman, ayat ini adalah penawar dari racun kesombongan tatkala sedang berkuasa di atas takhta, dan lentera harapan tatkala sedang terhimpit di bawah penindasan. Jangan pernah silau oleh kegagahan penguasa yang zalim, karena takhta mereka sedang berjalan menuju lubang pencabutan Ilahi!"</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menguraikan perbedaan mendasar antara <em>Al-Mulk</em> dan <em>Al-'Izzah</em>. Jabatan (<em>mulk</em>) bisa diraih dengan manuver politik bahkan tipu daya kotor, namun kemuliaan sejati (<em>'izzah</em>) tidak pernah bisa dibeli dengan uang; ia murni pancaran ketakwaan yang dianugerahkan Allah ke dalam jiwa manusia. Kemenag RI menekankan pentingnya akuntabilitas kekuasaan: seorang pemimpin muslim wajib memandang jabatannya sebagai ladang pengabdian untuk mendatangkan kemaslahatan rakyat, bukan alat memperkaya dinasti keluarga.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Kepemilikan "Mālikal-Mulk"</strong></td>
+                <td>Sepakat bulat bahwa kedaulatan mutlak atas alam semesta dan takhta duniawi adalah milik Allah semata; kepemilikan manusia hanyalah fatamorgana pinjaman sementara (<em>'āriyah</em>).</td>
+                <td>
+                    • <strong>Tinjauan Teologis-Kalam (Ar-Razi):</strong> Penafian wujud kekuasaan mandiri bagi makhluk; seluruh daya bersumber dari qudrah Ilahi.<br>
+                    • <strong>Tinjauan Fiqih Siyasah (Al-Qurthubi, Al-Mawardi):</strong> Penetapan bahwa legitimasi kekuasaan terikat pada kepatuhan terhadap hukum Allah; pemimpin yang khianat gugur hak ketaatan darinya.<br>
+                    • <strong>Tinjauan Tasawuf (Ibnu 'Athaillah):</strong> Pembebasan hati salik dari ketergantungan pada jabatan dan penghambaan kepada raja-raja dunia.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Rahasia Diksi "Biyadikal-Khayr" (Ketiadaan Kata Asy-Syarr)</strong></td>
+                <td>Konsensus seluruh ulama Ahlussunnah bahwa keburukan tidak boleh disandarkan secara mandiri kepada Allah sebagai bentuk kesempurnaan adab tauhid (<em>adab ma'allāh</em>).</td>
+                <td>
+                    • <strong>Pendekatan Teodisi Hakiki (Ibnu Katsir, Al-Baghawi):</strong> Segala perbuatan Allah pada substansinya adalah kebaikan; pencabutan takhta bagi tiran adalah kebaikan bagi rakyat tertindas.<br>
+                    • <strong>Pendekatan Bahasa / Balaghah (Az-Zamakhsyari):</strong> Bentuk <em>Iktifā'</em> (menyebutkan satu sisi yang mulia karena sudah mencakup keseluruhan takdir Ilahi).<br>
+                    • <strong>Pendekatan Maqashidi (Ibnu 'Asyur):</strong> Menegaskan bahwa orientasi penciptaan alam semesta dibangun di atas fondasi maslahat dan rahmat, bukan azab dan kesia-siaan.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan Kehendak Ilahi (Masyī'ah) dengan Kausalitas Sosial</strong></td>
+                <td>Sepakat bahwa naiknya dan jatuhnya suatu bangsa tidak keluar dari takdir dan kehendak mutlak Allah (<em>man tasyā'u</em>).</td>
+                <td>
+                    • <strong>Salaf / Atsari:</strong> Berserah diri sepenuhnya pada takdir Allah tanpa mempertanyakan hikmah rahasia-Nya (<em>taslīm</em>).<br>
+                    • <strong>Asy'ariyyah / Maturidiyyah:</strong> Memadukan antara takdir azali dengan hukum kasab (usaha manusia yang menciptakan sebab-sebab sosial).<br>
+                    • <strong>Sosiologis-Historis (Ibnu 'Asyur, Malik bin Nabi):</strong> Menegaskan bahwa <em>masyī'ah</em> Allah bekerja melalui keteraturan hukum alam dan hukum sosiologis (<em>Sunanullāh fit-Tārīkh</em>): siapa yang bekerja cerdas dan adil akan memimpin; siapa yang korup akan tumbang.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Arogansi Kekuasaan vs Pola Pikir Kedaulatan Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Sekuler (Megalomaniak)</th>
+                <th>Pola Pikir Mukmin Berdaulat (Mālikal-Mulk)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Persepsi terhadap Jabatan & Kekuasaan</strong></td>
+                <td><em>Entitlement & Hak Milik Mutlak:</em> Memandang takhta sebagai hasil kecerdasan pribadi, modal uang, atau dinasti keluarga yang harus dipertahankan mati-matian dengan segala cara kotor.</td>
+                <td><em>Trusteeship & Amanah Ujian (Ibāna):</em> Memandang kekuasaan sebagai barang pinjaman Allah yang sangat berat hisabnya; sewaktu-waktu siap dicabut tanpa rasa memiliki.</td>
+            </tr>
+            <tr>
+                <td><strong>Sumber Kehormatan Diri (Self-Worth)</strong></td>
+                <td><em>Positional & Material Pride:</em> Martabat diri digantungkan pada simbol status, protokol kemewahan, puja-puji bawahan, dan hegemoni kuasa atas manusia lain.</td>
+                <td><em>Intrinsic Moral Dignity (Al-'Izzah):</em> Kehormatan diri bersumber dari kedekatan dengan Allah; tetap mulia dan tegar sekalipun dicopot dari seluruh jabatan struktural.</td>
+            </tr>
+            <tr>
+                <td><strong>Reaksi Menghadapi Kehilangan / Rotasi Hidup</strong></td>
+                <td><em>Post-Power Syndrome & Paranoia:</em> Mengalami depresi akut, histeria, menyalahkan orang lain, atau memicu konflik berdarah demi mempertahankan status kuo.</td>
+                <td><em>Radical Acceptance & Khayr-Orientation:</em> Meyakini sepenuhnya bahwa di balik pencabutan takhta ada kebaikan agung (<em>Biyadikal-khayr</em>) untuk mensucikan jiwa dari fitnah dunia.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Custodianship Paradigm" (Paradigma Pemegang Kunci, Bukan Pemilik Aset):</strong>
+            Dalam kognisi modern, manusia sering terjebak dalam ilusi kepemilikan (<em>endowment effect</em>). Seseorang yang menduduki posisi CEO, menteri, rektor, atau kepala keluarga merasa bahwa kursi itu adalah hak permanennya. Konsep <strong>Mālikal-Mulk</strong> memprogram ulang arsitektur berpikir kita: kita hanyalah "petugas satpam penjaga kunci" yang dititipi mengelola ruangan untuk sementara waktu. Sang Pemilik gedung berhak sewaktu-waktu meminta kunci itu kembali dan menyerahkannya kepada orang lain. Kesadaran ini melenyapkan sindrom haus kekuasaan (<em>hubb ar-ri'āsah</em>) dan membebaskan jiwa dari ketakutan akan pemakzulan.
+        </li>
+        <li><strong>Mental Model 2: "The Historical Turnover Law" (Hukum Roda Rotasi Peradaban & Anti-Inersia Status Quo):</strong>
+            Sistem kognitif manusia cenderung mengalami bias normalitas (<em>normality bias</em>): menganggap situasi kekuasaan hari ini akan berlangsung selamanya. Dinasti yang berkuasa merasa tidak akan pernah runtuh, dan kaum tertindas merasa tidak akan pernah bisa bangkit. Diksi <em>tu'tī – tanzi'u</em> dan <em>tu'izzu – tudzillu</em> membangun model mental rotasi siklik: sejarah manusia selalu mengalami pergiliran roda. Model ini menumbuhkan dua benteng mental sekaligus: <strong>Anti-Arogansi saat berada di puncak roda</strong>, dan <strong>Anti-Keputusasaan saat berada di dasar roda</strong>.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Anatomi "Power Hubris Syndrome" & Penawar Megalomania</h3>
+    <p>
+        Kajian neuropsikologi modern mengenai kepemimpinan menemukan fenomena yang disebut <strong>Power Hubris Syndrome</strong> (Sindrom Kecongkakan Kuasa). Ketika seseorang memperoleh kekuasaan politik atau finansial yang sangat besar dalam durasi panjang, terjadi perubahan fungsional pada sirkuit saraf otaknya: aktivitas pada <em>Prefrontal Cortex</em> yang mengatur empati sosial dan kompas moral mengalami atrofi (penurunan sensitivitas), sementara sistem dopaminergik di area limbik menuntut stimulasi pemujaan yang semakin tinggi. Akibatnya, penguasa tersebut kehilangan kemampuan mendengarkan kritik, memandang rendah rakyat jelata, dan mengidap delusi bahwa dirinya kebal dari hukum dan tak tergantikan.
+    </p>
+    <p>
+        Dalam perspektif <strong>Tazkiyatun Nafs</strong>, kondisi patologis ini adalah puncak dari penyakit hati <em>Kibr</em> (kesombongan) dan <em>Al-Ghurūr</em> (terperdaya oleh fatamorgana diri). Penawarnya yang paling radikal dan mujarab adalah melazimi wirid kontemplatif QS. Ali 'Imran: 26.
+    </p>
+    <p>
+        Setiap kali lisan mengucap <em>Qulillāhumma Mālikal-mulki...</em>, terjadi proses <strong>Al-Inkisār lillāh</strong> (peremukan ego keakuan di hadapan Keagungan Allah). Korteks serebral dipaksa tunduk mengakui bahwa otak, kecerdasan, jaringan politik, dan takhta yang digenggamnya detik ini hanyalah debu yang dapat disapu bersih oleh Allah dalam sekejap mata. Jiwa yang senantiasa menaburkan dzikir ini akan mengalami detoksifikasi dari racun megalomania, bertransformasi menjadi pemimpin yang tawadhu', adil, dan senantiasa gemetar membayangkan hisab mahkamah Ilahi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Tragedi "Post-Power Syndrome", Histeria Dinasti Politik & Obsesi Status Quo</h3>
+    <p>
+        Di panggung politik modern abad ke-21, kita menyaksikan pemandangan memilukan dari para mantan penguasa yang terjangkit <strong>Post-Power Syndrome</strong> akut. Banyak elit politik yang tidak siap menghadapi kenyataan bahwa masa jabatannya telah berakhir. Mereka menghalalkan segala cara untuk memperpanjang kekuasaan: merekayasa konstitusi negara, memanipulasi lembaga peradilan perundang-undangan, membangun politik dinasti dengan memaksakan anak-cucu yang belum matang menduduki tampuk kekuasaan, hingga menyebarkan politik identitas yang memecah-belah bangsa.
+    </p>
+    <p>
+        Fenomena ini terjadi akibat ketiadaan iman terhadap doktrin <em>Mālikal-Mulk</em>. Mereka menyangka bahwa kehilangan jabatan berarti kehilangan eksistensi hidup dan kehormatan. Seandainya mereka mentadabburi QS. 3:26, mereka akan menyadari bahwa memaksakan diri mempertahankan takhta yang telah habis masa edarnya di sisi takdir Allah hanyalah akan mengantarkan mereka pada proses pencabutan paksa (<em>tanzi'ul-mulk</em>) yang berakhir dengan kehinaan sejarah (<em>tudzillu man tasyā'</em>).
+    </p>
+
+    <h3>2. Arogansi Tekno-Feodalisme & Ilusi Supremasi Oligarki Korporatokrasi Global</h3>
+    <p>
+        Kekuasaan di abad ke-21 tidak lagi hanya berwujud istana kepresidenan dan monarki bersenjata, melainkan bermutasi menjadi <strong>Tekno-Feodalisme</strong> dan hegemoni oligarki raksasa teknologi (<em>Big Tech Titans</em>). Segelintir miliarder pemilik platform digital, kecerdasan buatan (AI), dan korporasi keuangan multinasional merasa memegang kendali atas nasib miliaran umat manusia. Mereka mengontrol algoritma informasi, memanipulasi persepsi publik global, membiayai para kandidat presiden, bahkan berlagak menjadi "tuhan-tuhan baru" yang menentukan arah evolusi spesies manusia ke planet lain.
+    </p>
+    <p>
+        QS. 3:26 hadir menampar arogansi para oligarki modern ini. Sejarah telah berulang kali membuktikan bahwa konglomerasi finansial sebesar apa pun, imperium perbankan termegah, dan teknologi secanggih apa pun akan runtuh dalam sekejap tatkala krisis sistemik, kehancuran moneter, atau kebangkrutan moral melanda mereka. Tidak ada hegemoni korporatokrasi yang mampu bertahan melawan titah <em>Mālikal-Mulk</em>!
+    </p>
+
+    <h3>3. Penawar Keputusasaan bagi Kaum Tertindas di Gaza, Kashmir & Belahan Bumi Krisis</h3>
+    <p>
+        Dalam lanskap geopolitik kontemporer yang sarat ketidakadilan, betapa sering kita melihat kaum tertindas (<em>al-mustadh'afīn</em>)—seperti rakyat Palestina di Gaza, muslim minoritas yang dizalimi, atau rakyat miskin yang tanahnya dirampas oligarki—berada di bawah intimidasi kekuatan militer adidaya yang dilengkapi persenjataan paling mutakhir dan didukung koalisi global raksasa. Secara kalkulasi rasional materialistik, perjuangan mereka tampak mustahil dan tanpa harapan.
+    </p>
+    <p>
+        Namun, bagi jiwa-jiwa yang hidup bersama Al-Qur'an, QS. Ali 'Imran: 26 adalah mata air optimisme ilahiah yang tidak pernah kering! Ayat ini mengingatkan bahwa teknologi militer tercanggih dan koalisi adidaya terkuat di muka bumi tidak pernah memegang kunci takdir peradaban. Kunci kekuasaan dan kemuliaan berada mutlak di tangan Allah. Sebagaimana Allah meruntuhkan kecongkakan pasukan koalisi Ahzab di Khandaq dan melenyapkan imperium Persia dan Romawi melalui generasi gurun pasir yang bersahaja, demikian pulalah Allah Mahakuasa membalikkan neraca sejarah kontemporer untuk menghinakan para agresor zalim dan memuliakan hamba-hamba-Nya yang istiqamah.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol Wirid Kedaulatan Ilahi & Penjinak Arogansi Pasca-Shalat:</strong>
+                <br>• Setiap selesai menunaikan shalat fardhu (khususnya shalat Shubuh dan Maghrib), luangkan waktu hening selama 3 menit tanpa menyentuh layar gawai.
+                <br>• Baca dengan tartil dan penghayatan mendalam QS. Ali 'Imran: 26 disusul wirid nabawi: <em>"Allāhumma lā māni'a limā a'thayta, wa lā mu'ṭhiya limā mana'ta, wa lā yanfa'u dzal-jaddi minkal-jadd"</em>.
+                <br>• Saat membaca lafaz <em>Biyadikal-khayr</em>, visualisasikan seluruh kekhawatiran finansial, kecemasan karier, dan dinamika persaingan kerja Anda diserahkan seutuhnya ke dalam genggaman pengaturan Allah yang Maha Bijaksana. Rasakan ketenangan batin yang membebaskan Anda dari ketergantungan pada belas kasihan atasan atau manusia.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Custodianship Audit" dalam Karier, Jabatan & Bisnis:</strong>
+                Saat Anda mendapatkan promosi jabatan struktural, memenangkan tender proyek, atau terpilih memegang amanah organisasi:
+                <br>• Buat dokumen tertulis "Pakta Integritas Mandiri" sebelum memulai hari kerja pertama: nyatakan secara tegas di hadapan Allah bahwa jabatan ini adalah pinjaman (<em>'āriyah</em>) yang sewaktu-waktu siap Anda lepas tanpa penyesalan.
+                <br>• Haramkan diri Anda menggunakan fasilitas jabatan untuk kepentingan pribadi, memperkaya dinasti keluarga secara nepotistik, atau berkompromi dengan korupsi demi melanggengkan masa jabatan.
+                <br>• Jika dihadapkan pada pilihan moral antara: mempertahankan jabatan dengan menjilat kezaliman VS dicopot dari jabatan demi membela prinsip kebenaran dan integritas, putuskan seketika untuk memilih membela kebenaran tanpa gentar, seraya meyakini kaidah: <em>Tu'izzu man tasyā'u wa tudzillu man tasyā'</em>.
+            </li>
+            <li><strong>Etika Relasional & Integritas Kepemimpinan: "Anti-Menjilat kepada Penguasa & Pengayoman Kaum Lemah":</strong>
+                <br>• Ubah cara pandang Anda terhadap orang-orang berpangkat tinggi: bersikaplah sopan dan profesional secara wajar, namun jangan pernah merendahkan martabat iman Anda dengan menjilat, memuji berlebihan (<em>flattery</em>), atau takut kepada kemurkaan mereka saat kebenaran harus disuarakan.
+                <br>• Di sisi lain, muliakanlah staf bawahan, petugas kebersihan, buruh harian, dan rakyat jelata di lingkungan kerja Anda dengan penghormatan tulus. Sadarilah bahwa derajat kemuliaan sejati di sisi Allah tidak diukur dari seragam dinas atau slip gaji, melainkan dari ketakwaan kalbu yang tersembunyi.
+                <br>• Jadikan kepemimpinan Anda sebagai payung pelindung bagi kaum lemah yang tidak memiliki koneksi kekuasaan.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Seandainya detik ini juga Allah menakdirkan seluruh privilese duniaku dicabut—jabatanku dicopot, gelarku tak diakui, kekayaanku lenyap, dan pengaruh sosialku sirna—apakah aku masih merasakan keutuhan harga diri sebagai hamba Allah, ataukah jiwaku akan hancur lebur karena selama ini kehormatanku semata-mata kutumpukan pada topeng-topeng takhta duniawi yang rapuh?</li>
+            <li>Ketika aku melihat orang lain yang sebelumnya berada di bawahku tiba-tiba diangkat Allah menjadi pemimpin atau meraih kesuksesan yang melampauiku, apakah di dalam hatiku terbit rasa dengki dan penolakan terselubung terhadap kehendak Allah (<em>man tasyā'u</em>), ataukah aku mampu tulus bersyukur dan mengakui kedaulatan mutlak-Nya membagi anugerah?</li>
+            <li>Di hadapan siapa lututku sebenarnya gemetar dan kepada siapa harapanku paling bergantung saat menghadapi krisis besar: apakah kepada kekuasaan para pembesar, koneksi politik, dan saldo tabunganku, ataukah kepada <em>Mālikal-Mulk</em> Yang Menggenggam seluruh ubun-ubun penguasa alam semesta?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Mālikal-Mulk, Yā Man Lahu al-Khalqu wal-Amr, Yā Qāhiru Fawqa 'Ibādih. Wahai Allah Tuhan Yang Memiliki segala kedaulatan dan kerajaan semesta raya! Di hadapan keagungan takhta-Mu yang abadi, tersungkur bersujud seluruh raja, kaisar, dan penguasa bumi dalam kehinaan yang fana. Tiada satu pun helai daun yang gugur, tiada satu pun takhta yang ditegakkan, dan tiada satu pun dinasti yang ditumbangkan melainkan berada di bawah kendali keadilan dan hikmah masyī'ah-Mu yang sempurna.
+            <br><br>
+            Allāhumma innā na'ūdzu bika min fitnatir-ri'āsah, wa kibril-manṣhib, wa madhālil-ghurūr. Ya Allah, kami berlindung kepada-Mu dari fitnah kehausan berkuasa, dari racun kecongkakan jabatan, dan dari kebutaan hati yang terperdaya oleh sanjungan manusia. Apabila Engkau menganugerahkan kepada kami sekerat kekuasaan, wewenang, ilmu, atau amanah harta di dunia ini, jadikanlah ia sebagai sarana penegak keadilan-Mu, pelindung kaum mustadh'afin, dan ladang pengabdian kami menuju ridha-Mu. Jangan Engkau biarkan hati kami melekat pada takhta pinjaman itu, dan jangan Engkau jadikan kami tiran yang menindas sesama hamba-Mu.
+            <br><br>
+            Allāhumma Yā Man Biyadihil-Khayr, Yā 'Alā Kulli Syay'in Qadīr. Ya Allah Yang di tangan-Mu terhimpun seluruh hakikat kebajikan, karuniakanlah kepada kami kemuliaan iman (Al-'Izzah) yang tidak dapat dibeli oleh dunia dan tidak dapat dihinakan oleh tipu daya manusia. Bersihkanlah dada kami dari rasa dengki tatkala Engkau memuliakan orang lain, dan karuniakanlah kepada kami kesabaran yang indah serta kepasrahan radikal tatkala Engkau menguji kami dengan hilangnya kenikmatan duniawi. Teguhkanlah langkah kaum tertindas di muka bumi, hancurkanlah kesombongan para agresor zalim, dan himpunlah kami di akhirat kelak di bawah naungan rahmat-Mu bersama para nabi dan syuhada. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-025 - QS. Ali 'Imran Ayat 25.html">&larr; Kembali ke Ayat 25 (QS. 3:25)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 26</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-027 - QS. Ali 'Imran Ayat 27.html">Lanjut ke Ayat 27 (QS. 3:27) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

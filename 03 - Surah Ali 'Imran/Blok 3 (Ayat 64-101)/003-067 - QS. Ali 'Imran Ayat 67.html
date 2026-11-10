@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-067 - QS. Ali 'Imran Ayat 67 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-066 - QS. Ali 'Imran Ayat 66.html">&larr; Ayat Sebelumnya (QS. 3:66)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-068 - QS. Ali 'Imran Ayat 68.html">Ayat Berikutnya (QS. 3:68) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 3 (Ayat 64–101): Dialog Universal & Debat Kritis Ahli Kitab: Kalimatun Sawā' & Millah Ibrāhīm</span>
+        <span class="badge">Klaster 2 (Ayat 65–68): Dekonstruksi Klaim Sektarian Ahli Kitab atas Nabi Ibrahim & Proklamasi Hanifiyyah-Islamiyyah</span>
+        <span class="badge">14 Kata | 60 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 67</h1>
+    <div class="transliteration">
+        "Mā kāna Ibrāhīmu yahūdiyyaw-wa lā naṣhrāniyyaw-wa lākin kāna ḥanīfam-muslimā(n), wa mā kāna minal-musyrikīn(a)."
+    </div>
+    <div class="thematic-title">
+        Dekonstruksi Anakronisme Historis & Monopoli Sektarian Ahli Kitab: Proklamasi Otentisitas Millah Ibrahim Sebagai Ḥanīfan Musliman & Pemurnian Tauhid Universal dari Segala Bentuk Kemusyrikan
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 3 | Klaster 2: Sanggahan Epistemologis & Historis Terhadap Partikularisme Keagamaan Serta Penetapan Genealogi Spiritual Umat Tauhid)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        مَا كَانَ إِبْرَٰهِيمُ يَهُودِيًّا وَلَا نَصْرَانِيًّا وَلَـٰكِن كَانَ حَنِيفًا مُّسْلِمًا وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ ۝٦٧
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Bukanlah Ibrahim seorang Yahudi dan bukan (pula) seorang Nasrani, tetapi dia adalah seorang yang hanif (lurus membelakangi segala kesesatan menuju tauhid murni) lagi berserah diri secara paripurna (muslim kepada Allah semata); dan sekali-kali bukanlah dia termasuk golongan orang-orang yang mempersekutukan Allah (kaum musyrikin)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat 67 adalah dekrit konklusif Al-Qur'an yang melucuti klaim kepemilikan simbolik dan monopoli historis kaum Yahudi Madinah maupun kaum Nasrani Najran atas figur Bapak Para Nabi (<em>Abul-Anbiyā'</em>), Ibrahim AS. Setelah pada ayat 65 Al-Qur'an membongkar cacat nalar anakronistis mereka—bahwa Taurat dan Injil baru diturunkan ratusan hingga ribuan tahun sesudah wafatnya Ibrahim—maka ayat ini secara ontologis menafikan label-label sosiologis sektarian tersebut dari diri sang Khalilullah.
+    </p>
+    <p>
+        Peniadaan ini bukan sekadar koreksi nama atau mazhab, melainkan penetapan bahwa hakikat agama para nabi adalah satu kesatuan substansi transendental: <strong>Al-Ḥanīfiyyah</strong> (kecondongan mutlak kepada kebenaran seraya berpaling total dari kemusyrikan) dan <strong>Al-Islām</strong> (ketundukan dan penyerahan diri secara total kepada kehendak Allah). Klausa penutup <em>"wa mā kāna minal-musyrikīn"</em> merupakan palu godam teologis ganda: ia menyindir bangsa musyrik Quraisy yang mendaku pengikut tradisi Ibrahim seraya menyembah berhala di sekeliling Ka'bah, sekaligus menelanjangi penyimpangan dogma trinitas Nasrani dan kultus figur Uzair pada kaum Yahudi yang hakikatnya telah tergelincir ke dalam jurang politeisme.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>مَا كَانَ</strong><br>(<em>Mā kāna</em>)</td>
+                <td>
+                    <strong>Huruf Mīm & Alif:</strong> Makhraj mim dari kedua bibir (<em>asy-syafatain</em>) dengan merapat; mad thabi'i 2 harakat.<br>
+                    <strong>Huruf Kāf:</strong> Pangkal lidah bertemu langit-langit lunak; memiliki sifat <strong>Syiddah</strong> (tertahan suara) dan <strong>Hams</strong> (terhembus udara setelah lepas).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Pada alif setelah kaf dipanjangkan 2 harakat secara wajar.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dengan mad thabi'i 2 harakat pada <em>Mā</em> dan <em>Kāna</em>. Partikel <em>Mā</em> berfungsi sebagai instrumen negasi mutlak (<em>nafy muthlaq</em>) terhadap identitas kultural artifisial yang disematkan kepada Nabi Ibrahim.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>إِبْرَٰهِيمُ</strong><br>(<em>Ibrāhīmu</em>)</td>
+                <td>
+                    <strong>Hamzah Qatha':</strong> Kasrah murni dengan tahqiq.<br>
+                    <strong>Bā' Sākinah:</strong> Menghadirkan sifat <strong>Qalqalah Sughrā</strong> (getaran memantul yang kuat di makhraj bibir tanpa terpengaruh harakat lain).<br>
+                    <strong>Rā' Muraqqaqah:</strong> Dibaca tipis (tarqiq) karena berharakat kasrah.<br>
+                    <strong>Huruf Hā':</strong> Keluar dari aqshal-halq (pangkal tenggorokan) disertai desah nafas hams.<br>
+                    <strong>Mīm Madhmūmah:</strong> Dibaca tanpa tanwin karena berstatus <em>Mamnu' minash-Sharf</em> ('alamiyyah dan 'ujmah).
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (Termasuk 'Āṣhim, Nāfi', Ibnu Katsīr, Abū 'Amr, Ḥamzah, Al-Kisā'ī):</strong> Membaca <strong>Ibrāhīm</strong> (إِبْرَاهِيم) dengan huruf Yā' sukun setelah Ha'.<br>
+                    • <strong>Riwayat Hisyām 'an Ibni 'Āmir:</strong> Memiliki dua jalur riwayat dalam beberapa surah: membaca dengan Yā' (<em>Ibrāhīm</em>) atau membaca dengan Alif (<strong>Ibrāhām</strong> - إِبْرَاهَام). Dalam surah Ali 'Imran, wajah membaca dengan <em>Ibrāhīm</em> adalah yang masyhur dan diutamakan dalam Thayyibah dan Syathibiyyah. Variasi fonetik vokal ini mencerminkan dialek Semitik kuno yang sejalan dengan akar bahasa Aramaik-Ibrani purba tanpa mengubah esensi figur sang nabi.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>يَهُودِيًّا وَلَا</strong><br>(<em>Yahūdiyyaw-wa lā</em>)</td>
+                <td>
+                    <strong>Huruf Yā' & Hā':</strong> Yā' fathah, Hā' dhammah disusul Wāw mad thabi'i 2 harakat.<br>
+                    <strong>Yā' Musyaddadah:</strong> Fathah disertai sifat <strong>Nabr</strong> (penekanan artikulasi tajam agar tasydid terdengar jelas tanpa tergelincir menjadi mad).<br>
+                    <strong>Idghām bi Ghunnah / bi Ghayri Ghunnah:</strong> Pertemuan tanwin fathah dengan huruf Wawu pada kata berikutnya.
+                </td>
+                <td>
+                    • <strong>Mayoritas Sembilan Imam & Khallād 'an Ḥamzah:</strong> Membaca dengan <strong>Idghām bi Ghunnah</strong> (melebur tanwin ke dalam Wawu disertai dengung sempurna 2 harakat: <em>Yahūdiyyaw-wa lā</em>).<br>
+                    • <strong>Imam Khalaf 'an Ḥamzah:</strong> Membaca dengan <strong>Idghām bi Ghayri Ghunnah</strong> (melebur suara tanwin secara murni ke dalam huruf Wawu tanpa dengung rongga hidung sama sekali: <em>Yahūdiyyal-wa lā</em>). Variasi ini mempertegas kontinuitas ritme negasi ganda yang amat tangkas.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>نَصْرَانِيًّا وَلَـٰكِن</strong><br>(<em>Nashrāniyyaw-wa lākin</em>)</td>
+                <td>
+                    <strong>Huruf Nūn:</strong> Tarqiq murni.<br>
+                    <strong>Huruf Shād Sākinah:</strong> Menampilkan sifat <strong>Isti'lā'</strong> (pangkal lidah naik ke langit-langit), <strong>Iṭhbāq</strong> (lidah melekat menutup rongga langit), dan <strong>Shafīr</strong> (desis tajam yang kuat dan tebal).<br>
+                    <strong>Rā' Mufakhkhamah:</strong> Dibaca tebal karena berharakat fathah.<br>
+                    <strong>Yā' Musyaddadah:</strong> Memiliki sifat nabr.<br>
+                    <strong>Idghām Tanwīn ke Wāw:</strong> Mengikuti kaidah qira'at (dengan ghunnah bagi jumhur, tanpa ghunnah bagi Khalaf 'an Hamzah).
+                </td>
+                <td>
+                    • <strong>Jumhur Imam:</strong> Idgham bighunnah pada tanwin ke Wawu.<br>
+                    • <strong>Khalaf 'an Hamzah:</strong> Idgham bila ghunnah.<br>
+                    • <strong>Konsensus Seluruh Imam:</strong> Sepakat membaca <strong>Wa lākin</strong> dengan takhfif (nun sukun yang dimatikan, bukan <em>wa lākinna</em> bertasydid), menandakan fungsi istidrak murni yang tidak menasabkan isim berikutnya secara langsung melainkan merajut kalimat verba baru.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>كَانَ حَنِيفًا</strong><br>(<em>Kāna ḥanīfan</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Pertemuan Nūn Sākinah pada <em>wa lākin</em> dengan huruf Kāf; suara nun disamarkan di pangkal lidah disertai ghunnah tarqiq 2 harakat.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari wasathul-halq (tengah tenggorokan) dengan sifat hams dan rikhwah.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Huruf Ya' sukun didahului kasrah pada huruf Nun dipanjangkan 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca ikhfa' haqiqi pada nun sukun <em>wa lākin</em> saat washal ke <em>kāna</em>. Pengulangan kata <em>Kāna</em> di sini menegaskan konsistensi dan integritas jati diri spiritual Ibrahim sepanjang masa hidupnya.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>مُّسْلِمًا</strong><br>(<em>Muslimā</em>)</td>
+                <td>
+                    <strong>Idghām bi Ghunnah Kāmilah:</strong> Tanwin fathah pada huruf Fā' <em>ḥanīfan</em> bertemu dengan huruf Mīm; suara tanwin lebur secara total ke dalam makhraj mim disertai ghunnah akmal ma takun 2 harakat.<br>
+                    <strong>Huruf Sīn Sākinah:</strong> Menampakkan sifat <strong>Shafīr</strong>, hams, dan rikhwah yang mengalir jernih tanpa sengau.<br>
+                    <strong>Mad 'Iwadh (saat waqaf):</strong> Jika berhenti, dibaca 2 harakat. Saat washal, tanwin bertemu Wawu (idgham bighunnah bagi jumhur, bila ghunnah bagi Khalaf).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idgham bighunnah kamilah pada pertemuan tanwin <em>ḥanīfan</em> ke mim <em>muslimā</em>. Rangkaian fonetis yang mengalir lembut dari desis Sin menuju dengung Mim mencerminkan kepasrahan batin yang tuntas dan damai.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَمَا كَانَ مِنَ</strong><br>(<em>Wa mā kāna mina</em>)</td>
+                <td>
+                    <strong>Wāw al-'Athaf:</strong> Menghubungkan kalimat penafian akhir.<br>
+                    <strong>Mā an-Nāfiyah:</strong> Menafikan secara mutlak keterlibatan Ibrahim dalam kemusyrikan.<br>
+                    <strong>Fathah 'Āridhah pada Nūn:</strong> Huruf Nūn pada preposisi <em>min</em> diberi harakat fathah insidental (<em>makhraj 'āridh</em>) demi menghindari pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>) saat menyambung ke alif lam qamariyyah.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca fathah pada Nun <em>mina</em> untuk kelancaran fonotaktik bahasa Arab. Pengulangan partikel <em>Mā kāna</em> untuk ketiga kalinya dalam satu ayat menghadirkan ritme ketegasan hukum yang tidak menyisakan ruang keraguan sekecil apa pun.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>ٱلْمُشْرِكِينَ ۝٦٧</strong><br>(<em>Al-musyrikīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas dan terang.<br>
+                    <strong>Huruf Syīn Sākinah:</strong> Memiliki sifat <strong>Tafasysyī</strong> (menyebarnya hembusan udara secara luas di antara lidah dan langit-langit rongga mulut), hams, dan rikhwah.<br>
+                    <strong>Rā' Muraqqaqah:</strong> Dibaca tipis karena berharakat kasrah.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Karena waqaf di ujung ayat, Yā' mad sebelum Nūn sukun dibaca dengan durasi <strong>2, 4, atau 6 harakat</strong> disertai sifat tawassuth pada huruf Nūn yang disukunkan.
+                </td>
+                <td>
+                    • <strong>Seluruh Imam Sepuluh:</strong> Membaca mad 'aridh lis-sukun dengan pilihan qashr (2 harakat), tawassuth (4 harakat), atau thul (6 harakat) saat waqaf.<br>
+                    • <strong>Imam Warsy 'an Nāfi':</strong> Menjaga ketipisan (tarqiq) huruf Ra' kasrah secara konsisten dan menyempurnakan idzhar qamariyyah. Bunyi desah tafasysyi pada Syin sukun yang disusul penutupan fashilah Nun menghadirkan efek akustik pemisahan tegas antara tauhid sejati dan racun kemusyrikan.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbābun Nuzūl — Sengketa Sektarian Rabi Yahudi dan Uskup Nasrani di Hadapan Rasulullah ﷺ:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (No. 7149 & 7150), Imam Ibnu Abi Hatim dalam tafsirnya, dan Al-Wahidi dalam <em>Asbāb an-Nuzūl</em> melalui sanad yang bersambung dari Muhammad bin Abi Muhammad, dari 'Ikrimah atau Sa'id bin Jubair, dari <strong>Sahabat Abdullah bin Abbas r.a.</strong>:<br>
+        <em>"Ijtama'at nashārā Najrān wa aḥbāru yahūdil-Madīnah 'inda Rasūlillāhi ﷺ fa-tanāza'ū 'indah. Fa qālatil-aḥbār: Mā kāna Ibrāhīmu illā yahūdiyyā wa naḥnu 'alā dīnih! Wa qālatin-nashārā: Mā kāna Ibrāhīmu illā naṣhrāniyyā wa naḥnu 'alā dīnih! Fa anzallāhu ta'ālā fīhim: {Yā Ahlal-Kitābi lima tuḥājjūna fī Ibrāhīma wa mā unzilatit-Tawrātu wal-Injīlu illā mim ba'dih, afalā ta'qilūn...} ḥattā balagha qawlahu: {Mā kāna Ibrāhīmu yahūdiyyaw-wa lā naṣhrāniyyaw-wa lākin kāna ḥanīfam-muslimā, wa mā kāna minal-musyrikīn}."</em><br>
+        (Para pemuka Nasrani dari Najran dan para rabi Yahudi Madinah berkumpul di hadapan Rasulullah ﷺ, lalu mereka saling berdebat sengit memperebutkan figur Ibrahim. Para rabi Yahudi berteriak: <em>'Ibrahim tidak lain adalah seorang Yahudi dan kami berada di atas agamanya!'</em> Sementara tokoh-tokoh Nasrani membantah keras: <em>'Ibrahim tidak lain adalah seorang Nasrani dan kami berada di atas agamanya!'</em> Maka Allah menurunkan QS. Ali 'Imran: 65–67 untuk menelanjangi ketololan historis mereka dan menegaskan bahwa Ibrahim adalah seorang yang hanif lagi muslim, serta berlepas diri dari kaum musyrikin).<br>
+        <strong>Derajat Riwayat:</strong> Hasan dan diakui keshahihan substansinya oleh para pakar tafsir ma'tsur (Ibnu Katsir, As-Suyuthi dalam <em>Ad-Durr al-Mantsūr</em>).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Musnad Aḥmad (No. 2107) & Shahīh Al-Bukhārī (Kitāb al-Īmān) — Esensi Agama Yang Paling Dicintai Allah:</strong><br>
+        Diriwayatkan dari Sahabat Abdullah bin Abbas r.a., ia berkata:<br>
+        <em>"Qīla li-Rasūlillāhi ﷺ: Ayyul-adyāni aḥabbu ilallāh? Qāla: <strong>Al-Ḥanīfiyyatus-Samḥah!</strong>"</em><br>
+        (Ditanyakan kepada Rasulullah ﷺ: 'Agama manakah yang paling dicintai di sisi Allah?' Beliau menjawab: <strong>'Agama yang hanif (lurus di atas tauhid) lagi lapang dan penuh toleransi (samhah)!'</strong>).<br>
+        <strong>Derajat Hadits:</strong> Diriwayatkan secara ta'liq bertaraf jazm oleh Imam Al-Bukhari dalam <em>Shahīh</em>-nya, ditakhrij secara maushul dengan sanad hasan oleh Imam Ahmad dalam <em>Al-Musnad</em>, Ibnu Abi Syaibah dalam <em>Al-Mushannaf</em>, dan dinyatakan jayyid/hasan oleh Al-Hafizh Ibnu Hajar dalam <em>Fatḥ al-Bārī</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sunan At-Tirmidzī (No. 2995) dari Abdullah bin Mas'ud r.a. — Genealogi Spiritual Hakiki Nabi Ibrahim:</strong><br>
+        Rasulullah ﷺ bersabda menafsirkan keterkaitan ayat 67 dan ayat 68:<br>
+        <em>"Inna li-kulli nabiyyin wulātan minan-nabiyyīn, wa inna waliyyī minhum abī wa khalīlu Rabbī Ibrāhīm, tsumma qara'a: {Inna awlan-nāsi bi-Ibrāhīma lalladzīnat-taba'ūhu wa hādzan-nabiyyu wal-ladzīna āmanū, wallāhu waliyyul-mu'minīn}."</em><br>
+        (Sesungguhnya setiap nabi memiliki wali/kedekatan khusus di antara para nabi lainnya. Dan sesungguhnya waliku di antara mereka adalah ayahku dan kekasih Rabb-ku: <strong>Ibrahim AS</strong>. Kemudian Rasulullah ﷺ membaca firman-Nya: <em>'Sesungguhnya orang yang paling dekat dan paling berhak kepada Ibrahim adalah orang-orang yang mengikutinya dan Nabi ini (Muhammad) beserta orang-orang yang beriman, dan Allah adalah Pelindung bagi orang-orang mukmin'</em>).<br>
+        <strong>Derajat Hadits:</strong> Hasan menurut Imam At-Tirmidzi, dan disahihkan sanadnya oleh para ulama hadits mu'tabar.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Musnad Aḥmad (No. 15360) & Sunan An-Nasā'ī (No. 9829) — Dzikir Pagi Peneguh Millah Ibrahim:</strong><br>
+        Dari Sahabat Abdurrahman bin Abza r.a. dari Ubay bin Ka'ab r.a., bahwa Rasulullah ﷺ setiap pagi senantiasa melazimkan doa:<br>
+        <em>"Aṣhbaḥnā 'alā fiṭhratil-Islām, wa 'alā kalimatil-ikhlāṣh, wa 'alā dīni nabiyyinā Muḥammad ﷺ, <strong>wa 'alā millati abīnā Ibrāhīma ḥanīfam-muslimā, wa mā kāna minal-musyrikīn</strong>."</em><br>
+        (Kami memasuki waktu pagi di atas fitrah Islam, di atas kalimat ikhlas [tauhid], di atas tuntunan agama nabi kami Muhammad ﷺ, dan <strong>di atas millah ayah kami Ibrahim yang berdiri lurus (hanif) lagi berserah diri (muslim), dan sekali-kali bukanlah dia termasuk golongan orang-orang musyrik</strong>).<br>
+        <strong>Derajat Hadits:</strong> Sahih sanadnya sesuai standar Imam Muslim; ditakhrij pula oleh Ad-Darimi dan Ibnu Hibban.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar H-W-D (ه-و-د — يَهُودِيًّا / Yahūdiyyan):</strong><br>
+            Ahmad bin Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ه-و-d) menjelaskan bahwa poros semantik akar kata ini merujuk pada dua makna utama: ketenangan/kelemahlembutan (<em>as-sukūn wal-līn</em>) dan kembali secara bertahap (<em>ar-rujū' bi-rifq</em>). Dari makna ini lahir kata <em>Hāda – Yahūdu – Hawdan</em> yang bermakna bertaubat, sebagaimana kutipan ucapan kaum Musa dalam QS. Al-A'raf: 156: <em>"Inna hudnā ilayk"</em> (Sungguh kami bertaubat dan kembali kepada-Mu).<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> memaparkan dua teori leksikografis terkait nama Yahudi: pertama, diambil dari kata taubat tersebut; kedua, merupakan derivasi etimologis dari nama <strong>Yahūdzā (Judah)</strong>, putra tertua/keempat Nabi Ya'qub AS (Israel). Dalam transmisi bahasa Arab, huruf <em>Dzal</em> (ذ) diserap dan diarabkan (<em>ta'rīb</em>) menjadi huruf <em>Dal</em> (د) sehingga menjadi <em>Yahūdiyy</em>. Dengan demikian, sebutan <em>Yahūdiyyan</em> adalah label identitas partikular etno-religius yang baru tercipta generasi demi generasi setelah wafatnya Ibrahim dan pengukuhan hukum Taurat di Bukit Sinai. Menyebut Ibrahim sebagai Yahudi adalah kemustahilan etimologis dan kronologis.
+        </li>
+        <li>
+            <strong>2. Akar N-Sh-R (ن-ص-ر — نَصْرَانِيًّا / Naṣhrāniyyan):</strong><br>
+            Menurut <em>Maqāyīs al-Lughah</em>, akar kata (ن-ص-ر) menunjukkan poros pertolongan, pembelaan, dan pemberian sokongan (<em>al-i'ānah wal-imdād bil-khayr</em>). Jamak dari <em>Naṣhrān</em> adalah <em>Naṣhārā</em>. Para pakar bahasa Arab klasik mencatat dua asal-usul penyebutan kaum Nasrani:
+            <ul>
+                <li>Pendapat pertama: Dinisbatkan kepada komitmen kaum Hawariyyun saat menjawab seruan Nabi Isa AS dalam QS. Ali 'Imran: 52: <em>"Man anṣhārī ilallāh? Qālal-ḥawāriyyūna naḥnu anṣhārullāh"</em> (Siapakah yang akan menjadi penolong-penolongku untuk menegakkan agama Allah? Kaum Hawariyyun menjawab: Kamilah penolong-penolong agama Allah).</li>
+                <li>Pendapat kedua (filologis historis): Merupakan nisbah geografi kepada desa <strong>An-Nāṣhirah (Nazareth)</strong> di kawasan Galilea, tempat di mana Maryam dan Nabi Isa AS dibesarkan. Orang Arab menyebut para pengikut Al-Masih yang dinisbatkan ke kota ini sebagai <em>Naṣhrānī</em>. Keduanya membuktikan secara mutlak bahwa istilah ini lahir lebih dari 1.800 tahun setelah masa hidup Ibrahim AS.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. Akar H-N-F (ح-ن-ف — حَنِيفًا / Ḥanīfan):</strong><br>
+            Ibnu Faris mencatat keunikan luar biasa pada akar kata (ح-ن-ف): secara literal-fisik, <em>al-ḥanaf</em> bermakna <em>al-mayl</em> (kecondongan atau pembengkokan, seperti orang yang kedua telapak kakinya condong ke arah dalam). Namun dalam evolusi semantik spiritual Al-Qur'an dan bahasa Arab fashih, kata ini mengalami proses <em>Taqdīs</em> (sakralisasi semantik): <strong>Al-Ḥanīf</strong> adalah <strong>orang yang dengan sengaja dan tegas membengkokkan/memalingkan seluruh haluan eksistensinya dari segala bentuk kebatilan, distorsi sekte, dan sesembahan palsu, demi melangkah lurus di atas jalan Tauhid yang murni</strong>.<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menegaskan: <em>"Al-Ḥanīf: al-mā'ilu 'anil-bāṭhili ilad-dīnil-ḥaqq"</em>. Sifat hanif bukanlah sikap pasif yang sekadar tidak ikut-ikutan, melainkan resistensi aktif terhadap arus kemusyrikan di zamannya. Ibrahim dijuluki <em>Al-Hanif</em> karena ia meremukkan berhala kaumnya, menolak penyembahan bintang, bulan, dan matahari oleh kaum Babilonia, serta mengorientasikan kiblat batinnya semata-mata kepada Dzat Pencipta langit dan bumi.
+        </li>
+        <li>
+            <strong>4. Akar S-L-M (س-ل-م — مُسْلِمًا / Musliman):</strong><br>
+            Poros semantik akar (س-ل-م) adalah <em>as-salāmah</em> (keselamatan, kebersihan dari cacat, dan perdamaian) serta <em>al-istislām</em> (penyerahan diri tanpa syarat). Bentuk <strong>Musliman</strong> adalah isim fa'il dari fi'il <em>Aslama – Yuslimu – Islāman</em>, yang merefleksikan seseorang yang telah menundukkan kehendak pribadinya, merobohkan arogansi intelektualnya, dan menyerahkan kepatuhan lahir-batinnya secara paripurna hanya kepada kehendak Allah. Ibrahim adalah prototipe sejati seorang muslim, sebagaimana firman-Nya: <em>"Idz qāla lahū Rabbuhū aslim, qāla aslamtu li-Rabbil-'ālamīn"</em> (Ketika Tuhannya berfirman kepadanya: 'Tunduk patuhlah!' Dia menjawab: 'Aku tunduk patuh kepada Tuhan semesta alam', QS. Al-Baqarah: 131).
+        </li>
+        <li>
+            <strong>5. Akar Sy-R-K (ش-ر-ك — ٱلْمُشْرِكِينَ / Al-Musyrikīn):</strong><br>
+            Menurut <em>Maqāyīs al-Lughah</em>, akar (ش-ر-ك) berarti kebersamaan dua pihak atau lebih dalam satu kepemilikan atau hak (<em>khilāful-infirād</em>). Dalam terminologi syariat, <em>Isyrāk</em> adalah menyekutukan Allah: menyematkan sifat-sifat khusus ketuhanan, penciptaan, pengaturan, atau hak penyembahan mutlak kepada entitas selain-Nya. Pelabelan <em>Al-Musyrikīn</em> di penutup ayat menjadi demarkasi ontologis: siapa pun yang menyembah berhala, menuhankan Isa, mengultuskan Uzair, atau tunduk pada thaghut, telah terlempar keluar dari orbit spiritual Ibrahim.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>مَا</strong></td>
+                <td>Harf nafy mabnī 'alas-sukūn.</td>
+                <td>Huruf penafian murni (<em>nāfiyah ghayru 'āmilah</em>) yang membatalkan kandungan afirmatif fi'il naqis. La mahalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>كَانَ</strong></td>
+                <td>Fi'il mādhi nāqiṣh mabnī 'alal-fatḥ.</td>
+                <td>Rāfi' lil-ism wa nāṣhib lil-khabar. Mengikat waktu lampau esensial eksistensi Nabi Ibrahim.</td>
+            </tr>
+            <tr>
+                <td><strong>إِبْرَٰهِيمُ</strong></td>
+                <td>Ism 'alam 'ajamī (non-Arab), wazan fā'īl/fi'āl; mamnū' minash-sharf.</td>
+                <td><strong>Ismu Kāna</strong> marfū' bidh-dhammah azh-zhāhirah 'alā ākhirih tanpa tanwin karena terhalang oleh dua 'illat ('alamiyyah dan 'ujmah).</td>
+            </tr>
+            <tr>
+                <td><strong>يَهُودِيًّا</strong></td>
+                <td>Ism mansūb (nisbah) dengan Ya' nisbah musyaddadah; wazan fa'ūliyy.</td>
+                <td><strong>Khabaru Kāna al-Awwal</strong> manṣhūb bil-fatḥah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا</strong></td>
+                <td><em>Wāw</em>: Harf 'athaf.<br><em>Lā</em>: Harf nafy zā'id li-ta'kīdin-nafy.</td>
+                <td>Wawu menghubungkan ma'thuf dengan ma'thuf 'alaih; <em>Lā</em> mempertegas penafian agar tidak timbul persepsi bahwa Ibrahim memadukan sebagian sifat Yahudi dan Nasrani.</td>
+            </tr>
+            <tr>
+                <td><strong>نَصْرَانِيًّا</strong></td>
+                <td>Ism mansūb dengan Ya' nisbah; bentuk tunggal dari Nashara.</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā lafaz <em>yahūdiyyan</em>, manṣhūb bil-fatḥah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَـٰكِن</strong></td>
+                <td><em>Wāw</em>: Harf 'athaf/isti'nāf.<br><em>Lākin</em>: Harf istidrāk mukhaffafah.</td>
+                <td>Huruf istidrak yang diringankan (sukun) sehingga berstatus <em>muhmalah</em> (tidak menasabkan isim seperti <em>lākinna</em>). Berfungsi mengoreksi kesalahpahaman dan menetapkan kebenaran sejati.</td>
+            </tr>
+            <tr>
+                <td><strong>كَانَ</strong></td>
+                <td>Fi'il mādhi nāqiṣh mabnī 'alal-fatḥ.</td>
+                <td>Fi'il naqis kedua; <strong>Ismu Kāna</strong> berupa <em>dhamīr mustatir jawāzan</em> taqdīruhu <strong>Huwa</strong> (kembali kepada Nabi Ibrahim AS).</td>
+            </tr>
+            <tr>
+                <td><strong>حَنِيفًا</strong></td>
+                <td>Shifah musyabbahah bi-ismil-fā'il dari fi'il <em>hanafa</em>, wazan <em>fa'īl</em>.</td>
+                <td><strong>Khabaru Kāna al-Awwal</strong> (bagi kana kedua) manṣhūb bil-fatḥah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>مُّسْلِمًا</strong></td>
+                <td>Ism fā'il mufrad mudzakkar dari fi'il rubā'ī <em>aslama</em>, wazan <em>muf'il</em>.</td>
+                <td><strong>Khabaru Kāna ats-Tsānī</strong> manṣhūb bil-fatḥah (atau berkedudukan sebagai <em>Ḥāl mu'akkidah</em> bagi dhamir mustatir pada kana).</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا</strong></td>
+                <td><em>Wāw</em>: Harf 'athaf.<br><em>Mā</em>: Harf nafy mabnī 'alas-sukūn.</td>
+                <td>Menghubungkan klausul pembersihan mutlak dari kemusyrikan. La mahalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>كَانَ</strong></td>
+                <td>Fi'il mādhi nāqiṣh mabnī 'alal-fatḥ.</td>
+                <td>Fi'il naqis ketiga; <strong>Ismu Kāna</strong> berupa <em>dhamīr mustatir jawāzan</em> taqdīruhu <strong>Huwa</strong> (kembali kepada Ibrahim AS).</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ</strong></td>
+                <td>Harf jarr mabnī 'alal-fatḥ (harakat fathah insidental li-iltiqā'is-sākinayn).</td>
+                <td>Menunjukkan relasi asal atau keanggotaan kelompok (<em>li-tab'īdh</em> atau <em>li-bayānil-jins</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُشْرِكِينَ ۝٦٧</strong></td>
+                <td>Ism fā'il jam' mudzakkar sālim dari fi'il <em>asyraka</em>.</td>
+                <td>Ism majrūr bil-Yā' li-annahu jam' mudzakkar sālim. Jār wa majrūr <strong>Muta'alliq</strong> bi-maḥdzūf <strong>Khabaru Kāna</strong> (ditakdirkan: <em>kā'inan aw mustaqirran minhum</em>).<br>Seluruh jumlah <em>Mā kāna Ibrāhīmu...</em> adalah <strong>Jumlah Musta'nafah</strong> (kalimat deklaratif mandiri pemutus sengketa).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb al-Qaṣhr bil-Istidrāk ba'dan-Nafy (Pembatasan Mutlak via Koreksi Total):</strong><br>
+            Ayat ini mendayagunakan metode <em>Qaṣhr al-Qalb</em> (pembalikan klaim lawan) yang sangat kuat dalam balaghah Ma'ani. Klaim Yahudi dan Nasrani yang meyakini Ibrahim sebagai bagian dari kelompok sektarian mereka dipatahkan secara frontal dengan instrumen penafian <em>Mā kāna</em> dan <em>wa lā</em>, kemudian disusul oleh partikel istidrak <strong>wa lākin</strong> yang diiringi afirmasi sifat sejati: <em>kāna ḥanīfam-muslimā</em>. Pola ini membatasi Ibrahim semata-mata pada karakteristik ketauhidan universal, membersihkannya dari segala kontaminasi dogma sektarian lokal.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Tikrār Fi'il Nāqiṣh "Kāna" Tsalātsa Marrāt (Signifikansi Retoris Repetisi "Kāna" Tiga Kali):</strong><br>
+            Pengulangan kata <em>Kāna</em> sebanyak tiga kali dalam rentang satu ayat pendek (1. <em>Mā kāna Ibrāhīmu...</em>; 2. <em>Wa lākin kāna...</em>; 3. <em>Wa mā kāna minal-musyrikīn</em>) membawa muatan balaghah luar biasa:
+            <ul>
+                <li>Penegasan kemantapan status ontologis (<em>tsubūt wa taqrīr</em>): karakter Ibrahim bukanlah kondisi emosional sesaat, melainkan hakikat eksistensial permanen sepanjang hayatnya.</li>
+                <li>Simetri retoris yang sempurna: dua penafian (penafian terhadap label Yahudi/Nasrani dan penafian terhadap kemusyrikan) mengapit satu penetapan kokoh di tengah (penetapan status <em>ḥanīfan muslimā</em>). Struktur ini membentuk benteng teologis kiasmus (<em>chiastic balance</em>) yang melindungi kemurnian tauhid dari segala sisi.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Taqdīm "Yahūdiyyan" 'alā "Naṣhrāniyyan" (Presisi Kronologi Sejarah):</strong><br>
+            Al-Qur'an mendahulukan penafian kata <em>Yahūdiyyan</em> sebelum <em>Naṣhrāniyyan</em>. Ini merupakan keselarasan sempurna dengan realitas kronologis sejarah (<em>murā'ātut-tartīb az-zamānī</em>): kemunculan agama Yahudi mendahului agama Nasrani berabad-abad lamanya. Penyebutan yang tertib secara historis ini sekaligus menampar nalar kedua belah pihak: bagaimana mungkin kalian memperdebatkan sosok yang mendahului kalian semua, dan bagaimana mungkin kalian menuntut kepemilikan atas tokoh yang hidup sebelum kitab suci kalian ditulis?
+        </li>
+        <li>
+            <strong>Ilmu Bayan — At-Tanwīr bi-Izdawājiyyat "Ḥanīfam-Muslimā" (Dwitunggal Purifikasi & Afirmasi Batin):</strong><br>
+            Penyatuan diksi <strong>Ḥanīfan</strong> dan <strong>Musliman</strong> adalah puncak estetika ilmu Bayan dalam melukiskan arsitektur keimanan yang utuh:
+            <ul>
+                <li><em>Ḥanīfan</em> melambangkan proses <strong>At-Takhallī</strong> (pembersihan, pelepasan, dan penolakan radikal terhadap segala berhala, dogma palsu, dan kepalsuan masyarakat).</li>
+                <li><em>Musliman</em> melambangkan proses <strong>At-Taḥallī</strong> (penghiasan diri dengan kepasrahan total, komitmen ketaatan, dan ketundukan aktif kepada Allah semata).</li>
+            </ul>
+            Iman tanpa sifat <em>hanif</em> akan mudah berkompromi dengan kesyirikan terselubung; sebaliknya sifat <em>hanif</em> tanpa penyerahan diri (<em>islam</em>) hanya akan menjadi pemberontakan filosofis yang hampa arah. Keduanya dipadukan dalam diri Ibrahim sebagai teladan abadi.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — At-Ta'rīḍh al-Qātil bi-Ahlil-Kitāb wal-Musyrikīn (Sindiran Tajam Penelanjang Kemunafikan):</strong><br>
+            Klausa penutup <em>"wa mā kāna minal-musyrikīn"</em> memuat seni <em>Ta'rīḍh</em> (sindiran tingkat tinggi) yang meruntuhkan tiga kubu sekaligus:
+            <ul>
+                <li>Menyindir kaum kafir musyrikin Makkah yang membanggakan diri sebagai keturunan biologis Ibrahim dan pemelihara Ka'bah, seraya Al-Qur'an menegaskan: kalian tidak berhak atas Ibrahim karena kalian berbuat syirik!</li>
+                <li>Menyindir kaum Nasrani yang mengklaim bertauhid namun memuja Nabi Isa AS sebagai anak Tuhan dan oknum trinitas.</li>
+                <li>Menyindir kaum Yahudi yang terjebak dalam antropomorfisme kasar dan klaim bahwa Uzair adalah anak Allah (QS. At-Taubah: 30).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>I'jaz Fonetik & Harmoni Fashilah:</strong><br>
+            Secara fonetika, ayat ini dibuka dengan vokal panjang terbuka (<em>Mā kāna Ibrāhīmu...</em>) yang menghadirkan resonansi kelapangan dan ketegasan. Kemudian masuk ke ritme desis konsonan frikatif yang tajam pada huruf Shād <em>naṣhrāniyyan</em>, disusul kelembutan dengung ghunnah pada tanwin yang bertemu Wawu dan Mim (<em>ḥanīfam-muslimā</em>), dan diakhiri dengan desah luas huruf Syīn sukun (<em>al-musyrikīn</em>) yang dikunci oleh fashilah mad 'aridh lis-sukun huruf Nun. Transisi akustik ini menggetarkan kalbu: membawa pendengar dari ketegangan konfrontasi logis menuju kedamaian kepasrahan tauhid murni.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual Runtun dengan Ayat 64–66):</strong><br>
+            Arsitektur dialektika Klaster 2 Blok 3 tersusun secara sistematis melalui tangga argumentasi yang tak terbantahkan:
+            <ul>
+                <li><em>Ayat 64:</em> Membuka pintu rekonsiliasi universal melalui seruan <strong>Kalimatun Sawā'</strong>—mengajak Ahli Kitab kembali ke titik temu paling mendasar: menyembah Allah semata, tidak menyekutukan-Nya dengan apa pun, dan menolak deifikasi manusia atas manusia lain.</li>
+                <li><em>Ayat 65:</em> Mengarahkan kritik epistemologis yang telak terhadap pertengkaran sektarian Ahli Kitab: <em>"Yā Ahlal-Kitābi lima tuḥājjūna fī Ibrāhīma wa mā unzilatit-Tawrātu wal-Injīlu illā mim ba'dih, afalā ta'qilūn"</em>. Al-Qur'an mempertanyakan akal sehat mereka: bagaimana mungkin Ibrahim yang hidup jauh di masa lampau diklaim sebagai pemeluk agama yang kitab sucinya baru turun ribuan tahun kemudian?</li>
+                <li><em>Ayat 66:</em> Menelanjangi kebodohan metodologis mereka yang mendebat perkara yang sama sekali tidak memiliki dasar teks maupun bukti empiris sejarah (<em>hā antum hā'ulā'i ḥājajtum fīmā lakum bihī 'ilmun...</em>).</li>
+                <li><em>Ayat 67:</em> Hadir sebagai <strong>dekrit konklusif wahyu</strong> yang memotong seluruh perdebatan kusir tersebut: Ibrahim steril dari label Yahudi maupun Nasrani; Ibrahim adalah monoteis murni (<em>Ḥanīfan Musliman</em>).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis Perebutan Modal Simbolik Abrahamic Patrimony):</strong><br>
+            Di jazirah Arab abad ke-7 M, Nabi Ibrahim AS adalah <strong>modal simbolik (symbolic capital) tertinggi</strong> yang diperebutkan oleh seluruh entitas keagamaan:
+            <ul>
+                <li><strong>Kaum Yahudi Yatsrib (Bani Qainuqa', Bani Nadhir, Bani Quraizhah):</strong> Memandang Ibrahim sebagai bapak etno-religius eksklusif mereka. Mereka meyakini bahwa keselamatan Ilahi dan keterpilihan (<em>chosen people</em>) hanya mengalir melalui garis darah keturunan Israel, dan siapapun di luar lingkaran Yahudi dipandang sebagai bangsa rendahan (<em>goyim/ummiyyīn</em>).</li>
+                <li><strong>Kaum Nasrani Najran:</strong> Memandang Ibrahim sebagai bapak iman universal, namun mereka menuntut bahwa keselamatan sejati hanya dapat diraih apabila seseorang mengimani inkarnasi ketuhanan dalam diri Yesus Kristus.</li>
+                <li><strong>Kaum Musyrikin Quraisy Makkah:</strong> Mengklaim kepemilikan atas Ibrahim atas dasar genealogi biologis melalui Nabi Isma'il AS dan hak pengurusan Ka'bah yang dibangun oleh Ibrahim.</li>
+            </ul>
+            Pertemuan delegasi Najran dan rabi Yahudi di Masjid Nabawi memuncak menjadi ajang saling memonopoli figur Ibrahim demi menegaskan hegemoni teologis atas Rasulullah ﷺ. Di tengah perang klaim sektarian tersebut, QS. 3:67 turun memerdekakan Ibrahim dari kungkungan tribalisme agama. Al-Qur'an mendeklarasikan bahwa Ibrahim bukanlah milik ras Yahudi, bukan milik gereja Nasrani, dan bukan milik kaum musyrik Quraisy; Ibrahim adalah milik mereka yang menghidupkan substansi tauhid murni yang hanif dan berserah diri.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Argumentatif Menuju Ayat 68 dst):</strong><br>
+            Setelah ayat 67 meruntuhkan klaim historis Ahli Kitab, ayat 68 menyempurnakan konklusi dengan menetapkan <strong>Genealogi Spiritual Sejati (Spiritual Lineage)</strong>: <em>"Inna awlan-nāsi bi-Ibrāhīma lalladzīnat-taba'ūhu wa hādzan-nabiyyu wal-ladzīna āmanū, wallāhu waliyyul-mu'minīn"</em> (Sesungguhnya orang yang paling dekat dan paling berhak atas Ibrahim adalah orang-orang yang mengikutinya di zamannya, dan Nabi ini [Muhammad], beserta orang-orang yang beriman kepadanya).<br>
+            Al-Qur'an mengalihkan definisi pewaris sah kenabian: dari <em>pertalian darah biologis</em> atau <em>label mazhab</em> menjadi <strong>kesamaan orbit keimanan, integritas moral, dan keteladanan aksi (ittibā')</strong>. Umat Nabi Muhammad ﷺ ditegaskan sebagai pewaris sah risalah Ibrahimiah karena mereka memelihara fitrah tauhid, menegakkan salat berkiblat ke Ka'bah, menghidupkan syiar haji, dan mengorbankan ego di hadapan perintah Allah SWT.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam At-Tabari menegaskan bahwa ayat ini mematahkan hujah kedua belah pihak dengan dalil historis dan teologis yang kedap bantahan:<br>
+        <em>"Firman-Nya 'Mā kāna Ibrāhīmu yahūdiyyaw-wa lā naṣhrāniyyā': Allah membersihkan kekasih-Nya, Ibrahim, dari dusta yang diada-adakan oleh kaum Yahudi dan Nasrani. Bagaimana mungkin ia menjadi seorang Yahudi padahal bangsa Yahudi baru dinisbatkan kepada syariat Taurat yang diturunkan kepada Musa berabad-abad setelahnya? Dan bagaimana mungkin ia seorang Nasrani padahal agama Nasrani baru muncul setelah Al-Masih 'Isa putra Maryam? Adapun makna 'Wa lākin kāna ḥanīfam-muslimā': Beliau adalah sosok yang lurus, istiqamah di atas agama tauhid, condong meninggalkan seluruh peribadatan berhala dan agama-agama sesat di sekelilingnya, seraya menyerahkan diri secara mutlak (musliman) kepada perintah Rabb-nya dengan mentauhidkan-Nya tanpa persekutuan. Dan firman-Nya 'wa mā kāna minal-musyrikīn': Ini adalah pembongkaran terhadap kaum musyrikin Arab yang menyembah berhala seraya mengaku-aku berada di atas millah Ibrahim, sekaligus teguran keras bagi kaum Yahudi dan Nasrani yang tanpa sadar telah menyekutukan Allah melalui pendewaan terhadap para rahib dan nabi mereka."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menggarisbawahi bahwa Al-Qur'an membebaskan Ibrahim dari seluruh klaim kepemilikan sempit kelompok keagamaan manapun:<br>
+        <em>"Allah Ta'ala membantah orang-orang Yahudi dan Nasrani yang saling mengklaim bahwa Ibrahim adalah bagian dari golongan mereka. Allah membersihkannya dari kepalsuan itu dan menerangkan bahwa Ibrahim berada di atas jalan al-ḥanīfiyyah al-islāmiyyah. Makna 'Ḥanīfan': Yakni orang yang sengaja membelakangi kesyirikan menuju keimanan murni. Beliau tidak menyembah berhala, tidak mempersekutukan Allah, dan tidak tunduk pada doktrin-doktrin ciptaan manusia. Dan firman-Nya 'Wa mā kāna minal-musyrikīn' semakna dengan firman-Nya dalam Surah Al-An'am ayat 161–162: Katakanlah, sesungguhnya aku telah ditunjuki oleh Tuhanku kepada jalan yang lurus, yaitu agama yang benar, agama Ibrahim yang lurus, dan dia bukanlah termasuk orang-orang musyrik. Siapa saja yang ingin mengaku sebagai pengikut Ibrahim sejati, maka tolak ukurnya adalah keselarasan akidah dengan apa yang dibawa oleh Nabi Muhammad ﷺ."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi etimologis, hukum akidah, dan keabsahan gelar 'Muslim':<br>
+        <em>"Para ulama ushul menegaskan bahwa ayat ini merupakan dalil qath'i bahwa Islam adalah nama esensial bagi agama seluruh nabi (dīnul-anbiyā' wāḥid). Syariat dan hukum partikular mereka boleh berbeda sesuai tuntutan zaman, namun fondasi akidahnya adalah satu: Islam (ketundukan mutlak kepada Allah). Kata Al-Ḥanīf pada asalnya bermakna al-mā'il (orang yang miring/condong). Orang Arab menyebut orang yang kakinya bengkok dengan sebutan aḥnaf sebagai bentuk tafa''ul (pengharapan kesembuhan). Maka dalam agama, Hanif adalah orang yang condong menjauhi segala agama yang bengkok dan menyimpang menuju agama yang lurus sempurna. Penggunaan kata 'Musliman' membuktikan bahwa penamaan umat ini sebagai kaum Muslimin memiliki akar genealogi spiritual langsung dari Nabi Ibrahim AS, sebagaimana doanya: {Waj'alnā muslimayni laka wa min dzurriyyatinā ummatam-muslimatan lak} (QS. Al-Baqarah: 128)."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Az-Zamakhsyari (467–538 H) & Fakhruddin Ar-Razi (544–606 H):</strong><br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menyoroti keagungan uslub istidrak dalam meluruskan paradigma nalar:<br>
+        <em>"Mengapa Al-Qur'an mendatangkan huruf istidrak 'Wa lākin kāna ḥanīfam-muslimā'? Karena ketika Al-Qur'an menafikan identitas Yahudi dan Nasrani dari Ibrahim, benak pendengar yang dangkal bisa saja mengira bahwa Ibrahim berada di luar jalan kebenaran samawi. Maka seketika firman-Nya datang mengoreksi: justru Ibrahim berada di puncak hakikat agama samawi, yaitu Hanifiyyah dan Islam! Beliau lurus tanpa condong kepada penyimpangan Yahudi yang merombak syariat, dan tanpa condong kepada distorsi Nasrani yang menuhankan makhluk."</em><br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Mengembangkan hujah silogisme burhani (demonstratif rasional) yang mematikan:<br>
+        <em>"Klaim Ahli Kitab mengandung kontradiksi internal yang meruntuhkan argumen mereka sendiri (ijtima'un-naqīdhayn). Definisi esensial dari seorang Yahudi adalah orang yang membenarkan kenabian Musa dan berpegang pada hukum Taurat; sedangkan definisi Nasrani adalah orang yang membenarkan kenabian Isa dan berpegang pada Injil. Ibrahim hidup sebelum Musa dan Isa, maka eksistensi Ibrahim mendahului syarat-syarat tersebut. Menjadikan sesuatu yang terdahulu terikat pada sesuatu yang baru lahir di masa belakang adalah cacat logika kronologis yang fatal. Dengan demikian, Al-Qur'an membuktikan bahwa kebenaran doktrinal tidak boleh dipenjara dalam label-label temporal sejarah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur membedah dimensi sosiologi keagamaan dan dekonstruksi politik identitas:<br>
+        <em>"Penyebutan 'Mā kāna Ibrāhīmu yahūdiyyaw-wa lā naṣhrāniyyā' adalah pembebasan figur kenabian dari jebakan imperialisme mazhab (at-taharrur minal-ashabiyyah ad-diniyyah). Kaum Yahudi dan Nasrani tidak sedang membela nilai-nilai moral luhur Ibrahim, melainkan sedang memperalat keagungan nama Ibrahim demi melegitimasi superioritas rasial dan institusi imamat mereka atas bangsa Arab. Al-Qur'an mendekonstruksi manipulasi politik identitas ini. Ibrahim ditampilkan bukan sebagai milik sebuah sekte tertutup, melainkan sebagai personifikasi universal dari fitrah tauhid manusia: siapa pun yang berhati jernih, membebaskan akalnya dari belenggu berhala sosial, dan berserah diri kepada Sang Pencipta, dialah pengikut sejati Ibrahim."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan gaya bahasa yang menyengat kesadaran pembaca:<br>
+        <em>"Orang Yahudi berbangga: 'Ibrahim bapak kami, maka surga milik kami!' Orang Nasrani membantah: 'Bukan, Ibrahim bapak kami!' Masing-masing memonopoli kebenaran hanya karena merasa punya cap dan merek agama. Datanglah ayat 67 ini menyapu bersih segala kesombongan merek itu! Ibrahim bukan Yahudi, bukan Nasrani. Ibrahim tidak berpartai dan tidak berkelompok menurut hawa nafsu manusia. Ibrahim adalah Hanif: jiwanya condong kepada kebenaran, otaknya merdeka dari menyembah benda dan manusia, hatinya bulat berserah diri kepada Allah (Muslim). Dan penutup ayat menegaskan: 'wa mā kāna minal-musyrikīn'. Alangkah malunya orang yang mengaku pengikut Ibrahim, tetapi masih menyembah patung, masih mempersekutukan Allah dengan jimat, uang, dan kekuasaan! Hakikat warisan Ibrahim adalah kemurnian tauhid, bukan kebanggaan silsilah darah!"</em><br>
+        • <strong>Prof. Dr. M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menggarisbawahi makna dinamis kata 'Musliman':<br>
+        <em>"Kata 'Musliman' dalam ayat ini menggunakan bentuk isim fa'il yang mengindikasikan kontinuitas dan dinamisme penyerahan diri. Ibrahim tidak sekadar menyandang status administratif sebagai muslim, tetapi hidupnya adalah manifestasi konkret dari kepasrahan total: saat diperintah meninggalkan anak-istri di lembah tandus, saat dilempar ke dalam kobaran api Namrud, hingga saat diperintahkan menyembelih putranya sendiri. Kepasrahan tanpa tapi inilah esensi Al-Islam. Ayat ini mengajarkan bahwa keselamatan di sisi Allah tidak diukur dari tempelan merek identitas di dahi seseorang, melainkan dari kedalaman komitmen ketundukan jiwanya kepada kebenaran Ilahi."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI mendudukkan QS. Ali 'Imran: 67 sebagai landasan literasi historis dan penguatan moderasi beragama. Ayat ini memberikan edukasi kritis bagi masyarakat beragama agar tidak terjebak dalam <em>truth claim</em> (klaim kebenaran sepihak) yang chauvinistis dan manipulatif. Penolakan Al-Qur'an terhadap anakronisme Yahudi dan Nasrani atas Nabi Ibrahim mengajarkan kita untuk jujur terhadap fakta sejarah dan objektif dalam berdialog. Al-Qur'an memandu umat manusia untuk menemukan 'kalimatun sawā'' melalui nilai-nilai universal Abrahamik: penegakan tauhid, perlindungan martabat kemanusiaan, penolakan tirani keagamaan, dan pembelaan terhadap kaum yang lemah.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Konsensus Mufassir / Ijma')</th>
+                <th>Dinamika Penekanan (Ikhtilaf Tanawwu' / Variasi Analisis)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakekat Penafian Label 'Yahūdiyyan wa Naṣhrāniyyan'</strong></td>
+                <td>Sepakat bahwa penafian ini berlandaskan pada fakta historis anakronisme (Ibrahim hidup jauh sebelum Taurat dan Injil diturunkan).</td>
+                <td>• At-Tabari & Ibnu Katsir: Menekankan bantahan tekstual atas perdebatan kongkret delegasi Najran dan rabi Yahudi.<br>• Fakhruddin Ar-Razi: Menekankan pembuktian silogisme nalar bahwa syarat terminologis mazhab tidak mungkin melompat ke masa lampau.</td>
+            </tr>
+            <tr>
+                <td><strong>Definisi Semantik Kata 'Al-Ḥanīf'</strong></td>
+                <td>Sepakat bahwa Hanif bermakna orang yang lurus di atas tauhid dan berpaling secara sadar dari seluruh bentuk kesesatan dan penyimpangan.</td>
+                <td>• Al-Qurthubi: Mengaitkannya dengan terminologi fikih sunat/khitan dan pensucian fisik-spiritual millah Ibrahim.<br>• Az-Zamakhsyari & Ibnu 'Asyur: Menggarisbawahi dimensi dinamisme mental yang resisten terhadap hegemoni berhala kultural.</td>
+            </tr>
+            <tr>
+                <td><strong>Kedudukan Kata 'Musliman' Bagi Nabi Ibrahim</strong></td>
+                <td>Sepakat bahwa Islam adalah esensi agama seluruh nabi sebelum lahirnya syariat penutup yang dibawa oleh Nabi Muhammad ﷺ.</td>
+                <td>• Ibnu Katsir & Buya Hamka: Menegaskan bahwa penamaan kaum muslimin berakar langsung dari doa Nabi Ibrahim di Ka'bah.<br>• Quraish Shihab: Membedakan antara Islam sebagai sikap batin eksistensial universal (<em>inqiyād</em>) dan Islam sebagai nama agama institusional formal.</td>
+            </tr>
+            <tr>
+                <td><strong>Arah Sasaran Klausa 'Wa mā kāna minal-musyrikīn'</strong></td>
+                <td>Sepakat bahwa klausul ini memvonis gugurnya klaim kepemilikan atas Ibrahim dari pihak mana pun yang mengotori tauhid dengan syirik.</td>
+                <td>• Mufassir Klasik (At-Tabari, Al-Qurthubi): Tertuju kepada musyrikin Quraisy penyembah patung dan penyimpangan trinitas Ahli Kitab.<br>• Mufassir Modern (Ibnu 'Asyur, Hamka): Memperluas sasaran pada segala bentuk sekularisme, kultus individu, dan pemberhalaan ego modern.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan psikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Sektarian-Tribal vs Pola Pikir Qur'ani (Hanifiyyah)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Sektarian-Tribal (Ego-Identitas Kelompok)</th>
+                <th>Pola Pikir Qur'ani (Ḥanīfan Musliman)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Parameter Standar Kebenaran</strong></td>
+                <td><strong>Label & Afiliasi Institusional:</strong> Menilai kebenaran berdasarkan merek kelompok, garis keturunan, seragam organisasi, atau cap mazhab lahiriah.</td>
+                <td><strong>Substansi & Keselarasan Tauhid:</strong> Menilai kebenaran berdasarkan kesesuaian objektif dengan wahyu Allah, bukti rasional, dan integritas kepasrahan batin.</td>
+            </tr>
+            <tr>
+                <td><strong>Sikap Terhadap Figur Otoritas Sejarah</strong></td>
+                <td><strong>Anachronistic Hijacking (Pembajakan Simbol):</strong> Mengklaim tokoh-tokoh besar masa lalu secara retroaktif demi membenarkan superioritas kelompok sendiri.</td>
+                <td><strong>Empathetic Emulation (Keteladanan Substantif):</strong> Meneladani nilai-nilai perjuangan sang tokoh tanpa memenjarakannya dalam sekat partikularisme modern.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons Terhadap Arus Kebatilan Mayoritas</strong></td>
+                <td><strong>Herd Conformity (Konformitas Buta):</strong> Tunduk pada konsensus kelompok atau tren sosial demi rasa aman semu dan penerimaan komunitas.</td>
+                <td><strong>Hanifiyyah Realignment (Penyelarasan Berani):</strong> Berani membelakangi kepalsuan mayoritas demi tegak lurus di atas poros kebenaran Ilahi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Anachronism Fallacy & Symbolic Usurpation (Jebakan Mengklaim Sejarah Demi Hegemoni Kelompok):</strong><br>
+            <em>Premis Filosofis:</em> Kekeliruan mendasar Ahli Kitab adalah anakronisme—memproyeksikan label dan struktur identitas kontemporer mereka ke masa ribuan tahun silam. Dalam teori kognisi modern, ini adalah bentuk <strong>Symbolic Usurpation</strong>: kecenderungan psikologis manusia untuk membajak simbol-simbol luhur (pahlawan, nabi, nilai moral) dan mengecapnya dengan logo institusi mereka demi mendapatkan legitimasi instan tanpa perlu bersusah payah meniru akhlak sang tokoh.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Jangan pernah mengukur integritas diri atau organisasi Anda dari sekadar klaim sejarah masa lalu ("kami pendiri organisasi ini", "leluhur kami ulama besar"). Ajukan pertanyaan audit kognitif: <em>"Apakah kita hari ini benar-benar menghidupkan integritas nilai-nilai luhur mereka, ataukah kita sekadar menjual nama besar mereka demi memburu rente kekuasaan dan prestise duniawi?"</em>
+        </li>
+        <li>
+            <strong>Mental Model 2: The Hanif Vector of Continual Realignment (Vektor Penyelarasan Batin Dinamis Menuju Kebenaran):</strong><br>
+            <em>Premis Filosofis:</em> Kata <em>Ḥanīf</em> (condong membelakangi kesesatan) mengajarkan bahwa keimanan sejati bukanlah posisi statis yang berhenti saat seseorang telah memiliki identitas formal, melainkan sebuah <strong>Vektor Dinamis yang terus-menerus mengoreksi diri</strong>. Sebagaimana pesawat terbang yang sistem kendali otomatisnya (<em>autopilot</em>) selalu melakukan ribuan mikro-koreksi sudut terbang agar tetap berada di jalur lintasannya di tengah terpaan angin badai, seorang <em>Hanif</em> senantiasa mendeteksi penyimpangan batiniahnya dan berbelok kembali menuju poros ketauhidan murni.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Ketika Anda menyadari bahwa lingkungan kerja, pergaulan sosial, atau budaya industri Anda mulai menuntut kompromi etika (seperti suap terselubung, kebohongan promosi produk, atau diskriminasi rekan kerja), aktifkan naluri <em>Hanif</em> Anda: beranilah membelakangi arus destruktif tersebut dan luruskan kembali orientasi hidup Anda kepada keridaan Allah semata.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengurai In-Group Bias via Kedamaian Islam</h3>
+    <p>
+        Secara neurokognitif, fanatisme kelompok yang menjangkiti para rabi Yahudi dan pendeta Najran bersumber dari fenomena <strong>In-Group Favoritism & Out-Group Derogation</strong> yang berakar di sirkuit limbik otak (terutama modulasi hormon oksitosin dan aktivitas amigdala). Ketika identitas kelompok diserang oleh fakta sejarah yang membatalkan klaim mereka, otak primitif mengaktifkan mekanisme pertahanan defensif: menolak fakta, berteriak mendebat tanpa ilmu, dan semakin membentengi diri dalam ilusi superioritas kelompok (<em>tribal bubble</em>).
+    </p>
+    <p>
+        QS. 3:67 hadir sebagai terapi dekonstruksi neuropsikologis melalui maqam <strong>Tazkiyatun Nafs</strong>. Penyebutan <em>"Ḥanīfam-Muslimā"</em> mengalihkan jangkar identitas batin manusia: dari keterikatan neurotik pada pengakuan kelompok sosial (<em>tribal validation</em>) menuju ketenangan eksistensial mutlak dalam penghambaan kepada Allah (<em>Transcendental Surrender</em>). Penyerahan diri secara paripurna (<em>Islam</em>) meredam gejolak ego dan melepaskan hormon dopamin spiritual yang melahirkan <em>Thuma'nīnah</em> (ketenteraman batin). Jiwa yang telah sampai pada maqam ini tidak lagi membutuhkan validasi semu label sektarian; ia merdeka dari rasa takut, steril dari benih kemusyrikan tersembunyi (<em>syirk khafī</em>), dan kokoh melangkah di atas fitrah kemanusiaan yang lurus.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Kontemporer: Komodifikasi Agama, Perang Merek Spiritual & Algoritma Polarisasi</h3>
+    <p>
+        Di abad ke-21, tragedi perebutan figur Ibrahim oleh Ahli Kitab mengalami metamorfosis digital yang sangat masif. Di era algoritma media sosial yang mendesain <em>Echo Chambers</em> dan <em>Filter Bubbles</em>, agama dan spiritualitas kerap kali direduksi menjadi komoditas identitas (<em>identity commodification</em>). Kita menyaksikan bagaimana berbagai sekte, kelompok politik, dan ormas keagamaan saling berebut "merek kebenaran": mengklaim diri sebagai satu-satunya representasi kaum saleh, seraya memvonis sesat kelompok lain hanya karena perbedaan simbol-simbol luar, seragam organisasi, atau preferensi politik elektoral.
+    </p>
+    <p>
+        Lebih tragis lagi, diplomasi global kontemporer melahirkan proyek politik normalisasi geopolitik yang membajak nama <strong>"Abraham Accords" (Kesepakatan Abraham)</strong>. Nama suci Nabi Ibrahim AS dieksploitasi oleh para elit kekuasaan untuk membenarkan penindasan sistemik, melegitimasi apartheid, dan membungkam jeritan hak-hak asasi bangsa Palestina yang terjajah. QS. 3:67 menampar keras kepalsuan diplomasi ini: Ibrahim tidak pernah bersekutu dengan para tiran dan penindas! Ibrahim adalah simbol abadi perlawanan terhadap Namrud, simbol pembebasan manusia dari thaghut, dan simbol pembelaan kaum mustadh'afin. Menggunakan nama Ibrahim untuk menutupi kezaliman global adalah bentuk manipulasi anakronistis paling menjijikkan di era modern.
+    </p>
+
+    <h3>2. Dekonstruksi Peradaban Modern: "Neo-Kemusyrikan Abad ke-21" & Millah Ibrahim Sebagai Solusi</h3>
+    <p>
+        Klausa penutup <em>"wa mā kāna minal-musyrikīn"</em> menyajikan kritik peradaban yang sangat tajam terhadap peradaban sekuler modern. Kemusyrikan modern tidak lagi berbentuk penyembahan berhala batu Lata dan Uzza, melainkan berwujud <strong>Neo-Politeisme Sistemik</strong>:
+    </p>
+    <ul>
+        <li><strong>Pemujaan Pasar Bebas & Konsumerisme (Mammonisme):</strong> Ketika akumulasi materi, margin profit korporasi, dan indeks saham dijadikan berhala tertinggi yang mengorbankan kelestarian ekologis bumi dan mengeksploitasi jutaan buruh miskin.</li>
+        <li><strong>Kultus Sains Reduksionis & Tekno-Sentrisme:</strong> Menganggap sains materialistik dan kecerdasan buatan (Artificial Intelligence) sebagai tuhan baru penyelamat eksistensi manusia, seraya mencampakkan bimbingan wahyu transendental dan moralitas ketuhanan.</li>
+        <li><strong>Pemberhalaan Negara & Ideologi Ekstremis (Statism & Ultranasionalisme):</strong> Menuntut kepatuhan buta warga negara terhadap hukum-hukum tirani yang bertentangan dengan hukum keadilan Ilahi.</li>
+    </ul>
+    <p>
+        Al-Qur'an memproklamasikan bahwa Millah Ibrahim adalah satu-satunya antitesis radikal yang mampu menyelamatkan kemanusiaan abad ke-21 dari jurang kehancuran peradaban. Millah Ibrahim mendidik manusia untuk menjadi pribadi yang <strong>Hanif</strong>: berani bersikap kritis terhadap hegemoni budaya konsumtif yang merusak, menolak tunduk pada tirani oligarki, dan mengembalikan kedaulatan hidup seutuhnya kepada Allah semata dalam bingkai kepasrahan yang damai (<em>Islam</em>).
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Melazimkan Deklarasi Identitas Fitrah Ibrahimiyyah Setiap Pagi:</strong><br>
+                Jadikan doa nabawiyyah dari Hadits Sahih riwayat Imam Ahmad sebagai wirid harian setiap kali mengawali hari setelah salat Subuh. Resapi maknanya dengan menghadirkan getaran kalbu: <em>"Aṣhbaḥnā 'alā fiṭhratil-Islām, wa 'alā kalimatil-ikhlāṣh, wa 'alā dīni nabiyyinā Muḥammad ﷺ, wa 'alā millati abīnā Ibrāhīma ḥanīfam-muslimā, wa mā kāna minal-musyrikīn."</em> Rutinitas mikro ini berfungsi sebagai kalibrasi spiritual harian: menolak racun sektarianisme, mengikis keangkuhan kelompok, dan menegakkan orientasi hidup lurus di atas tauhid murni sebelum melangkah ke dinamika duniawi.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Menegakkan Prinsip "Substance Over Label" dalam Evaluasi Profesional:</strong><br>
+                Saat Anda bertindak sebagai penilai, pimpinan rapat, HRD, pemilih dalam pemilu, maupun anggota masyarakat: tetapkan aturan keputusan tegas untuk <strong>tidak pernah menilai kompetensi atau integritas seseorang semata-mata dari merek organisasi, almamater, baju partai, atau latar belakang kelompoknya</strong>. Nilailah berdasarkan data objektif, kejujuran rekam jejak, profesionalitas, dan keselarasan moral perilakunya dengan nilai kebenaran. Matikan bias in-group nepotisme di lingkungan kerja Anda demi menghidupkan etos keadilan Ibrahimiah.
+            </li>
+            <li>
+                <strong>Komitmen Hidup Berkelanjutan — Audit Dekontaminasi Batin dari "Syirik Modern":</strong><br>
+                Sediakan waktu 20 menit pada akhir pekan untuk melakukan audit batin terhadap titik sandaran hidup Anda. Periksalah apakah rasa aman, rasa bangga, dan rasa takut Anda telah bergeser kepada makhluk: apakah Anda lebih takut kehilangan jabatan daripada murka Allah? Apakah Anda mengorbankan integritas tanda tangan audit keuangan demi mempertahankan karier? Jika terdeteksi adanya benih syirik tersembunyi (<em>syirk khafī</em>), segera lakukan taubat nasuha, cabut ketergantungan jiwa dari figur makhluk, dan kembalikan kepasrahan mutlak hanya kepada Allah Al-Wakīl.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Keikhlasan Identitas Keberagamaan:</strong> Apakah selama ini aku membela agamaku, ormas-ku, atau kelompok pengajianku murni karena kecintaan tulus kepada Allah dan Rasul-Nya, ataukah sejatinya aku sedang membela gengsi egoku sendiri yang merasa superior dan lebih suci dibanding orang lain di luar kelompokku?
+            </li>
+            <li>
+                <strong>Uji Daya Kritis "Hanifiyyah" di Tengah Tekanan Sosial:</strong> Sejauh mana keberanian nuraniku untuk tetap tegak di atas kebenaran objektif ketika keluarga besarku, rekan seprofesiku, atau lingkungan kantorku bersepakat melakukan kebiasaan yang manipulatif dan curang: apakah aku memilih hanyut dalam arus kompromi, ataukah aku berani menjadi seorang <em>Hanif</em> yang membelakangi kebatilan demi keridaan Allah?
+            </li>
+            <li>
+                <strong>Uji Hakikat Kepasrahan "Musliman" dalam Ujian Eksistensial:</strong> Ketika Allah menguji diriku dengan situasi yang merontokkan rencana masa depan, menuntut pengorbanan harta, atau menguji kesabaran jiwaku: apakah hatiku memberontak seraya mempertanyakan keadilan Allah, ataukah jiwaku tunduk bersujud dengan kepasrahan sejati sebagaimana kepasrahan Nabi Ibrahim di hadapan titah Rabb-nya?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Muqallibal-qulūbi tsabbit qulūbanā 'alā dīnik, wa yā Musharrifal-qulūbi sharrif qulūbanā 'alā thā'atik. Ya Allah, Tuhan Yang Membolak-balikkan kalbu, tetapkanlah hati kami di atas jalan agama-Mu yang lurus! Kami bersujud mengakui kefakiran dan keterbatasan nalar kami di hadapan keagungan hikmah firman-Mu. Bersihkanlah dada kami dari racun kefanatikan golongan yang sempit, dari penyakit ujub yang membanggakan garis keturunan dan label keagamaan, serta dari segala bentuk kemusyrikan tersembunyi yang mengotori ketauhidan kami. Ya Allah, karuniakanlah kepada kami sepercik keteguhan jiwa kekasih-Mu Ibrahim AS: jadikanlah hati kami senantiasa hanif—membelakangi seluruh godaan fatamorgana kebatilan dunia demi menghadap ke wajah-Mu yang Maha Mulia, dan jadikanlah seluruh hembusan nafas kami sebagai manifestasi kepasrahan seorang muslim sejati yang tunduk patuh tanpa keraguan. Naungilah hidup kami, keluarga kami, dan umat Islam seluruhnya di bawah panji kebenaran Millah Ibrahim, wafatkanlah kami dalam husnul khatimah di atas kalimat tauhid, dan himpunlah kami di akhirat kelak bersama para nabi, para shiddiqin, para syuhada, dan para shalihin. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-066 - QS. Ali 'Imran Ayat 66.html">&larr; Kembali ke Ayat 66 (QS. 3:66)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 67</strong> (Blok 3: Dialog Universal & Millah Ibrāhīm)</span>
+        <a href="003-068 - QS. Ali 'Imran Ayat 68.html">Lanjut ke Ayat 68 (QS. 3:68) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

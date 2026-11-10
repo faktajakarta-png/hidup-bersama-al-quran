@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-058 - QS. Ali 'Imran Ayat 58 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-057 - QS. Ali 'Imran Ayat 57.html">&larr; Ayat Sebelumnya (QS. 3:57)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-059 - QS. Ali 'Imran Ayat 59.html">Ayat Berikutnya (QS. 3:59) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 4 (Ayat 52–58): Makar Kaum Kafir, Pemeliharaan Ilahi ('Isa AS), Pengadilan Eskatologis & Legitimasi Risalah Adz-Dzikr Al-Ḥakīm</span>
+        <span class="badge">7 Kata | 31 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 58</h1>
+    <div class="transliteration">
+        "Żālika natlūhu 'alaika minal-āyāti waż-żikril-ḥakīm(i)."
+    </div>
+    <div class="thematic-title">
+        Rekapitulasi Transendental Kisah Al-Masih & Autentisitas Epistemologi Wahyu: Penegasan Al-Qur'an Sebagai Āyāt Ilāhiyyah dan Adz-Dzikr Al-Ḥakīm (Peringatan Yang Kokoh Penuh Hikmah)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 4: Penutupan Narasi 'Isa & Maryam, Kepastian Berita Gaib, serta Legitimasi Kenabian Muhammad ﷺ Menghadapi Skeptisisme Delegasi Najran)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ذَٰلِكَ نَتْلُوهُ عَلَيْكَ مِنَ ٱلْـَٔايَـٰتِ وَٱلذِّكْرِ ٱلْحَكِيمِ ۝٥٨
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Demikianlah (kisah agung dan hakikat sejarah tentang Maryam, Zakariya, Yahya, dan 'Isa ini), Kami membacakannya kepadamu (wahai Muhammad) sebagian dari tanda-tanda (kekuasaan dan kebenaran Kami) dan peringatan yang penuh hikmah (Al-Qur'an yang kokoh dan adil)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat 58 bertindak sebagai simpul penutup (<em>faṣhlul-khiṭhāb</em>) dari bentangan panjang narasi keluarga 'Imran yang dimulai sejak ayat 33. Kata tunjuk <strong>"Żālika"</strong> (Demikianlah / Itu) menggunakan bentuk isim isyarah jarak jauh untuk mengagungkan martabat kisah-kisah yang telah dipaparkan: pemeliharaan Maryam di mihrab, kelahiran Yahya dari rahim yang mandul, penciptaan mukjizat 'Isa tanpa bapak biologis, konspirasi pembunuhan, hingga peristiwa penyelamatan dan pengangkatan jasadnya ke langit malakut. 
+    </p>
+    <p>
+        Penggunaan kata kerja <strong>"Natlūhu"</strong> (Kami membacakannya) dengan kata ganti keagungan (<em>Dhamīr al-'Azhamah</em>) menegaskan bahwa informasi historis dan metafisik ini bukan hasil rekayasa literatur, bukan saduran manuskrip kuno, dan bukan pula hasil penyelidikan antropologis Nabi Muhammad ﷺ yang <em>ummi</em>. Ini adalah dikte langsung dari Allah SWT. Penegasan dua atribut kitab suci di ujung ayat—<strong>"Minal-Āyāt"</strong> (bukti-bukti rasional dan mukjizat nyata) serta <strong>"Adz-Dzikril-Ḥakīm"</strong> (peringatan yang sarat kebijaksanaan agung dan kebal dari distorsi)—menjadi fondasi epistemik mutlak sebelum Al-Qur'an melangkah ke pembuktian analogis Adam-'Isa pada ayat 59 dan tantangan sumpah kutukan (<em>Mubāhalah</em>) pada ayat 61.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ذَٰلِكَ</strong><br>(<em>Żālika</em>)</td>
+                <td>
+                    <strong>Huruf Żāl:</strong> Makhraj dari ujung lidah yang bertemu dengan ujung gigi seri atas. Memiliki sifat jahr, rikhwah, istifal, dan infitah.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada alif khanjariyyah setelah huruf Dzal.<br>
+                    <strong>Huruf Lām & Kāf:</strong> Lam dibaca tarqiq dengan kasrah sempurna; Kaf memiliki sifat syiddah yang diikuti pelepasan hams halus saat fathah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca dengan fathah pada Dzal, kasrah pada Lam, dan fathah pada Kaf tanpa ikhtilaf. Isim isyarah lil-ba'id ini secara konsensus para ahli nahwu berfungsi untuk <em>at-ta'zhīm</em> (mengagungkan objek yang ditunjuk).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>نَتْلُوهُ</strong><br>(<em>Natlūhu</em>)</td>
+                <td>
+                    <strong>Huruf Nūn:</strong> Tarqiq dengan harakat fathah murni.<br>
+                    <strong>Huruf Tā' Sākinah:</strong> Makhraj ujung lidah bertemu pangkal gigi seri atas; memiliki sifat syiddah (tertahannya suara) disusul hams (hembusan nafas lembut) tanpa berlebihan (tidak menyerupai huruf 'tsa' atau 'sin').<br>
+                    <strong>Wāw Mad:</strong> Mad thabi'i 2 harakat.<br>
+                    <strong>Hā' al-Kināyah:</strong> Dhammah pada ha' dhamir.
+                </td>
+                <td>
+                    • <strong>Jumhur Imam (termasuk 'Āṣhim riwayat Ḥafṣh):</strong> Membaca tanpa shilah pada Ha' dhamir saat washal (<em>natlūhu 'alayka</em>), karena huruf sebelum Ha' adalah sukun (Wawu mad) dan huruf sesudahnya berharakat ('Ain). Sesuai kaidah umum: Ha' kinayah yang didahului huruf mati tidak dibaca mad/shilah.<br>
+                    • <strong>Imam Ibnu Katsīr al-Makkī:</strong> Membaca dengan <strong>Shilah Hā'il-Kināyah ba'da sākin</strong> sepanjang 2 harakat saat washal (dibaca: <em>natlūhū 'alayka</em>), sesuai dengan kaidah ushul madzhab beliau yang selalu memberikan shilah pada ha' dhamir mudzakkar mufrad gha'ib apabila berada setelah huruf sukun dan sebelum huruf berharakat. Implikasi teologisnya: penekanan ritmis pada pemeliharaan tilawah wahyu yang berkelanjutan.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>عَلَيْكَ</strong><br>(<em>'Alaika</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Makhraj wasathul-halq (tengah tenggorokan) dengan sifat tawassuth dan jahr.<br>
+                    <strong>Harf Layyin:</strong> Huruf Ya' sukun didahului fathah pada Lam; dilafalkan lembut dan lentur tanpa goncangan maupun pemanjangan saat washal.<br>
+                    <strong>Kāf al-Khiṭhāb:</strong> Fathah dengan pelepasan hams tipis.
+                </td>
+                <td>
+                    Sepakat mutawatir sepuluh imam membaca dengan harf layyin dan fathah kaf khithab yang ditujukan secara khusus kepada junjungan Nabi Muhammad ﷺ, menegaskan eksklusivitas penerimaan wahyu langsung dari Allah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>مِنَ</strong><br>(<em>Mina</em>)</td>
+                <td>
+                    <strong>Huruf Mīm:</strong> Kasrah murni dengan sifat tarqiq.<br>
+                    <strong>Nūn Maftūḥah 'Āriḍhah:</strong> Huruf Nun yang asalnya sukun pada harf jarr <em>min</em> difathahkan untuk menghindari pertemuan dua huruf sukun (<em>iltiqā'us-sākinayn</em>) saat menyambung ke alif-lam sukun pada kata berikutnya.
+                </td>
+                <td>
+                    Konsensus mutawatir seluruh imam membaca fathah pada Nun <em>mina</em> saat washal menuju <em>al-āyāti</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱلْـَٔايَـٰتِ</strong><br>(<em>Al-Āyāti</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal dari kata <em>mina</em>.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas dan terang.<br>
+                    <strong>Mad Badal:</strong> Pertemuan Hamzah qatha' dengan huruf mad (Alif).<br>
+                    <strong>Alif Khanjariyyah:</strong> Mad thabi'i 2 harakat sebelum huruf Ta'.<br>
+                    <strong>Huruf Tā':</strong> Kasrah saat washal; jika berhenti (waqaf) berubah menjadi Ta' sukun dengan sifat hams yang nyata.
+                </td>
+                <td>
+                    • <strong>Imam Warsy 'an Nāfi':</strong> Membaca <strong>Mad Badal</strong> pada <em>al-āyāti</em> dengan tiga pilihan wajah durasi (<em>tsalātsat al-badal</em>): <strong>Qaṣhr (2 Harakat)</strong>, <strong>Tawassuṭh (4 Harakat)</strong>, atau <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>Sembilan Imam Lainnya (termasuk Ḥafṣh 'an 'Āṣhim):</strong> Membaca konsisten hanya dengan <strong>Qaṣhr (2 Harakat)</strong> pada mad badal.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَٱلذِّكْرِ</strong><br>(<em>Waż-Żikri</em>)</td>
+                <td>
+                    <strong>Wāw 'Aṭhaf:</strong> Fathah tarqiq.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur sempurna ke dalam huruf Żāl bertasydid kasrah dengan sifat rikhwah dan jahr.<br>
+                    <strong>Huruf Kāf Sākinah:</strong> Menampilkan sifat syiddah (menahan udara sejenak di pangkal lidah) disusul letupan hams halus.<br>
+                    <strong>Huruf Rā' Muraqqaqah:</strong> Dibaca <strong>Tarqīq (Tipis)</strong> saat washal karena berharakat kasrah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idgham syamsiyyah pada Dzal dan mentarqiqkan huruf Ra' kasrah saat washal. Kelembutan tarqiq pada Ra' menghasilkan resonansi ketundukan jiwa terhadap kalam Ilahi.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلْحَكِيمِ ۝٥٨</strong><br>(<em>Al-Ḥakīm</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Huruf Ḥā':</strong> Makhraj wasathul-halq dengan sifat hams dan rikhwah.<br>
+                    <strong>Huruf Kāf:</strong> Kasrah tarqiq bersambung ke Ya' mad.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Karena waqaf di akhir ayat, huruf Ya' mad sebelum Mim sukun dibaca dengan durasi 2, 4, atau 6 harakat disertai sifat <strong>Tawassuṭh</strong> pada huruf Mim yang disukunkan.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca mad 'aridh lis-sukun dengan pilihan qashr (2), tawassuth (4), atau thul (6) harakat saat waqaf, serta membaca kasrah pada Mim bila diwashalkan ke ayat 59.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbābun Nuzūl (Dialog Teologis Delegasi Kristen Najran):</strong><br>
+        Diriwayatkan oleh Ibnu Ishaq dalam <em>As-Sīrah an-Nabawiyyah</em>, Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (Jilid 3, hal. 162), dan Imam Al-Wahidi dalam <em>Asbāb an-Nuzūl</em> dari jalur Muhammad bin Abi Muhammad, dari Sa'id bin Jubair atau Ikrimah, dari Abdullah bin Abbas r.a.:<br>
+        Ketika 60 orang delegasi Kristen dari kawasan Najran (Yaman) yang dipimpin oleh tiga pembesar mereka—<strong>Al-'Āqib Abdul Masīḥ</strong> (pemimpin politik dan strategi), <strong>As-Sayyid Al-Ayham</strong> (bendahara dan administrator peradaban), serta <strong>Abū Ḥāritsah bin 'Alqamah</strong> (uskup agung, sarjana teologi, dan pembesar akademis gereja)—datang menemui Rasulullah ﷺ di Masjid Nabawi pada tahun 9/10 Hijriyah. Mereka terlibat dalam perdebatan dialektis intensif mengenai pribadi 'Isa Al-Masih. Mereka bertanya: <em>"Wahai Muhammad, mengapakah engkau mencela tuan kami 'Isa dan menyebutnya hanya sebagai seorang hamba?"</em> Rasulullah ﷺ menjawab: <em>"Sesungguhnya dia adalah hamba Allah dan rasul-Nya, serta kalimat-Nya yang disampaikan-Nya kepada Maryam."</em> Mereka menolak argumentasi tersebut seraya berkata: <em>"Pernahkah engkau melihat seorang manusia lahir ke dunia tanpa seorang bapak?"</em><br>
+        Maka Allah menurunkan rentetan firman-Nya dari permulaan Surah Ali 'Imran hingga lebih dari 80 ayat. Setelah menguraikan kebenaran sejati silsilah keluarga Maryam, kelahiran 'Isa, mukjizat-mukjizatnya, dan pembebasannya dari tiang salib (ayat 33–57), Allah menurunkan ayat 58 ini: <em><strong>"Żālika natlūhu 'alaika minal-āyāti waż-żikril-ḥakīm"</strong></em> sebagai maklumat pemutus bahwa rincian sejarah yang dibacakan oleh Muhammad ﷺ yang ummi adalah wahyu adikodrati dari Lauh Mahfuzh, membungkam segala dogma spekulatif para uskup Najran.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Sunan At-Tirmidzī (No. 2906), Musnad Aḥmad (No. 704), dan Sunan Ad-Dārimī (No. 3331) dari Sayyidina 'Alī bin Abī Ṭhālib r.a. — Eksistensi Adz-Dzikr Al-Ḥakīm:</strong><br>
+        Sayyidina 'Ali bin Abi Thalib r.a. meriwayatkan bahwa ia mendengar Rasulullah ﷺ bersabda:<br>
+        <em>"Innahā sata-kūnu fitnah!"</em> (Ketahuilah, sesungguhnya akan terjadi badai fitnah yang sangat dahsyat!). Aku bertanya: <em>"Fa-māl-makhraju minhā yā Rasūlallāh?"</em> (Lalu apakah jalan keluar darinya wahai Rasulullah?). Rasulullah ﷺ menjawab:<br>
+        <em>"Kitābullāh! Fīhi naba'u mā kāna qablakum, wa khabaru mā ba'dakum, wa ḥukmu mā baynakum. Huwal-faṣhlu laysa bil-hazl. Man tarakahū min jabbārin qashamahullāh, wa manib-taghal-hudā fī ghayrihī adhallahullāh. Huwa ḥablullāhil-matīn, <strong>wa huwad-dzikrul-ḥakīm</strong>, wa huwash-shirāṭhul-mustaqīm. Huwalladzī lā tazīghu bihil-ahwā', wa lā tal-tabisu bihil-alsinah, wa lā yasyba'u minhul-'ulamā', wa lā yakhlaku 'an katsratir-radd, wa lā tanqadhī 'ajā'ibuh..."</em><br>
+        (Kitabullah! Di dalamnya termaktub berita umat-umat sebelum kalian, kabar tentang masa depan setelah kalian, dan hukum pemutus perkara di antara kalian. Dia adalah kitab pemisah yang hakiki, bukan senda gurau. Siapa pun penguasa zalim yang mencampakkannya niscaya dihancurkan oleh Allah, dan siapa pun yang mencari petunjuk pada selainnya niscaya disesatkan oleh Allah. Dialah tali Allah yang amat kokoh, <strong>Dialah peringatan yang penuh hikmah (Adz-Dzikrul-Ḥakīm)</strong>, dan Dialah jalan yang lurus. Dengannya hawa nafsu tidak akan menyimpang, lisan tidak akan tergelincir, para ulama tidak akan pernah merasa kenyang mengkajinya, ia tidak akan pernah usang meski diulang jutaan kali, dan keajaiban ilmunya tidak akan pernah habis...).<br>
+        <strong>Derajat Hadits:</strong> Diriwayatkan dari berbagai jalur; Imam At-Tirmidzi menilainya gharib dari sanad Harits al-A'war, namun matan hadits ini memiliki <em>syawāhid</em> (penguat) yang sangat kokoh dalam <em>Shahīh Muslim</em> (No. 2408) dalam khutbah Ghadir Khum tentang Al-Qur'an sebagai <em>Hablullah</em> dan <em>Adz-Dzikr</em>.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar T-L-W (ت-ل-و — نَتْلُوهُ / Natlūhu):</strong><br>
+            Ahmad bin Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ت-ل-و) menegaskan bahwa prinsip semantik dasar dari akar kata ini adalah <em>ittibā'usy-syai'i syai'an</em> (mengikuti sesuatu di belakang sesuatu yang lain secara berurutan tanpa interupsi). Dikatakan dalam bahasa Arab: <em>talawtuhū</em> jika engkau berjalan persis membuntutinya. Dari akar inilah muncul kata <strong>Tilāwah</strong> (pembacaan Al-Qur'an). Bedanya dengan kata <em>qirā'ah</em> (yang sekadar menghimpun huruf dan melafalkannya), kata <em>tilāwah</em> selalu mengandung unsur ketundukan sistematis: membaca lafaz wahyu dengan mengikuti maknanya secara runtut, meresapi perintah dan larangannya, serta mengikutinya dengan tindakan konkret. Maka firman-Nya <em>"Natlūhu"</em> bermakna: <strong>"Kami mewahyukan dan membacakannya kepadamu kata demi kata, ayat demi ayat secara tersusun rapi, sahih, dan terpelihara mutlak dari campur tangan manusia."</strong>
+        </li>
+        <li>
+            <strong>2. Akar '-Y-Y (أ-ي-ي / ء-ي-ي — ٱلْـَٔايَـٰتِ / Al-Āyāt):</strong><br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> memaparkan bahwa <em>Al-Āyah</em> memiliki tiga dimensi semantik: <strong>Al-'Alāmah azh-zhāhirah</strong> (tanda pengenal yang sangat mencolok), <strong>Al-Mu'jizah</strong> (tanda kekuasaan luar biasa yang membungkam penentang), dan <strong>Al-Jamā'ah</strong> (kumpulan kalimat wahyu yang terpisah dari kalimat lainnya). Di dalam QS. 3:58, kata <em>Al-Āyāt</em> merangkum dua manifestasi sekaligus: <em>āyāt tanzīliyyah</em> (ayat-ayat Al-Qur'an yang diturunkan dengan mukjizat sastra tak tertandingi) dan <em>āyāt kawniyyah-tārīkhiyyah</em> (tanda-tanda kekuasaan Allah dalam penciptaan Isa tanpa bapak, penyembuhan penyakit kusta, dan pengangkatannya ke langit).
+        </li>
+        <li>
+            <strong>3. Akar Ż-K-R (ذ-ك-ر — ٱلذِّكْرِ / Adz-Żikr):</strong><br>
+            Berdasarkan <em>Maqāyīs al-Lughah</em>, akar kata ini bertumpu pada dua cabang besar: <em>ḥifzhusy-syai'i fil-qalb</em> (menjaga dan menyimpan memori kebenaran di dalam kalbu agar tidak diliputi kelalaian/nisyān) serta <em>as-syaraf wash-shīt</em> (kehormatan, kemuliaan, dan reputasi luhur yang diagungkan). Al-Qur'an dinamakan <strong>Adz-Żikr</strong> karena dua fungsi agung: ia menyadarkan fitrah manusia akan perjanjian primordialnya dengan Allah, dan ia menjadi sumber kehormatan serta kemuliaan peradaban bagi bangsa mana pun yang menjadikannya pedoman hidup (sebagaimana QS. Al-Anbiya': 10).
+        </li>
+        <li>
+            <strong>4. Akar Ḥ-K-M (ح-ك-م — ٱلْحَكِيمِ / Al-Ḥakīm):</strong><br>
+            Ibnu Faris merumuskan bahwa poros semantik dari (ح-ك-م) adalah <em>al-man'u minar-radzā'il wal-fasād</em> (mencegah keburukan, penyimpangan, dan kerusakan). Dari sinilah tali kekang kuda disebut <em>ḥakamah</em> karena ia mencegah kuda melompat liar ke jurang. Kata <em>Al-Ḥikmah</em> berarti meletakkan sesuatu pada tempatnya yang paling proporsional, adil, dan kokoh (<em>itqān</em>). Bentuk wazan <em>Fa'īl</em> (الحَكِيم) pada ayat ini mengandung makna ganda: bermakna <strong>Muḥkam</strong> (kitab yang terkonstruksi amat presisi, kebal dari kontradiksi, distorsi, dan campur tangan kebatilan) serta bermakna <strong>Ḥākim</strong> (hakim agung yang memutuskan sengketa teologis antara kaum Yahudi dan Nasrani dengan keadilan mutlak).
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ذَٰلِكَ</strong></td>
+                <td>Ism isyārah lil-ba'īd; tersusun dari <em>dzā</em> (isim isyarah), <em>lām</em> (li bu'dil-masāfah / ta'zhīm), dan <em>kāf</em> (harf khithāb).</td>
+                <td>Fī mahalli raf'in <strong>Mubtada'</strong> (Subjek kalimat pembuka). Isyarah ini menunjuk kepada seluruh mukjizat, hukum, dan kisah keluarga 'Imran yang telah dipaparkan pada ayat 33–57.</td>
+            </tr>
+            <tr>
+                <td><strong>نَتْلُوهُ</strong></td>
+                <td>Fi'il mudhāri' marfū' dari fi'il <em>talā - yatlū</em>; dhamīr mutakallim ma'al-ghayr <em>Naḥnu</em> mustatir wujūban; <em>Hā'</em> dhamīr muttaṣhil.</td>
+                <td>Fi'il mudhāri' marfū' bi-dhammah muqaddarah 'alal-wāw lin-tsiqal; <em>Hā'</em> fī mahalli nashbin <strong>Maf'ūl Bih</strong>. Seluruh jumlah fi'liyyah <em>(natlūhu)</em> fī mahalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>Żālika</em>. Kalimat ini adalah jumlah khabariyyah mustaqillah (kalimat deklaratif mandiri).</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَيْكَ</strong></td>
+                <td><em>'Alā</em> harf jarr; <em>Kāf</em> dhamīr khithāb mufrad mudzakkar mabni 'alal-fath.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> (terikat secara semantik dan sintaktis) langsung kepada fi'il <em>natlūhu</em>, mengkhususkan Nabi Muhammad ﷺ sebagai penerima mandat wahyu.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ ٱلْـَٔايَـٰتِ</strong></td>
+                <td><em>Min</em> harf jarr lil-tab'īdh (sebagian) atau lil-bayān (penjelas); <em>Al-Āyāt</em> isim jam' mu'annats sālim majrūr bil-kasrah.</td>
+                <td>Jār wa majrūr fī mahalli nashbin <strong>Ḥāl</strong> (keadaan) dari dhamīr maf'ūl bih <em>Hā'</em> pada <em>natlūhu</em> (artinya: Kami membacakannya kepadamu dalam keadaan ia berstatus sebagai bukti-bukti kebenaran), atau muta'alliq bi-fi'il <em>natlūhu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلذِّكْرِ</strong></td>
+                <td><em>Wāw</em> harf 'athaf; <em>Adz-Żikr</em> isim mufrad mudzakkar majrūr bil-kasrah.</td>
+                <td><strong>Ma'ṭhūf</strong> kepada <em>Al-Āyāt</em> majrūr bil-kasrah azh-zhāhirah 'alā ākhirih. 'Athaf sifat atas sifat untuk mengagungkan kedudukan Al-Qur'an.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْحَكِيمِ ۝٥٨</strong></td>
+                <td>Shifah musyabbahah bi'ismil-fā'il atau shighah fa'īl bimaknā muf'al (muḥkam).</td>
+                <td><strong>Na'at / Shifat</strong> bagi <em>Adz-Żikr</em> majrūr bil-kasrah azh-zhāhirah 'alā ākhirih. Menutup ayat dengan kesempurnaan fonetik dan semantik.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb al-Iltifāt (Pergeseran Perspektif Retorika Ilahi):</strong><br>
+            Terjadi pergeseran retorika yang amat dramatis (<em>Iltifāt</em>). Pada ayat 55–57, Allah menggunakan gaya khithab gaib dan pengadilan eskatologis mengenai nasib kaum kafir dan mukmin. Tiba-tiba di ayat 58, Allah mengalihkan arah pembicaraan secara langsung dan intim kepada Nabi Muhammad ﷺ secara personal (<em>'Alaika</em>) dengan memakai kata ganti keagungan <em>Natlūhu</em> (Kami membacakannya). Ini adalah teknik <em>Tatsbīt al-Fu'ād</em> (peneguhan kalbu rasul) di hadapan para uskup Najran: bahwa ia tidak sedang berdiri sendiri berdebat melawan pakar teologi Romawi dan Yaman, melainkan berada dalam naungan langsung Dzat Yang Menguasai seluruh sejarah semesta.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Isti'māl Ismil-Isyārah lil-Ba'īd fī Maqāmil-Qarīb (ذَٰلِكَ):</strong><br>
+            Meskipun ayat-ayat Al-Qur'an berada sangat dekat di lisan Nabi dan telinga pendengar, Allah tidak berfirman <em>"Hādzā"</em> (Ini), melainkan memilih <em>"Żālika"</em> (Itu / Demikianlah). Dalam kaidah balaghah, ini disebut <em>al-isyārah ilal-qarīb bi-shīghatil-ba'īd li-'uluwwil-manzilah wa rif'atid-darajah</em> (menunjuk sesuatu yang dekat dengan kata tunjuk jauh demi mengindikasikan keluhuran derajat, ketinggian martabat, dan kemuliaan status ontologis narasi tersebut yang melampaui jangkauan akal manusia biasa).
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah 'an Shidqin-Nubuwwah (Bukti Tak Terbantahkan Kenabian Muhammad ﷺ):</strong><br>
+            Pernyataan <em>"Natlūhu 'alaika"</em> adalah bentuk <strong>Kināyah</strong> yang sangat tajam untuk membuktikan kemukjizatan nubuwah. Fakta historis mencatat bahwa Muhammad ﷺ adalah seorang nabi <em>ummi</em> yang hidup di tengah lembah Makkah yang terisolasi dari tradisi teologi Skolastik, tidak membaca teks Ibrani kuno, dan tidak pernah mengkaji gulungan Injil Suryani. Bagaimana mungkin seorang nabi ummi mampu membedah sejarah keluarga 'Imran dengan begitu presisi, mengoreksi distorsi Konsili Nicea dan Talmud, jika bukan karena ia menerima dikte wahyu (<em>tilāwah Ilāhiyyah</em>)? Ini adalah bukti <em>I'jāz 'Ilmī wa Tārīkhī</em>.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-I'tilāf baynal-Lafzhi wal-Ma'nā & Fawāṣhil al-Qur'ān:</strong><br>
+            Keindahan badi' terpancar dari keharmonisan leksikal antara <strong>Al-Āyāt</strong> (bukti rasional, mukjizat fenomena) dan <strong>Adz-Dzikrul-Ḥakīm</strong> (peringatan batin, konstitusi hukum). Keduanya menyatukan nalar intelektual dan kesucian kalbu. Fashilah ayat ditutup dengan ritme huruf Mim sukun pada kata <em>Al-Ḥakīm</em>, menciptakan resonansi akustik yang megah, menenangkan, dan berwibawa, selaras dengan fashilah ayat 55 (<em>takhtalifūn</em>), 56 (<em>zhālimīn</em>), dan menyongsong ayat 59 (<em>kun fa-yakūn</em>).
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual dengan Narasi Ayat 33–57):</strong><br>
+            Ayat 58 adalah kulminasi dan kuncian struktural bagi seluruh drama teologis keluarga 'Imran. Blok 2 dibuka pada ayat 33 dengan deklarasi keterpilihan: <em>"Innallāhashtafe Ādama wa Nūḥan wa Āla Ibrāhīma wa Āla 'Imrāna 'alal-'ālamīn"</em>. Dari sana, Al-Qur'an memaparkan secara sinematik nazar ibunda Maryam, kelahiran Maryam, pengasuhan Zakariya, mukjizat kelahiran Yahya, kabar gembira Ruhul Qudus, kelahiran Al-Masih tanpa bapak, mukjizat berbicara di buaian dan menyembuhkan lepra, pembaiatan Hawariyyun, makar pembunuhan kaum Farisi, penyelamatan adikodrati 'Isa ke langit, serta nasib eskatologis manusia di akhirat (ayat 55–57). Maka ayat 58 hadir laksana stempel pengesahan langit: <em>"Semua rangkaian kisah menakjubkan yang baru saja kalian dengar ini bukanlah cerita rekaan atau mitos kuno, melainkan Kami sendiri yang membacakannya kepadamu wahai Rasul!"</em>
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis & Dialog dengan Delegasi Najran):</strong><br>
+            Konteks situasional ayat ini berakar pada dinamika diplomatik di Madinah pada penghujung era kenabian. Delegasi Kristen Najran tiba dengan jubah kebesaran sutra, salib emas, dan kebanggaan intelektual atas tradisi teologi monastik mereka. Mereka berargumen bahwa kelahiran 'Isa tanpa bapak adalah bukti tak terbantahkan bahwa 'Isa adalah anak Allah (<em>Ibnullāh</em>) atau salah satu dari oknum Trinitas. Al-Qur'an mematahkan logika tersebut dengan menyajikan fakta sejarah murni: 'Isa adalah hamba yang diciptakan dengan kalimat <em>Kun</em>. Ayat 58 menegaskan superioritas epistemik wahyu Islam: delegasi Najran menyandarkan keyakinannya pada tradisi lisan gereja yang telah terdistorsi oleh campur tangan politik imperium Romawi pasca-Konsili, sedangkan Nabi Muhammad ﷺ membacakan wahyu murni yang diturunkan langsung dari Allah melalui Malaikat Jibril tanpa distorsi sejarah sedikit pun.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Argumentatif Menuju Ayat 59–63):</strong><br>
+            Ayat 58 menjadi landasan pacu (<em>runway</em>) epistemologis sebelum Al-Qur'an melontarkan argumen rasional pamungkas yang paling mematikan pada ayat 59: <em>"Inna matsala 'Īsā 'indallāhi ka-matsali Ādam, khalaqahū min turābin tsumma qāla lahū kun fa-yakūn"</em> (Perumpamaan 'Isa di sisi Allah sama seperti Adam; Dia menciptakannya dari tanah lalu berfirman kepadanya: 'Jadilah!', maka jadilah ia). Logika silogisme Al-Qur'an dibangun bertingkat: setelah melegitimasi bahwa Al-Qur'an adalah <em>Adz-Dzikr Al-Ḥakīm</em> di ayat 58, Al-Qur'an menantang nalar delegasi Najran: jika 'Isa dianggap tuhan hanya karena tidak memiliki bapak, maka Adam jauh lebih berhak dipertuhankan karena ia diciptakan tanpa bapak dan tanpa ibu! Jika mereka tetap membangkang, Al-Qur'an menutup klaster ini dengan tantangan sumpah laknat (<em>Mubāhalah</em> pada ayat 61) dan proklamasi: <em>"Inna hādzā la-huwal-qaṣhaṣhul-ḥaqq"</em> (Sesungguhnya ini adalah kisah yang benar di ayat 62).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam At-Tabari menegaskan bahwa kata tunjuk <em>"Żālika"</em> mencakup seluruh khabar Ilahi mengenai 'Isa putra Maryam, ibunya, Zakariya, dan Yahya dari ayat 33 hingga ayat 57. At-Tabari menjelaskan:<br>
+        <em>"Firman Allah 'Natlūhu 'alaika' bermakna: Wahai Muhammad, Kami menurunkan berita-berita gaib ini kepadamu melalui lisan Jibril utusan Kami, agar menjadi hujah yang membungkam kaum Ahli Kitab dari kalangan Yahudi dan Nasrani yang memperdebatkan hakikat Al-Masih di hadapanmu. Berita ini bersumber dari 'Al-Āyāt', yakni tanda-tanda yang jelas atas kenabianmu, dan dari 'Adz-Dzikril-Ḥakīm', yakni Al-Qur'an yang diturunkan dari Lauh Mahfuzh yang sarat dengan hukum pemutus, membedakan kebenaran hakiki dari dongeng-dongeng palsu yang mereka ada-adakan."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menggarisbawahi posisi epistemik ayat ini sebagai pemisah antara narasi wahyu dengan kebatilan mitologis:<br>
+        <em>"Maksud ayat ini: Apa yang telah Kami ceritakan kepadamu wahai Muhammad mengenai perkara 'Isa, permulaan kelahirannya, ibundanya yang suci, serta akhir perkaranya ketika diangkat ke langit, adalah perkara yang Kami wahyukan kepadamu dari Lauh Mahfuzh tanpa ada keraguan sedikit pun. Ia adalah 'Minal-Āyāt', bukti-bukti mukjizat yang nyata, dan 'Adz-Dzikril-Ḥakīm', yakni Al-Qur'an yang di dalamnya tidak terdapat kebengkokan, tidak ada kerancuan, dan tidak ada kebatilan baik dari arah depan maupun belakangnya, diturunkan dari Dzat Yang Maha Bijaksana lagi Maha Terpuji."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi gramatika balaghah dan semantik sifat <em>Al-Ḥakīm</em>:<br>
+        <em>"Para ulama berselisih mengenai sifat Al-Ḥakīm pada frasa 'Adz-Dzikril-Ḥakīm' ke dalam dua jalur makna: Pertama, bermakna 'Al-Muḥkam' (yang terhindar dari cacat, kontradiksi, dan perubahan zaman), mengikuti pola fa'īl bimaknā muf'al. Kedua, bermakna 'Al-Ḥākim' (hakim agung yang memutuskan sengketa), karena Al-Qur'an bertindak mengadili perselisihan sengit antara orang Yahudi (yang menuduh 'Isa anak haram) dan orang Nasrani (yang menuduh 'Isa sebagai Tuhan). Al-Qur'an mendudukkan kebenaran pada posisi yang adil bahwa 'Isa adalah hamba dan rasul Allah. Penggabungan kata Āyāt dan Dzikr membuktikan bahwa Al-Qur'an menyapa akal pikiran manusia sekaligus menyucikan kalbunya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Az-Zamakhsyari (467–538 H) & Fakhruddin Ar-Razi (544–606 H):</strong><br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menyoroti struktur tata bahasa:<br>
+        <em>"Lafaz 'Żālika' berada pada posisi mubtada', sedangkan 'natlūhu' adalah khabarnya. Jika ditanyakan: Bagaimana mungkin sesuatu yang dibacakan berstatus sebagai tanda-tanda (minal-āyāt)? Jawabnya: Huruf 'min' di sini berfungsi li-tab'īdh (menunjukkan bagian); maknanya: sebagian dari Al-Qur'an yang tersusun dari ayat-ayat mukjizat. Dan 'Adz-Dzikril-Ḥakīm' disifati demikian karena ia penuh dengan hikmah-hikmah ketuhanan yang menakjubkan."</em><br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Mengembangkan hujah epistemologi filsafat kenabian:<br>
+        <em>"Mengetahui sejarah masa lampau yang sedemikian detail hanya dapat dicapai melalui dua cara: mempelajari buku-buku sejarah terdahulu di bawah bimbingan guru, atau melalui wahyu ilahiah. Semua orang Quraisy dan Ahli Kitab mengetahui secara pasti bahwa Rasulullah ﷺ tidak pernah berguru kepada siapa pun, tidak pernah membaca kitab Taurat maupun Injil, dan hidup di tengah masyarakat yang ummi. Ketika beliau memaparkan rincian sejarah keluarga 'Imran persis sesuai fakta hakiki dan meluruskan distorsi para rahib, nalar yang sehat dipaksa mengakui bahwa sumber informasi ini pastilah wahyu langsung dari Dzat Yang Mengetahui perkara gaib di langit dan di bumi."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur memberikan tinjauan retorika transisi wacana (<em>Takhalluṣh</em>):<br>
+        <em>"Ayat ini merupakan bentuk 'Tadzyl' (penutup simpul) dan transisi yang sangat indah dari pemaparan naratif sejarah menuju pemaparan argumen dialektis rasional. Penyebutan 'Natlūhu 'alaika' mengandung isyarat pemuliaan agung kepada Nabi Muhammad ﷺ: bahwa Allah-lah yang langsung membacakan wahyu ini kepadanya melalui malaikat-Nya. Penyifatan Al-Qur'an dengan 'Adz-Dzikril-Ḥakīm' bertujuan menyindir kaum Nasrani Najran: bahwa kitab-kitab Injil kanonik yang ada di tangan mereka telah dipenuhi oleh interpolasi dan perdebatan konsili manusia, sedangkan wahyu yang dibacakan kepada Muhammad adalah Dzikir yang terjaga kokoh (Ḥakīm) dari segala cacat sejarah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan getaran reflektif yang mendalam:<br>
+        <em>"Tegaklah bulu roma kita membaca ayat ini! Allah menyapa Rasul-Nya dengan penuh kasih sayang: 'Itulah dia, Kami yang membacakannya kepadamu.' Nabi Muhammad tidak perlu merasa gentar menghadapi kepandaian para pendeta Najran yang fasih berteologi filsafat. Di belakang Nabi ada Allah Yang Maha Mengetahui. Al-Qur'an adalah Dzikir yang penuh hikmah: semakin dibaca, semakin terang benderang akal pikiran, semakin luluh hati yang keras, dan semakin kokoh benteng keimanan menghadapi serbuan keraguan zaman."</em><br>
+        • <strong>Prof. Dr. M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menggarisbawahi integrasi kognitif wahyu:<br>
+        <em>"Kata 'Āyāt' menunjuk pada dimensi bukti-bukti rasional yang menuntut penalaran objektif, sedangkan 'Adz-Dzikr' menunjuk pada fungsi pengingat batin yang menyentuh nurani dan moralitas manusia. Al-Qur'an tidak sekadar memberikan informasi ilmiah-historis, melainkan menyajikan 'Dzikr Ḥakīm'—kebijaksanaan praktis yang menata kehidupan manusia agar selaras dengan kehendak Sang Pencipta."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI mendudukkan QS. Ali 'Imran: 58 sebagai landasan epistemologi Islam dalam studi komparasi agama. Al-Qur'an memposisikan dirinya sebagai <em>Mushaddiq</em> (pembenar nilai-nilai tauhid murni masa lalu) sekaligus <em>Muhaymin</em> (tolok ukur korektif atas teks-teks sebelumnya). Penegasan bahwa wahyu ini adalah <em>Adz-Dzikrul-Ḥakīm</em> membimbing umat beriman agar tidak terjebak dalam mitologi atau apokrifa yang tak berdasar, melainkan teguh berpegang pada wahyu otentik yang melahirkan peradaban berkeadilan dan berhikmah tinggi.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Konsensus Mufassir / Ijma')</th>
+                <th>Dinamika Penekanan (Ikhtilaf Tanawwu' / Variasi Analisis)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Cakupan Isyarat 'Żālika'</strong></td>
+                <td>Sepakat bahwa isim isyarah ini merujuk kepada seluruh rangkaian narasi agung keluarga 'Imran, Maryam, Zakariya, Yahya, dan Al-Masih 'Isa AS dari ayat 33 hingga 57.</td>
+                <td>• At-Tabari & Al-Baghawi: Menekankan fungsi pembongkaran kepalsuan akidah Ahli Kitab.<br>• Az-Zamakhsyari & Ibnu 'Asyur: Menekankan fungsi <em>at-ta'zhīm</em> (pengagungan status ontologis wahyu).</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat 'Tilāwah Ilāhiyyah' (Natlūhu)</strong></td>
+                <td>Sepakat bahwa pembacaan ini adalah pewahyuan murni dari Allah melalui perantara Malaikat Jibril kepada Nabi Muhammad ﷺ, bukan rekayasa akal nabi.</td>
+                <td>• Ibnu Katsir & Salaf: Penegasan sumber Lauh Mahfuzh.<br>• Fakhruddin Ar-Razi: Menjadikannya premis filosofis mukjizat <em>ummiyyah</em> nabi di tengah bangsa Arab.</td>
+            </tr>
+            <tr>
+                <td><strong>Kedudukan 'Minal-Āyāt'</strong></td>
+                <td>Sepakat bahwa ayat-ayat yang dimaksud adalah mukjizat tanda kekuasaan Allah yang membatalkan klaim penuhanan manusia.</td>
+                <td>• Al-Qurthubi: Berfungsi ganda sebagai ayat tanziliyyah (tekstual) dan ayat kauniyyah (keajaiban biologis).<br>• Quraish Shihab: Tanda-tanda yang menuntut penalaran kritis dan penyelidikan historis.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Sifat 'Al-Ḥakīm' pada Adz-Żikr</strong></td>
+                <td>Sepakat bahwa Al-Qur'an adalah kitab suci yang terbebas dari kesalahan, sarat dengan kebijaksanaan, dan menjadi rujukan tertinggi kehidupan.</td>
+                <td>• Jumhur Lughawiyyin: Bermakna <em>Al-Muḥkam</em> (yang kokoh tidak dapat diubah/dibatalkan).<br>• Al-Hasan Al-Bashri & Al-Qurthubi: Bermakna <em>Al-Ḥākim</em> (hakim pemutus yang mengadili pertikaian teologis antar-agama).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan neuropsikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Post-Truth / Sekuler Modern vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Post-Truth / Sekuler Modern</th>
+                <th>Pola Pikir Qur'ani (Adz-Dzikr Al-Ḥakīm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sumber Otoritas Epistemik</strong></td>
+                <td><strong>Relativisme & Viralitas Opini:</strong> Kebenaran diukur dari konsensus mayoritas semu, algoritma media sosial, atau narasi pihak yang memiliki kekuatan modal dan media.</td>
+                <td><strong>Jangkar Wahyu Transendental:</strong> Kebenaran berpijak pada <em>Āyātullāh</em> dan <em>Adz-Dzikril-Ḥakīm</em>; fakta sejati bersifat absolut, objektif, dan bersumber dari Dzat Pencipta realitas.</td>
+            </tr>
+            <tr>
+                <td><strong>Pemrosesan Informasi Historis</strong></td>
+                <td><strong>Dekonstruksionisme Skeptis:</strong> Menolak narasi mukjizat dan menganggap sejarah keagamaan semata-mata produk mitologi psikologis manusia purba.</td>
+                <td><strong>Verifikasi Ilahiah Otentik:</strong> Mengakui keterbatasan akal manusia dalam menembus tabir gaib masa lalu; menerima penuturan wahyu (<em>Natlūhu</em>) sebagai rekaman sejarah paling akurat.</td>
+            </tr>
+            <tr>
+                <td><strong>Integrasi Nalar dan Moral</strong></td>
+                <td><strong>Dikotomi Rasionalitas vs Spiritualitas:</strong> Memisahkan kecerdasan intelektual dari etika ketuhanan, melahirkan sains materialistik yang kering dari hikmah.</td>
+                <td><strong>Sintesis Āyāt & Ḥikmah:</strong> Menyatukan pembuktian bukti nyata (<em>Āyāt</em>) dengan kedalaman eling transendental (<em>Dzikr</em>) dan proporsionalitas tindakan etis (<em>Ḥakīm</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Epistemic Anchor Model (Model Jangkar Epistemik Wahyu):</strong><br>
+            <em>Premis Filosofis:</em> Di tengah lautan informasi abad modern yang dipenuhi manipulasi persepsi, disinformasi, dan propaganda politik, akal manusia yang otonom sangat mudah terseret arus distorsi kognitif (<em>cognitive biases</em>). Frasa <em>"Żālika natlūhu 'alaika minal-āyāti"</em> mengajarkan bahwa manusia membutuhkan <strong>Jangkar Epistemik Eksternal</strong> yang tidak terikat oleh keterbatasan ruang dan waktu—yakni wahyu Allah.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Sebelum mempercayai sebuah narasi besar, tren ideologi, atau fatwa peradaban, jadikan prinsip-prinsip muhkam Al-Qur'an sebagai saringan pertama (<em>primary filter</em>). Jangan jadikan opini populer sebagai hakim atas Al-Qur'an, melainkan jadikan Al-Qur'an sebagai hakim penilai atas validitas opini populer.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Dzikr-Hikmah Feedback Loop (Model Umpan Balik Zikir dan Hikmah):</strong><br>
+            <em>Premis Filosofis:</em> Istilah <em>"Adz-Dzikrul-Ḥakīm"</em> merangkum loop sibernetik penyucian jiwa: <strong>Dzikir</strong> (kesadaran mengingat Allah secara konstan) menghidupkan kepekaan nurani; nurani yang hidup melahirkan <strong>Hikmah</strong> (kemampuan bertindak tepat, proporsional, dan adil); tindakan yang berhikmah pada gilirannya memperdalam kedamaian dzikir kepada Allah.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Ketika Anda menghadapi dilema etika bisnis atau konflik kepemimpinan yang kompleks, jangan hanya mengandalkan perhitungan kalkulatif matematis. Ambil jeda kontemplatif untuk berdzikir mengingat Allah, tarik diri dari ego sesaat, lalu rumuskan solusi yang paling berhikmah (adil, maslahat, dan tidak melanggar syariat).
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengatasi Cognitive Dissonance via Tilawah</h3>
+    <p>
+        Secara neurobiologis, ketika manusia dihadapkan pada pertentangan antara keyakinan lama dengan bukti-bukti kebenaran baru (sebagaimana dialami delegasi Najran saat mendengar bantahan Al-Qur'an atas ketuhanan 'Isa), otak mengalami kondisi <strong>Disonansi Kognitif (Cognitive Dissonance)</strong> yang memicu stres tinggi pada anterior cingulate cortex (ACC) dan memicu aktivasi defensif pada amigdala. Respon primitif manusia dalam kondisi ini adalah penyangkalan keras (<em>denial</em>), rasionalisasi palsu, atau kemarahan.
+    </p>
+    <p>
+        QS. 3:58 bekerja sebagai <strong>terapi neuro-spiritual dan stabilisator kalbu (tazkiyatun nafs)</strong>: Kalimat <em>"Żālika natlūhu 'alaika minal-āyāti waż-żikril-ḥakīm"</em> menghadirkan otoritas transendental yang menenangkan gejolak defensif ego. Penamaan Al-Qur'an sebagai <em>Dzikr</em> (pengingat) mengembalikan koneksi memori ruhani manusia kepada fitrah asali di alam ruh. Sedangkan sifat <em>Al-Ḥakīm</em> mengaktifkan prefrontal korteks—pusat penalaran logis tingkat tinggi—untuk menerima kebenaran tanpa resistensi emosional. Tilawah wahyu yang dilantunkan dengan tartil merangsang sekresi gelombang alfa dan endorfin, mentransformasikan ketegangan debat menjadi ketundukan jiwa yang damai (<em>sakīnah</em>).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Kontemporer: Krisis Post-Truth, Tsunami Infodemik & Manipulasi Algoritma</h3>
+    <p>
+        Dunia abad ke-21 tengah terperosok ke dalam era <strong>Post-Truth (Pascakebenaran)</strong>: suatu kondisi sosiologis di mana fakta objektif memiliki pengaruh yang jauh lebih lemah dalam membentuk opini publik dibandingkan daya tarik emosi dan keyakinan personal. Dengan ledakan teknologi kecerdasan buatan (<em>Generative AI</em>), video manipulatif (<em>Deepfake</em>), dan perang narasi algoritmik di media sosial, batas antara kebenaran historis dengan kebohongan publik telah runtuh secara sistematis. Manusia modern mengonsumsi ribuan gigabyte informasi setiap detik, namun mengalami kepunahan kebijaksanaan (<em>data rich, wisdom poor</em>).
+    </p>
+    <p>
+        Dalam lanskap peradaban yang penuh ilusi siber ini, QS. 3:58 berdiri kokoh sebagai mercusuar penyelamat. Sebagaimana Al-Qur'an membongkar fabrikasi teologis berabad-abad mengenai pribadi 'Isa AS di hadapan delegasi Najran, Al-Qur'an hari ini memanggil manusia untuk keluar dari jerat <em>echo chamber</em> dan <em>bubble filter</em> algoritma digital. Tanpa bersandar pada <em>Adz-Dzikrul-Ḥakīm</em>, masyarakat kontemporer akan terus diperbudak oleh disinformasi massal dan perang asimetris kognitif.
+    </p>
+
+    <h3>2. Dekonstruksi Peradaban Modern: Pemisahan Sains (Āyāt) dari Kebijaksanaan Moral (Ḥikmah)</h3>
+    <p>
+        Tragedi terbesar peradaban sekuler Barat modern adalah sekularisasi ilmu pengetahuan: memisahkan eksplorasi tanda-tanda alam materi (<em>Āyāt Kauniyyah</em>) dari panduan moral dan kebijaksanaan transendental (<em>Adz-Dzikr Al-Ḥakīm</em>). Hasilnya adalah kemajuan teknologi yang mengerikan: rekayasa senjata pemusnah massal, kecerdasan buatan tanpa etika humanis, eksploitasi alam liar yang memicu krisis iklim katastrofik, dan teknologi biomedis yang merusak tatanan keluarga alami.
+    </p>
+    <p>
+        Al-Qur'an menyatukan kembali kedua entitas tersebut dalam satu tarikan nafas: <em>"Minal-Āyāti waż-Żikril-Ḥakīm"</em>. Kemajuan ilmu pengetahuan dan teknologi (<em>Āyāt</em>) harus senantiasa diikat oleh tali zikir dan nilai kebijaksanaan ilahiah yang adil (<em>Ḥikmah</em>). Sains tanpa dzikir melahirkan kezaliman tekno-tirani; sedangkan spiritualitas tanpa nalar ayat melahirkan kejumudan mistisisme yang pasif.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Protokol 'Tabayyun 3 Lapis' Sebelum Transmisi Informasi:</strong><br>
+                Terapkan protokol verifikasi ketat berbasis <em>Adz-Dzikrul-Ḥakīm</em> terhadap setiap berita, pesan berantai WhatsApp, atau konten media sosial sebelum Anda menyebarkannya. Tanyakan tiga hal dalam waktu 3 menit: 1) <em>Apakah informasinya valid dan faktual (Āyāt)?</em> 2) <em>Apakah menyebarkannya mengingatkan kepada Allah dan kebaikan, bukan memicu kebencian (Dzikr)?</em> 3) <em>Apakah waktu dan caranya bijaksana serta membawa maslahat nyata (Ḥakīm)?</em> Jika salah satu tidak terpenuhi, hapus pesan tersebut seketika.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Audit Epistemik Mingguan Asupan Pikiran:</strong><br>
+                Sediakan waktu 30 menit setiap malam Ahad untuk melakukan audit terhadap apa yang Anda baca, tonton, dan dengarkan selama sepekan. Batasi konsumsi berita sensasional dan konten receh media sosial. Tetapkan target terukur: minimal 1 jam interaksi berkualitas setiap hari membaca Al-Qur'an beserta kajian tafsir analitisnya, guna menjaga agar 'sistem operasi' kognitif Anda selalu terkalibrasi oleh <em>Adz-Dzikr Al-Ḥakīm</em>.
+            </li>
+            <li>
+                <strong>Komitmen Hidup Berkelanjutan — Menjadi Duta Hikmah dalam Menyelesaikan Konflik:</strong><br>
+                Ketika terjadi perselisihan pendapat yang tajam di lingkungan keluarga, organisasi kerja, atau jamaah masyarakat, tolak untuk terlibat dalam perdebatan emosional (debat kusir). Terapkan karakter <em>Al-Ḥakīm</em>: bicaralah hanya dengan argumen objektif berbasis data (<em>āyāt</em>), gunakan bahasa yang santun dan mengingatkan pada kebenaran (<em>dzikr</em>), serta hadirkan solusi kompromi yang adil dan menghentikan perpecahan.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Otoritas Rujukan Jiwa:</strong> Ketika aku menghadapi kebimbangan moral dan tekanan sosial di dunia modern, ke manakah hatiku pertama kali mencari rujukan pembenaran: kepada tren opini mayoritas netizen yang fana, ataukah kepada ketetapan Al-Qur'an sebagai <em>Adz-Dzikrul-Ḥakīm</em>?
+            </li>
+            <li>
+                <strong>Uji Kualitas Interaksi dengan Kalamullah:</strong> Apakah interaksiku dengan Al-Qur'an selama ini baru sebatas pelafalan fonetik di bibir tanpa pemahaman (sekadar membaca), ataukah telah naik kelas menjadi <em>Tilāwah Hakiki</em>—membaca seraya mengikuti petunjuknya, mentadabburi maknanya, dan mengamalkan hukum-hukumnya dalam keputusan hidupku?
+            </li>
+            <li>
+                <strong>Uji Keseimbangan Nalar dan Hikmah:</strong> Apakah pengetahuan, gelar akademis, dan wawasan yang kumiliki telah melahirkan kepribadian yang bijaksana (<em>ḥakīm</em>), rendah hati, dan penuh kasih sayang, ataukah justru menjadikanku sosok yang arogan, gemar berdebat, dan gemar merendahkan orang lain?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Munazzilal-Kitāb, yā Mujriyas-Saḥāb, yā Hazimal-Aḥzāb! Ya Allah, Dzat Yang telah membacakan wahyu-Nya kepada kekasih-Mu Muhammad ﷺ sebagai tanda-tanda kebesaran yang nyata dan peringatan yang penuh hikmah! Kami memohon kepada-Mu dengan perantaraan keagungan Adz-Dzikril-Ḥakīm: Jadikanlah Al-Qur'an Al-'Azhīm sebagai musim semi di dalam kalbu kami, cahaya di dalam dada kami, pelenyap kesedihan duka lara kami, dan pembimbing langkah hidup kami di tengah gelapnya fitnah zaman. Hiasilah akal pikiran kami dengan ketajaman memahami ayat-ayat-Mu, penuhilah jiwa kami dengan kelaziman berdzikir mengingat-Mu, dan anugerahilah kami mutiara hikmah dalam setiap perkataan, sikap, dan keputusan kami. Selamatkanlah kami dari kesesatan relativisme moral dan dusta peradaban, kokohkanlah keimanan kami di atas jalan tauhid para nabi, dan kumpulkanlah kami kelak di hari kiamat di bawah naungan syafaat Rasulullah ﷺ dan kemuliaan Kitab-Mu yang suci. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-057 - QS. Ali 'Imran Ayat 57.html">&larr; Kembali ke Ayat 57 (QS. 3:57)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 58</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-059 - QS. Ali 'Imran Ayat 59.html">Lanjut ke Ayat 59 (QS. 3:59) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

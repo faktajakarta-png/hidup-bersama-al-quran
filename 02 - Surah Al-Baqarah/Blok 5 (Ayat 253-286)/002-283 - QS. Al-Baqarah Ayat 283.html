@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-283 - QS. Al-Baqarah Ayat 283 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-282 - QS. Al-Baqarah Ayat 282.html">&larr; Ayat Sebelumnya (QS. 2:282)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-284 - QS. Al-Baqarah Ayat 284.html">Ayat Berikutnya (QS. 2:284) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 5 (Ayat 253–286) | Klaster 5: Tauhid Finansial, Regulasi Muamalah, Rahn &amp; Integritas Kesaksian</span>
+        <span class="badge">32 Kata | 140 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 283</h1>
+    <div class="transliteration">
+        "Wa in kuntum 'alā safarin wa lam tajidū kātiban fa-rihānun maqbūḍah(tun), fa-in amina ba'ḍukum ba'ḍan fal-yu'addil-ladzī'tumina amānatahū wal-yattaqillāha rabbah(ū), wa lā taktumusy-syahādah(ta), wa may yaktumhā fa-innahū ātsimun qalbuh(ū), wallāhu bimā ta'malūna 'alīm(un)"
+    </div>
+    <div class="thematic-title">
+        Mitigasi Risiko Finansial dalam Kedaruratan (Rahn Maqbūḍah), Dialektika Amanah &amp; Resiprositas Kepercayaan, serta Kriminalisasi Batin atas Penyelubungan Saksi (Itsmul Qalb)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Blok 5 | Ayat 253–286: Tauhid Finansial, Regulasi Transaksi, dan Akuntabilitas Ruhani di Hadapan Pengadilan Mutlak)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks &amp; Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa &amp; Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S &amp; 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi &amp; Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis &amp; Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah &amp; Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَإِن كُنتُمْ عَلَىٰ سَفَرٍ وَلَمْ تَجِدُوا۟ كَاتِبًا فَرِهَـٰنٌ مَّقْبُوضَةٌ ۖ فَإِنْ أَمِنَ بَعْضُكُم بَعْضًا فَلْيُؤَدِّ ٱلَّذِى ٱؤْتُمِنَ أَمَـٰنَتَهُۥ وَلْيَتَّقِ ٱللَّهَ رَبَّهُۥ ۗ وَلَا تَكْتُمُوا۟ ٱلشَّهَـٰدَةَ ۚ وَمَن يَكْتُمْهَا فَإِنَّهُۥٓ ءَاثِمٌ قَلْبُهُۥ ۗ وَٱللَّهُ بِمَا تَعْمَلُونَ عَلِيمٌ ۝٢٨٣
+    </div>
+
+    <h3>Terjemahan Presisi &amp; Nuansa Makna</h3>
+    <div class="translation">
+        "Dan jika kamu sedang dalam perjalanan (sehingga menghadapi kendala administrasi) sedang kamu tidak memperoleh seorang juru tulis, maka hendaklah ada barang jaminan yang dipegang (oleh orang yang mengutangkan sebagai pengaman hak). Akan tetapi, jika sebagian kamu memercayai sebagian yang lain (tanpa menuntut barang jaminan), maka hendaklah orang yang dipercayai itu menunaikan amanahnya (membayar utangnya secara jujur dan tepat waktu) dan hendaklah ia bertakwa kepada Allah, Tuhannya. Dan janganlah kamu (para saksi) menyembunyikan kesaksian; barang siapa menyembunyikannya, maka sesungguhnya hatinya berdosa (tercemar oleh kezaliman dan kefasikan batin). Dan Allah Maha Mengetahui apa yang kamu kerjakan."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong>
+        Klausul <em>'alā safarin</em> menggunakan preposisi <em>'alā</em> yang mengindikasikan <em>al-isti'lā'</em> (kondisi perjalanan yang melingkupi dan menyulitkan mobilitas seseorang). Para fuqaha menegaskan bahwa penyebutan safar di sini berstatus <em>kharaja makhraj al-ghālib</em> (menggambarkan realitas umum kesulitan mendapatkan juru tulis), bukan syarat pembatas (<em>syarth lâzim</em>), sebab praktik agunan (<em>rahn</em>) sah pula dilakukan dalam kondisi mukim. Diksi <em>fa-rihānun maqbūḍah</em> (atau varian qira'at <em>fa-ruhunun</em>) menegaskan peralihan penguasaan fisik barang jaminan ke tangan kreditor untuk melahirkan kepastian hukum. Frasa <em>fal-yu'addil-ladzī'tumina amānatahū</em> mentransformasikan utang dari sekadar obligasi kontraktual lahiriah menjadi mandat moral-spiritual batiniah. Puncak ketegasan ayat terletak pada <em>ātsimun qalbuh</em>; penyandaran dosa secara definitif kepada 'hati' (bukan sekadar kepada lisan atau perbuatan fisik) menunjukkan bahwa penyembunyian kesaksian adalah pembunuhan nurani secara sengaja dan puncak dari kebusukan watak kemunafikan.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika &amp; Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz &amp; Rasm</th>
+                <th>Kaidah Tajwid, Makharij &amp; Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) &amp; Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَإِن كُنتُمْ</strong><br>(<em>Wa in kuntum</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī ganda:</strong> Nun sukun bertemu Kāf (pangkal lidah dekat anak tekak), dengung tingkat pertengahan (<em>martabah wusthā</em>). Nun sukun kedua bertemu Tā' (ujung lidah menempel pangkal gigi seri atas), dengung dengan <em>tarqīq</em>.<br>
+                    <strong>Iẓhār Syafawī:</strong> Mīm sukun pada <em>kuntum</em> bertemu 'Ain pada lafaz berikutnya dibaca jelas tanpa dengung tambahan.
+                </td>
+                <td>
+                    Sepakat seluruh imam qira'at membaca sukun pada nun. Ikhtilaf washal pada mīm jamak: Ibnu Katsir, Abu Ja'far, dan Qalun (dalam salah satu wajah riwayatnya) membaca dengan <strong>Shilah Mīm Jamak</strong> (<em>kuntumū 'alā</em>) sepanjang 2 harakat. Imam lainnya membaca sukun murni tanpa shilah.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>عَلَىٰ سَفَرٍ</strong><br>(<em>'Alā safar</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjaraniyyah di atas Lām dibaca 2 harakat.<br>
+                    <strong>Ḥurūf Ṣafīr:</strong> Huruf Sīn memiliki sifat desis tajam (<em>hams</em> dan <em>shafīr</em>).<br>
+                    <strong>Tarqīq ar-Rā':</strong> Huruf Rā' berharakat kasratain dibaca tipis.<br>
+                    <strong>Idghām bi Ghunnah:</strong> Tanwin kasrah bertemu Wāw diidghamkan dengan dengung 2 harakat.
+                </td>
+                <td>
+                    Seluruh 10 Imam mutawatirah sepakat membaca <em>'alā safarin</em> dengan harakat fathah pada 'ain, lam, sin, fa, serta kasratain pada ra'. Rasm ditulis dengan alif maqshurah (على).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَلَمْ تَجِدُوا۟ كَاتِبًا</strong><br>(<em>Wa lam tajidū kātibā</em>)</td>
+                <td>
+                    <strong>Iẓhār Syafawī:</strong> Mīm sukun bertemu Tā' diucapkan jelas dan tegas.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāw sukun pada <em>tajidū</em> dan Alif setelah Kāf pada <em>kātiban</em> dipanjangkan 2 harakat.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin fathatain pada <em>kātiban</em> bertemu Fā' (perut bibir bawah bertemu ujung gigi seri atas) disamarkan dengan dengung lembut.
+                </td>
+                <td>
+                    Jumhur 10 Imam membaca <strong>كَاتِبًا</strong> (<em>kātiban</em>, isim fa'il tunggal: juru tulis). Terdapat riwayat syadzah dari Ibnu Abbas dan Mujahid yang membaca <em>kitāban</em> (buku/alat tulis), namun rasm Utsmani yang mutawatir menetapkan bentuk <em>kātiban</em>, yang menegaskan urgensi subjek manusia pembuat akta.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>فَرِهَـٰنٌ مَّقْبُوضَةٌ</strong><br>(<em>Fa-rihānun maqbūḍah</em>)</td>
+                <td>
+                    <strong>Tarqīq ar-Rā':</strong> Rā' kasrah dibaca tipis murni.<br>
+                    <strong>Idghām bi Ghunnah:</strong> Tanwin dhammahtain bertemu Mīm lebur sempurna dengan ghunnah.<br>
+                    <strong>Qalqalah Ṣughrā:</strong> Qāf sukun di tengah kata bergetar kuat dengan sifat <em>isti'lā'</em>.<br>
+                    <strong>Iṣthithālah &amp; Iṭhbāq:</strong> Huruf Dhād harus dialirkan suaranya di tepi lidah tanpa berubah menjadi Za atau Dhal.<br>
+                    <strong>Waqaf Hā':</strong> Tā' marbūṭhah saat waqaf berubah menjadi Hā' sukun dengan sifat <em>hams</em>.
+                </td>
+                <td>
+                    <strong>Divergensi Qira'at Mutawatirah Akbar:</strong><br>
+                    • <strong>Nafi', Ibnu 'Amir, 'Ashim (riwayat Hafsh), Hamzah, Al-Kisa'i, Abu Ja'far:</strong> Membaca <strong>فَرِهَـٰنٌ</strong> (<em>fa-rihānun</em>) dengan ra' kasrah dan alif setelah ha'. Bentuk jamak dari <em>rahn</em> (seperti <em>sahm - sihām</em>) atau mashdar <em>rāhana - murāhanah</em>.<br>
+                    • <strong>Ibnu Katsir, Abu 'Amr, 'Ashim (riwayat Syu'bah):</strong> Membaca <strong>فَرُهُنٌ</strong> (<em>fa-ruhunun</em>) dengan ra' dhammah dan ha' dhammah. Bentuk jamak dari <em>rahn</em> (seperti <em>saqf - suquf</em>). Abu 'Amr dalam riwayat ad-Duri mentakhfifkannya menjadi <em>ruhnun</em> (ha' sukun). Keduanya mutawatir dan saling memperkaya makna jaminan kebendaan riil.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَإِنْ أَمِنَ بَعْضُكُم بَعْضًا</strong><br>(<em>Fa-in amina ba'ḍukum ba'ḍā</em>)</td>
+                <td>
+                    <strong>Iẓhār Ḥalqī:</strong> Nūn sukun bertemu Hamzah dibaca jelas.<br>
+                    <strong>Tafkhīm Huruf Dhād:</strong> Huruf Dhād pada <em>ba'ḍukum</em> dan <em>ba'ḍan</em> ditebalkan dengan menempelkan tepi lidah ke gigi geraham atas.<br>
+                    <strong>Ikhfā' Syafawī:</strong> Mīm sukun pada <em>ba'ḍukum</em> bertemu Bā' disamarkan dengan bibir merapat wajar disertai dengung.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin fathatain bertemu Fā'.
+                </td>
+                <td>
+                    Warsy 'an Nafi' membaca dengan <strong>Naql</strong> harakat hamzah ke nun sukun sebelumnya: <em>fa-inamina</em>. Imam Hamzah melakukan saktah atau tahqiq saat washal. Shilah mim jamak berlaku bagi Ibnu Katsir dan Abu Ja'far pada kata <em>ba'ḍukumū</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>فَلْيُؤَدِّ ٱلَّذِى ٱؤْتُمِنَ</strong><br>(<em>Fal-yu'addil-ladzī'tumina</em>)</td>
+                <td>
+                    <strong>Iẓhār Lām al-Amr:</strong> Lām sukun perintah dibaca tegas.<br>
+                    <strong>Iltiqā'us Sākinayn:</strong> Yā' mad pada <em>alladzī</em> gugur suaranya karena bertemu hamzah washal.<br>
+                    <strong>Kaidah Ibtidā':</strong> Jika memulai bacaan dari kata <em>u'tumina</em>, dibaca <strong>اُوتُمِنَ</strong> (<em>Ūtumina</em>); hamzah washal berharakat dhammah (mengikuti 'ain fi'il yang berharakat dhammah), dan hamzah kedua yang mati diganti dengan huruf mad Wāw (kaidah <em>Ibdāl Hamzah</em>).
+                </td>
+                <td>
+                    Warsy, Abu Ja'far, dan As-Susi membaca ibdal hamzah sukun pada <em>fal-yu'addi</em> menjadi wāw jika dalam kondisi tertentu, serta ibdal mutlak hamzah kedua menjadi wāw mad saat ibtida' (<em>Ūtumina</em>) yang disepakati seluruh qurra' sepuluh.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>أَمَـٰنَتَهُۥ وَلْيَتَّقِ ٱللَّهَ رَبَّهُۥ</strong><br>(<em>Amānatahū wal-yattaqillāha rabbah</em>)</td>
+                <td>
+                    <strong>Mad Ṣilah Qashīrah:</strong> Hā' kināyah pada <em>amānatahū</em> dibaca panjang 2 harakat saat washal.<br>
+                    <strong>Ḥadzfu Ḥarfil 'Illah:</strong> Qāf pada <em>wal-yattaqi</em> berharakat kasrah pendek (tanpa ya') karena berkedudukan majzum oleh Lam Amr.<br>
+                    <strong>Tarqīq Lām al-Jalālah:</strong> Lafazh <em>Allāh</em> dibaca tipis (tarqiq) karena didahului harakat kasrah pada huruf Qāf.<br>
+                    <strong>Tafkhīm ar-Rā':</strong> Rā' fathah pada <em>rabbahū</em> ditebalkan.
+                </td>
+                <td>
+                    Seluruh 10 Imam membaca lafaz <em>amānatahū</em> dalam bentuk mufrad (tunggal). Riwayat syadzah dari Ibnu Mas'ud membaca jamak <em>amānātihī</em>. Shilah ha' dhamir pada <em>rabbahū</em> gugur jika pembaca waqaf, digantikan dengan ha' sukun bertajwid hams.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَلَا تَكْتُمُوا۟ ٱلشَّهَـٰدَةَ</strong><br>(<em>Wa lā taktumusy-syahādah</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Lām Alif dipanjangkan 2 harakat.<br>
+                    <strong>Sifat Hams &amp; Syiddah Kāf:</strong> Huruf Kāf sukun memiliki hentakan tertahan sesaat lalu diiringi hembusan napas halus.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lām ta'rīf melebur sempurna ke dalam huruf Syīn bertasydid dengan sifat <em>tafasshī</em> (angin menyebar di dalam mulut).
+                </td>
+                <td>
+                    Sepakat seluruh 10 Imam membaca larangan dengan <em>Lā</em> nahiyah yang menjazamkan fi'il mudhari' (tanda jazam: gugurnya nun/<em>hadzfun-nūn</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَمَن يَكْتُمْهَا فَإِنَّهُۥٓ ءَاثِمٌ قَلْبُهُۥ</strong><br>(<em>Wa may yaktumhā fa-innahū ātsimun qalbuh</em>)</td>
+                <td>
+                    <strong>Idghām bi Ghunnah:</strong> Nūn sukun bertemu Yā' melebur dengan dengung sempurna.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid pada <em>fa-innahū</em> ditahan 2 harakat.<br>
+                    <strong>Mad Ṣilah Ṭhawīlah (Kubrā):</strong> Hā' dhamir bertemu Hamzah qatha' dipanjangkan 4–5 harakat (sesuai mazhab mad munfashil masing-masing imam).<br>
+                    <strong>Mad Badal:</strong> Hamzah fathah bertemu alif pada <em>ātsimun</em> dibaca 2 harakat (kecuali Warsy yang memiliki opsi 2, 4, 6 harakat).<br>
+                    <strong>Ikhfā' Ḥaqīqī Mufakhkham:</strong> Tanwin dhammah bertemu Qāf disamarkan dengan dengung tebal (tafkhim).
+                </td>
+                <td>
+                    Perbedaan durasi Mad Shilah Thawilah mengikuti kaidah Mad Munfashil: Qalun, Ibnu Katsir, Abu 'Amr, Ya'qub membaca qashr (2 harakat) atau tawassuth; 'Ashim, Kisa'i, Khalaf membaca 4 harakat; Hamzah dan Warsy membaca 6 harakat (<em>ṭhūl</em>). Seluruh imam sepakat atas rafa'nya lafazh <em>qalbuhū</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>وَٱللَّهُ بِمَا تَعْمَلُونَ عَلِيمٌ</strong><br>(<em>Wallāhu bimā ta'malūna 'alīm</em>)</td>
+                <td>
+                    <strong>Tafkhīm Lām al-Jalālah:</strong> Didahului Wāw berharakat fathah.<br>
+                    <strong>Keluarnya Huruf 'Ain:</strong> Dari tengah tenggorokan (<em>wasathul halq</em>) dengan sifat <em>tawassuth</em>.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada akhir ayat waqaf (<em>'alīm</em>), huruf Yā' mad bertemu Mīm sukun 'aridh dibaca 2, 4, atau 6 harakat dengan sifat <em>iẓhār mīm</em> yang bersih.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca ta' khithab pada <em>ta'malūn</em> (kamu sekalian kerjakan) dan tanwin dhammah pada <em>'alīm</em>. Tidak ada perselisihan qira'at dalam fashilah penutup ini.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul &amp; Hadits Sahih Penjelas</h3>
+    <p>
+        Secara makro, ayat 283 tidak memiliki sebab turun partikular yang bersifat insidental sempit (<em>sabab nuzūl khāṣṣ</em>), melainkan diturunkan sebagai <strong>legislasi pelengkap integral</strong> bagi Ayat al-Mudayanah (Ayat 282). Jika ayat 282 mengatur protokol transaksi kredit dalam kondisi ideal (tersedianya juru tulis dan dua saksi formal di tengah pemukiman), maka ayat 283 hadir untuk menuntaskan problem kebuntuan muamalah ketika manusia berada dalam kondisi kedaruratan mobilitas atau keterbatasan infrastruktur literasi hukum.
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Bukhari (No. 2068, 2251, 2386) &amp; Sahih Muslim (No. 1603) dari Ummul Mukminin 'Aisyah r.a. — Praktik Rahn oleh Rasulullah ﷺ dalam Kondisi Hadhar (Bermukim):</strong><br>
+        عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا: «أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ اشْتَرَى طَعَامًا مِنْ يَهُودِيٍّ إِلَى أَجَلٍ، وَرَهَنَهُ دِرْعًا مِنْ حَدِيدٍ»<br>
+        <em>"Dari 'Aisyah r.a. bahwasanya Nabi ﷺ pernah membeli makanan (gandum) dari seorang Yahudi dengan pembayaran bertempo (kredit), dan beliau menggadaikan baju besi beliau kepadanya sebagai jaminan."</em><br>
+        <strong>Derajat Sanad:</strong> Sahih Muttafaqun 'Alaih. Hadits ini merupakan dalil fiqih konsensus (ijma') bahwa keabsahan <em>rahn</em> (gadai/agunan) tidak terbatas pada saat bepergian (<em>safar</em>), melainkan mutlak berlaku pula saat bermukim (<em>ḥaḍhar</em>), menegaskan bahwa klausul safar dalam ayat adalah ilustrasi kondisi paling rentan, bukan batasan restriktif.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 2352) &amp; Riyadhus Shalihin (No. 1383) dari Abu Hurairah r.a. — Manifestasi Transaksi Berbasis Amanah &amp; Perlindungan Ilahi (Kisah 1000 Dinar):</strong><br>
+        Rasulullah ﷺ menceritakan seorang laki-laki dari Bani Israil yang meminjam 1.000 dinar kepada saudaranya. Ketika diminta saksi, peminjam berkata: <em>"Kafā billāhi Syahīdā"</em> (Cukuplah Allah sebagai Saksi). Ketika diminta penjamin (kafil), ia berkata: <em>"Kafā billāhi Kafīlā"</em> (Cukuplah Allah sebagai Penjamin). Sang pemberi pinjaman menjawab: <em>"Shadaqta"</em> (Engkau benar!), lalu menyerahkan uang tersebut atas dasar saling percaya tanpa jaminan fisik. Saat jatuh tempo di tengah laut tanpa ada perahu yang menyeberang, peminjam melubangi kayu, memasukkan 1.000 dinar dan sepucuk surat, lalu menghanyutkannya ke laut dengan tawakkal penuh kepada Allah. Uang tersebut sampai dengan selamat kepada sang kreditor.<br>
+        <strong>Derajat Sanad:</strong> Sahih riwayat Al-Bukhari. Hadits ini adalah eksemplar penjelas konkret bagi penggalan firman: <em>"Fa-in amina ba'ḍukum ba'ḍan fal-yu'addil-ladzī'tumina amānatahū wal-yattaqillāha rabbah"</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sunan Abu Dawud (No. 3535), At-Tirmidzi (No. 1264), &amp; Sunan Ibnu Majah (No. 2400) dari Samurah bin Jundub r.a. — Aksioma Yuridis Tanggung Jawab Amanah:</strong><br>
+        قَالَ رَسُولُ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: «عَلَى اليَدِ مَا أَخَذَتْ حَتَّى تُؤَدِّيَ»<br>
+        <em>"Rasulullah ﷺ bersabda: 'Tangan yang mengambil harta orang lain wajib bertanggung jawab penuh atas apa yang diambilnya hingga ia menunaikannya (mengembalikannya kepada pemiliknya).'"</em><br>
+        <strong>Derajat Sanad:</strong> Hadits Hasan Sahih (dinyatakan hasan oleh At-Tirmidzi, disahihkan oleh Al-Hakim dan Ibnu Abdil Barr). Aksioma hukum syariat yang menegaskan bahwa status kepemilikan utang atau barang titipan adalah amanah mutlak yang tidak gugur kecuali dengan pelunasan tuntas.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Bukhari (No. 2654) &amp; Sahih Muslim (No. 88) dari Anas bin Malik r.a. — Kejahatan Menyembunyikan Kebenaran &amp; Kesaksian Palsu:</strong><br>
+        Ketika Rasulullah ﷺ ditanya perihal dosa-dosa paling besar (<em>akbarul kabā'ir</em>), beliau menyebutkan: <em>"Syirik kepada Allah, membunuh jiwa, durhaka kepada orang tua,"</em> lalu beliau duduk tegak dan mengulanginya tiga kali: <em>"Alā wa qawluz-zūr wa syahādatuz-zūr!"</em> (Ingatlah, demikian pula perkataan dusta dan kesaksian palsu / menyembunyikan kesaksian yang hak!). Hadits ini selaras secara mutlak dengan ancaman ayat: <em>"Wa man yaktumhā fa-innahū ātsimun qalbuh"</em>.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis &amp; Balaghah)</h2>
+
+    <h3>Analisis Etimologi &amp; Medan Semantik Akar Kata (Mu'jam Maqāyīs al-Lughah &amp; Lisān al-'Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. R-H-N (ر-ه-ن — Ar-Rahn / Ar-Rihān):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> memaparkan bahwa akar huruf <em>Rā'-Hā'-Nūn</em> memiliki poros makna dasar: <em>ad-dawām wats-tsubūt wal-iḥtibās</em> (kekal, diam tak bergerak, terikat, dan tertahan). Bangsa Arab berkata <em>mā'un rāhin</em> apabila air itu tergenang tenang tidak mengalir, dan <em>ni'matun rāhinah</em> untuk kenikmatan yang langgeng permanen. Firman Allah: <em>Kullu nafsin bimā kasabat rahīnah</em> (QS. Al-Muddatstsir: 38) bermakna setiap jiwa tertawan dan terbelenggu oleh amalnya sendiri. Dari akar ini, dinamakan <strong>Ar-Rahn</strong> (agunan/gadai) karena harta benda tersebut <strong>ditahan dan dikunci penguasaannya di tangan pemberi piutang</strong> sebagai jaminan mutlak pengganti uangnya yang belum terbayar.
+        </li>
+        <li>
+            <strong>2. Q-B-Dh (ق-ب-ض — Al-Qabḍh / Maqbūḍah):</strong><br>
+            Akar kata <em>Qāf-Bā'-Dhād</em> berporos pada makna <em>al-akhdzu bi jam'il-kaff wa ḍammusy-syay'</em> (menggenggam sesuatu dengan seluruh telapak tangan, mengumpulkannya ke arah diri, dan menguasainya secara penuh), antonim dari kata <em>al-basṭh</em> (membentang/melepas). Penggunaan isim maf'ul <strong>Maqbūḍah</strong> dalam bentuk ta'nits menandakan bahwa barang jaminan tersebut harus telah berpindah kekuasaannya secara nyata (<em>actual/constructive possession</em>) ke dalam genggaman kreditor, sehingga ia memiliki daya ikat yuridis (<em>luzūmul-'aqd</em>).
+        </li>
+        <li>
+            <strong>3. A-M-N (أ-م-ن — Amina, U'tumina, Al-Amānah):</strong><br>
+            Akar kata <em>Hamzah-Mīm-Nūn</em> berporos pada dua pilar makna: <em>al-amānah</em> (kejujuran/lawan dari khianat) dan <em>as-sukūn wa thuma'nīnatul-qalb</em> (ketenteraman batin serta hilangnya rasa cemas dan takut). Dalam ayat ini terjadi eskalasi gramatikal yang menakjubkan: dari kata kerja aktif <em>amina</em> (merasa aman/percaya), bertransformasi menjadi bentuk pasif <em>u'tumina</em> (diberi mandat kepercayaan), dan melahirkan objek kebajikan <em>amānah</em> (tanggung jawab hakiki). Ayat ini mengajarkan bahwa pinjaman tanpa agunan bukan sekadar hak perdata, melainkan sebuah pertaruhan harga diri spiritual: kreditor memberikan rasa aman (<em>amān</em>), dan debitur wajib menjaga amanah tersebut dengan integritas iman (<em>īmān</em>).
+        </li>
+        <li>
+            <strong>4. A-Ts-M (أ-ث-م — Al-Itsm / Ātsim):</strong><br>
+            Ibnu Faris merumuskan bahwa akar <em>Hamzah-Tsā'-Mīm</em> berporos pada <em>al-ibṭā' wal-iḥtibās 'anil-khayr</em> (kelambatan, keterhalangan, dan tertahannya seseorang dari meraih kebajikan dan pahala). Dosa dinamakan <em>itsm</em> karena ia membelenggu jiwa manusia, memperlambat langkahnya menuju derajat kesempurnaan moral, dan menjerumuskannya ke dalam siksa. Kata <strong>Ātsim</strong> berwazan <em>fā'il</em> yang berfungsi sebagai <em>shifah musyabbahah</em>, menandakan bahwa dosa penyembunyian saksi telah menyatu pekat mengotori kepribadian pelakunya.
+        </li>
+        <li>
+            <strong>5. Q-L-B (ق-ل-ب — Al-Qalb):</strong><br>
+            Akar kata <em>Qāf-Lām-Bā'</em> merujuk pada poros <em>taḥwīlu syay'in 'an wajhih</em> (membalikkan sesuatu dari arahnya yang semestinya, mengubah posisi atas menjadi bawah). Organ terdalam manusia dinamakan <strong>Qalb</strong> karena gerakannya yang luar biasa dinamis dan mudah berbolak-balik antara petunjuk dan kesesatan. Ketika Allah memvonis <em>ātsimun qalbuh</em>, ini menyiratkan bahwa saksi yang membungkam kebenaran telah membalikkan fungsi fitrah hatinya secara total: dari cermin pemantul cahaya keadilan menjadi sarang kegelapan pengkhianatan.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf &amp; I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) &amp; Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَإِن</strong></td>
+                <td><em>Wāw</em>: Harf 'Athaf / Isti'nāf.<br><em>In</em>: Harf Syarth Jāzim, menetapkan hubungan kausalitas.</td>
+                <td>Mabni 'alā as-sukūn, tidak memiliki kedudukan i'rab tersendiri; bertindak menjazamkan dua fi'il (syarat dan jawab).</td>
+            </tr>
+            <tr>
+                <td><strong>كُنتُمْ</strong></td>
+                <td>Fi'il mādhi nāqish dari <em>kāna - yakūnu</em>. <em>Tum</em>: Dhamīr muttashil jamak mudzakkar.</td>
+                <td>Fi'il mādhi mabni 'alā as-sukūn fi mahalli jazmin fi'il syarth. Dhamir <em>Tum</em> berkedudukan fi mahalli raf'in Isim Kāna.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَىٰ سَفَرٍ</strong></td>
+                <td><em>'Alā</em>: Harf jarr lil-isti'lā'.<br><em>Safarin</em>: Isim jāmīd mufrad majrūr.</td>
+                <td>Jār wa majrūr (syibhul jumlah) berkedudukan fi mahalli nashbin muta'alliq dengan Khabar Kāna yang mahdzūf (taqdirnya: <em>kā'inīna / musāfirīna</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَمْ تَجِدُوا۟</strong></td>
+                <td><em>Wāw</em>: Harf ḥāl.<br><em>Lam</em>: Harf nafyin, jazmin, wa qalbin.<br><em>Tajidū</em>: Fi'il mudhāri' mujarrad (akar: و-ج-د).</td>
+                <td><em>Tajidū</em> fi'il mudhari' majzum bi <em>lam</em>, tanda jazamnya adalah hadzfun-nūn. Wāw al-jamā'ah berkedudukan fi mahalli raf'in Fā'il. Jumlah fi'liyyah fi mahalli nashbin Ḥāl.</td>
+            </tr>
+            <tr>
+                <td><strong>كَاتِبًا</strong></td>
+                <td>Isim Fā'il dari <em>kataba - yaktubu</em> (wazan: <em>fā'il</em>).</td>
+                <td>Maf'ūl bih manshūb bagi fi'il <em>tajidū</em>, tanda nashabnya fathah zhahirah di akhirnya.</td>
+            </tr>
+            <tr>
+                <td><strong>فَرِهَـٰنٌ</strong></td>
+                <td><em>Fā'</em>: Rābiṭhah li jawābisy-syarth.<br><em>Rihān</em>: Isim jamak dari <em>rahn</em> di atas wazan <em>fi'āl</em>.</td>
+                <td><strong>Mubtada'</strong> yang khabarnya mahdzūf (taqdirnya: <em>fa-rihānun maqbūḍatun takfīkum</em>) ATAU <strong>Khabar</strong> dari mubtada' mahdzūf (taqdirnya: <em>fal-wājibu / fa-ḥukmukum rihānun</em>). Marfu' dengan dhammah.</td>
+            </tr>
+            <tr>
+                <td><strong>مَّقْبُوضَةٌ</strong></td>
+                <td>Isim Maf'ūl mu'annats dari fi'il <em>qabaḍha</em> (wazan: <em>maf'ūlah</em>).</td>
+                <td><strong>Na'at (Sifat)</strong> bagi <em>rihānun</em>, marfu' dengan tanda dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِنْ أَمِنَ</strong></td>
+                <td><em>Fā'</em>: Harf 'Athaf / Isti'nāfiyyah.<br><em>In</em>: Harf syarth jāzim.<br><em>Amina</em>: Fi'il mādhi mujarrad (akar: أ-م-ن).</td>
+                <td><em>Amina</em> fi'il madhi mabni 'alā al-fath fi mahalli jazmin fi'il syarth.</td>
+            </tr>
+            <tr>
+                <td><strong>بَعْضُكُم</strong></td>
+                <td>Isim mubham, <em>Kum</em>: Dhamir jamak mukhattab.</td>
+                <td><strong>Fā'il</strong> bagi fi'il <em>amina</em>, marfu' dengan dhammah. Dhamir <em>Kum</em> berkedudukan mudhāfun ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>بَعْضًا</strong></td>
+                <td>Isim mubham mufakkak.</td>
+                <td><strong>Maf'ūl bih</strong> manshub dengan tanda fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>فَلْيُؤَدِّ</strong></td>
+                <td><em>Fā'</em>: Rābithah li jawābisy-syarth.<br><em>Lām</em>: Lām al-Amr jāzimah.<br><em>Yu'addi</em>: Fi'il mudhāri' bāb <em>taf'īl</em> (أَدَّى - يُؤَدِّي).</td>
+                <td>Fi'il mudhari' majzum dengan Lam al-Amr, tanda jazamnya adalah <strong>ḥadzfu ḥarfil-'illah</strong> (terbuangnya huruf Yā'). Jumlah fi'liyyah fi mahalli jazmin Jawab Syarth.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِى</strong></td>
+                <td>Isim Maushūl mufrad mudzakkar.</td>
+                <td>Mabni 'alā as-sukūn fi mahalli raf'in <strong>Fā'il</strong> bagi fi'il <em>yu'addi</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱؤْتُمِنَ</strong></td>
+                <td>Fi'il mādhi mabnī lil-majhūl (pasif) dari bāb <em>ifti'āl</em> (akar: أ-م-ن).</td>
+                <td>Mabni 'alā al-fath. Nā'ibul Fā'il berupa dhamīr mustatir jawāzan takdirnya <em>huwa</em>. Jumlah fi'liyyah adalah <strong>Ṣhilatul Maushūl</strong>, lā maḥalla lahā minal i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>أَمَـٰنَتَهُۥ</strong></td>
+                <td>Mashdar isim (<em>amānah</em>), <em>Hū</em>: Dhamir gha'ib.</td>
+                <td><strong>Maf'ūl bih</strong> bagi fi'il <em>yu'addi</em> (atau maf'ul bih kedua bagi <em>u'tumina</em>), manshub dengan fathah. Dhamir <em>Hū</em> fi mahalli jarri mudhafun ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلْيَتَّقِ</strong></td>
+                <td><em>Wāw</em>: Harf 'Athaf.<br><em>Lām</em>: Lām al-Amr.<br><em>Yattaqi</em>: Fi'il mudhari' bāb <em>ifti'āl</em> (akar: و-ق-ي).</td>
+                <td>Fi'il mudhari' majzum dengan tanda hadzfu harfil 'illah (huruf Ya' terbuang). Fa'ilnya dhamir mustatir takdirnya <em>huwa</em>. Ma'thuf pada <em>fal-yu'addi</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Lafzhul Jalālah.</td>
+                <td><strong>Maf'ūl bih</strong> manshub dengan tanda fathah zhahirah li ta'zhim.</td>
+            </tr>
+            <tr>
+                <td><strong>رَبَّهُۥ</strong></td>
+                <td>Isim jamid, <em>Hū</em>: Dhamir mudhaf ilayh.</td>
+                <td><strong>Badal</strong> atau <strong>Na'at</strong> bagi Lafzhul Jalalah, manshub dengan fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا تَكْتُمُوا۟</strong></td>
+                <td><em>Wāw</em>: Harf isti'nāf / 'athaf.<br><em>Lā</em>: Lā an-Nāhiyah jāzimah.<br><em>Taktumū</em>: Fi'il mudhari' mujarrad (akar: ك-ت-م).</td>
+                <td>Fi'il mudhari' majzum dengan <em>Lā</em> nahiyah, tanda jazamnya adalah hadzfun-nūn. Wāw al-Jamā'ah fi mahalli raf'in Fā'il.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلشَّهَـٰدَةَ</strong></td>
+                <td>Isim mashdar makrifat ber-alif lam.</td>
+                <td><strong>Maf'ūl bih</strong> manshub dengan tanda fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَن يَكْتُمْهَا</strong></td>
+                <td><em>Wāw</em>: Harf isti'nāf.<br><em>Man</em>: Isim syarth jazim.<br><em>Yaktum</em>: Fi'il mudhari'. <em>Hā</em>: Dhamir maf'ul bih.</td>
+                <td><em>Man</em> fi mahalli raf'in <strong>Mubtada'</strong>. <em>Yaktum</em> majzum fi'il syarth, tanda sukun. Dhamir <em>Hā</em> fi mahalli nashbin maf'ul bih.</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِنَّهُۥٓ</strong></td>
+                <td><em>Fā'</em>: Rābithah li jawabis-syarth.<br><em>Inna</em>: Harf taukīd wa nashab.<br><em>Hū</em>: Dhamir sya'n / dhamir isim inna.</td>
+                <td>Dhamir <em>Hū</em> fi mahalli nashbin Isim Inna.</td>
+            </tr>
+            <tr>
+                <td><strong>ءَاثِمٌ</strong></td>
+                <td>Isim Fā'il dari <em>atsima - ya'tsamu</em>.</td>
+                <td><strong>Khabar Inna Muqaddam</strong> (atau shifah musyabbahah), marfu' dengan dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>قَلْبُهُۥ</strong></td>
+                <td>Isim jins, <em>Hū</em>: Dhamir mudhaf ilayh.</td>
+                <td><strong>Fā'il</strong> bagi isim fa'il <em>ātsimun</em> (yang beramal seperti fi'ilnya), marfu' dengan dhammah. ATAU <em>qalbuhū</em> Mubtada' Mu'akhkhar dan <em>ātsimun</em> Khabar Muqaddam, dan jumlah ismiyyah tersebut fi mahalli raf'in Khabar Inna.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td><em>Wāw</em>: Harf isti'nāfiyyah.<br>Lafzhul Jalālah.</td>
+                <td><strong>Mubtada'</strong> marfu' dengan tanda dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>بِمَا تَعْمَلُونَ</strong></td>
+                <td><em>Bā'</em>: Harf jarr.<br><em>Mā</em>: Isim maushul / mashdariyyah.<br><em>Ta'malūna</em>: Fi'il mudhari' marfu' tsubutun nun.</td>
+                <td>Jār wa majrūr syibhul jumlah muta'alliq dengan lafaz <em>'alīm</em>. Jumlah fi'liyyah shilatul maushul la mahalla laha.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلِيمٌ</strong></td>
+                <td>Shīghah Mubālaghah (wazan: <em>fa'īl</em>).</td>
+                <td><strong>Khabar Mubtada'</strong> marfu' dengan tanda dhammah zhahirah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' &amp; I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Iltifāt al-Maqāṣidī (Transisi Tri-Dimensi Kepastian Hukum):</strong><br>
+            Ayat ini menyajikan pergeseran spektakuler dari instrumen administratif ke instrumen kebendaan, lalu berpuncak pada instrumen spiritualitas batiniah. Ketika instrumen formal (tulisan dan saksi di ayat 282) gugur akibat kendala perjalanan, Allah tidak membiarkan akad bermuara pada anarki finansial. Syariat menurunkan jangkar kedua: <em>fa-rihānun maqbūḍah</em> (jaminan kebendaan fisik). Namun ketika jaminan fisik pun dilepaskan atas dasar saling percaya (<em>fa-in amina ba'ḍukum ba'ḍā</em>), syariat menancapkan jangkar tertinggi: ketakwaan dan pengawasan Ilahi (<em>wal-yattaqillāha rabbah</em>). Struktur ini mengajarkan bahwa dalam Islam, hukum perdata bersenyawa mutlak dengan tauhid uluhiyyah.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Ījāz bil-Ḥadzf dalam Klausul "Fa-rihānun Maqbūḍah":</strong><br>
+            Pembuangan unsur kalimat (<em>hadzful fi'li wal-fā'il</em> / kalimat asal: <em>fal-yastawtsiq bi-rihānin maqbūḍatin</em> atau <em>fal-wājibu rihānun</em>) adalah bentuk <em>ījāz al-hadzf</em> yang amat padat. Dalam situasi safar yang serba cepat dan rawan ketidakpastian, bahasa Al-Qur'an memotong basa-basi gramatikal untuk langsung menyorot substansi solusi: "Maka peganglah barang gadai!". Gaya ini menyuntikkan urgensi psikologis agar para pelaku transaksi tidak lalai mengamankan hak kebendaan mereka.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Isnād al-Majāzī &amp; Takhṣhīṣ dalam "Ātsimun Qalbuh":</strong><br>
+            Puncak keindahan retorika ayat termaktub pada konstruksi: <em>fa-innahū ātsimun qalbuhu</em>. Mengapa Allah tidak berfirman secara umum: <em>fa-innahū ātsim</em> (maka sesungguhnya ia berdosa)?<br>
+            Para empu balaghah (Az-Zamakhsyari, Fakhruddin Ar-Razi, Ibnu 'Asyur) menetapkan bahwa penyandaran dosa secara spesifik kepada <strong>hati (al-qalb)</strong> mengandung tiga rahasia agung:<br>
+            • <em>Al-Qalbu Amīrul-Jawāriḥ:</em> Hati adalah panglima eksistensi manusia. Bila dosa disandarkan kepada tangan atau lisan, anggota tubuh lain mungkin masih terbebas. Namun bila vonis dosa dijatuhkan kepada hati, maka seluruh eksistensi manusia itu telah divonis busuk dan rusak secara total.<br>
+            • <em>Karakter Dosa yang Tersembunyi:</em> Menyembunyikan kesaksian (<em>kitmānusy-syahādah</em>) adalah kejahatan pasif. Pelakunya tidak mengucapkan kalimat bohong dengan lisannya, ia hanya diam membisu di hadapan hakim. Maka Allah membongkar konspirasi diam tersebut: diammu bukanlah netralitas, melainkan kejahatan terencana yang dirajut di kedalaman hatimu!<br>
+            • <em>Tajsīm al-Ma'nawī:</em> Dosa dipersonifikasikan seakan-akan menjadi sifat organik yang melekat erat pada jantung hati pelakunya, meracuni nurani hingga kehilangan kepekaan moral.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Ath-Thalathuf wa Tarqīqul-Qalb via Diksi "Rabbahū":</strong><br>
+            Pada kalimat <em>wal-yattaqillāha rabbahū</em>, penyebutan kata <em>Rabb</em> setelah asma agung <em>Allāh</em> berfungsi sebagai sentuhan pedagogis yang melunakkan kekerasan hati penghutang. Kata <em>Rabb</em> mengasosiasikan kasih sayang pemeliharaan, rezeki, dan perlindungan Allah sejak ia lahir. Seolah-olah dikatakan: "Bertakwalah kepada Allah yang telah memeliharamu dengan segala limpahan karunia; maka sungguh sangat tidak tahu diri jika engkau membalas kemurahan Rabbmu dengan mengkhianati amanah saudaramu!".
+        </li>
+        <li>
+            <strong>I'jāz Fonetik &amp; Ritme Fāṣhilah:</strong><br>
+            Secara fonetika, ayat dibuka dengan bunyi-bunyi lembut yang menggambarkan pergerakan safar (huruf sīn, fā', rā'), lalu bergerak menuju hentakan makhraj yang berat dan kokoh ketika berbicara perihal transaksi kebendaan dan perselisihan (huruf qalqalah qāf, huruf isti'lā' dhād pada <em>maqbūḍah, ba'ḍukum ba'ḍā</em>). Ketegangan akustik ini kemudian diakhiri dengan desisan tajam pada <em>syahādah</em>, hentakan hamzah pada <em>ātsim</em>, dan ditutup dengan keheningan kontemplatif yang agung pada fashilah mīm berharakat sukun: <em>'Alīm</em>. Struktur ritmik ini mengguncang jiwa pendengarnya dari dinamika dunia materi menuju ketundukan di hadapan Yang Maha Mengetahui.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S &amp; 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S &amp; 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Konteks Teks Mendahului — Simetri Komplementer dengan Ayat 282):</strong><br>
+            Ayat 283 mustahil dipahami secara utuh tanpa mengaitkannya dengan Ayat 282 (Ayat al-Mudayanah). Hubungan keduanya adalah relasi <em>Al-Aṣl wal-Badal</em> (Hukum Pokok dan Solusi Substitutif):<br>
+            • <em>Ayat 282 (Skenario Normal / Hadhar):</em> Menetapkan instrumen verifikasi legal yang sempurna, yaitu pencatatan tertulis oleh juru tulis yang adil (<em>kātibun bil-'adl</em>) serta persaksian minimal dua orang saksi laki-laki atau satu laki-laki dan dua perempuan.<br>
+            • <em>Ayat 283 (Skenario Kedaruratan / Safar):</em> Memberikan protokol mitigasi ketika instrumen ayat 282 tidak tersedia di lapangan. Ketiadaan juru tulis tidak boleh dijadikan alasan untuk membatalkan sirkulasi permodalan. Sebagai gantinya, Al-Qur'an mensyariatkan instrumen agunan kebendaan (<em>rahn</em>). Tautan ini membuktikan kesempurnaan syariat Islam yang tidak pernah menyisakan ruang hampa regulasi (<em>legal vacuum</em>) dalam kehidupan manusia.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 5: Ayat 253–286 — Arsitektur Tauhid Finansial):</strong><br>
+            Ayat 283 berada di gerbang penutup <strong>Blok 5</strong> Surah Al-Baqarah, sebuah blok monumental yang mengintegrasikan metafisika, etika sosial, dan hukum ekonomi ke dalam satu tarikan nafas peradaban:<br>
+            1. <em>Ayat Kursi (Ayat 255):</em> Meletakkan landasan bahwa pemilik mutlak seluruh perbendaharaan langit dan bumi adalah Allah.<br>
+            2. <em>Regulasi Filantropi &amp; Infaq (Ayat 261–274):</em> Memerintahkan sirkulasi modal yang berbasis welas asih dan melarang eksploitasi mental (<em>mannan wa adzā</em>).<br>
+            3. <em>Kriminalisasi Riba (Ayat 275–281):</em> Mengharamkan bunga uang secara mutlak sebagai bentuk kezaliman struktural yang menabuh genderang perang melawan Allah dan Rasul-Nya.<br>
+            4. <em>Regulasi Akad Kredit &amp; Agunan (Ayat 282–283):</em> Membangun infrastruktur transaksi riil yang adil, legal, dan bebas riba, di mana hak kreditur dan debitur dilindungi secara seimbang melalui pencatatan, gadai, dan amanah.<br>
+            Dengan demikian, ayat 283 bukan sekadar pasal fiqih teknis, melainkan pilar penegak keadilan sistem ekonomi Islam agar tidak jatuh ke dalam perangkap riba yang zalim maupun anarki penggelapan utang.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas Menuju Ayat 284 — Eskalasi Mahkamah Ilahi):</strong><br>
+            Terjadi tautan simetris yang mencengangkan antara ekor Ayat 283 dengan pembuka Ayat 284. Ayat 283 diakhiri dengan vonis dosa batiniah dan kemahatahuan Allah: <em>"wa may yaktumhā fa-innahū ātsimun qalbuh, wallāhu bimā ta'malūna 'alīm"</em>. Ayat 284 seketika menyambut dan mengeksekusi vonis tersebut: <em>"Lillāhi mā fis-samāwāti wa mā fil-ardh, wa in tubdū mā fī anfusikum aw tukhfūhu yuḥāsibkum bihillāh!"</em> (Milik Allah-lah apa yang ada di langit dan di bumi. Jika kamu menyatakan apa yang ada di dalam hatimu atau kamu menyembunyikannya, niscaya Allah akan membuat perhitungan dengan kamu tentang perbuatan itu!).<br>
+            Al-Qur'an seakan menegaskan: Wahai para saksi yang menyembunyikan kebenaran di sudut hatimu yang paling gelap, jangan mengira engkau telah lolos dari jerat hukum duniawi! Penguasa semesta alam mengetahui rahasia bisikan dadamu, dan Dia sendiri yang akan menghisab kebusukan batinmu di Mahkamah Hari Pembalasan!
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis Madaniyah: Kedaruratan Jalur Dagang &amp; Moralitas Gurun</h3>
+    <p>
+        Masyarakat Arab pada abad ke-7 Masehi adalah masyarakat kafilah dagang (<em>ash-ḥābur-riḥlah</em>) yang hidup dari jalur perniagaan lintas gurun antara Yaman di selatan dan Syam di utara (sebagaimana diabadikan dalam Surah Quraisy). Dalam perjalanan menempuh ratusan mil melintasi samudra pasir yang tandus dan berbahaya:
+    </p>
+    <ul>
+        <li>
+            <strong>Tingkat Kebutuhan Likuiditas Tinggi:</strong> Para musafir kerap kehabisan perbekalan, unta pengangkut mati, atau barang dagangan rusak, sehingga mereka sangat membutuhkan pinjaman darurat dari sesama musafir atau kafilah lain yang berpapasan di oase padang pasir.
+        </li>
+        <li>
+            <strong>Kelangkaan Infrastruktur Literasi:</strong> Mayoritas bangsa Arab saat itu adalah kaum yang buta huruf (<em>ummiyyūn</em>). Menemukan seseorang yang memiliki keterampilan menulis akta perjanjian (<em>kātib</em>) di tengah padang pasir adalah hal yang mendekati kemustahilan. Membawa serta dua orang saksi netral yang tidak memiliki benturan kepentingan juga sangat sulit.
+        </li>
+        <li>
+            <strong>Tradisi Jahiliyah yang Merusak:</strong> Dalam tradisi Jahiliyah pra-Islam, jika seorang debitur gagal bayar, kreditor tidak hanya menyita barangnya, melainkan memperbudak anak-istrinya atau melipatgandakan nilai utang secara mencekik (cikal bakal riba jahiliyah: <em>immā an taqḍhiya wa immā an turbī</em>).
+        </li>
+    </ul>
+    <p>
+        Dalam setting sosiologis inilah wahyu Ayat 283 turun merevolusi peradaban gurun. Al-Qur'an tidak melarang transaksi utang di tengah jalan, melainkan menetapkan <strong>solusi agunan berkeadaban (Rahn Maqbūdhah)</strong>: barang jaminan dipegang hanya sebagai pengaman nilai pokok utang, bukan untuk dieksploitasi manfaatnya secara zalim. Lebih revolusioner lagi, Al-Qur'an membuka ruang bagi mekanisme <em>trust-based lending</em> (pinjaman berbasis saling percaya), seraya mengunci pintu pengkhianatan dengan doktrin ketakwaan dan ancaman dosa hati.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi &amp; Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur &amp; Analisis Salaf):</strong><br>
+        At-Tabari meriwayatkan dengan sanad-sanadnya yang sahih dari Mujahid, Qatadah, Adh-Dhahhak, dan Ibnu Abbas bahwa makna <em>'alā safarin wa lam tajidū kātiban</em> adalah kondisi darurat ketiadaan pencatat, sehingga barang gadai yang dipegang (<em>rahn maqbūdhah</em>) berfungsi menggantikan posisi tulisan dan saksi. Mengenai penggalan <em>wa lā taktumusy-syahādah</em>, At-Tabari menegaskan bahwa menyembunyikan kesaksian hukumnya haram mutlak dan termasuk dosa paling membinasakan. Beliau menggarisbawahi bahwa penyandaran dosa kepada hati (<em>ātsimun qalbuh</em>) bermakna orang tersebut telah fasik batinnya, karena hatinya telah berkhianat secara sadar kepada Allah dan kepada hak saudaranya sesama Muslim.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat Hadits &amp; Fiqih Salaf):</strong><br>
+        Ibnu Katsir menggunakan ayat ini untuk menetapkan legalitas syariat akad gadai (<em>rahn</em>). Beliau menghadirkan hadits sahih 'Aisyah r.a. bahwa Rasulullah ﷺ wafat dalam keadaan baju besi beliau masih tergadai pada seorang Yahudi di Madinah demi memenuhi kebutuhan gandum keluarganya. Ini menjadi dalil mutlak bahwa pensyariatan gadai berlaku universal, baik dalam safar maupun hadhar. Menanggapi firman <em>fa-in amina ba'ḍukum ba'ḍan</em>, Ibnu Katsir menukil hadits agung riwayat Al-Bukhari tentang lelaki Bani Israil yang meminjam 1.000 dinar dengan menjadikan Allah sebagai Saksi dan Penjamin, menunjukkan bahwa modal kepercayaan spiritual dapat menggantikan agunan material. Terkait <em>ātsimun qalbuh</em>, Ibnu Katsir mengutip firman Allah di QS. Al-Ma'idah: 106 dan menegaskan: <em>"Hati adalah raja bagi sekujur tubuh, maka penyandaran dosa kepadanya menunjukkan betapa dahsyatnya racun kejahatan tersebut."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih Muamalah Komparatif):</strong><br>
+        Al-Qurthubi membedah tuntas 15 masalah fiqih terkait ayat ini. Beliau memaparkan konsensus jumhur ulama mazhab (Maliki, Syafi'i, Hanafi, Hambali) bahwa safar bukanlah syarat keabsahan gadai melainkan deskripsi kebiasaan. Terkait frasa <em>maqbūḍah</em>, Al-Qurthubi menjelaskan perbedaan pendapat ulama: apakah <em>al-qabḍh</em> (serah terima fisik) merupakan rukun sahnya akad (Mazhab Syafi'i dan Hanafi) ataukah syarat luzum/mengikatnya hak penahanan (Mazhab Maliki). Beliau juga menegaskan kaidah fiqih universal: <em>Kullu qardhin jarra manfa'atan fahuwa ribā</em> (Setiap utang-piutang yang menarik keuntungan bersyarat bagi kreditor adalah riba); oleh karena itu, pemegang barang gadai dilarang keras memanfaatkan barang gadaian (seperti menempati rumah gadai atau mengendarai kendaraan gadai) kecuali bila ia menanggung biaya nafkah hewannya sesuai sunnah Nabi ﷺ.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) &amp; Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> &amp; <em>Mafātīḥul-Ghayb</em> (Balaghah &amp; Filsafat Teologis):</strong><br>
+        Az-Zamakhsyari menyoroti sisi keajaiban diksi: penyandaran dosa kepada hati (<em>ātsimun qalbuhu</em>) adalah puncak keindahan balaghah, karena menyembunyikan kesaksian adalah perbuatan yang bermula, diproses, dan diputuskan di dalam hati (<em>fi'lul-qalb</em>). Saksi palsu berbuat dosa dengan lisannya, sedangkan penyembunyi saksi berbuat dosa dengan hatinya; dan dosa hati jauh lebih keji karena ia mematikan sumber petunjuk.<br>
+        Fakhruddin Ar-Razi menguraikan dimensi filosofis-keadilan: tatanan masyarakat akan runtuh jika hak milik tidak dilindungi kepastian hukum. Ayat ini memadukan hukum empiris (pencatatan dan gadai) dengan benteng moral transenden (takwa). Ketika bukti fisik tidak ada, pengadilan manusia lumpuh, maka Al-Qur'an mengalihkan kasus tersebut ke Mahkamah Ilahi dengan mengingatkan bahwa Allah Maha Mengetahui apa yang dirahasiakan hati manusia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em> (Tafsir Maqashidi Kontemporer):</strong><br>
+        Ibnu 'Asyur membedah <em>Maqāṣid asy-Syarī'ah</em> di balik ayat ini, yaitu <strong>Hifẓhul-Māl (Perlindungan Harta)</strong> dan <strong>Hifẓhuts-Tsiqah al-Māliyyah (Menjaga Modal Kepercayaan Sosial)</strong>. Beliau menjelaskan bahwa syariat Islam sangat menjaga agar perputaran ekonomi tidak mengalami stagnasi hanya karena ketiadaan juru tulis. Diksi <em>fa-in amina ba'ḍukum ba'ḍan</em> diapresiasi oleh Ibnu 'Asyur sebagai pengakuan syariat terhadap derajat moral tertinggi dalam peradaban, yaitu terbentuknya masyarakat yang matang di mana integritas moral dan nama baik seseorang sudah cukup menjadi jaminan tanpa perlu repot menahan agunan fisik.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab &amp; Buya Hamka — <em>Tafsir Al-Mishbah</em> &amp; <em>Tafsir Al-Azhar</em> (Konteks Nusantara):</strong><br>
+        Quraish Shihab menggarisbawahi bahwa kata <em>u'tumina</em> (diberi amanah) menuntut kesadaran bahwa utang adalah sebuah kehormatan moral yang dititipkan orang lain kepada kita. Mengabaikan pelunasan utang adalah bentuk pengkhianatan terhadap fitrah kemanusiaan. Beliau mengingatkan bahwa dosa hati (<em>itsmul qalb</em>) mengindikasikan penyakit mental disonansi kognitif yang merusak ketenteraman jiwa.<br>
+        Buya Hamka menyoroti realitas sosiologis masyarakat Nusantara. Beliau mengecam keras budaya gemar berutang tanpa perhitungan serta kebiasaan menghindar saat ditagih. Hamka menegaskan: betapa banyak persaudaraan hancur, silaturahmi putus, dan bisnis gulung tikar hanya karena orang yang berutang tidak memiliki takwa kepada Allah saat dipercaya. Beliau juga memperingatkan bahaya saksi bungkam di pengadilan yang menyebabkan orang tak bersalah mendekam di penjara demi membela kepentingan orang berkuasa.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') &amp; Dinamika Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Analisis &amp; Ragam Sudut Pandang (Ikhtilaf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Safar dalam Pensyariatan Gadai (Rahn)</strong></td>
+                <td>Jumhur ulama lintas mazhab sepakat bahwa rahn disyariatkan dan sah dilakukan baik dalam safar maupun hadhar (mukim).</td>
+                <td><strong>Jumhur (4 Mazhab):</strong> Frasa <em>'alā safarin</em> adalah gambaran realitas umum (<em>ghalib</em>), didukung hadits Nabi ﷺ menggadaikan baju besi saat mukim di Madinah.<br><strong>Mujahid, Adh-Dhahhak &amp; Mazhab Zhahiri:</strong> Berpendapat bahwa rahn hanya sah secara syar'i jika dilakukan dalam perjalanan, berpegang pada zhahir teks ayat.</td>
+            </tr>
+            <tr>
+                <td><strong>Status Qabdh (Penguasaan Fisik Barang Gadai)</strong></td>
+                <td>Barang gadai harus berada di bawah kendali kreditor agar melahirkan rasa aman finansial.</td>
+                <td><strong>Imam Asy-Syafi'i &amp; Abu Hanifah:</strong> <em>Al-Qabḍh</em> adalah rukun/syarat sahnya akad gadai; sebelum diserahterimakan, akad belum sah.<br><strong>Imam Malik:</strong> Akad rahn sudah sah dan mengikat (<em>lāzim</em>) begitu ijab qabul terucap, sedangkan <em>al-qabdh</em> adalah hak kreditor yang dapat dipaksakan melalui pengadilan.</td>
+            </tr>
+            <tr>
+                <td><strong>Hak Pemanfaatan Barang Gadai oleh Kreditor</strong></td>
+                <td>Kreditor dilarang keras mengambil keuntungan materiil dari barang gadai karena statusnya adalah pinjaman (bukan sewa-beli), dan setiap manfaat pinjaman adalah riba.</td>
+                <td><strong>Hanafiyyah &amp; Syafi'iyyah:</strong> Pemanfaatan mutlak haram, hasil barang gadai milik debitur.<br><strong>Hanabilah:</strong> Kreditor boleh memanfaatkan hewan tunggangan atau hewan perahan seimbang dengan biaya nafkah dan pakan yang ia keluarkan (berdasarkan hadits riwayat Bukhari).</td>
+            </tr>
+            <tr>
+                <td><strong>Tafsir Kriminalisasi Batin "Ātsimun Qalbuh"</strong></td>
+                <td>Menyembunyikan kesaksian yang hak adalah dosa besar (<em>kabīrah</em>) dan menggugurkan sifat adil seorang saksi di pengadilan syariat.</td>
+                <td><strong>At-Tabari &amp; Ibnu Katsir:</strong> Menekankan aspek status hukum: pelakunya menjadi fasik dan terancam azab neraka.<br><strong>Az-Zamakhsyari &amp; Ar-Razi:</strong> Menyoroti aspek psikologis-balaghah: hati adalah sumber niat, kebusukan bermula dari konspirasi batin.<br><strong>Quraish Shihab:</strong> Kerusakan kepribadian moral yang memicu keresahan eksistensial permanen.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi &amp; Arsitektur Jiwa)</h2>
+    <p>
+        <em>[Catatan Metodologis: Analisis dalam Lensa 5 ini merupakan pembacaan sistemik, kognitif, dan neuropsikologis kontemporer yang berstatus sebagai hipotesis reflektif manusiawi (ijtihadi), bukan bagian dari wahyu mutlak Al-Qur'an, serta sepenuhnya steril dari cocoklogi sains spekulatif].</em>
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Lama vs Pola Pikir Qur'ani</h3>
+    <ul>
+        <li>
+            <strong>Pola Pikir Transaksional-Oportunistik (Jahiliyah / Sekuler):</strong><br>
+            • Memandang ketiadaan bukti tertulis dan saksi formal sebagai <em>celah hukum (loophole)</em> yang menguntungkan untuk mengingkari komitmen atau menunda pembayaran utang.<br>
+            • Beroperasi di bawah paradigma <em>zero-sum game</em>: "Uang yang sudah masuk ke tanganku adalah kemenanganku, mengembalikannya adalah kerugianku".<br>
+            • Menilai kejujuran semata-mata berdasarkan risiko tertangkap aparat (<em>external enforcement</em>); bila tidak ada yang melihat, pengkhianatan dianggap sebagai kejelian manuver.<br>
+            • Melakukan rasionalisasi saat menyembunyikan kesaksian demi menjaga hubungan pertemanan, menghindari repot, atau melindungi kepentingan kelompok (<em>in-group nepotism</em>).
+        </li>
+        <li>
+            <strong>Pola Pikir Rabbani-Amanah (Qur'ani):</strong><br>
+            • Memandang kepercayaan orang lain sebagai <strong>utang kemuliaan jiwa (moral obligation)</strong> yang pertanggungjawabannya langsung berhadapan dengan Allah Swt.<br>
+            • Beroperasi di bawah paradigma <em>spiritual stewardship</em>: harta dan kepercayaan adalah titipan Ilahi, menunaikannya tepat waktu mendatangkan keberkahan kelimpahan (<em>abundance mindset</em>).<br>
+            • Menanamkan <em>internal divine surveillance</em> (Ihsan): "Walaupun juru tulis tidak ada dan kreditor memercayaiku tanpa jaminan, Allah Tuhanku menyaksikanku detik demi detik".<br>
+            • Memandang kesaksian yang hak sebagai pilar penegak kosmos keadilan; membungkam kebenaran disadari sebagai tindakan bunuh diri moral yang mencemari kesucian kalbu.
+        </li>
+    </ul>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Collateral-Trust Continuum (Kontinum Agunan-Kepercayaan):</strong><br>
+            Dalam sistem interaksi finansial dan sosial manusia, hubungan antar-pihak bergerak di sepanjang kontinum: dari kutub <em>Low Trust / High Collateral</em> (ketiadaan rasa percaya yang menuntut agunan fisik ketat dan pengikatan legal berlapis) menuju kutub <em>High Trust / Low Collateral</em> (kepercayaan moral tinggi di mana integritas pribadi menggantikan fungsi agunan). Syariat Islam mengakui kedua kutub ini secara realistis. Ketika mitigasi teknis (pencatatan dan saksi) tidak tersedia, syariat memfasilitasi agunan fisik (<em>rahn maqbūḍah</em>). Namun syariat juga memvalidasi transaksi berbasis kepercayaan penuh (<em>amina ba'ḍukum ba'ḍā</em>) dengan syarat dibangun di atas pilar takwa. Keberhasilan peradaban diukur dari kemampuannya mentransformasikan masyarakat dari ketergantungan agunan fisik menuju kematangan modal sosial yang berintegritas.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Poison of Internalized Silence (Toksisitas Keheningan Pasif):</strong><br>
+            Kejahatan moral tidak hanya berbentuk aksi destruktif aktif (seperti mencuri atau bersaksi palsu), melainkan juga dalam bentuk <strong>keheningan pasif yang disengaja (omission bias)</strong>, yaitu ketika seseorang memiliki akses terhadap kebenaran yang dapat menyelamatkan hak orang lain, namun ia memilih bungkam (<em>kitmānusy-syahādah</em>). Secara kognitif, keheningan pasif ini meracuni arsitektur batiniah secara lebih masif daripada kebohongan aktif, karena pelaku membungkus kepengecutannya dengan ilusi netralitas ("aku kan tidak ikut campur, aku tidak berbohong"). Al-Qur'an meruntuhkan ilusi ini dengan menyematkan label <em>ātsimun qalbuh</em>: bungkam di hadapan kezaliman adalah kejahatan batin tingkat tinggi.
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa: Anatomi "Itsmul Qalb" (Dosa Hati)</h3>
+    <p>
+        Mengapa Al-Qur'an secara spesifik menisbatkan dosa menyembunyikan kesaksian kepada <strong>hati (al-qalb)</strong>? Tinjauan psikologi kognitif dan neurobiologi perilaku memberikan perspektif yang sangat mencerahkan:
+    </p>
+    <ul>
+        <li>
+            <strong>Beban Kognitif Tinggi (Extreme Cognitive Load) dalam Kebohongan Pasif:</strong> Ketika seseorang menjadi saksi atas sebuah kebenaran faktual, memori peristiwa tersebut tersimpan secara kokoh di dalam <em>hippocampus</em> dan jaringan korteks serebral. Saat ia memutuskan untuk membungkam kebenaran tersebut di ruang sidang atau investigasi, otaknya harus mengerahkan energi luar biasa pada bagian <em>Prefrontal Cortex (PFC)</em> untuk menekan (<em>suppress</em>) dorongan alami nurani yang ingin menyuarakan realitas. Penekanan aktif ini memicu lonjakan hormon stres kortisol secara laten, melahirkan kecemasan bawah sadar yang merusak homeostatis tubuh.
+        </li>
+        <li>
+            <strong>Disonansi Kognitif Kronis &amp; Erosi Amygdala:</strong> Menyembunyikan kebenaran sementara menyaksikan pihak yang benar terzalimi menciptakan pertentangan batin yang menyiksa (<em>cognitive dissonance</em>). Untuk meredakan siksaan ini, individu terpaksa membangun mekanisme pertahanan diri neurotik (<em>self-deception</em> dan rasionalisasi palsu). Proses pembiasaan ini lama-kelamaan akan mendesensitisasi respons moral di <em>Anterior Cingulate Cortex (ACC)</em>, mematikan kompas empati di <em>insula</em>, dan membekukan fungsi kalbu (fenomena <em>ar-rān</em> yang disebutkan dalam surah Al-Muthaffifin: 14). Inilah hakikat <em>ātsimun qalbuh</em>: kematian fungsional hati nurani manusia.
+        </li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer &amp; Kritik Peradaban)</h2>
+
+    <h3>1. Fenomenologi Krisis Pinjol Ilegal, PayLater, &amp; Normalisasi Penggelapan Utang</h3>
+    <p>
+        Peradaban abad ke-21 tengah menyaksikan transformasi radikal dalam lanskap keuangan melalui digitalisasi teknologi finansial (<em>fintech lending</em>). Layanan pinjaman daring (pinjol) dan skema <em>Buy Now Pay Later (PayLater)</em> menawarkan akses likuiditas instan hanya dalam hitungan detik tanpa memerlukan agunan kebendaan fisik (<em>unsecured loans</em>). Namun, ketiadaan agunan fisik ini tidak diimbangi dengan fondasi amanah dan takwa sebagaimana yang digariskan oleh Al-Qur'an. Akibatnya terjadi malapetaka sosio-ekonomi yang mengerikan:
+    </p>
+    <ul>
+        <li><strong>Epidemi Gagal Bayar &amp; Gaya Hidup Konsumtif Hedonis:</strong> Jutaan generasi muda terjerat lingkaran setan utang konsumtif untuk membiayai gaya hidup semu demi validasi media sosial. Muncul subkultur amoral yang menormalisasi perilaku mengemplang utang ("gali lubang tutup lubang"), sengaja mengganti nomor ponsel untuk lari dari tanggung jawab, dan memandang remeh uang yang telah dipinjam.</li>
+        <li><strong>Terorisme Digital Debt Collector:</strong> Korporasi pinjol ilegal merespons ketiadaan agunan dengan instrumen yang jauh lebih biadab daripada perbudakan jahiliyah: mereka menyita data pribadi nasabah, meretas kontak gawai, melancarkan teror psikologis, hingga melakukan pembunuhan karakter digital yang memicu gelombang depresi dan bunuh diri massal di berbagai pelosok negeri.</li>
+    </ul>
+    <p>
+        Ayat 283 hadir sebagai kritik peradaban yang menghujam jantung industri keuangan modern: sebuah sistem kredit yang melepaskan diri dari pilar agunan yang adil (<em>rahn maqbūdhah</em>) sekaligus mencampakkan pilar takwa dan amanah (<em>fal-yu'addil-ladzī'tumina amānatahū</em>) pasti akan bermutasi menjadi monster predatoris yang memangsa martabat kemanusiaan.
+    </p>
+
+    <h3>2. Sindrom "Omertà", Budaya Bungkam (Bystander Effect), &amp; Kriminalitas Korporasi</h3>
+    <p>
+        Di ranah penegakan hukum dan etika publik, firman Allah <em>wa lā taktumusy-syahādah</em> menelanjangi borok peradaban kontemporer yang dijangkiti oleh budaya bungkam (<em>code of silence</em> / <em>omertà</em>):
+    </p>
+    <ul>
+        <li><strong>Kejahatan Kerah Putih (White-Collar Crime) &amp; Manipulasi Audit:</strong> Skandal-skandal mega-korupsi di lembaga keuangan global, perbankan, dan birokrasi pemerintahan terjadi bukan karena ketiadaan regulasi, melainkan karena para akuntan, auditor internal, dan staf operasional yang mengetahui kecurangan sistemik memilih untuk bungkam (<em>kitmānusy-syahādah</em>) demi mengamankan karier, gaji, dan kenyamanan pribadi.</li>
+        <li><strong>Pengebiri Perlindungan Saksi (Whistleblower Persecution):</strong> Orang-orang jujur yang berani bersaksi menyuarakan kebenaran kerap diintimidasi, dikriminalisasi, dipecat, bahkan dihabisi secara fisik, sementara masyarakat luas bersikap pasif bagaikan penonton (<em>the bystander effect</em>). Sikap bungkam kolektif ini adalah wujud nyata dari peradaban yang dipimpin oleh hati-hati yang berdosa (<em>qulūbun ātsimah</em>).</li>
+    </ul>
+
+    <h3>3. Runtuhnya Modal Sosial (Social Capital) &amp; Krisis Kepercayaan Interpersonal</h3>
+    <p>
+        Masyarakat modern mengalami pembusukan modal sosial: rasa saling percaya antar-manusia (<em>interpersonal trust</em>) berada pada titik terendah dalam sejarah. Segala transaksi kini menuntut biaya verifikasi (<em>transaction cost</em>) yang luar biasa mahal, melibatkan birokrasi legalitas yang rumit dan kecurigaan paranoia yang melelahkan. Ketika kalimat <em>fa-in amina ba'ḍukum ba'ḍan</em> tidak lagi memiliki tempat dalam kehidupan sosial, manusia teralienasi satu sama lain, memandang sesamanya semata-mata sebagai ancaman atau mangsa ekonomi.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret &amp; Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Protokol Mikro (< 5 Menit) — Audit Buku Amanah &amp; Digital Debt Registry:</strong> Ambil gawai atau buku catatan Anda saat ini juga. Tuliskan secara transparan seluruh daftar tanggungan utang finansial, barang pinjaman, dan amanah organisasi yang masih melekat pada diri Anda beserta nama pemilik haknya. Kirimkan pesan singkat konfirmasi kepada kreditor/pemilik barang sebagai iktikad baik bahwa Anda tidak lupa dan berkomitmen menunaikannya. Simpan catatan ini di tempat yang dapat diakses oleh ahli waris keluarga jika sewaktu-waktu ajal menjemput.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Rule) — Standarisasi Transaksi Darurat &amp; Anti-Eksploitasi Agunan:</strong> Jika Anda terpaksa meminjamkan uang kepada seseorang dalam situasi darurat tanpa juru tulis resmi, mintalah barang jaminan (agunan) yang wajar nilainya semata-mata untuk menjaga komitmen, ATAU jika Anda memilih mempercayainya (<em>fa-in amina</em>), niatkan pinjaman tersebut dengan keikhlasan penuh seraya bertawakkal kepada Allah tanpa membebani debitur dengan syarat bunga sedikit pun. Bagi Anda yang menjadi debitur, jadikan pelunasan utang sebagai prioritas alokasi kas nomor satu dari setiap rezeki yang masuk sebelum membelanjakannya untuk kebutuhan sekunder/tersier.
+            </li>
+            <li>
+                <strong>Komitmen Etika Publik — Sumpah Integritas Anti-Bungkam (Whistleblower Integrity):</strong> Buat komitmen moral pribadi: jika Anda dipanggil menjadi saksi formal dalam persengketaan hukum, audit kantor, perselisihan keluarga, atau melihat rekan kerja dizalimi, bersumpahlah demi Allah untuk tidak menyembunyikan kebenaran sedikit pun (<em>wa lā taktumusy-syahādah</em>). Sampaikan kesaksian secara objektif, berani, dan adil, meskipun kesaksian tersebut bertentangan dengan kepentingan atasan, rekan sejawat, atau kenyamanan pribadi Anda.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika seseorang mempercayai integritas pribadiku sehingga ia meminjamkan hartanya tanpa menuntut agunan fisik atau akta tertulis, apakah di dalam sudut batinku yang terdalam sempat terlintas godaan licik untuk menyepelekan pelunasannya, memanfaatkan kebaikannya, atau menunda-nunda pengembalian haknya?
+            </li>
+            <li>
+                Pernahkah aku memilih diam membisu, pura-pura tidak tahu, atau menyembunyikan kesaksian kebenaran di ruang rapat, persidangan, maupun pergaulan sosial semata-mata karena takut kehilangan reputasi, takut disingkirkan kelompok, atau enggan menanggung repot, seraya membiarkan saudaraku menanggung kezaliman sendirian?
+            </li>
+            <li>
+                Jika malam ini jantungku berhenti berdetak dan Allah menggelar pengadilan hisab-Nya, apakah hatiku (<em>qalbī</em>) berada dalam kondisi selamat (<em>salīm</em>) di hadapan-Nya, ataukah ia tengah membusuk terinfeksi noda dosa (<em>ātsimun qalbī</em>) akibat khianat terhadap amanah sesama hamba yang belum tertunaikan?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat &amp; Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Mufattiḥal-Abwāb, Yā 'Alīman bi-mā ta'maluz-zhawāhiru wal-khafāyā. Segala puji bagi-Mu yang telah menurunkan syariat keadilan paripurna untuk memelihara kehormatan dan hak-hak kami. Kami berlindung kepada-Mu, ya Allah, dari beratnya lilitan utang yang tak terbayar, dari kehinaan mengkhianati amanah saat dipercaya, dan dari kemunafikan menyembunyikan kesaksian yang hak. Bersihkanlah kalbu kami dari segala noda itsmul qalb (dosa hati), sikap pengecut membela kebenaran, dan ketamakan memakan hak sesama. Jadikanlah ketakwaan kepada-Mu sebagai benteng tertinggi dalam setiap muamalah kami, karuniakanlah keberkahan rezeki yang halal dan mencukupi, serta wafatkanlah kami dalam keadaan dada yang bersih, lisan yang jujur, dan hati yang tenteram menemui-Mu. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-282 - QS. Al-Baqarah Ayat 282.html">&larr; Kembali ke Ayat 282 (QS. 2:282)</a>
+        <span><strong>QS. Al-Baqarah [2]: 283</strong></span>
+        <a href="002-284 - QS. Al-Baqarah Ayat 284.html">Lanjut ke Ayat 284 (QS. 2:284) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

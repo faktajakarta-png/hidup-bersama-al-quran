@@ -1,0 +1,736 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-061 - QS. Ali 'Imran Ayat 61 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-060 - QS. Ali 'Imran Ayat 60.html">&larr; Ayat Sebelumnya (QS. 3:60)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-062 - QS. Ali 'Imran Ayat 62.html">Ayat Berikutnya (QS. 3:62) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imrān & Mubahalah</span>
+        <span class="badge">Klaster 5 (Ayat 59–63): Resolusi Teologi 'Īsā, Tantangan Sakral Mubāhalah & Penutup Polemik Najrān</span>
+        <span class="badge">25 Kata | 114 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 61</h1>
+    <div class="transliteration">
+        "Fa-man ḥājjaka fīhi mim ba‘di mā jā'aka minal-‘ilmi fa-qul ta‘ālaw nad‘u abnā'anā wa abnā'akum wa nisā'anā wa nisā'akum wa anfusanā wa anfusakum tsumma nabtahil fa-naj‘al la‘natallāhi ‘alal-kāżibīn(a)."
+    </div>
+    <div class="thematic-title">
+        Ayat Mubāhalah: Diplomasi Sakral Puncak Pembuktian Kebenaran Risalah, Pertaruhan Eksistensial "Skin in the Game" Keluarga Kenabian, dan Pemutusan Kesombongan Dogmatisme Debat Najrān
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 5: Titik Kulminasi Polemik Teologis & Mahkamah Laknat Transendental)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        فَمَنْ حَآجَّكَ فِيهِ مِنۢ بَعْدِ مَا جَآءَكَ مِنَ ٱلْعِلْمِ فَقُلْ تَعَالَوْا۟ نَدْعُ أَبْنَآءَنَا وَأَبْنَآءَكُمْ وَنِسَآءَنَا وَنِسَآءَكُمْ وَأَنفُسَنَا وَأَنفُسَكُمْ ثُمَّ نَبْتَهِلْ فَنَجْعَل لَّعْنَتَ ٱللَّهِ عَلَى ٱلْكَـٰذِبِينَ ۝٦١
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Maka barang siapa yang mendebatmu (Muhammad) tentang urusan ini (status kehambaan dan kenabian 'Īsā AS) setelah datang kepadamu ilmu (wahyu yang pasti dan bukti-bukti rasional yang tak terbantahkan), maka katakanlah (kepada mereka): 'Marilah kita memanggil anak-anak kami dan anak-anak kamu, istri-istri kami dan istri-istri kamu, serta jiwa (diri) kami dan jiwa (diri) kamu; kemudian marilah kita bermubāhalah (berdoa dengan penuh ketundukan dan kesungguhan memohon kepunahan pihak yang sesat), lalu kita tetapkan kutukan laknat Allah ditimpakan kepada orang-orang yang berdusta!'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Doktrinal:</strong> Ayat ini dikenal dalam sejarah diplomasi Islam dan khazanah 'Ulumul Qur'an sebagai <strong>Ayat Mubāhalah</strong> (آية المباهلة). Kata <em>mubāhalah</em> berakar dari kata <em>al-bahl</em> (الْبَهْل) atau <em>al-buhl</em> yang secara leksikal berarti membiarkan tanpa ikatan atau menumpahkan kutukan. Dalam terminologi syariat, mubahalah adalah prosesi peradilan spiritual transendental: ketika dialog rasional dan argumentasi ilmiah telah dipaparkan secara tuntas namun pihak lawan tetap bertahan dalam kebebalan dogmatis akibat fanatisme mazhab dan gengsi politik, maka kedua belah pihak berkumpul bersama keluarga inti yang paling dicintai untuk bermunajat kepada Allah agar laknat dan azab seketika (<em>al-halāk al-'ājil</em>) diturunkan kepada pendusta. Penegasan <em>"mim ba'di mā jā'aka minal-'ilm"</em> menegaskan bahwa mubahalah bukan ajang coba-coba atau perjudian intelektual, melainkan puncak pembuktian yang didasari atas kepastian wahyu yang steril dari keraguan.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>فَمَنْ حَآجَّكَ فِيهِ</strong><br>(<em>Fa-man ḥājjaka fīhi</em>)</td>
+                <td>
+                    • <strong>Ikhfa' / Idzhar Halqi:</strong> Nun sukun bertemu huruf Ḥā' (ح) dibaca <strong>Idzhār Ḥalqī</strong> murni tanpa ghunnah menurut seluruh imam.<br>
+                    • <strong>Mad Lāzim Kilmī Mutsaqqal:</strong> Huruf Alif mad bertemu Jim bertasydid (ّج) dalam satu kata, wajib dibaca panjang <strong>6 Harakat (Ṭhūl)</strong> disertai sifat <em>Nabr</em> (penekanan vokal pada tasydid Jim).<br>
+                    • <strong>Shilah Qashirah / 'Adamus-Shilah:</strong> Ha' dhamir pada <em>fīhi</em> didahului Ya' sukun.
+                </td>
+                <td>
+                    • Seluruh imam sepakat membaca idzhar halqi pada <em>man ḥājja</em> dan mad lazim kilmi mutsaqqal 6 harakat mutlak pada <em>ḥājjaka</em>.<br>
+                    • Pada ha' dhamir <em>fīhi</em>: Mayoritas imam membaca tanpa shilah (dibaca pendek) karena didahului huruf sukun. Imam Ibnu Katsir membaca dengan shilah thabi'iyyah 2 harakat: <em>fīhī mim ba'di</em> jika washal (sesuai kaidahnya dalam meng-qashr / men-shilah ha' kinayah).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>مِنۢ بَعْدِ مَا جَآءَكَ</strong><br>(<em>Mim ba‘di mā jā'aka</em>)</td>
+                <td>
+                    • <strong>Iqlāb / Qalb:</strong> Nun sukun bertemu huruf Ba' (ب), suara nun diubah menjadi Mim samar disertai ghunnah 2 harakat.<br>
+                    • <strong>Mad Wājib Muttashil:</strong> Huruf Alif mad bertemu Hamzah dalam satu kata (<em>jā'aka</em>), dibaca panjang 4–5 harakat (Tawassuth/Fuwayqot-Tawassuth) atau 6 harakat (Thul).
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad wajib muttashil pada <em>jā'aka</em> dengan panjang maksimal <strong>6 Harakat (Ṭhūl)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan 4–5 harakat.<br>
+                    • <strong>Imālah / Fatḥ:</strong> Hamzah dan Al-Kisa'i serta Khalaf membaca <em>jā'aka</em> dengan <strong>Imālah Kubrā</strong> (condong ke arah vokal 'e/i'), sedangkan Warsy membaca dengan taqlil/bayna-bayna, dan mayoritas membaca dengan Fath murni.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>مِنَ ٱلْعِلْمِ فَقُلْ تَعَالَوْا۟</strong><br>(<em>Minal-‘ilmi fa-qul ta‘ālaw</em>)</td>
+                <td>
+                    • <strong>Idzhār Qamariyyah:</strong> Alif lam pada <em>al-'ilmi</em> dibaca jelas.<br>
+                    • <strong>Idzhār Qamiyy/Lām Fi'il:</strong> Lam sukun pada <em>fa-qul</em> bertemu Ta' dibaca idzhar murni tanpa idgham.<br>
+                    • <strong>Wāwu Līn:</strong> Huruf Wawu sukun didahului fathah pada <em>ta'ālaw</em>, dibaca lunak tanpa mad saat washal.
+                </td>
+                <td>
+                    • Konsensus mutawatir sepuluh imam membaca fathah pada huruf 'Ain dan Lam <em>ta'ālaw</em> sebagai fi'il amr jamak berwazan tafā'alū. Huruf Alif di ujungnya adalah Alif fariqah (ziyadah rasm).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>نَدْعُ أَبْنَآءَنَا وَأَبْنَآءَكُمْ</strong><br>(<em>Nad‘u abnā'anā wa abnā'akum</em>)</td>
+                <td>
+                    • <strong>Qalqalah Shughrā:</strong> Huruf Dal sukun di tengah kata <em>nad'u</em> memantul ringan.<br>
+                    • <strong>Mad Wājib Muttashil:</strong> Pada <em>abnā'anā</em> dan <em>abnā'akum</em>, alif mad bertemu hamzah dalam satu kata.<br>
+                    • <strong>Idzhār Syafawī:</strong> Mim sukun pada <em>abnā'akum</em> bertemu Wawu dibaca sangat jelas dan hati-hati agar tidak tertelan (asyaddu izhhāran).
+                </td>
+                <td>
+                    • Warsy dan Hamzah menerapkan mad muttashil 6 harakat. Imam lainnya membaca 4–5 harakat. Pada waqaf Hamzah: terdapat kaidah tahsil/tashil hamzah kedua pada <em>abnā'akum</em> bagi riwayat Khalaf dan Khallad.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَنِسَآءَنَا وَنِسَآءَكُمْ</strong><br>(<em>Wa nisā'anā wa nisā'akum</em>)</td>
+                <td>
+                    • <strong>Mad Wājib Muttashil Ganda:</strong> Pertemuan alif mad dengan hamzah pada kedua kata isim jamak mudhaf.<br>
+                    • <strong>Makhraj Sīn:</strong> Huruf Sin memiliki sifat shafir (desis tajam), hams, dan rikhwah.<br>
+                    • <strong>Idzhār Syafawī:</strong> Mim sukun bertemu Wawu dibaca izhar syafawi mu'akkad.
+                </td>
+                <td>
+                    • Seluruh imam membaca fathah pada Nun pertama dan kasrah pada Nun kedua (<em>wa nisā'anā</em> manshub karena ma'thuf pada maf'ul bih). Mad muttashil dibaca sesuai maratib mad masing-masing thariq.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَأَنفُسَنَا وَأَنفُسَكُمْ</strong><br>(<em>Wa anfusanā wa anfusakum</em>)</td>
+                <td>
+                    • <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Fa' (ف) di kedua kata, ditahan 2 harakat dengan tingkat kesamaran mendekati makhraj bibir bawah (bathnul-syafah).<br>
+                    • <strong>Idzhār Syafawī:</strong> Mim sukun bertemu huruf Tsa' (ث) pada kata berikutnya.
+                </td>
+                <td>
+                    • Seluruh sepuluh imam mutawatirah sepakat membaca ikhfa' pada kedua lafaz <em>anfusanā</em> dan <em>anfusakum</em> dengan harakat fathah pada Sin sebagai status nashab (ma'thuf).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ثُمَّ نَبْتَهِلْ</strong><br>(<em>Tsumma nabtahil</em>)</td>
+                <td>
+                    • <strong>Ghunnah Musyaddadah:</strong> Mim bertasydid pada <em>tsumma</em> wajib ditahan ghunnah 2 harakat sempurna.<br>
+                    • <strong>Makhraj Tsa' (ث):</strong> Ujung lidah keluar sedikit menyentuh ujung gigi seri atas dengan sifat hams.<br>
+                    • <strong>Qalqalah Shughrā:</strong> Ba' sukun pada <em>nabtahil</em> memantul kuat.<br>
+                    • <strong>Sukun 'Āridh / Jazm:</strong> Lam sukun dengan sifat tawassuth (tidak membal dan tidak tertahan mati).
+                </td>
+                <td>
+                    • Seluruh imam mutawatirah membaca huruf Ba' dengan sukun qalqalah dan Lam sukun jazm sebagai ma'thuf atas jawab amr atau jumlah mu'stanafah thalabiyyah.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>فَنَجْعَل لَّعْنَتَ ٱللَّهِ عَلَى ٱلْكَـٰذِبِينَ ۝٦١</strong><br>(<em>Fa-naj‘al la‘natallāhi ‘alal-kāżibīn</em>)</td>
+                <td>
+                    • <strong>Idghām Mutamātsilayn Shaghīr:</strong> Lam sukun pada <em>fa-naj'al</em> melebur sempurna ke dalam Lam berharakat pada <em>la'nata</em> (dibaca <em>fa-naj'al-la'nata</em> tanpa jeda).<br>
+                    • <strong>Qalqalah Shughrā:</strong> Jim sukun pada <em>naj'al</em>.<br>
+                    • <strong>Tafkhīm Lām Jalālah:</strong> Lam pada Ism Jalalah <em>Allāhi</em> dibaca tebal (tafkhim) karena didahului harakat fathah.<br>
+                    • <strong>Mad 'Āridh lis-Sukūn:</strong> Di ujung ayat pada waqaf dibaca 2, 4, atau 6 harakat diiringi izhar mutlaq pada Nun.
+                </td>
+                <td>
+                    • <strong>Idghām Lam fil-Lam:</strong> Seluruh sepuluh imam membaca idgham mutamatsilayn kabir/shaghir pada pertemuan dua huruf Lam tersebut.<br>
+                    • Penulisan Rasm Utsmani: Lafaz <em>la'nat</em> ditulis dengan Ta' Maftūḥah (لَعْنَتَ) dalam sebagian riwayat mushaf dan diwaqafkan dengan Ta' menurut Mazhab Abu 'Amr, Al-Kisa'i, dan Ya'qub (dalam qira'at tertentu), sedangkan Hafsh 'an 'Ashim membaca waqaf dengan Ta' sesuai rasm mushaf madani.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Muslim (No. 2404), Jāmi' At-Tirmidzī (No. 3724), dan Musnad Aḥmad (No. 1608) dari Sahabat Sa'ad bin Abi Waqqash r.a. — Status Personel Ahlul Bait dalam Mubahalah:</strong><br>
+        Sa'ad bin Abi Waqqash r.a. meriwayatkan:<br>
+        <em>"Lammā nazalat hādzihil-āyah: {Faqul ta'ālaw nad'u abnā'anā wa abnā'akum wa nisā'anā wa nisā'akum wa anfusanā wa anfusakum}, da'ā Rasūlullāhi ﷺ 'Aliyyan, wa Fāṭhimah, wa Ḥasanan, wa Ḥusaynan, fa-qāla: <strong>'Allāhumma hā'ulā'i ahlī!'</strong>"</em><br>
+        (Tatkala ayat ini turun: {Katakanlah: Marilah kita memanggil anak-anak kami dan anak-anak kamu, istri-istri kami dan istri-istri kamu, serta diri kami dan diri kamu}, maka Rasulullah ﷺ memanggil 'Ali, Fāṭhimah, Al-Ḥasan, dan Al-Ḥusain, seraya beliau berdoa: <strong>'Ya Allah, mereka inilah keluargaku (Ahlul Baitku)!'</strong>).<br>
+        <strong>Derajat Sanad:</strong> Sahih Muttafaq 'alaih dalam derajat kemutawatiran maknawi riwayat Fadhā'il Ash-Ṣhaḥābah.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Al-Bukhārī (No. 4380 & 4381 - Kitāb Al-Maghāzī) & Sahih Muslim (No. 2420) dari Hudzaifah bin Al-Yaman r.a. — Kedatangan Tokoh Kristen Najran dan Penolakan Mubahalah:</strong><br>
+        Hudzaifah r.a. mengabarkan bahwa dua pemimpin tertinggi delegasi Kristen Najrān, yaitu <strong>Al-'Āqib</strong> (pemimpin urusan sipil dan intelektual) dan <strong>As-Sayyid</strong> (pemimpin urusan keagamaan dan logistik), datang menemui Rasulullah ﷺ dengan maksud berdebat dan mengadakan mubahalah. Namun, salah seorang dari mereka berkata secara rahasia kepada rekannya:<br>
+        <em>"Lā taf'al! Fa-wallāhi la'in kāna Nabiyyan fa-bāhalanā lā nuflīḥu naḥnu wa lā 'aqibunā min ba'dinā!"</em><br>
+        (Jangan engkau lakukan mubahalah ini! Demi Allah, sekiranya dia benar-benar seorang Nabi lalu kita bermubahalah dengannya, niscaya kita tidak akan pernah beruntung, begitu pula anak keturunan kita setelah kita tidak akan pernah tersisa di muka bumi!).<br>
+        Maka mereka membatalkan sumpah laknat, menolak tantangan mubahalah, dan memohon perdamaian dengan bersedia membayar jizyah sebesar dua ribu stel pakaian (<em>alfā ḥullah</em>) setiap tahun serta meminta dikirimkan seorang utusan yang terpercaya (<em>amīn</em>), yang kemudian dipenuhi Rasulullah ﷺ dengan mengutus Abu 'Ubaidah bin Al-Jarrah r.a.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Riwayat Sunan At-Tirmidzī (No. 2999 - Ḥasan Ṣhaḥīḥ) dan Musnad Aḥmad (No. 2225) dari Ibnu 'Abbās r.a.:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Law kharaja alladzīna yubāhilūna la-raja'ū lā yajidūna ahlan wa lā mālan!"</em><br>
+        (Sekiranya orang-orang yang ditantang mubahalah itu berani keluar melayani sumpah kutukan tersebut, niscaya saat mereka pulang, mereka tidak akan mendapati lagi keluarga maupun harta benda mereka, melainkan semuanya telah musnah disambar azab!).
+    </div>
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Ḥ-J-J (ح-ج-ج — Ḥājjaka):</strong> Ibnu Fāris dalam <em>Mu‘jam Maqāyīs al-Lughah</em> menjelaskan bahwa akar kata ini berporos pada dua makna mendasar: <em>al-qaṣhd</em> (menuju sesuatu secara berulang-ulang) dan <em>al-ghalabah bil-ḥujjah</em> (berusaha mengalahkan lawan dengan argumentasi). Bentuk wazan <em>Fā'ala</em> (<em>ḥājja – yuḥājju – muḥājjatan</em>) mengindikasikan interaksi dua pihak (<em>al-musyārakah</em>) yang saling melempar dalil. Di sini, maknanya adalah perdebatan keras kepala yang dilancarkan pihak lawan setelah hujah terang benderang.</li>
+        <li><strong>2. ‘-L-M (ع-ل-م — Al-‘Ilm):</strong> Bermakna asal tanda atau jejak yang memperjelas sesuatu hingga terbedakan secara mutlak dari yang lain (<em>al-atsar wat-tamyīz</em>). <em>Al-‘Ilm</em> di dalam ayat ini bermakna wahyu qath'i (pasti) yang diturunkan Allah mengenai hakikat penciptaan Isa AS sebagaimana penciptaan Adam AS (QS. 3:59). Menolak ilmu yang telah qath'i adalah bentuk pembangkangan rasional.</li>
+        <li><strong>3. ‘-L-W (ع-ل-و — Ta‘ālaw):</strong> Asal maknanya adalah naik dari tempat yang rendah menuju tempat yang tinggi (<em>al-irtifā‘ wal-‘uluww</em>). Kata <em>ta‘āla</em> mulanya digunakan untuk memanggil seseorang agar mendaki bukit. Kemudian dalam tradisi linguistik Arab klasik, kata ini bergeser menjadi seruan kehormatan: ajakan untuk meninggalkan kerendahan debat kusir menuju ketinggian forum pembuktian hakiki yang agung dan berwibawa.</li>
+        <li><strong>4. D-‘-W (د-ع-و — Nad‘u):</strong> Bermakna mencondongkan suara atau mengajak seseorang untuk hadir (<em>thalabul-iqbāl</em>). Penggunaan bentuk jamak <em>nad‘u</em> (kami memanggil) merefleksikan otoritas kenabian yang mengajak kedua belah pihak menghadirkan pihak-pihak representatif yang paling krusial.</li>
+        <li><strong>5. B-H-L (ب-ه-ل — Nabtahil / Al-Mubāhalah):</strong> Ibnu Manzhūr dalam <em>Lisān al-‘Arab</em> mencatat makna primer <em>al-bahl</em> adalah melepaskan atau menelantarkan unta tanpa ikatan tali pembebat (<em>tarkusy-syay'i ghayra masyadūd</em>). Dari sini lahir metafora: orang yang bermubahalah melepaskan dirinya dari segala perlindungan dan berserah diri secara total, seraya memanjatkan doa dengan sungguh-sungguh (<em>al-ijtihād fid-du‘ā'</em>) dan ketundukan ekstrem (<em>at-tadhurru‘</em>) memohon agar Allah menimpakan laknat (kutukan pemusnahan) atas pihak yang ingkar dan pendusta.</li>
+        <li><strong>6. L-‘-N (ل-ع-ن — La‘natallāh):</strong> Secara etimologis berarti pengusiran, penjauhan, dan pemutusan dari seluruh kebaikan serta rahmat Allah (<em>ath-thard wal-ib‘ād min raḥmatillāh</em>). Kutukan laknat Allah dalam mubahalah berarti kutukan kematian dan kehancuran eksistensial seketika di dunia serta azab neraka di akhirat.</li>
+        <li><strong>7. K-DZ-B (ك-ذ-ب — Al-Kāżibīn):</strong> Makna asalnya adalah ketidaksesuaian antara pernyataan lisan dengan realitas objektif yang sebenarnya (<em>khilāful-ḥaqīqah</em>). Kata ini berbentuk jamak mudzakkar salim yang diimbuhi alif lam <em>istighrāq</em> (mencakup seluruh personifikasi pendusta dalam perdebatan teologis tersebut).</li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فَمَنْ</strong></td>
+                <td><em>Fā'</em>: Isti'nāfiyyah / Fashīḥah.<br><em>Man</em>: Ism syarth jazim mabni 'alas-sukun.</td>
+                <td><em>Man</em> fi mahalli raf'in sebagai <strong>Mubtada'</strong>. Jumlah syarat wal-jaza' setelahnya menjadi khabar mubtada'.</td>
+            </tr>
+            <tr>
+                <td><strong>حَآجَّكَ فِيهِ</strong></td>
+                <td><em>Ḥājja</em>: Fi'il madhi wazan <em>fā'ala</em>.<br><em>Kāf</em>: Dhamir mukhattab.<br><em>Fīhi</em>: Jar wa majrūr.</td>
+                <td>Fi'il madhi fi mahalli jazmin fi'il syarth. Fa'il dhamir mustatir (<em>huwa</em>). Kaf fi mahalli nashbin maf'ul bih. <em>Fīhi</em> muta'alliq bi <em>ḥājjaka</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنۢ بَعْدِ مَا</strong></td>
+                <td><em>Min</em>: Harf jar.<br><em>Ba'di</em>: Ism zaman majrur.<br><em>Mā</em>: Mashdariyyah atau isim maushul.</td>
+                <td><em>Min ba'di</em> muta'alliq bi <em>ḥājjaka</em>. <em>Mā</em> bersama shilahnya ditakwil mashdar: <em>ba'da majī'il-'ilmi laka</em> (fi mahalli jarrin mudhaf ilaih).</td>
+            </tr>
+            <tr>
+                <td><strong>جَآءَكَ مِنَ ٱلْعِلْمِ</strong></td>
+                <td><em>Jā'a</em>: Fi'il madhi.<br><em>Kāf</em>: Maf'ul bih.<br><em>Minal-'ilmi</em>: Jar wa majrur.</td>
+                <td>Shilah maushul la mahalla laha minal-i'rab. <em>Minal-'ilmi</em> bayāniyyah atau muta'alliq bi hal mahdzufah min fa'il jā'a.</td>
+            </tr>
+            <tr>
+                <td><strong>فَقُلْ تَعَالَوْا۟</strong></td>
+                <td><em>Fā'</em>: Rābiṭhah li-jawābisy-syarṭh.<br><em>Qul</em>: Fi'il amr mabni 'alas-sukun.<br><em>Ta'ālaw</em>: Fi'il amr jamak wazan <em>tafā'alū</em> mabni 'alā hadzfin-nūn.</td>
+                <td>Jumlah <em>qul</em> fi mahalli jazmin jawab syarth. Wawu pada <em>ta'ālaw</em> dhamir muttashil fi mahalli raf'in fa'il. Jumlah <em>ta'ālaw</em> fi mahalli nashbin maqūlul-qawl.</td>
+            </tr>
+            <tr>
+                <td><strong>نَدْعُ</strong></td>
+                <td>Fi'il mudhari' mu'tal akhir (akar <em>da'ā-yad'ū</em>) majzum bil-hadzfil-wāw (حذف حرف العلة).</td>
+                <td>Majzum karena berstatus sebagai <strong>Jawābuth-Thalab</strong> (jawaban dari fi'il amr <em>ta'ālaw</em>). Fa'il dhamir mustatir wujuban (<em>naḥnu</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>أَبْنَآءَنَا وَأَبْنَآءَكُمْ</strong></td>
+                <td>Ism jamak taksir (<em>ibn</em> -> <em>abnā'</em>) mudhaf ilā dhamīr (<em>nā</em> / <em>kum</em>).</td>
+                <td><em>Abnā'anā</em>: Maf'ūl bih bagi <em>nad'u</em> manshub bil-fathah. <em>Abnā'akum</em>: Ma'thūf manshūb.</td>
+            </tr>
+            <tr>
+                <td><strong>وَنِسَآءَنَا وَنِسَآءَكُمْ</strong></td>
+                <td>Ism jamak (<em>imra'ah</em> -> <em>nisā'</em>) mudhaf ilā dhamir.</td>
+                <td>Ma'thuf atas <em>abnā'anā</em> manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَأَنفُسَنَا وَأَنفُسَكُمْ</strong></td>
+                <td>Ism jamak taksir (<em>nafs</em> -> <em>anfus</em>) mudhaf ilā dhamir.</td>
+                <td>Ma'thuf atas maf'ul bih manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ثُمَّ نَبْتَهِلْ</strong></td>
+                <td><em>Tsumma</em>: Harf 'athaf lit-tarakhī.<br><em>Nabtahil</em>: Fi'il mudhari' wazan <em>ifta'ala</em>.</td>
+                <td>Fi'il mudhari' majzum bil-sukūn karena ma'thuf atas <em>nad'u</em> yang berstatus jawābuth-thalab. Fa'il dhamir mustatir (<em>naḥnu</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>فَنَجْعَل لَّعْنَتَ ٱللَّهِ</strong></td>
+                <td><em>Fā'</em>: 'Athifah sababiyyah.<br><em>Naj'al</em>: Fi'il mudhari' majzum.<br><em>La'nata</em>: Maf'ul bih.<br><em>Allāhi</em>: Mudhaf ilaih.</td>
+                <td><em>Naj'al</em> ma'thuf atas <em>nabtahil</em> majzum bis-sukun (ber-idgham fil-lam). <em>La'nata</em> maf'ul bih awwal, <em>'alāl-kādzibīn</em> jar majrur fi mahalli nashbin maf'ul tsani atau muta'alliq bi <em>naj'al</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَى ٱلْكَـٰذِبِينَ ۝٦١</strong></td>
+                <td><em>'Alā</em>: Harf jar.<br><em>Al-Kādzibīn</em>: Ism fā'il jamak mudzakkar salim.</td>
+                <td>Majrūr bil-Yā' li-annahu jam'u mudzakkar sālim. Jar wa majrur muta'alliq bi <em>naj'al</em> atau berkedudukan sebagai maf'ul tsani bagi fi'il tahwil <em>ja'ala</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & Estetika Retorika)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Formulasi Syarat & Jawab yang Mematikan (Uslūbusy-Syarṭh wal-Jazā'):</strong> Firman Allah <em>"Fa-man ḥājjaka fīhi mim ba'di mā jā'aka minal-'ilmi..."</em> membingkai perdebatan bukan lagi sebagai tukar pikiran wajar, melainkan sebagai kebebalan intelektual. Penggunaan huruf <em>Min</em> pada <em>minal-'ilmi</em> adalah <em>min li-tabyīn</em>: ilmu yang datang adalah Al-Kitab dan Al-Haqq yang menghilangkan segala bentuk keraguan (<em>rāfi'ul-ilbās</em>).</li>
+        <li><strong>Ilmu Ma'ani — Retorika Eskalasi Emosional (At-Tadarruj fil-Khitāb):</strong> Al-Qur'an secara spektakuler mengurutkan pemanggilan: <strong>Abnā'anā</strong> (anak-anak kami), lalu <strong>Nisā'anā</strong> (wanita/istri-istri kami), lalu <strong>Anfusanā</strong> (jiwa/diri kami). Mengapa anak-anak didahulukan? Imam Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> membedah rahasia balaghah ini: anak dan wanita adalah belahan jiwa manusia yang paling dicintai, paling rentan, dan paling gigih dibela dengan taruhan nyawa. Seseorang mungkin berani berspekulasi menanggung bahaya untuk dirinya sendiri, tetapi tidak akan pernah ada orang berakal yang berani mempertaruhkan anak kandung dan istrinya tercinta ke dalam laknat kematian jika ia menyimpan sedikit saja keraguan atas kebenaran yang dibawanya! Urutan ini adalah puncak psikologi pembuktian (<em>aqwā dalīl 'alā tsabātil-yaqīn</em>).</li>
+        <li><strong>Ilmu Bayan — Majaz & Kināyah 'Anfusana' (Penyatuan Jiwa Spiritual):</strong> Ungkapan <em>"anfusanā"</em> tidak hanya bermakna fisik Nabi Muhammad ﷺ sendiri, melainkan mencakup figur-figur yang kedudukan batin dan jiwanya telah menyatu dengan jiwa beliau (seperti Imam 'Ali bin Abi Thalib r.a. sebagaimana ditegaskan dalam hadits shahih Sa'ad bin Abi Waqqash). Ini adalah <em>Kināyah 'an syiddatil-qurbi wal-ikhtishāsh</em> (metonimia kedekatan dan keselarasan jiwa yang tak terpisahkan).</li>
+        <li><strong>Ilmu Badi' — At-Taqābul wal-Muqābalah (Keseimbangan Struktur Morfologis Simetris):</strong> Frasa <em>"abnā'anā wa abnā'akum, wa nisā'anā wa nisā'akum, wa anfusanā wa anfusakum"</em> menyajikan gaya <strong>Muqābalah Syarīfah</strong> dan <strong>I'tilāf al-Alfāzh</strong>: simetri kata yang sejajar sempurna antara pihak penyeru kebenaran dan pihak penentang, menantang mereka di ranah yang setara tanpa celah pelarian retorika.</li>
+        <li><strong>Ilmu Badi' — Al-Iltifāt wal-Inshāf (Keadilan Objektif dalam Penjatuhan Laknat):</strong> Al-Qur'an tidak mengatakan <em>"fa-naj'al la'natallāhi 'alaykum"</em> (lalu kami timpakan laknat Allah atas kalian wahai orang Kristen Najran!), melainkan menggunakan kalimat netral yang adil: <em><strong>"fa-naj‘al la‘natallāhi ‘alal-kāżibīn"</strong></em> (lalu kita jadikan laknat Allah atas siapa pun yang berdusta). Ini adalah uslub <em>al-inshāf</em> (kejujuran berimbang) yang memaksa pihak lawan bercermin: jika mereka yakin benar, mengapa takut laknat itu jatuh kepada pendusta?</li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi dengan Ayat 59–60):</strong> Pada ayat 59, Allah meruntuhkan doktrin penuhanan Isa dengan analogi penciptaan Adam AS (<em>"Inna matsala 'Īsā 'indallāhi ka-matsali Ādam, khalaqahū min turāb..."</em>). Pada ayat 60, Allah menegaskan bahwa kebenaran itu datang dari Rabbmu, maka jangan sekali-kali menjadi orang yang ragu (<em>"Al-Ḥaqqu mir-Rabbika fa-lā takum-minal-mumtarīn"</em>). Setelah hujah rasional-ontologis tuntas dan akal sehat dibimbing, ayat 61 menyusul sebagai vonis final: jika setelah argumentasi ilmiah ini kalian masih membantah, perdebatan kata-kata resmi dihentikan dan beralih ke mahkamah sumpah laknat ilahi (mubahalah).</li>
+        <li><strong>Siyāq (Puncak Negosiasi Delegasi Kristen Najrān di Madinah):</strong> Najrān adalah wilayah otonom Kristen terkuat di Semenanjung Arabia selatan (perbatasan Yaman), berafiliasi dengan Gereja Monofisit yang disokong oleh Negus Abisinia dan Kekaisaran Bizantium. Pada tahun 9–10 Hijriah (<em>'Āmul-Wufūd</em>), sebuah delegasi beranggotakan 60 bangsawan dan agamawan Najran tiba di Masjid Nabawi dengan jubah sutra dan salib emas. Mereka berdebat sengit selama beberapa hari mengenai status keilahian Isa. Ketika seluruh dalil Injil dan logika ditunjukkan oleh Nabi ﷺ bahwa Isa adalah hamba dan rasul Allah, mereka terjebak dalam gengsi kepemimpinan politik-agama. Turunlah ayat ini sebagai penutup debat (<em>qath'ul-munāzha'ah</em>).</li>
+        <li><strong>Liḥāq (Jembatan ke Ayat 62–63):</strong> Ayat 62 langsung memproklamasikan: <em>"Inna hādzā lahuwal-qashashul-ḥaqq, wa mā min ilāhin illallāh..."</em> (Sungguh ini adalah kisah yang benar-benar haq, dan tiada sesembahan selain Allah). Dilanjutkan ayat 63: <em>"Fa-in tawallaw fa-innallāha 'alīmum-bil-mufsidīn"</em> (Maka jika mereka berpaling, sesungguhnya Allah Maha Mengetahui orang-orang yang berbuat kerusakan). Ayat mubahalah membelah sejarah: delegasi Najran mundur dari sumpah laknat, membuktikan bahwa penolakan mereka bukan karena dalil, melainkan kerusakan niat (<em>al-fasād</em>).</li>
+        <li><strong>Rekonstruksi Sosio-Historis & Psikologi Mundurnya Najran:</strong> Delegasi Najran dipimpin tiga tokoh: <strong>Al-Usquf</strong> (Abu Haritsah bin 'Alqamah, uskup agung), <strong>As-Sayyid</strong> (Al-Ayham, pengatur perjalanan dan logistik), dan <strong>Al-'Āqib</strong> (Abdul Masih, cendekiawan pembuat keputusan politik). Ibnu Ishaq meriwayatkan bahwa Abu Haritsah sendiri pernah mengakui kepada saudaranya (Kurz) bahwa tanda-tanda kenabian Muhammad ﷺ tertulis jelas dalam kitab suci mereka, namun ia menolak beriman karena takut fasilitas, tanah, dan tunjangan kehormatan dari Kaisar Romawi akan dicabut! Ketika Rasulullah ﷺ keluar pagi hari untuk mubahalah seraya merengkuh Al-Hasan, menuntun Al-Husain, diikuti Fathimah dan Ali di belakang beliau, Al-'Aqib berseru gemetar: <em>"Wahai kaum Nasrani! Demi Allah, aku melihat wajah-wajah yang seandainya mereka memohon kepada Allah untuk mencabut gunung dari tempatnya, niscaya Allah mencabutnya untuk mereka! Jangan bermubahalah, kalian akan binasa!"</em></li>
+    </ul>
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi‘ al-Bayān ‘an Ta’wīl Āyi al-Qur’ān</em>:</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>"mim ba'di mā jā'aka minal-'ilm"</em> adalah setelah tegaknya keterangan gamblang (<em>al-bayān adh-dhāhir</em>) dari Allah mengenai status Isa bin Maryam, bahwa dia diciptakan dari tanah tanpa ayah, sama sekali bukan anak Allah dan bukan sekutu-Nya. Mengenai kata <em>"tsumma nabtahil"</em>, At-Tabari menegaskan asal maknanya adalah ber-ijtihad dalam doa seraya merendahkan diri dan melaknat (<em>al-ilti'ān</em>), di mana masing-masing pihak berdoa: <em>"La'natullāh 'alā azh-zhālim minnā wa minka"</em>. At-Tabari mencatat ijma' para ahli sirah bahwa delegasi Najran surut ke belakang setelah menyadari bahwa jika Muhammad ﷺ berstatus nabi, laknat itu akan memusnahkan seluruh keturunan mereka hingga kiamat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Al-Hafizh Ibnu Katsir (w. 774 H) — <em>Tafsīr Al-Qur’ān al-‘Azhīm</em>:</strong><br>
+        Ibnu Katsir menekankan bahwa ayat ini adalah dalil paling terang tentang ketulusan dan kepastian mutlak kenabian Rasulullah ﷺ. Beliau mengutip hadits Sa'ad bin Abi Waqqash dalam Shahih Muslim tentang keluarnya Rasulullah ﷺ bersama Ali, Fathimah, Hasan, dan Husain. Ibnu Katsir menjelaskan hikmah di balik tantangan mubahalah: seseorang yang membuat kebohongan atas nama Tuhan tidak akan pernah berani mempertaruhkan anak kandung, istri tercinta, dan seluruh keluarganya ke hadapan azab pemusnahan seketika. Ketakutan para pembesar Najran untuk maju bermubahalah dan kerelaan mereka membayar jizyah (dua ribu stel pakaian) adalah pengakuan <em>de facto</em> atas kebenaran nubuwah Muhammad ﷺ.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Abu Abdillah Al-Qurthubi (w. 671 H) — <em>Al-Jāmi‘ li-Aḥkām al-Qur’ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi fiqih dan keabadian hukum dari ayat ini. Beliau menegaskan: <em>"Ayat ini menunjukkan bahwa bermubahalah dengan penentang kebenaran yang bebal disyariatkan dan tetap berlaku bagi umat Islam pasca-wafatnya Rasulullah ﷺ."</em> Al-Qurthubi meriwayatkan bahwa Ibnu Mas'ud, Ibnu Abbas, dan para ulama salaf memperbolehkan mubahalah dalam urusan agama yang fundamental ketika dalil hujah telah ditegakkan namun lawan tetap membangkang. Mengenai kata <em>"abnā'anā"</em>, Al-Qurthubi menegaskan bahwa cucu dari jalur anak perempuan (seperti Al-Hasan dan Al-Husain dari Sayyidah Fathimah) secara sah disebut sebagai anak (<em>abnā'</em>) seseorang, mendobrak kultur jahiliyah yang membatasi nasab hanya dari jalur anak laki-laki.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Imam Fakhruddin Ar-Razi (w. 606 H):</strong><br>
+        Zamakhsyari dalam <em>Al-Kasysyāf</em> menghadirkan analisis balaghah paling brilian mengenai posisi Ahlul Bait: kehadiran Ali, Fathimah, Hasan, dan Husain adalah representasi nyata dari <em>anfusana, nisa'ana, abna'ana</em>. Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> menambahkan analisis filosofis: mubahalah adalah pembuktian dengan cara <em>al-ilzām al-wijdānī</em> (pemaksaan batin). Lawan debat mungkin bisa terus berkilah dengan sofisme logika di meja diskusi, tetapi ketika dihadapkan pada ancaman kepunahan eksistensial seketika, topeng kesombongan mereka hancur seketika oleh insting bertahan hidup nurani.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Muhammad Ath-Thahir Ibnu ‘Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur memandang ayat mubahalah sebagai puncak dari strategi diplomasi wahyu untuk memutus kebuntuan dialog (<em>al-faṣhl fil-khuṣhūmah</em>). Menurutnya, perdebatan kata-kata memiliki titik jenuh di mana argumentasi rasional tidak lagi berguna karena pihak lawan telah diikat oleh kepentingan hegemoni politik dan sentimen kelompok. Pada titik inilah mubahalah dihadirkan bukan untuk menghancurkan manusia, melainkan sebagai terapi kejut psikologis (<em>shock therapy</em>) yang memaksa pihak penentang menghentikan provokasi permusuhan dan memilih opsi damai (perjanjian jizyah dan suaka perlindungan Madinah).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka mengulas peristiwa ini dengan narasi sejarah yang hidup dan menyentuh. Beliau melukiskan bagaimana Rasulullah ﷺ keluar dengan wajah teduh dan penuh ketenangan mutlak, memeluk Hasan dan menggandeng Husain, sementara Fathimah berjalan diiringi Ali. Sikap ini kontras dengan kegelisahan para rahib Najran yang semalaman saling berbisik dalam ketakutan. Hamka menulis: <em>"Bukan tombak dan panah yang menaklukkan ketegaran para uskup Najran, melainkan kejujuran batin Rasulullah. Mereka tahu dalam hati nurani mereka bahwa Isa adalah manusia hamba Allah, tetapi takhta keuskupan dan upeti Romawi terlalu manis untuk dilepaskan. Mubahalah membongkar kepalsuan itu tanpa setetes darah pun tertumpah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Prof. Dr. M. Quraish Shihab & Catatan Kemenag RI:</strong><br>
+        Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menggarisbawahi bahwa mubahalah adalah bukti bahwa Islam tidak pernah memaksakan akidah dengan pedang. Ketika perdebatan teologis menemui jalan buntu, Islam menawarkan penyerahan keputusan kepada Pengadilan Tertinggi Ilahi. Mubahalah mengajarkan adab dialog: kita tidak boleh mengutuk di awal pembicaraan; laknat baru menjadi opsi terakhir setelah ilmu, dialog yang santun, dan hujah rasional dipaparkan secara sempurna. Kemenag RI menekankan pentingnya kejujuran intelektual: keengganan Najran bermubahalah menjadi saksi sejarah abadi bahwa ajaran tauhid Al-Qur'an berdiri di atas fondasi kebenaran mutlak.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Isu Teologis & Hermeneutis</th>
+                <th>Titik Konsensus (Ijma‘ / Mayoritas Ulama)</th>
+                <th>Ruang Nuansa / Ikhtilaf Tafsir</th>
+                <th>Implikasi Epistemologis & Hukum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Personel Realisasi Ayat (<em>Anfusanā, Nisā'anā, Abnā'anā</em>)</strong></td>
+                <td>Sepakat berdasarkan hadits shahih Sa'ad bin Abi Waqqash bahwa yang dibawa Nabi ﷺ adalah 'Ali, Fāṭhimah, Al-Ḥasan, dan Al-Ḥusain.</td>
+                <td>Ahli Sunnah memandang ini sebagai keutamaan agung (<em>fadhl ‘azhīm</em>) Ahlul Bait tanpa implikasi doktrin 'ishmah politis. Syiah memandangnya sebagai dalil nash penunjukan kepemimpinan mutlak (Imamah) Sayyidina Ali.</td>
+                <td>Menetapkan kedudukan suci keluarga inti Nabi ﷺ sebagai teladan integritas tauhid tertinggi sepanjang masa.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Legalitas Syariat Mubahalah Pasca-Nabi ﷺ</strong></td>
+                <td>Mayoritas mufasir (Al-Qurthubi, Ibnu Katsir, Ibnu Hajar, Ibnu Taimiyyah) menyepakati mubahalah tetap boleh dilakukan saat darurat pembuktian akidah.</td>
+                <td>Sebagian kecil ulama menganggap mubahalah adalah kekhususan (<em>khushūṣhiyyah</em>) kenabian karena doa azab seketika hanya dijamin ijabahnya bagi Rasulullah ﷺ.</td>
+                <td>Mubahalah adalah opsi darurat keagamaan dengan syarat ketat: hanya dilakukan setelah penegakan hujah ilmiah (<em>iqāmatul-ḥujjah</em>) dan bukan untuk sengketa remeh duniawi.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Motif Mundurnya Tokoh Najran dari Sumpah</strong></td>
+                <td>Ijma' mufasir: delegasi Najran mundur murni karena keyakinan batin mereka bahwa Muhammad adalah Nabi yang benar, bukan karena keraguan logis.</td>
+                <td>Rincian perdebatan internal: sebagian riwayat menekankan nasihat Al-'Aqib, riwayat lain menekankan pengakuan Uskup Abu Haritsah bin 'Alqamah.</td>
+                <td>Membuktikan adanya jurang antara <em>ma'rifatul-haqq</em> (mengetahui kebenaran di kepala) dan <em>ittiba'ul-haqq</em> (tunduk mengikuti kebenaran di hati akibat belenggu nafsu kekuasaan).</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Epistemologi "Skin in the Game": Pertaruhan Tertinggi Integritas Kebenaran</h3>
+    <p>
+        Dalam teori pengambilan keputusan dan epistemologi modern (sebagaimana dipopulerkan oleh pemikir resiko Nassim Nicholas Taleb), konsep <em>"Skin in the Game"</em> menuntut bahwa siapa pun yang mengajukan opini, klaim moral, atau proyeksi kebijakan wajib menanggung konsekuensi langsung dari risiko jika klaimnya keliru. Teori ini mengkritik tajam para intelektual menara gading dan politisi yang berbicara lantang namun bebas dari risiko atas kehancuran yang mereka timbulkan.
+    </p>
+    <p>
+        Ayat Mubāhalah (QS. 3:61) adalah manifestasi tertinggi dari prinsip <em>Skin in the Game</em> dalam sejarah peradaban spiritual manusia. Rasulullah ﷺ tidak sekadar berkhotbah atau beradu wacana abstrak; beliau melangkah ke arena pembuktian terbuka dengan membawa taruhan eksistensial paling berharga di muka bumi: dirinya sendiri (<em>anfusanā</em>), putri tercinta satu-satunya (<em>nisā'anā</em> / Sayyidah Fathimah), dan dua cucu kesayangan belahan jiwanya (<em>abnā'anā</em> / Al-Hasan dan Al-Husain). Sikap ini meruntuhkan segala kecurigaan: tidak ada satu pun manusia berakal yang bersedia mempertaruhkan seluruh trah keluarganya ke dalam kutukan maut jika ia tidak memiliki kepastian iman seratus persen (<em>al-yaqīn al-qath'ī</em>).
+    </p>
+
+    <h3>2. Rekonfigurasi Pola Pikir: Retorika Defensif vs Integritas Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Lama (Sofisme / Debat Kusir Najran)</th>
+                <th>Pola Pikir Qur'ani (Integritas Mubāhalah)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Motivasi Dialog</strong></td>
+                <td>Mempertahankan gengsi kelompok, mengamankan jabatan (takhta gereja), dan menjaga aliran upeti kaisar.</td>
+                <td>Mencari kebenaran objektif (<em>Al-Haqq</em>) dan menegakkan kedaulatan tauhid murni di hadapan Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Data</strong></td>
+                <td>Disonansi kognitif: memutarbalikkan tafsir teks suci dan mencari celah sofisme logika demi mempertahankan status-quo dogma.</td>
+                <td>Kesiapan tunduk pada dalil wahyu yang terang (<em>Al-'Ilm</em>) dan keberanian menanggalkan asumsi rapuh.</td>
+            </tr>
+            <tr>
+                <td><strong>Tingkat Akuntabilitas</strong></td>
+                <td><em>Zero Accountability</em>: berani berargumen kusir di ruangan tertutup, namun lari ketakutan saat diajak bertaruh laknat ilahi.</td>
+                <td><em>Radical Accountability</em>: berani menghadapkan diri dan keluarga inti ke mahkamah tertinggi Ilahi dengan integritas mutlak.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Neuropsikologi Bias Kognitif & Tazkiyatun Nafs: Anatomi Kebebalan Kaum Elit</h3>
+    <p>
+        Kisah mundurnya delegasi Najran menyajikan studi kasus psikologis yang luar biasa mengenai <strong>Disonansi Kognitif (Cognitive Dissonance)</strong> dan <strong>Bias Status-Quo</strong>. Otak manusia purba memiliki mekanisme pertahanan ego (<em>ego-defense mechanism</em>) yang sangat kuat: ketika sebuah kebenaran baru mengancam kelangsungan status sosial, privilege finansial, dan pengakuan publik, sistem kognitif secara otomatis mengaktifkan penolakan irasional. Uskup Abu Haritsah bin 'Alqamah mengetahui kebenaran Muhammad ﷺ di dalam korteks prefrontal-nya (kemampuan analisis logis), namun sistem limbik emosionalnya terikat pada kemewahan dari Kaisar Romawi.
+    </p>
+    <p>
+        Dalam perspektif <em>Tazkiyatun Nafs</em>, kondisi ini adalah manifestasi dari dua penyakit hati yang mematikan: <strong>Ḥubb ar-Riyāsah</strong> (gila kekuasaan dan kehormatan) serta <strong>Al-Kibr</strong> (kesombongan yang didefinisikan Nabi ﷺ sebagai <em>baṭharul-ḥaqq wa ghamṭhun-nās</em>: menolak kebenaran dan meremehkan manusia). Ayat 61 mengajarkan bahwa puncak kejernihan akal hanya bisa dicapai bila jiwa telah dibersihkan dari berhala ego dan ketamakan duniawi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Wabah "Post-Truth" & Budaya Debat Kusir Digital: Inflasi Opini Tanpa Akuntabilitas</h3>
+    <p>
+        Abad ke-21 ditandai dengan fenomena <em>Post-Truth</em>: era di mana fakta objektif dan data ilmiah kehilangan pengaruhnya di hadapan luapan emosi massa, fanatisme identitas, dan algoritma media sosial. Di ruang publik kontemporer (podcast kontroversial, ruang komentar platform digital, dan panggung politik partisan), jutaan orang berdebat sengit tanpa memiliki dasar ilmu (<em>bighayri 'ilm</em>). Para demagog politik dan penyebar disinformasi dengan mudah melontarkan tuduhan keji, narasi kebencian, dan manipulasi sejarah karena mereka beroperasi dalam ekosistem nir-akuntabilitas (<em>zero risk</em>). Jika narasi mereka terbukti palsu, mereka cukup menghapus unggahan atau membuat video klarifikasi tanpa konsekuensi moral yang setimpal.
+    </p>
+
+    <h3>2. Kritik Peradaban: Runtuhnya Keberanian Menanggung Risiko Integritas</h3>
+    <p>
+        Krisis terdalam peradaban sekuler modern adalah lenyapnya sakralitas sumpah dan komitmen moral. Para elit global memicu krisis keuangan atau konflik bersenjata dari balik meja perundingan, sementara rakyat jelata dan generasi mudalah yang menanggung derita kehancuran. QS. 3:61 menampar kemunafikan sistem ini: Al-Qur'an menuntut para pemimpin dan penyeru opini untuk berdiri di garis depan, menanggung risiko pertama sebelum mengajak orang lain. Ketidaksiapan menanggung risiko adalah penanda paling otentik bahwa sebuah doktrin dibangun di atas pondasi kepalsuan.
+    </p>
+
+    <h3>3. Solusi Qur'ani: Etika Dialog Kritis & Radikalisme Kejujuran Moral</h3>
+    <p>
+        Ayat mubahalah menggariskan peta jalan diplomasi peradaban bagi umat beriman dalam menghadapi polarisasi ekstrem:
+    </p>
+    <ul>
+        <li><strong>Fase Penegakan Ilmu (Evidence-Based Dialogue):</strong> Jangan pernah memutus relasi atau menghakimi sebelum menyajikan data, logika rasional, dan wahyu secara elegan (sebagaimana teladan QS. 3:59–60).</li>
+        <li><strong>Fase Uji Nyali Integritas (Ethical Showdown):</strong> Ketika pihak lawan tetap melancarkan sofisme dan disinformasi demi kepentingan partisan, tantanglah mereka dengan kejujuran moral: sejauh mana mereka berani bertanggung jawab atas dampak kata-kata mereka di hadapan pengadilan hukum dan moralitas publik.</li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Penerapan Protokol "Zero Debat Kusir" (Puasa Retorika Toksik):</strong> Mulai hari ini, hentikan keterlibatan dalam perdebatan tak berujung di media sosial, grup percakapan, maupun forum komunitas yang hanya didorong oleh pembelaan ego. Jika argumentasi ilmiah telah disampaikan satu kali dengan santun dan lawan bicara tetap defensif, segera pamit undur diri (<em>i'rādh 'anil-jāhilīn</em>) demi menjaga kemurnian energi hati.</li>
+            <li><strong>Memasukkan "Skin in the Game" dalam Setiap Keputusan Hidup:</strong> Jangan pernah memberikan nasihat, membuat kebijakan organisasi, atau mengajarkan nilai moral kepada keluarga dan rekan kerja yang Anda sendiri tidak siap menanggung konsekuensinya. Pastikan ucapan berbanding lurus dengan tindakan nyata (<em>shiddiqul-qawl wal-'amal</em>).</li>
+            <li><strong>Menjadikan Keluarga Benteng Suci Keteladanan Tauhid:</strong> Lindungi anak-anak dan istri/keluarga dari racun paham materialisme dan relativisme moral dengan menanamkan akidah yang kokoh di rumah. Libatkan keluarga dalam kesalehan bersama (shalat berjamaah, sedekah bersama, dan tadabbur Al-Qur'an harian) sebagaimana keteladanan Rasulullah ﷺ yang menggandeng Ahlul Bait dalam pembuktian iman tertinggi.</li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Seberapa sering aku bersikeras mempertahankan sebuah pendapat hanya karena gengsi intelektual dan takut terlihat kalah, padahal di lubuk hatiku yang terdalam aku telah menyadari kelemahan argumenku?</li>
+            <li>Apakah aku telah memiliki keberanian integritas moral sebagaimana Rasulullah ﷺ: siap mempertaruhkan kenyamanan pribadi dan reputasiku demi tegaknya kebenaran dan keadilan yang diridhai Allah?</li>
+            <li>Jika Allah mengaudit seluruh kata-kata, status media sosial, dan pernyataanku selama hidup, apakah perkataanku lebih banyak menyebarkan kebenaran yang berpijak pada <em>Al-'Ilm</em>, ataukah justru memperkeruh suasana dengan kedustaan dan prasangka (<em>Al-Kidzb wal-Ahwā'</em>)?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Rabbanā, Yā Allāh Yang Maha Mengetahui segala rahasia langit dan bumi. Engkaulah Rabb Yang Menurunkan Al-Qur'an dengan penuh kebenaran (bil-ḥaqq) dan membebaskan hati hamba-hamba-Mu dari belenggu keraguan. Bersihkanlah lisan kami dari perkataan dusta, jagalah kalbu kami dari penyakit kibr, dengki, dan fanatisme golongan yang membutakan. Anugerahkanlah kepada kami keteguhan iman dan keberanian moral sebagaimana yang Engkau karuniakan kepada kekasih-Mu Rasulullah ﷺ dan keluarganya yang suci. Naungilah anak-anak kami, istri-istri kami, dan segenap jiwa kami di bawah rahmat, perlindungan, dan keridhaan-Mu yang abadi. Jauhkanlah kami dari laknat kemurkaan-Mu dan jangan pernah jadikan kami termasuk orang-orang yang berpaling dari kebenaran demi kenikmatan duniawi yang semu. Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā wa hab lanā min ladunka raḥmah, innaka Antal-Wahhāb. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-060 - QS. Ali 'Imran Ayat 60.html">&larr; Kembali ke Ayat 60 (QS. 3:60)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 61</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian: Mubahalah)</span>
+        <a href="003-062 - QS. Ali 'Imran Ayat 62.html">Lanjut ke Ayat 62 (QS. 3:62) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-045 - QS. Ali 'Imran Ayat 45 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-044 - QS. Ali 'Imran Ayat 44.html">&larr; Ayat Sebelumnya (QS. 3:44)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-046 - QS. Ali 'Imran Ayat 46.html">Ayat Berikutnya (QS. 3:46) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 3 (Ayat 45–51): Bisyarah Al-Masih, Kalimatullah & Mukjizat Kenabian Isa</span>
+        <span class="badge">20 Kata | 84 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 45</h1>
+    <div class="transliteration">
+        "Idz qālatil-malā'ikatu yā Maryamu innallāha yubasysyiruki bi-kalimatim-minhus-muhul-Masīḥu 'Īsabnu Maryama wajīhan fid-dunyā wal-ākhirati wa minal-muqarrabīn(a)."
+    </div>
+    <div class="thematic-title">
+        Bisyarah Kalimatullah & Dekonstruksi Kristologi: Proklamasi Kelahiran Isa Al-Masih Putra Maryam, Paradigma Wajāhah Hakiki di Dua Alam, dan Sakralitas Al-Muqarrabīn
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 3: Teologi Bisyarah, Insan Kamil & Mukjizat Al-Masih)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        إِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ يُبَشِّرُكِ بِكَلِمَةٍۢ مِّنْهُ ٱسْمُهُ ٱلْمَسِيحُ عِيسَى ٱبْنُ مَرْيَمَ وَجِيهًا فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ وَمِنَ ٱلْمُقَرَّبِينَ ۝٤٥
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Ingatlah), ketika para malaikat berkata: 'Wahai Maryam! Sesungguhnya Allah menyampaikan kabar gembira kepadamu dengan suatu kalimat (yang tercipta melalui firman-Nya) dari-Nya, namanya Al-Masih Isa putra Maryam, seorang terkemuka (berkedudukan mulia dan berwibawa) di dunia dan di akhirat, dan termasuk orang-orang yang didekatkan (kepada Allah)'."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan titik balik dramatis dalam narasi keluarga 'Imran. Struktur redaksinya memuat lima tonggak teologis fundamental yang sekaligus membatalkan distorsi kristologis:
+    </p>
+    <ul>
+        <li><strong>Bisyārah (Kabar Gembira):</strong> Kelahiran Isa dinyatakan sebagai anugerah kegembiraan yang melenyapkan rasa gentar, bukan aib atau bencana sosial.</li>
+        <li><strong>Bi-Kalimatin minhu (Dengan Kalimat dari-Nya):</strong> Frasa preposisi <em>minhu</em> (مِنْهُ) adalah <em>min lil-ibtidā'</em> (permulaan penciptaan dari titah Allah), bukan <em>min at-tab'īdh</em> (bagian zat Allah). Isa disebut "Kalimat" karena eksistensinya terwujud langsung melalui sabda <em>"Kun"</em> (Jadilah!) tanpa sperma bapa biologis.</li>
+        <li><strong>Ismuhul-Masīḥu 'Īsabnu Maryam:</strong> Pemberian nama langsung dari Allah sebelum kelahirannya. Penegasan gelar <em>Al-Masīḥ</em> (Sang Pembawa Berkah/Pengusap) dan penisbatan mutlak kepada sang ibu, <em>Ibnu Maryam</em>, adalah bantahan telak terhadap klaim ketuhanan ("Anak Allah") sekaligus pembelaan suci terhadap kesucian Maryam dari tuduhan keji kaum Yahudi.</li>
+        <li><strong>Wajīhan fid-Dunyā wal-Ākhirah:</strong> Status kemuliaan multidimensional: di dunia berupa kenabian, hikmah, mukjizat penyembuhan, dan penerimaan kalbu kaum beriman; di akhirat berupa hak syafaat dan kedudukan luhur di hadapan Arsy.</li>
+        <li><strong>Wa minal-Muqarrabīn:</strong> Pengukuhan derajat kewalian dan kedekatan ontologis tertinggi di sisi Allah, setara dengan derajat malaikat muqarrabin.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>إِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ</strong><br>(<em>Idz qālatil-malā'ikah</em>)</td>
+                <td>
+                    • <strong>Dzal (ذ):</strong> Makhraj ujung lidah bertemu ujung gigi seri atas, sifat rikhwah, jahr, dan istifal.<br>
+                    • <strong>Kasrah Ta' Ta'nits:</strong> Digeser harakat kasrah عارض (insidental) untuk menghindari pertemuan dua sukun (<em>iltiqā'us-sākinain</em>).<br>
+                    • <strong>Mad Wājib Muttaṣhil:</strong> Pertemuan huruf mad dan hamzah dalam satu kata (<em>al-malā'ikah</em>).
+                </td>
+                <td>
+                    • <strong>Imam Warsy & Ḥamzah:</strong> Membaca mad wajib muttashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn, Ibnu Katsīr, Abū 'Amr, Abū Ja'far, Ya'qūb:</strong> Membaca dengan 4 harakat.<br>
+                    <em>Implikasi:</em> Kesepakatan lafaz jamak <em>al-malā'ikatu</em> menegaskan bahwa khithab disampaikan oleh delegasi malaikat atau dipimpin oleh malaikat Jibril 'alaihissalam mewakili para malaikat.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>يَـٰمَرْيَمُ</strong><br>(<em>Yā Maryamu</em>)</td>
+                <td>
+                    • <strong>Mad Jā'iz Munfaṣhil (Hukmi):</strong> Huruf nida' <em>Yā</em> bersambung secara rasm dengan munada <em>Maryamu</em>.<br>
+                    • <strong>Ra' Sakinah (مَرْ):</strong> Dibaca <strong>Tafkhīm</strong> (tebal) karena didahului huruf berharakat fathah.<br>
+                    • <strong>Mim:</strong> Sifat tawassuth dan ghunnah ashliyyah.
+                </td>
+                <td>
+                    • Imam Warsy dan Hamzah membaca panjang mad munfashil 6 harakat.<br>
+                    • Qalun, Ibnu Katsir, Abu 'Amr, Abu Ja'far, Ya'qub membaca qashr (2 harakat) atau tawassuth.<br>
+                    • Seluruh sepuluh imam sepakat membaca mabni dhammah tanpa tanwin (<em>'alam mufrad mu'annats</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>إِنَّ ٱللَّهَ يُبَشِّرُكِ</strong><br>(<em>Innallāha yubasysyiruki</em>)</td>
+                <td>
+                    • <strong>Ghunnah Musyaddadah:</strong> Nun bertasydid ditahan 2 harakat.<br>
+                    • <strong>Lam Jalālah:</strong> Dibaca <strong>Tafkhīm</strong> tebal karena didahului fathah.<br>
+                    • <strong>Syin Musyaddadah (شِّ):</strong> Sifat tafasysyi (penyebaran angin di rongga mulut) dan hams.
+                </td>
+                <td>
+                    • <strong>Hamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca dari tsulatsi mujarrad: <strong>يَبْشُرُكِ</strong> (<em>yabsyuruki</em>) dengan fathah ya, sukun ba, dan dhammah syin tanpa tasydid.<br>
+                    • <strong>Nāfi', Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Abū Ja'far, Ya'qūb:</strong> Membaca bab taf'il: <strong>يُبَشِّرُكِ</strong> (<em>yubasysyiruki</em>) dengan dhammah ya, fathah ba, dan syin bertasydid kasrah.<br>
+                    <em>Implikasi:</em> Ragam qira'at ini memperkaya makna: bentuk <em>yubasysyiruki</em> (taf'il) menekankan intensitas, keagungan kabar, dan pengulangan ketenangan batin, sedangkan <em>yabsyuruki</em> menunjukkan kepastian esensi kabar gembira itu sendiri.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>بِكَلِمَةٍۢ مِّنْهُ</strong><br>(<em>Bi-kalimatim-minh(u)</em>)</td>
+                <td>
+                    • <strong>Iqlāb / Iqlāb Syafawi ke Mim:</strong> Tanwin kasrah bertemu huruf Mim menghasilkan <strong>Idghām Bighunnah Kāmil</strong> dengan dengung 2 harakat.<br>
+                    • <strong>Izh-hār Ḥalqī:</strong> Nun sukun bertemu huruf Ha' (<em>minhu</em>) dibaca jelas tanpa ghunnah tambahan.<br>
+                    • <strong>Shilah Ha' Dhamir:</strong> Terputus (tanpa shilah) saat washal karena huruf sebelumnya sukun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idzhar halqi pada <em>minhu</em> dan idgham bighunnah pada tanwin <em>kalimatin</em> bertemu mim. Penyatuan kata <em>kalimatin</em> bertanwin (tankir) menunjukkan takhzim (keagungan suatu kalimat yang tiada taranya).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱسْمُهُ ٱلْمَسِيحُ</strong><br>(<em>Ismuhul-Masīḥ(u)</em>)</td>
+                <td>
+                    • <strong>Hamzah Waṣhal:</strong> Gugur saat washal (<em>minhus-muhu</em>).<br>
+                    • <strong>Sin (س):</strong> Sifat shafir (desis) dan hams.<br>
+                    • <strong>Ha' Dhamir:</strong> Dhammah tanpa mad shilah karena langsung bertemu lam sukun (<em>al-Masīḥ</em>).<br>
+                    • <strong>Izh-hār Qamariyyah:</strong> Lam ta'rif dibaca jelas sebelum huruf Mim.<br>
+                    • <strong>Ḥā' (ح):</strong> Sifat wasathul halq, rikhwah, dan hams.
+                </td>
+                <td>
+                    Seluruh imam membaca washal gugur hamzah dan memfathahkan lam qamariyyah. Nama agung <em>Al-Masīḥ</em> disepakati sebagai gelar resmi kenabian yang disandang oleh Isa AS.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>عِيسَى ٱبْنُ مَرْيَمَ</strong><br>(<em>'Īsabnu Maryam(a)</em>)</td>
+                <td>
+                    • <strong>'Ain (ع):</strong> Wasathul halq dengan sifat tawassuth.<br>
+                    • <strong>Alif Layyinah / Maqshurah:</strong> Berpotensi mengalami imalah.<br>
+                    • <strong>Hamzah Washal (ابْنُ):</strong> Gugur saat washal, dibaca <em>'Īsabnu</em>.<br>
+                    • <strong>Maryama:</strong> Mamnū' minash-sharf (nama non-Arab/alam mu'annats) berharakat fathah saat posisi jar.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca <strong>Imālah Kubrā</strong> pada alif layyinah kata <em>'Īsā</em> (mencondongkan bunyi fathah ke arah kasrah).<br>
+                    • <strong>Warsy:</strong> Membaca <strong>Taqīl / Bayna-bayna</strong> (antara fathah dan imalah).<br>
+                    • <strong>Abū 'Amr:</strong> Membaca taqlil sesuai kaidah riwayat Ad-Duri.<br>
+                    • <strong>Imam Lainnya ('Āṣhim, Ibnu Katsīr, Ibnu 'Āmir, Abū Ja'far, Ya'qūb):</strong> Membaca <strong>Fat-ḥah Khāliṣhah</strong> (tanpa imalah).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَجِيهًا فِى ٱلدُّنْيَا</strong><br>(<em>Wajīhan fid-dunyā</em>)</td>
+                <td>
+                    • <strong>Jīm (ج):</strong> Syiddah dan jahr di tengah lidah.<br>
+                    • <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin fathah bertemu huruf Fa' dibaca samar dengan dengung.<br>
+                    • <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur ke huruf Dal (<em>ad-dunyā</em>).<br>
+                    • <strong>Izh-hār Muṭhlaq:</strong> Nun sukun bertemu Ya dalam satu kata (<em>dunyā</em>), wajib dibaca jelas tanpa melebur/idgham.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf:</strong> Membaca <strong>Imālah Kubrā</strong> pada alif <em>ad-dunyā</em>.<br>
+                    • <strong>Warsy & Abū 'Amr:</strong> Membaca dengan <strong>Taqīl</strong>.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca dengan <strong>Fat-ḥah</strong>.<br>
+                    Seluruh imam sepakat mempertahankan kaidah izh-har muthlaq pada kata <em>ad-dunyā</em> demi menjaga keutuhan struktur kata bahasa Arab.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَٱلْـَٔاخِرَةِ وَمِنَ ٱلْمُقَرَّبِينَ ۝٤٥</strong><br>(<em>Wal-ākhirati wa minal-muqarrabīn</em>)</td>
+                <td>
+                    • <strong>Mad Badal:</strong> Hamzah mendahului alif mad pada <em>al-ākhirah</em>.<br>
+                    • <strong>Ra' Tarqīq (خِرَةِ):</strong> Kasrah dibaca tipis.<br>
+                    • <strong>Ra' Musyaddadah (مُقَرَّ):</strong> Fathah dibaca tafkhim dengan getaran takrir yang terkontrol.<br>
+                    • <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf ayat 45, ya mad bertemu nun dibaca 2, 4, atau 6 harakat disertai sifat tawassuth pada Nun sukun.
+                </td>
+                <td>
+                    • <strong>Warsy:</strong> Membaca <strong>Mad Badal</strong> pada <em>al-ākhirah</em> dengan tiga wajah: <strong>Qaṣhr (2), Tawassuṭh (4), atau Ṭhūl (6 Harakat)</strong>, serta membaca naql fathah hamzah ke lam ta'rif sebelumnya (<em>wal-ākhirah</em> menjadi <em>walākhirah</em>) disertai tarqiq huruf Ra'.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca tahqiq hamzah dengan mad badal qashr 2 harakat.<br>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca waqaf pada <em>al-muqarrabīn</em> dengan mad 'aridh lis-sukun.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 3435) dan Imam Muslim (No. 2366) dari Sahabat Abū Hurairah r.a. — Kekebalan Suci Maryam dan Putranya dari Sentuhan Iblis:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "مَا مِنْ مَوْلُودٍ يُولَدُ إِلَّا نَخَسَهُ الشَّيْطَانُ فَيَسْتَهِلُّ صَارِخًا مِنْ نَخْسَةِ الشَّيْطَانِ، إِلَّا مَرْيَمَ وَابْنَهَا"
+        </span>
+        <em>"Tidak ada seorang bayi pun yang dilahirkan melainkan ia disentuh oleh setan pada saat kelahirannya sehingga ia menjerit menangis karenanya, kecuali Maryam dan putranya (Isa AS)."</em><br>
+        Kemudian Abu Hurairah r.a. berkata: "Bacalah jika kalian mau firman Allah SWT: <em>'Wa innī u'īdzuhā bika wa dzurriyyatahā minasy-syaithānir-rajīm'</em> (Dan sesungguhnya aku memohon perlindungan kepada-Mu untuknya dan untuk anak keturunannya dari godaan setan yang terkutuk - QS. Ali 'Imran: 36)."<br>
+        <strong>Derajat Hadits:</strong> Muttafaqun 'Alaih (Tingkat kesahihan tertinggi). Hadits ini mengonfirmasi keterpilihan ontologis garis keturunan Isa Al-Masih sejak doa sang nenek (istri 'Imran) hingga tibanya kabar gembira pada ayat 45.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 3445) dan Imam Muslim (No. 28) dari Sahabat 'Ubādah bin Aṣh-Ṣhāmit r.a. — Syahadat Tauhid & Posisi Teologis Sejati Isa Al-Masih:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "مَنْ شَهِدَ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَأَنَّ عِيسَى عَبْدُ اللَّهِ وَرَسُولُهُ، وَكَلِمَتُهُ أَلْقَاهَا إِلَى مَرْيَمَ وَرُوحٌ مِنْهُ، وَالجَنَّةَ حَقٌّ، وَالنَّارَ حَقٌّ، أَدْخَلَهُ اللَّهُ الجَنَّةَ عَلَى مَا كَانَ مِنَ العَمَلِ"
+        </span>
+        <em>"Barangsiapa bersaksi bahwa tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya, dan bahwa Muhammad adalah hamba dan rasul-Nya, dan bahwa Isa adalah hamba Allah dan rasul-Nya, serta kalimat-Nya yang Dia sampaikan kepada Maryam dan ruh (ciptaan) dari-Nya, serta meyakini bahwa surga adalah haq dan neraka adalah haq, niscaya Allah akan memasukkannya ke dalam surga bagaimanapun amal perbuatannya."</em><br>
+        <strong>Syarah Hadits:</strong> Hadits ini merumuskan dogma tauhid paling presisi: menyebut Isa sebagai <em>'Abdullāh wa Rasūluh</em> membatalkan kristologi penuhanan (Trinitas), sedangkan penegasan <em>Kalimatuhū</em> dan <em>Rūḥun minhu</em> membatalkan tuduhan dusta kaum Yahudi yang mencela kelahirannya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Asbābun Nuzūl: Konfrontasi Hermeneutis & Dialog Teologis Delegasi Kristen Najran (Wafd Najrān):</strong><br>
+        Diriwayatkan oleh Ibnu Ishaq dalam <em>As-Sīrah an-Nabawiyyah</em> dari Muhammad bin Ja'far bin Az-Zubair, serta ditakhrij oleh Al-Wahidi dalam <em>Asbāb an-Nuzūl</em> dan Ibnu Jarir At-Tabari:<br>
+        Pada tahun ke-9 Hijriyah, delegasi Kristen Najran yang berjumlah 60 tokoh terkemuka dipimpin oleh Abdul Masih (Al-'Aqib) selaku pemimpin politik, Al-Ayham (As-Sayyid) selaku penasihat, dan Abu Haritsah bin 'Alqamah selaku Uskup Agung dan sarjana teologi, tiba di Masjid Nabawi. Mereka berdialog sengit mengenai hakikat Isa Al-Masih. Ketika mereka berargumen: <em>"Bukankah Isa adalah Kalimatullah dan Ruh dari-Nya? Maka ia pastilah bagian dari zat Ilahi!"</em>, Allah SWT menurunkan rangkaian ayat pembuka Surah Ali 'Imran hingga ayat ke-60 untuk membongkar kerancuan logika mereka.<br>
+        Ayat 45 menegaskan: Isa adalah <em>bi-kalimatin minhu</em> (diciptakan melalui firman Allah), bernama <em>'Īsabnu Maryam</em> (manusia yang bernasab kepada ibunya), dan berstatus <em>minal-muqarrabīn</em> (makhluk yang didekatkan), membuktikan kemakhlukan Isa secara mutlak.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. B-Sy-R (ب-ش-ر — Al-Bisyārah / Yubasysyiru):</strong> Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros semantik akar ini pada dua prinsip utama: <em>"zhuhūr asy-syai' ma'a ḥusn"</em> (tampaknya sesuatu disertai keelokan) dan <em>"mulāmasatu basyaratil-wajh"</em> (kulit luar wajah manusia). Disebut <em>bisyārah</em> karena ketika seseorang mendengar kabar gembira yang tak terduga, darah kegembiraan seketika mengalir deras ke pembuluh kapiler wajah sehingga rona kulit mukanya berseri-seri dan berubah cerah. Penggunaan bentuk <em>yubasysyiruki</em> menegaskan bahwa kelahiran seorang anak bagi seorang perawan suci yang mengabdikan hidupnya di mihrab bukanlah aib yang memalukan, melainkan anugerah kemuliaan Ilahi yang harus disambut dengan binar kebahagiaan batin.</li>
+        <li><strong>2. K-L-M (ك-ل-م — Al-Kalimah):</strong> Ibnu Faris menegaskan bahwa akar kata ini berporos pada <em>"at-ta'tsīr al-muḥaqqaq bi-shautin aw ma'nan"</em> (pengaruh nyata yang membekas, baik melalui suara, makna, maupun tindakan). Dari akar ini lahir kata <em>al-kalām</em> (tutur kata yang membekas pemahamannya di benak) dan <em>al-kalmu</em> (luka sayatan fisik yang membekas di tubuh). Isa AS dinamakan <em>Kalimatullāh</em> bukan karena ia adalah firman itu sendiri secara ontologis zat, melainkan karena ia mewujud secara eksklusif melalui kalimat penciptaan <em>"Kun"</em> (كُنْ) tanpa melalui sebab biologis percampuran sperma (<em>bi-ghayri sababin 'ādiy</em>), sehingga wujud Isa menjadi tanda kekuasaan Allah yang paling membekas dalam sejarah penciptaan manusia.</li>
+        <li><strong>3. M-S-Ḥ (م-س-ح — Al-Masīḥ):</strong> Ibnu Manzhur dalam <em>Lisān al-'Arab</em> memaparkan kekayaan makna semantik kata ini:
+            <ul>
+                <li>Dari segi bahasa Arab asli, <em>al-mas-ḥu</em> berarti menyapu/mengusap. Isa disebut <em>Al-Masīḥ</em> karena beliau mengusap orang buta, penderita kusta (leprosi), dan orang lumpuh seketika sembuh dengan izin Allah (<em>kāna lā yamsahu dzā 'āhatin illā bari'a</em>).</li>
+                <li>Pendapat lain menyebutkan karena beliau diusap dengan keberkahan dan kesucian sejak lahir (<em>mamsūh bil-barakah</em>), disucikan dari dosa-dosa manusiawi.</li>
+                <li>Dari perspektif komparasi bahasa Semit (Semitik Komparatif), kata ini berakar dari bahasa Ibrani <em>Māsyīaḥ</em> (מָשִׁיחַ) atau bahasa Suryani-Aramaik <em>Msyīḥā</em> (ܡܫܝܚܐ) yang bermakna "yang diurapi minyak suci" (<em>the anointed one</em>) sebagai tanda penobatan raja atau nabi besar penerus garis Bani Israil. Al-Qur'an mengadopsi lafaz ini ke dalam bahasa Arab (<em>ta'rīb</em>) seraya memurnikan maknanya dari dogma politis hegemoni duniawi.</li>
+            </ul>
+        </li>
+        <li><strong>4. W-J-H (و-ج-ه — Al-Wajāhah / Wajīhan):</strong> Berakar dari <em>al-wajh</em> (wajah/arah hadap). Ibnu Faris menjelaskan maknanya berporos pada <em>"al-istiqbāl li-asy-syai' bi-syarāfah"</em> (menghadapkan diri dengan penuh kehormatan). <em>Al-Wajīh</em> adalah sosok yang memiliki <em>jāh</em> (kedudukan terhormat, wibawa karismatik, pengaruh sosial, dan kemuliaan status) yang membuat siapa pun memandangnya dengan rasa takzim. Isa AS adalah <em>wajīh</em> di dunia dengan risalah kenabian dan mukjizat agung, serta <em>wajīh</em> di akhirat dengan martabat syafaat dan derajat luhur di hadapan Allah SWT.</li>
+        <li><strong>5. Q-R-B (ق-ر-ب — Al-Muqarrabīn):</strong> Berporos pada <em>"khilāful-bu'd"</em> (lawan dari kejauhan). Kata <em>Al-Muqarrabīn</em> menggunakan bentuk <em>ism maf'ūl</em> dari bab <em>taqrīb</em> (تَقْرِيب), yang mengindikasikan bahwa kedekatan ini bukan sekadar upaya aktif sang hamba, melainkan ketetapan Allah yang secara proaktif menarik, mengangkat, dan memposisikan hamba tersebut ke dalam lingkaran kedekatan arasy-Nya (<em>huzhwah 'indallāh</em>).</li>
+    </ul>
+
+    <h3>Tabel Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>إِذْ</strong></td>
+                <td>Isim zharaf zaman masa lalu (<em>li-mā madhā minaz-zamān</em>).</td>
+                <td>Zharaf zaman mabni di atas sukun fi mahalli nashbin, muta'alliq dengan fi'il mahdzuf yang ditakdirkan: <em>Udzkur</em> (اذْكُرْ - "Ingatlah ketika").</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>قَالَتِ</strong></td>
+                <td>Fi'il madhi mabni 'alal-fath; Ta' ta'nits sakinah dikasrahkan karena <em>iltiqa'us-sakinain</em>.</td>
+                <td>Fi'il madhi; Ta' adalah tanda mu'annats. Jumlah fi'liyyah <em>qālatil-malā'ikah</em> fi mahalli jarrin mudhaf ilaih bagi zharaf <em>idz</em>.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱلْمَلَـٰٓئِكَةُ</strong></td>
+                <td>Jamak taksir dari <em>mal'ak</em> / <em>malak</em>.</td>
+                <td><strong>Fā'il</strong> (pelaku tindakan berkata) marfu' dengan tanda dhammah zhahirah pada huruf Ta' marbuthah.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>يَـٰمَرْيَمُ</strong></td>
+                <td><em>Yā</em>: Harf nida'.<br><em>Maryamu</em>: Isim 'alam mu'annats.</td>
+                <td><em>Yā</em> harf nida' mabni 'alas-sukun; <em>Maryamu</em> <strong>Munādā Mufrad 'Alam</strong> mabni di atas dhammah fi mahalli nashbin. Jumlah nida'iyyah sebagai pembuka maqul al-qaul.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>إِنَّ</strong></td>
+                <td>Harf taukid wa nashab.</td>
+                <td>Huruf penegas dan penashab isim, mabni di atas fathah. Membuka jumlah <em>maqūlul-qaul</em> yang berada fi mahalli nashbin bagi fi'il <em>qālat</em>.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Ism 'alam jalalah.</td>
+                <td><strong>Ismu Inna</strong> manshub dengan tanda fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>يُبَشِّرُكِ</strong></td>
+                <td>Fi'il mudhari' bab taf'il; Fa'il dhamir mustatir; Kaf dhamir muttashil.</td>
+                <td>Fi'il mudhari' marfu' bidh-dhammah; fa'il dhamir mustatir jawazan takdirnya <em>Huwa</em> (kembali kepada Allah); Kaf dhamir muttashil mabni 'alal-kasr fi mahalli nashbin <strong>Maf'ūl bih</strong>. Seluruh jumlah fi'liyyah fi mahalli raf'in <strong>Khabar Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>بِكَلِمَةٍۢ</strong></td>
+                <td>Bā' harf jar; <em>Kalimatin</em> isim nakirah majrur.</td>
+                <td>Jar wa majrur muta'alliq dengan fi'il <em>yubasysyiruki</em>. Tanwin berfungsi sebagai <em>lit-ta'zhīm</em> (mengagungkan nilai kalimat tersebut).</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>مِّنْهُ</strong></td>
+                <td><em>Min</em> harf jar ibtida'iyyah; Ha' dhamir muttashil.</td>
+                <td>Jar wa majrur muta'alliq dengan mahdzuf yang berkedudukan sebagai <strong>Na'at Awwal (Sifat Pertama)</strong> bagi kata <em>kalimatin</em> (ditakdirkan: <em>kalimatin kā'inatin minhu</em>).</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ٱسْمُهُ</strong></td>
+                <td>Isim mufrad mudhaf; Ha' dhamir muttashil mudhaf ilaih.</td>
+                <td><strong>Mubtada'</strong> marfu' dengan dhammah; Ha' dhamir mabni 'aladh-dhammah fi mahalli jarrin mudhaf ilaih. Seluruh jumlah ismiyyah <em>ismuhul-Masīḥ...</em> fi mahalli jarrin <strong>Na'at Tsānī (Sifat Kedua)</strong> bagi kata <em>kalimatin</em>.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>ٱلْمَسِيحُ</strong></td>
+                <td>Isim 'alam laqab (gelar kenabian).</td>
+                <td><strong>Khabar Mubtada'</strong> marfu' dengan dhammah zhahirah di akhirnya.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>عِيسَى</strong></td>
+                <td>Isim 'alam 'ajami (non-Arab) maqshur.</td>
+                <td><strong>'Athaf Bayān</strong> atau <strong>Badal</strong> dari <em>Al-Masīḥu</em>, marfu' dengan dhammah muqaddarah di atas alif layyinah karena <em>ta'adz-dzur</em> (mustahil menampakkan harakat).</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>ٱبْنُ</strong></td>
+                <td>Isim mufrad mudhaf.</td>
+                <td><strong>Na'at</strong> bagi <em>'Īsā</em> atau badal kedua, marfu' dengan dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><strong>مَرْيَمَ</strong></td>
+                <td>Isim 'alam mu'annats mamnu' minash-sharf.</td>
+                <td><strong>Mudhaf Ilaih</strong> majrur dengan tanda fathah pengganti kasrah karena isim mamnu' minash-sharf ('ilmu-t-ta'nits wal-'alamiyyah).</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><strong>وَجِيهًا</strong></td>
+                <td>Shifat musyabbahah wazan <em>fa'īl</em>.</td>
+                <td><strong>Ḥāl (Keterangan Keadaan)</strong> manshub dengan fathah zhahirah, shāhibul-hāl adalah dhamir pada <em>ismuhū</em> atau lafaz <em>'Īsā</em> (yakni dalam keadaan berwibawa dan terkemuka).</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><strong>فِى ٱلدُّنْيَا</strong></td>
+                <td><em>Fī</em> harf jar zharafiyyah; <em>Ad-Dunyā</em> isim maqshur majrur.</td>
+                <td>Jar wa majrur muta'alliq dengan shifat musyabbahah <em>wajīhan</em>. Majrur bil-kasrah al-muqaddarah di atas alif layyinah.</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><strong>وَٱلْـَٔاخِرَةِ</strong></td>
+                <td>Wāwu harf 'athaf; <em>Al-Ākhirah</em> isim majrur.</td>
+                <td>Huruf 'athaf; <em>Al-Ākhirah</em> ma'thuf kepada <em>ad-dunyā</em>, majrur dengan tanda kasrah zhahirah.</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td><strong>وَمِنَ ٱلْمُقَرَّبِينَ</strong></td>
+                <td>Wāwu 'athaf; <em>Min</em> harf jar; <em>Al-Muqarrabīn</em> isim jamak mudzakkar salim.</td>
+                <td>Huruf 'athaf; Jar wa majrur syibh jumlah ma'thuf kepada hal <em>wajīhan</em> (fi mahalli nashbin), atau khabar bagi mubtada' mahdzuf (<em>wa huwa minal-muqarrabīn</em>). Majrur dengan huruf Ya' karena jamak mudzakkar salim.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ānī — Taqdim al-Bisyārah 'alal-Musamma (Mendahulukan Kabar Gembira Sebelum Identitas Anak):</strong><br>
+            Secara psikologis, Maryam adalah perawan suci yang hidup dalam kesunyian ibadah di mihrab. Mendengar kabar tentang seorang anak berisiko memicu kecemasan luar biasa terhadap kehormatan dirinya. Maka, balaghah Al-Qur'an mendahulukan kata <strong>يُبَشِّرُكِ</strong> (<em>Dia menyampaikan kabar gembira kepadamu</em>) sebelum menyebutkan wujud sang anak. Struktur ini berfungsi sebagai <em>tathmīn an-nafs</em> (menenangkan gejolak jiwa dan melenyapkan rasa takut) sehingga jiwa Maryam siap menerima takdir agung tersebut dengan lapang dada.
+        </li>
+        <li><strong>Ilmu Ma'ānī — Taukīd bil-Jumlah al-Ismiyyah wa "Inna":</strong><br>
+            Penggunaan huruf <em>Inna</em> dan perangkaian jumlah ismiyyah (<em>Innallāha yubasysyiruki...</em>) merupakan uslub <em>khabar thalabī/inkārī</em> untuk menolak keraguan rasional manusia: bahwa kelahiran anak tanpa campur tangan biologis laki-laki adalah ketetapan absolut dari Allah Yang Maha Kuasa.
+        </li>
+        <li><strong>Ilmu Bayān — Al-Majāz al-Mursal (Penyebutan Sebab untuk Akibat):</strong><br>
+            Penyebutan Isa AS dengan istilah <strong>بِكَلِمَةٍ مِّنْهُ</strong> (<em>dengan kalimat dari-Nya</em>) merupakan bentuk <em>Majāz Mursal</em> dengan 'alaqah (relasi) <em>as-sababiyyah</em>. Isa bukanlah kalimat itu sendiri secara materi, melainkan wujud yang tercipta langsung melalui sebab firman Allah <em>"Kun"</em>. Penamaan akibat dengan sebabnya menegaskan bahwa penciptaan Isa steril dari hukum kausalitas biologis biasa.
+        </li>
+        <li><strong>Ilmu Bayān — Al-Kināyah 'an Nafyi at-Ta'alluqil-Abawī (Penisbatan kepada Ibu):</strong><br>
+            Frasa <strong>عِيسَى ٱبْنُ مَرْيَمَ</strong> adalah kinayah paling tegas atas ketiadaan ayah biologis. Tradisi masyarakat Semit kuno selalu menisbatkan anak kepada garis ayah (patronimik). Dengan menyebutnya <em>Ibnu Maryam</em>, Al-Qur'an sekaligus melancarkan dua pukulan balaghah: membantah klaim kaum Nasrani bahwa Isa adalah "Anak Allah" (karena ia adalah anak manusia bernama Maryam), dan membantah fitnah kaum Yahudi yang menuduh Maryam berzina (karena Allah sendiri yang menisbatkan nasab suci sang anak kepada ibunya yang perawan).
+        </li>
+        <li><strong>Ilmu Badī' — Aṭh-Ṭhibāq wal-Muqābalah (Harmoni Kontras Dua Alam):</strong><br>
+            Penggabungan lafaz <strong>فِى ٱلدُّنْيَا</strong> (<em>di dunia</em>) dan <strong>وَٱلْـَٔاخِرَةِ</strong> (<em>dan di akhirat</em>) merupakan <em>thibaq ijab</em> yang merangkum totalitas eksistensi. Kemuliaan Isa tidak fana dan tidak terbatas pada ranah sosiologis bumi, melainkan berkesinambungan hingga pengadilan akhirat.
+        </li>
+        <li><strong>Ilmu Badī' — Ḥusnut-Takhalluṣh wa Ḥusnul-Khātimah:</strong><br>
+            Penutupan ayat dengan frasa <strong>وَمِنَ ٱلْمُقَرَّبِينَ</strong> (<em>dan termasuk orang-orang yang didekatkan</em>) merupakan puncak estetika penutup (<em>husnul-khawatim</em>). Setelah menyebutkan kehormatan horizontal di hadapan manusia (<em>wajīhan</em>), ayat ini menguncinya dengan kehormatan vertikal tertinggi di hadirat Allah (<em>al-qurbah al-ilahiyyah</em>).
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Teks Sebelumnya - QS. 3:42–44):</strong><br>
+            Pada ayat 42–43, Allah memproklamirkan keterpilihan dan penyucian Maryam di atas seluruh wanita alam semesta, disertai titah untuk tunduk ruku' dan sujud. Pada ayat 44, Allah menegaskan dimensi ghaib dari sejarah tersebut melalui peristiwa pengundian pena para pendeta mihrab yang membuktikan bahwa Nabi Muhammad ﷺ menerima wahyu ilahi murni, bukan mencontek kitab terdahulu. Maka ayat 45 hadir sebagai klimaks dari persiapan tersebut: alasan mengapa Maryam dipilih dan disucikan sejak awal adalah untuk menerima amanah agung, yakni menjadi wasilah kelahiran sang Kalimatullah.
+        </li>
+        <li><strong>Siyāq (Alur Tema Blok 2: Genealogi Kesucian & Teologi Kenabian, Ayat 33–63):</strong><br>
+            Ayat 45 menempati poros terpenting dalam Blok 2 Surah Ali 'Imran. Setelah Al-Qur'an memaparkan mukjizat kelahiran Yahya dari orang tua yang mandul dan uzur (simbol kekuasaan biologis terbatas), Al-Qur'an melompat ke mukjizat yang lebih tinggi: penciptaan Isa tanpa ayah sama sekali (simbol kekuasaan ilahiah mutlak). Ayat ini meruntuhkan dua distorsi teologis sekaligus: distorsi teologi Yahudi yang menuduh Isa anak haram dan merendahkan martabatnya, serta distorsi teologi Kristen Najran yang menjadikan mukjizat kelahiran ini sebagai dalih untuk mendewakan Isa sebagai tuhan atau anak tuhan.
+        </li>
+        <li><strong>Liḥāq (Proyeksi Teks Sesudahnya - QS. 3:46–49):</strong><br>
+            Ayat 45 segera disambung oleh ayat 46 yang menjelaskan manifestasi kemuliaan Isa sejak masa buaian: <em>"Wa yukallimun-nāsa fil-mahdi wa kahlan..."</em> (Dan ia berbicara kepada manusia sejak dalam buaian dan ketika sudah dewasa). Ketika Maryam tertegun bertanya bagaimana mungkin ia memiliki anak padahal tidak pernah disentuh laki-laki (ayat 47), malaikat menegaskan doktrin penciptaan kalimat: <em>"Idzā qadhā amran fa-innamā yaqūlu lahū Kun fa-yakūn"</em>.
+        </li>
+        <li><strong>Rekonstruksi Sosio-Historis: Debat Kristologis di Masjid Nabawi:</strong><br>
+            Dialog antara Nabi Muhammad ﷺ dengan delegasi Najran di tahun 9 Hijriyah adalah latar sosiologis paling nyata bagi pembacaan ayat ini. Delegasi Najran adalah representasi Kristen Monofisit/Nestorian Arab yang sangat terpelajar dalam teologi Patristik. Mereka menggunakan istilah <em>Logos</em> (firman/kalimat) untuk menjustifikasi doktrin inkarnasi Allah dalam diri Isa. Ayat 45 secara cerdas "merebut" istilah <em>Kalimah</em> dan <em>Al-Masīḥ</em>, memurnikannya kembali ke dalam kerangka monoteisme tauhid: Isa memang Kalimatullah, namun ia adalah ciptaan (<em>makhlūq</em>), hamba yang diberi nama <em>'Īsabnu Maryam</em>, dan masuk dalam kategori makhluk yang didekatkan (<em>minal-muqarrabīn</em>), bukan Sang Pencipta itu sendiri.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭ-Ṭhabarī (w. 310 H) — Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān:</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>"bi-kalimatin minhu"</em> adalah kabar gembira tentang seorang anak yang terwujud karena kalimat dan firman Allah yang disampaikan melalui malaikat-Nya, bukan berasal dari persetubuhan lelaki. Mengenai nama <em>Al-Masīḥ</em>, At-Tabari mengutip riwayat bahwa beliau dinamakan demikian karena telah disucikan dari dosa-dosa (<em>mamsuḥan minadz-dzunūb</em>) atau karena tangannya senantiasa mengusap orang yang berpenyakit hingga sembuh. At-Tabari menegaskan penolakan mutlak terhadap tafsir delegasi Kristen: <em>"Seandainya Isa adalah bagian dari zat Allah, niscaya Allah tidak akan menyebutnya dengan 'ismuhul-Masīḥu 'Īsabnu Maryama', karena zat Tuhan tidak beribu dan tidak menyandang nama manusiawi."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Tafsīr al-Qur'ān al-'Azhīm:</strong><br>
+        Ibnu Katsir mengaitkan ayat ini dengan QS. An-Nisā': 171. Beliau menegaskan bahwa penyebutan <em>"bi-kalimatin minhu"</em> bermakna anak tersebut tercipta dengan kalimat yang diutus Allah melalui malaikat Jibril untuk meniupkan ruh ciptaan-Nya ke dalam rahim Maryam. Ibnu Katsir membedah makna <em>"Wajīhan fid-dunyā wal-ākhirah"</em>: kemuliaan di dunia adalah diangkatnya beliau menjadi nabi agung, menerima wahyu Injil, diberi mukjizat menghidupkan orang mati dan menyembuhkan penyakit kusta, serta ditaati oleh kaum Hawariyyun; sedangkan kemuliaan di akhirat adalah kedudukan luhur di sisi Allah untuk memberi syafaat bagi umatnya yang beriman serta derajat surga tertinggi bersama para Rasul Ulul 'Azmi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Al-Jāmi' li-Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi menyoroti keindahan sastra dan aspek hukum penamaan anak. Beliau mencatat bahwa ayat ini menjadi dalil sunnahnya memberi nama anak sebelum kelahirannya atau saat kabar kehamilan tiba, sebagaimana Allah menamai Isa dan Yahya sebelum mereka lahir. Terkait gelar <em>Al-Masīḥ</em>, Al-Qurthubi memaparkan ada 23 pendapat ulama tentang etimologinya, namun intinya terbagi dua: gelar kemuliaan bagi Isa AS (<em>Al-Masīḥ ash-Shiddīq</em>) yang mengusap bumi dengan dakwah dan menyembuhkan penyakit, kontras dengan <em>Al-Masīḥ ad-Dajjāl</em> (si buta sebelah pembohong) yang mengusap bumi dengan fitnah dan kehancuran.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) — Mafātīḥ al-Ghaib & Az-Zamakhsyarī (w. 538 H) — Al-Kasysyāf:</strong><br>
+        Ar-Razi membedah dialektika teologis kalam secara tajam: Mengapa Isa disebut <em>kalimah</em> padahal seluruh makhluk juga tercipta dengan kalimat <em>"Kun"</em>? Ar-Razi menjawab: Makhluk lain tercipta melalui perantaraan sebab-sebab biasa (benih bapa, rahim ibu, proses pembuahan), sehingga keterikatan pada sabda <em>Kun</em> tertutupi oleh hijab hukum alam; sedangkan Isa tercipta murni tanpa sebab sperma, sehingga wujudnya langsung memantulkan sabda <em>Kun</em> tanpa hijab biologis. Az-Zamakhsyari menambahkan dalam <em>Al-Kasysyāf</em> bahwa dhamir mudzakkar pada <em>ismuhū</em> (padahal <em>kalimah</em> adalah mu'annats majazi) membuktikan bahwa yang dimaksud dengan <em>kalimah</em> adalah sosok person manusia (Isa AS), bukan sekadar ucapan abstrak.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur menganalisis dimensi sosiologis dan diplomasi retorika Al-Qur'an terhadap peradaban Nasrani. Penobatan Isa dengan gelar <em>Al-Masīḥ</em> adalah bentuk pengakuan objektif Al-Qur'an terhadap nubuwwah yang dinanti-nantikan oleh bangsa Israel. Namun Al-Qur'an mengunci nama tersebut dengan <em>'Īsabnu Maryam</em> untuk membersihkan memori sejarah umat manusia dari mitologi dewa-anak Yunani-Romawi (Paganisme Helenistik) yang mengotori kesucian monoteisme para nabi. Kemuliaan di dunia dan akhirat (<em>wajīhan</em>) menunjukkan integrasi harmonis antara keagungan etika publik dan ketinggian derajat spiritual di hadapan Allah SWT.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — Tafsir Al-Azhar:</strong><br>
+        Buya Hamka melukiskan keagungan ayat ini dengan sentuhan humanis yang menggugah sanubari: <em>"Al-Qur'an menempatkan Isa dan ibunya pada tempat yang amat terhormat. Bukan seperti sangkaan sebagian orang Kristen bahwa orang Islam merendahkan Nabi Isa. Tidak! Orang Islam memuliakan Isa sebagai Rasulullah, sebagai Kalimatullah, sebagai Al-Masih yang wajīh (terkemuka) di dunia dan di akhirat. Tetapi memuliakan seorang nabi bukanlah dengan menyembahnya atau menjadikannya anak Allah. Menjadikannya Tuhan justru merendahkan kemanusiaannya yang suci dan merendahkan keesaan Allah Yang Maha Kuasa. Maryam menyambut panggilan itu dengan hati yang gentar namun penuh kepasrahan kepada Allah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Prof. Dr. M. Quraish Shihab — Tafsir Al-Mishbah:</strong><br>
+        Quraish Shihab menggarisbawahi makna <em>wajīhan</em> sebagai wibawa kehormatan yang sejati. Di dunia modern, banyak orang mengejar popularitas semu yang didapat melalui sensasi murahan atau kekuasaan manipulatif; popularitas semacam itu bukanlah <em>wajāhah</em>, melainkan kehinaan terselubung. <em>Wajāhah</em> sejati menurut Al-Qur'an adalah kehormatan yang diakui oleh hati nurani manusia karena integritas kebajikan, dan diakui di akhirat karena ketulusan ubudiyah di hadapan Allah SWT. Ayat ini mengajarkan umat Islam untuk menyeimbangkan antara prestasi sosial di bumi (<em>fid-dunyā</em>) dan orientasi keselamatan abadi (<em>wal-ākhirah</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>8. Kementerian Agama RI (Tafsir Tahlili):</strong><br>
+        Kemenag RI menjelaskan bahwa ayat ini meletakkan fondasi teologis bagi kerukunan antarumat beragama, khususnya antara kaum Muslimin dan Kristiani. Dengan memahami bahwa Islam mengakui Nabi Isa AS sebagai Al-Masih, Kalimatullah, dan sosok mulia di dunia dan akhirat, dialog teologis dapat dibangun di atas rasa saling menghormati tanpa harus mengorbankan prinsip tauhid yang paling mendasar.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Teologis / Hermeneutis</th>
+                <th>Konsensus (Ijma') Mufassirin</th>
+                <th>Titik Perbedaan (Ikhtilaf) & Variasi Mazhab</th>
+                <th>Implikasi Metodologis & Doktrinal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna Redaksi "Bi-Kalimatin Minhu"</strong></td>
+                <td>Sepakat bahwa kata <em>kalimah</em> merujuk kepada penciptaan Isa AS melalui firman Allah <em>"Kun"</em> dan preposisi <em>minhu</em> bukan bermakna pecahan zat Tuhan.</td>
+                <td>• <strong>Jumhur (Tabari, Ibnu Katsir, Qurtubi):</strong> Kalimah bermakna sabda penciptaan (<em>al-khalq bil-amr</em>).<br>• <strong>Az-Zamakhsyari & Ar-Razi:</strong> Kalimah adalah <em>majāz mursal</em> penamaan wujud dengan sebab eksistensinya.<br>• <strong>Sebagian Salaf:</strong> Bisyarah kitab suci Injil yang diturunkan kepadanya.</td>
+                <td>Menolak kristologi Trinitas Inkarnasional secara rasional seraya mengukuhkan kemakhlukan Isa Al-Masih di bawah payung tauhid mutlak.</td>
+            </tr>
+            <tr>
+                <td><strong>Etimologi Gelar "Al-Masīḥ"</strong></td>
+                <td>Sepakat bahwa <em>Al-Masīḥ</em> adalah gelar penghormatan resmi yang dianugerahkan Allah kepada Isa AS.</td>
+                <td>• <strong>Pendapat Bahasa Arab:</strong> Bermakna yang mengusap orang sakit hingga sembuh, atau yang diusap dengan kesucian berkah.<br>• <strong>Pendapat Filologis (Ibnu 'Asyur):</strong> Ta'rib (arabisasi) dari kata Ibrani <em>Māsyīaḥ</em> yang berarti orang yang dilantik dan diurapi berkah kenabian.</td>
+                <td>Menunjukkan integrasi hermeneutis antara tradisi linguistik Arab murni dengan genealogi kenabian Bani Israil.</td>
+            </tr>
+            <tr>
+                <td><strong>Penisbatan "Ibnu Maryam"</strong></td>
+                <td>Sepakat sebagai penegasan bahwa Isa terlahir murni tanpa perantara bapa manusiawi.</td>
+                <td>• <strong>Mufassir Klasik:</strong> Menekankan pembatalan tuduhan zina dari kaum Yahudi.<br>• <strong>Mufassir Teologis (Razi, Hamka):</strong> Menekankan antitesis langsung terhadap doktrin "Anak Allah" (Son of God) kaum Nasrani.</td>
+                <td>Mengunci posisi Isa sebagai manusia sejati (insan kamil), bukan sosok ilahi berkepribadian ganda.</td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan Hakikat "Al-Wajāhah"</strong></td>
+                <td>Sepakat mencakup kemuliaan ganda: kehormatan kepemimpinan moral di dunia dan ketinggian derajat di akhirat.</td>
+                <td>• <strong>Al-Qurtubi & Ibnu Katsir:</strong> Di dunia berupa kenabian dan mukjizat; di akhirat berupa syafaat agung.<br>• <strong>Quraish Shihab:</strong> Wibawa karismatik yang lahir dari integritas moral universal yang menginspirasi peradaban.</td>
+                <td>Menetapkan standar kepemimpinan Islami: tidak ada kehormatan dunia yang sah jika mengorbankan keselamatan dan kemuliaan di akhirat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur kejiwaan berikut merupakan ikhtiar tadabbur analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Sintesis Sistemik & Pergeseran Paradigma (Pola Pikir Lama vs Paradigma Qur'ani)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Nilai</th>
+                <th>Pola Pikir Reduksionis / Sekuler Materialistik</th>
+                <th>Paradigma Transenden Qur'ani (QS. 3:45)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hukum Kausalitas (Sebab-Akibat)</strong></td>
+                <td>Determinisme buta: Menganggap hukum alam biologis sebagai kepastian mutlak yang tidak dapat ditembus oleh kekuasaan transenden.</td>
+                <td>Kausalitas Bertingkat: Hukum alam adalah kebiasaan ciptaan (<em>sunnatullāh</em>), namun Sang Maha Pencipta memegang kedaulatan mutlak untuk bertindak melalui firman-Nya (<em>Kalimatullāh</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Sumber Kehormatan (Wajāhah)</strong></td>
+                <td>Divalidasi oleh akumulasi materi, strata feodal, trah dinasti patriarki, atau viralitas algoritma digital semu.</td>
+                <td>Bersumber dari pengabdian suci, integritas moral, amanah risalah, dan pengakuan vertikal di hadirat Ilahi (<em>wajīhan fid-dunyā wal-ākhirah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Berita Tak Terduga</strong></td>
+                <td>Kepanikan eksistensial, kecemasan akut terhadap opini sosial, dan penolakan terhadap takdir yang melanggar kenyamanan ego.</td>
+                <td>Ketenangan berbasis tauhid: Menyadari bahwa setiap takdir berat yang dititahkan Allah selalu membawa benih kabar gembira (<em>bisyārah</em>) dan pengangkatan derajat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Law of Divine Origins over Biological Constraints" (Kedaulatan Titah Melampaui Keterbatasan Materiil):</strong><br>
+            Akal manusia sering kali terjebak dalam rasa putus asa ketika melihat sumber daya materiilnya buntu (ketiadaan modal, jalan karier tertutup, atau keterbatasan fisik). Ayat 45 membongkar keterbatasan mental ini: Isa Al-Masih lahir dari ketiadaan sebab biologis laki-laki semata-mata karena titah <em>Kalimatullah</em>. Kaidah berpikir ini mengajarkan bahwa dalam setiap kebuntuan ikhtiar duniawi, seorang mukmin tidak boleh mengunci kemampuannya hanya pada kalkulasi horizontal. Keterhubungan batin dengan Sang Pemilik Kalimat membuka pintu-pintu solusi <em>min ḥaytsu lā yaḥtasib</em> (dari arah yang tak terduga).
+        </li>
+        <li><strong>Mental Model 2: "Dual-Realm Eminence Paradigm" (Paradigma Kemuliaan Dua Dimensi):</strong><br>
+            Al-Qur'an mendefinisikan kesuksesan puncak melalui formula <em>"Wajīhan fid-dunyā wal-ākhirah"</em>. Pola pikir sekuler mengejar wibawa duniawi (<em>wajīhan fid-dunyā</em>) meski harus mengorbankan moralitas dan akhirat; sebaliknya, asketisme ekstrem terkadang membuang tanggung jawab peradaban duniawi demi kesalehan individual. Paradigma Isa Al-Masih menggabungkan keduanya: hadir di dunia sebagai agen penyembuh krisis masyarakat, berani melawan kezaliman sistemik, berwibawa di hadapan umat, dan pada saat yang sama hatinya senantiasa terpasang erat di hadirat Allah (<em>minal-muqarrabīn</em>).
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi & Tazkiyatun Nafs: Penyembuhan dari "Status Anxiety" & "Validation Addiction"</h3>
+    <p>
+        Secara neurobiologis dan psikologis, manusia modern mengalami wabah kecemasan status (<em>status anxiety</em>) yang kronis. Kebutuhan primitif akan pengakuan sosial memicu pelepasan hormon kortisol dan adrenalin secara terus-menerus ketika seseorang merasa tidak diakui atau dijauhi oleh kelompoknya. Budaya media sosial memperparah hal ini dengan menciptakan kecanduan validasi eksternal (<em>extrinsic dopamine reward system</em>) berbasis jumlah suka (<em>likes</em>) dan pengikut (<em>followers</em>).
+    </p>
+    <p>
+        Khithab malaikat kepada Maryam dalam ayat 45 menyajikan terapi psikologis radikal: Allah menobatkan sang anak dengan gelar <strong>Wajīhan</strong> dan <strong>Minal-Muqarrabīn</strong> jauh sebelum manusia mana pun melihat sosok fisiknya. Gelar kehormatan ini tidak lahir dari persetujuan massa, tidak membutuhkan jajak pendapat publik, dan steril dari konvensi sosiologis manusia.
+    </p>
+    <p>
+        Ketika jiwa seorang hamba menginternalisasi bahwa validasi sejati hanyalah persaksian Allah SWT, sistem kognitifnya mengalami detoksifikasi emosional: ia tidak lagi rapuh oleh cemoohan manusia dan tidak lagi mabuk oleh sanjungan khalayak. Inilah maqam <em>Al-Qurbah</em> (kedekatan) yang menyembuhkan jiwa dari dahaga narsisme duniawi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Krisis Kehormatan di Era Digital: "Clout Chasing" vs "Wajāhah" Hakiki</h3>
+    <p>
+        Peradaban abad ke-21 menyaksikan pergeseran distorsif terhadap makna kemuliaan dan kehormatan. Di era ekonomi atensi (<em>attention economy</em>), kemuliaan sering kali disamakan dengan viralitas algoritmis. Individu berlomba-lomba mengejar sensasi murahan, memproduksi kepalsuan, hingga mengorbankan rasa malu dan etika demi mendongkrak popularitas semu (<em>clout chasing</em>).
+    </p>
+    <p>
+        Namun popularitas algoritma ini sangat rapuh: para pemujanya hari ini bisa menjadi perundung brutal (<em>cancel culture</em>) keesokan harinya. QS. 3:45 melancarkan kritik telak terhadap delusi modern ini: kehormatan sejati (<em>al-wajāhah</em>) tidak dibangun di atas fondasi sensasi yang rapuh, melainkan di atas fondasi kemanfaatan nyata bagi kemanusiaan, keberanian menyampaikan kebenaran, dan keterikatan suci dengan Sang Pencipta.
+    </p>
+
+    <h3>2. Stigma Sosial terhadap Ibu Tunggal & Hipokrisi Moralitas Publik</h3>
+    <p>
+        Hingga hari ini, masyarakat modern kerap kali memperlihatkan hipokrisi sosiologis: perempuan yang membesarkan anak seorang diri (<em>single mothers</em>) atau anak-anak yang lahir dalam kondisi tidak ideal sering kali menjadi sasaran stigma, diskriminasi, dan pengucilan sosial.
+    </p>
+    <p>
+        Kisah Maryam dan Isa Al-Masih adalah dekonstruksi teologis paling radikal terhadap penghakiman sosial yang zalim tersebut. Allah SWT memilih seorang ibu tunggal, yang melahirkan tanpa suami melalui mukjizat Ilahi, untuk membesarkan salah satu nabi terbesar dalam sejarah peradaban. Al-Qur'an membuktikan bahwa nilai kemuliaan seorang manusia di sisi Allah sama sekali tidak ditentukan oleh status sosial keluarganya di mata manusia, melainkan oleh kesucian batin, keteguhan iman, dan integritas pengabdian jiwanya.
+    </p>
+
+    <h3>3. Rekonsiliasi Teologis & Dialog Lintas Peradaban Melawan Sekularisme Agresif</h3>
+    <p>
+        Dunia kontemporer saat ini dirobek oleh dua ancaman peradaban: di satu sisi muncul fanatisme kebencian antarkelompok agama yang memicu islamofobia dan kristenofobia; di sisi lain berkembang gelombang sekularisme agresif yang berusaha melenyapkan seluruh nilai spiritual dan transenden dari ruang publik.
+    </p>
+    <p>
+        Dalam konteks ini, figur Isa Al-Masih sebagaimana digambarkan dalam QS. 3:45 adalah "jembatan emas" (<em>golden bridge</em>) bagi dialog peradaban. Ayat ini menawarkan titik temu yang agung: kaum Muslimin dan Kristiani sama-sama memuliakan sosok Isa putra Maryam sebagai tokoh suci pembawa risalah kedamaian. Dengan meletakkan penghormatan ini dalam kerangka tauhid murni yang adil, umat beragama dapat bersatu menghadapi krisis kemanusiaan global: ketidakadilan ekonomi, kerusakan moral generasi muda, dan kehampaan spiritual peradaban modern.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit) — Dzikir Kalimatullah & Inokulasi Niat Fajar:</strong><br>
+                Setiap pagi setelah shalat fajar, luangkan waktu 3 menit dalam keheningan untuk melafalkan kalimah tayyibah seraya merenungkan bahwa hari ini Anda melangkah bukan dengan mengandalkan kekuatan ego biologis semata, melainkan di bawah naungan firman dan takdir Allah: <em>"Bismillāhi tawakkaltu 'alallāh, lā ḥawla wa lā quwwata illā billāh"</em>. Niatkan seluruh perkataan Anda hari ini menjadi "kalimat kebaikan" yang membawa kabar gembira (<em>bisyārah</em>) dan kedamaian bagi orang-orang di sekitar Anda.
+            </li>
+            <li><strong>Protokol Pengambilan Keputusan (Decision Protocol) — Filter Integritas Dua Dimensi (The Dual-Realm Filter):</strong><br>
+                Sebelum menerima tawaran promosi jabatan, peluang bisnis, proyek konten, atau kerja sama profesional, ajukan pertanyaan penguji: <em>"Apakah keputusan ini akan menjadikanku wajīhan (terhormat dan bermanfaat) di mata masyarakat sekaligus tidak meruntuhkan kedudukanku di akhirat (wajīhan fil-ākhirah)?"</em> Jika suatu proyek menawarkan kekayaan dan popularitas duniawi namun menuntut kompromi etika, kebohongan publik, atau pelanggaran syariat, tolaklah dengan tegas demi menjaga kemuliaan abadi.
+            </li>
+            <li><strong>Komitmen Etika Relasional — Program Perlindungan & Pemuliaan Martabat Sosial:</strong><br>
+                Wujudkan teladan pembelaan Allah terhadap Maryam dan Isa dengan mengalokasikan bantuan nyata (finansial, advokasi, atau pendampingan moral) minimal satu kali setiap bulan kepada ibu tunggal dhu'afa, anak yatim, atau kelompok masyarakat rentan yang sering distigma tidak adil oleh lingkungan. Pastikan lisan dan jari Anda di media sosial tidak pernah menjadi bagian dari budaya perundungan siber (<em>cyberbullying</em>) atau penyebaran aib sesama manusia.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>Apakah rasa percaya diri dan kehormatan diriku selama ini masih digantungkan pada pujian algoritma media sosial, jabatan duniawi, dan validasi manusia fana, ataukah telah berlabuh kokoh pada kerinduan untuk menjadi hamba yang didekatkan (<em>minal-muqarrabīn</em>) di hadapan Allah SWT?</li>
+            <li>Ketika Allah menghadapkan diriku pada ujian hidup yang berat dan tidak masuk akal secara kalkulasi manusiawi, apakah reaksiku dipenuhi oleh keluhan putus asa, ataukah aku mampu menangkap sinyal kabar gembira (<em>bisyārah</em>) bahwa Allah sedang membersihkan bejana jiwaku untuk memikul amanah yang lebih agung?</li>
+            <li>Sejauh mana tutur kata, tulisan, dan sikapku dalam interaksi sehari-hari telah mencerminkan sifat "kalimat yang membawa berkah": apakah kehadiranku menyembuhkan luka batin sesama sebagaimana mukjizat Al-Masih, ataukah kehadiranku justru menabur fitnah, keresahan, dan kepedihan?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Badī'as-samāwāti wal-ardh, Yā Man idzā qadhā amran fa-innamā yaqūlu lahū Kun fa-yakūn. Yā Dzāl-Jalāli wal-Ikrām! Ya Allah yang telah menyampaikan kabar gembira kepada Sayyidah Maryam tentang Kalimat-Mu yang agung, Isa Al-Masih putra Maryam, hamba dan rasul-Mu yang terkemuka di dunia dan di akhirat serta termasuk golongan hamba-Mu yang didekatkan. Kami memohon kepada-Mu dengan wasilah keagungan firman-Mu yang suci: anugerahkanlah kepada kami wibawa kemuliaan iman dan akhlak (wajāhah) di dunia yang membawa manfaat bagi umat, serta wibawa keselamatan di akhirat di bawah naungan rahmat dan syafaat-Mu. Bersihkanlah hati kami dari kehausan akan sanjungan manusia dan penyakit narsisme fana. Angkatlah derajat kami menjadi bagian dari orang-orang yang senantiasa mendekat ke hadirat-Mu (al-muqarrabīn). Jadikanlah lisan kami sumber kalimat kebaikan dan penyembuh kedukaan bagi sesama, serta wafatkanlah kami dalam keteguhan tauhid yang murni tanpa menyekutukan-Mu dengan sesuatu pun. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-044 - QS. Ali 'Imran Ayat 44.html">&larr; Kembali ke Ayat 44 (QS. 3:44)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 45</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-046 - QS. Ali 'Imran Ayat 46.html">Lanjut ke Ayat 46 (QS. 3:46) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

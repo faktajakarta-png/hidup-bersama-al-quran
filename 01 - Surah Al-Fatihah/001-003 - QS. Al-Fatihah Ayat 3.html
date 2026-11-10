@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-003 - QS. Al-Fatihah Ayat 3 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="001-002 - QS. Al-Fatihah Ayat 2.html">&larr; Ayat Sebelumnya (QS. 1:2)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="001-004 - QS. Al-Fatihah Ayat 4.html">Ayat Berikutnya (QS. 1:4) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Poros 1: Fondasi Tauhid, Rububiyyah & Rahmat Ilahi</span>
+        <span class="badge">2 Kata | 12 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 3</h1>
+    <div class="transliteration">
+        "Ar-Raḥmānir-Raḥīm."
+    </div>
+    <div class="thematic-title">
+        Arsitektur Rahmat sebagai Jantung Rububiyyah: Rahasia Pengulangan "Ar-Raḥmānir-Raḥīm" di Antara Kepemeliharaan Kosmik dan Pengawasan Hari Pembalasan, serta Keseimbangan Psikologis Raja' (Harap) dan Khauf (Takut)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 1: Fondasi Tauhid, Rububiyyah & Rahmat Ilahi)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ۝٣
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Yang Maha Pengasih (Pemilik rahmat agung yang meliputi seluruh ciptaan di alam semesta) lagi Maha Penyayang (Pencurah rahmat yang berkesinambungan dan abadi bagi hamba-hamba yang taat)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Jika pada Ayat 1 (<em>Basmalah</em>) kedua nama ini hadir sebagai dasar permohonan pertolongan dalam memulai tindakan (<em>isti'ānah</em>), maka pada Ayat 3 kedua nama ini hadir sebagai <strong>penjelas hakikat Rububiyyah Allah</strong> (Ayat 2) dan <strong>pengantar menuju keadilan Hari Pembalasan</strong> (Ayat 4). Artinya, pemeliharaan Allah atas seluruh alam (<em>Rabbil-'ālamīn</em>) bukanlah kekuasaan otoriter yang menindas, melainkan pemeliharaan yang bersumber dari sifat <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em>.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱلرَّحْمَـٰنِ</strong><br>(<em>Ar-Raḥmāni</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Saat memulai dari awal Ayat 3 (<em>ibtida'</em>), dibaca fathah (<em>Ar-</em>). Saat disambung dari Ayat 2 (<em>Al-'ālamīnar-Raḥmāni</em>), hamzah washal gugur.<br>
+                    <strong>Idgham Syamsiyyah:</strong> <em>Lam Ta'rif</em> melebur sempurna ke dalam <em>Rā'</em> bertasydid fathah yang dibaca <strong>Tafkhim</strong> (tebal).<br>
+                    <strong>Huruf Ḥā'</strong> sukun memiliki sifat <em>hams</em> dan <em>rikhwah</em> yang bersih dari tengah tenggorokan.<br>
+                    <strong>Mad Thabi'i:</strong> 2 harakat pada alif khanjaraniyyah setelah <em>Mīm</em> fathah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Ar-Raḥmāni</em> dengan <strong>jarr (kasrah pada Nūn)</strong> sebagai <em>na'at</em> bagi <em>Allāhi</em> atau <em>Rabbi</em> pada Ayat 2.<br>
+                    Dalam aspek <strong>Al-'Add al-Āyī (Penghitungan Nomor Ayat)</strong>:<br>
+                    • Bagi Qurra' Makkah dan Kufah (yang menghitung Basmalah sebagai Ayat 1), <em>Ar-Raḥmānir-Raḥīm</em> adalah <strong>Ayat ke-3</strong>.<br>
+                    • Bagi Qurra' Madinah, Bashrah, dan Syam (yang tidak menghitung Basmalah sebagai ayat pertama), <em>Ar-Raḥmānir-Raḥīm</em> adalah <strong>Ayat ke-2</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلرَّحِيمِ</strong><br>(<em>Ar-Raḥīmi</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah</strong> pada <em>Lam Ta'rif</em> bertemu <em>Rā'</em> bertasydid fathah (<strong>Tafkhim</strong>).<br>
+                    <strong>Huruf Ḥā'</strong> kasrah murni diikuti <em>Yā' Mad</em>.<br>
+                    <strong>Mad 'Aridh Lissukun</strong> saat waqaf (2, 4, atau 6 harakat) dengan penghentian suara yang lembut (<em>tawassuth</em>) pada <em>Mīm</em> sukun.
+                </td>
+                <td>
+                    Apabila pembaca menyambung (<em>washal</em>) Ayat 3 ke Ayat 4:<br>
+                    • Bagi imam yang membaca <em>Maliki</em> tanpa alif (Nafi', Ibnu Katsir, Abu 'Amr, Ibnu 'Amir, Hamzah, Abu Ja'far, Khalaf), kecuali As-Susi:<br>
+                    • <strong>Riwayat As-Susi dari Abu 'Amr (Melalui Jalur Asy-Syathibiyyah — Al-Idgham Al-Kabir):</strong> Mengidghamkan <em>Mīm</em> akhir kata <em>Ar-Raḥīmi</em> ke dalam <em>Mīm</em> awal kata <em>Maliki</em> pada Ayat 4 (<em>Ar-Raḥīmm-Maliki yawmid-dīn</em>) disertai mad 2, 4, atau 6 harakat pada <em>Yā'</em> sebelumnya! Sedangkan jumhur imam lainnya membaca <em>Idzhar</em> dengan kasrah pada <em>Mīm</em> (<em>Ar-Raḥīmi Māliki/Maliki</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Sahih Penjelas tentang Keluasan Rahmat Allah</h3>
+    <div class="hadith-box">
+        <strong>1. Lanjutan Hadits Qudsi Sahih Muslim (No. 395) dari Abu Hurairah r.a. — Sambutan Allah atas Pujian Hamba:</strong><br>
+        Rasulullah ﷺ bersabda bahwa Allah Ta'ala berfirman: <em>"Fa-idzā qāla: 'Ar-Raḥmānir-Raḥīm', qālallāhu Ta'ālā: 'Atsnā 'alayya 'abdī'..."</em> (Apabila hamba mengucapkan: <em>"Ar-Raḥmānir-Raḥīm"</em>, maka Allah Ta'ala berfirman: <strong>"Hamba-Ku telah menyanjung-Ku [mengulang-ulang pujian atas kebaikan-Ku]!"</strong>). Ulama menjelaskan perbedaan antara <em>Al-Ḥamd</em> (pada Ayat 2) dan <em>Ats-Tsanā'</em> (pada Ayat 3): <em>Ats-Tsanā'</em> adalah pengulangan pujian atas sifat kasih sayang yang melimpah ruah.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Muttafaqun 'Alaih (Sahih Bukhari No. 6000 & Sahih Muslim No. 2752) dari Abu Hurairah r.a. — 100 Bagian Rahmat Allah:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Ja'alallāhur-raḥmata mi'ata juz'in, fa-amsaka 'indahū tis'atan wa tis'īna juz'an, wa anzala fil-ardhi juz'an wāḥidan; famin dzālikal-juz'i yatarāḥamul-khalqu, ḥattā tarfa'al-farasu ḥāfirahā 'an waladihā khasy-yata an tushībahū."</em> (Allah menjadikan rahmat itu seratus bagian; Dia menahan di sisi-Nya sembilan puluh sembilan bagian, dan menurunkan ke bumi satu bagian saja. Maka dari satu bagian itulah seluruh makhluk saling berkasih sayang, hingga seekor induk kuda mengangkat kakinya dari anaknya karena khawatir menginjaknya). Satu bagian rahmat di dunia itulah manifestasi <strong>Ar-Raḥmān</strong>, sedangkan 99 bagian yang disimpan untuk hari kiamat bagi kaum beriman adalah manifestasi puncak <strong>Ar-Raḥīm</strong>.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Muttafaqun 'Alaih (Sahih Bukhari No. 3194 & Sahih Muslim No. 2751) dari Abu Hurairah r.a. — Rahmat Mendahului Murka:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Lammā qadhallāhul-khalqa kataba fī kitābihī fahuwa 'indahū fawqal-'arsyi: Inna raḥmatī ghalabat ghadhabī (wa fī riwāyah: sabaqat ghadhabī)."</em> (Ketika Allah menetapkan penciptaan makhluk, Dia menulis di dalam Kitab-Nya yang berada di sisi-Nya di atas 'Arsy: <strong>"Sesungguhnya rahmat-Ku mengalahkan [mendahului] murka-Ku"</strong>).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Dialektika Semantik "Ar-Raḥmān" dan "Ar-Raḥīm" dalam Konteks Rububiyyah:</strong><br>
+            Sebagaimana telah dibedah pada Ayat 1, keduanya berakar dari <em>Rā'-Ḥā'-Mīm</em> (ر-ح-م). Namun kemunculan keduanya pada Ayat 3 memiliki dimensi semantik yang baru karena mengiringi kata <em>Rabbil-'ālamīn</em>:<br>
+            1) <strong>Relasi "Rabb" dan "Ar-Raḥmān":</strong> Kata <em>Rabb</em> menunjuk pada tindakan pemeliharaan dan penciptaan (<em>shifatul-fi'l</em>), sedangkan <em>Ar-Raḥmān</em> menunjuk pada motivasi dan karakter esensial Dzat (<em>shifatudz-dzāt</em>). Artinya, Allah menciptakan dan mengatur alam semesta bukan karena Dia membutuhkan makhluk, melainkan murni karena limpahan rahmat-Nya yang meluap (<em>faydhur-raḥmah</em>).<br>
+            2) <strong>Perbandingan Pemakaian "Ar-Raḥmān" di Seluruh Al-Qur'an (Tafsir al-Qur'an bil-Qur'an):</strong> Nama <em>Ar-Raḥmān</em> disebut sebanyak <strong>57 kali</strong> di dalam Al-Qur'an, dan menariknya selalu dikaitkan dengan fenomena kosmik yang agung, penciptaan manusia, pengajaran Al-Qur'an (<em>Ar-Raḥmān 'allamal-Qur'ān, khalaqal-insān</em> — QS. Ar-Rahman: 1–3), serta bersemayamnya Allah di atas 'Arsy (<em>Ar-Raḥmānu 'alal-'arsyistawā</em> — QS. Thaha: 5). Sebaliknya, nama <em>Ar-Raḥīm</em> disebut sebanyak <strong>114 kali</strong> (dua kali lipat dari <em>Ar-Raḥmān</em>, kecuali satu ayat di QS. At-Taubah: 128 yang menyifati Rasulullah ﷺ), dan selalu dikaitkan dengan pengampunan dosa (<em>Ghafūrun Raḥīm</em>), penerimaan taubat (<em>Tawwābun Raḥīm</em>), dan kelembutan khusus kepada orang-orang mukmin (<em>Wa kāna bil-mu'minīna Raḥīmā</em> — QS. Al-Ahzab: 43).
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱلرَّحْمَـٰنِ</strong></td>
+                <td>
+                    Shifat Musyabbahah / Sighat Mubalaghah berwazan فَعْلَان (<em>Fa'lān</em>) dari <em>raḥima - yarḥamu</em>, menunjukkan kepenuhan dan keluasan sifat.
+                </td>
+                <td>
+                    <strong>Na'at</strong> (sifat) kedua bagi Lafzhul Jalalah <em>Allāhi</em> pada Ayat 2 (setelah na'at pertama <em>Rabbi</em>), atau na'at bagi <em>Rabbi</em> itu sendiri; majrur dengan tanda kasrah zhahirah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلرَّحِيمِ</strong></td>
+                <td>
+                    Shifat Musyabbahah berwazan فَعِيل (<em>Fa'īl</em>) bermakna <em>fā'il</em> yang menunjukkan kemantapan dan kelanggengan sifat (<em>ats-tsubūt wad-dawām</em>).
+                </td>
+                <td>
+                    <strong>Na'at</strong> ketiga bagi Lafzhul Jalalah <em>Allāhi</em>, majrur dengan tanda kasrah zhahirah.<br>
+                    <strong>Catatan Sintaksis:</strong> Karena Ayat 3 secara i'rab terdiri dari dua <em>na'at</em> yang menginduk pada Ayat 2, maka Ayat 2, 3, dan 4 sejatinya membentuk satu kesatuan untaian sifat agung (<em>silksilatul-awshāf</em>) bagi Allah SWT.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia At-Takrār (Pengulangan "Ar-Raḥmānir-Raḥīm" setelah Basmalah):</strong><br>
+            Mengapa Allah mengulang <em>Ar-Raḥmānir-Raḥīm</em> pada Ayat 3 padahal baru saja disebut pada Ayat 1? Para mufassir dan ulama Balaghah (Ibnu 'Asyur, Abu Su'ud, Al-Biqa'i) memaparkan tiga rahasia mendalam:<br>
+            • <strong>Pertama (Perbedaan Fungsi Kontekstual):</strong> Pada Ayat 1, <em>Ar-Raḥmānir-Raḥīm</em> menjelaskan mengapa seorang hamba layak memohon pertolongan kepada nama Allah saat memulai perbuatan. Sedangkan pada Ayat 3, <em>Ar-Raḥmānir-Raḥīm</em> menjelaskan <strong>mengapa Allah berhak atas segala puji (Al-ḥamdu) dan bagaimana Dia menjalankan kepemimpinan-Nya atas alam semesta (Rabbil-'ālamīn)</strong>.<br>
+            • <strong>Kedua (Kaidah At-Targhīb sebelum At-Tarhīb):</strong> Kata <em>Rabb</em> (Penguasa Mutlak) pada Ayat 2 memiliki nuansa kehebatan dan kewibawaan (<em>al-haybah</em>), maka Allah menyusulinya dengan <em>Ar-Raḥmānir-Raḥīm</em> untuk menumbuhkan harapan dan ketenangan (<em>at-targhīb wal-uns</em>). Kemudian barulah pada Ayat 4 disusul dengan <em>Māliki yawmid-dīn</em> (Penguasa Hari Pembalasan) agar harapan tersebut tidak berubah menjadi kelalaian.<br>
+            • <strong>Ketiga (Penegasan Identitas Rahmat):</strong> Dengan diulangnya sifat rahmat dua kali dalam dua ayat (empat kali penyebutan kata berakar <em>r-ḥ-m</em> dalam satu surah pendek yang hanya terdiri dari 7 ayat!), Al-Qur'an menanamkan pesan bahwa sifat paling dominan dalam relasi Tuhan dengan hamba adalah <strong>kasih sayang</strong>.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-Muqābalah al-Ma'nawiyyah (Keseimbangan Makna Antara Ayat 2, 3, dan 4):</strong><br>
+            Imam Al-Khatib Al-Iskafi dan Az-Zamakhsyari menunjukkan simetri indah: <em>Rabbil-'ālamīn</em> (Ayat 2) menunjuk pada awal penciptaan (<em>al-mabda'</em>), <em>Ar-Raḥmānir-Raḥīm</em> (Ayat 3) menunjuk pada pemeliharaan di tengah perjalanan hidup (<em>al-wasath</em>), dan <em>Māliki yawmid-dīn</em> (Ayat 4) menunjuk pada muara akhir kehidupan (<em>al-ma'ād</em>).
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi dengan Ayat 2):</strong><br>
+            Pada Ayat 2 ditetapkan bahwa Allah adalah <em>Rabbil-'ālamīn</em> (Pemilik dan Pendidik seluruh alam). Dalam realitas manusia, seorang penguasa atau pemilik sering kali memelihara miliknya demi keuntungan dirinya sendiri atau bertindak keras terhadap bawahannya. Maka Ayat 3 datang sebagai <em>iḥtirās</em> (penjagaan makna) dan penjelasan: Dia adalah <em>Rabb</em> yang memelihara alam semesta semata-mata karena Dia <strong>Ar-Raḥmānir-Raḥīm</strong>.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Surah Al-Fatihah):</strong><br>
+            Ayat 3 menjadi poros penyeimbang emosional dan teologis di paruh pertama Surah Al-Fatihah. Ia menghubungkan kekuasaan kosmik di dunia (Ayat 2) dengan pengadilan mutlak di akhirat (Ayat 4) melalui jembatan rahmat.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Logis Menuju Ayat 4):</strong><br>
+            Jika manusia hanya mendengar bahwa Tuhan adalah <em>Ar-Raḥmānir-Raḥīm</em> (Maha Pengasih lagi Maha Penyayang), tabiat manusia yang lemah cenderung mudah terlena, meremehkan dosa, dan berbuat zalim dengan dalih "Tuhan pasti memaafkan". Maka tepat setelah <em>Ar-Raḥmānir-Raḥīm</em>, Allah segera menurunkan Ayat 4: <strong>"Māliki yawmid-dīn"</strong> (Pemilik dan Raja Hari Pembalasan)! Rahmat Allah tidak pernah meniadakan keadilan-Nya.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Koreksi atas Dua Ekstrem Konsep Ketuhanan</h3>
+    <p>
+        Dalam sejarah agama-agama dan filsafat kuno, konsep manusia tentang Tuhan sering terjebak pada dua ekstrem:<br>
+        1) <strong>Tuhan yang Kejam dan Pendendam:</strong> Dalam mitologi pagan kuno, dewa-dewa digambarkan mudah marah, cemburu, dan menuntut tumbal darah agar tidak menghancurkan manusia.<br>
+        2) <strong>Tuhan yang Permisif Tanpa Keadilan Hukum:</strong> Di sisi lain, muncul penyimpangan teologis yang menganggap kasih Tuhan menghapuskan seluruh konsekuensi hukum dan pertanggungjawaban amal.<br>
+        Peletakan <em>Ar-Raḥmānir-Raḥīm</em> di antara <em>Rabbil-'ālamīn</em> dan <em>Māliki yawmid-dīn</em> menghadirkan <strong>sintesis Islam yang sempurna</strong>: Tuhan yang penuh kasih sayang dan rahmat, namun sekaligus menegakkan keadilan mutlak agar yang dizalimi mendapatkan haknya di Hari Pembalasan.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān</em>:</strong><br>
+        At-Tabari menjelaskan bahwa pengulangan <em>Ar-Raḥmānir-Raḥīm</em> pada ayat ini merupakan pujian Allah atas Diri-Nya setelah Dia menyatakan kepemilikan pujian sebagai <em>Rabbil-'ālamīn</em>. Seakan-akan Allah berfirman kepada hamba-hamba-Nya: <em>"Pujilah Aku, karena Aku adalah Tuhan yang mengurus seluruh makhluk-Ku dengan sifat Ar-Raḥmān (rahmat menyeluruh bagi seluruh ciptaan dalam urusan rezeki dan kehidupan dunia) dan Ar-Raḥīm (rahmat khusus bagi kaum mukminin dalam urusan hidayah dan ampunan di akhirat)."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em>:</strong><br>
+        Ibnu Katsir menguraikan kaidah emas Al-Qur'an dalam memadukan <em>At-Tarhīb</em> (peringatan yang menumbuhkan wibawa) dan <em>At-Targhīb</em> (kabar gembira yang menumbuhkan harapan): <em>"Ketika dalam kata Rabbil-'ālamīn terdapat nuansa tarhīb (kewibawaan kekuasaan), maka Allah menyandingkannya dengan Ar-Raḥmānir-Raḥīm karena di dalamnya terdapat targhīb (harapan akan kasih sayang-Nya); sebagaimana firman Allah dalam QS. Al-Hijr: 49–50: 'Kabarkanlah kepada hamba-hamba-Ku bahwa sesungguhnya Akulah Yang Maha Pengampun lagi Maha Penyayang, dan bahwa sesungguhnya azab-Ku adalah azab yang sangat pedih'."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi menegaskan bahwa Allah menyifati Diri-Nya dengan <em>Ar-Raḥmānir-Raḥīm</em> setelah <em>Rabbil-'ālamīn</em> untuk menyempurnakan fondasi iman hamba: <em>"Agar hamba menggabungkan di dalam hatinya antara rasa takut (al-khawf) dan rasa harap (ar-rajā'), sehingga ketaatannya menjadi lebih murni dan semangat ibadahnya menjadi lebih kuat."</em> Beliau juga mengutip hadits Abdurrahman bin 'Auf r.a. bahwa Allah berfirman: <em>"Ana Ar-Raḥmān, khalaqtur-raḥima wa syajajtu lahā isman min ismī; faman washalahā washaltuhū, wa man qatha'ahā qatha'tuhū"</em> (Aku adalah Ar-Raḥmān, Aku menciptakan rahim [kekerabatan] dan mengambil namanya dari nama-Ku; barangsiapa menyambung silaturahim niscaya Aku menyambung hubungan rahmat-Ku dengannya, dan barangsiapa memutusnya niscaya Aku memutusnya).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Ibnu Qayyim Al-Jauziyyah (w. 751 H) — <em>Al-Kasysyāf</em> & <em>Madārijus-Sālikīn</em>:</strong><br>
+        Ibnu Qayyim Al-Jauziyyah dalam <em>Madārijus-Sālikīn</em> menjelaskan bahwa keterkaitan antara <em>Rabbil-'ālamīn</em> dan <em>Ar-Raḥmānir-Raḥīm</em> adalah keterkaitan antara sebab dan akibat: <strong>Rububiyyah Allah tegak di atas Rahmat-Nya</strong>. Rahmat-Nya adalah sifat yang membuat Dia menciptakan alam semesta, menurunkan kitab-kitab suci, mengutus para rasul, serta memberi rezeki dan petunjuk. Tanpa sifat <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em>, tak satu pun makhluk dapat bertahan hidup sedetik pun.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Quraish Shihab menjelaskan mengapa pengulangan <em>Ar-Raḥmānir-Raḥīm</em> pada Ayat 3 sama sekali bukan pengulangan yang mubazir (<em>tautologi</em>). Bagi ulama yang memandang Basmalah bukan ayat pertama Al-Fatihah, maka Ayat 3 adalah penyebutan pertama di dalam batang tubuh surah. Sedangkan bagi ulama yang menetapkan Basmalah sebagai ayat pertama, pengulangan pada Ayat 3 berfungsi mengukuhkan bahwa kasih sayang Allah bukan hanya hadir di awal penciptaan (Ayat 1), melainkan terus mengawal pemeliharaan alam semesta (Ayat 2–3) hingga ke Hari Pembalasan (Ayat 4).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka mengajak pembaca merenungkan betapa lembutnya cara Allah mendidik manusia: <em>"Seorang raja di dunia apabila disebut gelarnya sebagai 'Penguasa Jagat', orang akan gemetar ketakutan membayangkan cambuk dan penjaranya. Tetapi Allah, setelah memperkenalkan Diri-Nya sebagai Rabbil-'ālamīn, langsung menyapa hamba-Nya: Jangan takut! Aku ini Ar-Raḥmānir-Raḥīm, Maha Pengasih lagi Maha Penyayang! Maka tumbuhlah cinta di dalam dada seorang mukmin sebelum tumbuh rasa takut."</em>
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian</th>
+                <th>Titik Kesepakatan (Ijma')</th>
+                <th>Ragaman Perspektif Ulama (Ikhtilaf & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hikmah Pengulangan Ayat 3</strong></td>
+                <td>Sepakat bahwa pengulangan ini memiliki fungsi maknawi baru (<em>ta'sīs</em> dan <em>tawkīd</em>), bukan sekadar pengulangan lafaz.</td>
+                <td>At-Tabari menekankan fungsi pujian (<em>ats-tsanā'</em>); Ibnu Katsir & Al-Qurthubi menekankan keseimbangan <em>targhīb</em> (harap) dan <em>tarhīb</em> (takut); Ibnu Qayyim menekankan rahmat sebagai fondasi <em>Rubūbiyyah</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Implikasi Hukum & Akhlak</strong></td>
+                <td>Wajibnya meyakini sifat Rahmat Allah sesuai keagungan-Nya.</td>
+                <td>Al-Qurthubi menarik kewajiban menyambung silaturahim (<em>shilatur-raḥim</em>) yang namanya diambil dari nama <em>Ar-Raḥmān</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Psikologi "Dua Sayap Burung": Harmoni Mahabbah (Cinta), Raja' (Harap), dan Khauf (Takut)</h3>
+    <p>
+        Para ulama <em>Tazkiyatun Nafs</em> (seperti Imam Al-Ghazali dan Ibnu Qayyim) mengibaratkan perjalanan batin seorang mukmin menuju Allah bagaikan seekor burung yang terbang: <strong>kepala burung itu adalah Cinta (Al-Maḥabbah — Ayat 2: Al-ḥamdu lillāh), sayap kanannya adalah Harap (Ar-Rajā' — Ayat 3: Ar-Raḥmānir-Raḥīm), dan sayap kirinya adalah Takut/Waspada (Al-Khawf — Ayat 4: Māliki yawmid-dīn)</strong>.
+    </p>
+    <ul>
+        <li><strong>Menyembuhkan "Religious Trauma" dan Keputusasaan Spiritual:</strong> Banyak orang menjauh dari agama karena gambaran tentang Tuhan yang disajikan kepada mereka melulu berisi ancaman neraka dan kemurkaan tanpa empati, atau karena mereka merasa dosanya terlalu besar untuk diampuni. Ayat 3 menyembuhkan luka psikologis tersebut: rahmat Allah disebut dua kali secara beruntun untuk meyakinkan setiap pendosa bahwa pintu <em>Ar-Raḥmānir-Raḥīm</em> selalu terbuka lebar bagi siapa saja yang ingin kembali (QS. Az-Zumar: 53).</li>
+        <li><strong>Paradigma Kepemimpinan Berbasis Kasih Sayang ("Compassionate Leadership"):</strong> Karena <em>Rabbil-'ālamīn</em> langsung disifati dengan <em>Ar-Raḥmānir-Raḥīm</em>, maka setiap manusia yang memegang peran kepemimpinan dan pendidikan (sebagai orang tua di rumah, guru di sekolah, atau pemimpin di institusi) wajib mencontoh pola <em>Rububiyyah</em> Ilahi: mendidik dan memimpin dengan landasan kasih sayang, empati, dan keteladanan, bukan dengan intimidasi dan kekerasan verbal maupun fisik.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Krisis Empati di Era Kompetisi Brutal & Polarisasi Agama</h3>
+    <ul>
+        <li>
+            <strong>Defisit Kasih Sayang dalam Keluarga dan Dunia Kerja:</strong> Masyarakat modern sering kali menjalankan fungsi "pengaturan" (manajemen perusahaan, birokrasi negara, bahkan pengasuhan anak) secara mekanis, dingin, dan berbasis target angka semata tanpa ruh kasih sayang (<em>raḥmah</em>). Akibatnya, tingkat kelelahan mental (<em>burnout</em>), keterasingan keluarga, dan keretakan silaturahim meningkat tajam. Ayat 3 mengingatkan bahwa pengelolaan yang sukses (<em>Rubūbiyyah</em>) tidak boleh dipisahkan dari sentuhan kasih sayang (<em>Raḥmāniyyah-Raḥīmiyyah</em>).
+        </li>
+        <li>
+            <strong>Dakwah yang Merangkul vs Dakwah yang Menghakimi:</strong> Di ruang publik dan media sosial, sebagian ekspresi keberagamaan kadang tampil dengan wajah yang keras, cepat memvonis, dan miskin kasih sayang. Padahal Surah Al-Fatihah mengulang <em>Ar-Raḥmānir-Raḥīm</em> dua kali untuk menegaskan bahwa wajah utama Islam adalah rahmat yang menyembuhkan dan membimbing, sebagaimana sabda Nabi ﷺ: <em>"Ar-Rāḥimūna yarḥamuhumur-Raḥmān; irḥamū man fil-ardhi yarḥamkum man fis-samā'"</em> (Orang-orang yang penyayang akan disayangi oleh Ar-Raḥmān; sayangilah makhluk yang ada di bumi, niscaya Dzat yang di langit akan menyayangi kalian — HR. Abu Dawud & Tirmidzi).
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Menyambung Silaturahim yang Terputus atau Renggang:</strong> Karena kata <em>Ar-Raḥim</em> (kekerabatan) berakar dari nama <em>Ar-Raḥmān</em>, hubungi minimal satu anggota keluarga atau kerabat yang lama tidak disapa minggu ini, doakan kebaikannya, dan bantu kebutuhannya dengan tulus.
+            </li>
+            <li>
+                <strong>Menerapkan "Compassionate Care" dalam Keluarga & Tim Kerja:</strong> Ketika menegur atau mendidik anak, pasangan, atau bawahan yang melakukan kesalahan, dahulukan pendekatan kasih sayang, dengarkan penjelasannya dengan empati, dan berikan solusi yang membangun tanpa merendahkan martabatnya.
+            </li>
+            <li>
+                <strong>Aksi Nyata Belas Kasih kepada yang Lemah:</strong> Sisihkan sebagian harta, waktu, atau tenaga setiap pekan untuk meringankan beban orang yang sedang kesulitan (fakir miskin, yatim, orang sakit, atau makhluk hidup yang terlantar) sebagai ikhtiar menjemput rahmat khusus <em>Ar-Raḥīm</em>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika aku berbuat salah atau tertimpa musibah, apakah aku masih sering berburuk sangka kepada Allah, padahal Dia telah memperkenalkan Diri-Nya kepadaku berulang kali sebagai <em>Ar-Raḥmānir-Raḥīm</em>?
+            </li>
+            <li>
+                Apakah cara kepemimpinanku di dalam keluarga atau pekerjaanku sudah mencerminkan kasih sayang yang mendidik, ataukah masih didominasi oleh amarah, ego, dan kekerasan hati?
+            </li>
+            <li>
+                Adakah tali silaturahim dengan orang tua, saudara, atau kerabat yang sedang terputus karena gengsi dan dendamku, sementara aku sangat mengharapkan rahmat <em>Ar-Raḥmān</em>?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Wahai Ar-Raḥmān, wahai Ar-Raḥīm, Dzat yang rahmat-Nya meliputi segala sesuatu dan mendahului kemurkaan-Nya. Lembutkanlah hati kami yang keras dengan pancaran kasih sayang-Mu. Jangan biarkan dosa-dosa kami membuat kami berputus asa dari ampunan-Mu, dan jadikanlah kami hamba-hamba yang menebarkan kasih sayang kepada seluruh ciptaan-Mu di bumi hingga kami layak menerima rahmat abadi-Mu di surga kelak. Āmīn yā Arḥamar-Rāḥimīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="001-002 - QS. Al-Fatihah Ayat 2.html">&larr; Ayat Sebelumnya (QS. 1:2)</a>
+        <span><strong>QS. Al-Fātiḥah [1]: 3</strong></span>
+        <a href="001-004 - QS. Al-Fatihah Ayat 4.html">Lanjut ke Ayat 4 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

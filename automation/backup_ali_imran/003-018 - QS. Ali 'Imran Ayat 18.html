@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-018 - QS. Ali 'Imran Ayat 18 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-017 - QS. Ali 'Imran Ayat 17.html">&larr; Ayat Sebelumnya (QS. 3:17)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-019 - QS. Ali 'Imran Ayat 19.html">Ayat Berikutnya (QS. 3:19) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 2 (Ayat 10–20): Ilusi Kekuatan Materialis, Kehancuran Tirani & Hakikat Kesaksian Tauhid</span>
+        <span class="badge">18 Kata | 71 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 18</h1>
+    <div class="transliteration">
+        "Syahidallāhu annahū lā ilāha illā Huwa wal-malā'ikatu wa ulul-'ilmi qō'imam bil-qisṭh(i), lā ilāha illā Huwal-'Azīzul-Ḥakīm(u)."
+    </div>
+    <div class="thematic-title">
+        Proklamasi Akbar Kesaksian Kosmik Tauhid & Keadilan Absolut (Qā'iman bil-Qisṭh): Pengangkatan Derajat Epistemik Ulul 'Ilmi Sejajar dengan Para Malaikat dan Pengukuhan Asmaul Husna Al-'Azīzul-Ḥakīm
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 2: Ilusi Kekuatan Materialis, Kehancuran Tirani & Hakikat Kesaksian Tauhid)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        شَهِدَ ٱللَّهُ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا هُوَ وَٱلْمَلَـٰٓئِكَةُ وَأُو۟لُوا۟ ٱلْعِلْمِ قَآئِمًۢا بِٱلْقِسْطِ ۚ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ ۝١٨
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Allah menyatakan (dan bersaksi) bahwasanya tidak ada tuhan (yang berhak disembah dengan sebenarnya) melainkan Dia, Yang senantiasa menegakkan keadilan; para malaikat dan orang-orang yang berilmu (juga menyatakan demikian). Tidak ada tuhan (yang berhak disembah) melainkan Dia, Yang Maha Perkasa lagi Maha Bijaksana."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan deklarasi konstitusional tauhid paling agung dan komprehensif di dalam Al-Qur'an al-Karim. Di dalamnya, Allah SWT memproklamasikan keesaan Zat, Sifat, dan Perbuatan-Nya melalui kesaksian ontologis tertinggi (<em>Syahādatullāh</em>). Keagungan ayat ini terletak pada penyandingan tiga entitas persaksian dalam satu tarikan kalimat: Allah SWT memulainya dari diri-Nya sendiri, mengiringkannya dengan persaksian para malaikat penghuni alam malakut, dan memuncakkannya dengan persaksian orang-orang yang berilmu (<strong>Ūlul-'Ilmi</strong>). Imam Al-Qurthubi dan para ulama tafsir menegaskan bahwa ayat ini adalah dalil paling terang tentang kemuliaan martabat para cendekiawan dan penuntut ilmu sejati, karena Allah tidak menggandengkan nama makhluk mana pun bersama nama-Nya dan para malaikat dalam urusan yang paling agung (yakni tauhid) melainkan para pemilik ilmu. Frasa sentral <strong>qā'imam bil-qisṭh</strong> (Yang senantiasa menegakkan keadilan) berposisi sebagai <em>Ḥāl Mu'akkidah</em> yang menjelaskan bahwa kemahaesaan Allah bukanlah kekuasaan tiranik yang sewenang-wenang, melainkan kedaulatan mutlak yang senantiasa memancarkan keadilan proporsional di seluruh mikrokosmos dan makrokosmos semesta. Ayat ini dibingkai secara simetris oleh dua kalimat tahlil (<em>Lā ilāha illā Huwa</em>) dan dipungkasi oleh dua Asmaul Husna yang harmonis: <strong>Al-'Azīz</strong> (Maha Perkasa tanpa cela) dan <strong>Al-Ḥakīm</strong> (Maha Bijaksana tanpa cacat).
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>شَهِدَ ٱللَّهُ</strong><br>(<em>Syahidallāhu</em>)</td>
+                <td>
+                    <strong>Huruf Syīn:</strong> Keluar dari wasathul lisan (tengah lidah) dengan sifat <strong>Tafasy-syi</strong> (penyebaran angin di mulut), hams, dan istifal.<br>
+                    <strong>Huruf Hā':</strong> Keluar dari wasathul halq murni dengan sifat rikhwah.<br>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Dua huruf Lam pada lafaz Jalālah dibaca tebal dan kokoh karena didahului harakat fat-ḥah pada huruf Dāl lafaz <em>syahida</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tafkhīm pada Lam Jalālah saat washal dari <em>syahida</em> dan menerapkan harakat fat-ḥah pada huruf Dāl (tanpa idgham). Kesaksian Allah bermakna penetapan, penjelasan bukti, dan penciptaan argumen yang membungkam seluruh bentuk kemusyrikan.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>أَنَّهُۥ</strong><br>(<em>Annahū</em>)</td>
+                <td>
+                    <strong>Fat-ḥatul Hamzah:</strong> Hamzah qatha' dibaca tahqiq.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid ditahan dengungnya secara sempurna (<em>akmal mā yakūn</em>, 2 harakat) melalui rongga hidung (<em>khaisyūm</em>).<br>
+                    <strong>Mad Shilah Shughrā:</strong> Hā' dhamir berharakat dhammah diapit dua huruf hidup dibaca panjang 2 harakat (tertulis simbol Wawu kecil di samping Hā').
+                </td>
+                <td>
+                    • <strong>Sepuluh Imam Mutawatirah:</strong> Sepakat membaca dengan <strong>Fat-ḥatul Hamzah</strong> (<em>Annahū</em>) sebagai masdar mu'awwal maf'ul bih bagi <em>syahida</em> (atau bi-naz'il khafidh: <em>bi-annahū</em>).<br>
+                    • Terdapat riwayat qira'at syadzah yang membaca kasratul hamzah (<em>Innahū</em>) sebagai jumlah isti'nafiyyah, namun sanad mutawatir menetapkan fathah hamzah yang menegaskan isi persaksian kosmik.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>لَآ إِلَـٰهَ</strong><br>(<em>Lā ilāha</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Huruf Alif mad bertemu hamzah qatha' kasrah pada kata terpisah.<br>
+                    <strong>Kaidah Mad:</strong> Dibaca 2, 4, 5, atau 6 harakat sesuai martabat qira'at masing-masing imam.<br>
+                    <strong>Alif Khanjariyyah:</strong> Tanda mad thabi'i 2 harakat pada huruf Lām kata <em>ilāha</em>.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad munfashil dengan panjang <strong>Ṭhūl (6 Harakat Penuh)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Membaca dengan pilihan <strong>Qaṣhr (2 Harakat)</strong> atau Tawassuth.<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca konsisten dengan <strong>Qaṣhr (2 Harakat)</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>إِلَّا هُوَ</strong><br>(<em>Illā Huwa</em>)</td>
+                <td>
+                    <strong>Lām Bertasydid:</strong> Memiliki sifat tawassuth.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada alif <em>illā</em>.<br>
+                    <strong>Dhamīr Munfaṣhil:</strong> <em>Huwa</em> dengan hembusan nafas hams pada huruf Hā' dan fathah jelas pada Wāwu.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca mad thabi'i pada <em>illā</em> dan tahqiq fathah pada Wawu <em>Huwa</em>. Penyatuan rukun <em>an-nafy</em> (peniadaan tuhan-tuhan palsu) dan <em>al-itsbāt</em> (penetapan hak uluhiyah tunggal) membentuk kalimat tahlil pertama.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَٱلْمَلَـٰٓئِكَةُ</strong><br>(<em>Wal-malā'ikatu</em>)</td>
+                <td>
+                    <strong>Hamzah Washal Gugur:</strong> Wāwu 'athaf langsung menyambung ke Lam ta'rif.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas sebelum huruf Mīm.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf mad Alif bertemu Hamzah dalam satu kata (<em>al-malā'ikah</em>) wajib dipanjangkan.<br>
+                    <strong>Tā' Marbūṭhah:</strong> Dibaca dhammah saat washal, berubah menjadi Hā' sukun bersuara hams saat waqaf darurat.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca Mad Muttashil dengan panjang <strong>Ṭhūl (6 Harakat Penuh)</strong>.<br>
+                    • <strong>Delapan Imam Lainnya (Termasuk Ḥafsh):</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • Seluruh imam membaca rafa' (dhammah) pada Tā' marbuthah sebagai <em>ma'ṭhūf</em> atas lafaz Jalālah (<em>Allāhu</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَأُو۟لُوا۟ ٱلْعِلْمِ</strong><br>(<em>Wa ulul-'ilmi</em>)</td>
+                <td>
+                    <strong>Wāwu Zā'idah:</strong> Wawu pertama bertanda bulatan kecil (<em>shifr mustadīr</em>) sebagai kaidah rasm, tidak dibaca.<br>
+                    <strong>Wawu Mad Gugur saat Washal:</strong> Wawu kedua gugur secara fonetik untuk menghindari pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>) saat menyambung ke Lam ta'rif.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca bersih.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari wasathul halq dengan sifat tawassuth tanpa goncangan qalqalah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca rafa' dengan tanda Wāwu (<em>ulū</em>) sebagai isim mulhaq bi jam'il-mudzakkaris-salim yang di-'athaf-kan kepada fa'il (<em>Allāhu</em>), serta mengkasrahkan huruf Mīm pada <em>al-'ilmi</em> sebagai mudhaf ilayh.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>قَآئِمًۢا</strong><br>(<em>Qā'iman</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Memiliki sifat Isti'lā' martabat pertama (berharakat fathah diikuti Alif).<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Alif mad bertemu Hamzah dalam satu kata (4–5 harakat atau 6 harakat).<br>
+                    <strong>Iqlāb (Qalb) pada Tanwīn:</strong> Tanwīn fathah pada Mīm bertemu huruf Bā' lafaz <em>bil-qisṭh</em> diubah menjadi suara Mīm mukhfāh disertai <strong>Ghunnah</strong> 2 harakat (tertulis simbol Mīm kecil di atas Tanwīn).
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Mad Muttashil 6 harakat.<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Mad Muttashil 4–5 harakat.<br>
+                    • Seluruh imam membaca nashab (fathatain) pada <em>qā'iman</em> sebagai kedudukan Ḥāl dan menerapkan hukum Iqlāb secara konsensus mutawatir.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>بِٱلْقِسْطِ ۚ</strong><br>(<em>Bil-qisṭh</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Huruf Qāf:</strong> Berharakat kasrah (isti'la' martabat kelima / tarqiq nisbi).<br>
+                    <strong>Huruf Sīn:</strong> Memiliki sifat hams, rakhāwah, dan <strong>Shafīr</strong> (desis tajam murni) dalam posisi sukun.<br>
+                    <strong>Huruf Ṭhā' Sukun Waqaf:</strong> Memiliki sifat Isti'lā', Ithbāq, dan <strong>Qalqalah Kubrā</strong> yang sangat kuat, tebal, dan memantul jelas saat waqaf.<br>
+                    <strong>Tanda Waqaf Jā'iz (ۚ):</strong> Boleh waqaf dan boleh washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca kasrah pada Qaf dan Tha' saat washal, serta memantulkan huruf Ṭhā' dengan Qalqalah Kubrā tebal saat waqaf. Penggabungan sifat shafir pada Sīn dan qalqalah ithbaq pada Ṭhā' memberikan efek artikulasi yang teramat kokoh dan berwibawa.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>لَآ إِلَـٰهَ إِلَّا هُوَ</strong><br>(<em>Lā ilāha illā Huwa</em>)</td>
+                <td>
+                    <strong>Tikrār at-Tahlīl:</strong> Pengulangan lafaz kalimat tauhid dengan kaidah Mad Ja'iz Munfashil, Mad Thabi'i pada <em>illā</em>, dan dhamir <em>Huwa</em>.<br>
+                    <strong>Kaidah Mad Munfashil:</strong> Sama persis dengan kaidah pada nomor 3 di atas sesuai thariq qira'at masing-masing imam.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca sama persis dengan pengulangan pertama. Tahlil kedua berfungsi sebagai taukid pengokoh tauhid pasca-penegasan sifat <em>qā'iman bil-qisṭh</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ٱلْعَزِيزُ</strong><br>(<em>Al-'Azīzu</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca bersih.<br>
+                    <strong>Huruf 'Ain:</strong> Dari wasathul halq.<br>
+                    <strong>Huruf Zāy:</strong> Memiliki sifat jahr, rakhāwah, dan shafīr (dengung lebah tajam).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' sukun jatuh setelah kasrah dibaca 2 harakat saat washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca rafa' (dhammah) pada huruf Zāy kedua sebagai Na'at (sifat) bagi dhamir <em>Huwa</em>, atau sebagai Khabar dari mubtada' yang dibuang (<em>Huwal-'Azīz</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>ٱلْحَكِيمُ ۝١٨</strong><br>(<em>Al-Ḥakīm</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas sebelum huruf Ḥā'.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari wasathul halq dengan sifat hams dan rikhwah.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Yā' mad bertemu Mīm yang disukunkan karena waqaf di akhir ayat dibaca panjang 2, 4, atau 6 harakat.<br>
+                    <strong>Huruf Mīm Sukun:</strong> Memiliki sifat <strong>Tawassuṭh (Bayniyyah)</strong>, aliran suara mengalir sedang tanpa terputus mendadak atau tertahan lama.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca rafa' pada Mīm saat washal (sebagai Na'at kedua) dan menerapkan Mad 'Aridh lis-Sukun (2, 4, atau 6 harakat) dengan suara tawassuth yang tenang dan berwibawa pada saat waqaf penutup ayat.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Riwayat Imam At-Tirmidzī (No. 3524 / Ḥasan) & Ibnu Abī Ḥātim dari Sahabat Az-Zubair bin Al-'Awwām r.a. — Persaksian Nabawiyyah di Padang 'Arafah:</strong><br>
+        Sahabat Az-Zubair bin Al-'Awwam r.a. meriwayatkan bahwa ia mendengar Rasulullah ﷺ ketika berada di Padang 'Arafah (dalam peristiwa Haji Wada') membacakan ayat ini dengan lantang dan penuh khusyuk:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "شَهِدَ اللَّهُ أَنَّهُ لَا إِلَهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ"
+        </span>
+        Kemudian seketika itu pula Rasulullah ﷺ menyambungnya dengan ikrar persaksian batin beliau di hadapan Rabbul 'Alamin:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "وَأَنَا عَلَى ذَلِكَ مِنَ الشَّاهِدِينَ، يَا رَبِّ!"
+        </span>
+        <em>"Dan aku pun, atas apa yang difirmankan-Mu itu, termasuk orang-orang yang bersaksi, wahai Rabb-ku!"</em><br>
+        <strong>Derajat Hadits:</strong> Hadits hasan menurut Imam At-Tirmidzi dan Al-Albani. Atsar ini menjadi sunnah mustahabbah bagi setiap mukmin yang membaca atau mendengar QS. Ali 'Imran: 18 untuk segera menyambutnya dengan ucapan persaksian serupa.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Abū Dāwūd (No. 3641), At-Tirmidzī (No. 2682), Ibnu Mājah (No. 223), dan Aḥmad (No. 21715) dari Sahabat Abū Ad-Dardā' r.a. — Legitimasi Martabat Ulul 'Ilmi sebagai Pewaris Para Nabi:</strong><br>
+        Rasulullah ﷺ bersabda menegaskan kedudukan ontologis para ulama yang digandengkan kesaksiannya bersama para malaikat dalam QS. 3:18:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "وَإِنَّ الْعُلَمَاءَ وَرَثَةُ الأَنْبِيَاءِ، وَإِنَّ الأَنْبِيَاءَ لَمْ يُوَرِّثُوا دِينَارًا وَلَا دِرْهَمًا، وَإِنَّمَا وَرَّثُوا الْعِلْمَ، فَمَنْ أَخَذَهُ أَخَذَ بِحَظٍّ وَافِرٍ"
+        </span>
+        <em>"Dan sesungguhnya para ulama adalah pewaris para nabi. Dan sesungguhnya para nabi tidak mewariskan dinar maupun dirham emas-perak, melainkan mereka hanya mewariskan ILMU. Maka barangsiapa yang mengambil warisan ilmu tersebut, sungguh ia telah mengambil bagian keberuntungan yang teramat melimpah."</em><br>
+        <strong>Derajat Hadits:</strong> Sahih / Hasan lighairihi menurut Ibnu Hajar, Ibnu Hibban, dan Syu'aib Al-Arnauth. Menjadi dalil pensyarah terkuat mengapa hanya orang berilmu (<em>ulul-'ilmi</em>) yang diangkat derajatnya sejajar dengan para malaikat dalam memikul kesaksian tauhid.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Asbabun Nuzul Riwayat Ibnu Abī Ḥātim, Ibnu Mardawaih & At-Ṭhabarānī dari Ghālib Al-Qaṭṭhān — Dialog Konversi Dua Cendekiawan Rabi Syam:</strong><br>
+        Diriwayatkan bahwa dua orang pendeta/rabi cendekiawan terkemuka dari negeri Syam datang ke Madinah. Tatkala mereka melihat tata ruang kota Madinah dan keindahan karakternya, salah seorang dari mereka berkata kepada kawannya: <em>"Betapa miripnya kota ini dengan gambaran kota nabi penutup zaman yang tertulis dalam kitab kita!"</em><br>
+        Maka mereka menemui Rasulullah ﷺ dan bertanya menguji: <em>"Wahai Muhammad, kami hendak menanyakan kepadamu tentang ayat paling agung di dalam Kitab yang diturunkan kepadamu, yang memuat persaksian keesaan Allah?"</em><br>
+        Maka Rasulullah ﷺ membacakan firman Allah: <strong>"Syahidallāhu annahū lā ilāha illā Huwa wal-malā'ikatu wa ulul-'ilmi qā'imam bil-qisṭh, lā ilāha illā Huwal-'Azīzul-Ḥakīm"</strong>.<br>
+        Mendengar ayat tersebut, getaran kebenaran wahyu merasuk seketika ke dalam sanubari mereka berdua. Keduanya langsung bersujud, mengikrarkan syahadat Islam, memeluk Rasulullah ﷺ, dan membenarkan risalah Al-Qur'an (Tafsir Ibnu Katsir & Tafsir Al-Qurthubi).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Sy-H-D (ش-ه-د — Syahida):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros dasarnya pada: <strong>Al-Ḥudhūr wal-'Ilm wal-I'lām (الشهود: حضور وعلم وإعلام - kehadiran hakiki, pengetahuan mendalam yang steril dari keraguan, serta penampakan dan pengumuman bukti kebenaran secara terang benderang)</strong>. Kata <em>syahādah</em> menyatukan tiga pilar: keyakinan batin yang pasti (<em>i'tiqād</em>), pengakuan lisan yang tegas (<em>iqrār bil-lisān</em>), dan pembuktian nyata lewat tindakan perbuatan (<em>'amal bil-arkān</em>). Kesaksian Allah (<em>Syahādatullāh</em>) adalah pemberitahuan-Nya kepada makhluk melalui penciptaan bukti kosmis dan penurunan ayat wahyu; kesaksian malaikat adalah kepatuhan ibadah dan pengagungan di langit; sedangkan kesaksian ulama adalah penalaran rasional burhani dan dakwah penegakan tauhid di muka bumi.
+        </li>
+        <li><strong>2. '-L-H (أ-ل-ه — Al-Ilāh):</strong>
+            Porosnya adalah <strong>Al-'Ibādah wat-Ta'alluh (الألوهة: العبادة مع المحبة والتعظيم - peribadatan yang memadukan cinta tertinggi, ketundukan mutlak, dan pengagungan paripurna)</strong>. Kata <em>Ilāh</em> adalah objek sesembahan yang kepadanya seluruh makhluk bermuara untuk mencari perlindungan (<em>waliha ilayh</em>). Kalimat penafian <em>Lā Ilāha</em> melucuti seluruh dewa bentukan manusia, kekuasaan tiranik, modal materi, dan hawa nafsu dari takhta uluhiyah, lalu menetapkannya (<em>illā Huwa</em>) secara tunggal mutlak hanya bagi Allah.
+        </li>
+        <li><strong>3. M-L-K (م-ل-ك / م-ل-أ-ك — Al-Malā'ikah):</strong>
+            Berasal dari kata <em>Al-Alūkah</em> (الألوكة) yang bermakna <strong>Ar-Risālah (pesan suci kedutaan langit)</strong>. Malaikat dinamai demikian karena mereka adalah duta-duta spiritual yang membawa perintah dan kehendak Allah. Malaikat menjadi saksi tauhid karena mereka menyaksikan langsung keagungan 'Arsy, keteraturan penciptaan langit, dan steril dari hawa nafsu serta syahwat pembangkangan.
+        </li>
+        <li><strong>4. '-L-W & '-L-M (أ-ل-و / ع-ل-م — Ulul-'Ilm):</strong>
+            <em>Ulū</em> adalah jamak yang tidak memiliki bentuk tunggal (isim jamak mulhaq) bermakna <strong>Ash-ḥāb (para pemilik yang memiliki kedekatan intim dan penguasaan mendalam)</strong>. Akar <em>'-L-M</em> berporos pada <strong>Al-Atsar wal-'Alāmah (علامة - tanda pembeda yang jelas yang menyingkap hakikat sesuatu dari kebodohan dan kepalsuan)</strong>. <em>Ulul-'Ilm</em> bukan sekadar orang yang menumpuk hafalan teks atau informasi dangkal (informasi kognitif mentah), melainkan individu yang ilmunya telah menyatu ke dalam struktur kesadaran jiwanya, melahirkan rasa takut kepada Allah (<em>khasyyah</em>), dan menggerakkan dirinya untuk menegakkan kebenaran di ruang publik.
+        </li>
+        <li><strong>5. Q-W-M (ق-و-م — Qā'iman):</strong>
+            Ibnu Faris mencatat porosnya pada: <strong>Al-Intiṣhād wal-I'tidāl wal-Muḥāfaẓhah wat-Tadbīr (القيام: الانتصاب وتعهد الشيء بالرعاية - tegak lurus sempurna tanpa miring, konsisten mengurusi ciptaan, dan menjaga keberlangsungan tatanan tanpa keletihan)</strong>. Kata <em>Qā'iman</em> berwazan <em>fā'il</em> yang menegaskan sifat perbuatan (<em>af'āl</em>) Allah yang senantiasa aktif memelihara, menegakkan, dan mengatur neraca keadilan alam semesta setiap saat tanpa henti.
+        </li>
+        <li><strong>6. Q-S-Ṭh (ق-س-ط — Al-Qisṭh):</strong>
+            Porosnya adalah <strong>Al-'Adl wal-Inṣhāf bi I'ṭhā'i Kulli Dzī Ḥaqqin Ḥaqqah (العدل وإعطاء كل ذي حق حقه - keadilan distributif yang proporsional, meletakkan sesuatu tepat pada takaran dan haknya yang sejati)</strong>. Bahasa Arab membedakan antara <em>Qasaṭha</em> (قَسَطَ - tanpa hamzah) yang berarti menyimpang dari kebenaran/berbuat zalim (pelakunya disebut <em>al-qāsithūn</em> sebagaimana di QS. Al-Jinn: 15), dengan <em>Aqsaṭha</em> (أَقْسَطَ - fi'il ruba'i berhamzah) dan masdarnya <strong>Al-Qisṭh</strong> yang bermakna menghapus kezaliman dan menegakkan keadilan mutlak (pelakunya disebut <em>al-muqsiṭhūn</em>). Al-Qisṭh adalah keadilan objektif yang menopang berdirinya langit dan bumi.
+        </li>
+        <li><strong>7. '-Z-Z (ع-ز-ز — Al-'Azīz):</strong>
+            Porosnya adalah <strong>Ash-Syiddah, al-Ghalabah, wal-Imtinā' (الشدة والقوة والغلبة - keperkasaan tak tertandingi, kemuliaan tanpa kehinaan, dan benteng absolut yang mustahil ditembus atau dikalahkan oleh kekuatan apa pun)</strong>. Dia Maha Perkasa dalam menundukkan seluruh makhluk-Nya, tidak ada yang dapat menghalangi ketetapan-Nya.
+        </li>
+        <li><strong>8. Ḥ-K-M (ح-ك-م — Al-Ḥakīm):</strong>
+            Porosnya adalah <strong>Man'ul-Fasād wa Wadh'us-Syay'i fī Mawdhi'ihil-Laiq bih (منع الفساد وإحكام الشيء - mencegah keburukan/kekacauan dan meletakkan segala perkara pada tempatnya yang paling tepat dan sempurna)</strong>. Kebijaksanaan Allah menjamin bahwa keperkasaan-Nya (<em>'Izzah</em>) tidak pernah berubah menjadi kezaliman destruktif, melainkan senantiasa berpadu dengan kemaslahatan paripurna.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>شَهِدَ</strong></td>
+                <td>Fi'il madhi tsulatsi mujarrad (wazan <em>fa'ila – yaf'alu</em>), mabni 'alal-fath.</td>
+                <td>Fi'il madhi pembuka jumlah fi'liyyah, membutuhkan fa'il dan maf'ul. Menunjukkan kepastian ketetapan yang telah sempurna dan abadi.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Ism 'alam jalālah, mufrad mudzakkar.</td>
+                <td><strong>Fā'il</strong> bagi fi'il <em>syahida</em>, marfu' bil-dhammah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>أَنَّهُۥ</strong></td>
+                <td><em>Anna</em>: Harf taukid wa nashab masdariyyah mabni 'alal-fath. <em>Hū</em>: Dhamir muttashil mabni 'alad-dhamm.</td>
+                <td><em>Hā'</em> fī maḥalli nashbin <strong>Ismu Anna</strong>. <em>Anna</em> bersama isim dan khabarnya membentuk <strong>Masdar Mu'awwal</strong> yang berkedudukan fī maḥalli nashbin <strong>Maf'ūl bih</strong> bagi <em>syahida</em> (atau fī maḥalli jarrin bi-naz'il-khāfidh dengan takdir: <em>bi-annahū lā ilāha illā Huwa</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>لَآ إِلَـٰهَ</strong></td>
+                <td><em>Lā</em>: Nafiyah lil-jins ta'malu 'amal inna. <em>Ilāha</em>: Isim jins mufrad mabni 'alal-fath.</td>
+                <td><em>Ilāha</em> mabni 'alal-fath fī maḥalli nashbin <strong>Ismu Lā</strong>. Khabar <em>Lā</em> mahdzūf ditakdirkan: <em>bi-ḥaqqin</em> (tidak ada sesembahan yang hak).</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَّا هُوَ</strong></td>
+                <td><em>Illā</em>: Adāt hashr / istitsnā' mulghāh. <em>Huwa</em>: Dhamir munfashil mabni 'alal-fath.</td>
+                <td><em>Huwa</em> marfu' sebagai <strong>Badal</strong> dari tempat isim <em>Lā</em> (atau marfu' sebagai khabar <em>Lā</em>). Seluruh jumlah nafy wal-itsbat (<em>Lā ilāha illā Huwa</em>) fī maḥalli raf'in <strong>Khabaru Anna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْمَلَـٰٓئِكَةُ</strong></td>
+                <td>Wawu 'athaf. <em>Al-Malā'ikatu</em>: Jamak taksir ma'rifah bil-lām.</td>
+                <td><strong>Ma'ṭhūf</strong> atas lafaz Jalālah (<em>Allāhu</em>), marfu' bil-dhammah azh-zhāhirah. (Maknanya: <em>wa syahidatil-malā'ikatu</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَأُو۟لُوا۟ ٱلْعِلْمِ</strong></td>
+                <td>Wawu 'athaf. <em>Ulū</em>: Isim jamak mulhaq bi jam'il-mudzakkaris-salim, mudhaf. <em>Al-'Ilmi</em>: Isim masdar majrur bil-kasrah.</td>
+                <td><em>Ulū</em> <strong>Ma'ṭhūf</strong> atas lafaz Jalālah, marfu' bil-wāwu (niyābatan 'anid-dhammah). <em>Al-'Ilmi</em>: <strong>Mudhaf Ilayh</strong> majrur bil-kasrah azh-zhāhirah. (Maknanya: <em>wa syahida ulul-'ilmi</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>قَآئِمًۢا</strong></td>
+                <td>Isim fa'il wazan <em>fā'il</em> min <em>qāma – yaqūmu</em>, nakirah manshub.</td>
+                <td>Manshub sebagai <strong>Ḥāl Mu'akkidah</strong> bagi lafaz Jalālah (<em>Allāhu</em>), atau bagi dhamir <em>Huwa</em>. Takdirnya: <em>syahidallāhu fī ḥāli kawnihī qā'iman bil-qisṭh</em> (Allah bersaksi dalam kondisi senantiasa menegakkan keadilan). Amil penashabnya adalah fi'il <em>syahida</em> atau makna yang terkandung dalam kalimat tauhid.</td>
+            </tr>
+            <tr>
+                <td><strong>بِٱلْقِسْطِ ۚ</strong></td>
+                <td>Bā' harf jarr lil-ilshāq / isti'ānah. <em>Al-Qisṭhi</em>: Isim masdar majrur bil-kasrah.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi isim fa'il <em>qā'iman</em>. Menjadi instrumen pelaksanaan tegaknya keadilan Ilahi.</td>
+            </tr>
+            <tr>
+                <td><strong>لَآ إِلَـٰهَ إِلَّا هُوَ</strong></td>
+                <td>Jumlah ismiyyah tarkib nafy wal-itsbat (sama dengan formula sebelumnya).</td>
+                <td>Berfungsi sebagai <strong>Taukīd Lafzhī wal-Ma'nawī</strong> (pengukuhan penegasan) bagi kalimat tauhid pertama, atau jumlah isti'nafiyyah pengagungan baru pasca-penyebutan sifat <em>qā'iman bil-qisṭh</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَزِيزُ</strong></td>
+                <td>Sifat musyabbahah / shighah mubalaghah wazan <em>fa'īl</em>, ma'rifah bil-lām.</td>
+                <td><strong>Na'at</strong> (sifat) pertama bagi dhamir <em>Huwa</em>, marfu' bil-dhammah (atau fī maḥalli raf'in Khabar bagi mubtada' mahdzuf: <em>Huwal-'Azīz</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْحَكِيمُ ۝١٨</strong></td>
+                <td>Sifat musyabbahah wazan <em>fa'īl</em> min <em>ḥakama / aḥkama</em>, ma'rifah bil-lām.</td>
+                <td><strong>Na'at Tsānī</strong> (sifat kedua) marfu' bil-dhammah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Syaraf al-Iqtinān (Puncak Pemuliaan Epistemik Ulama):</strong>
+            Dalam disiplin balaghah Ma'ani, penyandingan tiga entitas lewat huruf 'athaf <em>Wawu</em> (Allah, Malaikat, dan Ulul 'Ilm) merupakan <em>Uslūb at-Tasyzīf wal-I'tibār al-A'lā</em> (gaya pemuliaan dan legitimasi martabat tertinggi). Allah memulai kesaksian dari Zat-Nya Yang Maha Suci, menyusul malaikat sebagai penduduk langit termulia, dan memungkasinya dengan para ulama di bumi. Penyandingan ini menetapkan bahwa nilai seorang manusia di hadapan arsitektur langit diukur semata-mata dari kedalaman ilmu yang melahirkan persaksian tauhid, bukan dari kekayaan harta, nasab darah, atau takhta kekuasaan.
+        </li>
+        <li><strong>Ilmu Ma'ani — Tikrār at-Tahlīl (Rahasia Pengulangan Kalimat Tauhid):</strong>
+            Kalimat <em>Lā ilāha illā Huwa</em> diulang tepat dua kali dalam satu ayat pendek. Dalam kaidah balaghah, pengulangan ini bukanlah redundansi (<em>ḥasywun</em>), melainkan memiliki fungsi semantik yang amat distingtif:
+            <ul>
+                <li><strong>Tahlil Pertama:</strong> Berfungsi sebagai <em>Al-Masyhūd bih</em> (materi pokok persaksian kosmik)—yakni penafian kemusyrikan dan penetapan status <strong>Eksistensi Keesaan Ontologis Allah</strong> (<em>Wahdāniyyatudz-Dzāt</em>).</li>
+                <li><strong>Tahlil Kedua:</strong> Muncul setelah penegasan sifat <em>qā'imam bil-qisṭh</em> dan langsung dirangkaikan dengan <em>Al-'Azīzul-Ḥakīm</em>. Fungsinya adalah <strong>Kualifikasi Etis Ketuhanan</strong>: menegaskan bahwa Zat yang Esa tersebut tidak menjalankan kekuasaan-Nya secara lalim atau sewenang-wenang. Keesaan-Nya adalah keesaan yang adil, perkasa tanpa kedustaan, dan bijaksana tanpa cela.</li>
+            </ul>
+        </li>
+        <li><strong>Ilmu Bayan — Al-Ḥāl al-Mu'akkidah pada "Qā'iman bil-Qisṭh":</strong>
+            Ditempatkannya kata <em>qā'iman</em> dalam bentuk isim fa'il (bukan fi'il mudhari' <em>yaqūmu</em>) dan berstatus Ḥāl memberikan makna <strong>Istimrār wal-Luzūm (kontinuitas permanen yang tak terpisahkan)</strong>. Allah senantiasa menegakkan keadilan dalam penciptaan alam semesta (keseimbangan kosmik dan hukum fisika), dalam syariat wahyu (keseimbangan hukum halal-haram), dalam pembagian takdir rezeki, dan dalam pengadilan hisab di hari kiamat.
+        </li>
+        <li><strong>Ilmu Badi' — Al-I'tilāf bayna al-'Izzah wal-Ḥikmah (Simfoni Harmoni Dua Nama Sempurna):</strong>
+            Penutupan ayat dengan perpaduan nama <strong>Al-'Azīz</strong> dan <strong>Al-Ḥakīm</strong> adalah mahakarya Badi'. Di dunia manusia, kekuasaan dan keperkasaan mutlak (<em>'izzah</em>) hampir selalu melahirkan kezaliman, kediktatoran, dan penindasan; sedangkan kebijaksanaan tanpa kekuasaan sering kali berujung pada kelemahan yang diinjak-injak. Al-Qur'an memadukan keduanya pada Zat Allah: Keperkasaan-Nya dibimbing oleh Kebijaksanaan sempurna, dan Kebijaksanaan-Nya ditopang oleh Keperkasaan absolut yang tak tertaklukkan.
+        </li>
+        <li><strong>I'jaz Fonetik — Gradasi Ketukan Ritmis dari Kelembutan Halimun ke Dentang Ketegasan:</strong>
+            Artikulasi ayat dibuka dengan hembusan vokal lembut dan tajam (<em>Syahidallāhu</em>), menaik ke harakat ghunnah penahan nafas (<em>Annahū</em>), disusul bentangan mad munfashil dan thabi'i kalimat tahlil, lalu memuncak pada dentang artikulasi berat: perpaduan sifat shafir desis tajam pada Sīn dan ledakan memantul <strong>Qalqalah Kubrā</strong> pada huruf Ṭhā' tebal ber-ithbaq lafaz <strong>bil-qisṭh</strong>! Dentangan qalqalah ini memberikan efek psikologis getaran kepastian bahwa keadilan Ilahi tegak sekokoh batu karang tak tergoyahkan, sebelum akhirnya ditenangkan kembali oleh kelembutan mad 'aridh lis-sukun <em>Al-Ḥakīm</em>.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 14–17):</strong>
+            Pada ayat 14, Al-Qur'an menelanjangi keterpedayaan manusia terhadap syahwat materiil duniawi (harta emas-perak, pasangan, keturunan, dan kendaraan mewah). Kemudian pada ayat 15–17, Allah menawarkan alternatif peradaban: kenikmatan surga abadi bagi <em>al-muttaqīn</em> yang memiliki lima pilar karakter: sabar, jujur, qanit (tunduk beribadah), dermawan berinfak, dan melazimkan istighfar di waktu sahar.
+            <br>Timbul pertanyaan teologis: <em>"Apakah puncak pencapaian spiritual dan intelektual tertinggi manusia bertakwa tersebut?"</em>
+            <br>Ayat 18 seketika menyambut: Puncak kemuliaan seorang hamba di muka bumi adalah ketika ia naik kelas menjadi <strong>Ūlul-'Ilmi</strong>—menjadi saksi keesaan dan penegak keadilan Allah di jagat raya, berdampingan dengan persaksian para malaikat langit!
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Debat Najran, Oligarki Ahli Kitab & Pasca-Badar):</strong>
+            Konteks Madaniyah ayat ini berakar kuat pada dinamika konfrontasi peradaban di Madinah:
+            <ol>
+                <li><strong>Bantahan Telak terhadap Teologi Trinitas Delegasi Kristen Najran:</strong> Para uskup Kristen Najran (seperti Al-'Aqib dan Abu Haritsah) berdalih bahwa doktrin trinitas dan penyaliban Isa AS adalah manifestasi "kasih dan keadilan Tuhan untuk menebus dosa waris". Ayat 18 meruntuhkan premis ini secara radikal: Allah menyatakan diri-Nya <strong>Lā ilāha illā Huwa</strong> (Maha Esa mutlak tanpa anak dan tanpa oknum ketiga), dan Dia menegakkan keadilan (<strong>qā'imam bil-qisṭh</strong>) dengan hukum yang jelas: setiap jiwa menanggung amalnya sendiri tanpa butuh tumbal penyaliban seorang nabi suci!</li>
+                <li><strong>Kritik Tajam terhadap Rabi Yahudi yang Mengkhianati Integritas Ilmu:</strong> Para rabi Yahudi Madinah menyembunyikan kebenaran nubuwah Nabi Muhammad ﷺ yang tertulis dalam Taurat demi mempertahankan upeti materiil dan hegemoni status sosial. Ayat 18 menegur keras: Orang yang berhak menyandang gelar terhormat <strong>Ulul 'Ilmi</strong> bukanlah para intelektual korup penjual ayat, melainkan cendekiawan yang berani bersaksi atas tauhid dan keadilan di tengah ancaman penguasa!</li>
+                <li><strong>Konsolidasi Spiritualitas Pasca-Kemenangan Badar:</strong> Di tengah euforia kemenangan militer Perang Badar, ayat ini mengarahkan pandangan kaum mukminin agar tidak terbuai oleh kekuatan fisik semata. Kemenangan sejati umat Islam harus berakar pada keteguhan akidah tauhid dan integritas penegakan keadilan hukum di tengah masyarakat.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Transendental Menuju Ayat 19):</strong>
+            Persaksian akbar pada Ayat 18 mengenai keesaan Allah yang adil, perkasa, dan bijaksana menuntut sebuah kesimpulan hukum dan sistem peradaban: <em>"Lantas, bagaimanakah cara manusia menyelaraskan hidupnya dengan keesaan dan keadilan Ilahi tersebut?"</em>
+            <br>Ayat 19 langsung menjawab dengan tegas: <strong>Innad-dīna 'indallāhil-islām</strong> (Sesungguhnya agama yang sah dan diridhai di sisi Allah hanyalah Islam!). Tauhid dan keadilan di ayat 18 adalah fondasi doktrinnya, sedangkan Islam di ayat 19 adalah institusi syariat dan jalan penyerahan diri konkretnya.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Riwayat Salaf, Makna Syahadah & Keadilan Kosmik:</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīli Āy Al-Qur'ān</em>, At-Tabari memaparkan bahwa makna <em>syahidallāhu</em> adalah: Allah memutuskan, menetapkan, dan menjelaskan kepada seluruh makhluk-Nya melalui dalil-dalil penciptaan dan mukjizat wahyu bahwa tidak ada sesembahan yang berhak diibadahi melainkan Dia semata. Mengomentari <em>wal-malā'ikatu wa ulul-'ilmi</em>, At-Tabari meriwayatkan dari Ibnu Abbas dan Mujahid: para malaikat bersaksi dengan ikrar kepatuhan di langit, sedangkan orang-orang yang berilmu (para nabi, sahabat, dan ulama mukmin) bersaksi dengan membenarkan keesaan Allah di bumi seraya menyeru umat manusia kepadanya.<br>
+        Mengenai frasa <em>qā'imam bil-qisṭh</em>, At-Tabari menegaskan artinya adalah: <em>"Allah senantiasa berlaku adil dalam pembagian rezeki, penentuan ajal, pembebanan syariat hukum, dan pemberian pahala serta siksa, tanpa ada kezaliman sedikit pun kepada hamba-hamba-Nya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Kedudukan Istimewa Ulama Pewaris Nabi & Bantahan Kemusyrikan:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir menggarisbawahi kemuliaan ulama dalam ayat ini: <em>"Allah SWT memulai persaksian dengan diri-Nya sendiri, mengiringkannya dengan para malaikat-Nya, dan menyertakan para pemilik ilmu (Ūlul-'Ilmi). Ini adalah rekomendasi (ta'dīl) dan pemuliaan derajat paling agung bagi para ulama dalam Al-Qur'an."</em><br>
+        Ibnu Katsir menjelaskan bahwa ulama yang dimaksud secara primer adalah para ulama syariat tauhid yang memadukan antara ilmu akidah yang lurus dengan amal perbuatan nyata. Mereka bersaksi di hadapan dunia bahwa Allah Maha Esa, membantah syubhat kaum musyrikin, Yahudi, dan Nasrani yang menisbatkan sekutu atau anak kepada Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Monumen Keutamaan Ilmu, Syarat Integritas & Fiqih Sosial:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Imam Al-Qurthubi menulis catatan fenomenal yang menjadi rujukan peradaban:<br>
+        <em>"Fī hādzihil-āyati dalīlun 'alā fadhli al-'ilmi wa syarafil-'ulamā'i wa faḍhlihim; fa-innahū law kāna aḥadun asyrafa minal-'ulamā'i la-qaranahumullāhu bismihī wa ismi malā'ikatihī kamā qarana al-'ulamā'"</em><br>
+        (Dalam ayat ini terdapat dalil paling terang tentang keutamaan ilmu dan kemuliaan para ulama. Sebab, seandainya ada golongan manusia yang lebih mulia derajatnya daripada para ulama, niscaya Allah akan menggandengkan nama mereka bersama nama-Nya dan nama para malaikat-Nya sebagaimana Dia telah menggandengkan para ulama!).<br>
+        Namun Al-Qurthubi memberikan peringatan keras: gelar <em>Ulul 'Ilm</em> dalam ayat ini hanya sah disandang oleh ulama yang memiliki sifat <strong>'Adālah (integritas moral dan keadilan)</strong>. Cendekiawan yang fasik, pembela kezaliman penguasa, dan penimbun ilmu demi kepentingan materiil tidak berhak masuk ke dalam kemuliaan ayat ini, karena mereka tidak <em>qā'iman bil-qisṭh</em> (tidak menegakkan keadilan).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Dialektika Dalil Burhani & Filsafat Tauhid:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi membedah secara filosofis-epistemologis: Mengapa persaksian tauhid dibagi kepada tiga tingkatan?
+        <ul>
+            <li><strong>Syahadah Allah:</strong> Kesaksian ontologis melalui penciptaan hukum alam semesta (<em>dalālatut-takwīn</em>) dan mukjizat firman wahyu (<em>dalālatut-tanzīl</em>).</li>
+            <li><strong>Syahadah Malaikat:</strong> Kesaksian intuitif-musyahadah langsung di alam malakut tanpa terhalang oleh materi jasmani.</li>
+            <li><strong>Syahadah Ulul 'Ilmi:</strong> Kesaksian inferensial-burhani (<em>al-istidlāl al-'aqlī wal-wahyī</em>) di mana akal manusia yang sehat meneliti tanda-tanda semesta dan dalil wahyu hingga mencapai keyakinan mutlak (<em>yaqīn</em>).</li>
+        </ul>
+        Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan analisis balaghah tajam mengenai pengulangan <em>Lā ilāha illā Huwa</em>: tahlil kedua menutup celah prasangka kaum determinis (Jabariyyah) dan menegaskan bahwa Allah Maha Perkasa dalam keadilan-Nya, Maha Bijaksana dalam perintah dan larangan-Nya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Konstitusi Keadilan Peradaban:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur memaparkan bahwa penempatan lafaz <em>qā'imam bil-qisṭh</em> di tengah-tengah dua proklamasi tauhid adalah kunci maqashid surah. Tauhid bukan sekadar konsep metafisika di menara gading yang terputus dari realitas sosial. Tauhid adalah generator keadilan. Keadilan (<em>Al-Qisṭh</em>) adalah hukum universal yang mengatur kosmos: jika alam semesta tegak di atas keadilan presisi rotasi galaksi dan keteraturan biologi, maka peradaban manusia pun hanya dapat tegak makmur jika sistem hukum, politik, dan ekonominya dikendalikan oleh keadilan tauhid, bukan oleh keserakahan hawa nafsu.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Kearifan Nusantara & Tanggung Jawab Moral Intelektual:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan dengan jiwa menggelora: <em>"Ayat ini menaikkan derajat orang yang berilmu ke tingkat yang amat mulia di sisi Allah. Tetapi ingatlah, ulama yang dipuji Al-Qur'an bukanlah kaum terpelajar yang menyewakan penanya kepada kaum penindas, bukan ilmuwan yang menjual integritas demi kursi jabatan! Ulama sejati adalah mereka yang berdiri tegak membela keadilan (qā'iman bil-qisṭh), berani mengatakan yang benar itu benar dan yang salah itu salah, sekalipun lehernya terancam pedang kekuasaan zalim."</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menegaskan bahwa kata <em>Al-'Ilm</em> dalam Al-Qur'an mencakup ilmu agama (<em>syariat</em>) dan ilmu tentang alam semesta (<em>kauniyah</em>). Seluruh cendekiawan—baik ahli tafsir, fisikawan, sosiolog, maupun dokter—yang risetnya membimbing manusia mengagumi keesaan Allah dan ilmunya diamalkan untuk menegakkan keadilan sosial, tergolong ke dalam <em>Ulul 'Ilmi</em>.<br>
+        Kemenag RI dalam catatan tafsirnya menegaskan pentingnya kolaborasi antara ulama dan umara: membangun tata kelola pemerintahan yang bersih, transparan, dan berkeadilan demi mewujudkan kemaslahatan bangsa.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Cakupan Makna "Ūlul-'Ilmi"</strong></td>
+                <td>Sepakat bahwa golongan ini mencakup para nabi, sahabat, dan ulama mukmin yang mengesakan Allah dan mengamalkan ilmunya.</td>
+                <td>
+                    • <strong>Mayoritas Salaf (Ibnu Katsir, Mujahid):</strong> Khusus bagi ulama syariat tauhid dan hadits.<br>
+                    • <strong>Pendekatan Rasional (Ar-Razi, Quraish Shihab):</strong> Mencakup seluruh pakar ilmu burhani (kauniyah, astronomi, kedokteran, sosial) yang risetnya menyingkap keteraturan semesta dan mengokohkan keimanan.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Kedudukan Sintaksis & Rujukan "Qā'iman bil-Qisṭh"</strong></td>
+                <td>Sepakat berkedudukan sebagai Ḥāl manshub yang menegaskan sifat perbuatan Allah yang Maha Adil.</td>
+                <td>
+                    • <strong>Mayoritas Nahwiyyun:</strong> Menjadi Ḥāl dari lafaz Jalālah (<em>Allāhu</em>), amilnya fi'il <em>syahida</em>.<br>
+                    • <strong>Az-Zajjaj & Sebagian Ulama:</strong> Menjadi Ḥāl dari dhamir <em>Huwa</em> pada kalimat tauhid.<br>
+                    • <strong>Pendekatan Makna Ta'addud:</strong> Menjadi Ḥāl bagi Allah, dan secara majazi menjadi tuntutan sikap bagi <em>Ulul 'Ilmi</em> (orang berilmu wajib menegakkan keadilan).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hikmah Tikrār at-Tahlīl (Dua Kali "Lā Ilāha Illā Huwa")</strong></td>
+                <td>Sepakat bahwa pengulangan ini adalah taukid pengokoh tauhid mutlak yang steril dari kesia-siaan kata (<em>laisa fīhil-Qur'ānu hadzayan</em>).</td>
+                <td>
+                    • <strong>Tinjauan Teologis:</strong> Tahlil pertama menetapkan hakikat ketuhanan tunggal; tahlil kedua menegaskan kesucian Allah dari segala kezaliman seraya mengukuhkan sifat <em>Al-'Azīzul-Ḥakīm</em>.<br>
+                    • <strong>Tinjauan Balaghah (Az-Zamakhsyari):</strong> Memisahkan materi persaksian awal dari pembuktian atribut keadilan dan keperkasaan.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Saintisme Sekuler vs Pola Pikir Qur'ani Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Saintisme Sekuler / Elitis</th>
+                <th>Pola Pikir Qur'ani Rabbani (Ūlul-'Ilmi)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Tujuan Akhir Penguasaan Ilmu</strong></td>
+                <td><em>Domination & Commercialization:</em> Ilmu diposisikan sebagai alat menaklukkan alam, memupuk kekayaan industri, meraih prestise akademis, dan melayani oligarki modal.</td>
+                <td><em>Worship & Justice:</em> Ilmu diposisikan sebagai jembatan mengenal keagungan Sang Pencipta (<em>Ma'rifatullāh</em>) dan instrumen penegakan keadilan sosial (<em>Qā'iman bil-Qisṭh</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Koneksitas Intelektual dan Moralitas</strong></td>
+                <td><em>Value-Free Myth & Moral Relativism:</em> Pemisahan ketat antara sains dan nilai moralitas; ilmuwan merasa steril dari tanggung jawab etis atas dampak penemuannya.</td>
+                <td><em>Inseparable Ethical Anchor:</em> Ilmu terikat mutlak dengan ketakwaan dan keadilan; kecerdasan intelektual wajib dibimbing oleh Asma <em>Al-'Azīz Al-Ḥakīm</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Resonansi Batin terhadap Kebenaran</strong></td>
+                <td><em>Intellectual Arrogance ('Ujub):</em> Merasa akal manusia adalah otoritas tertinggi; mencemooh wahyu metafisika dan bersikap sinis terhadap transendensi.</td>
+                <td><em>Epistemic Humility (Khasyyah):</em> Semakin dalam ilmunya, semakin gemetar hatinya mengakui keterbatasan diri di hadapan kebesaran Allah (<em>Innamā yakhsyallāha min 'ibādihil-'ulamā'</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Tripartite Epistemic Alignment" (Keselarasan Tiga Pilar Epistemik):</strong>
+            QS. 3:18 merumuskan arsitektur epistemologi holistik melalui tiga saksi kebenaran:
+            <ol>
+                <li><em>Transcendental Reality (Syahādatullāh):</em> Kebenaran objektif mutlak yang bersumber dari Allah sebagai Wājibul Wujūd.</li>
+                <li><em>Cosmic Purity (Syahādatul-Malā'ikah):</em> Keteraturan hukum semesta yang tunduk patuh tanpa cacat ego hewani.</li>
+                <li><em>Human Rationality & Integrity (Syahādatu Ūlil-'Ilm):</em> Penalaran intelektual manusia yang telah disucikan dari hawa nafsu dan berani bersaksi atas kebenaran.</li>
+            </ol>
+            Ketika seorang ilmuwan atau pemikir menyelaraskan risetnya dengan wahyu Ilahi dan keadilan semesta, ia mencapai puncak koherensi epistemik: ilmunya membebaskan manusia, bukan memperbudaknya.
+        </li>
+        <li><strong>Mental Model 2: "The Calibrated Power Model (Al-'Azīzul-Ḥakīm)":</strong>
+            Dalam psikologi kekuasaan, hukum alamiah menyatakan bahwa <em>power tends to corrupt</em> (kekuasaan yang tidak terbatas cenderung menindas). QS. 3:18 menyajikan model kalibrasi kekuasaan Ilahi melalui pasangan nama <strong>Al-'Azīz</strong> (kekuatan/perkasa) dan <strong>Al-Ḥakīm</strong> (kebijaksanaan/hikmah). Kekuatan tanpa hikmah melahirkan tirani kejam (<em>tyranny</em>); hikmah tanpa kekuatan melahirkan impotensi tak berdaya (<em>helplessness</em>). Pemimpin atau profesional yang mengadopsi mental model ini akan selalu menyeimbangkan antara ketegasan eksekusi (<em>'izzah</em>) dengan pertimbangan moral kemaslahatan yang bijak (<em>ḥikmah</em>).
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Keadilan Kognitif vs Bias Kesombongan Intelektual</h3>
+    <p>
+        Secara neuropsikologis, fenomena penguasaan ilmu sering kali memicu aktivasi dopaminergik narsistik di area korteks prefrontal: ketika seseorang merasa lebih tahu daripada orang lain, timbul ilusi superioritas kognitif (<em>intellectual arrogance</em>) yang membutakan dirinya dari mendengarkan kebenaran yang datang dari pihak lain. Di sinilah letak bahaya pembusukan jiwa para penuntut ilmu.
+    </p>
+    <p>
+        Al-Qur'an menawarkan terapi <strong>Tazkiyatun Nafs</strong> melalui persyaratan radikal: ilmu harus bermuara pada status <strong>qā'imam bil-qisṭh</strong> (menegakkan keadilan). Keadilan tertinggi bermula dari <strong>Keadilan Kognitif Batiniah</strong>: yakni memperlakukan dalil secara jujur, menanggalkan bias konfirmasi, berani mengakui kesalahan di hadapan fakta ilmiah, dan menundukkan ego intelektual di bawah keagungan wahyu Allah. Jiwa yang mencapai derajat ini terbebas dari racun <em>'ujub</em> (bangga diri) dan <em>riyā'</em> (gila pujian), bertransformasi menjadi oase ilmu yang menyejukkan peradaban manusia.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Wabah Matronisasi Opini di Era Post-Truth vs Keruntuhan Otoritas Ulul 'Ilmi</h3>
+    <p>
+        Di abad ke-21, arsitektur media sosial berbasis algoritma atensi telah melahirkan krisis epistemik paling akut dalam sejarah: <strong>The Death of Expertise (Matinya Kepakaran)</strong>. Opini seorang influencer dangkal atau pendengung politik (<em>buzzer</em>) yang viral dalam sekejap mata mampu mengalahkan fatwa dan kajian mendalam para ulama yang telah menekuni disiplin ilmu puluhan tahun. Masyarakat digital tenggelam dalam banjir informasi tanpa kebijaksanaan (<em>infobesity without wisdom</em>). Kebenaran tidak lagi diukur dari kekuatan dalil burhani dan metodologi ilmiah yang adil (<em>qisṭh</em>), melainkan diukur dari metrik viralitas, jumlah likes, dan algoritma polarisasi. Fenomena ini adalah dekonstruksi destruktif terhadap martabat Ūlul-'Ilmi yang dimuliakan Allah dalam QS. 3:18.
+    </p>
+
+    <h3>2. "Techno-Tyranny": Pemisahan Sains dari Nilai Keadilan & Pelacuran Intelektual</h3>
+    <p>
+        Dunia kontemporer menyaksikan perkembangan pesat kecerdasan buatan (AI), bioteknologi, dan persenjataan militer canggih. Namun, kemajuan sains ini sering kali tercerabut dari jangkar moral ketuhanan. Lahir fenomena <strong>Scholars for Hire (Cendekiawan Sewaan)</strong>: pakar hukum yang menyusun undang-undang pesanan oligarki perusak lingkungan, ekonom yang melegitimasi sistem riba predatorik, dan saintis yang memproduksi senjata pemusnah massal demi profit industri militer. Mereka memiliki informasi dan kepintaran teknis, namun mereka mengkhianati amanah <em>qā'imam bil-qisṭh</em>. Ilmu tanpa tauhid telah berubah menjadi instrumen penindasan modern (<em>techno-tyranny</em>) yang memperlebar jurang kemiskinan dan merusak biosfer bumi.
+    </p>
+
+    <h3>3. Krisis Keadilan Global & Rekonstruksi Kepemimpinan Berbasis "Al-'Azīzul-Ḥakīm"</h3>
+    <p>
+        Tata kelola geopolitik dunia hari ini dikendalikan oleh standar ganda (<em>double standards</em>) yang memuakkan: hukum internasional ditegakkan secara bengis kepada negara-negara lemah, namun diveto dan diinjak-injak manakala menyangkut kepentingan negara adidaya atau rezim penjajah. Ini adalah cermin kekuasaan barbar: memamerkan kekuatan (<em>'Izzah</em> semu) yang kosong dari keadilan dan kebijaksanaan (<em>Ḥikmah</em>).
+    </p>
+    <p>
+        QS. 3:18 hadir sebagai manifesto penyelamat peradaban: tidak ada perdamaian global yang berkelanjutan tanpa tegaknya keadilan objektif (<em>Al-Qisṭh</em>). Umat Islam di abad ke-21 memikul tanggung jawab peradaban untuk mengembalikan kepemimpinan dunia di atas pilar <strong>Ūlul-'Ilmi yang menegakkan keadilan</strong>, membuktikan bahwa ketegasan sikap dan kemajuan teknologi harus tunduk di bawah bimbingan moral wahyu yang Maha Perkasa lagi Maha Bijaksana.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol Zikir & Kesaksian Nabawiyyah Pasca-Tilawah:</strong>
+                <br>• Setiap kali selesai membaca QS. Ali 'Imran ayat 18, atau setiap selesai shalat fardhu dan zikir pagi-petang, amalkan sunnah Nabi ﷺ dengan mengucapkan secara lisan dan penuh penghayatan batin:
+                <br><em>"Syahidallāhu annahū lā ilāha illā Huwa wal-malā'ikatu wa ulul-'ilmi qā'imam bil-qisṭh, lā ilāha illā Huwal-'Azīzul-Ḥakīm. <strong>Wa anā 'alā dzālika minasy-syāhidīn, syahidtu bimā syahidallāhu bih, wa astawdi'ullāha hādzihisy-syahādah, wa hiya lī 'indallāhi wadī'ah</strong>"</em>
+                <br>(Dan aku pun bersaksi atas apa yang disaksikan oleh Allah, dan aku titipkan persaksian tauhid ini di sisi Allah sebagai simpanan keselamatan hingga hari kiamat).
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Qā'iman bil-Qisṭh Metric" dalam Menilai & Bertindak:</strong>
+                Dalam setiap pengambilan keputusan bisnis, kepemimpinan kantor, maupun urusan rumah tangga:
+                <br>• Ujilah keputusan Anda dengan 3 filter keadilan mutlak:
+                <br>&nbsp;&nbsp;1. Apakah keputusan ini objektif berdasarkan data dan bukti yang valid, bukan asumsi atau desas-desus (<em>fairness of evidence</em>)?
+                <br>&nbsp;&nbsp;2. Apakah keputusan ini bebas dari bias nepotisme keluarga, klan partisan, atau kebencian pribadi kepada seseorang (<em>freedom from bias</em>)?
+                <br>&nbsp;&nbsp;3. Apakah keputusan ini berpihak pada pihak yang lemah dan terzalimi sesuai hak syariat (<em>protection of the vulnerable</em>)?
+                <br>• Jika salah satu filter ini gagal, batalkan keputusan tersebut seketika demi menjaga integritas Anda sebagai penegak keadilan.
+            </li>
+            <li><strong>Komitmen Etika Keilmuan & Literasi Kritis: "Menolak Menjadi Pelacur Intelektual":</strong>
+                <br>• Bagi para profesional, akademisi, dan guru: bersumpahlah di hadapan Allah untuk tidak pernah memanipulasi data penelitian, memalsukan sertifikasi keahlian, atau menerbitkan opini pesanan yang membodohi masyarakat demi suap uang atau promosi jabatan.
+                <br>• Di ruang digital: aktiflah menyebarkan literasi berbasis data valid dan dalil shahih untuk membendung gelombang hoaks, fitnah sektarian, dan pembodohan massal di lingkungan Anda.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Apakah ilmu agama dan wawasan intelektual yang telah kupelajari selama bertahun-tahun ini telah melahirkan rasa takut kepada Allah (<em>khasyyatullāh</em>) dan kerendahhatian, ataukah diam-diam justru menumbuhkan rasa sombong, merasa lebih pintar, dan meremehkan orang awam?</li>
+            <li>Ketika terjadi perselisihan antara diriku atau kelompokku dengan pihak lain, apakah aku berani bersikap adil (<em>qā'imam bil-qisṭh</em>) dengan mengakui kebenaran lawan dan mengoreksi kesalahan diri sendiri, ataukah aku memanipulasi dalil demi memenangkan gengsi egoku?</li>
+            <li>Seandainya hari ini ajalku tiba, apakah persaksian tauhidku kepada Allah telah benar-benar murni terbebas dari penyembahan berhala-berhala modern: syahwat harta, kultus jabatan, dan ketundukan buta kepada hawa nafsu?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Syāhidu 'alā kulli syay', Yā Man lā ilāha illā Anta, Yā Qā'iman bil-qisṭh, Yā 'Azīzu Yā Ḥakīm. Ya Allah Tuhan Yang Maha Menyaksikan segala rahasia langit dan bumi, Yang Maha Menegakkan neraca keadilan dengan penuh keperkasaan dan kebijaksanaan.
+            <br><br>
+            Kami bersaksi dengan segenap jiwa dan akal kami atas apa yang Engkau saksikan terhadap diri-Mu sendiri, dan atas apa yang dipersaksikan oleh para malaikat-Mu yang mulia serta para nabi dan ulama-Mu yang shalih: bahwasanya tidak ada tuhan yang berhak disembah melainkan Engkau semata, tiada sekutu bagi-Mu, tiada tandingan bagi keagungan-Mu, dan tiada penolong yang Engkau butuhkan dalam menegakkan semesta.
+            <br><br>
+            Allāhummaftah 'alaynā futūḥal-'ārifīn, warzuqnā 'ilman nāfi'ā, wa 'amalan shāliḥā, wa qalbān syākirā. Ya Allah, angkatlah derajat kami ke dalam barisan Ūlul-'Ilmi yang Engkau ridhai; anugerahkanlah kepada kami ilmu yang menumbuhkan ketakwaan, bersihkanlah dada kami dari racun kesombongan intelektual, riya', dan kemunafikan. Jadikanlah lisan kami fasih menyuarakan kebenaran, jadikanlah tangan kami kokoh menegakkan keadilan di tengah kezaliman dunia, dan jangan pernah Engkau condongkan hati kami kepada para penindas.
+            <br><br>
+            Yā 'Azīzu Yā Ḥakīm, kokohkanlah iman kami hingga hembusan nafas terakhir. Matikanlah kami di atas kalimat tauhid Lā Ilāha Illallāh Muhammadur Rasūlullāh, kumpulkanlah kami di padang mahsyar bersama para malaikat muqarrabin dan ulama pewaris nabi, serta masukkanlah kami ke dalam surga-Mu dengan rahmat dan kemurahan-Mu yang tiada bertepi. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-017 - QS. Ali 'Imran Ayat 17.html">&larr; Kembali ke Ayat 17 (QS. 3:17)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 18</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-019 - QS. Ali 'Imran Ayat 19.html">Lanjut ke Ayat 19 (QS. 3:19) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

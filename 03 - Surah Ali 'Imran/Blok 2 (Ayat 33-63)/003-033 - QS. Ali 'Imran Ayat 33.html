@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-033 - QS. Ali 'Imran Ayat 33 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="../Blok 1 (Ayat 1-32)/003-032 - QS. Ali 'Imran Ayat 32.html">&larr; Ayat Sebelumnya (QS. 3:32)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-034 - QS. Ali 'Imran Ayat 34.html">Ayat Berikutnya (QS. 3:34) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian</span>
+        <span class="badge">Klaster 1 Blok 2 (Ayat 33–37): Doktrin Ash-Shifwah & Kesucian Nazar Maryam</span>
+        <span class="badge">11 Kata | 51 Huruf Rasm</span>
+        <span class="badge">Juz 3 (Awal Rub' 2 Hizb 5)</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 33</h1>
+    <div class="transliteration">
+        "Innallāhaṣh-ṭhafā Ādama wa Nūḥaw-wa Āla Ibrāhīma wa Āla 'Imrāna 'alal-'ālamīn(a)."
+    </div>
+    <div class="thematic-title">
+        Doktrin Ash-Shifwah (Pemilihan Ilahi Mutlak) & Genealogi Kesucian Kenabian: Penetapan Garis Risalah Adam, Nuh, Keluarga Ibrahim, dan Keluarga 'Imran Menuju Kelahiran Isa AS dan Risalah Pamungkas Muhammad ﷺ
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Ayat 33: Pembuka Historiografi Rabbani & Dekonstruksi Klaim Etnosentrisme Ahlul Kitab)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ۞ إِنَّ ٱللَّهَ ٱصْطَفَىٰٓ ءَادَمَ وَنُوحًا وَءَالَ إِبْرَٰهِيمَ وَءَالَ عِمْرَٰنَ عَلَى ٱلْعَـٰلَمِينَ ۝٣٣
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Sesungguhnya Allah telah memilih (menyucikan dan mengistimewakan secara mutlak di atas kehendak murni-Nya) Adam, Nuh, keluarga Ibrahim, dan keluarga 'Imran di atas seluruh alam (makhluk manusia pada masa zamannya masing-masing)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan gerbang proklamasi agung yang menandai pembukaan Blok 2 (Ayat 33–63) Surah Ali 'Imran. Kata kerja <em>iṣhṭhafā</em> (اصْطَفَى) berakar dari kemurnian tanpa cacat (<em>ash-shafā'</em>), yang secara teologis menegaskan bahwa pemilihan kenabian adalah hak prerogatif mutlak Allah yang didasarkan pada kesucian wadah jiwa (<em>taharatul-jawhar</em>), bukan pada keunggulan kasta darah, kekayaan materi, atau hegemoni politik. 
+    </p>
+    <p>
+        Pemilihan empat entitas agung dalam ayat ini memiliki sistematika kronologis dan teologis yang sangat presisi:
+    </p>
+    <ul>
+        <li><strong>Adam AS:</strong> Titik mula keberadaan biologis dan spiritual umat manusia, khalifah pertama yang dimuliakan dengan ilmu dan sujudnya para malaikat.</li>
+        <li><strong>Nuh AS:</strong> Bapak peradaban kedua (<em>Abul Basyar ats-Tsani</em>) pasca-banjir besar, rasul pertama yang membawa syariat ketauhidan yang diuji secara ekstrem dalam menyelamatkan pohon keimanan dari kepunahan total.</li>
+        <li><strong>Keluarga Ibrahim (Ālu Ibrāhīm):</strong> Poros utama risalah monoteisme dunia yang melahirkan dua rantai emas kenabian: cabang Ismail AS yang bermuara pada Nabi Muhammad ﷺ, dan cabang Ishaq serta Ya'qub AS yang melahirkan nabi-nabi Bani Israil.</li>
+        <li><strong>Keluarga 'Imran (Ālu 'Imrān):</strong> Mata rantai kesucian penutup tradisi kenabian Bani Israil yang melahirkan Maryam binti 'Imran dan Nabi Isa AS. Penyejajaran nama 'Imran bersama Nabi Ibrahim AS secara eksplisit meruntuhkan doktrin trinitas sekaligus menolak tuduhan keji bangsa Yahudi: Isa AS bukanlah anak Allah dan bukan anak hasil noda, melainkan buah dari keluarga manusia teramat suci yang dipilih langsung oleh Sang Pencipta semesta alam.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>۞ إِنَّ</strong><br>(<em>Inna</em>)</td>
+                <td>
+                    • <strong>Tanda Rub' al-Ḥizb (۞):</strong> Penanda awal Rub' ke-2 dalam Juz 3 (Hizb 5).<br>
+                    • <strong>Hamzah Qatha' Kasrah:</strong> Diucapkan tahqiq sempurna dari pangkal tenggorokan (<em>aqshal halq</em>).<br>
+                    • <strong>Ghunnah Musyaddadah:</strong> Nun bertasydid ditahan dengan dengung sempurna (<em>akmal ma takun</em>) berdurasi 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tahqiq pada hamzah qatha' kasrah serta menyempurnakan ghunnah pada Nun musyaddadah sebagai perangkat penguat sumpah (<em>harf taukid</em>) yang qath'i.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱللَّهَ</strong><br>(<em>Allāha</em>)</td>
+                <td>
+                    • <strong>Hamzah Washal:</strong> Gugur saat washal dari kata <em>Inna</em>.<br>
+                    • <strong>Tafkhīm / Taghlīzh Lam Jalālah:</strong> Karena didahului harakat fathah pada Nun musyaddadah <em>Inna</em>, maka dua huruf Lam pada lafaz jalalah ditebalkan bunyinya dengan mengangkat pangkal lidah.
+                </td>
+                <td>
+                    Konsensus (<em>ittifaq</em>) sepuluh imam qira'at menetapkan hukum tafkhim pada Lam Jalalah saat disambung setelah fathah, menggemakan wibawa ketuhanan yang mutlak.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱصْطَفَىٰٓ</strong><br>(<em>Iṣhṭhafā</em>)</td>
+                <td>
+                    • <strong>Hamzah Washal:</strong> Gugur saat dibaca sambung (<em>Innallāhaṣh-ṭhafā</em>). Bila ibtida' (memulai), dibaca kasrah (<em>Iṣhṭhafā</em>).<br>
+                    • <strong>Ibdāl Ta' Ifti'āl:</strong> Huruf Tha' (ط) aslinya adalah Ta' (اصْتَفَى), diganti menjadi Tha' karena jatuh setelah huruf ithbaq Shad (ص) demi menjaga kemudahan fonetik lidah Arab.<br>
+                    • <strong>Huruf Ṣhād:</strong> Memiliki sifat isti'la', ithbaq, shafir, hamas, dan rikhwah.<br>
+                    • <strong>Alif Maqshūrah:</strong> Mad ashli 2 harakat pada akhir kata.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> (vokal miring 'e/i' tajam: <em>Iṣhṭhafē</em>) pada alif maqshurah karena berakar dari huruf ya' (<em>dzawatil ya'</em>).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan pilihan <strong>Taqrīl / Imālah Shughrā</strong> (antara fathah dan imalah).<br>
+                    • <strong>Imam Lainnya ('Āṣhim, Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, Qālūn, Abū Ja'far, Ya'qūb):</strong> Membaca dengan <strong>Fat-ḥah murni</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ءَادَمَ</strong><br>(<em>Ādama</em>)</td>
+                <td>
+                    • <strong>Mad Badal:</strong> Huruf hamzah berharakat mendahului huruf alif sukun (asal katanya <em>'a-adama</em>).<br>
+                    • <strong>I'rab Fathah:</strong> Berharakat fathah tanpa tanwin karena tergolong isim <em>Mamnu' minash-Sharf</em> ('alamiyyah + 'ujmah/wazan fi'il).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Memiliki tiga wajah pembacaan mad badal: <strong>Qaṣhr (2 harakat), Tawassuṭh (4 harakat), dan Ṭhūl (6 harakat)</strong>.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Konsisten membaca mad badal hanya dengan kadar <strong>Qashr (2 harakat)</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَنُوحًا</strong><br>(<em>wa Nūḥan</em>)</td>
+                <td>
+                    • <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada dhommah diikuti Wawu sukun.<br>
+                    • <strong>Tanwīn Fathah:</strong> Bertemu huruf Wawu pada kata berikutnya (<em>wa Āla</em>).<br>
+                    • <strong>Munṣharif:</strong> Isim 'ajami yang tetap menerima tanwin karena terdiri atas 3 huruf dengan sukun di tengah (<em>tsulatsi sakinul-wasath</em>).
+                </td>
+                <td>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca <strong>Idghām Bilā Ghunnah</strong> (memasukkan tanwin ke dalam wawu secara lebur murni tanpa dengung).<br>
+                    • <strong>Sembilan Imam Lainnya (termasuk Khallad 'an Hamzah dan Hafsh 'an 'Ashim):</strong> Membaca <strong>Idghām bi-Ghunnah</strong> dengan dengung 2 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَءَالَ</strong><br>(<em>wa Āla</em>)</td>
+                <td>
+                    • <strong>Wawu 'Athaf & Mad Badal:</strong> Hamzah mendahului alif mad.<br>
+                    • <strong>Harakat Lam:</strong> Fathah berstatus maf'ul bih ma'thuf.
+                </td>
+                <td>
+                    Warsy membaca dengan 3 jalan badal (2/4/6 harakat). Sembilan imam membaca qashr 2 harakat. Semua imam sepakat membaca fathah pada huruf Lam sebagai tanda ma'thuf manshub.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>إِبْرَٰهِيمَ</strong><br>(<em>Ibrāhīma</em>)</td>
+                <td>
+                    • <strong>Hamzah Qatha' Kasrah:</strong> Tahqiq tajam.<br>
+                    • <strong>Qalqalah Sughrā pada Bā':</strong> Pantulan ringan di tengah kata.<br>
+                    • <strong>Rā' Fathah:</strong> Tafkhim (tebal).<br>
+                    • <strong>Mamnu' minash-Sharf:</strong> Majrur dengan tanda fathah pengganti kasrah ('alamiyyah + 'ujmah).
+                </td>
+                <td>
+                    Dalam Surah Ali 'Imran, seluruh sepuluh imam mutawatirah sepakat membaca lafaz ini dengan huruf Ya': <em>Ibrāhīm</em> (berbeda dengan sebagian qira'at Hisham 'an Ibnu 'Amir di Surah Al-Baqarah yang membaca <em>Ibrāhām</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَءَالَ عِمْرَٰنَ</strong><br>(<em>wa Āla 'Imrāna</em>)</td>
+                <td>
+                    • <strong>Izhar Syafawi pada Mīm Sukun:</strong> Mim sukun bertemu Ra' dibaca jelas tanpa dengung berlebih disertai sifat tawassuth.<br>
+                    • <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>).<br>
+                    • <strong>Mamnu' minash-Sharf:</strong> Majrur bil-fathah karena nama non-Arab yang berakhiran alif dan nun tambahan (<em>ziyadatul alif wan nun</em>).
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca fathah pada Nun tanpa tanwin (<em>'Imrāna</em>) sebagai tanda jar isim mamnu' minash-sharf yang berkedudukan sebagai mudhaf ilayh.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>عَلَى ٱلْعَـٰلَمِينَ ۝٣٣</strong><br>(<em>'alal-'Ālamīn</em>)</td>
+                <td>
+                    • <strong>Isqāṭh Alif:</strong> Alif layyinah pada <em>'alā</em> gugur secara fonetik saat washal karena bertemu sukun Lam Qamariyyah.<br>
+                    • <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    • <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf akhir ayat, huruf Ya' mad bertemu Nun sukun 'aridh dibaca panjang 2, 4, atau 6 harakat disertai sifat tawassuth pada Nun sukun.
+                </td>
+                <td>
+                    Ittifaq mutawatir seluruh sepuluh imam dalam melafalkan idzhar qamariyyah dan memperbolehkan tiga martabat panjang (qashr 2, tawassuth 4, thul 6 harakat) saat waqaf di fashilah akhir ayat.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul: Pembongkaran Etnosentrisme Yahudi Madinah & Teologi Trinitas Delegasi Nasrani Najran:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (Jilid 5, hlm. 306), Al-Wahidi dalam <em>Asbāb an-Nuzūl</em> (hlm. 102), dan As-Suyuthi dalam <em>Ad-Durr al-Mantsūr</em> dari jalur Sahabat Abdullah bin Abbas r.a.:<br>
+        Bahwa para rabi Yahudi di Madinah membanggakan nasab mereka di hadapan kaum muslimin seraya berkata: <em>"Kami adalah anak cucu Ibrahim, Ishaq, dan Ya'qub. Keturunan kamilah yang paling berhak atas risalah kenabian dan kemuliaan langit, dan tidak ada kebenaran di luar bangsa kami!"</em> Pada saat yang hampir bersamaan, delegasi elit Kristen Najran mengklaim bahwa Isa AS adalah anak Allah karena kelahirannya yang tanpa perantara seorang ayah. Maka Allah Azza wa Jalla menurunkan ayat ini (QS. 3:33) sebagai bantahan ganda: menegaskan bahwa pemilihan kenabian adalah otoritas mutlak Allah yang didasarkan pada kesucian tauhid (bukan monopoli ras Yahudi), serta menempatkan keluarga 'Imran—termasuk Maryam dan Isa AS—sebagai hamba-hamba manusia pilihan yang kedudukan ontologisnya setara dalam silsilah ketundukan para nabi Allah, bukan sebagai tuhan yang disembah.<br>
+        <strong>Derajat Riwayat:</strong> Diterima (<em>Hasan lighairihi</em>) dalam konteks asbabun nuzul menurut para muhaqqiq tafsir ma'tsur.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 2276): Silsilah Keterpilihan Ilahi (Al-Iṣhṭhafā') Menuju Rasulullah ﷺ:</strong><br>
+        Diriwayatkan dari Sahabat Wātsilah bin Al-Asqa' radhiyallahu 'anhu, ia berkata: Aku mendengar Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 20px; direction: rtl; display: block; margin: 8px 0; text-align: right;">
+        «إِنَّ اللَّهَ اصْطَفَى كِنَانَةَ مِنْ وَلَدِ إِسْمَاعِيلَ، وَاصْطَفَى قُرَيْشًا مِنْ كِنَانَةَ، وَاصْطَفَى مِنْ قُرَيْشٍ بَنِي هَاشِمٍ، وَاصْطَفَانِي مِنْ بَنِي هَاشِمٍ»
+        </span>
+        <em>"Sesungguhnya Allah telah memilih (iṣhṭhafā) Kinanah dari keturunan Ismail, memilih Quraisy dari Kinanah, memilih Bani Hasyim dari Quraisy, dan memilih diriku dari kalangan Bani Hasyim."</em><br>
+        <strong>Takhrij:</strong> HR. Muslim no. 2276, At-Tirmidzi no. 3605, dan Ahmad no. 16986. Sanad Sahih muttashil. Hadits ini menjadi dalil penjelas bahwa rantai <em>Āla Ibrāhīm</em> dalam ayat ini mencapai puncak kesempurnaannya pada kepribadian Rasulullah Muhammad ﷺ.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Shahih Al-Bukhari (No. 3432) & Muslim (No. 2430): Legitimasi Kesucian Maryam binti 'Imran:</strong><br>
+        Diriwayatkan dari Sayyidina Ali bin Abi Thalib radhiyallahu 'anhu, ia berkata: Aku mendengar Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 20px; direction: rtl; display: block; margin: 8px 0; text-align: right;">
+        «خَيْرُ نِسَائِهَا مَرْيَمُ ابْنَةُ عِمْرَانَ، وَخَيْرُ نِسَائِهَا خَدِيجَةُ بِنْتُ خُوَيْلِدٍ»
+        </span>
+        <em>"Sebaik-baik wanita di alam semesta (pada masanya) adalah Maryam binti 'Imran, dan sebaik-baik wanita di alam semesta (pada masanya) adalah Khadijah binti Khuwailid."</em><br>
+        <strong>Takhrij:</strong> HR. Al-Bukhari dalam <em>Kitab Ahadits al-Anbiya'</em> no. 3432, dan Muslim no. 2430. Derajat: Muttafaqun 'Alayh (Shahih tertinggi).
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sunan At-Tirmidzi (No. 3142): Kepemimpinan Spiritual Adam dan Keturunannya:</strong><br>
+        Dari Abu Sa'id Al-Khudri radhiyallahu 'anhu, Rasulullah ﷺ bersabda:<br>
+        <em>"Aku adalah pemimpin anak keturunan Adam pada hari kiamat tanpa rasa sombong. Di tangankulah bendera pujian (Liwā'ul-Ḥamd), dan tidak ada seorang nabi pun pada hari itu—baik Adam maupun yang sesudahnya—melainkan berada di bawah naungan benderaku."</em><br>
+        <strong>Takhrij:</strong> HR. At-Tirmidzi no. 3142, Ahmad no. 11000. Dinilai Hadits Hasan Sahih.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Ṣh-F-W (ص - ف - و — Akar Kata اصْطَفَى / Iṣhṭhafā):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (Jilid 3, hlm. 293) menetapkan kaidah leksikografis mendasar: bahwa akar kata ini berporos pada satu prinsip makna tunggal (<em>aṣhlun wāḥidun yadullu 'alā al-khulūṣh minasy-syaub</em>), yaitu <strong>kemurnian mutlak yang steril dari segala kotoran, kekeruhan, endapan, dan cacat</strong>. Dari akar kata inilah lahir kata <em>aṣh-ṣhafā</em> (batu cadas keras yang licin bersih tanpa debu) dan <em>aṣh-ṣhafwah</em> (saripati terbaik dan lapisan termurni dari minyak atau madu).<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> (Jilid 14, hlm. 462) menguraikan: <em>"Iṣhṭhafaytuhū: ikhtartuhū wa akhadztu ṣhafwatahū"</em> (Aku memilihnya dengan mengambil inti sarinya yang paling murni). Mengikuti wazan <em>Ifta'ala</em> (افتعل), kata ini memiliki nilai semantik kesungguhan dan penyaringan bertahap: Allah tidak sekadar memilih secara biasa (<em>ikhtiyār</em>), melainkan menyaring, membersihkan, menyucikan bejana batin mereka, lalu mengangkatnya sebagai pemegang amanah wahyu yang suci.
+        </li>
+        <li>
+            <strong>2. '-D-M (ء - د - م — Akar Kata ءَادَم / Ādam):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> (Jilid 1, hlm. 72) menerangkan bahwa akar kata ini berporos pada dua makna besar: percampuran harmonis (<em>al-ulfah wal-ijtima'</em>) dan permukaan tanah liat (<em>adīmul-ardh</em>). Dinamakan Adam karena fisiknya diciptakan dari saripati lapisan permukaan tanah bumi yang beraneka warna, sekaligus melambangkan integrasi fitrah yang harmonis antara jasad tanah dan tiupan ruh Ilahi.
+        </li>
+        <li>
+            <strong>3. N-W-Ḥ (ن - و - ح — Akar Kata نُوح / Nūḥ):</strong><br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> mencatat bahwa akar katanya merujuk pada rintihan doa yang mendalam (<em>an-nawḥ</em>). Beliau dinamai Nuh karena panjangnya ratapan, doa keprihatinan, dan munajat penuh linangan air mata kepada Allah selama mendakwahkan risalah tauhid di tengah kedegilan kaumnya selama 950 tahun.
+        </li>
+        <li>
+            <strong>4. '-W-L (أ - و - ل — Akar Kata ءَال / Āl):</strong><br>
+            Ibnu Faris menjelaskan bahwa akar ini berporos pada <em>ar-rujū' wal-ma'āl</em> (tempat kembali dan rujukan). Terdapat distingsi tajam dalam leksikografi Arab antara <em>Ahl</em> (أهل) dan <em>Āl</em> (آل): kata <em>Āl</em> adalah bentuk pemuliaan khusus (<em>khāṣhṣhatul-khāṣh</em>) yang hanya disandarkan kepada entitas yang memiliki kemuliaan, kehormatan, dan kepemimpinan moral (tidak lazim diucapkan <em>Āl al-Hajjām</em> / keluarga tukang bekam, melainkan <em>Āl al-Malik</em> atau <em>Āl Ibrāhīm</em>). Selain itu, <em>Āl</em> mencakup orang-orang yang mengikuti jejak spiritual dan akidahnya secara esensial, melampaui ikatan genetika biologis belaka.
+        </li>
+        <li>
+            <strong>5. '-M-R (ع - م - ر — Akar Kata عِمْرَان / 'Imrān):</strong><br>
+            Berakar dari <em>al-'amr</em> dan <em>al-'imārah</em>, yang bermakna kemakmuran, kelangsungan hidup yang berkah, dan pembangunan peradaban spiritual. Nama 'Imran melambangkan keluarga yang memakmurkan mihrab peribadatan dan mengabdikan seluruh keturunannya untuk tegaknya kalimatullah.
+        </li>
+        <li>
+            <strong>6. '-L-M (ع - ل - م — Akar Kata ٱلْعَـٰلَمِين / Al-'Ālamīn):</strong><br>
+            Ibnu Faris mencatat bahwa akar ini berporos pada <em>al-atsar wal-'alāmah</em> (tanda pengenal/jejak bukti). Seluruh alam semesta disebut <em>'Ālam</em> karena eksistensinya menjadi tanda bukti ontologis paling nyata yang menunjukkan eksistensi, kemahakuasaan, dan keesaan Sang Maha Pencipta.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>إِنَّ</strong></td>
+                <td>Huruf taukid wa nashab mabni 'alal-fath.</td>
+                <td>Menasabkan isim dan merafa'kan khabar. Tidak memiliki kedudukan i'rab tersendiri.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Ism 'alam jalalah.</td>
+                <td><strong>Ism Inna</strong> manshub bil-fathah azh-zhahirah pada huruf akhir.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱصْطَفَىٰٓ</strong></td>
+                <td>Fi'il madhi wazan <em>Ifta'ala</em> (افتعل) dari akar ص-ف-و. Huruf Ta' diganti Tha' (ibdal).</td>
+                <td>Fi'il madhi mabni 'alal-fathal-muqaddar 'ala alif li-ta'adzdzur. Fa'il-nya adalah dhamir mustatir jawazan takdirnya (هُوَ) kembali kepada lafaz Allah. Jumlah fi'liyyah <em>iṣhṭhafā...</em> berada <strong>fi mahalli raf'in Khabar Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ءَادَمَ</strong></td>
+                <td>Ism 'alam 'ajami, mamnu' minash-sharf.</td>
+                <td><strong>Maf'ūl bih awwal</strong> bagi fi'il <em>iṣhṭhafā</em>, manshub bil-fathah azh-zhahirah tanpa tanwin.</td>
+            </tr>
+            <tr>
+                <td><strong>وَنُوحًا</strong></td>
+                <td>Wawu athaf + ism 'alam munsharif.</td>
+                <td><strong>Ma'ṭhūf</strong> kepada <em>Ādama</em>, manshub bil-fathah azh-zhahirah bertanwin.</td>
+            </tr>
+            <tr>
+                <td><strong>وَءَالَ</strong></td>
+                <td>Wawu athaf + ism tsulatsi mudhaf.</td>
+                <td><strong>Ma'ṭhūf</strong> kepada maf'ul bih, manshub bil-fathah azh-zhahirah, berkedudukan sebagai <em>Mudhaf</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِبْرَٰهِيمَ</strong></td>
+                <td>Ism 'alam 'ajami, mamnu' minash-sharf.</td>
+                <td><strong>Mudhāf Ilayh</strong> majrur bil-fathah niyabatan 'anil kasrah karena terhalang dari tanwin ('alamiyyah + 'ujmah).</td>
+            </tr>
+            <tr>
+                <td><strong>وَءَالَ</strong></td>
+                <td>Wawu athaf + ism mudhaf.</td>
+                <td><strong>Ma'ṭhūf</strong> manshub bil-fathah azh-zhahirah, berkedudukan sebagai <em>Mudhaf</em> kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>عِمْرَٰنَ</strong></td>
+                <td>Ism 'alam mamnu' minash-sharf ('alamiyyah + alif nun za'idah).</td>
+                <td><strong>Mudhāf Ilayh</strong> majrur bil-fathah niyabatan 'anil kasrah liannahu mamnu' minash-sharf.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَى</strong></td>
+                <td>Harf jarr mabni 'alas sukun.</td>
+                <td>Huruf jar yang menunjukkan makna <em>al-isti'lā' al-ma'nawī</em> (keunggulan derajat dan martabat kehormatan).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَـٰلَمِينَ ۝٣٣</strong></td>
+                <td>Ism jamak mudzakkar salim (mulhaq).</td>
+                <td><strong>Ism Majrūr</strong> bi-<em>'alā</em> dengan tanda jar huruf Yā'. Frasa jarr wa majrur (<em>'alal-'ālamīn</em>) secara sintaksis <strong>muta'alliq</strong> langsung kepada fi'il <em>iṣhṭhafā</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'āni — Uslūb at-Taukīd & At-Tartīb at-Tārīkhī (Sistematika Kronologis yang Berhikmah):</strong><br>
+            Pembukaan kalimat dengan huruf penguat <em>Inna</em> berfungsi menundukkan pengingkaran (<em>raddul inkār</em>) dari audiens yang ragu atau menolak kenabian Muhammad ﷺ dan kesucian Maryam. Penyebutan urutan: <strong>Adam &rarr; Nuh &rarr; Alu Ibrahim &rarr; Alu 'Imran</strong> mencerminkan hukum graduasi sejarah Ilahi: bermula dari figur individu penyangga pertama kemanusiaan (Adam), penyelamat peradaban dari azab kekufuran (Nuh), lalu bergeser menjadi institusi peradaban keluarga berakar tauhid universal (Keluarga Ibrahim), hingga mengerucut pada keluarga khusus penjaga kesucian mihrab penyambut al-Masih (Keluarga 'Imran).
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Majāz Mursal bi-'Alāqah al-Kulliyyah & Al-Iṭhlāq ma'a Irādatil-Khuṣhūṣh:</strong><br>
+            Frasa <em>'alal-'ālamīn</em> (di atas seluruh semesta alam) merupakan majaz yang menggunakan lafaz umum namun bermakna khusus (<em>'āmm urīda bihil khuṣhūṣh</em>). Keunggulan para nabi tersebut berlaku atas umat manusia pada masa generasinya masing-masing (<em>'ālamī zamānihim</em>), sebab bila dimaknai mutlak tanpa batas waktu, maka umat Nabi Muhammad ﷺ yang dinyatakan sebagai <em>khayra ummatin ukhrijat lin-nās</em> (QS. 3:110) akan tertolak. Diksi ini mengokohkan bahwa setiap era memiliki lentera kesucian yang Allah tegakkan sebagai hujah atas manusia.
+        </li>
+        <li>
+            <strong>Ilmu Badī' — Murā'ātun-Nazhīr (Harmoni Hubungan Semantis Asosiatif):</strong><br>
+            Al-Qur'an merajut keindahan badi' dengan mengumpulkan mata rantai pembawa lentera wahyu dalam satu untaian selaras. Di dalamnya terdapat perpaduan antara <em>'Athf al-Khāṣhṣh 'alal-'Āmm</em> (pengkhususan Ali 'Imran setelah menyebut Ali Ibrahim, padahal keluarga 'Imran adalah bagian dari anak cucu Ibrahim), demi memuliakan (<em>li-syarafihim</em>) keluarga yang menjadi latar belakang kelahiran Isa AS.
+        </li>
+        <li>
+            <strong>I'jāz Fonetik — Al-Ibdāl ash-Ṣhawti (Transformasi Suara yang Mengguncang Jiwa):</strong><br>
+            Peleburan huruf Ta' menjadi Tha' pada lafaz <em>iṣhṭhafā</em> (dari asalnya <em>iṣhtafā</em>) menghadirkan letupan fonetik yang tebal, berwibawa, dan kokoh melalui perjumpaan dua huruf ithbaq (Shad dan Tha'). Getaran akustik ini mengisyaratkan kepada pendengaran bahwa "pemilihan" Allah bukanlah keputusan acak atau ringan, melainkan penetapan takdir yang maha agung, maha kokoh, dan berakar pada kemurnian zat yang tak tergoyahkan.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Hubungan Harmonis dengan Penutup Blok 1 / Ayat 31–32):</strong><br>
+            Pada dua ayat terakhir Blok 1 (QS. 3:31–32), Allah menegaskan syarat mutlak meraih cinta Ilahi: <em>"Katakanlah (Muhammad), jika kamu mencintai Allah, ikutilah aku (ittibā'), niscaya Allah mencintaimu..."</em> disusul perintah tegas: <em>"Taatilah Allah dan Rasul..."</em>. Ayat 33 hadir sebagai jawaban ontologis: Mengapa Rasulullah Muhammad ﷺ wajib ditaati dan diikuti secara mutlak? Karena beliau bukanlah figur yang muncul tanpa akar spiritual, melainkan mata rantai puncak dari garis kesucian kenabian (<em>Ash-Shifwah</em>) yang telah Allah tetapkan sejak Adam, Nuh, Ali Ibrahim (jalur Ismail), hingga Ali 'Imran!
+        </li>
+        <li>
+            <strong>Siyāq (Arsitektur Tematik Blok 2 & Dialog Teologis dengan Nasrani Najran):</strong><br>
+            Ayat 33 adalah batu penjuru resmi bagi seluruh narasi Blok 2 (Ayat 33–63). Di blok inilah Al-Qur'an membedah biografi agung Keluarga 'Imran: mulai dari nazar kesucian ibunda Maryam (Hannah), kelahiran Maryam, pengasuhan Zakariya, mukjizat kelahiran Yahya, hingga mukjizat penciptaan Isa AS tanpa ayah serta penolakan keras atas doktrin penuhanannya yang ditutup dengan ajakan <em>Mubahalah</em> di Ayat 61. Ayat 33 menetapkan premis utama: Isa AS adalah manusia mulia keturunan keluarga terpilih, bukan anak biologis Allah!
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 34 dan Seterusnya):</strong><br>
+            Ayat 33 segera diikat dengan ayat berikutnya (Ayat 34): <em>"Dzurriyyatam ba'dhuhā mim ba'dh, wallāhu Samī'un 'Alīm"</em> (Satu keturunan yang sebagiannya berasal dari sebagian yang lain...). Penegasan kata <em>Dzurriyyah</em> (keturunan/genealogi) di ayat 34 secara langsung menjelaskan mekanisme pemilihan pada ayat 33: bahwa kesucian ini mengalir dalam transmisi spiritual dan pengasuhan keluarga yang rabbani, yang kemudian langsung dicontohkan secara konkret pada kisah istri 'Imran di Ayat 35.
+        </li>
+    </ul>
+
+    <h3>2. Rekonstruksi Sosio-Historis: Madinah Tahun ke-9 H & Diplomasi Peradaban</h3>
+    <p>
+        Konteks pewahyuan ayat ini berkelindan dengan peristiwa kedatangan 60 tokoh elit delegasi Kristen Najran ke Masjid Nabawi di Madinah pada tahun ke-9 Hijriyah (<em>'Āmul Wufūd</em> / Tahun Delegasi). Delegasi yang dipimpin oleh Al-'Aqib (Abdul Masih) sebagai pemimpin politik dan Uskup Abu Haritsah bin 'Alqamah sebagai otoritas teologis tertinggi, membawa argumentasi kristologi yang canggih: mereka berargumen bahwa karena Isa lahir dari seorang perawan tanpa perantara sperma laki-laki, maka Isa niscaya memiliki substansi keilahian (anak Allah).
+    </p>
+    <p>
+        Al-Qur'an menangkis logika tersebut dengan menghadirkan komparasi historis yang melumpuhkan: Bila kelahiran tanpa ayah dijadikan dalil ketuhanan, maka Adam AS jauh lebih berhak dipertuhankan karena ia diciptakan tanpa ayah dan tanpa ibu! Dengan menyejajarkan Adam, Nuh, Ali Ibrahim, dan Ali 'Imran, Al-Qur'an mereduksi status Isa AS ke derajat kemanusiaan yang terhormat: ia adalah hamba Allah, rasul-Nya, dan buah dari keluarga suci yang terpilih, steril dari segala atribut penuhanan yang dipaksakan oleh doktrin gereja Konsili Nicea.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — Riwayat Klasik (<em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>):</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>iṣhṭhafā</em> adalah Allah mengikhlaskan dan mengkhususkan mereka untuk mengemban risalah kenabian dan ketaatan mutlak. Menanggapi frasa <em>'alal-'ālamīn</em>, At-Tabari meriwayatkan penafsiran Al-Hasan Al-Bashri dan Qatadah: keunggulan tersebut adalah keunggulan atas orang-orang pada zamannya masing-masing. Terkait kata <em>Āl</em>, At-Tabari menegaskan bahwa yang dimaksud adalah orang-orang yang beriman dan mengikuti risalah mereka, sebab hubungan darah semata yang terputus dari tali keimanan (seperti anak Nabi Nuh yang tenggelam atau Kan'an) secara eksplisit dinyatakan oleh Allah: <em>"Innahū laysa min ahlika innahū 'amalun ghayru ṣhāliḥ"</em> (QS. Hud: 46).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — Eksegesis Atsar & Genealogi (<em>Tafsīr Al-Qur'ān al-'Azhīm</em>):</strong><br>
+        Ibnu Katsir menggarisbawahi bahwa ayat ini diturunkan sebagai mukadimah komprehensif sebelum mengisahkan Maryam dan Isa AS. Beliau mengidentifikasi bahwa 'Imran dalam ayat ini adalah <strong>'Imran ayahanda Maryam</strong> (Imran bin Matsan), seorang tokoh ulama dan imam peribadatan Bani Israil pada masanya, bukan 'Imran ayahanda Nabi Musa dan Harun (meskipun ada mufasir yang berpendapat mencakup keduanya). Ibnu Katsir merinci silsilah: dari Adam (manusia pertama yang diciptakan langsung oleh tangan kekuasaan Allah), Nuh (rasul pertama pasca-kesyirikan di muka bumi), Ali Ibrahim (yang darinya memancar cabang Ismail leluhur Nabi Muhammad ﷺ dan cabang Ishaq leluhur para nabi Bani Israil), hingga Ali 'Imran yang menjadi penutup garis kenabian Bani Israil melalui perantaraan Maryam dan putranya Isa AS.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — Teologi & Hukum Syariah (<em>Al-Jāmi' li Aḥkām al-Qur'ān</em>):</strong><br>
+        Al-Qurthubi menjadikan ayat ini sebagai dalil teologis ahlussunnah tentang keunggulan derajat para nabi di atas seluruh malaikat (<em>fadhīlatul-anbiyā' 'alal-malā'ikah</em>) karena lafaz <em>al-'ālamīn</em> mencakup seluruh wujud selain Allah. Terkait aspek fiqih sosial dan kepemimpinan, Al-Qurthubi membedah apakah kemuliaan nasab memiliki implikasi hukum syar'i. Beliau menyimpulkan bahwa kemuliaan nasab adalah nikmat pelengkap, namun kehormatan hakiki di hadapan hukum Allah semata-mata diukur dari ketakwaan, sebagaimana sabda Nabi ﷺ saat Fathu Makkah: <em>"Sesungguhnya Allah telah melenyapkan kesombongan jahiliyah dan kebanggaan terhadap nenek moyang!"</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — Rasional-Kalam & Balaghah:</strong><br>
+        Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> menegaskan bahwa pemilihan Ilahi (<em>al-iṣhṭhafā'</em>) tidak terjadi secara acak atau deterministik buta, melainkan bersandarkan pada keadilan dan hikmah Allah: Allah mengetahui bahwa jiwa para nabi tersebut memiliki potensi fitrah paling jernih, kesiapan moral (<em>isti'dād nafsī</em>) paling murni, dan kehendak paling tulus untuk memikul beban wahyu. Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti rahasia penyebutan <em>Āl</em>: mengapa bukan hanya Ibrahim dan 'Imran yang disebut, melainkan keluarganya? Jawabannya: untuk menunjukkan bahwa kesalehan yang diwariskan dalam tradisi pengasuhan rumah tangga menghasilkan generasi terpilih yang secara kolektif membela tauhid.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H) — Maqāṣhidī Kontemporer (<em>At-Taḥrīr wat-Tanwīr</em>):</strong><br>
+        Ibnu 'Asyur memandang penataan empat nama ini sebagai arsitektur sejarah peradaban spiritual manusia:
+        <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li><em>Adam</em> melambangkan asal mula fitrah kemanusiaan dan martabat akal.</li>
+            <li><em>Nuh</em> melambangkan regenerasi peradaban moral baru pasca-kebinasaan kaum pagan.</li>
+            <li><em>Alu Ibrahim</em> melambangkan globalisasi tauhid melalui syariat perjanjian monoteistik universal.</li>
+            <li><em>Alu 'Imran</em> melambangkan perlawanan spiritual dan sublimasi batin terhadap kejumudan legalistik kaum Farisi (Yahudi) yang kehilangan ruh, serta membersihkan akidah dari paganisme helenistik Romawi.</li>
+        </ul>
+        Ibnu 'Asyur menyimpulkan bahwa ayat ini mempersiapkan ruang kesadaran umat manusia untuk menyambut penutup dari seluruh rantai kesucian tersebut, yakni diutusnya Nabi Muhammad ﷺ.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Konteks Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan dengan gaya bahasa sastra yang sangat menyentuh: <em>"Perhatikanlah betapa ajaibnya takdir Allah. Keluarga 'Imran bukanlah dinasti kaisar Romawi yang megah, bukan pula pembesar Kisra Persia yang bermahkota emas. Mereka hanyalah keluarga bersahaja di sudut desa sunyi Palestina, yang hidupnya dihabiskan dalam sujud di mihrab Baitul Maqdis. Namun Allah mengabadikan nama keluarga ini menjadi nama surah terpanjang ketiga dalam kitab suci Al-Qur'an, menenggelamkan nama-nama maharaja dunia yang fana."</em><br>
+        Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menambahkan bahwa penggunaan kata <em>iṣhṭhafā</em> adalah peringatan tajam: keterpilihan seseorang di hadapan Allah tidak pernah bersumber dari privilege darah, melainkan penyucian jiwa yang berkelanjutan. Tafsir Kemenag RI menggarisbawahi urgensi pembinaan keluarga sakinah berbasis tauhid sebagai pilar ketahanan moral bangsa.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Eksegesis</th>
+                <th>Titik Temu Kesepakatan (Ijmā')</th>
+                <th>Ragam Sudut Pandang (Ikhtilāf Tanawwu')</th>
+                <th>Sintesis & Tarjīḥ Solutif</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Identitas 'Imrān</strong></td>
+                <td>Seluruh ulama sepakat bahwa 'Imran adalah tokoh suci yang memiliki kedudukan istimewa dalam sejarah ketauhidan.</td>
+                <td>
+                    • <strong>Mayoritas Mufasir (Ibnu Katsir, At-Tabari, Qatadah):</strong> 'Imran bin Matsan, ayahanda Maryam binti 'Imran (kakek Nabi Isa AS).<br>
+                    • <strong>Pendapat Lain (Abu Muslim al-Ashfahani, Muqatil):</strong> 'Imran ayahanda Nabi Musa dan Harun AS.
+                </td>
+                <td>
+                    Konteks surah (<em>siyāq</em>) yang secara langsung membahas istri 'Imran (Hannah) dan kelahiran Maryam pada ayat 35 menegaskan secara pasti bahwa yang dimaksud utama adalah 'Imran ayahanda Maryam, tanpa menafikan kemuliaan 'Imran ayah Musa.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan Keunggulan (<em>'Alal-'Ālamīn</em>)</strong></td>
+                <td>Para nabi dan rasul memiliki keunggulan martabat mutlak di atas manusia awam.</td>
+                <td>
+                    • <strong>Pendapat 1 (Al-Hasan, Qatadah, Ibnu Katsir):</strong> Keunggulan berlaku nisbi atas manusia pada zaman mereka masing-masing (<em>'ālamī zamānihim</em>).<br>
+                    • <strong>Pendapat 2 (Ar-Razi, Sebagian Mutakallimin):</strong> Keunggulan berlaku mutlak atas seluruh makhluk selain para nabi penutup.
+                </td>
+                <td>
+                    Pendapat pertama lebih rajih dan konsisten dengan kaidah ushul: keunggulan zaman menjamin bahwa Nabi Muhammad ﷺ tetap memegang predikat <em>Sayyid Waladi Adam</em> dan umat Islam sebagai <em>Khayra Ummah</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Definisi Kata <em>Āl</em> (Keluarga)</strong></td>
+                <td>Kata <em>Āl</em> mencakup pengikut setia yang seakidah dan sejalan dalam risalah ketauhidan.</td>
+                <td>
+                    • <strong>Ulama Salaf:</strong> Menggabungkan hubungan nasab biologis orang-orang saleh dengan kesatuan iman.<br>
+                    • <strong>Ulama Rasionalis:</strong> Membatasi makna <em>Āl</em> hanya pada orang yang beriman, mengecualikan anak-istri yang kafir secara mutlak.
+                </td>
+                <td>
+                    Dua dimensi tersebut berpadu harmonis: keluarga para nabi yang terpilih adalah mereka yang memiliki pertalian darah sekaligus pertalian akidah murni.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan psikologis berikut merupakan ikhtiar tadabbur dan sintesis reflektif analitis, bukan klaim penafsiran wahyu yang bersifat mutlak, dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Dekonstruksi Paradigma: Feodalisme Etnis vs Meritokrasi Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Sekuler Modern</th>
+                <th>Pola Pikir Qur'ani (Rabbani)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sumber Kehormatan</strong></td>
+                <td><strong>Feodalisme & Etnosentrisme:</strong> Kehormatan ditentukan oleh kasta darah, keturunan biologis, hak istimewa dinasti (<em>privilege</em>), atau status kekayaan material.</td>
+                <td><strong>Doktrin Ash-Shifwah (Kesucian Batin):</strong> Keterpilihan hakiki adalah anugerah Allah yang bersandar pada kemurnian tauhid, integritas moral, dan ketundukan mutlak di hadapan kebenaran.</td>
+            </tr>
+            <tr>
+                <td><strong>Arah Orientasi Hidup</strong></td>
+                <td><strong>Ego-Centric & Popularitas:</strong> Mengejar pengakuan sosial, dominasi politik, penumpukan aset duniawi, dan glorifikasi nama keluarga demi prestise semu.</td>
+                <td><strong>Stewardship (Amanah Risalah):</strong> Memposisikan eksistensi diri dan keluarga sebagai wakaf peradaban untuk meninggikan kalimat Allah dan melayani kemanusiaan.</td>
+            </tr>
+            <tr>
+                <td><strong>Transmisi Nilai Keluarga</strong></td>
+                <td><strong>Materialistik-Transaksional:</strong> Mewariskan modal finansial, koneksi nepotistik, dan kenyamanan hedonis tanpa pondasi ketahanan akidah.</td>
+                <td><strong>Trans-Generational Spiritual Capital:</strong> Membangun ekosistem keluarga sebagai madrasah penyucian jiwa dan pembentukan karakter kenabian lintas generasi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Qur'ani</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Purity-Capacity Model (Hukum Kapasitas Wadah Kesucian):</strong><br>
+            <em>Premis:</em> Sebagaimana air murni hanya dapat ditampung dalam bejana yang steril tanpa racun, demikian pula wahyu, hikmah, dan amanah kepemimpinan peradaban Ilahi hanya akan diletakkan pada jiwa yang telah mengalami proses <em>iṣhṭhafā'</em> (penyucian total dari kekeruhan syirik, kesombongan, dan syahwat hewani). Seseorang tidak dapat menuntut peran besar dalam kebaikan bila bejana batinnya masih penuh dengan limbah dengki, narsisme, dan riya'.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Trans-Generational Spiritual Capital (Akumulasi Modal Ruhani Lintas Generasi):</strong><br>
+            <em>Premis:</em> Kesalehan bukanlah fenomena atomik yang berdiri sendiri secara terisolasi. Penyejajaran <em>Ālu Ibrāhīm</em> dan <em>Ālu 'Imrān</em> membuktikan bahwa air mata munajat, integritas moral, dan makanan halal yang diperjuangkan oleh orang tua di mihrab keheningan akan membentuk resonansi spiritual yang mengalir melindungi anak cucu hingga berabad-abad kemudian.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Meruntuhkan Narcissistic Entitlement</h3>
+    <p>
+        Dalam kajian psikologi kognitif modern, manusia kerap terjebak ke dalam bias <em>Halo Effect</em> keturunan dan sindrom <em>Narcissistic Entitlement</em>: ilusi kognitif bahwa seseorang secara inheren berhak diistimewakan, dimaafkan dari kesalahan, atau diangkat derajatnya semata-mata karena ia menyandang nama keluarga terhormat atau terafiliasi dengan kelompok tertentu.
+    </p>
+    <p>
+        QS. 3:33 menghantam sindrom mental ini secara telak. Al-Qur'an menunjukkan bahwa Adam AS pernah tergelincir memakan buah terlarang, namun ia dipilih karena kesediaannya merunduk dalam taubat nasuha (<em>Rabbanā zhalamnā anfusanā...</em>). Keterpilihan para nabi bukanlah privilese tanpa ujian, melainkan kesiapan memikul salib penderitaan dakwah, penolakan sosial, dan pengorbanan jiwa raga. Kesadaran ini melahirkan <em>Spiritual Humility</em> (ketundukan batin yang sejati): bahwa nasab mulia tidak ada artinya jika amal perbuatan tertinggal ke belakang (<em>Man bath-tha'a bihī 'amaluh, lam yusri' bihī nasabuh</em> — HR. Muslim).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Diagnosis Krisis Peradaban: Fenomena "Dinasti Nepotistik" & Etnonasionalisme</h3>
+    <p>
+        Abad ke-21 menyaksikan kebangkrutan moral peradaban modern dalam dua manifestasi ekstrem:
+    </p>
+    <ul>
+        <li>
+            <strong>Nepotisme & Oligarki Dinastik:</strong> Di panggung politik global dan nasional, akses kepemimpinan publik sering kali dibajak oleh oligarki keluarga melalui rekayasa hukum, modal kapital raksasa, dan politik dinasti tanpa kualifikasi integritas moral. Keturunan biologis dijadikan dalih mutlak untuk melanggengkan kekuasaan otoriter.
+        </li>
+        <li>
+            <strong>The "Chosen People" Complex Modern:</strong> Kebangkitan supremasi rasial, politik identitas ekstrem, dan etnonasionalisme sempit di berbagai belahan dunia mencerminkan kembalinya mentalitas arogan para rabi Yahudi era Madinah: meyakini bangsanya sebagai manusia kasta pertama dan memperlakukan kelompok lain sebagai entitas inferior yang boleh ditindas.
+        </li>
+    </ul>
+
+    <h3>2. Dekonstruksi Institusi Keluarga di Era Post-Modern</h3>
+    <p>
+        Di sisi lain, peradaban Barat sekuler sedang mengalami kehancuran pondasi keluarga: epidemi perceraian, gerakan *anti-natalisme*, legalisasi dekonstruksi gender, maraknya fenomena *fatherless generation* (hilangnya figur keteladanan ayah), dan terputusnya transmisi nilai antar-generasi akibat dominasi algoritma media sosial. Anak-anak modern tumbuh terasing di rumah sendiri, terpapar pornografi dan adiksi digital tanpa perlindungan perisai spiritual orang tua.
+    </p>
+
+    <h3>3. Solusi Qur'ani: Revitalisasi Model Pendidikan Keluarga 'Imran</h3>
+    <p>
+        Menghadapi kehampaan peradaban tersebut, QS. Ali 'Imran ayat 33 menawarkan cetak biru peradaban yang revolusioner: <strong>Peradaban Berbasis Kesucian Keluarga</strong>. Keluarga bukanlah sekadar unit ekonomi-biologis untuk memenuhi kebutuhan konsumtif, melainkan inkubator spiritual dan pabrik pencetak karakter pejuang kebenaran. Solusi krisis kepemimpinan dunia tidak dimulai dari rapat-rapat parlemen yang korup, melainkan dimulai dari keheningan mihrab rumah tangga: dari orang tua yang menundukkan nafsu seraya mempersembahkan janin dalam kandungannya murni untuk mengabdi kepada agama Allah.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit Harian (&lt; 5 Menit) — Audit Niat & Doa Penyucian Bejana Kalbu:</strong><br>
+                Setiap pagi sebelum membuka gawai atau melangkah keluar rumah untuk beraktivitas, duduklah dengan hening selama 3 menit. Letakkan tangan kanan di dada kiri, lalu lafalkan dengan penuh kerendahan hati: <em>"Allāhummaṣh-ṭhafinī li-dīnika wa thā'atik, wa thahhir qalbī min kulli syawb"</em> (Ya Allah, pilihlah diriku untuk membela agama-Mu dan ketaatan kepada-Mu, dan bersihkanlah hatiku dari segala kekeruhan ego, riya', dan cinta pujian manusia).
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Rule) — Meritokrasi Berbasis Integritas Batin:</strong><br>
+                Saat Anda diamanahi wewenang memilih rekan bisnis, mengangkat karyawan, menentukan pemimpin tim, atau memilih calon pasangan hidup, terapkan aturan eliminasi ketat: <em>Abaikan glorifikasi privilege keluarga, status sosial, atau penampilan luar semata; tempatkan kesucian moral (amanah, kejujuran di ruang sunyi, dan komitmen tauhid) sebagai filter penentu nomor satu</em>. Jangan pernah mengorbankan integritas demi melayani politik dinasti atau nepotisme sempit.
+            </li>
+            <li>
+                <strong>Komitmen Etika Relasional — Menegakkan "Mihrab Keluarga" di Rumah:</strong><br>
+                Alokasikan waktu khusus minimal 15–20 menit setiap malam (misalnya antara Maghrib dan Isya') tanpa gawai dan televisi bersama pasangan dan anak-anak. Jadikan ruang tersebut sebagai "Mihrab Ali 'Imran": bacakan Al-Qur'an secara tartil, diskusikan satu hikmah moral kehidupan, dan panjatkan doa bersama agar anak keturunan diselamatkan dari fitnah zaman dan diikat dalam mata rantai orang-orang saleh.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Motif Keterpilihan:</strong> <em>"Apakah aku mengejar kesalehan, ilmu, dan prestasi hidup ini demi terpilih dalam pandangan Allah Yang Maha Suci, ataukah aku diam-diam hanya menginginkan validasi, kekaguman manusia, dan legitimasi kebanggaan keluarga?"</em>
+            </li>
+            <li>
+                <strong>Uji Wadah Batin:</strong> <em>"Jika Allah menatap ke dalam bejana hatiku detik ini, apakah Dia mendapati wadah yang bersih (shafwah) dan layak menerima amanah kemuliaan-Nya, ataukah bejana jiwaku masih penuh dengan lumpur iri hati, kepalsuan di ruang sunyi, dan dendam yang mengeruhkan batin?"</em>
+            </li>
+            <li>
+                <strong>Uji Warisan Lintas Generasi:</strong> <em>"Warisan hakiki apa yang secara sadar sedang aku persiapkan untuk anak keturunanku: apakah hanya tumpukan aset materi dan kenyamanan duniawi yang fana, ataukah keteguhan akar tauhid dan kesucian akhlak sebagaimana yang diwariskan oleh Keluarga Ibrahim dan Keluarga 'Imran?"</em>
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 22px; direction: rtl; text-align: right; line-height: 2.1; margin-bottom: 12px;">
+            اللَّهُمَّ يَا مَنِ اصْطَفَى آدَمَ وَنُوحًا وَآلَ إِبْرَاهِيمَ وَآلَ عِمْرَانَ عَلَى الْعَالَمِينَ، نَسْأَلُكَ بِعِزَّتِكَ وَجَلَالِكَ أَنْ تَصْطَفِيَ قُلُوبَنَا لِمَعْرِفَتِكَ، وَأَلْسِنَتَنَا لِذِكْرِكَ، وَجَوَارِحَنَا لِطَاعَتِكَ. اللَّهُمَّ طَهِّرْ سَرَائِرَنَا مِنَ الدَّنَسِ وَالشَّوْبِ، وَاجْعَلْنَا وَذُرِّيَّاتِنَا هُدَاةً مَهْدِيِّينَ غَيْرَ ضَالِّينَ وَلَا مُضِلِّينَ. رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا.
+        </p>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, Dzat yang telah memilih dan menyucikan Adam, Nuh, keluarga Ibrahim, dan keluarga 'Imran di atas seluruh semesta alam. Kami bersimpuh memohon dengan kemuliaan dan keagungan-Mu: pilihlah kalbu kami untuk senantiasa ma'rifat kepada-Mu, sucikanlah lisan kami untuk senantiasa berdzikir kepada-Mu, dan bimbinglah raga kami untuk istiqamah dalam ketaatan kepada-Mu. Ya Allah, bersihkanlah ruang batin kami yang paling sunyi dari segala kotoran syirik, riya', dan kekeruhan hawa nafsu. Tautkanlah kehidupan kami dan keluarga kami ke dalam mata rantai kesucian para nabi-Mu yang mulia. Wahai Tuhan kami, anugerahkanlah kepada kami pasangan dan keturunan yang menjadi penyejuk mata hati kami, dan jadikanlah kami teladan kepemimpinan bagi orang-orang yang bertakwa. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="../Blok 1 (Ayat 1-32)/003-032 - QS. Ali 'Imran Ayat 32.html">&larr; Kembali ke Ayat 32 (QS. 3:32)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 33</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-034 - QS. Ali 'Imran Ayat 34.html">Lanjut ke Ayat 34 (QS. 3:34) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

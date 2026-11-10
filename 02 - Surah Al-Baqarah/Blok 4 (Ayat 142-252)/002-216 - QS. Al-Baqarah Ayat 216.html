@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-216 - QS. Al-Baqarah Ayat 216 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-215 - QS. Al-Baqarah Ayat 215.html">&larr; Ayat Sebelumnya (QS. 2:215)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-217 - QS. Al-Baqarah Ayat 217.html">Ayat Berikutnya (QS. 2:217) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 4 (Ayat 142–252) | Klaster 7: Syariat Pertahanan, Infaq, & Regulasi Sosial-Keluarga (Ayat 215–242)</span>
+        <span class="badge">25 Kata | 94 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 216</h1>
+    <div class="transliteration">
+        "Kutiba 'alaikumul-qitālu wa huwa kurhul lakum, wa 'asā an takrahū syai'aw wa huwa khairul lakum, wa 'asā an tuḥibbū syai'aw wa huwa syarrul lakum, wallāhu ya'lamu wa antum lā ta'lamūn(a)"
+    </div>
+    <div class="thematic-title">
+        Konstitusi Kewajiban Perang Membela Eksistensi (Al-Qitāl): Paradoks Persepsi Manusiawi, Dialektika Afektif ('Asā an Takrahū Syai'ā), dan Demarkasi Epistemologis Antara Keterbatasan Akal dan Kemahatahuan Mutlak Ilahi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Ayat 142–252 | Blok 4: Kemandirian Umat, Syariat Ibadah, Jihad Pertahanan, & Transformasi Hukum Sosial-Keluarga)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        كُتِبَ عَلَيْكُمُ ٱلْقِتَالُ وَهُوَ كُرْهٌۭ لَّكُمْ ۖ وَعَسَىٰٓ أَن تَكْرَهُوا۟ شَيْـًۭٔا وَهُوَ خَيْرٌۭ لَّكُمْ ۖ وَعَسَىٰٓ أَن تُحِبُّوا۟ شَيْـًۭٔا وَهُوَ شَرٌّۭ لَّكُمْ ۗ وَٱللَّهُ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ ۝٢١٦
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Diwajibkan atas kamu berperang (untuk membela eksistensi kebenaran, kedaulatan umat, dan menolak kezaliman tirani), padahal (perang) itu adalah sesuatu yang kamu benci (terasa amat berat bagi tabiat naluriah kemanusiaanmu). Namun boleh jadi kamu membenci sesuatu, padahal ia amat baik bagimu; dan boleh jadi kamu menyukai sesuatu, padahal ia amat buruk bagimu. Dan Allah Maha Mengetahui (hakikat maslahat dan kesudahan segala perkara), sedangkan kamu tidak mengetahui (kecuali sebatas apa yang tampak di permukaan)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Pilihan lafaz <em>kutiba</em> (كُتِبَ) menggunakan bentuk pasif gramatikal (<em>mabnī lil-majhūl / mabnī limā lam yusamma fā'iluh</em>) yang dalam bahasa hukum Al-Qur'an berfungsi sebagai formula penetapan kewajiban konstitusional mutlak (<em>farḍh qath'ī</em>), setara dengan penetapan ibadah puasa (QS. 2:183) dan hukum qisas (QS. 2:178). Kata <em>kurh</em> (كُرْهٌ) dengan harakat dhammah pada kaf mengindikasikan rasa berat yang bersumber dari kelemahan tabiat fisik-biologis manusiawi (menghadapi risiko rasa sakit, luka, dan kematian), bukan penolakan ideologis terhadap ketetapan syariat. Penegasan <em>'asā</em> (عَسَىٰ) dari Allah Ta'ala bermakna kepastian hukum hikmah (<em>kullu 'asā minallāhi wājibah</em>), sedangkan penutup ayat memancang demarkasi epistemologis mutlak antara kemahatahuan pencipta dan kerabunan akal makhluk.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>كُتِبَ عَلَيْكُمُ</strong><br>(<em>Kutiba 'alaikumu</em>)</td>
+                <td>
+                    <strong>Huruf Kāf:</strong> Pangkal lidah bertemu langit-langit lembut, memiliki sifat <em>syiddah</em> dan <em>hams</em>.<br>
+                    <strong>Huruf Tā' & Bā':</strong> Ta kasrah keluar dari ujung lidah bertemu pangkal gigi seri atas; Ba fathah dari bibir dengan sifat <em>jahr</em>.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>).<br>
+                    <strong>Yā' Līn:</strong> Huruf Ya sukun setelah fathah diucapkan lembut tanpa sentakan.<br>
+                    <strong>Mīm Jamā'ah:</strong> Berharakat dhammah 'aridhah saat washal untuk menghindari pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il ini dalam bentuk <em>mabnī lil-majhūl</em> (<strong>Kutiba</strong>). Saat washal ke hamzah washal pada kata berikutnya, seluruh imam membaca dengan mendhammahkan mim jama'ah tanpa shilah (<em>'alaikumul-qitālu</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلْقِتَالُ</strong><br>(<em>Al-Qitālu</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Terbaca fathah saat <em>ibtidā'</em> dan gugur saat washal.<br>
+                    <strong>Al-Qamariyyah:</strong> Lam sukun terbaca jelas (<em>idzhar qamari</em>) sebelum huruf Qaf.<br>
+                    <strong>Huruf Qāf:</strong> Keluar dari pangkal lidah paling belakang (<em>aqshal lisān</em>), memiliki sifat <em>isti'lā'</em> (tafkhim tingkat ke-5 karena berharakat kasrah).<br>
+                    <strong>Mad Ashli/Thabi'i:</strong> Dibaca 2 harakat pada huruf Ta ber-alif.<br>
+                    <strong>Huruf Lām:</strong> Dibaca marfu' dengan dhammah zhahirah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca rafa' pada huruf Lam sebagai <em>nā'ibul fā'il</em>: <strong>Al-Qitālu</strong>. Menunjukkan konsensus qira'at mutlak bahwa perang pertahanan adalah subjek hukum yang diwajibkan secara universal.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَهُوَ كُرْهٌۭ لَّكُمْ ۖ</strong><br>(<em>Wa huwa kurhul lakum</em>)</td>
+                <td>
+                    <strong>Huruf Hā':</strong> Keluar dari pangkal tenggorokan (<em>aqshal halq</em>).<br>
+                    <strong>Huruf Rā':</strong> Berharakat sukun setelah dhammah, wajib dibaca <strong>Tafkhīm</strong> (tebal).<br>
+                    <strong>Idghām Bilā Ghunnah:</strong> Dhommatain pada Ha bertemu huruf Lam dibaca lebur sempurna tanpa dengung.<br>
+                    <strong>Idzhār Syafawī:</strong> Mim sukun bertemu huruf Wawu dibaca jelas dengan kehati-hatian tinggi (<em>idzhār syafawī syadīd</em>) agar makhraj mim tidak terserap ke dalam makhraj wawu.<br>
+                    <strong>Tanda Waqaf Shala (ۖ):</strong> <em>Al-washlu awlā</em> (washal lebih utama).
+                </td>
+                <td>
+                    • <strong>Abu 'Amr Al-Bashri, Al-Kisa'i, dan Abu Ja'far Al-Madani</strong> (serta riwayat Qalun 'an Nafi' dalam satu wajh): Membaca dengan <strong>Iskānul-Hā' (mensukunkan Ha)</strong>: <em>Wahwa kurhul lakum</em> (وَهْوَ).<br>
+                    • <strong>Tujuh Imam Lainnya ('Ashim, Nafi' riwayat Warsy, Ibnu Katsir, Hamzah, Ibnu 'Amir, Ya'qub, Khalaf Al-'Asyir):</strong> Membaca dengan <strong>Dhommul-Hā'</strong>: <em>Wa huwa kurhul lakum</em> (وَهُوَ).<br>
+                    • <em>Konsensus Lafaz Kurhun:</em> Seluruh sepuluh imam sepakat membaca dengan dhammah kaf (<em>kurhun</em>), menandakan keberatan alamiah biologis, bukan paksaan pihak luar.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَعَسَىٰٓ أَن</strong><br>(<em>Wa 'asā an</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfashil:</strong> Huruf mad Alif Layyinah Maqshurah di ujung kata bertemu Hamzah berharakat pada kata berikutnya.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Ta dibaca samar disertai ghunnah 2 harakat.
+                </td>
+                <td>
+                    • <strong>Imālah Kubrā:</strong> <strong>Hamzah, Al-Kisa'i, dan Khalaf Al-'Asyir</strong> membaca imalah kubra pada alif maqshurah: <em>Wa 'asē an</em>.<br>
+                    • <strong>Taqlīl (Bayna-bayna):</strong> <strong>Warsy 'an Nafi'</strong> membaca taqlil (antara fathah dan imalah): <em>Wa 'asè an</em>.<br>
+                    • <strong>Fath Murni:</strong> Tujuh imam lainnya membaca fath murni tanpa imalah: <em>Wa 'asā an</em>.<br>
+                    • <em>Kadar Mad Munfashil:</em> Warsy dan Hamzah membaca 6 harakat (<em>thūl</em>); 'Ashim (Hafsh) membaca 4 atau 5 harakat (<em>tawassuth</em>); Ibnu Katsir, Abu Ja'far, dan Qalun (wajh qashr) membaca 2 harakat (<em>qashr</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>تَكْرَهُوا۟ شَيْـًۭٔا</strong><br>(<em>Takrahū syai'ā</em>)</td>
+                <td>
+                    <strong>Huruf Khā':</strong> Keluar dari ujung tenggorokan (<em>adnal halq</em>), memiliki sifat <em>isti'lā'</em>, <em>hams</em>, dan <em>rakhwah</em>.<br>
+                    <strong>Mad Thabi'i:</strong> Huruf Ha ber-dhammah disambung Wawu sukun 2 harakat.<br>
+                    <strong>Alif Fāriqah:</strong> Penanda rasm jama' tidak dilafalkan.<br>
+                    <strong>Huruf Syīn & Yā' Līn:</strong> Memiliki sifat <em>tafasy-syi</em> (angin menyebar di mulut).<br>
+                    <strong>Idghām Bighunnah:</strong> Fathatain pada hamzah bertemu Wawu pada kata berikutnya dibaca lebur dengan dengung 2 harakat.
+                </td>
+                <td>
+                    • <strong>Mad Līn Mahmūz (Warsy 'an Nafi'):</strong> Warsy membaca huruf lin (Ya sukun) yang diikuti hamzah pada lafaz <em>syai'an</em> dengan panjang 4 harakat (<em>tawassuth</em>) atau 6 harakat (<em>thūl</em>).<br>
+                    • <strong>Idgham Tanpa Ghunnah (Khalaf 'an Hamzah):</strong> Khalaf membaca idgham tanpa ghunnah saat tanwin bertemu Wawu.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca idgham bighunnah 2 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَهُوَ خَيْرٌۭ لَّكُمْ ۖ</strong><br>(<em>Wa huwa khairul lakum</em>)</td>
+                <td>
+                    <strong>Huruf Khā' & Yā' Līn:</strong> Pengucapan lembut pada suku kata <em>khay-</em>.<br>
+                    <strong>Huruf Rā':</strong> Berharakat dhommatain dibaca <strong>Tafkhīm</strong>.<br>
+                    <strong>Idghām Bilā Ghunnah:</strong> Dhommatain bertemu huruf Lam dibaca lebur tanpa dengung.<br>
+                    <strong>Idzhār Syafawī:</strong> Mim sukun bertemu Wawu dibaca jelas.
+                </td>
+                <td>
+                    • <strong>Abu 'Amr, Al-Kisa'i, dan Abu Ja'far:</strong> Membaca sukun pada Ha: <em>Wahwa khairul lakum</em>.<br>
+                    • <strong>Jumhur:</strong> Membaca <em>Wa huwa khairul lakum</em>.<br>
+                    Seluruh imam sepakat membaca idgham bila ghunnah pada tanwin bertemu Lam.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَعَسَىٰٓ أَن تُحِبُّوا۟ شَيْـًۭٔا</strong><br>(<em>Wa 'asā an tuḥibbū syai'ā</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfashil:</strong> Alif maqshurah bertemu hamzah.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Ta dibaca samar ber-dengung.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>) dengan desah napas bersih.<br>
+                    <strong>Tasydīd Bā':</strong> Huruf Ba bertasydid dibaca dengan tekanan <em>syiddah</em> yang kokoh.<br>
+                    <strong>Idghām Bighunnah:</strong> Tanwin fathatain bertemu Wawu.
+                </td>
+                <td>
+                    Kaidah qira'at pada lafaz ini identik dengan lafaz ke-4 dan ke-5: Hamzah, Al-Kisa'i, dan Khalaf membaca imalah kubra pada <em>'asē</em>; Warsy membaca taqlil; Khalaf membaca idgham tanpa ghunnah pada tanwin bertemu Wawu; imam lainnya membaca fath murni dan idgham bighunnah.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَهُوَ شَرٌّۭ لَّكُمْ ۗ</strong><br>(<em>Wa huwa syarrul lakum</em>)</td>
+                <td>
+                    <strong>Huruf Syīn:</strong> Sifat <em>tafasy-syi</em> dan <em>hams</em>.<br>
+                    <strong>Huruf Rā' Bertasydid:</strong> Memiliki sifat <em>takrīr</em> yang tertahan dan dibaca <strong>Tafkhīm</strong> karena berharakat dhommatain.<br>
+                    <strong>Idghām Bilā Ghunnah:</strong> Tanwin dhommatain bertemu Lam.<br>
+                    <strong>Tanda Waqaf Qala (ۗ):</strong> <em>Al-waqfu awlā</em> (berhenti lebih utama untuk menyempurnakan makna sebelum kalimat epistemologis baru).
+                </td>
+                <td>
+                    • <strong>Abu 'Amr, Al-Kisa'i, dan Abu Ja'far:</strong> Membaca sukun pada Ha: <em>Wahwa syarrul lakum</em>.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca dhammah pada Ha: <em>Wa huwa syarrul lakum</em>. Seluruh imam sepakat waqaf pada akhir klausa ini untuk memberikan jeda kontemplasi makna.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَٱللَّهُ يَعْلَمُ</strong><br>(<em>Wallāhu ya'lamu</em>)</td>
+                <td>
+                    <strong>Lam Jalālah:</strong> Dibaca <strong>Tafkhīm</strong> (tebal) karena didahului oleh huruf Wawu berharakat fathah.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan dengan sifat <em>tawassuth</em> (aliran suara sedang).<br>
+                    <strong>Huruf Mīm:</strong> Berharakat dhammah murni.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tafkhim pada Lam Jalalah dan membaca marfu' pada fi'il mudhari' <strong>Ya'lamu</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>وَأَنتُمْ لَا تَعْلَمُونَ ۝٢١٦</strong><br>(<em>Wa antum lā ta'lamūn</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Ta dibaca samar dengan ghunnah 2 harakat.<br>
+                    <strong>Idzhār Syafawī:</strong> Mim sukun bertemu huruf Lam dibaca jelas tanpa dengung.<br>
+                    <strong>Mad Ashli:</strong> Pada huruf Lam Alif (<em>lā</em>) dibaca 2 harakat.<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Wawu mad bertemu Nun sukun 'aridhah di ujung ayat dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuth</em> pada huruf Nun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca ikhfa pada <em>antum</em> dan mengakhiri ayat dengan mad 'aridh lis-sukun. Konsensus mutlak ini mengunci ayat pada demarkasi epistemologi antara ilmu Allah yang tak terbatas dan keterbatasan pengetahuan manusia.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <p>
+        Secara kronologi pewahyuan hukum (<em>tasyri'</em>), ayat ini menandai fase ketiga dan final dalam penetapan doktrin pertahanan bersenjata bagi entitas politik umat Islam di Madinah. Setelah tiga belas tahun di Makkah umat diperintahkan menahan tangan dari kekerasan fisik (<em>kuffū aydiyakum</em>, QS. An-Nisa': 77), lalu diberikan izin membela diri secara terbatas pasca-Hijrah (QS. Al-Hajj: 39), Ayat 216 diturunkan pada tahun ke-2 Hijriyah menjelang ekspedisi Badar untuk menetapkan perang pertahanan sebagai kewajiban konstitusional negara (<em>farḍh</em>).
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Riwayat Sebab Turunnya Ayat (Atsar Sahih Riwayat Imam Ibnu Jarir At-Tabari & Ibnu Abi Hatim):</strong><br>
+        Diriwayatkan dari Ibnu Abbas r.a. dan Az-Zuhri bahwa ketika Allah menurunkan perintah perang di Madinah, kaum Muslimin yang baru saja menikmati stabilitas hidup dan persaudaraan pasca-konflik suku di Yatsrib merasa sangat berat menghadapi kenyataan pertumpahan darah. Perang menuntut pengorbanan jiwa, meninggalkan keluarga, dan rasa sakit fisik (<em>wa huwa kurhul lakum</em>). Maka Allah menurunkan ayat ini untuk mendidik psikologi iman mereka: bahwa apa yang dibenci oleh naluri biologis sering kali menyimpan maslahat peradaban yang agung (kemerdekaan, izzah, dan keadilan), sedangkan membiarkan kezaliman merajalela demi kenyamanan hidup adalah keburukan fatal yang menghancurkan masa depan umat.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 2965, 2966) & Sahih Muslim (No. 1742) dari Abdullah bin Abi Aufa r.a. — Etika Perang dan Larangan Menginginkan Pertempuran:</strong><br>
+        Rasulullah ﷺ berkhutbah di salah satu ekspedisi militer ketika matahari telah condong, seraya bersabda:<br>
+        <em>"Yā ayyuhan-nāsu lā tatamannaw liqā'al-'aduwwi, was'alullāhal-'āfiyah. Fa-idzā laqītumūhum fashbirū, wa'lamū annal-jannata taḥta zhilālissuyūf!"</em><br>
+        (Wahai sekalian manusia! Janganlah kalian berangan-angan dan mencita-citakan bertemu musuh dalam peperangan, dan mohonlah keselamatan dan kesejahteraan [<em>al-'āfiyah</em>] kepada Allah. Namun, apabila kalian telah berhadapan dengan mereka di medan perang, maka bersabarlah! Dan ketahuilah sesungguhnya surga itu berada di bawah naungan bayang-bayang pedang!). Hadits ini membuktikan bahwa perang dalam Islam bukanlah kultus pemujaan kekerasan, melainkan tindakan defensif darurat yang menuntut ketabahan mutlak saat terjadi agresi.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Muslim (No. 1907) & Sunan Abu Dawud (No. 2502) dari Abu Hurairah r.a. — Kesiapsiagaan Mental Bela Kebenaran:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Man māta wa lam yaghzu, wa lam yuḥaddits bihī nafsahū, māta 'alā syu'batin min nifāq."</em><br>
+        (Barang siapa yang meninggal dunia dalam keadaan belum pernah berperang membela jalan Allah dan hatinya tidak pernah terbersit niat tulus untuk mempersiapkan diri membela kebenaran, maka ia mati di atas salah satu cabang kemunafikan). Hadits ini membedah hubungan antara Ayat 216 dengan kejujuran integritas iman: seorang mukmin sejati tidak hidup dalam ilusi pasifisme palsu di tengah dunia yang sarat kezaliman.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Muslim (No. 2664) dari Abu Hurairah r.a. — Prinsip Pasrah Epistemologis dan Anti-"Law" (Andai):</strong><br>
+        Rasulullah ﷺ meletakkan fondasi kognitif terhadap takdir dan takdir syar'i:<br>
+        <em>"Al-mu'minul-qawiyyu khayrun wa aḥabbu ilallāhi minal-mu'minidh-dha'īfi wa fī kullin khayr. Iḥrish 'alā mā yanfa'uka, wasta'in billāhi wa lā ta'jiz. Wa in ashābaka syay'un falā taqul: 'Law annī fa'altu kāna kadzā wa kadzā', walākin qul: 'Qaddarallāhu wa mā syā'a fa'al', fa-inna 'law' taftaḥu 'amalasysyayṭān."</em><br>
+        (Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah, namun pada keduanya ada kebaikan. Bersemangatlah meraih apa yang bermanfaat bagimu, mohonlah pertolongan kepada Allah dan jangan lemah! Jika sesuatu yang tidak engkau sukai menimpamu, jangan katakan: 'Seandainya aku berbuat begini tentu jadinya begini dan begitu', melainkan katakanlah: 'Allah telah mentakdirkan dan apa yang Dia kehendaki pasti Dia perbuat'. Karena sesungguhnya kata 'seandainya' membuka pintu bagi amalan setan). Hadits ini adalah penjabaran langsung dari kaidah <em>Wallāhu ya'lamu wa antum lā ta'lamūn</em>.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Mu'jam Maqāyīs al-Lughah & Lisān al-'Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. K-T-B (ك-ت-ب — Kutiba):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> menetapkan bahwa poros utama akar kata ini adalah <em>al-jam'u wad-dhamm</em> (menghimpun, merajut, dan menyatukan bagian-bagian terpisah menjadi kesatuan yang kokoh). Dari sini muncul kata <em>katībah</em> (pasukan militer yang terorganisir rapi). Dalam diskursus syariat, <em>al-kitābah</em> bermakna pencatatan hukum yang telah diputuskan secara definitif dan mengikat (<em>al-farḍh wal-ījāb al-qath'ī</em>). Penggunaan bentuk pasif <em>kutiba</em> (كُتِبَ) mengindikasikan bahwa kewajiban ini bersumber langsung dari Otoritas Tertinggi (Allah Ta'ala) sebagai hukum perundang-undangan kosmik dan sosial yang tidak dapat ditawar.
+        </li>
+        <li>
+            <strong>2. Q-T-L (ق-ت-ل — Al-Qitāl):</strong><br>
+            Akar kata <em>Qāf-Tā'-Lām</em> berporos pada makna <em>idzlālul-amr wa izālatul-hayāh</em> (menghilangkan kehidupan atau melumpuhkan lawan). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> membedakan secara tajam antara <strong>Al-Qatl (الْقَتْل)</strong> dan <strong>Al-Qitāl (الْقِتَال)</strong>:<br>
+            • <em>Al-Qatl:</em> Pembunuhan sepihak tanpa perlawanan berimbang.<br>
+            • <em>Al-Qitāl:</em> Pertempuran bersenjata timbal-balik (<em>mufā'alah / musyārakah bayna tharafayn</em>) di antara dua kekuatan militer yang saling berhadapan. Al-Qur'an tidak mewajibkan pembunuhan sepihak, melainkan mewajibkan <em>al-qitāl</em>—yaitu pertahanan militer terorganisir untuk mematahkan agresi musuh dan meruntuhkan kekuasaan tirani.
+        </li>
+        <li>
+            <strong>3. K-R-H (ك-ر-ه — Kurhun vs Karhun):</strong><br>
+            Ibnu Faris dan Al-Jauhari menguraikan bahwa akar <em>Kāf-Rā'-Hā'</em> berporos pada <em>khilāfur-ridhā wal-maḥabbah</em> (sesuatu yang bertentangan dengan kesukaan dan kecondongan jiwa). Para pakar bahasa membedakan dua bentuk vokal:<br>
+            • <strong>Al-Karh (بِالْفَتْحِ — dengan fathah):</strong> Keterpaksaan yang diakibatkan oleh ancaman atau tekanan fisik dari pihak luar (<em>al-ikrāh minal-khārij</em>).<br>
+            • <strong>Al-Kurh (بِالضَّمِّ — dengan dhammah):</strong> Keberatan dan keengganan yang lahir dari dalam <strong>tabiat alamiah biologis manusiawi</strong> (<em>kahaaratun thabī'iyyah / mastaqsalathut-thibā'</em>), seperti keengganan orang sakit meminum obat pahit atau menjalani amputasi demi menyelamatkan nyawa.<br>
+            Pemilihan lafaz <strong>Kurhun</strong> di ayat ini membuktikan kelembutan psikologis wahyu: Al-Qur'an memvalidasi bahwa para sahabat membenci perang bukan karena mereka menolak perintah Allah, melainkan karena tabiat manusiawi yang secara alamiah takut mati, lelah, dan terluka.
+        </li>
+        <li>
+            <strong>4. 'A-S-Y (ع-س-ي — 'Asā):</strong><br>
+            Ibnu Faris menjelaskan bahwa <em>'Asā</em> adalah fi'il rajā' yang menunjukkan harapan terhadap sesuatu yang dekat terjadi (<em>at-tarajjī fī amrin qarībil-wuqū'</em>). Dalam percakapan manusia, <em>'asā</em> menandakan ketidakpastian atau probabilitas. Namun, ketika kata ini datang dari Allah Subhānahu wa Ta'ālā, para mufassir dan ahli bahasa sepakat merumuskan kaidah: <em>"Kullu 'asā fil-Qur'āni wājibah"</em> (Semua kata 'asā dari Allah bermakna keniscayaan dan kepastian hukum). Bagi Allah tidak ada ketidaktahuan; penggunaan kata <em>'asā</em> ditujukan kepada audiens manusia untuk merekonstruksi persepsi mereka bahwa kepastian hikmah Ilahi sering kali bertolak belakang dengan praduga subjektif mereka.
+        </li>
+        <li>
+            <strong>5. Kh-Y-R & Sy-R-R (خ-ي-ر / ش-ر-ر — Khayr & Syarr):</strong><br>
+            <em>Khayr</em> berporos pada sesuatu yang membawa kemaslahatan paripurna, kebajikan murni, dan keridhaan Allah. <em>Syarr</em> berporos pada kerusakan, kerugian eksistensial, dan kemurkaan-Nya. Kedua kata ini dihadirkan dalam bentuk nakirah tanpa alif-lam untuk menunjukkan keumuman dan keluasan spektrum: berapa banyak perkara yang tampak sepele namun menyimpan kebaikan atau malapetaka raksasa bagi kehidupan manusia.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>كُتِبَ</strong></td>
+                <td>Fi'il mādhi tsulātsī mujarrad bab <em>fa'ala – yaf'ulu</em>, dibina ke dalam bentuk <em>mabnī lil-majhūl</em> (mabni limā lam yusamma fā'iluh).</td>
+                <td>Fi'il mādhi mabni 'alal-fath. Membutuhkan <em>nā'ibul fā'il</em> yang marfu'.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَيْكُمُ</strong></td>
+                <td><em>'Alā</em>: Huruf jarr lil-isti'lā' al-ma'nawī.<br><em>Kum</em>: Dhamir muttashil jama' mudzakkar mukhāthab.</td>
+                <td>Jār wa majrūr berkedudukan <em>muta'alliq</em> (berkaitan erat) dengan fi'il <em>kutiba</em>. Pengedepannya (<em>taqdīm</em>) berfungsi untuk penekanan tanggung jawab (<em>al-ihtimām</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْقِتَالُ</strong></td>
+                <td>Bentuk <em>mashdar</em> dari fi'il <em>qātala – yuqātilu</em> di atas wazan <em>fi'āl</em> (فِعَال) dari bab <em>mufā'alah</em>.</td>
+                <td><strong>Nā'ibul Fā'il</strong> bagi <em>kutiba</em>, marfu' dengan tanda dhammah zhahirah di akhirnya. Jumlah fi'liyyah <em>kutiba 'alaikumul-qitālu</em> adalah jumlah isti'nāfiyyah (pembuka bahasan).</td>
+            </tr>
+            <tr>
+                <td><strong>وَهُوَ</strong></td>
+                <td><em>Wāw</em>: Wawu ḥāliyyah.<br><em>Huwa</em>: Dhamir munfashil lil-mufrad al-mudzakkar al-ghā'ib, merujuk kepada <em>Al-Qitāl</em>.</td>
+                <td>Dhamir munfashil mabni 'alal-fath fi mahalli raf'in <strong>Mubtada'</strong>. (Dalam qira'at Abu 'Amr dan Kisa'i dibaca mabni 'alas-sukun: <em>wahwa</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>كُرْهٌۭ</strong></td>
+                <td>Bentuk <em>mashdar</em> sima'i dari <em>kariha – yakrahu</em> di atas wazan <em>fu'l</em> (فُعْل). Berfungsi sebagai isim sifat/mashdar bermakna <em>makrūh</em>.</td>
+                <td><strong>Khabar Mubtada'</strong> bagi <em>huwa</em>, marfu' dengan dhammah zhahirah bertanwin.</td>
+            </tr>
+            <tr>
+                <td><strong>لَّكُمْ ۖ</strong></td>
+                <td><em>Lām</em>: Harf jarr lil-ikhtishāsh.<br><em>Kum</em>: Dhamir muttashil jama' mudzakkar fi mahalli jarr.</td>
+                <td>Jār wa majrūr berkedudukan <em>muta'alliq</em> dengan na'at mahdzuf bagi <em>kurhun</em> (taqdir: <em>kurhun kānun lakum</em>). Jumlah ismiyyah <em>wa huwa kurhul lakum</em> berkedudukan <strong>Fi Mahalli Nashbin Ḥāl</strong> (keadaan dari <em>al-qitāl</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَعَسَىٰٓ</strong></td>
+                <td><em>Wāw</em>: Wawu 'athaf / isti'nāfiyyah.<br><em>'Asā</em>: Fi'il mādhi jāmid min af'ālir-rajā'. Di sini berstatus <strong>Tāmmah</strong> (mencukupkan diri dengan fa'il berupa mashdar mu'awwal tanpa membutuhkan khabar).</td>
+                <td>Fi'il mādhi jāmid mabni 'alal-fath al-muqaddar 'alal-alif li-ta'adzdzur.</td>
+            </tr>
+            <tr>
+                <td><strong>أَن تَكْرَهُوا۟</strong></td>
+                <td><em>An</em>: Harf mashdariyyah wa nashb.<br><em>Takrahū</em>: Fi'il mudhāri' ma'lūm bersambung Wawu Jamā'ah.</td>
+                <td>Fi'il mudhāri' manshub dengan terbuangnya huruf Nun (<em>hadzfun-nūn</em>) karena termasuk <em>al-af'ālul khamsah</em>. Wawu jamā'ah berkedudukan sebagai <strong>Fā'il</strong>. Al-Mashdar al-mu'awwal (<em>an takrahū</em> = <em>karāhatukum</em>) berkedudukan <strong>Fi Mahalli Raf'in Fā'il</strong> bagi <em>'asā</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>شَيْـًۭٔا</strong></td>
+                <td>Isim jins nakirah menunjukkan generalisasi mutlak (<em>lit-tankīr wat-ta'mīm</em>).</td>
+                <td><strong>Maf'ūl Bih</strong> bagi fi'il <em>takrahū</em>, manshub dengan fathah zhahirah bertanwin.</td>
+            </tr>
+            <tr>
+                <td><strong>وَهُوَ خَيْرٌۭ لَّكُمْ ۖ</strong></td>
+                <td><em>Wāw</em>: Wawu ḥāliyyah.<br><em>Huwa</em>: Mubtada'.<br><em>Khayrun</em>: Khabar mubtada'.<br><em>Lakum</em>: Syibhul jumlah muta'alliq bi <em>khayr</em>.</td>
+                <td>Jumlah ismiyyah <em>wa huwa khairul lakum</em> berkedudukan <strong>Fi Mahalli Nashbin Ḥāl</strong> dari lafaz <em>syai'an</em> (makna: "padahal hal itu sejatinya adalah kebaikan murni bagi kalian").</td>
+            </tr>
+            <tr>
+                <td><strong>وَعَسَىٰٓ أَن تُحِبُّوا۟ شَيْـًۭٔا وَهُوَ شَرٌّۭ لَّكُمْ ۗ</strong></td>
+                <td>Struktur morfosintaksis simetris sempurna yang di-'athaf-kan kepada klausa sebelumnya: <em>'asā</em> tāmmah + mashdar mu'awwal fa'il + maf'ul bih + jumlah ismiyyah haliyyah.</td>
+                <td>Jumlah ma'thūfah pada jumlah sebelumnya. Menegaskan oposisi biner mutlak antara kecintaan nafsu manusia dan keburukan hakiki yang tersembunyi di baliknya.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ يَعْلَمُ</strong></td>
+                <td><em>Wāw</em>: Wawu isti'nāfiyyah.<br><em>Allāh</em>: Ism al-Jalālah.<br><em>Ya'lamu</em>: Fi'il mudhāri' marfu' rafa' dhammah, fa'il dhamir mustatir taqdiruhu <em>Huwa</em>.</td>
+                <td>Ism al-Jalālah berkedudukan sebagai <strong>Mubtada'</strong>. Jumlah fi'liyyah <em>ya'lamu</em> berkedudukan <strong>Fi Mahalli Raf'in Khabar Mubtada'</strong>. Maf'ul bih dibuang (<em>hadzful maf'ūl</em>) untuk menunjukkan cakupan ilmu yang tak terbatas (<em>li-ta'mīm al-'ilm</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَأَنتُمْ لَا تَعْلَمُونَ</strong></td>
+                <td><em>Wāw</em>: Wawu ḥāliyyah / 'athaf.<br><em>Antum</em>: Dhamir munfashil mubtada'.<br><em>Lā</em>: Harf nafyi.<br><em>Ta'lamūna</em>: Fi'il mudhāri' marfu' bi tsubūtin-nūn, Wawu fā'il.</td>
+                <td><em>Antum</em> berkedudukan sebagai <strong>Mubtada'</strong>. Jumlah fi'liyyah manfiyyah <em>lā ta'lamūn</em> berkedudukan <strong>Fi Mahalli Raf'in Khabar</strong>. Jumlah ismiyyah <em>wa antum lā ta'lamūn</em> berkedudukan <strong>Fi Mahalli Nashbin Ḥāl</strong> terhadap pengetahuan Allah (Allah senantiasa mengetahui dalam keadaan kalian sama sekali tidak mengetahui).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia Bina' lil-Majhul pada "Kutiba" (Penghapusan Subjek/Hadzf al-Fa'il):</strong><br>
+            Mengapa Allah tidak berfirman <em>Kataballāhu 'alaikumul-qitāl</em>? Dalam kaidah balaghah, penghapusan fa'il di sini memiliki fungsi ganda: (1) <em>Al-'Ilmu bih</em> (karena sudah mafhum dan pasti bahwa tidak ada yang berhak menetapkan syariat fardhu selain Allah), dan (2) <em>At-Tarkīz 'alal-fi'l wal-maktūb</em> (memusatkan perhatian psikologis audiens langsung pada substansi beban hukum yang harus dipikul, bukan pada proses penurunannya). Gaya bahasa ini menciptakan wibawa hukum yang sangat tegas dan mengikat.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Taqdim al-Jar wal-Majrur "'Alaikum" (Dahulu Beban Tanggung Jawab):</strong><br>
+            Mendahulukan frasa <em>'alaikum</em> sebelum na'ibul fa'il <em>al-qitāl</em> berfungsi untuk <em>al-ihtimām</em> (menegaskan bahwa beban peradaban ini jatuh tepat di atas pundak orang-orang beriman) dan <em>at-tasywīq</em> (membangkitkan ketegangan perhatian pendengar untuk mengetahui beban agung apakah yang diwajibkan atas mereka).
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-Muqābalah al-Murakkabah (Keseimbangan Oposisi Biner Paripurna):</strong><br>
+            Ayat ini menyajikan struktur <em>muqābalah</em> (keseimbangan kontras) yang sangat artistik dan simetris:
+            <ul>
+                <li>Klausa A: <em>wa 'asā an takrahū syai'an</em> (benci) ↔ <em>wa huwa khairun lakum</em> (baik).</li>
+                <li>Klausa B: <em>wa 'asā an tuḥibbū syai'an</em> (suka) ↔ <em>wa huwa syarrun lakum</em> (buruk).</li>
+            </ul>
+            Struktur paralel ini membentuk pola kognitif yang mematahkan ilusi emosi: Al-Qur'an membongkar fakta bahwa apa yang dicintai hawa nafsu sering kali merupakan racun yang mematikan, sedangkan apa yang dibenci tabiat fisik sering kali merupakan obat penawar yang menyelamatkan.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Thibāq as-Salb pada "Ya'lamu" dan "Lā Ta'lamūn" (Demarkasi Epistemologis):</strong><br>
+            Mempertemukan kata kerja positif <em>ya'lamu</em> (Maha Mengetahui) dengan bentuk negatifnya <em>lā ta'lamūn</em> (kalian tidak mengetahui) menciptakan efek <em>thibāq salb</em> yang sangat tajam. Pembuangan objek kalimat (<em>hadzful maf'ūl</em>) pada kedua kata kerja ini meluaskan cakupan makna secara mutlak: Allah mengetahui seluruh realitas, awal, akhir, hakikat gaib, dan masa depan; sedangkan manusia tidak memiliki pengetahuan apa pun tentang kesudahan hakiki dari pilihan hidupnya.
+        </li>
+        <li>
+            <strong>I'jaz Fonetik & Efek Akustik Jiwa:</strong><br>
+            Secara fonologis, ayat ini diawali dengan gesekan desah huruf-huruf hams dan syiddah yang berat: huruf Kaf, Ta, Kha, dan Ra sukun pada <em>kutiba</em>, <em>kurhun</em>, dan <em>takrahū</em>. Bunyi desah gesekan ini secara akustik merefleksikan tarikan napas berat, ketegangan fisik, dan rasa lelah di medan laga. Namun ayat ini kemudian ditutup dengan aliran suara huruf 'Ain dan huruf-huruf vokal terbuka pada <em>wallāhu ya'lamu wa antum lā ta'lamūn</em>. Peralihan fonetik dari ketegangan berat menuju kelapangan akustik di ujung ayat menghadirkan efek ketenteraman psikologis mendalam: akal manusia tunduk berserah diri di hadapan luasnya samudra ilmu Ilahi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Teks Mendahului — Simfoni Dua Pilar Jihad di Ayat 215):</strong><br>
+            Ayat 216 bersambung langsung secara organik dengan Ayat 215 yang membahas pertanyaan para sahabat mengenai alokasi infaq harta (<em>Yas'alūnaka mādzā yunfiqūn</em>). Terjalin integrasi arsitektur peradaban yang sangat mencengangkan:<br>
+            1. <strong>Ayat 215:</strong> Membangun pilar <em>Jihād bil-Amwāl</em> (pengorbanan finansial dan solidaritas ekonomi untuk keluarga, yatim, miskin, dan ibnu sabil).<br>
+            2. <strong>Ayat 216:</strong> Membangun pilar <em>Jihād bil-Anfus</em> (pengorbanan raga, keberanian militer, dan pertahanan fisik).<br>
+            Korelasi ini mengajarkan aksioma politik Islam: Logistik ekonomi tanpa kekuatan pertahanan militer akan menjadi sasaran empuk penjarahan musuh; sebaliknya, kekuatan militer tanpa penopang ekonomi yang sehat akan lumpuh dan menindas. Keduanya adalah dua sayap pelindung kedaulatan umat.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 4: Ayat 142–252):</strong><br>
+            Blok 4 Surah Al-Baqarah adalah blok penegakan kemandirian identitas dan kedaulatan umat Islam setelah kiblat dialihkan dari Yerusalem ke Ka'bah (Ayat 142). Setelah umat dideklarasikan sebagai <em>Ummatan Wasaṭhan</em> (komunitas peradaban penengah), Allah menurunkan pilar-pilar syariat: qishash, wasiat, puasa Ramadhan, haji, dan etika sosial. Di dalam <strong>Klaster 7 (Ayat 215–242)</strong>, Al-Qur'an menjawab serangkaian pertanyaan strategis umat (fatwa regulasi): infaq, perang membela diri, perang di bulan haram, konsumsi khamr dan judi, pemeliharaan anak yatim, hingga kodifikasi hukum pernikahan dan perceraian. Kehadiran Ayat 216 di episentrum klaster ini menegaskan bahwa seluruh tatanan hukum sosial-keluarga hanya dapat tegak berdaulat apabila negara memiliki daya tangkal pertahanan (<em>deterrence power</em>) yang disegani agresor.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas Menuju Ayat 217 & 218):</strong><br>
+            Ketika kewajiban perang diundangkan pada Ayat 216, timbul benturan kasuistik dalam realitas lapangan: bagaimana jika pertempuran terjadi di bulan-bulan haram yang disucikan tradisi Arab? Pertanyaan kritis ini langsung dijawab pada Ayat 217 (<em>Yas'alūnaka 'anisy-syahril-ḥarāmi qitālin fīh</em>) menyusul insiden Ekspedisi Nakhlah di bawah komando Abdullah bin Jahsy r.a. Ayat 216 meletakkan doktrin pertahanan fundamental, sedangkan Ayat 217 merumuskan hukum humaniter internasional dan batasan etika perang di masa darurat.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis Madaniyah: Dilema Geopolitik Tahun ke-2 Hijriyah</h3>
+    <p>
+        Menjelang tahun ke-2 Hijriyah di Madinah, kaum Muslimin menghadapi konfigurasi geopolitik yang sangat rentan dan terjepit di antara tiga ancaman eksistensial:
+    </p>
+    <ul>
+        <li>
+            <strong>Ancaman Hegemoni Quraisy Makkah:</strong> Para oligarki Quraisy tidak tinggal diam melihat umat Islam membangun basis kekuasaan baru di Madinah. Mereka melancarkan blokade ekonomi terhadap kafilah dagang Madinah, mengirimkan surat ancaman kepada kaum Anshar agar mengusir Nabi ﷺ, serta melakukan intimidasi militer di wilayah pinggiran Madinah (seperti penyerangan Kurz bin Jabir Al-Fihri yang menjarah ternak warga Madinah).
+        </li>
+        <li>
+            <strong>Trauma Perang Saudara Aus dan Khazraj (Kaum Anshar):</strong> Kaum Anshar baru saja menyudahi pertikaian berdarah puluhan tahun dalam Perang Bu'ats yang memusnahkan para tokoh senior mereka. Kedatangan Islam membawa kedamaian dan ketenteraman batin yang sangat mahal. Maka, ketika seruan perang kembali berkumandang, secara psikologis muncul kecemasan mendalam bahwa luka masa lalu akan kembali menganga.
+        </li>
+        <li>
+            <strong>Dilema Emosional Kaum Muhajirin:</strong> Kaum Muhajirin harus menghadapi kenyataan pahit bahwa senjata mereka harus diarahkan kepada kerabat, paman, dan saudara kandung mereka sendiri yang berada di barisan kafir Quraisy.
+        </li>
+    </ul>
+    <p>
+        Dalam suasana kebatinan yang sarat beban psikologis inilah ayat <strong>Kutiba 'alaikumul-qitālu wa huwa kurhul lakum</strong> diturunkan. Wahyu ini tidak mengingkari rasa takut mereka, melainkan merangkulnya secara empatik, lalu merekonstruksi kesadaran mereka: bahwa perang ini bukanlah perang suku demi fanatisme golongan, melainkan operasi bedah keadilan peradaban untuk menghentikan kezaliman oligarki Makkah dan mengamankan kebebasan nurani beragama.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur & Riwayah Salaf):</strong><br>
+        At-Tabari menjelaskan hakikat <em>wa huwa khairul lakum</em> dengan menguraikan kalkulasi maslahat akhirat dan duniawi: <em>"Kebaikan di balik perang yang kalian benci itu adalah: pertolongan Allah atas musuh, kemenangan hakiki bagi agama-Nya, kehormatan dan kemuliaan bagi jiwa kalian, perolehan ghanimah, dan pahala tertinggi mati syahid serta kenikmatan surga abadi. Sedangkan keburukan di balik meninggalkan perang yang disukai nafsu kalian adalah: kehinaan di bawah telapak kaki musuh, hilangnya kedaulatan agama, perampasan hak-hak kalian, dan kemurkaan serta azab Allah di akhirat kelak."</em> Mengenai penutup ayat, At-Tabari menegaskan bahwa manusia tidak memiliki perangkat pengetahuan untuk meramalkan akibat masa depan, maka kewajiban akal adalah patuh sepenuhnya pada ketetapan Allah yang Maha Mengetahui akibat segala urusan (<em>'awāqibul-umūr</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Tradisi Atsar & Generalisasi Teologis):</strong><br>
+        Ibnu Katsir menetapkan bahwa ayat ini memiliki dimensi kaidah universal (<em>qā'idah 'āmmah</em>) yang berlaku melintasi seluruh spektrum kehidupan manusia: <em>"Kaidah ini tidak hanya terbatas pada medan peperangan, melainkan mencakup seluruh takdir dan ketetapan syariat. Betapa banyak manusia yang membenci suatu peristiwa—seperti rasa sakit, kegagalan rencana keduniaan, kehilangan harta, atau kesulitan hidup—padahal di balik kepahitan tersebut Allah menyembunyikan kebaikan yang melimpah bagi agama dan dunianya. Dan betapa banyak kenikmatan syahwat yang dikejar manusia dengan penuh gelora cinta, padahal kenikmatan tersebut adalah pintu gerbang menuju kehancuran total hidupnya."</em> Ibnu Katsir mengaitkan ayat ini dengan kisah pertemuan Nabi Musa dan Khadhir di Surah Al-Kahfi sebagai bukti visual bekerjanya hukum ini.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih & Hukum Syariah):</strong><br>
+        Al-Qurthubi membedah status yuridis kewajiban perang: <strong>Jumhur ulama sepakat bahwa jihad fi sabilillah pada dasarnya berstatus Fardhu Kifayah</strong> (apabila telah dilaksanakan oleh sebagian pasukan negara secara memadai, maka gugur kewajiban bagi warga negara lainnya). Namun, Al-Qurthubi menggarisbawahi bahwa jihad bertransformasi menjadi <strong>Fardhu 'Ain (kewajiban mutlak bagi setiap individu muslim yang mampu)</strong> dalam tiga kondisi genting:
+        <ol>
+            <li>Ketika musuh menyerang dan menduduki salah satu jengkal tanah wilayah negeri Muslim (<em>idhā dakhala al-'aduwwu bilād al-muslimīn</em>).</li>
+            <li>Ketika dua barisan pasukan telah berhadapan langsung di medan laga (<em>idhā iltaqā ash-shaffān</em>).</li>
+            <li>Ketika ada seruan mobilisasi umum resmi dari kepala negara/pemimpin tertinggi (<em>idhā istanfara al-imām</em>).</li>
+        </ol>
+        Al-Qurthubi juga menegaskan distingsi penting: seorang mukmin berdosa jika membenci syariat Allah (<em>karāhatu dīnillāh</em>), namun tidak berdosa jika tabiat fisiknya membenci rasa sakit dan kematian dalam perang (<em>karāhatuth-thab'</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Balaghah Rasional & Teologi Filosofis):</strong><br>
+        Az-Zamakhsyari menyoroti adab kognitif tertinggi: keterbatasan akal budi manusia mewajibkan sikap <em>taslīm</em> (penyerahan diri secara rasional) kepada kebijaksanaan Dzat Yang Maha Mengetahui. Sementara itu, Fakhruddin Ar-Razi membedah dilema psikologis manusia: kesenangan indrawi (<em>al-ladzdzah al-'ājilah</em>) sering kali menipu persepsi akal. Manusia terjebak dalam bias jangka pendek, mengira bahwa kenikmatan instan adalah kebaikan mutlak dan kepedihan sesaat adalah keburukan mutlak. Padahal, akal yang matang menyadari bahwa kebaikan hakiki sering kali menuntut pengorbanan pahit, laksana meminum obat yang memualkan demi kesembuhan penyakit kronis.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em> (Maqāṣid asy-Syarī'ah & Sosiologi Peradaban):</strong><br>
+        Ibnu 'Asyur membedah ayat ini dari kacamata tujuan tertinggi syariat (<em>Maqāṣid asy-Syarī'ah</em>), khususnya perlindungan agama (<em>Ḥifzh ad-Dīn</em>) dan perlindungan jiwa kedaulatan umat (<em>Ḥifzh an-Nafs wal-Ummah</em>). Beliau menegaskan hukum sosiologis universal: <em>"Tidak ada satu pun bangsa di muka bumi yang dapat memelihara kemerdekaan, menjaga hak-hak asasi warganya, dan menegakkan keadilan sosial tanpa kesiapan angkatan bersenjata yang tangguh. Keengganan suatu bangsa untuk berperang membela kehormatannya karena cinta pada kenyamanan semu hanyalah undangan terbuka bagi para tiran untuk menjajah dan memperbudak mereka. Maka perang, betapapun pahitnya, adalah instrumen pengaman peradaban manusia dari kehancuran."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Corak Adabi Ijtima'i & Kontekstual Modern):</strong><br>
+        Quraish Shihab menjelaskan bahwa Islam bukanlah agama pasifis naif yang membiarkan kejahatan merajalela, bukan pula agama agresor yang haus darah. Perang dalam Islam diibaratkan laksana <strong>tindakan amputasi medis</strong>: seorang dokter bedah tentu tidak menyukai memotong kaki pasiennya (<em>kurhun lakum</em>), namun jika bagian yang membusuk terkena gangren itu tidak segera diamputasi, racun akan menjalar ke seluruh organ dan membunuh pasien tersebut (<em>wa huwa khairul lakum</em>). Demikian pula perang membela keadilan: ia adalah keharusan pahit demi menghentikan kanker kezaliman agar seluruh peradaban manusia selamat dari kebinasaan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Buya Hamka & Kemenag RI — <em>Tafsir Al-Azhar</em> & <em>Al-Qur'an dan Tafsirnya</em> (Ketahanan Spiritualitas & Refleksi Kemerdekaan Bangsa):</strong><br>
+        Buya Hamka mengaitkan ayat ini secara menyentuh dengan memori perjuangan kemerdekaan Republik Indonesia: <em>"Ketika para ulama, santri, dan pejuang bangsa kita mengangkat bambu runcing melawan kekuatan imperialis Belanda dan Jepang, apakah mereka mencintai kematian dan desingan peluru? Demi Allah, tidak! Jiwa manusia mana yang tidak ingin hidup tenang di kampung halaman bersama anak dan istri? Tetapi Buya Hamka menegaskan: sekiranya para pahlawan kita enggan berjuang karena takut mati dan takut menderita, niscaya bangsa kita akan tetap menjadi kuli di bawah telapak kaki penjajah berabad-abad lamanya! Kemerdekaan dan kedaulatan bangsa yang kita nikmati hari ini adalah buah manis dari kepahitan perang yang dahulu mereka hadapi: Wa 'asā an takrahū syai'aw wa huwa khairul lakum."</em>
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') & Dinamika Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Analisis & Sudut Pandang Khusus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Hukum "Kutiba 'Alaikumul-Qitāl"</strong></td>
+                <td>Kewajiban perang pertahanan membela agama dan kedaulatan umat memiliki landasan fardhu yang qath'i.</td>
+                <td>Al-Qurthubi & Jumhur: Asalnya fardhu kifayah, berubah menjadi fardhu 'ain dalam 3 kondisi (invasi musuh, duel pasukan, mobilisasi pemimpin). Ibnu 'Asyur: Kewajiban kolektif kenegaraan demi menjaga sistem pertahanan bangsa (<em>hifzh nizam al-ummah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Keberatan Hati ("Kurhun Lakum")</strong></td>
+                <td>Keberatan yang dimaksud adalah kelemahan tabiat biologis kemanusiaan, bukan penolakan terhadap hukum Allah.</td>
+                <td>At-Tabari: Fitrah takut mati dan lelah. Az-Zamakhsyari & Ar-Razi: Benturan antara kesenangan indrawi sesaat dengan maslahat spiritual abadi. Quraish Shihab: Pengakuan jujur Al-Qur'an terhadap realitas psikologis manusia tanpa glorifikasi kepalsuan.</td>
+            </tr>
+            <tr>
+                <td><strong>Jangkauan Kaidah "'Asā an Takrahū Syai'ā"</strong></td>
+                <td>Berlaku sebagai kaidah hukum dan teologi takdir yang melampaui urusan militer ke seluruh ranah hidup.</td>
+                <td>Ibnu Katsir: Kaidah universal seluruh takdir dan cobaan hidup. Buya Hamka: Dialektika perjuangan fisik bangsa merebut kemerdekaan. Ar-Razi: Keterbatasan persepsi hedonistik akal manusia di hadapan ilmu Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>Implikasi Teologis Frasa Penutup</strong></td>
+                <td>Demarkasi ontologis mutlak: Allah Maha Tahu hakikat segala akibat, manusia terikat ketidaktahuan.</td>
+                <td>At-Tabari: Menuntut kepatuhan mutlak tanpa bantahan logika. Hamka: Menenangkan batin yang berduka saat tertimpa musibah. Quraish Shihab: Fondasi tawakkal dan integrasi rasionalitas iman.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+    <p>
+        <em>Catatan Metodologis: Analisis kognitif, neuropsikologi, dan arsitektur mental model dalam Lensa 5 ini adalah instrumen ANALISIS kontemporer untuk membantu perenungan kognitif manusia modern, bukan wahyu itu sendiri, dan terbebas dari pseudosains maupun cocoklogi yang spekulatif.</em>
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Lama vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Lama (Jahiliyah / Sekuler Hedonistik)</th>
+                <th>Pola Pikir Qur'ani (Rabbani Maqashidi)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Kriteria Kebaikan (Standard of Good)</strong></td>
+                <td><strong>Hedonisme Jangka Pendek:</strong> Menilai kebaikan semata-mata dari apa yang mendatangkan kenikmatan indrawi instan, kenyamanan fisik, dan keuntungan materi saat ini.</td>
+                <td><strong>Kebaikan Esensial & Kesudahan Hakiki:</strong> Menilai kebaikan dari keselarasan dengan syariat Allah, keselamatan nilai moral, dan dampak maslahat abadi di akhirat.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Kepahitan (Pain Response)</strong></td>
+                <td><strong>Aversi Nyeri Ekstrem (Instant Pain Aversion):</strong> Menolak segala bentuk kepedihan, kepayahan, atau pengorbanan; menganggap kesulitan hidup sebagai kegagalan eksistensial.</td>
+                <td><strong>Penerimaan Konstruktif (Constructive Suffering):</strong> Menyadari bahwa kepahitan fisik sering kali merupakan syarat mutlak pertumbuhan karakter, pembersihan dosa, dan penjaga kehormatan.</td>
+            </tr>
+            <tr>
+                <td><strong>Horizon Waktu (Temporal Horizon)</strong></td>
+                <td><strong>Hyperbolic Short-Termism:</strong> Sangat rabun terhadap masa depan; mengorbankan masa depan panjang demi kesenangan fana beberapa menit atau beberapa hari.</td>
+                <td><strong>Cakrawala Transenden (Eschatological Horizon):</strong> Menimbang keputusan duniawi dalam bentangan waktu abadi (<em>al-'āqibah lil-muttaqīn</em>); berani memikul kepahitan hari ini demi keselamatan esok.</td>
+            </tr>
+            <tr>
+                <td><strong>Otoritas Epistemologis (Epistemic Center)</strong></td>
+                <td><strong>Ego-Centric Illusion of Control:</strong> Merasa akal dan kalkulasi pribadinya paling tahu apa yang terbaik bagi dirinya; mudah menggugat takdir ketika harapan meleset.</td>
+                <td><strong>Epistemic Humility & Trust:</strong> Sadar penuh bahwa akal manusia memiliki keterbatasan struktural; menundukkan kalkulasi terbatas di hadapan Kemahatahuan Ilahi (<em>Wallāhu ya'lam</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model: "The Principle of Asymmetric Epistemic Horizon"</h3>
+    <p>
+        Ayat 216 merumuskan model mental fundamental yang disebut <strong>Prinsip Asimetri Cakrawala Epistemik (The Principle of Asymmetric Epistemic Horizon)</strong>:
+    </p>
+    <ul>
+        <li>
+            <strong>Premis Dasar:</strong> Penglihatan manusia terhadap kehidupan bersifat lokal, parsial, dan dua dimensi. Manusia hanya melihat titik koordinat masa kini melalui lensa emosi sesaat. Sebaliknya, Pengetahuan Allah bersifat global, holistik, multidimensi, dan meliputi jalinan kausalitas dari zaman azali hingga keabadian akhirat.
+        </li>
+        <li>
+            <strong>Dampaknya pada Pengambilan Keputusan Hidup:</strong>
+            Ketika seorang mukmin menghadapi jalan buntu dalam karier, kegagalan rencana besar, sakit yang berkepanjangan, atau panggilan pengorbanan yang berat, model mental ini langsung mematikan kepanikan eksistensial. Jiwa tidak lagi reaktif berteriak: <em>"Mengapa ini terjadi padaku?!"</em> melainkan tenang berkontemplasi: <em>"Otakku terlalu kerdil untuk membaca skenario agung Allah. Apa yang hari ini kutangisi boleh jadi adalah pintu keselamatan terbesarku, dan apa yang dahulu kuinginkan boleh jadi adalah jurang kehancuranku."</em>
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neurobiologi: "Affective Forecasting Error" & Regulasi Prefrontal Cortex</h3>
+    <p>
+        Secara neurokognitif, ayat ini menyentuh kelemahan bawaan sistem saraf manusia yang dalam psikologi modern dipopulerkan oleh Daniel Gilbert sebagai <strong>Affective Forecasting Error (Kelemahan Prediksi Afektif)</strong>:
+    </p>
+    <ul>
+        <li>
+            <strong>Distorsi Amygdala vs Prefrontal Cortex:</strong> Sistem limbik otak (terutama <em>amygdala</em>) dirancang secara evolusioner untuk mendeteksi bahaya dan melarikan diri dari rasa sakit fisik. Ketika dihadapkan pada panggilan perang atau ujian berat, amigdala membanjiri tubuh dengan hormon stres (kortisol dan adrenalin), memicu sinyal: <em>"Ini buruk, hindari sekarang juga!"</em>. Manusia mengira bahwa rasa tidak nyaman emosional itu adalah bukti objektif dari keburukan.
+        </li>
+        <li>
+            <strong>Intervensi Wahyu sebagai "Top-Down Executive Regulator":</strong> Frasa <em>wa 'asā an takrahū syai'aw wa huwa khairul lakum</em> beroperasi sebagai intervensi kognitif tingkat tinggi (<em>top-down cognitive reappraisal</em>). Wahyu mengaktifkan <strong>Dorsolateral Prefrontal Cortex (dlPFC)</strong> untuk menenangkan amigdala, mengingatkan akal bahwa rasa takut emosional bukanlah barometer kebenaran objektif. Ketenangan sejati diraih bukan dengan lari dari kenyataan, melainkan dengan menundukkan impuls instingtual di bawah bimbingan wahyu Ilahi.
+        </li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Geopolitik Abad ke-21: Tragedi Palestina & Dekonstruksi Standar Ganda Global</h3>
+    <p>
+        Ayat 216 membedah secara telanjang realitas geopolitik kontemporer, khususnya tragedi kemanusiaan yang menimpa bangsa Palestina di Gaza. Selama beberapa dekade, tatanan hegemoni Barat melancarkan propaganda hipokrit:
+    </p>
+    <ul>
+        <li>
+            <strong>Standar Ganda Narasi Pertahanan:</strong> Ketika bangsa-bangsa Barat diserang atau menghadapi ancaman kedaulatan, perlawanan bersenjata mereka dipuji sebagai aksi kepahlawanan patriotik yang sah. Namun, ketika bangsa Palestina yang tanahnya dirampas, rumahnya dibuldoser, dan warganya mengalami genosida selama puluhan tahun mengangkat senjata membela diri, perlawanan mereka distigmatisasi sebagai tindak terorisme.
+        </li>
+        <li>
+            <strong>Legitimasi Hukum Hak Bela Diri:</strong> Piagam PBB Pasal 51 sejatinya mengakui hak melekat bagi setiap bangsa untuk melakukan pembelaan diri (<em>inherent right of individual or collective self-defense</em>). Ayat 216 telah menggariskan prinsip ini empat belas abad silam: perdamaian sejati tidak akan pernah terwujud melalui sikap pasif di hadapan kezaliman. Menolak perang membela diri di hadapan agresor zionis hanyalah legalisasi atas pemusnahan etnis dan perbudakan tanah air.
+        </li>
+    </ul>
+
+    <h3>2. Kritik Peradaban: Fenomena "Toxic Pacifism" & Budaya "Fragile Generation"</h3>
+    <p>
+        Peradaban modern sekuler abad ke-21 tengah mengidap penyakit sosiologis yang sangat akut:
+    </p>
+    <ul>
+        <li>
+            <strong>Budaya Pasifisme Toksik (Toxic Pacifism):</strong> Suatu paham moralitas dangkal yang mendewakan kata 'damai' tanpa memedulikan keadilan. Kaum pasifis naif mengutuk segala bentuk perlawanan fisik, menuntut korban agresi untuk menyerah dan berpasrah diri. Sikap ini pada praktiknya adalah bentuk kolaborasi terselubung dengan penjajah: membiarkan tiran bersenjata bebas menjarah kaum lemah tanpa perlawanan.
+        </li>
+        <li>
+            <strong>Epidemi "Fragility Culture" & Budaya Kenyamanan Instan:</strong> Masyarakat konsumen kapitalis mendidik generasi muda untuk mengagungkan kenyamanan instan (<em>instant gratification culture</em>). Manusia modern menjadi alergi terhadap rasa sakit, cepat putus asa ketika menghadapi tekanan kerja, dan rapuh menghadapi konflik sosial. Ayat 216 adalah tamparan keras bagi jiwa yang lembek: Al-Qur'an mendidik manusia untuk memiliki ketangguhan mental seorang ksatria peradaban yang berani memikul kepahitan demi menegakkan integritas kebenaran.
+        </li>
+    </ul>
+
+    <h3>3. Krisis Kebijakan Publik: Jebakan Siklus Pemilu 5 Tahunan</h3>
+    <p>
+        Krisis kepemimpinan global saat ini bersumber dari keengganan para pengambil kebijakan untuk mengeksekusi keputusan-keputusan strategis yang pahit:
+    </p>
+    <ul>
+        <li>Para politisi modern enggan mengambil kebijakan reformasi struktural yang tidak populer (seperti pembatasan utang ribawi, moratorium eksploitasi alam, atau penegakan hukum terhadap oligarki) karena takut kehilangan elektabilitas pada pemilu 5 tahunan (<em>wa 'asā an tuḥibbū syai'an</em> demi suara rakyat).</li>
+        <li>Akibatnya, mereka memanjakan publik dengan subsidi semu dan bantuan sosial sesaat, yang pada jangka panjang justru menghancurkan stabilitas fiskal dan membebani generasi anak-cucu dengan malapetaka krisis multidimensi (<em>wa huwa syarrun lakum</em>). Ayat 216 menuntut kepemimpinan kenegarawanan berintegritas tinggi: pemimpin yang berani mengambil keputusan pahit hari ini demi menyelamatkan masa depan bangsa.</li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Protokol "Istirjā' & Dekonstruksi Resepsi" Saat Menghadapi Kepahitan Hidup (Mikro-Habit &lt; 5 Menit):</strong><br>
+                Kapan pun menghadapi penolakan karier, kegagalan rencana bisnis, sakit fisik, atau musibah tak terduga, tahan lisan selama 10 detik dari mengeluh atau menyalahkan keadaan. Ucapkan kalimat istirja' (<em>Innā lillāhi wa innā ilayhi rāji'ūn</em>), lalu lafalkan dengan kesadaran batin penuh: <em>"Wa 'asā an takrahū syai'aw wa huwa khairul lakum, wallāhu ya'lamu wa antum lā ta'lamūn."</em> Tuliskan dalam catatan pribadi minimal 3 hikmah tersembunyi yang mungkin sedang Allah rancang untuk menyelamatkan masa depanmu.
+            </li>
+            <li>
+                <strong>Protokol Keputusan Berani Melawan Hawa Nafsu ("Eat the Frog" Syar'i):</strong><br>
+                Identifikasi satu kewajiban agama atau tanggung jawab profesional harian yang selama ini paling sering ditunda-tunda karena terasa berat dan tidak disukai oleh nafsu fisikmu (seperti: bangun qiyamullail di sepertiga malam, menegur kezaliman rekan kerja dalam rapat, atau memutus interaksi toksik yang mengundang maksiat). Jadikan tugas berat tersebut sebagai prioritas pertama yang wajib dieksekusi sebelum jam 09.00 pagi setiap hari.
+            </li>
+            <li>
+                <strong>Membangun Kemandirian Fisik, Mental, dan Kontribusi Pembelaan Umat:</strong><br>
+                Latih fisik secara terukur minimal 3 kali sepekan (olahraga ketahanan, beladiri, atau latihan kebugaran fisik) untuk mengikis kerapuhan jiwa dan siap memenuhi panggilan tugas umat/negara kapan pun dibutuhkan. Sisihkan secara konsisten minimal 5% dari kelebihan rezeki bulanan untuk menyokong dana perjuangan kemanusiaan dan pembelaan kaum tertindas di Palestina dan belahan dunia Islam lainnya.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Berapa banyak pintu peluang, pekerjaan, atau hubungan manusia yang dahulu kutangisi dengan air mata histeris ketika terlepas dari tanganku, namun hari ini aku bersujud penuh syukur kepada Allah karena Dia telah menyelamatkanku dari kehancuran tersembunyi yang berada di dalamnya?
+            </li>
+            <li>
+                Apakah keenggananku menjalankan syariat Allah—atau keluh kesahku ketika ditimpa kepahitan takdir—sejatinya lahir dari kesombongan batinku yang merasa lebih mengerti masa depan dan kebaikan diriku sendiri daripada Allah Yang Maha Mengetahui?
+            </li>
+            <li>
+                Sekiranya panggilan untuk membela martabat agama, mempertahankan kedaulatan tanah air, dan menolong kaum tertindas berkumandang hari ini, apakah hatiku akan bergetar gentar karena terpenjara oleh cinta dunia dan ketakutan akan kematian, ataukah aku memiliki keikhlasan seorang pejuang yang meyakini bahwa surga berada di bawah naungan keridhaan Ilahi?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā 'Alīmu yā Ḥakīm, Wahai Dzat Yang Ilmu-Nya meliputi segala sesuatu yang zahir dan yang gaib. Kami bersimpuh mengakui kerabunan akal budi kami di hadapan keagungan kebijaksanaan-Mu. Ya Allah, tanamkanlah ke dalam dada kami keridhaan mutlak terhadap seluruh ketetapan syariat dan takdir-Mu. Lapangkanlah hati kami untuk mencintai apa yang Engkau ridhai, meskipun tabiat fisik kami membencinya; dan bentengilah kalbu kami dari mencintai apa yang Engkau murkai, meskipun hawa nafsu kami mendambakannya. Berikanlah kepada kami keteguhan jiwa para ksatria: keberanian membela keadilan, kesabaran memikul kepahitan perjuangan, dan kepasrahan tawakkal yang sempurna di bawah naungan ilmu-Mu: Wallāhu ya'lamu wa antum lā ta'lamūn. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-215 - QS. Al-Baqarah Ayat 215.html">&larr; Kembali ke Ayat 215 (QS. 2:215)</a>
+        <span><strong>QS. Al-Baqarah [2]: 216</strong></span>
+        <a href="002-217 - QS. Al-Baqarah Ayat 217.html">Lanjut ke Ayat 217 (QS. 2:217) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

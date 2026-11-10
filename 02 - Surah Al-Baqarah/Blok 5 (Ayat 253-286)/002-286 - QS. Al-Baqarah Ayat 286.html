@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-286 - QS. Al-Baqarah Ayat 286 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-285 - QS. Al-Baqarah Ayat 285.html">&larr; Ayat Sebelumnya (QS. 2:285)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="../../03 - Surah Ali 'Imran/003-000 - Pengantar & Peta Maqasid Surah Ali 'Imran.html">Surah Berikutnya (QS. Āli 'Imrān) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (Ayat ke-286 / Penutup Surah)</span>
+        <span class="badge">Blok 5 (Ayat 253–286) | Klaster Penutup Agung: Piagam Pembebasan Taklif & Munajat Paripurna (Ayat 284–286)</span>
+        <span class="badge">49 Kata | 201 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 286</h1>
+    <div class="transliteration">
+        "Lā yukallifullāhu nafsan illā wus'ahā, lahā mā kasabat wa 'alayhā maktasabat, rabbanā lā tu'ākhidznā in nasīnā aw akhṭa'nā, rabbanā wa lā taḥmil 'alaynā iṣran kamā ḥamaltahū 'alalladzīna min qablinā, rabbanā wa lā tuḥammilnā mā lā ṭāqata lanā bih(ī), wa'fu 'annā, wagfir lanā, warḥamnā, anta mawlānā fanṣurnā 'alal-qawmil-kāfirīn(a)"
+    </div>
+    <div class="thematic-title">
+        Piagam Pembebasan Taklif, Dialektika Pertanggungjawaban Eksistensial, & Puncak Munajat Hamba: Dekonstruksi Beban Jiwa (Ishr), Keseimbangan Kasb vs Iktisab, dan Proklamasi Kemenangan Spiritual Kaum Beriman
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Ayat 284–286 | Blok 5: Penutup Agung Surah Al-Baqarah & Ikatan Perjanjian Tertinggi)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ ۝٢٨٦
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Allah tidak membebani seseorang melainkan sesuai dengan kesanggupan dan kelapangan daya fitrahnya. Baginya pahala dari kebaikan yang diusahakannya, dan atasnya beban siksa dari kejahatan yang diperbuatnya dengan susah payah. (Kaum mukminin bermunajat): 'Wahai Tuhan pemelihara kami, janganlah Engkau hukum kami jika kami lupa atau kami melakukan kesalahan tanpa sengaja! Wahai Tuhan pemelihara kami, janganlah Engkau pikulkan ke atas pundak kami beban berat yang membelenggu sebagaimana Engkau bebankan kepada orang-orang sebelum kami! Wahai Tuhan pemelihara kami, janganlah Engkau pikulkan kepada kami apa yang kami tidak sanggup memikulnya! Hapuslah noda-noda dosa kami, ampunilah kelemahan kami, dan limpahkanlah rahmat kasih sayang-Mu kepada kami! Engkaulah Pelindung dan Penguasa kami; maka tolonglah kami menghadapi kaum yang kafir!'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Penerjemahan ayat penutup agung ini menuntut ketajaman distingsi morfologis dan teologis. Diksi <em>wus'ahā</em> diterjemahkan sebagai "kelapangan daya fitrah" alih-alih sekadar "kemampuan batas maksimal", karena akar kata <em>al-wus'</em> merujuk pada ruang kelapangan (kemudahan) di bawah titik kritis kelelahan (<em>al-judh / ath-thaqah</em>). Distingsi antara <em>kasabat</em> (pada perbuatan baik) dan <em>iktasabat</em> (pada perbuatan jahat) memperlihatkan bahwa kebaikan selaras dengan tabiat fitrah yang murni sehingga mudah diusahakan, sementara kejahatan melawan arah nurani sehingga menuntut usaha licik yang dipaksakan dan menyiksa batin pelakunya. Seruan <em>Rabbanā</em> diulang tepat tiga kali, membentuk klimaks munajat dari permohonan ampunan atas cacat masa lalu (kelupaan dan kekeliruan), perlindungan dari himpitan beban syariat di masa kini, hingga penyerahan total kedaulatan kepada Allah (<em>Anta Mawlānā</em>) untuk meraih kemenangan atas kekufuran di masa depan.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>لَا يُكَلِّفُ ٱللَّهُ</strong><br>(<em>Lā yukallifullāhu</em>)</td>
+                <td>
+                    <strong>Mad Ashli/Thabi'i:</strong> Pada <em>Lā</em> dipanjangkan 2 harakat.<br>
+                    <strong>Huruf Lām Bertasydid:</strong> Memiliki sifat <em>tawassuth</em> (suara mengalir sedang) dan <em>istifal</em>.<br>
+                    <strong>Lam Jalālah:</strong> Dibaca <strong>Tafkhim</strong> (tebal) karena didahului oleh harakat dhammah pada huruf Fa'.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il mudhari' <em>yukallifu</em> dengan tasydid pada huruf Lam (wazan <em>fa''ala – yuf'ilu</em>) dan rafa' pada lafazh jalalah sebagai fa'il tunggal. Konsensus ini menegaskan asas keadilan Ilahi bahwa ketetapan taklif sepenuhnya berakar dari kehendak dan rahmat Allah semata.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>نَفْسًا إِلَّا وُسْعَهَا</strong><br>(<em>Nafsan illā wus'ahā</em>)</td>
+                <td>
+                    <strong>Huruf Fā':</strong> Keluar dari perut bibir bawah dengan ujung gigi seri atas, bersifat <em>hams</em> (napas berhembus) dan <em>rikhwah</em>.<br>
+                    <strong>Idzhār Halqī:</strong> Tanwin fathah pada <em>nafsan</em> bertemu huruf Hamzah kasrah pada <em>illā</em>, terbaca jelas tanpa ghunnah.<br>
+                    <strong>Huruf Sīn Sukūn:</strong> Menghasilkan desis tajam (<em>shafīr</em>) dan napas mengalir (<em>hams</em>).
+                </td>
+                <td>
+                    • <strong>Jumhur Ulama Qira'at:</strong> Membaca dengan tahqiq hamzah pada <em>nafsan illā</em>.<br>
+                    • <strong>Imam Warsy 'an Nafi':</strong> Membaca dengan <strong>Naql</strong> (memindahkan harakat hamzah kasrah ke huruf nun tanwin sukun sebelumnya lalu menggugurkan hamzah): dibaca <em>Nafsa-nillā</em> saat washal.<br>
+                    • <strong>Imam Ibnu Katsir & Abu Amr:</strong> Bersepakat pada baris kasrah huruf Wawu (<em>wus'ahā</em>). Tidak ada ikhtilaf imam mutawatir yang membaca dhammah (<em>was'ahā</em>), menjaga kestabilan makna kelapangan fitrah manusia.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ</strong><br>(<em>Lahā mā kasabat...</em>)</td>
+                <td>
+                    <strong>Idzhār Syafawī:</strong> Pertemuan mim sukun dan huruf wau pada kalimat lain, di sini terdapat <em>Idgham Mutamatsilain Shaghir</em> jika ada pertemuan sejenis.<br>
+                    <strong>Huruf Tā' Ta'nīts Sukūn:</strong> Memiliki sifat <em>syiddah</em> (suara tertahan sesaat) lalu diakhiri desis <em>hams</em> lembut.<br>
+                    <strong>Hamzah Washal pada ٱكْتَسَبَتْ:</strong> Gugur bunyinya ketika washal (<em>wa 'alayham-ktasabat</em>).
+                </td>
+                <td>
+                    Seluruh imam qira'at sepakat mempertahankan kontras morfologis antara <em>kasabat</em> (tsulatsi mujarrad) dan <em>iktasabat</em> (mazid wazan <em>ifta'alat</em>). Tidak ada qira'at mutawatirah yang menyamakan kedua wazan, membuktikan ketetapan mukjizat fonetik dan semantik bahwa amal kebajikan tidak memiliki beban friksi batin, sementara amal kejahatan sarat gesekan nafsu.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>رَبَّنَا لَا تُؤَاخِذْنَآ إِن</strong><br>(<em>Rabbanā lā tu'ākhidznā in...</em>)</td>
+                <td>
+                    <strong>Huruf Rā':</strong> Berharakat fathah dibaca <strong>Tafkhim</strong>.<br>
+                    <strong>Mad Jā'iz Munfashil:</strong> Huruf mad pada ujung <em>tu'ākhidznā</em> bertemu hamzah di awal kata <em>in</em>.
+                </td>
+                <td>
+                    • <strong>Qira'at Hamzah Mufradah (تُؤَاخِذْنَا):</strong><br>
+                    - <strong>Warsy 'an Nafi' & Abu Ja'far:</strong> Membaca dengan <strong>Ibdāl</strong> (mengganti hamzah sukun menjadi huruf Wawu mad berharakat sukun setelah dhammah): <em>Lā tuwākhidznā</em> (تُوَاخِذْنَا).<br>
+                    - <strong>Delapan Imam Lainnya (termasuk Hafsh 'an 'Ashim):</strong> Membaca dengan <strong>Taḥqīq Hamzah</strong>: <em>Lā tu'ākhidznā</em>.<br>
+                    • <strong>Kaidah Mad Munfashil:</strong><br>
+                    - <strong>Qashr (2 Harakat):</strong> Ibnu Katsir, Abu Ja'far, Ya'qub, serta Qalun dan Ad-Duri 'an Abi 'Amr (dalam salah satu jalur periwayatan).<br>
+                    - <strong>Tawassuth (4 Harakat):</strong> 'Ashim, Al-Kisa'i, Khalaf al-'Asyir, Ibnu 'Amir.<br>
+                    - <strong>Isybā' (6 Harakat):</strong> Warsy dan Hamzah.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>إِن نَّسِينَآ أَوْ أَخْطَأْنَا</strong><br>(<em>In nasīnā aw akhṭa'nā</em>)</td>
+                <td>
+                    <strong>Idghām Bighunnah:</strong> Nun sukun bertemu huruf Nun bertasydid.<br>
+                    <strong>Mad Munfashil:</strong> Huruf alif mad pada <em>nasīnā</em> bertemu hamzah pada <em>aw</em>.<br>
+                    <strong>Huruf Ṭhā':</strong> Memiliki sifat <em>isti'lā'</em>, <em>ithbāq</em>, dan pantulan <strong>Qalqalah Shughrā</strong> di tengah kata.<br>
+                    <strong>Hamzah Sukūn:</strong> Huruf tertahan mutlak (<em>syiddah</em> murni tanpa desis).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nafi':</strong> Melakukan <strong>Naql</strong> pada hamzah kata <em>akhṭa'nā</em> (menjadi <em>a-wakh-ṭa'nā</em> saat washal), serta membaca mad munfashil dengan isyba' (6 harakat).<br>
+                    • <strong>Hamzah & Kisa'i:</strong> Membaca tahqiq saat washal, namun saat waqaf pada <em>akhṭa'nā</em>, Imam Hamzah memiliki kaidah tashil/ibdal hamzah akhir.<br>
+                    • <strong>Jumhur Qurra':</strong> Membaca tahqiq hamzah secara sempurna.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا</strong><br>(<em>...wa lā taḥmil 'alaynā iṣrā</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā':</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>) dengan aliran napas <em>hams</em>.<br>
+                    <strong>Mad Munfashil:</strong> Pada <em>'alaynā iṣrā</em>.<br>
+                    <strong>Huruf Shād:</strong> Memiliki sifat <em>isti'lā'</em>, <em>ithbāq</em>, dan <em>shafīr</em>. Berada pada derajat tafkhim terendah karena berharakat kasrah.<br>
+                    <strong>Mad 'Iwadh:</strong> Tanwin fathah pada <em>iṣran</em> dibaca alif mad sepanjang 2 harakat saat waqaf.
+                </td>
+                <td>
+                    • <strong>Imam Warsy:</strong> Menashabkan harakat tanwin dan membaca mad munfashil 6 harakat. Pertemuan tanwin pada <em>iṣran kamā</em> dibaca ikhfa haqiqi oleh seluruh imam.<br>
+                    • <strong>Tingkat Mad:</strong> Sesuai tingkatan mad munfashil masing-masing imam (Qashr bagi Ibnu Katsir/Abu Ja'far/Ya'qub, Tawassuth bagi 'Ashim, Isyba' bagi Hamzah/Warsy).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>كَمَا حَمَلْتَهُۥ عَلَى</strong><br>(<em>Kamā ḥamaltahū 'alā...</em>)</td>
+                <td>
+                    <strong>Mad Shilah Shughrā:</strong> Ha' kinayah berharakat dhammah diapit huruf hidup dibaca panjang 2 harakat saat washal.<br>
+                    <strong>Idzhār Syafawī:</strong> Huruf Mim sukun pada <em>kamā</em> tidak berdengung saat bertemu Ha'.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca dengan shilah shughra sepanjang 2 harakat ketika washal, tanpa ada yang membaca qashr (sukun atau 1 harakat pendek), karena kaidah ha' dhamir yang diapit dua huruf berharakat hidup.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ</strong><br>(<em>...mā lā ṭāqata lanā bih</em>)</td>
+                <td>
+                    <strong>Tasydīd pada Mīm:</strong> Terbaca dengan ghunnah akmal ma takun jika waqaf/idgham, di sini tasydid struktur wazan <em>fa''ala</em>.<br>
+                    <strong>Huruf Ṭhā':</strong> Huruf isti'la dan ithbaq paling kuat berharakat fathah tegak diikuti mad thabi'i.<br>
+                    <strong>Mad Shilah Shughrā:</strong> Pada <em>bihi</em> saat washal ke <em>wa'fu</em> dibaca 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il nahi <em>wa lā tuḥammilnā</em> dengan tasydid mim (bentuk permohonan agar tidak dibebani beban yang melampaui thāqah). Konsensus universal qira'at ini mempertegas maqashid permohonan perlindungan dari kehancuran fisik dan mental.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ</strong><br>(<em>Wa'fu 'annā wagfir lanā warḥamnā</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Pada <em>wa'fu</em>, <em>wagfir</em>, dan <em>warḥamnā</em> gugur bunyinya saat washal.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan dengan sifat <em>tawassuth</em>.<br>
+                    <strong>Huruf Rā' Sukūn pada وَٱغْفِرْ:</strong> Dibaca <strong>Tarqīq</strong> (tipis) karena didahului huruf berharakat kasrah asli.<br>
+                    <strong>Mad Munfashil:</strong> Pada <em>warḥamnā anta</em> terbaca panjang sesuai kaidah mad masing-masing perawi.
+                </td>
+                <td>
+                    • Seluruh imam qira'at membaca fi'il amr (bermakna du'ā') <em>wa'fu</em> dengan membuang huruf 'illat Wawu (mabni 'ala hadzfi harfil 'illah).<br>
+                    • Perbedaan durasi mad munfashil pada <em>warḥamnāٓ anta</em> mengikuti thariq qira'at (2, 4, atau 6 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ</strong><br>(<em>Anta mawlānā fanṣurnā...</em>)</td>
+                <td>
+                    <strong>Ikhfā' Haqīqī:</strong> Nun sukun bertemu huruf Ta' pada <em>anta</em>.<br>
+                    <strong>Huruf Yā' Maqshūrah pada مَوْلَىٰنَا:</strong> Mad thabi'i saat dibaca fath.<br>
+                    <strong>Ikhfā' Haqīqī pada فَٱنصُرْنَا:</strong> Nun sukun bertemu huruf Shād (tebal/isti'la) menghasilkan dengung ikhfa <strong>Tafkhim</strong>.<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Pada penutup ayat <em>al-kāfirīn</em> dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuth</em> pada huruf Nun.
+                </td>
+                <td>
+                    • <strong>Imālah Kubrā:</strong> Imam Hamzah, Al-Kisa'i, dan Khalaf al-'Asyir membaca <strong>Imālah</strong> pada alif maqshurah lafazh <em>mawlānā</em> (memiringkan bunyi fathah ke arah kasrah: <em>Mawlēnā</em>).<br>
+                    • <strong>Taqlīl (Bayna-bayna):</strong> Imam Warsy 'an Nafi' membaca taqlil.<br>
+                    • <strong>Fath Murni:</strong> Tujuh imam lainnya ('Ashim, Ibnu Katsir, Ibnu 'Amir, Abu 'Amr, Qalun, Abu Ja'far, Ya'qub) membaca fath murni (<em>Mawlānā</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <p>
+        Pewahyuan dua ayat terakhir Surah Al-Baqarah (Ayat 285–286) merupakan salah satu peristiwa paling dramatis dalam sejarah interaksi sahabat dengan wahyu Ilahi. Ayat 286 diturunkan sebagai <strong>takhfīf (dispensasi pembebasan Ilahi)</strong> dan jawaban cinta dari Allah 'Azza wa Jalla untuk memulihkan keguncangan batin para sahabat pasca turunnya Ayat 284.
+    </p>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Muslim (No. 125 & 126) dari Abu Hurairah r.a. & Ibnu Abbas r.a. — Titik Balik Keguncangan Sahabat dan Deklarasi "Qad Fa'altu":</strong><br>
+        Ketika turun firman Allah di QS. Al-Baqarah: 284: <em>"Lillāhi mā fis-samāwāti wa mā fil-ardh, wa in tubdū mā fī anfusikum aw tukhfūhu yuḥāsibkum bihillāh"</em> (Milik Allah-lah apa yang ada di langit dan di bumi. Jika kamu menampakkan apa yang ada di dalam hatimu atau kamu menyembunyikannya, niscaya Allah akan membuat perhitungan dengan kamu tentang perbuatan itu), hal itu terasa amat berat bagi para sahabat Rasulullah ﷺ. Mereka mendatangi Rasulullah ﷺ lalu tersungkur berlutut seraya berkata: <em>"Wahai Rasulullah, kami telah dibebani amal-amal yang sanggup kami pikul: shalat, puasa, jihad, dan sedekah. Namun kini telah diturunkan kepadamu ayat ini, dan kami tidak sanggup memikulnya (karena lintasan hati dan bisikan jiwa di luar kendali kami)!"</em><br>
+        Rasulullah ﷺ bersabda: <em>"Apakah kalian hendak mengatakan sebagaimana yang dikatakan oleh dua kaum sebelum kalian (Yahudi dan Nasrani): 'Sami'nā wa 'aṣaynā' (Kami mendengar tetapi kami mendurhakai)? Jangan! Katakanlah oleh kalian: 'Sami'nā wa aṭa'nā ghufrānaka rabbanā wa ilaykal-maṣīr' (Kami mendengar dan kami menaati; ampunilah kami wahai Tuhan kami, dan kepada-Mulah tempat kembali)!"</em><br>
+        Ketika kaum muslimin membacanya dan lisan mereka telah tunduk pasrah (<em>dzallat bihā alsinatuhum</em>), seketika Allah menurunkan ayat sesudahnya (Ayat 285), lalu menurunkan Ayat 286: <em>"Lā yukallifullāhu nafsan illā wus'ahā..."</em>. Diriwayatkan dari Ibnu Abbas r.a., Rasulullah ﷺ mengabarkan bahwa ketika hamba membaca setiap penggal doa dalam ayat ini: <em>"Rabbanā lā tu'ākhidznā in nasīnā aw akhṭa'nā"</em>, Allah berfirman: <strong>"Qad fa'altu" (Telah Aku kabulkan)</strong>. Ketika hamba membaca: <em>"Rabbanā wa lā taḥmil 'alaynā iṣrā..."</em>, Allah berfirman: <strong>"Qad fa'altu" (Telah Aku kabulkan)</strong>. Ketika membaca: <em>"Rabbanā wa lā tuḥammilnā mā lā ṭāqata lanā bih..."</em>, Allah berfirman: <strong>"Qad fa'altu" (Telah Aku perkenankan)</strong>.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 5009) & Sahih Muslim (No. 807 & 808) dari Abu Mas'ud Al-Badri r.a. — Jaminan Kecukupan dan Perlindungan Mutlak:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Man qara'a bil-āyatayni min ākhiri sūratil-baqarati fī laylatin kafatāhu."</em><br>
+        (Barangsiapa membaca dua ayat terakhir dari Surah Al-Baqarah [ayat 285–286] pada suatu malam, niscaya kedua ayat itu telah mencukupinya). Al-Hafizh Ibnu Hajar Al-'Asqalani dalam <em>Fatḥul Bārī</em> memaparkan bahwa makna <em>kafatāhu</em> mencakup tiga dimensi sekaligus: (1) Mencukupinya dari kewajiban qiyamul lail, (2) Mencukupinya dari segala marabahaya, gangguan sihir, dan godaan setan, serta (3) Mencukupinya dalam pembaruan iman dan ketenteraman jiwa sepanjang malam tersebut.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Muslim (No. 806) dari Abdullah bin Abbas r.a. — Hadiah Dua Cahaya dari Pintu Langit yang Belum Pernah Terbuka:</strong><br>
+        Ketika Malaikat Jibril a.s. sedang duduk di sisi Nabi Muhammad ﷺ, tiba-tiba beliau mendengar suara gemeretak keras dari arah langit di atasnya. Jibril menengadahkan kepalanya lalu berkata: <em>"Hādzā bābun minas-samā'i futiḥal-yawma lam yuftaḥ qaṭṭu illal-yawm"</em> (Ini adalah sebuah pintu dari langit yang dibuka pada hari ini, belum pernah dibuka sama sekali sebelum hari ini). Lalu turunlah seorang malaikat melalui pintu tersebut. Jibril berkata: <em>"Ini adalah malaikat yang turun ke bumi, ia tidak pernah turun sama sekali kecuali pada hari ini."</em> Malaikat tersebut mengucapkan salam lalu berkata kepada Rasulullah ﷺ: <em>"Bergembiralah dengan dua cahaya yang diberikan kepadamu, yang tidak pernah diberikan kepada seorang nabi pun sebelummu: <strong>Fātiḥatul Kitāb</strong> dan <strong>penutup Surah Al-Baqarah (Khawātīm Sūratil-Baqarah)</strong>. Tidaklah engkau membaca satu huruf pun dari keduanya melainkan engkau pasti diberi (apa yang diminta di dalamnya)."</em>
+    </div>
+    <div class="hadith-box">
+        <strong>4. Hadits Shahih Riwayat Sunan Ibnu Majah (No. 2045) & Sahih Ibnu Hibban (No. 7219) dari Ibnu Abbas r.a. — Asas Pengguguran Dosa Kekeliruan:</strong><br>
+        Rasulullah ﷺ menegaskan realisasi tasyri' dari doa ayat ini: <em>"Innallāha tajāwaza 'an ummatil-khaṭa'a wan-nisyāna wa mastukrihū 'alayhi."</em><br>
+        (Sesungguhnya Allah telah memaafkan dari umatku perbuatan salah karena keliru tanpa sengaja, perbuatan karena lupa, dan apa-apa yang dipaksakan atas diri mereka). Hadits ini merupakan fondasi pilar hukum Islam (ushul fiqih) bahwa tidak ada pertanggungjawaban dosa ukhrawi atas tindakan yang terjadi di luar kehendak sadar manusia.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Mu'jam Maqāyīs al-Lughah & Lisān al-'Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. K-L-F (ك-ل-ف — At-Taklīf / Yukallifu):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> merumuskan poros makna asal <em>Kāf-Lām-Fā'</em> pada dua hal: <em>al-ilzām bi-masyaqqah</em> (pembebanan tugas yang menuntut pengerahan tenaga dan kesukaran) dan perubahan rona wajah. Orang Arab berkata <em>fulānun fī wajhihī kulafun</em> jika pada wajahnya timbul bintik-bintik merah kehitaman akibat terpanggang terik matahari atau keletihan fisik. <strong>Taklīf</strong> dalam terminologi syariat adalah tuntutan Allah kepada hamba yang mukallaf untuk melakukan atau meninggalkan suatu perbuatan. Penggunaan kalimat penafian <em>Lā yukallifullāh</em> menegaskan bahwa Allah tidak pernah mentransformasikan agama ini menjadi beban siksaan yang merusak integritas biologis dan spiritual manusia.
+        </li>
+        <li>
+            <strong>2. W-S-' (و-س-ع — Al-Wus'):</strong><br>
+            Akar kata <em>Wāw-Sīn-'Ain</em> menurut <em>Lisān al-'Arab</em> berlawanan dengan <em>adh-dhīq</em> (kesempitan). <em>Al-Wus'u</em> bermakna <em>al-jidah war-rafāhiyyah wat-ṭāqah ma'al-yusr</em> (kelapangan, kapasitas riil, dan kelonggaran ruang gerak). Terdapat distingsi mendalam antara <strong>Al-Wus' (الوُسْع)</strong> dan <strong>Aṭ-Ṭāqah (الطَّاقَة)</strong>:<br>
+            • <em>Aṭ-Ṭāqah:</em> Batas kapasitas terluar dan titik puncak energi manusia, di mana jika dipaksakan terus-menerus akan menimbulkan kepayahan ekstrem (<em>al-masyaqqah al-fādhiḥah</em>) hingga keruntuhan fisik.<br>
+            • <em>Al-Wus':</em> Kapasitas wajar yang berada di dalam lingkaran kemudahan, di mana seorang hamba mampu mengerjakannya dengan lapang dada tanpa penderitaan yang merusak jiwanya.<br>
+            Ketika Allah berfirman <em>illā wus'ahā</em> (bukan <em>illā ṭāqatahā</em>), Allah menetapkan syariat-Nya bukan pada batas kelelahan maksimal, melainkan pada zona kelapangan fitrah (<em>fī dā'iratit-taysīr</em>).
+        </li>
+        <li>
+            <strong>3. K-S-B (ك-س-ب — Kasabat vs Iktasabat):</strong><br>
+            Ibnu Faris dan Al-Ashfahani menyoroti perbedaan radikal antara wazan <em>tsulatsi mujarrad</em> (<em>kasaba</em>) dan wazan <em>mazīd bi-harfayn ifta'ala</em> (<em>iktasaba</em>):<br>
+            • <strong>Kasabat (كَسَبَتْ):</strong> Merujuk pada usaha yang dilakukan secara alamiah, mengalir, dan selaras dengan rancang bangun nurani manusia. Kebaikan (<em>al-hasanah</em>) adalah fitrah bawaan jiwa; ketika seseorang berbuat kebajikan, ruhani tidak mengalami distorsi internal.<br>
+            • <strong>Iktasabat (ٱكْتَسَبَتْ):</strong> Penambahan huruf Ta' (<em>ziyādatul mabnā</em>) menunjukkan <em>at-takalluf wal-mu'ānamah</em> (rekayasa penuh beban, intrik licik, pemaksaan diri, dan pergulatan melawan suara hati). Seseorang yang berbuat dosa dan kezaliman harus meredam jeritan nuraninya, menyusun tipu daya, dan menanggung friksi kognitif yang melelahkan jiwanya.
+        </li>
+        <li>
+            <strong>4. '-Sh-R (إ-ص-ر — Al-Iṣr):</strong><br>
+            Akar kata <em>Hamzah-Shād-Rā'</em> berporos pada makna <em>al-'aqdu wal-ḥabs</em> (ikatan yang mengikat kuat, menahan, dan membelenggu kebebasan gerak). Bangsa Arab menamai tali pengikat tenda dengan <em>al-iṣār</em>. Dalam konteks ayat, <strong>Iṣr</strong> adalah beban-beban syariat yang teramat berat, kaku, dan membelenggu sebagaimana yang pernah ditimpakan kepada umat-umat terdahulu (khususnya Bani Israil) sebagai sanksi atas pembangkangan dan kekerasan kepala mereka (misalnya kewajiban membunuh diri sendiri dalam tobat, memotong bagian kain yang terkena najis, atau haramnya memakan lemak hewan ternak).
+        </li>
+        <li>
+            <strong>5. N-S-Y & Kh-Th-' (Nisyān vs Khaṭa'):</strong><br>
+            • <strong>An-Nisyān (النسيان):</strong> Hilangnya ingatan sadar terhadap sesuatu yang sebelumnya telah diketahui tanpa adanya niat menentang.<br>
+            • <strong>Al-Khaṭa' (الخطأ):</strong> Terjadinya perbuatan yang menyimpang dari kebenaran akibat keliru dalam pertimbangan akal atau ijtihad, bukan didasari oleh kesengajaan maksiat (<em>al-'amd</em>). Munajat ini memohon pembebasan dari jeratan sanksi atas kelemahan biologis manusiawi.
+        </li>
+        <li>
+            <strong>6. Trinitas Ampunan: '-F-W (عفو), Gh-F-R (غفر), & R-H-M (رحم):</strong><br>
+            Tiga lafazh munajat ini disusun dengan tangga eskalasi spiritual yang menakjubkan:<br>
+            • <strong>Al-'Afwu (وَٱعْفُ عَنَّا):</strong> Berakar dari makna <em>al-maḥwu waṭ-ṭams</em> (menghapus jejak hingga tak bersisa). Menuntut pembersihan berkas dosa di masa lalu seolah-olah ia tidak pernah ada.<br>
+            • <strong>Al-Maghfirah (وَٱغْفِرْ لَنَا):</strong> Berakar dari <em>al-mighfar</em> (helm baja pelindung kepala). Bermakna menutupi aib di hadapan makhluk di masa kini dan melindungi hamba dari sengatan sanksi hukuman.<br>
+            • <strong>Ar-Rahmah (وَٱرْحَمْنَآ):</strong> Curahan karunia, taufiq, dan kasih sayang Ilahi untuk menjaga hamba di masa depan agar tidak terjatuh kembali ke dalam kehancuran.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>لَا يُكَلِّفُ</strong></td>
+                <td><em>Lā</em>: Harf nafyi mabni 'alas-sukun.<br><em>Yukallifu</em>: Fi'il mudhari' shahih akhir dari wazan <em>fa''ala – yuf'ilu</em>.</td>
+                <td>Fi'il mudhari' marfu' dengan dhammah zhahirah pada huruf Fa'. Merupakan fi'il muta'addi yang membutuhkan dua maf'ul bih.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Ism Jalālah 'alam 'alar-rabb.</td>
+                <td><strong>Fā'il</strong> (subjek) dari fi'il <em>yukallifu</em>, marfu' dengan tanda dhammah zhahirah di akhirnya.</td>
+            </tr>
+            <tr>
+                <td><strong>نَفْسًا</strong></td>
+                <td>Ism nakirah mufradah mu'annatsah sima'iyyah.</td>
+                <td><strong>Maf'ūl bih awwal</strong> (objek penderita pertama), manshub dengan tanda fathah zhahirah. Makna nakirah memberi faedah keumuman (<em>istighrāq</em>: jiwa siapa pun tanpa kecuali).</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَّا وُسْعَهَا</strong></td>
+                <td><em>Illā</em>: Adat hashr / istitsna' mulghah.<br><em>Wus'ahā</em>: Ism mudhaf; <em>Hā</em> dhamir muttashil lil-gha'ibah.</td>
+                <td><em>Wus'a</em> berkedudukan sebagai <strong>Maf'ūl bih tsānin</strong> (objek kedua) bagi <em>yukallifu</em>, manshub dengan fathah. <em>Hā</em> mabni fi mahalli jarren mudhaf ilayh merujuk pada <em>nafsan</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَهَا مَا كَسَبَتْ</strong></td>
+                <td><em>Lahā</em>: Jar wa majrur.<br><em>Mā</em>: Ism maushul bermakna <em>alladzī</em>.<br><em>Kasabat</em>: Fi'il madhi tsulatsi mujarrad + Ta' ta'nits.</td>
+                <td><em>Lahā</em> syibhul jumlah fi mahalli raf'in <strong>Khabar Muqaddam</strong>. <em>Mā</em> isim maushul mabni fi mahalli raf'in <strong>Mubtada' Mu'akhkhar</strong>. Jumlah <em>kasabat</em> adalah Shilah Maushul la mahalla laha minal i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>وَعَلَيْهَا مَا ٱكْتَسَبَتْ</strong></td>
+                <td><em>Wa</em>: Harf 'athaf.<br><em>'Alayhā</em>: Jar wa majrur.<br><em>Mā</em>: Ism maushul.<br><em>Iktasabat</em>: Fi'il madhi wazan <em>ifta'alat</em>.</td>
+                <td>Jumlah ma'thufah atas kalimat sebelumnya. <em>'Alayhā</em> khabar muqaddam, <em>mā</em> mubtada' mu'akhkhar. Menegaskan konsekuensi pertanggungjawaban personal (liabiliti moral).</td>
+            </tr>
+            <tr>
+                <td><strong>رَبَّنَا</strong></td>
+                <td><em>Rabb</em>: Ism mudhaf; <em>Nā</em>: Dhamir mutakallimin majrur bil-idhafah.</td>
+                <td><strong>Munādā</strong> dengan membuang huruf nida' (<em>Yā Rabbanā</em>), manshub dengan fathah karena berstatus mudhaf.</td>
+            </tr>
+            <tr>
+                <td><strong>لَا تُؤَاخِذْنَآ</strong></td>
+                <td><em>Lā</em>: Harf nahyi bermakna du'ā'.<br><em>Tu'ākhidz</em>: Fi'il mudhari' majzum wazan <em>fā'ala</em>; <em>Nā</em>: Maf'ul bih.</td>
+                <td>Fi'il mudhari' majzum dengan sukun karena <em>Lā an-nāhiyah</em>. Fa'il mustatir wajib taqdiruhu <em>Anta</em>. <em>Nā</em> mabni fi mahalli nashbin maf'ul bih.</td>
+            </tr>
+            <tr>
+                <td><strong>إِن نَّسِينَآ أَوْ أَخْطَأْنَا</strong></td>
+                <td><em>In</em>: Harf syarth jazim.<br><em>Nasīnā / Akhṭa'nā</em>: Fi'il madhi mabni 'alas-sukun fi mahalli jazmin fi'lu syarth.</td>
+                <td>Jumlah syarthiyyah i'tiradhiyyah. Jawab syarat mahdzuf ditunjukkan oleh doa sebelumnya (<em>fa-lā tu'ākhidznā</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا</strong></td>
+                <td><em>Wa lā</em>: Harf nahyi/du'ā'.<br><em>Taḥmil</em>: Fi'il mudhari' majzum.<br><em>'Alaynā</em>: Jar wa majrur ta'alluq bi <em>taḥmil</em>.<br><em>Iṣran</em>: Ism nakirah manshub.</td>
+                <td><em>Taḥmil</em> majzum bis-sukun. <em>Iṣran</em> berkedudukan sebagai <strong>Maf'ūl bih</strong>, manshub dengan tanda fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ</strong></td>
+                <td><em>Tuḥammil</em>: Fi'il mudhari' majzum wazan <em>fa''ala</em>; <em>Nā</em>: Maf'ul bih awwal.<br><em>Mā</em>: Ism maushul maf'ul bih tsanin.<br><em>Lā ṭāqata lanā bih</em>: Jumlah nafyi jins shilah maushul.</td>
+                <td><em>Mā</em> isim maushul mabni fi mahalli nashbin maf'ul bih tsanin. <em>Ṭāqata</em> isim <em>Lā nāfiyah lil-jins</em> mabni 'alal-fath fi mahalli nashb. <em>Lanā</em> khabar <em>Lā</em>. <em>Bihi</em> ta'alluq bi <em>ṭāqah</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ</strong></td>
+                <td>Fi'il-fi'il amr bermakna permohonan tulus (<em>talab ad-du'ā'</em>).</td>
+                <td><em>U'fu</em> fi'il amr mabni 'alā hadzfi harfil 'illah (huruf Wawu dibuang). <em>Ighfir</em> dan <em>Irḥam</em> mabni 'alas-sukun. Jar wa majrur (<em>'annā, lanā</em>) ta'alluq pada masing-masing fi'il.</td>
+            </tr>
+            <tr>
+                <td><strong>أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا</strong></td>
+                <td><em>Anta</em>: Dhamir munfashil mubtada'.<br><em>Mawlānā</em>: Khabar mubtada'.<br><em>Fa</em>: Fa' fashihah; <em>Unṣurnā</em>: Fi'il amr du'ā' + maf'ul bih.</td>
+                <td><em>Anta</em> fi mahalli raf'in mubtada'. <em>Mawlānā</em> khabar marfu' dengan dhammah muqaddarah atas alif. Jumlah <em>unṣurnā</em> berposisi sebagai jawab syarat yang diandaikan (<em>idzā kunta mawlānā fanṣurnā</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ</strong></td>
+                <td><em>'Alā</em>: Harf jar.<br><em>Al-Qawm</em>: Ism majrur.<br><em>Al-Kāfirīn</em>: Na'at (sifat).</td>
+                <td>Jar wa majrur muta'alliq bi <em>unṣurnā</em>. <em>Al-Kāfirīn</em> majrur dengan huruf <strong>Yā'</strong> karena jamak mudzakkar salim.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb al-Qaṣr wal-Ḥaṣr (Gaya Pembatasan Mutlak):</strong><br>
+            Konstruksi <em>Lā yukallifullāhu nafsan illā wus'ahā</em> menggunakan instrumen <em>Nafyu</em> (لَا) yang dikombinasikan dengan <em>Istitsnā'</em> (إِلَّا). Dalam balaghah, ini adalah struktur <em>Qashr</em> terkuat yang memberikan ketetapan mutlak: mustahil secara syariat Allah membebankan suatu kewajiban di luar daya kelapangan manusia. Ini menjadi garansi teologis universal bahwa tidak ada satu pun perintah agama yang menuntut kemustahilan manusiawi.
+        </li>
+        <li>
+            <strong>Ilmu Badi' & Ma'ani — Muqābalah & Jinās Isytiqāq (Kontras Kasabat vs Iktasabat):</strong><br>
+            Terjadi <em>Muqābalah</em> (penjajaran kontras yang simetris) antara dua klausa:
+            <div style="text-align: center; margin: 15px 0; font-weight: bold; color: var(--primary-mid);">
+                [ لَهَا مَا كَسَبَتْ ] &larr;&mdash;&rarr; [ وَعَلَيْهَا مَا ٱكْتَسَبَتْ ]
+            </div>
+            Penggunaan preposisi <strong>Lahā (لَهَا)</strong> menunjukkan hak keuntungan dan manfaat pahala (<em>al-manfa'ah wal-yumn</em>), sedangkan preposisi <strong>'Alayhā (وَعَلَيْهَا)</strong> menunjukkan liabilitas, jeratan beban, dan ancaman siksa (<em>adh-dharar wal-wizr</em>). Rahasia balaghah yang mencengangkan terletak pada perubahan wazan dari <em>kasabat</em> ke <em>iktasabat</em>: penambahan huruf Ta' pada perbuatan dosa mencerminkan betapa beratnya beban psikologis orang yang melanggar aturan Allah; kejahatan menuntut konspirasi batin, ketakutan akan terbongkar, dan perlawanan terhadap fitrah.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Isti'ārah Tamtsīliyyah pada Lafazh "Iṣr" (Beban Belenggu):</strong><br>
+            Kata <em>Iṣr</em> meminjam perumpamaan fisik ikatan tali beban berat yang dipikulkan ke atas punggung unta hingga unta tersebut berlutut dan tak sanggup bangkit berdiri. Al-Qur'an menggunakan metafora ini untuk menggambarkan betapa mengerikannya beban syariat yang kaku dan sanksi berat yang pernah membelenggu umat-umat terdahulu akibat kebebalan mereka.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Iltifāt & Tadrij al-Munājāt (Eskalasi Munajat Jiwa):</strong><br>
+            Ayat ini dimulai dengan <em>kalam khabar</em> ghaibah tentang hukum umum Allah (<em>Lā yukallifullāh...</em>), lalu secara tiba-tiba beralih (<em>iltifāt</em>) menjadi dialog intim orang pertama jamak berhadapan langsung dengan Allah (<em>Rabbanā...</em>). Pengulangan kata <strong>Rabbanā</strong> sebanyak tiga kali membangun klimaks ketundukan batin: dari permohonan ampunan personal, perlindungan sosial historis, hingga proklamasi kedaulatan tauhid universal.
+        </li>
+        <li>
+            <strong>I'jāz Shautī (Keajaiban Ritme Fonetik & Musikalisasi Wahyu):</strong><br>
+            Perhatikan perpindahan rima internal (<em>fawāṣil al-āyāt</em>). Ayat ini dibuka dengan ritme deklaratif objektif berakhiran vokal terbuka yang menenangkan (<em>wus'ahā, iktasabat</em>), lalu berubah menjadi jeritan doa berima seragam berbasis huruf alif mad panjang (<em>-nā</em>): <em>tu'ākhidznā, nasīnā, akhṭa'nā, 'alaynā, qablinā, tuḥammilnā, lanā, 'annā, lanā, warḥamnā, mawlānā, fanṣurnā</em>. Nada ini menghadirkan resonansi kerendahan hati kolektif yang menghunjam, kemudian ditutup dengan hentakan konsonan yang tegas pada kata <strong>Al-Kāfirīn</strong> sebagai simbol keteguhan perjuangan menegakkan kebenaran di muka bumi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Konteks Mendahului — Dialektika Penyembuhan Trauma Rohani):</strong><br>
+            Tautan logis antara Ayat 284, 285, dan 286 adalah sebuah drama pembebasan rohani yang tiada duanya:<br>
+            1. <em>Ayat 284:</em> Menimbulkan kepanikan eksistensial para sahabat karena Allah mengabarkan bahwa isi hati dan lintasan pikiran akan dihisab.<br>
+            2. <em>Ayat 285:</em> Menguji ketundukan mutlak kaum beriman. Alih-alih membantah sebagaimana Bani Israil, kaum mukminin berserah diri seraya memproklamasikan: <em>"Sami'nā wa aṭa'nā ghufrānaka rabbanā"</em> (Kami dengar dan kami taati; ampunan-Mu yang kami dambakan).<br>
+            3. <em>Ayat 286:</em> Turun seketika setelah penyerahan diri tersebut sebagai ganjaran rahmat: Allah membatasi hisab hanya pada apa yang berada dalam batas kesanggupan riil (<em>wus'</em>), memaafkan kekeliruan tanpa sengaja, dan mengangkat beban-beban masa lalu. Penyerahan diri tanpa syarat melahirkan pembebasan syariat yang penuh kasih sayang.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 5: Ayat 253–286):</strong><br>
+            Ayat 286 adalah <strong>Kunci Mahkota (The Grand Finale)</strong> dari seluruh Surah Al-Baqarah. Blok 5 merangkum ketetapan-ketetapan agung:<br>
+            • Puncak teologi Tauhid pada <em>Ayat Kursi</em> (Ayat 255).<br>
+            • Asas kebebasan nurani beragama: <em>Lā ikrāha fid-dīn</em> (Ayat 256).<br>
+            • Regulasi sosial dan revolusi ekonomi: Pembersihan riba secara frontal dan perintah infaq pemberdayaan (Ayat 261–281).<br>
+            • Hukum perdata, kontrak utang piutang, dan pencatatan muamalah terpanjang dalam Al-Qur'an (Ayat 282–283).<br>
+            Setelah memaparkan undang-undang peradaban yang begitu masif dan kompleks, manusia mungkin merasa cemas: <em>"Sanggupkah kita memikul seluruh syariat peradaban ini?"</em> Ayat 286 turun mengunci seluruh kecemasan itu: <strong>Seluruh syariat yang telah diundangkan di dalam Surah Al-Baqarah berada dalam batas fitrah kelapangan kalian (wus'ahā)!</strong>
+        </li>
+        <li>
+            <strong>Liḥāq (Tautan Melingkar / Ring Composition Menuju Awal Surah & Surah Ali 'Imran):</strong><br>
+            • <em>Korelasi Sirkular dengan Al-Baqarah 1–5:</em> Surah Al-Baqarah dibuka dengan identifikasi <em>Al-Muttaqīn</em> yang meyakini hal gaib dan menerima hidayah Al-Kitab (Ayat 1–5), dan ditutup pada Ayat 285–286 dengan perwujudan nyata iman kaum mukminin serta doa kemenangan mereka. Awal dan akhir surah saling mendekap secara sempurna.<br>
+            • <em>Korelasi Maju ke Surah Ali 'Imran:</em> Doa penutup ayat ini <em>fanṣurnā 'alal-qawmil-kāfirīn</em> langsung direspons pada Surah Ali 'Imran yang membedah perang ideologis menghadapi Ahlul Kitab dan konfrontasi fisik dalam Perang Uhud, di mana kesabaran dan ketaatan diuji secara nyata di medan juang.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Piagam Emansipasi dari Belenggu Legalistik Masa Lalu</h3>
+    <p>
+        Di kota Madinah, kaum muslimin hidup bertetangga dengan komunitas Yahudi yang terikat oleh beban hukum Taurat dan tradisi Talmudik yang teramat rumit. Sejarah mencatat bahwa akibat pembangkangan berulang kali dan sikap kaku mereka, Allah mengharamkan bagi mereka makanan-makanan yang baik (QS. An-Nisa': 160) dan membebankan syariat yang menuntut pengorbanan ekstrem.
+    </p>
+    <p>
+        Ketika masyarakat muslim Madinah mulai membangun peradaban baru, muncul kekhawatiran psikologis kolektif: apakah tatanan hukum Islam akan berubah menjadi beban yang kaku dan menyiksa seperti halnya hukum terdahulu? Firman Allah dalam ayat ini menjadi <strong>Piagam Emansipasi (Declaration of Spiritual Emancipation)</strong>. Allah menegaskan bahwa syariat Nabi Muhammad ﷺ dibangun di atas asas <em>as-samāḥah</em> (kelapangan) dan <em>raf'ul-ḥaraj</em> (penghapusan kepicikan), membersihkan manusia dari belenggu-belenggu masa lalu (<em>al-iṣr wal-aghlāl</em>) sebagaimana ditegaskan dalam QS. Al-A'raf: 157.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur & Filologi Klasik):</strong><br>
+        At-Tabari memaparkan dengan rangkaian sanad sahih bahwa <em>lā yukallifullāhu nafsan illā wus'ahā</em> bermakna Allah tidak membebankan ketaatan kepada seorang hamba kecuali apa yang berada dalam batas kelapangan daya dan kekuatannya (<em>illā mā aṭāqat an ta'malahū min fardhihī</em>). At-Tabari menolak anggapan bahwa ada perintah syariat yang mustahil dikerjakan. Beliau menjelaskan bahwa ketika ayat 284 turun, para sahabat benar-benar mengira bisikan hati (<em>waswasah</em> dan <em>khawāṭir</em>) akan disiksa, lalu Allah menghapus (<em>nasakh</em>) ketakutan tersebut melalui ayat 286 ini, seraya menetapkan bahwa bisikan jiwa yang tidak diwujudkan dalam ucapan atau perbuatan dimaafkan secara mutlak.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Tradisi Atsar & Teologi Ahlus Sunnah):</strong><br>
+        Ibnu Katsir menegaskan bahwa ayat ini adalah bukti kelembutan, keadilan, dan rahmat Allah yang tak terhingga kepada makhluk-Nya. Beliau mengaitkan ayat ini dengan hadits qudsi <em>"Qad fa'altu"</em> dalam Sahih Muslim, menunjukkan bahwa setiap butir munajat dalam ayat ini telah diijabah oleh Allah bagi umat Nabi Muhammad ﷺ. Ibnu Katsir menyoroti frasa <em>lahā mā kasabat</em>: bahwa seorang jiwa tidak akan pernah memikul dosa orang lain, dan tidak akan dikurangi sedikit pun pahala dari kebajikan yang diperbuatnya. Terkait lafazh <em>iṣran</em>, Ibnu Katsir mendefinisikannya sebagai beban perjanjian berat yang dahulu dipikulkan kepada umat sebelum Islam, yang kini telah diangkat seluruhnya oleh syariat Nabi pembawa rahmat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Dimensi Fiqih, Ushul & Kaidah Syariah):</strong><br>
+        Al-Qurthubi menjadikan ayat ini sebagai pilar utama penetapan kaidah-kaidah ushul fiqih agung:<br>
+        1. <em>Al-Masyaqqatu tajlibut-taysīr</em> (Kesulitan menuntut adanya kemudahan).<br>
+        2. <em>Lā wājiba ma'al-'ajz</em> (Tidak ada kewajiban syariat jika ada ketidakmampuan total).<br>
+        Al-Qurthubi membedah tuntas hukum perbuatan orang yang lupa (<em>nisyān</em>) dan keliru (<em>khaṭa'</em>): secara hukum akhirat, seluruh ulama sepakat dosanya gugur. Namun secara hukum duniawi, para fuqaha berijtihad: dalam urusan hak-hak Allah murni (seperti orang makan karena lupa saat puasa), puasanya tetap sah dan tidak wajib qadha menurut jumhur. Adapun dalam urusan hak-hak adami (merusak harta orang tanpa sengaja atau pembunuhan keliru), sanksi dosa ukhrawi gugur, namun liabilitas perdata (ganti rugi harta atau diyat) tetap berlaku demi menjaga ketertiban sosial.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Dialektika Teologis & Balaghah Rasional):</strong><br>
+        • <em>Az-Zamakhsyari:</em> Menganalisis keajaiban diksi <em>kasabat</em> versus <em>iktasabat</em>. Beliau menegaskan bahwa penambahan wazan <em>ifta'ala</em> pada kejahatan menunjukkan bahwa manusia berbuat maksiat dengan memaksakan diri, merekayasa nafsu, dan menentang fitrah ketauhidannya.<br>
+        • <em>Fakhruddin Ar-Razi:</em> Membedah perdebatan teologi besar antara Mu'tazilah dan Asy'ariyah mengenai <strong>Taklīf mā lā yuṭāq (Pembebanan di Luar Kemampuan)</strong>. Ulama Asy'ariyah berpendapat bahwa secara akal murni (<em>'aqlan</em>), Allah berkuasa mutlak membebani apa saja kepada milik-Nya, namun secara syariat dan faktual (<em>sam'an wa wuqū'an</em>), Allah menegaskan melalui ayat ini bahwa Dia <strong>tidak akan pernah</strong> membebani manusia di luar batas kemampuannya. Penafian ini adalah janji keadilan Ilahi yang pasti ditepati.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Muhammad Thahir Ibnu 'Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em> (Tafsir Maqashidi Kontemporer):</strong><br>
+        Ibnu 'Asyur menggarisbawahi bahwa ayat 286 adalah <strong>Piagam Maqasid Tasyri' Islam</strong>. Syariat Islam diturunkan dengan watak dasar <em>samahah</em> (toleransi dan kelapangan) untuk menjaga keberlanjutan peradaban manusia. Jika syariat menuntut hal-hal yang melampaui kemampuan fitrah, manusia akan meninggalkan agama karena keputusasaan. Beliau membedah bahwa doa <em>wa'fu 'annā, wagfir lanā, warḥamnā</em> adalah terapi psikologis kolektif: manusia membutuhkan penghapusan rasa bersalah atas masa lalu (<em>'afwu</em>), perlindungan kehormatan diri saat ini (<em>maghfirah</em>), dan jaminan kasih sayang untuk masa depan (<em>rahmah</em>) agar mampu melangkah optimis membangun dunia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Konteks Kemanusiaan & Bahasa):</strong><br>
+        Quraish Shihab menekankan bahwa kata <em>wus'</em> bukan sekadar daya fisik, tetapi mencakup daya tampung psikis dan mental. Allah tidak menuntut manusia menjadi malaikat yang steril dari kesalahan; Allah memahami keterbatasan kodrati manusia yang kerap terseret lupa dan khilaf. Shihab menyoroti bentuk jamak pada munajat: <em>Rabbanā, tu'ākhidznā, 'alaynā, tuḥammilnā</em>. Hal ini mengajarkan bahwa seorang mukmin sejati tidak pernah egois dalam berdoa. Keselamatan, ketenteraman dari beban, dan kemenangan peradaban harus dimohonkan dan diperjuangkan secara kolektif bersama seluruh umat beriman.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Buya Hamka — <em>Tafsir Al-Azhar</em> (Tasawuf Modern & Spiritualitas Nusantara):</strong><br>
+        Hamka mengajak pembaca merenungi betapa agungnya penutup Surah Al-Baqarah ini. Setelah seorang mukmin diajak mengarungi 285 ayat yang memuat hukum perang, puasa, haji, wasiat, pernikahan, thalak, hingga penghapusan riba, jiwa manusia bisa merasa gentar. Maka ayat 286 hadir bagaikan embun penyejuk di tengah padang pasir. Allah seolah berfirman: <em>"Tenanglah hamba-Ku, Aku tidak akan membebanimu melampaui kemampuanmu. Berusahalah sekuat tenagamu, dan jika engkau tersandung lupa atau khilaf, pintu ampunan-Ku selalu terbuka lebar."</em> Hamka menegaskan bahwa ayat ini melahirkan ketenangan batin yang luar biasa, mengubah ketakutan beragama menjadi cinta dan kerinduan berbakti kepada Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>8. Kementerian Agama RI (Kemenag RI — Tafsir Al-Qur'an Tematik & Maudhu'i):</strong><br>
+        Kemenag RI merumuskan bahwa ayat ini meletakkan prinsip dasar hukum Islam: moderasi beragama (<em>wasathiyyah</em>) dan perlindungan hak asasi manusia. Tidak boleh ada sistem hukum atau aturan sosial yang memeras keringat manusia hingga melampaui batas kemanusiaannya. Doa mohon pertolongan atas kaum kafir dimaknai bukan semata peperangan fisik, melainkan kemenangan moral, ilmu pengetahuan, dan keadilan melawan segala bentuk kezaliman dan kekafiran modern.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') & Dinamika Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Analisis & Sudut Pandang Khusus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Konsep Taklīf mā lā yuṭāq</strong></td>
+                <td>Secara faktual syariat (<em>syar'an</em>), Allah tidak pernah membebankan perintah di luar kemampuan manusia.</td>
+                <td><strong>Asy'ariyah:</strong> Secara rasional akal mungkin terjadi, tetapi dinafikan oleh wahyu.<br><strong>Mu'tazilah:</strong> Secara akal dan syariat mustahil terjadi karena bertentangan dengan keadilan Ilahi.<br><strong>Ibnu 'Asyur:</strong> Ini adalah kaidah maqashidi pembentukan hukum (<em>samāḥatusy-syarī'ah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Distingsi Kasb vs Iktisāb</strong></td>
+                <td>Keduanya merujuk pada perbuatan manusia yang melahirkan konsekuensi pahala atau dosa.</td>
+                <td><strong>Az-Zamakhsyari & Ar-Razi:</strong> Perbedaan wazan merefleksikan usaha: kebaikan selaras fitrah (mudah), dosa sarat intrik dan beban psikologis.<br><strong>At-Tabari:</strong> Menekankan aspek pertanggungjawaban personal mutlak (tiada dosa warisan).</td>
+            </tr>
+            <tr>
+                <td><strong>Konsekuensi Nisyān & Khaṭa'</strong></td>
+                <td>Dosa akhirat gugur secara mutlak berdasarkan nash ayat dan hadits penjelas.</td>
+                <td><strong>Imam Abu Hanifah:</strong> Menggugurkan kaffarah pada pembunuhan keliru jika tidak disengaja.<br><strong>Imam Asy-Syafi'i:</strong> Dosa gugur, tetapi konsekuensi ganti rugi perdata (diyat dan dam/kaffarah) tetap berjalan demi menjaga hak sesama hamba.</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat "Iṣr"</strong></td>
+                <td>Beban berat yang pernah menimpa umat terdahulu dan diangkat dari umat Muhammad ﷺ.</td>
+                <td><strong>Ibnu Katsir:</strong> Syariat berat Bani Israil (misal: bunuh diri untuk tobat).<br><strong>Quraish Shihab & Hamka:</strong> Belenggu formalisme hukum yang kaku dan ketiadaan dispensasi (<em>rukhshah</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13.5px; color: #718096; font-style: italic; border-left: 3px solid #cbd5e1; padding-left: 12px; margin-bottom: 20px;">
+        <strong>Catatan Epistemologis:</strong> Bagian ini merupakan ANALISIS SISTEMIK & KOGNITIF KONTEMPORER (ijtihad pembacaan psikologis berbasis wahyu, bukan teks wahyu itu sendiri, dan bersih dari klaim pencocok-cocokan sains spekulatif).
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Lama vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Lama / Jahiliyah Modern</th>
+                <th>Pola Pikir Qur'ani (QS. 2:286)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Persepsi Tanggung Jawab</strong></td>
+                <td><em>Toxic Perfectionism / Over-Responsibility:</em> Merasa harus menanggung seluruh beban dunia, menuntut kesempurnaan mutlak diri sendiri, memicu kecemasan kronis.</td>
+                <td><strong>Capacity-Load Parity:</strong> Beban hidup terkalibrasi secara presisi dengan daya fitrah. Allah hanya menuntut ikhtiar optimal dalam batas kelapangan (<em>wus'</em>), bukan hasil di luar kendali.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Kesalahan</strong></td>
+                <td><em>Destructive Guilt / Paralyzing Shame:</em> Menghukum diri sendiri secara berlebihan atas kekhilafan masa lalu, memicu depresi atau apatisme moral.</td>
+                <td><strong>Constructive Repentance:</strong> Kesalahan tanpa sengaja diakui sebagai fitrah manusiawi; segera direspons dengan istighfar, perbaikan diri, dan memohon 'afwu tanpa terjebak keputusasaan.</td>
+            </tr>
+            <tr>
+                <td><strong>Motivasi Beramal</strong></td>
+                <td><em>Transactional / Fear-Based:</em> Menjalankan kewajiban dengan perasaan tertekan, memandang syariat sebagai belenggu pembatas kebebasan.</td>
+                <td><strong>Emancipatory Devotion:</strong> Memandang syariat sebagai pembebasan dari jeratan hawa nafsu; ketaatan digerakkan oleh cinta dan keyakinan akan rahmat Ilahi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Formulasi Mental Model Qur'ani</h3>
+    <ul>
+        <li>
+            <strong>1. The Divine Capacity-Responsibility Equilibrium (Ekuilibrium Kapasitas-Beban Ilahi):</strong><br>
+            Prinsip ini menegaskan bahwa tidak ada ujian hidup, tuntutan moral, atau krisis eksistensial yang melampaui daya tahan rancang bangun jiwa seseorang. Setiap kali sebuah beban ditimpakan, kapasitas untuk menghadapinya telah disediakan oleh Allah di dalam fitrah hamba tersebut. Keyakinan ini mematahkan sindrom korban (<em>victim mentality</em>) dan membangkitkan ketahanan mental (<em>resilience</em>) tingkat tinggi: <em>"Jika Allah mengizinkan ujian ini hadir, maka kapasitas untuk melaluinya telah terpasang di dalam jiwaku."</em>
+        </li>
+        <li>
+            <strong>2. The Asymmetry of Virtue and Vice (Asimetri Kasb vs Iktisab):</strong><br>
+            Secara arsitektur jiwa, kebaikan dan kejahatan tidak bekerja pada level energi yang sama. Kebaikan (<em>kasb</em>) beroperasi dengan <em>zero-friction</em> pada nurani; ia menyehatkan metabolisme spiritual dan menenangkan pikiran. Sebaliknya, kejahatan (<em>iktisab</em>) membutuhkan energi kognitif yang destruktif: menipu nurani, menutupi jejak kebohongan, dan hidup dalam kecemasan konstan. Menjalani hidup lurus jauh lebih ringan secara neuropsikologis daripada memelihara kemaksiatan.
+        </li>
+        <li>
+            <strong>3. The Plural Safety Net (Jaring Pengaman Kolektif Doa):</strong><br>
+            Pergeseran dari kata "aku" menuju "kami" (<em>Rabbanā, lā tu'ākhidznā...</em>) mendekonstruksi ilusi individualisme modern. Kesalahan dan beban kerap lahir dari tekanan sistemik lingkungan. Dengan membangun kesadaran kolektif dalam munajat, jiwa melepaskan isolasi mentalnya dan menyadari bahwa ia adalah bagian dari ekosistem persaudaraan iman yang saling menopang di bawah perlindungan Sang Pencipta (<em>Mawlānā</em>).
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi & Tazkiyatun Nafs</h3>
+    <p>
+        Secara neurokognitif, ketakutan akan hisab yang tidak realistis (sebagaimana dialami sahabat sebelum turunnya ayat ini) memicu aktivasi berlebih pada <strong>Amygdala</strong> dan membanjiri sistem saraf dengan hormon stres (kortisol). Kondisi ini melumpuhkan fungsi perencanaan rasional di <strong>Prefrontal Cortex (PFC)</strong>, melahirkan kondisi <em>learned helplessness</em> (keputusasaan yang dipelajari).
+    </p>
+    <p>
+        Pernyataan <em>Lā yukallifullāhu nafsan illā wus'ahā</em> beroperasi sebagai <strong>de-eskalator neurobiologis</strong>. Wahyu ini menenangkan alarm amigdala dengan memberikan kepastian batas (<em>epistemic boundary</em>). Dalam disiplin <em>Tazkiyatun Nafs</em>, ayat ini menyembuhkan penyakit <em>al-ya'su min raḥmatillāh</em> (putus asa dari rahmat Allah) dan mengikis <em>waswasah</em> (obsesif-kompulsif religius). Jiwa berpindah dari kondisi <em>Nafs Ammārah</em> yang gelisah menuju <em>Nafs Muṭma'innah</em> yang tenang, karena ia menyadari bahwa Allah menilainya berdasarkan ketulusan ikhtiar di dalam batas kemampuan manusianya, bukan kesempurnaan mutlak yang mustahil digapai.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Epidemi Burnout, Toxic Productivity & "Hustle Culture" Abad ke-21</h3>
+    <p>
+        Peradaban modern abad ke-21 tengah dicengkeram oleh etos kerja kapitalisme neoliberal yang menuntut produktivitas tanpa henti (<em>hyper-productivity / hustle culture</em>). Manusia direduksi menjadi unit ekonomi murni, di mana harga diri seseorang diukur semata-mata dari capaian material, jam kerja ekstrem, dan output performatif. Fenomena ini melahirkan krisis peradaban baru:
+    </p>
+    <ul>
+        <li><strong>Epidemi Burnout Global & Kematian Akibat Kerja Berlebih (Karōshi):</strong> Jutaan profesional dan generasi muda mengalami kehancuran mental dan kelelahan biologis kronis karena dipaksa melampaui batas kewajaran fisik dan emosi mereka.</li>
+        <li><strong>Eksploitasi Sistemik Korporasi:</strong> Budaya korporasi modern seringkali menuntut karyawan memikul beban kerja yang tidak manusiawi (<em>taklīf mā lā yuṭāq</em> terselubung) dengan iming-iming bonus finansial semu, menciptakan dehumanisasi massal di tempat kerja.</li>
+    </ul>
+    <p>
+        Ayat 286 adalah <strong>Kritik Radikal terhadap Kapitalisme Eksploitatif</strong>. Ketika Tuhan Semesta Alam menyatakan bahwa Dia Sendiri tidak membebani manusia melampaui kelapangannya, maka atas hak apa sistem ekonomi, korporasi, atau ekspektasi sosial buatan manusia berani memeras keringat dan mematahkan tulang punggung manusia melampaui kapasitas kemanusiaannya? Ayat ini menuntut pemulihan martabat kemanusiaan dan keseimbangan hidup yang sakral.
+    </p>
+
+    <h3>2. "Modern Ishr": Belenggu Utang Finansial & Hegemoni Algoritma</h3>
+    <p>
+        Doa <em>Rabbanā wa lā taḥmil 'alaynā iṣran</em> memperoleh resonansi fenomenologis yang luar biasa dalam lanskap kontemporer. "Ishr" (belenggu beban berat) abad ke-21 tidak lagi berwujud hukum batu Taurat, melainkan menjelma dalam:
+    </p>
+    <ul>
+        <li><strong>Jeratan Utang Ribawi Sistemik:</strong> Sistem perbankan fiat dan industri pinjaman online (pinjol) menjerat miliaran manusia dalam lingkaran setan bunga berbunga. Manusia bekerja seumur hidup hanya untuk membayar bunga pinjaman, kehilangan kebebasan eksistensial, dan terbelenggu secara finansial persis seperti perbudakan masa lalu.</li>
+        <li><strong>Beban Kognitif Algoritmik (Digital Enslavement):</strong> Banjir informasi tanpa jeda, rekayasa kecanduan media sosial, dan tuntutan standar gaya hidup konsumtif menciptakan beban psikologis artifisial yang membelenggu pikiran generasi modern dalam kepalsuan eksistensial.</li>
+    </ul>
+    <p>
+        Al-Qur'an menawarkan jalan dekonstruksi: memohon kepada Allah dan berjuang secara kolektif untuk meruntuhkan belenggu-belenggu struktural tersebut melalui tauhid finansial, pembebasan dari riba, dan kesederhanaan hidup yang berkeadaban.
+    </p>
+
+    <h3>3. Krisis Kesehatan Mental & Impostor Syndrome</h3>
+    <p>
+        Di era keterbukaan informasi, manusia terus-menerus membandingkan kelemahan internal dirinya dengan etalase kesuksesan orang lain di media sosial. Hal ini melahirkan epidemi <em>Impostor Syndrome</em> (merasa diri tidak pernah cukup baik dan selalu cemas akan terbongkar kekurangannya) serta ketakutan kronis akan kegagalan.
+    </p>
+    <p>
+        Munajat <em>Rabbanā lā tu'ākhidznā in nasīnā aw akhṭa'nā</em> membebaskan manusia dari teror mental tersebut. Islam memandang kesalahan tanpa sengaja (<em>khaṭa'</em>) dan kelupaan (<em>nisyān</em>) bukan sebagai noda kehinaan yang membatalkan nilai diri, melainkan sebagai bagian tak terpisahkan dari kurva belajar manusia. Islam memberikan ruang aman psikologis (<em>psychological safety</em>) bagi hamba untuk bertumbuh, mencoba, dan memperbaiki diri tanpa dihantui rasa bersalah yang destruktif.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Penerapan "Protokol Penutup Malam Khawātīm Al-Baqarah" (Mikro-Habit &lt; 5 Menit):</strong><br>
+                Jadikan pembacaan dua ayat terakhir Surah Al-Baqarah (Ayat 285–286) sebagai rutinitas wajib setiap malam menjelang tidur, sebagaimana wasiat hadits Sahih Bukhari (<em>kafatāhu</em>). Baca dengan tartil, hayati getaran permohonan ampunan atas kelupaan dan kekhilafan hari itu, lalu serahkan seluruh kecemasan masa depan kepada Allah sebagai <em>Mawlā</em> yang mencukupi segala urusan.
+            </li>
+            <li>
+                <strong>Pemasangan "Filter Batas Wus'ah" dalam Manajemen Keputusan (Decision Rule):</strong><br>
+                Terapkan audit kapasitas diri secara berkala sebelum menerima tanggung jawab profesional atau sosial baru. Ajukan pertanyaan evaluatif: <em>"Apakah komitmen ini berada dalam batas kelapangan daya fitrahku (wus'ī), ataukah ini didorong oleh keserakahan ego dan tekanan gengsi yang akan menghancurkan ibadah dan keluargaku?"</em> Miliki keberanian moral untuk berkata "tidak" pada tuntutan eksploitatif yang melampaui batas kewajaran biologis dan syar'i.
+            </li>
+            <li>
+                <strong>Pemberian Amnesti Khilaf dalam Relasi Sosial & Kepemimpinan (Etika Interpersonal):</strong><br>
+                Manifestasikan doa <em>wa'fu 'annā wagfir lanā</em> ke dalam interaksi nyata dengan bawahan, pasangan hidup, atau anak-anak. Jika mereka melakukan kesalahan murni karena lupa (<em>nisyān</em>) atau kekeliruan tanpa sengaja (<em>khaṭa'</em>), hapuskan kemarahan, maafkan dengan lapang dada, dan berikan bimbingan tanpa celaan yang melukai martabat mereka, sebagaimana kita merindukan ampunan Allah atas kekhilafan kita.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika beban hidup terasa begitu menghimpit dada, apakah aku masih meragukan keadilan Allah dan mengeluh bahwa ujian ini melampaui kekuatanku, ataukah aku segera bangkit dengan keyakinan kokoh bahwa Allah tidak pernah membebani jiwaku melampaui kapasitas terpasang di dalam fitrahku?
+            </li>
+            <li>
+                Seberapa sering aku menyiksa diriku sendiri dengan rasa bersalah yang destruktif atas kekhilafan masa lalu, alih-alih bersimpuh memohon <em>'afwu</em> dan <em>maghfirah</em> dari Sang Maha Pengampun yang telah berjanji mengabulkan doa ini dengan firman-Nya: <em>"Qad fa'altu"</em>?
+            </li>
+            <li>
+                Dalam pertarungan peradaban modern hari ini, kepada siapakah loyalitas, kepasrahan, dan perlindungan (<em>wilāyah</em>) hidupku kuserahkan sepenuhnya: apakah kepada kekuatan modal, jabatan fana, dan penguasa zalim, ataukah murni kepada Allah sebagai satu-satunya <em>Mawlānā</em> yang menjamin kemenangan hakiki?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Yā Allāh, Yā Rabbanā, Yā Arḥamar-Rāḥimīn. Segala puji bagi-Mu yang telah menurunkan ketetapan agung bahwa Engkau tidak pernah membebani jiwa kami melampaui kelapangan fitrah kami. Ampunilah kelalaian kami ketika kelemahan biologis menyeret kami ke dalam kelupaan, dan maafkanlah keterbatasan akal budi kami ketika ijtihad kami tergelincir dalam kekhilafan. Wahai Tuhan kami, janganlah Engkau pikulkan ke atas pundak kami belenggu-belenggu dosa dan kesulitan hidup sebagaimana yang pernah menimpa umat-umat sebelum kami, dan janganlah Engkau bebankan kepada kami apa yang tak sanggup kami pikul. Hapuslah noda masa lalu kami dengan 'afwu-Mu, lindungilah aib dan kehormatan kami dengan maghfirah-Mu, serta naungilah masa depan kami dengan rahmah-Mu yang tiada bertepi. Engkaulah Pelindung, Pemimpin, dan Penolong sejati kami; maka tolonglah kami, teguhkanlah langkah kami, dan karuniakanlah kemenangan spiritual serta peradaban atas kaum yang ingkar kepada-Mu. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-285 - QS. Al-Baqarah Ayat 285.html">&larr; Kembali ke Ayat 285 (QS. 2:285)</a>
+        <span><strong>QS. Al-Baqarah [2]: 286 (Tamat Surah Al-Baqarah)</strong></span>
+        <a href="../../03 - Surah Ali 'Imran/003-000 - Pengantar & Peta Maqasid Surah Ali 'Imran.html">Lanjut ke Surah Āli 'Imrān &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

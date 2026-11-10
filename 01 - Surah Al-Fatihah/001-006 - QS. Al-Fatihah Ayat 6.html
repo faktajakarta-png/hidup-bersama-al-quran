@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-006 - QS. Al-Fatihah Ayat 6 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="001-005 - QS. Al-Fatihah Ayat 5.html">&larr; Ayat Sebelumnya (QS. 1:5)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="001-007 - QS. Al-Fatihah Ayat 7.html">Ayat Berikutnya (QS. 1:7) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Poros 3: Permohonan Agung Hidayah & Jalan Lurus</span>
+        <span class="badge">3 Kata | 18 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 6</h1>
+    <div class="transliteration">
+        "Ihdinash-shirāthal-mustaqīm."
+    </div>
+    <div class="thematic-title">
+        Arsitektur Hidayah dan Geometri Jalan Lurus: Empat Tingkatan Hidayah Ilahi, Rahasia Sintaksis "Ihdinā" Tanpa Preposisi, Tiga Variasi Qira'at Mutawatirah pada "Ash-Shirāth", serta Kebutuhan Abadi Mukmin akan Keteguhan (Tsabāt)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 3: Permohonan Agung Hidayah & Peta Perjalanan Manusia)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ۝٦
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Tunjukilah, bimbinglah, dan teguhkanlah kami di dalam jalan raya kebenaran yang lurus (tanpa sedikit pun penyimpangan)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Kata perintah/doa <em>Ihdinā</em> langsung menashabkan objek <em>Ash-Shirāth</em> tanpa perantara huruf jarr (bukan <em>ihdinā ilā</em> atau <em>ihdinā li</em>). Oleh karena itu, maknanya melampaui sekadar "tunjukkanlah arah jalan itu dari jauh", melainkan: <strong>"Masukkanlah kami ke dalam jalan lurus itu, bimbinglah langkah kami di sepanjang jalannya, dan teguhkanlah kami di atasnya hingga tiba di surga-Mu!"</strong>
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱهْدِنَا</strong><br>(<em>Ihdinā</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Saat memulai dari awal ayat (<em>ibtida'</em>), dibaca <strong>kasrah (Ih-)</strong> karena huruf ketiga dari fi'il (yaitu <em>Dāl</em>) berharakat kasrah.<br>
+                    <strong>Huruf Hā' Sukun:</strong> Keluar dari <em>aqshal halq</em> (pangkal tenggorokan) dengan sifat <em>hams</em> dan <em>rikhwah</em> yang jelas tanpa qalqalah.<br>
+                    <strong>Alif Mad</strong> di ujung <em>Ihdinā</em> gugur secara pengucapan saat disambung ke kata <em>Ash-Shirātha</em> untuk menghindari pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Ihdinā</em> dengan kasrah pada hamzah washal saat ibtida' dan menggugurkan alif mad saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلصِّرَٰطَ</strong><br>(<em>Ash-Shirātha</em> / <em>As-Sirātha</em> / <em>Az-Zirātha</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah</strong> pada <em>Lam Ta'rif</em> yang melebur ke dalam huruf <em>Shād</em> bertasydid kasrah.<br>
+                    <strong>Huruf Shād:</strong> Memiliki sifat <em>isti'la'</em> (pangkal lidah naik), <em>ithbaq</em> (lidah melengkung menghadap langit-langit), dan <em>shafir</em>. Meski berharakat kasrah, sifat ketebalannya (<em>tafkhim</em>) tetap terjaga pada tingkatan kelima.<br>
+                    <strong>Huruf Rā'</strong> fathah dibaca <strong>Tafkhim</strong> dengan mad 2 harakat.<br>
+                    <strong>Huruf Thā'</strong> fathah dibaca tebal (<em>isti'la' wa ithbaq</em>).
+                </td>
+                <td>
+                    Terdapat <strong>Tiga Variasi Qira'at Mutawatirah</strong> dari Rasulullah ﷺ:<br>
+                    • <strong>1. Bacaan dengan Huruf Shād Murni (ٱلصِّرَٰطَ — Ash-Shirātha):</strong> Bacaan mayoritas mutlak para imam (Nafi', Ibnu 'Amir, Abu 'Amr, 'Ashim, Al-Kisa'i, Abu Ja'far, Khalaf Al-'Asyir, dan Rauh dari Ya'qub). Mengikuti dialek Quraisy yang melakukan <em>ibdāl</em> (penggantian) <em>Sīn</em> menjadi <em>Shād</em> untuk keserasian artikulasi (<em>mujānasah</em>) sebelum huruf tebal <em>Thā'</em>.<br>
+                    • <strong>2. Bacaan dengan Huruf Sīn Murni (ٱلسِّرَٰطَ — As-Sirātha):</strong> Diriwayatkan oleh <strong>Qunbul dari Ibnu Katsir</strong> dan <strong>Ruwais dari Ya'qub</strong>. Mengembalikan kata ke huruf asalnya dalam bahasa Arab (<em>As-Sirāth</em> dari akar kata <em>saratha</em>).<br>
+                    • <strong>3. Bacaan Isymam Shād dengan Bunyi Zāy (Az-Zirātha):</strong> Diriwayatkan oleh <strong>Khalaf dari Hamzah</strong> (pada kedua kata di Ayat 6 & 7) dan <strong>Khallad dari Hamzah</strong> (khusus pada kata pertama di Ayat 6), mengikuti dialek Qais.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱلْمُسْتَقِيمَ</strong><br>(<em>Al-Mustaqīma</em>)</td>
+                <td>
+                    <strong>Idzhar Qamariyyah</strong> pada <em>Lam Ta'rif</em> sukun.<br>
+                    <strong>Perhatian Sifat Huruf (Mukhlishul-Huruf):</strong> Huruf <em>Sīn</em> sukun dan <em>Tā'</em> fathah wajib dibaca <strong>Tarqiq (tipis)</strong> meskipun diapit oleh huruf tebal <em>Qāf</em> setelahnya! Jangan sampai terbaca <em>al-mushtaqīm</em>.<br>
+                    <strong>Huruf Qāf</strong> kasrah berada pada tingkatan tafkhim terendah (<em>tafkhim nisbi</em>).<br>
+                    <strong>Mad 'Aridh Lissukun</strong> saat waqaf (2, 4, atau 6 harakat).
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Al-Mustaqīma</em> dengan nashab (fathah pada <em>Mīm</em> saat washal) sebagai <em>na'at</em> bagi <em>Ash-Shirātha</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Sahih Penjelas tentang Permohonan Agung dan Geometri Jalan Lurus</h3>
+    <div class="hadith-box">
+        <strong>1. Penutup Hadits Qudsi Sahih Muslim (No. 395) dari Abu Hurairah r.a. — Jaminan Pengabulan Doa Hidayah:</strong><br>
+        Rasulullah ﷺ bersabda bahwa Allah Ta'ala berfirman: <em>"Fa-idzā qāla: 'Ihdinash-shirāthal-mustaqīm, shirāthalladzīna an'amta 'alayhim ghayril-maghdhūbi 'alayhim wa ladh-dhāllīn', qāla: 'Hādzā li'abdī, wa li'abdī mā sa'ala'!"</em> (Apabila hamba mengucapkan: <em>"Ihdinash-shirāthal-mustaqīm..."</em> hingga akhir surah, maka Allah berfirman: <strong>"Ini adalah milik hamba-Ku, dan bagi hamba-Ku apa yang ia minta!"</strong>).
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Ahmad (No. 17634), Tirmidzi (No. 2859), dan An-Nasa'i dari An-Nawwas bin Sam'an r.a. — Perumpamaan Visual "Ash-Shirāth Al-Mustaqīm" oleh Rasulullah ﷺ:</strong><br>
+        Rasulullah ﷺ membuat perumpamaan yang sangat hidup: <em>"Dharaballāhu matsalan shirāthan mustaqīman, wa 'alā جنبتي الصِّرَاطِ sūrāni fīhimā abwābun mufattaḥah, wa 'alāl-abwābi sutūrun murkhāh, wa 'alā bābish-shirāthi dā'in yaqūlu: Yā ayyuhan-nāsu udkhulush-shirātha jamī'an wa lā tatafarraqū! Wa dā'in yad'ū min jawfish-shirāthi; fa-idzā arādal-insānu an yaftaḥa syay'an min tilkal-abwābi qāla: Wayḥaka lā taftaḥ-hu, fa-innaka in taftaḥ-hu talij-hu! Fash-shirāthu: Al-Islām, was-sūrāni: Ḥudūdullāh, wal-abwābul-mufattaḥatu: Maḥārimullāh, wa dzālikad-dā'ī 'alā ra'sish-shirāthi: Kitābullāh, wad-dā'ī min fawqish-shirāthi: Wā'izhullāhi fī qalbi kulli muslim!"</em><br>
+        (Allah membuat perumpamaan sebuah jalan yang lurus [<em>shirāthan mustaqīman</em>]; di kedua sisi jalan itu terdapat dua dinding pembatas yang memiliki pintu-pintu terbuka dengan tirai-tirai tipis. Di gerbang jalan itu ada penyeru yang berseru: "Wahai manusia, masuklah kalian semua ke jalan lurus ini dan jangan menyimpang!" Dan ada penyeru dari atas jalan yang memperingatkan setiap kali manusia hendak menyingkap tirai pintu samping: "Celaka engkau, jangan buka tirai itu; jika engkau membukanya niscaya engkau akan terperosok ke dalamnya!" Maka <strong>Ash-Shirāth adalah Islam</strong>, kedua dinding pembatas adalah <strong>batas-batas hukum Allah</strong>, pintu-pintu bertirai adalah <strong>hal-hal yang diharamkan Allah</strong>, penyeru di gerbang jalan adalah <strong>Kitabullah [Al-Qur'an]</strong>, dan penyeru dari atas jalan adalah <strong>penasihat Ilahi [nurani iman] di dalam hati setiap Muslim</strong>!).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Ihdinā (ٱهْدِنَا — Akar Kata: ه-د-ي):</strong><br>
+            Berakar dari <em>Hā'-Dāl-Yā'</em> (<em>hadā - yahdī - hudan wa hidāyatan</em>) yang bermakna <strong>menunjukkan dan membimbing dengan penuh kelembutan menuju tujuan yang dicintai</strong> (<em>ad-dalālah bil-luthf ilā mā yūshilu ilāl-mathlūb</em>). Dari akar kata yang sama lahir kata <em>Al-Hadiyyah</em> (الهَدِيَّة = hadiah/pemberian kasih sayang), karena hidayah adalah hadiah terindah dari Allah kepada hamba-Nya.<br>
+            Dalam semantik Al-Qur'an, kata kerja <em>Hadā</em> memiliki <strong>tiga konstruksi sintaksis</strong> dengan gradasi makna yang sangat presisi:<br>
+            1) <strong>Hadā ilā (هَدَى إِلَى — dengan huruf jarr <em>ilā</em>):</strong> Sekadar menunjukkan arah menuju jalan dari kejauhan (<em>al-irsyād wad-dalālah</em>), sebagaimana firman-Nya: <em>"Wa innaka latahdī ilā shirāthin mustaqīm"</em> (QS. Asy-Syura: 52).<br>
+            2) <strong>Hadā li (هَدَى لِـ — dengan huruf jarr <em>lām</em>):</strong> Mengantarkan hingga sampai pada tujuan akhir, sebagaimana ucapan penghuni surga: <em>"Al-ḥamdu lillāhilladzī hadānā lihādzā"</em> (QS. Al-A'raf: 43).<br>
+            3) <strong>Hadā [tanpa huruf jarr] (ٱهْدِنَا ٱلصِّرَٰطَ — muta'addī bi-nafsihi):</strong> Ini adalah tingkatan paling komprehensif! Mencakup makna <em>irsyād</em> (penjelasan ilmu), <em>tawfīq</em> (bimbingan hati untuk mengamalkan), dan <em>tsabāt</em> (peneguhan langkah di dalam jalan itu tanpa keluar darinya).
+        </li>
+        <li>
+            <strong>Ash-Shirāth (ٱلصِّرَٰطَ — Akar Kata: س-ر-ط / ص-ر-ط):</strong><br>
+            Secara etimologis berasal dari <em>saratha - yasruthu</em> yang bermakna <strong>menelan dengan mudah</strong> (<em>al-ibtilā'</em>). Mengapa jalan raya yang besar dan lurus disebut <em>Shirāth</em>? Karena jalan yang luas, terang, dan rata itu "menelan" para pejalan kaki yang melintasinya dalam jumlah besar tanpa hambatan. Dalam bahasa Arab, berbeda dengan kata <em>Ath-Tharīq</em> atau <em>As-Sabīl</em> yang bisa memiliki bentuk jamak (<em>thuruq</em> / <em>subul</em>) dan bisa berarti jalan kecil yang berbelok-belok, kata <strong>Ash-Shirāth di dalam Al-Qur'an tidak pernah memiliki bentuk jamak</strong>! Ia selalu tunggal (<em>mufrad</em>), karena jalan kebenaran menuju Allah hanya satu, sedangkan jalan-jalan kesesatan bercabang banyak (<em>"Wa anna hādzā shirāthī mustaqīman fattabi'ūhu, wa lā tattabi'us-subula fatafarraqa bikum 'an sabīlih"</em> — QS. Al-An'am: 153).
+        </li>
+        <li>
+            <strong>Al-Mustaqīm (ٱلْمُسْتَقِيمَ — Akar Kata: ق-و-م):</strong><br>
+            Isim Fā'il dari <em>istaqāma - yastaqīmu</em> (wazan <em>istaf'ala</em> dari akar <em>Qāf-Wāw-Mīm</em>). Secara geometri berarti <strong>garis lurus yang menghubungkan dua titik dengan jarak paling dekat dan bebas dari kebengkokan (lā 'iwaja fīh)</strong>. Huruf <em>Sīn</em> dan <em>Tā'</em> pada wazan <em>istaf'ala</em> menunjukkan kesempurnaan dan kemutlakan kelurusan jalan tersebut, baik secara akidah, syariat, maupun akhlak.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱهْدِنَا</strong></td>
+                <td>
+                    <em>Ihdi</em>: Fi'il amr dari fi'il naqish <em>hadā - yahdī</em>.<br>
+                    <em>-nā</em>: Dhamir muttashil mutakallim ma'al-ghayr.
+                </td>
+                <td>
+                    <strong>Fi'il Amr</strong> (bermakna <em>du'ā'</em> / permohonan penuh adab dari hamba kepada Rabb) mabni di atas pembuangan huruf 'illah (<em>ḥadzfu ḥarfil-'illah</em> yaitu <em>Yā'</em>). <strong>Fā'il</strong>-nya dhamir mustatir wujuban takdirnya <em>Anta</em>.<br>
+                    <em>-nā</em>: Dhamir muttashil mabni 'alas-sukun fi mahalli nashb sebagai <strong>Maf'ūl Bih Pertama</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلصِّرَٰطَ</strong></td>
+                <td>
+                    Isim mufrad mudzakkar berwazan فِعَال (<em>Fi'āl</em>).
+                </td>
+                <td>
+                    <strong>Maf'ūl Bih Kedua</strong> bagi fi'il <em>Ihdi</em> (atau <em>manshūb 'alā naz'il-khāfidh</em> menurut sebagian ulama Kufah), manshub dengan tanda fathah zhahirah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُسْتَقِيمَ</strong></td>
+                <td>
+                    Isim Fā'il dari fi'il tsulatsi mazid <em>istaqāma</em> (asalnya <em>mustaqwim</em>, terjadi <em>i'lāl</em> pemindahan harakat kasrah wawu ke qaf lalu wawu berubah menjadi ya').
+                </td>
+                <td>
+                    <strong>Na'at</strong> (sifat) bagi <em>Ash-Shirātha</em>, manshub dengan tanda fathah zhahirah.<br>
+                    <strong>Kedudukan Jumlah:</strong> Jumlah Thalabiyyah/Du'a'iyyah yang berfungsi sebagai <em>Bayān</em> (penjelasan rincian) bagi kalimat <em>Wa iyyāka nasta'īn</em> pada Ayat 5.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Mengapa Orang Beriman yang Sudah Mendapat Hidayah Masih Diperintahkan Berdoa "Ihdinā"?</strong><br>
+            Pertanyaan klasik paling mendalam dalam tafsir Ayat 6 adalah: Bukankah Rasulullah ﷺ, para sahabat, dan kaum mukminin yang sedang shalat sudah berada di atas jalan Islam? Mengapa mereka masih wajib memohon <em>"Ihdinash-shirāthal-mustaqīm"</em> (Tunjukilah kami jalan yang lurus) di setiap rakaat? Para ulama Balaghah dan Tafsir menjawab bahwa permohonan hidayah bagi orang mukmin mencakup <strong>lima lapis kebutuhan abadi</strong>:<br>
+            1) <strong>Permohonan Keteguhan (<em>Ath-Thalab lits-Tsabāt wad-Dawām</em>):</strong> Ibarat orang yang berkata kepada orang yang sudah duduk: "Duduklah di sini sampai aku kembali!" Hati manusia mudah berbolak-balik, sehingga ia butuh dijaga agar tetap istiqamah hingga akhir hayat (<em>husnul khatimah</em>).<br>
+            2) <strong>Permohonan Tambahan Kualitas Hidayah (<em>Ziyādatul-Hudā</em>):</strong> Sebagaimana firman Allah: <em>"Walladzīnah-tadaw zādahum hudan wa ātāhum taqwāhum"</em> (QS. Muhammad: 17). Ilmu dan iman tidak memiliki batas akhir.<br>
+            3) <strong>Hidayah dalam Detail Keputusan Baru Setiap Hari:</strong> Setiap hari kita menghadapi persoalan baru, ujian baru, dan pilihan hidup baru yang membutuhkan bimbingan segar dari Allah.<br>
+            4) <strong>Hidayah Meniti Derajat-Derajat Kesempurnaan Batin:</strong> Dari sekadar Islam lahiriah menuju Iman, lalu menuju Ihsan.<br>
+            5) <strong>Hidayah di Akhirat saat Meniti Jembatan Shirath menuju Surga.</strong>
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Isti'ārah Tashrīḥiyyah pada Kata "Ash-Shirāth Al-Mustaqīm":</strong><br>
+            Agama yang benar dan manhaj hidup Ilahi diserupakan dengan sebuah "jalan raya yang lurus, terang, dan mengantarkan langsung ke istana keselamatan". Pemilihan metafora jalan (<em>shirāth</em>) mengisyaratkan bahwa hidup manusia di dunia bukanlah tempat menetap yang diam, melainkan sebuah <strong>perjalanan dinamis (safar)</strong> yang bergerak detik demi detik menuju perjumpaan dengan Allah (<em>Yā ayyuhal-insānu innaka kādiḥun ilā Rabbika kadḥan famulāqīh</em> — QS. Al-Insyiqaq: 6).
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi dengan Ayat 5 "Wa Iyyāka Nasta'īn"):</strong><br>
+            Ayat 6 adalah jawaban langsung dan perincian dari <em>Wa iyyāka nasta'īn</em>. Setelah hamba memuji Allah (Ayat 1–4) dan mengikrarkan kesetiaan pengabdian (Ayat 5), barulah ia memenuhi syarat adab untuk mengajukan permintaan puncak di Ayat 6. Sebagaimana sabda Nabi ﷺ: <em>"Apabila salah seorang dari kalian berdoa, hendaklah ia memulai dengan memuji Rabb-nya dan menyanjung-Nya, lalu bershalawat atas Nabi ﷺ, kemudian barulah ia berdoa meminta apa yang ia kehendaki"</em> (HR. Abu Dawud & Tirmidzi).
+        </li>
+        <li>
+            <strong>Siyāq (Inti Doa dalam Surah Al-Fatihah):</strong><br>
+            Seluruh ayat sebelumnya (Ayat 1–5) merupakan mukadimah pengantar menuju satu doa agung di Ayat 6 ini: <strong>Ihdinash-shirāthal-mustaqīm</strong>.
+        </li>
+        <li>
+            <strong>Liḥāq (Korelasi dengan Ayat 7 dan Pembuka Surah Al-Baqarah!):</strong><br>
+            • <strong>Menuju Ayat 7:</strong> Agar manusia tidak mengklaim "jalan lurus" menurut hawa nafsu atau tafsir subjektifnya sendiri, Ayat 7 langsung mendefinisikan tolok ukur historis dan sosiologis dari jalan lurus tersebut: yaitu jalan orang-orang yang telah diberi nikmat oleh Allah (para nabi, shiddiqin, syuhada, dan shalihin), bukan jalan mereka yang dimurkai dan bukan jalan mereka yang sesat.<br>
+            • <strong>Menuju Surah Al-Baqarah [2]: 1–2 (Munasabah Antar-Surah):</strong> Ketika hamba berdoa di akhir Surah Al-Fatihah: <em>"Ya Allah, tunjukilah kami jalan yang lurus!"</em>, Allah langsung menjawab doa tersebut di awal Surah Al-Baqarah: <strong>"Alif Lām Mīm. Dzālikal-Kitābu lā rayba fīhi hudan lil-muttaqīn!"</strong> (Itulah Kitab [Al-Qur'an] yang tidak ada keraguan di dalamnya sebagai petunjuk [hidayah jalan lurus] bagi orang-orang yang bertakwa!). Seluruh isi Al-Qur'an dari Al-Baqarah hingga An-Nas adalah jawaban atas doa Ayat 6 ini!
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Kebingungan Eksistensial Manusia di Persimpangan Ideologi</h3>
+    <p>
+        Sebelum turunnya Al-Qur'an, kaum pencari kebenaran (<em>Al-Ḥunafā'</em>) di Jazirah Arab seperti Zaid bin 'Amr bin Nufail, Waraqah bin Naufal, dan Salman Al-Farisi mengembara dari satu negeri ke negeri lain dengan hati yang gelisah mencari jalan yang lurus untuk menyembah Allah. Zaid bin 'Amr bin Nufail pernah bersandar di Ka'bah sambil menangis dan berdoa: <em>"Allāhumma law annī a'lamu ayyal-wujūhi aḥabbu ilayka 'abadtuka bihi, walākinnī lā a'lamuh!"</em> (Ya Allah, seandainya aku tahu cara terbaik yang paling Engkau cintai untuk menyembah-Mu, niscaya aku akan menyembah-Mu dengannya, tetapi aku tidak mengetahuinya!).<br>
+        Maka turunnya <strong>"Ihdinash-shirāthal-mustaqīm"</strong> menjawab kerinduan terdalam jiwa manusia sepanjang sejarah: bahwa jalan lurus itu tidak dapat ditemukan hanya dengan spekulasi filsafat atau tradisi nenek moyang, melainkan melalui bimbingan wahyu Ilahi.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān</em>:</strong><br>
+        At-Tabari meriwayatkan berbagai tafsir salaf tentang makna <em>Ash-Shirāthal-Mustaqīm</em>:<br>
+        • Dari <strong>Ibnu Abbas dan Jabir bin Abdillah r.a.</strong>: <em>Ash-Shirāthal-Mustaqīm</em> adalah <strong>Agama Islam</strong> (<em>Huwal-Islām</em>), karena ia lebih luas daripada ruang antara langit dan bumi.<br>
+        • Dari <strong>Ali bin Abi Thalib dan Ibnu Mas'ud r.a.</strong>: <em>Ash-Shirāthal-Mustaqīm</em> adalah <strong>Kitabullah (Al-Qur'an)</strong>, tali Allah yang kokoh.<br>
+        • Dari <strong>Abu Al-'Aliyah dan Al-Hasan Al-Bashri</strong>: <em>Ash-Shirāthal-Mustaqīm</em> adalah <strong>Rasulullah ﷺ dan kedua sahabat utamanya setelah beliau (Abu Bakar dan Umar r.a.) serta Ahlul Bait beliau</strong>.<br>
+        At-Tabari menyimpulkan bahwa seluruh pendapat salaf tersebut adalah <em>ikhtilāf tanawwu'</em> (perbedaan redaksi yang saling menguatkan, bukan pertentangan): karena mengikuti Islam berarti mengikuti Al-Qur'an, dan mengikuti Al-Qur'an berarti meneladani Rasulullah ﷺ dan para sahabatnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em>:</strong><br>
+        Ibnu Katsir menjelaskan: <em>"Jika ditanyakan: Mengapa orang mukmin meminta hidayah pada setiap waktu shalat maupun di luar shalat, padahal ia sudah memiliki sifat hidayah? Jawabannya adalah: Seandainya seorang hamba tidak membutuhkan bimbingan Allah siang dan malam agar tetap teguh di atas hidayah, niscaya Allah tidak akan memerintahkannya untuk meminta hal itu! Sesungguhnya hamba selalu membutuhkan Allah di setiap detak waktu dan keadaan untuk menetapkan hatinya, meneguhkan langkahnya, dan menambah cahayanya."</em> Beliau mengutip doa orang-orang berilmu dalam QS. Ali 'Imran: 8: <em>"Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā"</em> (Ya Tuhan kami, janganlah Engkau condongkan hati kami kepada kesesatan setelah Engkau beri petunjuk kepada kami).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dua jenis hidayah: (1) <em>Hidāyatud-Dalālah wal-Bayān</em> (hidayah penjelasan dan petunjuk jalan) yang dimiliki juga oleh para rasul dan ulama untuk disampaikan kepada manusia; dan (2) <em>Hidāyatut-Tawfīq wal-Ilhām</em> (hidayah penciptaan iman dan pembukaan kunci hati) yang mutlak menjadi hak prerogatif Allah semata (QS. Al-Qashash: 56). Dalam ayat <em>Ihdinā</em>, seorang mukmin memohon kedua-duanya sekaligus dari Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (w. 606 H) & Ar-Raghib Al-Ashfahani (w. 502 H) — <em>Mafātīḥul-Ghayb</em> & <em>Al-Mufradāt</em>:</strong><br>
+        Ar-Raghib Al-Ashfahani dan Ar-Razi memetakan <strong>Empat Tingkatan Hidayah Ilahi</strong> yang diberikan Allah kepada makhluk-Nya secara bertingkat:<br>
+        1) <strong>Hidayah Al-Wijdān / Al-Ilhām Al-Fithrī (Insting Biologis):</strong> Diberikan kepada seluruh makhluk hidup (bayi yang baru lahir langsung tahu cara menyusu, lebah yang membangun sarang heksagonal).<br>
+        2) <strong>Hidayah Al-Ḥawāss wal-'Aql (Pancaindra & Akal Rasional):</strong> Diberikan kepada manusia untuk membedakan yang bermanfaat dan berbahaya secara logis.<br>
+        3) <strong>Hidayah Ad-Dīn war-Rusul (Wahyu & Syariat):</strong> Diturunkan melalui kitab suci dan para nabi untuk menunjukkan jalan keselamatan dunia-akhirat.<br>
+        4) <strong>Hidayah At-Tawfīq wal-Ākhirah (Cahaya Iman di Hati & Bimbingan Menuju Surga):</strong> Puncak hidayah yang dimohonkan secara khusus dalam <em>Ihdinash-shirāthal-mustaqīm</em>.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Quraish Shihab menjelaskan bahwa pemilihan kata <em>Ash-Shirāthal-Mustaqīm</em> (jalan lebar yang lurus) menunjukkan karakter ajaran Islam yang moderat (<em>wasathiyyah</em>), lapang, dan tidak sempit. Karena ia adalah "jalan raya yang lebar", maka di dalamnya terdapat ruang bagi keragaman ijtihad furu'iyyah dan kecenderungan bakat manusia (ada yang menonjol di bidang ilmu, ada yang di bidang filantropi/infaq, ada yang di bidang jihad sosial), selama semuanya tetap berada di dalam koridor dua dinding pembatas syariat Allah dan bergerak lurus menuju ridha-Nya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka menggunakan analogi matematika-geometri yang jernih: <em>"Dalam ilmu ukur ruang, garis lurus adalah jarak yang paling pendek dan paling cepat menghubungkan antara dua titik: titik keberangkatan (dunia) dan titik tujuan (keridhaan Allah di akhirat). Segala jalan lain yang melengkung, berbelok-belok, atau memutar adalah jalan yang membuang umur dan menyesatkan manusia di tengah rimba raya kehidupan."</em>
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian</th>
+                <th>Titik Kesepakatan (Ijma')</th>
+                <th>Ragaman Perspektif Ulama (Ikhtilaf & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat "Ash-Shirāth Al-Mustaqīm"</strong></td>
+                <td>Sepakat bahwa ia adalah jalan kebenaran tunggal yang diridhai Allah untuk mengantarkan hamba ke surga.</td>
+                <td>Ibnu Abbas menafsirkannya sebagai Islam; Ibnu Mas'ud sebagai Al-Qur'an; Abu Al-'Aliyah sebagai Sunnah Nabi ﷺ & Sahabat. Semuanya menyatu secara substansial (<em>ikhtilāf tanawwu'</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Empat Tingkatan Hidayah</strong></td>
+                <td>Sepakat bahwa hidayah taufik hanyalah milik Allah.</td>
+                <td>Ar-Raghib & Ar-Razi menyusun taksonomi 4 lapis hidayah (Insting, Akal, Wahyu/Bayan, dan Taufik/Surga) yang semuanya tercakup dalam doa Ayat 6.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Epistemologi Kerendahan Hati ("Epistemic Humility") & Bahaya Merasa Sudah Aman</h3>
+    <p>
+        Dalam psikologi kognitif, orang yang merasa dirinya sudah paling pintar dan paling benar justru paling rentan tergelincir ke dalam kesalahan fatal (<em>overconfidence bias</em>). Dalam spiritualitas Islam, perasaan "merasa sudah pasti selamat dan tidak mungkin tersesat" adalah awal dari kehancuran iman (sebagaimana kisah Bal'am bin Ba'ura dalam QS. Al-A'raf: 175).
+    </p>
+    <ul>
+        <li><strong>Kesadaran bahwa Hati Manusia Bersifat Dinamis (<em>Qalb</em>):</strong> Hati dinamai <em>Qalb</em> karena ia senantiasa berbolak-balik (<em>yataqallabu</em>). Dengan mewajibkan setiap Muslim—mulai dari orang awam hingga ulama besar dan bahkan Nabi ﷺ sendiri—untuk terus memohon <em>"Ihdinash-shirāthal-mustaqīm"</em> minimal 17 kali sehari, Al-Qur'an menjaga kita agar selalu memiliki <strong>kerendahan hati epistemik dan spiritual</strong>: tidak pernah sombong atas kesalehan hari ini, dan selalu bergantung penuh pada penjagaan Allah.</li>
+        <li><strong>Kompas Moral di Tengah Kabut Disorientasi (<em>Moral Compass</em>):</strong> Manusia yang terus-menerus memohon petunjuk jalan lurus melatih kesadaran metakognitifnya untuk selalu mengevaluasi arah hidupnya: "Apakah langkah karier, pergaulan, dan keputusanku hari ini masih berada di atas garis lurus menuju Allah, atau sudah mulai melenceng keluar jalur?"</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Era "Banjir Informasi tapi Haus Hidayah" & Relativisme Moral Postmodern</h3>
+    <ul>
+        <li>
+            <strong>Paradoks Informasi vs Hidayah:</strong> Manusia abad ke-21 hidup di era ledakan informasi digital dan kecerdasan buatan (AI), di mana miliaran data dapat diakses dalam hitungan milidetik. Namun mengapa angka depresi, krisis makna hidup, bunuh diri, dan kehancuran keluarga justru meningkat? Karena <strong>informasi (data) tidak sama dengan hidayah (petunjuk hidup)</strong>! Seseorang bisa menguasai seluruh ensiklopedia dunia namun buta terhadap jalan lurus menuju kebahagiaan jiwa. Doa <em>Ihdinash-shirāthal-mustaqīm</em> menyadarkan kita bahwa di atas kecanggihan sains dan teknologi, manusia mutlak membutuhkan cahaya hidayah wahyu.
+        </li>
+        <li>
+            <strong>Menjawab Relativisme Postmodern dengan "Wasathiyyah" Jalan Lurus:</strong> Filsafat postmodernisme mengklaim bahwa "tidak ada kebenaran yang lurus dan objektif; semua jalan sama benarnya tergantung selera masing-masing". Sebaliknya, Ayat 6 menegaskan keberadaan <strong>Ash-Shirāth Al-Mustaqīm</strong>: standar kebenaran, keadilan, dan kemuliaan akhlak yang objektif dan lurus dari Sang Pencipta, yang berdiri tegak di tengah-tengah antara ekstremisme yang kaku (<em>ghuluw</em>) dan permisivisme bebas nilai (<em>inhilāl</em>).
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Menjemput Hidayah melalui Interaksi Harian dengan Al-Qur'an:</strong> Karena Rasulullah ﷺ menafsirkan <em>Ash-Shirāthal-Mustaqīm</em> sebagai Kitabullah, jangan biarkan satu hari pun berlalu tanpa membaca, memahami terjemahan, dan mentadabburi minimal 1 halaman atau 1 ayat Al-Qur'an sebagai kompas langkah harian.
+            </li>
+            <li>
+                <strong>Konsultasi Syariat & Istikharah Sebelum Mengambil Keputusan Penting:</strong> Setiap kali dihadapkan pada persimpangan pilihan (bisnis, pekerjaan, pendidikan, atau rumah tangga), ukur terlebih dahulu dengan rambu-rambu halal-haram syariat dan dirikan shalat Istikharah memohon bimbingan jalan lurus.
+            </li>
+            <li>
+                <strong>Rutin Membaca Doa Keteguhan Hati:</strong> Di setiap sujud dan selesai shalat, sertakan doa nabawi: <em>"Yā Muqallibal-qulūb, tsabbit qalbī 'alā dīnik"</em> (Wahai Dzat Yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu) dan <em>"Allāhumma innī as'alukal-hudā wat-tuqā wal-'afāfa wal-ghinā"</em>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Aku meminta <em>"Ihdinash-shirāthal-mustaqīm"</em> minimal 17 kali sehari kepada Allah, namun sudahkah aku sungguh-sungguh membuka dan mempelajari peta jalan lurus itu (Al-Qur'an dan Sunnah Nabi ﷺ) dalam kehidupanku sehari-hari?
+            </li>
+            <li>
+                Adakah pintu-pintu haram di sisi kanan dan kiri jalan hidupku yang tirainya mulai kusingkap secara diam-diam karena mengikuti bujukan hawa nafsu?
+            </li>
+            <li>
+                Apakah aku pernah merasa sombong dan aman dengan keislamanku saat ini, sehingga lupa bahwa tanpa penjagaan Allah setiap detik, hatiku bisa tergelincir kapan saja?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, Tuhan Pemberi Petunjuk kepada jalan yang paling lurus, tunjukilah kami kebenaran sebagai kebenaran dan karuniakanlah kepada kami kekuatan untuk mengikutinya, serta tunjukilah kami kebatilan sebagai kebatilan dan karuniakanlah kepada kami kekuatan untuk menjauhinya. Bimbinglah akal, hati, dan langkah kami di atas Ash-Shirāthal-Mustaqīm di dunia ini, dan teguhkanlah telapak kaki kami kelak saat melintasi Shirath di akhirat menuju surga-Mu. Āmīn yā Hādī."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="001-005 - QS. Al-Fatihah Ayat 5.html">&larr; Ayat Sebelumnya (QS. 1:5)</a>
+        <span><strong>QS. Al-Fātiḥah [1]: 6</strong></span>
+        <a href="001-007 - QS. Al-Fatihah Ayat 7.html">Lanjut ke Ayat 7 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

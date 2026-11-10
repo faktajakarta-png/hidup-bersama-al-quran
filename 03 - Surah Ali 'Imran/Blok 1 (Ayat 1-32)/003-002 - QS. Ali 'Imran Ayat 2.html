@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-002 - QS. Ali 'Imran Ayat 2 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-001 - QS. Ali 'Imran Ayat 1.html">&larr; Ayat Sebelumnya (QS. 3:1)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-003 - QS. Ali 'Imran Ayat 3.html">Ayat Berikutnya (QS. 3:3) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 1 (Ayat 1–9): Proklamasi Tauhid & Dialektika Muhkamat-Mutasyabihat</span>
+        <span class="badge">6 Kata | 27 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 2</h1>
+    <div class="transliteration">
+        "Allāhu lā ilāha illā Huwal-Ḥayyul-Qayyūm(u)."
+    </div>
+    <div class="thematic-title">
+        Proklamasi Kedaulatan Tauhid Mutlak & Dekonstruksi Teologi Trinitas: Dialektika Al-Ḥayy (Maha Hidup Abadi) dan Al-Qayyūm (Maha Mandiri Menegakkan Semesta)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 1: Fondasi Ketauhidan & Hermeneutika Al-Qur'an)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۝٢
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Allah, tidak ada tuhan (yang berhak disembah dengan sebenarnya) melainkan Dia; Yang Maha Hidup (abadi tanpa permulaan dan tanpa akhir), Yang Maha Berdiri Sendiri (maha mandiri dalam zat dan sifat-Nya serta senantiasa memelihara dan menegakkan eksistensi seluruh makhluk-Nya)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini menegaskan dua nama agung Allah (<em>Ismullāh al-A'zham</em>) yang menjadi poros seluruh asmaul husna: <strong>Al-Ḥayy</strong> dan <strong>Al-Qayyūm</strong>. Nama <em>Al-Ḥayy</em> merangkum seluruh sifat zat Allah (kehidupan sempurna yang steril dari kematian, kantuk, keletihan, penuaan, dan penyakit). Sedangkan nama <em>Al-Qayyūm</em> merangkum seluruh sifat perbuatan (<em>af'āl</em>) Allah: Dia berdiri sendiri tanpa memerlukan sandaran apa pun dari alam semesta, dan pada saat yang sama seluruh makhluk di langit dan di bumi bergantung mutlak kepada pemeliharaan-Nya setiap detik. Penegasan dua sifat ini di awal Surah Ali 'Imran adalah pembongkaran rasional paling telak terhadap teologi penuhanan Nabi Isa AS oleh delegasi Najran: sosok yang dilahirkan, menyusu, makan, letih, tertidur, dan menurut pengakuan mereka wafat di tiang salib mustahil berstatus sebagai Tuhan yang <em>Hayy</em> dan <em>Qayyum</em>!
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱللَّهُ</strong><br>(<em>Allāhu</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Lam Jalālah:</strong> Jika ibtida' (memulai bacaan), dibaca fathah dengan <strong>Taghlīzh / Tafkhīm</strong> pada dua Lam Jalalah.<br>
+                    <strong>Jika Washal dari Ayat 1:</strong> Fathah pada Mim <em>Mīma-llāhu</em>, Lam Jalalah dibaca tebal (tafkhim) secara konsensus mutawatir.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tafkhim pada Lam Jalalah baik saat memulai bacaan (ibtida') maupun saat menyambung (washal) dari ayat 1.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>لَآ إِلَـٰهَ</strong><br>(<em>Lā ilāha</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Huruf Alif mad bertemu hamzah qatha' kasrah pada kata terpisah.<br>
+                    <strong>Kaidah Mad:</strong> Dibaca 2, 4, 5, atau 6 harakat sesuai martabat qira'at masing-masing imam.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad munfashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Membaca dengan pilihan <strong>Qaṣhr (2 Harakat)</strong> atau Tawassuth.<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca konsisten dengan Qashr 2 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>إِلَّا هُوَ</strong><br>(<em>Illā Huwa</em>)</td>
+                <td>
+                    <strong>Lām Bertasydid:</strong> Memiliki sifat tawassuth.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada alif <em>illā</em>.<br>
+                    <strong>Dhamīr Munfaṣhil:</strong> <em>Huwa</em> dengan hembusan nafas hams pada huruf Ha'.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca mad thabi'i pada <em>illā</em> dan tahqiq fathah pada wawu <em>Huwa</em>. Penyatuan <em>lā ilāha</em> (penafian mutlak / nafy) dan <em>illā Huwa</em> (penetapan tunggal / itsbāt) adalah rukun tertinggi kalimat tauhid.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلْحَىُّ</strong><br>(<em>Al-Ḥayyu</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari wasathul halq dengan sifat hams dan rikhwah.<br>
+                    <strong>Yā' Musyaddadah:</strong> Memiliki sifat <strong>Nabr</strong> (penekanan suara vokal tajam agar tasydid terdengar jelas tanpa terputus).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca idzhar qamariyyah dan menyempurnakan nabr pada ya bertasydid dhammah <em>Al-Ḥayyu</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱلْقَيُّومُ ۝٢</strong><br>(<em>Al-Qayyūm</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Isti'la' mutlak di pangkal lidah.<br>
+                    <strong>Yā' Bertasydid Fathah:</strong> Disertai sifat nabr.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di ujung ayat, Wawu mad bertemu Mim sukun dibaca 2, 4, atau 6 harakat disertai sifat tawassuth pada Mim sukun.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (termasuk Hafsh):</strong> Membaca wazan <em>Fay'ūl</em> (فَيْعُول) dengan ya tasydid fathah: <em>Al-Qayyūm</em>.<br>
+                    • Terdapat riwayat qira'at syadzah dari Umar bin Khattab dan Ibnu Mas'ud yang membaca dengan wazan <em>fay'āl</em> (<em>Al-Qayyām</em>), namun mushaf Utsmani menetapkan qira'at mutawatirah sepuluh imam pada lafaz <strong>Al-Qayyūm</strong>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Jāmi' At-Tirmidzī (No. 3478), Sunan Abī Dāwūd (No. 1496), dan Musnad Aḥmad (No. 12611) dari Sahabat Anas bin Malik r.a. — Ismullāh al-A'zham (Nama Teragung Allah):</strong><br>
+        Rasulullah ﷺ mendengar seorang sahabat berdoa:<br>
+        <em>"Allāhumma innī as'aluka bi-anna lakal-ḥamd, lā ilāha illā Anta, Al-Mannān, Badī'us-samāwāti wal-ardh, yā Dzal-jalāli wal-ikrām, <strong>Yā Ḥayyu yā Qayyūm</strong>!"</em><br>
+        Maka Rasulullah ﷺ seketika bersabda:<br>
+        <em>"Laqad da'allāha bis-mihil-a'zham, alladzī idzā du'iya bihī ajāb, wa idzā su'ila bihī a'ṭhā!"</em><br>
+        (Sungguh ia telah berdoa kepada Allah dengan <strong>Nama-Nya yang Paling Agung (Ismullāh al-A'zham)</strong>, yang apabila Dia diseru dengannya niscaya Dia mengabulkan, dan apabila diminta dengannya niscaya Dia memberi!).<br>
+        <strong>Derajat Hadits:</strong> Sahih menurut Imam At-Tirmidzi, Ibnu Hibban, dan Al-Hakim.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi' At-Tirmidzī (No. 3477) & Sunan Abī Dāwūd (No. 1497) dari Asma' binti Yazid r.a.:</strong><br>
+        Rasulullah ﷺ bersabda bahwa Nama Teragung Allah berada dalam dua ayat ini: firman-Nya dalam QS. Al-Baqarah: 163 (<em>Wa ilāhukum ilāhuw-wāḥid...</em>) dan pembuka Surah Ali 'Imran: <em><strong>"Allāhu lā ilāha illā Huwal-Ḥayyul-Qayyūm"</strong></em>.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Allāh (ٱللَّهُ):</strong> Ism 'alam bagi Zat Yang Maha Esa, berakar dari <em>Al-Ilāh</em> (yang dipertuhankan dan disembah dengan penuh cinta, ketundukan, dan rasa takzim).</li>
+        <li><strong>2. Ḥ-Y-Y (ح-ي-ي — Al-Ḥayy):</strong> Akar kata kehidupan sejati yang tidak diawali ketiadaan dan tidak diakhiri kepunahan. Hidup yang bebas dari segala cacat makhluk (tidak mengantuk, tidak tidur, dan tidak butuh energi eksternal).</li>
+        <li><strong>3. Q-W-M (ق-و-م — Al-Qayyūm):</strong> Mengikuti wazan mubalaghah <em>Fay'ūl</em> (فَيْعُول) dari akar <em>Qāma – Yaqūmu</em>. Memiliki makna dwitunggal: <em>Al-Qā'imu bi-nafsih</em> (Maha Berdiri Sendiri tanpa butuh bantuan siapa pun) dan <em>Al-Muqīmu li-ghayrih</em> (Maha Menegakkan dan Menopang seluruh keteraturan alam semesta dari partikel subatomik hingga galaksi raksasa).</li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Ism 'alam jalalah.</td>
+                <td><strong>Mubtada' Awwal</strong> marfu' bil-dhammah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>لَآ إِلَـٰهَ</strong></td>
+                <td><em>Lā</em>: Nafiyah lil-jins.<br><em>Ilāha</em>: Ismu lā mabni 'alal-fath.</td>
+                <td><em>Ilāha</em> ismu lā mabni 'alal-fath fi mahalli nashbin. Khabar lā mahdzūf ditakdirkan: <em>bi-haqqin</em> (tidak ada sesembahan yang hak).</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَّا هُوَ</strong></td>
+                <td><em>Illā</em>: Adāt hashr/istitsna'.<br><em>Huwa</em>: Dhamir munfashil.</td>
+                <td><em>Huwa</em> badal dari tempat isim <em>lā</em> atau marfu' sebagai fa'il/badal khabar lā. Seluruh jumlah nafy wal-itsbat fi mahalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>Allāhu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْحَىُّ</strong></td>
+                <td>Sifat musyabbahah wazan <em>fa'l</em>.</td>
+                <td><strong>Khabar Tsānī</strong> marfu' bil-dhammah zhahirah, atau badal dari dhamir <em>Huwa</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْقَيُّومُ ۝٢</strong></td>
+                <td>Shighah mubalaghah wazan <em>fay'ūl</em>.</td>
+                <td><strong>Khabar Tsālits</strong> marfu' bil-dhammah zhahirah, atau sifat/na'at marfu'.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Uslūb al-Qaṣhr wal-Ḥashr (Eksklusivitas Monoteisme Mutlak):</strong> Formula <em>Lā Ilāha Illā Huwa</em> menggunakan penggabungan penafian (<em>an-nafy</em>) disusul pengecualian (<em>al-istitsnā'</em>). Dalam balaghah, ini adalah uslub pembatasan paling kuat (<em>aqwā thuruqil-qashr</em>), menafikan seluruh tuhan palsu semesta seraya menetapkan ketuhanan mutlak hanya milik Allah.</li>
+        <li><strong>Ilmu Badi' — Al-I'tilāf bayna Asmā'il-Kamāl (Harmoni Nama Kesempurnaan):</strong> Penggabungan nama <em>Al-Ḥayy</em> dan <em>Al-Qayyūm</em> adalah puncak keindahan badi'. <em>Al-Hayy</em> menyempurnakan dimensi internal Ketuhanan, dan <em>Al-Qayyum</em> menyempurnakan dimensi eksternal kekuasaan-Nya atas ciptaan.</li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi dengan Ayat 1):</strong> Ayat 1 membuka dengan huruf fonemis penakluk kesombongan bahasa manusia; Ayat 2 menyusul dengan memaparkan hakikat Zat yang menurunkan wahyu tersebut.</li>
+        <li><strong>Siyāq (Debat Teologis dengan Delegasi Kristen Najran):</strong> Ayat 2 adalah hujah ontologis pertama yang diajukan Al-Qur'an kepada delegasi Najran. Nabi Muhammad ﷺ menantang logika para uskup mereka: "Tidakkah kalian tahu bahwa Tuhan kita Maha Hidup dan tidak pernah mati, sedangkan Isa mengalami kematian (dalam keyakinan kalian)? Tidakkah kalian tahu bahwa Tuhan kita menegakkan seluruh alam, sedangkan Isa tidak mampu menegakkan tubuhnya sendiri tanpa makan dan minum?" (Tafsir At-Tabari).</li>
+        <li><strong>Liḥāq (Jembatan ke Ayat 3):</strong> Dari penegasan Zat yang Maha Hidup dan Menegakkan alam, Al-Qur'an melangkah ke pembuktian wahyu-Nya di Ayat 3: <em>"Nazzala 'alaykal-kitāba bil-ḥaqqi mushaddiqal-limā bayna yadayh..."</em>.</li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H):</strong> Memaparkan bahwa ayat ini menegaskan ketuhanan tunggal bagi Allah dan melucuti seluruh dewa, berhala, dan manusia yang dipertuhankan. At-Tabari menegaskan bahwa Al-Qayyum bermakna Pengatur tunggal yang tidak pernah lelah dan tidak pernah lalai sedetik pun dari menjaga makhluk-Nya.
+    </div>
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H):</strong> Mengaitkan ayat ini dengan Ayat Kursi (QS. Al-Baqarah: 255). Beliau menegaskan bahwa Al-Hayyul-Qayyum adalah nama yang merangkum ketuhanan yang esa, tidak berawal dan tidak berakhir, serta menjadi sandaran hidup seluruh ciptaan.
+    </div>
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H):</strong> Membedah rahasia doa dengan asma Al-Hayyul-Qayyum. Siapa yang bersujud seraya melazimkan dzikir <em>Yā Ḥayyu yā Qayyūm bi-raḥmatika astaghīts</em>, Allah akan menghidupkan kalbunya yang mati dan mengokohkan urusan dunianya yang goyah.
+    </div>
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (w. 606 H) & Az-Zamakhsyari (w. 538 H):</strong> Ar-Razi menjelaskan secara filosofis bahwa wujud selain Allah adalah <em>mumkinul-wujūd</em> (keberadaannya bergantung pada yang lain), sedangkan Allah adalah <em>Wājibul-Wujūd bi-dzātih</em> (keberadaan mutlak yang mandiri). Inilah hakikat dari nama Al-Qayyum.
+    </div>
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H):</strong> Menegaskan bahwa penempatan ayat ini di pembuka Ali 'Imran berfungsi sebagai fondasi doktrinal (<em>al-qā'idah al-ashliyyah</em>) sebelum Al-Qur'an membedah mukjizat kelahiran Isa AS dan membantah akidah trinitas secara terperinci.
+    </div>
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) & Prof. Dr. M. Quraish Shihab:</strong> Buya Hamka menulis: <em>"Allah yang Maha Hidup tidak pernah tua, tidak pernah sakit, dan tidak butuh disembah untuk menambah kemuliaan-Nya. Kita yang butuh menyembah-Nya agar jiwa kita yang fana ini bertaut pada Keabadian."</em> Quraish Shihab menggarisbawahi bahwa kesadaran akan Al-Qayyum membebaskan manusia dari rasa takut kepada penguasa zalim atau keputusasaan ekonomi, karena rezeki dan umur berada di tangan Sang Penegak Semesta.
+    </div>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+    <h3>1. Pembebasan dari "Fragile Attachment" (Keterikatan yang Rapuh)</h3>
+    <p>
+        Secara neuropsikologis, kecemasan eksistensial manusia berakar dari kecenderungan menyandarkan rasa aman pada entitas yang fana: harta benda, jabatan, figur manusia, atau teknologi. Ketika objek sandaran tersebut goyah atau musnah, jiwa mengalami guncangan disorientasi mendalam (<em>existential crisis</em>).
+    </p>
+    <p>
+        Konsep <strong>Al-Ḥayyul-Qayyūm</strong> menyajikan perombakan mental model radikal: mengalihkan poros keterikatan jiwa (<em>attachment system</em>) dari makhluk yang serba rapuh menuju Zat Yang Maha Hidup Abadi dan Maha Mandiri. Jiwa yang bertaut pada Al-Qayyum memiliki resiliensi psikologis yang tak tergoyahkan di tengah badai krisis kehidupan.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+    <h3>Kritik terhadap Berhala Modern: Materialisme & Pemujaan Tokoh (Celebrity Cult)</h3>
+    <p>
+        Masyarakat abad ke-21 tidak lagi menyembah patung batu, melainkan menyembah berhala-berhala modern: uang, status media sosial, dan kultus individu para pesohor (<em>celebrity worship syndrome</em>). Ketika tokoh pujaan mereka tersandung skandal atau ekonomi kolaps, para pemujanya jatuh ke dalam depresi dan keputusasaan. QS. 3:2 menampar peradaban sekuler ini: tidak ada yang layak disembah dan dijadikan tempat bergantung mutlak kecuali Allah Yang Maha Hidup dan Menegakkan semesta.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Melazimkan Doa Istighatsah Nabawiyyah Setiap Pagi dan Petang:</strong> Ucapkan dengan penuh penghayatan zikir penawar duka: <em>"Yā Ḥayyu yā Qayyūm, bi-raḥmatika astaghīts, ashliḥ lī sya'nī kullah, wa lā takilnī ilā nafsī tharfata 'ayn"</em> (Wahai Yang Maha Hidup lagi Maha Berdiri Sendiri, dengan rahmat-Mu aku memohon pertolongan, perbaikilah seluruh urusanku, dan jangan serahkan aku kepada diriku sendiri walau sekejap mata).</li>
+            <li><strong>Audit Titik Sandaran Hidup:</strong> Periksalah keputusan finansial, karier, dan relasi Anda: pastikan rasa aman Anda tidak digantungkan pada pujian atasan, saldo rekening, atau koneksi manusia, melainkan tegak di atas tawakal kepada Allah Al-Qayyum.</li>
+            <li><strong>Menegakkan Kemandirian Spiritual (Zero Syirik Modern):</strong> Bersihkan hati dari keyakinan mistik, zodiak, jimat modern, atau ketergantungan patologis pada figur makhluk, serta kembalikan seluruh pengharapan hajat hanya kepada Allah.</li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>Kepada siapakah hatiku paling bergantung ketika menghadapi kesulitan hidup yang genting: kepada manusia yang sama-sama lemah, ataukah kepada Allah Yang Maha Menegakkan semesta?</li>
+            <li>Apakah aku menyadari bahwa setiap tarikan nafas dan detak jantungku detik ini adalah anugerah langsung dari kemurahan Allah Yang Maha Hidup (Al-Hayy)?</li>
+            <li>Sejauh mana ketenangan jiwaku ketika kehilangan sesuatu di dunia fana ini, apakah aku segera mengingat bahwa yang kekal abadi hanyalah Allah semata?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Ḥayyu yā Qayyūm, yā Man lā ilāha illā Ant. Ya Allah yang Maha Hidup kekal abadi dan Maha Menegakkan seluruh alam semesta tanpa keletihan dan tanpa tidur. Kami bersujud mengakui kelemahan dan kefakiran jiwa kami di hadapan keagungan-Mu. Hidupkanlah kalbu kami yang sering layu oleh kelalaian dunia, kokohkanlah langkah kaki kami di atas jalan tauhid yang lurus, dan jangan pernah Engkau biarkan kami bersandar pada diri kami sendiri walau hanya sekejap kedipan mata. Karuniakanlah kepada kami keteguhan iman para nabi dan para syuhada, serta naungilah kehidupan kami dan keluarga kami di bawah rahmat dan pemeliharaan-Mu yang abadi. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-001 - QS. Ali 'Imran Ayat 1.html">&larr; Kembali ke Ayat 1 (QS. 3:1)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 2</strong> (Blok 1: Keteguhan Akidah)</span>
+        <a href="003-003 - QS. Ali 'Imran Ayat 3.html">Lanjut ke Ayat 3 (QS. 3:3) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

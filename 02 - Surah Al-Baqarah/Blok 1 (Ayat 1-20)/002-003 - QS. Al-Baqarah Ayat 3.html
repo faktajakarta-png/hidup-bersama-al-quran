@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-003 - QS. Al-Baqarah Ayat 3 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-002 - QS. Al-Baqarah Ayat 2.html">&larr; Ayat Sebelumnya (QS. 2:2)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="002-004 - QS. Al-Baqarah Ayat 4.html">Ayat Berikutnya (QS. 2:4) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Sapi Betina)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 1 (Ayat 1–20) | Klaster 1: Kaum Muttaqin (Ayat 1–5)</span>
+        <span class="badge">8 Kata | 37 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 3</h1>
+    <div class="transliteration">
+        "Allażīna yu'minūna bil-gaibi wa yuqīmūnaṣ-ṣalāta wa mimmā razaqnāhum yunfiqūn(a)"
+    </div>
+    <div class="thematic-title">
+        Trilogi Karakteristik Muttaqin: Rekonsiliasi Epistemologi Metafisik (Al-Ghaib), Disiplin Penegakan Shalat (Iqamatus Shalah), dan Kedermawanan Sosial Sirkular (Infaq)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa v2.0 (Surah Al-Baqarah: Ayat 1–5 | Pilar Epistemologi Iman, Transformasi Vertikal & Solidaritas Horisontal)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij Hadits)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱلَّذِينَ يُؤْمِنُونَ بِٱلْغَيْبِ وَيُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ ۝٣
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "(Yaitu) mereka yang beriman kepada hal yang gaib (realitas transendental di luar jangkauan indrawi material yang dikabarkan oleh wahyu), menegakkan shalat (secara berkesinambungan dengan menyempurnakan rukun, syarat, kebersihan lahiriah, dan kekhusyukan batin), dan dari sebagian apa yang telah Kami anugerahkan kepada mereka, mereka menginfakkannya (di jalan ketaatan kepada Allah dan kemaslahatan sesama hamba)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Kata <em>Al-Ghaib</em> di sini bukan bermakna takhayul, mistisisme gelap, atau klenik perdukunan, melainkan realitas ontologis mutlak yang melampaui keterbatasan panca indra manusia—mencakup keberadaan Allah SWT, para malaikat, wahyu, alam kubur, hari kiamat, surga, neraka, serta takdir Ilahi. Penggunaan kata kerja <em>yuqīmūna</em> (menegakkan) memiliki perbedaan mendasar dengan sekadar <em>yuṣallūna</em> (mengerjakan gerakan shalat); penegakan shalat menuntut kesinambungan, kesadaran eksistensial, dan perwujudan nilai-nilai shalat dalam memelihara diri dari kekejian dan kemungkaran. Frasa <em>wa mimmā razaqnāhum yunfiqūn</em> mendahului objek infaq dengan huruf <em>min</em> tab'idhiyyah (sebagian), mencerminkan rahmat syariat yang proporsional dan menegaskan bahwa seluruh harta pada hakikatnya adalah titipan anugerah Allah (<em>razaqnāhum</em>), bukan ciptaan mutlak manusia.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱلَّذِينَ</strong><br>(<em>Allażīna</em>)</td>
+                <td>
+                    <strong>Hamzah Washal</strong> berharakat fathah saat <em>ibtida'</em> (memulai bacaan).<br>
+                    <strong>Lam Bertasydid:</strong> Idgham Syamsiyyah (mutamatsilain ashli) dengan penekanan proporsional tanpa menghentak.<br>
+                    <strong>Huruf Dzāl:</strong> Makhraj dari ujung lidah yang menempel pada ujung dua gigi seri atas (<em>tharaful lisan ma'a athrafits-tsanāyā al-'ulyā</em>) dengan sifat <em>jahr</em>, <em>rikhwah</em>, dan <em>istifal</em>.<br>
+                    <strong>Mad Thabi'i:</strong> Pada huruf <em>Yā'</em> sukun setelah kasrah (2 harakat).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fathah pada huruf <em>Nūn</em> dalam keadaan washal. Terjadi konsensus bacaan qira'at mutawatirah tanpa perbedaan redaksional, namun kedudukan sintaksisnya (<em>mahallul i'rab</em>) menjadi bahasan para ahli tafsir: sebagai <em>na'at</em> bagi <em>lil-muttaqīn</em> (sehingga berharakat majrur), atau sebagai <em>madh</em> (pujian) yang marfu' atau manshub.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>يُؤْمِنُونَ</strong><br>(<em>Yu'minūna</em>)</td>
+                <td>
+                    <strong>Huruf Yā':</strong> Berharakat dhammah murni (<em>itmamul harakah</em>).<br>
+                    <strong>Hamzah Sukun:</strong> Makhraj dari pangkal tenggorokan (<em>aqshal halq</em>) dengan sifat <em>jahr</em> dan <em>syiddah</em> (suara dan nafas tertahan sempurna).<br>
+                    <strong>Huruf Mīm:</strong> Kasrah murni diiringi <em>Nūn</em> berharakat dhammah bertemu <em>Wāw</em> sukun menghasilkan Mad Thabi'i (2 harakat).
+                </td>
+                <td>
+                    Terdapat perbedaan riwayat mutawatirah yang sangat masyhur:<br>
+                    • <strong>Jumhur Qurra' (termasuk Hafsh 'an 'Ashim, Nafi' via Qalun, Ibnu Katsir, dll):</strong> Membaca dengan <strong>Tahqiq Hamzah</strong>: <em>Yu'minūna</em> (يُؤْمِنُونَ).<br>
+                    • <strong>Warsy 'an Nafi', As-Susi 'an Abi 'Amr, dan Abu Ja'far:</strong> Membaca dengan <strong>Ibdal Hamzah</strong> sukun menjadi <em>Wāw Mad</em> karena didahului harakat dhammah: <strong>Yūminūna</strong> (يُومِنُونَ). Imam Hamzah juga membaca <em>ibdal</em> secara khusus saat waqaf. Perbedaan fonetik ini memperkaya irama bacaan tanpa mereduksi makna teologis keimanan.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>بِٱلْغَيْبِ</strong><br>(<em>Bil-gaibi</em>)</td>
+                <td>
+                    <strong>Huruf Bā':</strong> Kasrah sempurna, hamzah washal gugur dalam washal.<br>
+                    <strong>Al-Qamariyyah (Izhar Qamari):</strong> Lam sukun dibaca jelas saat bertemu huruf <em>Ghayn</em>.<br>
+                    <strong>Huruf Ghayn:</strong> Keluar dari ujung tenggorokan (<em>adnal halq</em>) dengan sifat <em>isti'la'</em> (terangkat pangkal lidah/tebal), <em>jahr</em>, dan <em>rikhwah</em>.<br>
+                    <strong>Huruf Līn:</strong> Pada huruf <em>Yā'</em> sukun yang didahului huruf berharakat fathah. Ketika waqaf, huruf <em>Bā'</em> dibaca sukun disertai <strong>Qalqalah Kubra</strong>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat bulat membaca kasrah pada huruf <em>Bā'</em> kedua saat washal (<em>bil-ghaibi wa...</em>). Keberadaan huruf lin menghasilkan kelembutan artikulasi yang mengisyaratkan ketundukan kognitif manusia di hadapan realitas transenden yang tak terjangkau mata.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَيُقِيمُونَ</strong><br>(<em>Wa yuqīmūna</em>)</td>
+                <td>
+                    <strong>Waw Athaf:</strong> Fathah ringan.<br>
+                    <strong>Huruf Qāf:</strong> Keluar dari pangkal lidah dekat anak tekak (<em>aqshal lisan ma'a ma yalih minal-hanakil-a'la</em>) berharakat kasrah, berada pada derajat ketebalan (<em>isti'la'</em>) terendah (<em>adna maratibil-isti'la'</em>) menurut kaidah Ibnu Jazari.<br>
+                    <strong>Mad Thabi'i:</strong> Pada huruf <em>Yā'</em> sukun (2 harakat).
+                </td>
+                <td>
+                    Sepakat seluruh imam qira'at membacanya dengan wazan <em>Yuf'ilūna</em> (dari kata <em>Aqāma – Yuqīmu</em>). Bentuk kata kerja mudhari' menunjukkan kontinuitas dinamis (<em>at-tajaddud wal-istimrār</em>) bahwa mendirikan shalat adalah amalan yang senantiasa diperbarui setiap waktu.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱلصَّلَوٰةَ</strong><br>(<em>Aṣ-ṣalāta</em>)</td>
+                <td>
+                    <strong>Al-Syamsiyyah (Idgham Syamsi):</strong> Lam sukun melebur sempurna ke dalam huruf <em>Shād</em> bertasydid.<br>
+                    <strong>Huruf Shād:</strong> Makhraj dari ujung lidah dekat celah gigi seri bawah dengan sifat <em>isti'la'</em>, <em>ithbaq</em> (penutupan rongga langit-langit), dan <em>shafir</em> (desis tajam).<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis menggunakan huruf <em>Wāw</em> dengan alif kecil di atasnya (ٱلصَّلَوٰةَ).
+                </td>
+                <td>
+                    <strong>Keistimewaan Qira'at Warsy 'an Nafi':</strong> Imam Warsy membaca huruf <strong>Lam</strong> pada kata <em>Aṣ-Ṣalāh</em> dengan <strong>Taghlīzh</strong> (tebal/tafkhim berat: <em>Aṣ-Ṣalāh</em>) karena huruf <em>Lam</em> berharakat fathah jatuh setelah huruf <em>Shād</em> yang berharakat fathah. Sedangkan sembilan imam lainnya membaca huruf <em>Lam</em> dengan <em>tarqiq</em> (tipis). Penebalan bunyi lam oleh Imam Warsy melambangkan keagungan dan kekokohan tiang agama yang ditegakkan.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَمِمَّا</strong><br>(<em>Wa mimmā</em>)</td>
+                <td>
+                    <strong>Waw Athaf:</strong> Fathah ringan.<br>
+                    <strong>Idgham Bighunnah Mutamatsilain:</strong> Peleburan huruf <em>Nūn</em> sukun dari kata <em>Min</em> (مِنْ) ke dalam huruf <em>Mīm</em> pada kata <em>Mā</em> (مَا) menghasilkan <em>Ghunnah Akmal ma Takun</em> (dengung sempurna dengan durasi 2 harakat).<br>
+                    <strong>Mad Thabi'i:</strong> Pada alif di akhir kata (2 harakat).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idgham sempurna dengan ghunnah. Kata <em>mimmā</em> merupakan bentuk fusi fonetik dan tulisan dari preposisi <em>min</em> (tab'idhiyyah) dan isim maushul <em>mā</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>رَزَقْنَـٰهُمْ</strong><br>(<em>Razaqnāhum</em>)</td>
+                <td>
+                    <strong>Huruf Rā':</strong> Berharakat fathah dibaca <strong>Tafkhim</strong> (tebal).<br>
+                    <strong>Huruf Zāy:</strong> Keluar dengan desis bersih (<em>shafir</em>) dan sifat <em>jahr</em>.<br>
+                    <strong>Huruf Qāf:</strong> Sukun di tengah kata menghasilkan <strong>Qalqalah Sughra</strong> yang mantap dan memantul proporsional.<br>
+                    <strong>Huruf Nūn:</strong> Membawa alif khanjaraniyyah (Mad Thabi'i 2 harakat).<br>
+                    <strong>Mīm Sukun:</strong> Menghadapi huruf <em>Yā'</em> pada kata berikutnya dibaca <strong>Izhar Syafawi</strong> yang jelas dan murni tanpa sengau.
+                </td>
+                <td>
+                    Sepakat seluruh sepuluh imam mutawatirah dalam bacaan lafaz ini. Terkait mim jamak sebelum huruf berharakat, Imam Ibnu Katsir dan Abu Ja'far (serta Qalun dengan dua wajah) membaca dengan <em>Shilah Mim Jamak</em> menjadi: <em>Razaqnāhumū yunfiqūn</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>يُنفِقُونَ</strong><br>(<em>Yunfiqūn</em>)</td>
+                <td>
+                    <strong>Ikhfa' Haqiqi:</strong> Huruf <em>Nūn</em> sukun bertemu dengan huruf <em>Fā'</em>. Suara dengung disamarkan dan diarahkan ke makhraj <em>Fā'</em> (pertemuan ujung gigi seri atas dengan bibir bawah bagian dalam).<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Pada huruf <em>Wāw</em> sukun saat waqaf di akhir ayat, dapat dibaca 2 harakat (<em>qashr</em>), 4 harakat (<em>tawassuth</em>), atau 6 harakat (<em>thūl / isybā'</em>), diakhiri dengan merapatkan bibir pada huruf <em>Nūn</em> sukun yang memiliki sifat <em>tawassuth</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat bulat membaca ikhfa' haqiqi pada nun sukun dan membolehkan tiga wajah panjang mad 'aridh lissukun saat waqaf sebagai penutup ayat ketiga.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul, Sejarah Pewahyuan & Hadits Sahih Penjelas</h3>
+    <p>
+        Ayat ini merupakan kelanjutan integral dari perumusan karakteristik <em>Al-Muttaqin</em> di Madinah. Ketika Rasulullah ﷺ hijrah ke Madinah, beliau menghadapi realitas sosiologis masyarakat yang majemuk: kaum Muhajirin yang terusir tanpa harta benda, kaum Anshar yang siap berkorban, kelompok Ahli Kitab Yahudi yang membanggakan warisan ortodoksi hukum Taurat, serta embrio kaum munafik. Melalui ayat ini, wahyu meletakkan standar universal ketakwaan yang melintasi sekat formalitas ritual belaka.
+    </p>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Bukhari (No. 50) & Sahih Muslim (No. 9) dari Umar bin Al-Khattab r.a. — Hadits Jibril Mengenai Hakikat Rukun Iman:</strong><br>
+        Ketika Malaikat Jibril a.s. datang bertanya tentang hakikat iman, Rasulullah ﷺ bersabda: <em>"An tu'mina billāhi wa malā'ikatihī wa kutubihī wa rusulihī wal-yawmil-ākhiri wa tu'mina bil-qadari khayrihī wa syarrih."</em> (Iman adalah engkau beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya, rasul-rasul-Nya, hari akhir, dan engkau beriman kepada takdir yang baik maupun yang buruk). Seluruh rukun iman ini berakar pada pilar epistemologis <strong>Al-Iman bil-Ghaib</strong>.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 527) & Muslim (No. 85) dari Abdullah bin Mas'ud r.a. — Keutamaan Shalat sebagai Amalan Tertinggi:</strong><br>
+        Ibnu Mas'ud r.a. bertanya kepada Nabi ﷺ: <em>"Ayyul-'amali aḥabbu ilallāh? Qāla: Aṣ-Ṣalātu 'alā waqtihā..."</em> (Amal apakah yang paling dicintai oleh Allah? Beliau menjawab: "Mendirikan shalat tepat pada waktunya..."). Hadits ini menjadi landasan bahwa penegakan shalat (<em>iqamah</em>) menuntut kepatuhan waktu dan konsistensi.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhari (No. 1442) & Sahih Muslim (No. 1010) dari Abu Hurairah r.a. — Doa Malaikat untuk Orang yang Berinfak:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Mā min yawmin yuṣbiḥul-'ibādu fīhi illā malakāni yanzilāni fayaqūlu aḥaduhumā: Allāhumma a'thi munfiqan khalafā, wa yaqūlul-ākhar: Allāhumma a'thi mumsikan talafā."</em> (Tidak ada suatu hari pun di mana hamba-hamba Allah berpagi hari padanya melainkan dua malaikat turun; lalu salah satu dari keduanya berdoa: "Ya Allah, berikanlah ganti (keberkahan) bagi orang yang berinfak," dan yang lainnya berdoa: "Ya Allah, berikanlah kebinasaan/kebangkrutan bagi orang yang menahan hartanya").
+    </div>
+    <div class="hadith-box">
+        <strong>4. Hadits Musnad Ahmad (No. 17094) dan Al-Hakim dalam Al-Mustadrak (2/388) dari Abdullah bin Mas'ud r.a. — Keutamaan Iman Mukminin Generasi Akhir Zaman terhadap Al-Ghaib:</strong><br>
+        Abdullah bin Mas'ud r.a. berkata: <em>"Inna amra Muḥammadin ﷺ kāna bayyinan liman ra'āhu, wal-ladzī lā ilāha ghayruh, mā āmana aḥadun qaṭṭu bi-īmānin afḍhala min īmānin bi-ghayb, tsumma qarā: {Allażīna yu'minūna bil-gaibi... al-mufliḥūn}."</em> (Sesungguhnya urusan kebenaran Muhammad ﷺ sangatlah jelas bagi orang yang melihatnya secara langsung. Demi Dzat yang tidak ada tuhan selain Dia, tidak ada seorang pun yang beriman dengan keimanan yang lebih utama daripada iman kepada yang gaib. Kemudian beliau membaca ayat: <em>Allażīna yu'minūna bil-gaibi... ilā qawlih: al-mufliḥūn</em>). Sanad hadits ini dinilai sahih oleh Al-Hakim dan disepakati oleh Adz-Dzahabi.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>A-M-N (أ-م-ن — Al-Īmān):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan bahwa akar kata <em>Hamzah-Mīm-Nūn</em> memiliki satu poros makna tunggal: <strong>ketenangan jiwa, hilangnya rasa takut, dan pemberian rasa aman</strong> (<em>as-sukūn wal-amānah wa zhihābul-khawf</em>). Secara leksikografis dalam <em>Lisān al-'Arab</em>, kata <em>al-īmān</em> bermakna <em>at-taṣdīq</em> (pembenaran batin). Namun dalam timbangan sharaf, wazan <em>Af'ala</em> (أَفْعَلَ: آمَنَ – يُؤْمِنُ) mengubah makna transitif menjadi: "memasuki wilayah rasa aman" dan "memberikan amanah/penyerahan total". Iman bukan sekadar afirmasi intelektual pasif di kepala, melainkan penyerahan eksistensial yang melahirkan ketenteraman psikologis karena bersandar pada Dzat yang Maha Melindungi (<em>Al-Mu'min</em>).
+        </li>
+        <li>
+            <strong>Gh-Y-B (غ-ي-ب — Al-Ghaib):</strong><br>
+            Akar kata <em>Ghayn-Yā'-Bā'</em> merujuk pada segala sesuatu yang tersembunyi, luput dari jangkauan pandangan mata dan persepsi indra (<em>istatāra 'anil-'uyūn</em>). Ibnu Manzhur mencatat: <em>Al-Ghayb: kullu mā ghāba 'anka</em> (segala yang tidak kasat mata bagimu). Para ulama membagi gaib menjadi dua kategori epistemologis:<br>
+            1) <em>Al-Ghayb Al-Muthlaq:</em> Rahasia hakikat ketuhanan, takdir masa depan, dan ilmu qadha' yang hanya diketahui oleh Allah SWT secara mutlak tanpa ada makhluk yang mengetahuinya.<br>
+            2) <em>Al-Ghayb An-Nisbi:</em> Realitas yang tersembunyi dari jangkauan ruang dan waktu manusia tertentu namun diberitakan melalui wahyu yang shadiq (malaikat, surga, neraka, sirath, para nabi terdahulu). Iman kaum muttaqin bersandar pada validitas otoritas wahyu, bukan keterikatan sempit pada instrumen laboratorium indrawi.
+        </li>
+        <li>
+            <strong>Q-W-M (ق-و-م — Iqāmah):</strong><br>
+            Akar kata <em>Qāf-Wāw-Mīm</em> berporos pada <strong>kelurusan, ketegakan, kestabilan, dan kesungguhan memelihara sesuatu</strong> (<em>al-intishāb wal-i'tidāl wal-istiqāmah</em>). Mengapa Al-Qur'an tidak pernah menggunakan frasa <em>yaf'alūnaṣ-ṣalāh</em> (mengerjakan shalat) melainkan konsisten memakai <em>yuqīmūnaṣ-ṣalāh</em> (menegakkan shalat)? Karena kata <em>aqāma asy-syai'a</em> berarti meluruskan sesuatu yang bengkok hingga berdiri tegak kokoh seperti mendirikan tiang kemah. Shalat ditegakkan manakala rukun-rukun lahiriahnya disempurnakan, syarat-syaratnya dipenuhi, waktu-waktunya dijaga, kekhusyukannya dihidupkan, dan dampaknya meluruskan moralitas hamba di luar shalat.
+        </li>
+        <li>
+            <strong>Sh-L-W (ص-ل-و — Aṣ-Ṣalāh):</strong><br>
+            Secara etimologi bermakna doa kebaikan dan permohonan rahmat (<em>ad-du'ā' bil-khayr</em>). Raghib Al-Ashfahani dalam <em>Al-Mufradāt</em> menjelaskan keterkaitannya dengan <em>ash-shilah</em> (tali penghubung), sebab shalat adalah jembatan penghubung vertikal antara hamba yang fakir dengan Rabb Yang Mahakaya. Secara terminologi syariat, shalat adalah rangkaian ibadah khusus yang diawali dengan takbiratul ihram dan diakhiri dengan salam dengan syarat-syarat tertentu.
+        </li>
+        <li>
+            <strong>R-Z-Q (ر-ز-ق — Ar-Rizq):</strong><br>
+            Poros maknanya adalah anugerah atau bagian karunia yang dapat diambil manfaatnya (<em>al-'aṭhā' al-muntafa' bih</em>). Rezeki dalam pandangan Qur'ani tidak direduksi hanya pada lembaran mata uang, melainkan mencakup akal sehat, pancaindra, ilmu pengetahuan, kesehatan jasmani, anak keturunan, waktu, hingga hidayah taufik.
+        </li>
+        <li>
+            <strong>N-F-Q (ن-ف-ق — Al-Infāq):</strong><br>
+            Berakar dari <em>Nūn-Fā'-Qāf</em> yang melambangkan <strong>keluarnya sesuatu hingga habis atau melintasi lorong tembus</strong> (<em>an-nafaq</em> = terowongan bawah tanah yang memiliki pintu masuk dan pintu tembus keluar). Menginfakkan harta berarti mengalirkan kekayaan agar tidak tersumbat dan membusuk di tangan satu individu, melainkan terus bergerak dinamis menembus lapisan sosial untuk menghidupkan ekosistem peradaban.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong></td>
+                <td>Isim Maushul jama' mudzakkar, mabni 'ala al-fath.</td>
+                <td>
+                    Mempunyai tiga kemungkinan kedudukan i'rab:<br>
+                    1) <strong>Fī maḥalli jarr:</strong> Sebagai <em>na'at</em> (sifat) bagi lafaz <em>lil-muttaqīn</em> pada ayat 2.<br>
+                    2) <strong>Fī maḥalli naṣb:</strong> Sebagai <em>madḥ</em> (pujian) dengan memperkirakan fi'il mahdzuf (<em>A'nī / Amdaḥul-ladzīna</em>).<br>
+                    3) <strong>Fī maḥalli raf':</strong> Sebagai khabar dari mubtada' mahdzuf (<em>Humul-ladzīna</em>).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>يُؤْمِنُونَ</strong></td>
+                <td>Fi'il mudhari' marfu', bina' mahmuz fa', wazan <em>Yuf'ilu</em> (dari <em>Āmana – Yu'minu</em>). Dhamir <em>Wāwul Jamā'ah</em> adalah muttashil mabni sukun.</td>
+                <td>
+                    Fi'il mudhari' marfu' dengan tanda <em>tsubūtun-nūn</em> karena termasuk <em>al-amtsilah al-khamsah</em>. <em>Wāwul Jamā'ah</em> berkedudukan sebagai <strong>Fa'il</strong> (subjek). Jumlah fi'liyyah <em>yu'minūna</em> berkedudukan sebagai <strong>Shilat al-Maushūl</strong> bagi <em>allażīna</em> (<em>lā maḥalla lahā minal-i'rāb</em>).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>بِٱلْغَيْبِ</strong></td>
+                <td>Huruf Jar <em>Bā'</em> masuk pada Isim Mufrad jamid (<em>Al-Ghayb</em>).</td>
+                <td>
+                    <em>Bā'</em> adalah huruf jar bermakna <em>ash-shilah</em> atau <em>al-mulābasah</em>. <em>Al-Ghayb</em> isim majrur bil-kasrah azh-zhahirah. Jar-majrur bermuta'allaq (<em>muta'alliq</em>) secara langsung kepada fi'il <strong>yu'minūna</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَيُقِيمُونَ</strong></td>
+                <td><em>Waw</em> huruf 'athaf. <em>Yuqīmūna</em> fi'il mudhari', wazan <em>Yuf'ilu</em> (asal kata <em>Yuqwimu</em> mengalami i'lal naql harakat qaf ke wau menjadi <em>Yuqīmu</em>).</td>
+                <td>
+                    Fi'il mudhari' marfu' bi <em>tsubūtin-nūn</em>, dan <em>Wāw</em> berkedudukan sebagai Fa'il. Jumlah fi'liyyah ini <strong>ma'thūfah</strong> (di'athafkan) kepada jumlah shilah <em>yu'minūna</em>, sehingga turut tidak memiliki mahal i'rab.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلصَّلَوٰةَ</strong></td>
+                <td>Isim mufrad mu'annats majazi, berawalan alif-lam ma'rifah.</td>
+                <td>
+                    Berkedudukan sebagai <strong>Maf'ūl Bih</strong> (objek penderita) dari fi'il <em>yuqīmūna</em>, hukumnya manshub dengan tanda harakat fathah zhahirah di akhirnya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَمِمَّا</strong></td>
+                <td>Kombinasi huruf athaf <em>Wāw</em> + preposisi <em>Min</em> (مِنْ) + Isim Maushul <em>Mā</em> (مَا) atau <em>Mā Mashdariyyah</em>.</td>
+                <td>
+                    <em>Min</em> adalah huruf jar bermakna <em>at-tab'īḍh</em> (sebagian). <em>Mā</em> isim maushul mabni 'ala as-sukun fi mahalli jarr. Jar-majrur <em>mimmā</em> berstatus <strong>muqaddam</strong> (didahulukan) dan bermuta'allaq (<em>muta'alliq</em>) kepada fi'il <strong>yunfiqūn</strong> di akhir ayat.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>رَزَقْنَـٰهُمْ</strong></td>
+                <td>Fi'il madhi (<em>razaqa</em>) bersambung dengan dhamir <em>Nā</em> fa'ilin dan dhamir objek <em>Hum</em>.</td>
+                <td>
+                    <em>Razaqa</em> fi'il madhi mabni 'ala as-sukun karena bersambung dengan <em>Nā</em>. <em>Nā</em> adalah dhamir muttashil fi mahalli raf'in <strong>Fa'il</strong>. <em>Hum</em> adalah dhamir muttashil mabni 'ala as-sukun fi mahalli nashbin <strong>Maf'ūl Bih</strong>. Jumlah fi'liyyah <em>razaqnāhum</em> adalah <strong>Shilat al-Maushūl</strong> bagi <em>Mā</em> (<em>lā maḥalla lahā</em>).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>يُنفِقُونَ</strong></td>
+                <td>Fi'il mudhari', wazan <em>Yuf'ilu</em> (dari <em>Anfaqa – Yunfiqu</em>), tsulatsi mazid biharf.</td>
+                <td>
+                    Fi'il mudhari' marfu' bi <em>tsubūtin-nūn</em>, <em>Wāw</em> berkedudukan sebagai Fa'il. Jumlah fi'liyyah ini di'athafkan kepada jumlah fi'liyyah sebelumnya. Maf'ul bih dari <em>yunfiqūn</em> mahdzuf (dibuang untuk keluasan makna: <em>yunfiqūnahu</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Analisis Retorika & Balaghah (Ma'ani, Bayan & Badi')</h3>
+    <ul>
+        <li>
+            <strong>Taqdīm Ma Haqquhut-Ta'khīr (Balaghah Ma'āni):</strong><br>
+            Perhatikan susunan lafaz: <em>wa mimmā razaqnāhum yunfiqūn</em> dan bukan <em>wa yunfiqūna mimmā razaqnāhum</em>. Pendahuluan jar-majrur (<em>mimmā razaqnāhum</em>) sebelum kata kerjanya (<em>yunfiqūn</em>) memiliki fungsi balaghah agung:<br>
+            1) <em>Al-Ihtimām wal-Qashr:</em> Memberikan fokus perhatian utama bahwa apa yang dinafkahkan itu bukan murni hasil kehebatan pribadi manusia, melainkan semata-mata rezeki yang dititipkan oleh Allah (<em>razaqnāhum</em>).<br>
+            2) <em>Taḥrīḍh 'alāl-Infāq:</em> Mendorong jiwa manusia untuk dermawan; seseorang tidak akan merasa berat melepaskan hartanya jika ia sadar ia hanya mengembalikan sebagian kecil dari titipan sang Pemilik Sejati.
+        </li>
+        <li>
+            <strong>Dhikr "Min" At-Tab'īḍhiyyah (Kasih Sayang dalam Pensyariatan):</strong><br>
+            Huruf <em>min</em> di sini berfungsi membatasi (<em>tab'īḍh</em> = sebagian). Allah SWT dengan kelembutan dan rahmat-Nya tidak menuntut seluruh harta hamba-Nya hingga memiskinkan mereka, melainkan hanya meminta sebagian kecil saja (seperti zakat 2,5% atau infaq sukarela sesuai kesanggupan). Ini menghancurkan alasan kekikiran sekaligus menjaga keberlangsungan nafkah keluarga.
+        </li>
+        <li>
+            <strong>Shīghah Al-Muḍhāri' (Aktualisasi & Kontinuitas Tanpa Batas):</strong><br>
+            Tiga pilar ketakwaan ini diungkapkan dalam bentuk fi'il mudhari': <em>yu'minūna</em>, <em>yuqīmūna</em>, dan <em>yunfiqūn</em>. Dalam kaidah balaghah, fi'il mudhari' berfaedah <em>at-tajaddud wal-istimrār</em> (pembaharuan komitmen yang berkesinambungan dan dinamis). Muttaqin bukanlah gelar masa lalu yang statis, melainkan proses hidup yang terus berulang dan bertumbuh setiap hari.
+        </li>
+        <li>
+            <strong>Seni Penggabungan (Jam' baina Ḥaqqillāh wa Ḥaqqil-'Ibād):</strong><br>
+            Ayat ini memadukan secara harmonis antara hubungan vertikal (<em>Aṣ-Ṣalāh</em> sebagai representasi hak Allah dan pembersihan jiwa secara individual) dengan hubungan horisontal (<em>Al-Infāq</em> sebagai representasi solidaritas sosial dan keadilan ekonomi). Kesalehan spiritual tidak pernah dipisahkan dari kepekaan kemanusiaan.
+        </li>
+    </ul>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (2S & 1L, Sosio-Historis & Maqashid Surah)</h2>
+
+    <h3>Korelasi Tekstual Makro & Mikro (2S & 1L)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Hubungan dengan Ayat Sebelumnya — QS. 2:1–2):</strong><br>
+            Setelah Surah Al-Baqarah dibuka dengan huruf muqaththa'ah <em>Alif Lām Mīm</em> sebagai proklamasi kemukjizatan wahyu, dan ayat 2 menegaskan bahwa Al-Qur'an adalah kitab tanpa keraguan yang menjadi petunjuk bagi orang-orang yang bertakwa (<em>hudan lil-muttaqīn</em>), timbul pertanyaan mendasar di benak pembaca: <em>"Siapakah gerangan kaum muttaqin yang berhak meraih petunjuk agung tersebut?"</em> Ayat 3 ini hadir secara langsung sebagai jawaban deskriptif (<em>bayān li-ṣifātil-muttaqīn</em>) yang membedah anatomi karakter mereka.
+        </li>
+        <li>
+            <strong>Siyāq (Struktur Internal Ayat 3):</strong><br>
+            Ayat 3 merajut sebuah sistem integritas manusia yang sempurna: dimulai dari fondasi <strong>kognisi-epistemologis batin</strong> (<em>Al-Īmān bil-Ghayb</em>), bertransformasi menjadi <strong>disiplin ritual-spiritual jasmani</strong> (<em>Iqāmatus-Ṣalāh</em>), dan memancar keluar menjadi <strong>solidaritas sosio-ekonomi nyata</strong> (<em>Al-Infāq</em>). Tanpa iman pada yang gaib, shalat menjadi kepura-puraan; tanpa shalat, infaq kehilangan dimensi ketuhanan dan rawan riya'; tanpa infaq, shalat dicap sebagai kedustaan moral (sebagaimana kritik keras dalam QS. Al-Mā'ūn).
+        </li>
+        <li>
+            <strong>Liḥāq (Hubungan dengan Ayat Sesudahnya — QS. 2:4–5):</strong><br>
+            Ayat 3 kemudian disambung oleh ayat 4 yang meluaskan dimensi iman ke ranah nubuwah universal (beriman kepada kitab yang diturunkan kepada Nabi Muhammad ﷺ dan nabi-nabi terdahulu) serta keyakinan mutlak pada Hari Akhir (<em>wa bil-ākhirati hum yūqinūn</em>). Puncaknya di ayat 5 adalah vonis Ilahi bahwa mereka yang memiliki karakteristik inilah yang berada di atas petunjuk Tuhan dan merekalah orang-orang yang meraih kejayaan sejati (<em>al-mufliḥūn</em>).
+        </li>
+    </ul>
+
+    <h3>Konteks Sosio-Historis Masyarakat Madinah</h3>
+    <p>
+        Pewahyuan ayat-ayat awal Surah Al-Baqarah bertepatan dengan fase kritis peletakan batu pertama negara Madinah. Di kota ini, kaum muslimin tidak lagi sekadar menjadi minoritas yang tertindas seperti di Makkah, melainkan sebuah entitas politik dan peradaban yang berdaulat. Mereka berinteraksi langsung dengan kaum Yahudi Madinah (Bani Qainuqa', Bani Nadhir, Bani Quraizhah) yang memiliki kepandaian literasi kitab suci dan hegemoni ekonomi berbasis riba, namun terjebak dalam ketaatan hukum lahiriah yang kaku dan kekikiran harta. Di saat yang sama, muncul kelompok kaum munafik di bawah pimpinan Abdullah bin Ubay bin Salul yang shalatnya penuh kemalasan dan benci menginfakkan harta. Karakter <em>Muttaqin</em> dalam ayat 3 hadir sebagai antitesis peradaban: mematahkan formalisme kering Ahli Kitab dan kemunafikan kaum oportunis melalui integrasi iman gaib, khusyuknya shalat, dan kedermawanan sosial.
+    </p>
+
+    <h3>Korelasi dengan Maqāṣid As-Sūrah (Tujuan Agung Surah Al-Baqarah)</h3>
+    <p>
+        Maqashid utama Surah Al-Baqarah adalah <strong>penegakan amanah khilafah manusia di muka bumi dengan syariat Ilahi pasca kegagalan umat-umat terdahulu</strong>. Untuk memikul mandat kepemimpinan peradaban ini, Allah SWT menetapkan tiga kualifikasi inti pada ayat 3:
+    </p>
+    <ul>
+        <li><strong>Pembebasan Epistemologis (Hifzhud-Dīn):</strong> Iman kepada yang gaib memerdekakan akal manusia dari keterkungkungan materi duniawi, mengaitkan setiap kebijakan dengan pertanggungjawaban akhirat.</li>
+        <li><strong>Ketahanan Spiritual & Moral (Hifzhun-Nafs):</strong> Penegakan shalat secara berkala menjadi benteng penjaga integritas agar para pemegang kekuasaan tidak tergelincir ke dalam korupsi, kezaliman, dan arogansi kekuasaan.</li>
+        <li><strong>Distribusi Keadilan Sosio-Ekonomi (Hifzhul-Māl):</strong> Prinsip infaq memecahkan problem monopoli kapital; harta diposisikan sebagai amanah sosial yang harus mengalir menghidupkan kaum dhuafa, menegakkan keadilan distributif bagi stabilitas umat.</li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR -->
+    <h2 id="lensa-4">Lensa 4: Tafsir (Komparasi 6 Ulama Lintas Zaman & Matriks Sintesis)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi'ul Bayān 'an Ta'wīli Āyil-Qur'ān</em> (Era Salaf / Atsari):</strong><br>
+        At-Tabari menegaskan bahwa iman dalam ayat ini mencakup pembenaran hati, ikrar lisan, dan pembuktian amal perbuatan. Mengutip sanad dari Abdullah bin Mas'ud dan Ibnu Abbas r.a., At-Tabari mendefinisikan <em>Al-Ghayb</em> sebagai segala perkara yang luput dari pandangan mata hamba berupa kebenaran surga, neraka, malaikat, hari kiamat, serta apa yang diwahyukan kepada para rasul. Mengenai <em>Iqāmatus-Ṣalāh</em>, At-Tabari menggarisbawahi bahwa menegakkan shalat berarti menunaikan batas-batasnya, rukun fardhunya, waktu-waktunya, wudhunya, ruku' dan sujudnya dengan sempurna. Terkait <em>wa mimmā razaqnāhum yunfiqūn</em>, At-Tabari mentarjih bahwa ayat ini bersifat umum mencakup zakat fardhu, nafkah wajib kepada keluarga, dan sedekah sukarela.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em> (Era Pertengahan / Atsari-Analitis):</strong><br>
+        Ibnu Katsir menguraikan pandangan para sahabat dan tabi'in mengenai rahasia iman kepada yang gaib. Beliau mengutip Zaid bin Aslam bahwa takwa menghasilkan iman, dan buah iman adalah ketaatan. Ibnu Katsir mengutip Qatadah: <em>"Mendirikan shalat adalah memelihara waktu-waktunya, wudhunya, ruku' dan sujudnya."</em> Beliau menekankan betapa seringnya Allah SWT menggandengkan antara shalat dan infaq di dalam Al-Qur'an: <em>"Shalat adalah hak Allah dan bentuk peribadatan kepada-Nya yang mencakup pengesaan, pengagungan, doa, dan tawakal. Sedangkan infaq adalah bentuk kebaikan kepada sesama makhluk dengan memberikan manfaat harta kepada yang membutuhkan. Kedua pilar inilah poros kebahagiaan hamba."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Era Pertengahan / Fiqih & Ahkam):</strong><br>
+        Al-Qurthubi membedah masalah fiqih secara mendalam. Beliau membedakan antara makna shalat secara bahasa (doa) dan istilah syariat. Terkait hakikat <em>Iqamah</em>, Al-Qurthubi menukil riwayat: <em>"Bukanlah orang yang menegakkan shalat itu mereka yang sekadar melaksanakannya secara lahiriah sementara hatinya lalai, melainkan mereka yang menunaikannya dengan penuh rasa takut (khauf), harap (raja'), serta menjaga dirinya dari dosa setelah shalat."</em> Mengenai infaq, Al-Qurthubi mengutip silang pendapat ulama: apakah yang dimaksud adalah Zakat Fitrah, Zakat Maal, ataukah mencakup seluruh nafkah kebajikan? Beliau menegaskan bahwa redaksi ayat yang berbentuk umum mencakup seluruh pengeluaran harta di jalan Allah, baik yang fardhu maupun nafilah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Balaghah & Rasionalitas Kalam):</strong><br>
+        Az-Zamakhsyari membedah keindahan taqdim jar-majrur <em>mimmā razaqnāhum</em> yang memberi peringatan halus kepada orang kikir bahwa kekayaan itu murni pemberian Tuhan, maka janganlah enggan membaginya. Sementara Fakhruddin Ar-Razi membedah secara filosofis epistemologi iman: mengapa <em>Al-Iman bil-Ghaib</em> diletakkan paling awal sebelum shalat dan infaq? Ar-Razi menjelaskan bahwa manusia memiliki dua daya: daya teoritis kognitif (<em>al-quwwah an-nazhariyyah</em>) dan daya praktis aksiologis (<em>al-quwwah al-'amaliyyah</em>). Kesempurnaan daya kognitif diraih melalui pembenaran terhadap realitas gaib (Allah dan akhirat), sedangkan kesempurnaan daya praktis diraih melalui ibadah vertikal (shalat) dan solidaritas sosial (infaq). Tanpa iman gaib, tindakan praktis kehilangan arah ontologisnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Era Kontemporer / Adabi Ijtima'i):</strong><br>
+        Quraish Shihab menyoroti bahwa pengakuan terhadap <em>Al-Ghaib</em> merupakan bentuk kerendahhatian intelektual manusia. Sains modern yang paling maju sekalipun mengakui bahwa wilayah alam semesta yang teramati (<em>observable universe</em>) hanya sebagian kecil dibanding materi gelap (<em>dark matter</em>) dan energi gelap (<em>dark energy</em>) yang tak kasat mata. Orang yang menolak hal gaib adalah orang yang membatasi eksistensi realitas hanya sebatas jangkauan matanya yang rabun. Beliau juga menggarisbawahi kata <em>mimmā</em> (sebagian rezeki): Allah mendidik manusia agar tidak boros dan tidak kikir, melainkan berada di tengah-tengah secara proporsional.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka — <em>Tafsir Al-Azhar</em> (Konteks Kebangsaan & Tasawuf Positif Nusantara):</strong><br>
+        Buya Hamka melukiskan watak muttaqin dengan gaya bahasa yang menggugah kalbu. Orang yang beriman kepada yang gaib jiwanya merdeka dari perbudakan materi; ia tidak takut melarat dan tidak pongah saat kaya. Shalat yang ditegakkannya lima kali sehari menjadi dinamo spiritual yang terus-menerus membersihkan karat-karat egoismenya. Hamka menekankan: <em>"Bila orang telah shalat tetapi tangannya masih kikir menahan uang dari fakir miskin, shalatnya belum tegak, shalatnya baru sekadar roboh-bangun yang hampa. Shalat dan zakat adalah saudara kembar yang tidak boleh diceraikan dalam Islam."</em>
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Kesepakatan Ulama (Ijma')</th>
+                <th>Dinamika Penafsiran & Variasi Perspektif (Ikhtilaf)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat "Al-Ghaib"</strong></td>
+                <td>Seluruh mufassirin sepakat bahwa <em>Al-Ghayb</em> mencakup seluruh realitas transendental yang diwartakan oleh wahyu (Allah, Malaikat, Hari Kiamat, Takdir) yang tidak bisa dijangkau pancaindra lahiriah.</td>
+                <td>Sebagian salaf (Ibnu Mas'ud) menekankan pada keimanan generasi pasca-Nabi yang tidak melihat fisik Rasulullah namun beriman. Ar-Razi & Quraish Shihab memperluas maknanya pada batas-batas epistemologi akal manusia yang mengakui adanya dimensi wujud di luar domain empirisme materialis.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna "Yuqīmūnaṣ-Ṣalāh"</strong></td>
+                <td>Sepakat bahwa <em>Iqāmah</em> bukan sekadar menunaikan gerakan shalat lahiriah (<em>al-adā'</em>), melainkan menyempurnakan rukun, syarat sah, kebersihan thaharah, dan kontinuitasnya.</td>
+                <td>Ulama fiqih (Al-Qurthubi) menekankan hukum-hukum fardhu, batas waktu, dan thuma'ninah. Ulama tasawuf dan adabi (Hamka, Ibnu Katsir) menekankan aspek kehadiran hati (<em>ḥudhūrul-qalb</em>), khusyuk, dan daya tolak shalat terhadap kemaksiatan sosial.</td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan "Al-Infāq"</strong></td>
+                <td>Sepakat bahwa infaq di sini adalah pengeluaran harta yang diridhai oleh syariat dan bernilai ibadah.</td>
+                <td>Sebagian mufassir salaf (Ibnu Abbas dalam satu riwayat) membatasi pada Zakat Maal fardhu yang diwajibkan. Namun mayoritas mufassir (At-Tabari, Ibnu Katsir, Al-Qurthubi, Az-Zamakhsyari) menegaskan bahwa ayat ini umum mencakup nafkah wajib nafkah keluarga, zakat, jihad, dan sedekah sukarela.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Dekonstruksi Positivisme Materialistik Menuju Epistemologi Holistik</h3>
+    <p>
+        Secara kognitif, kejatuhan terbesar manusia modern berpangkal pada <strong>dogma positivisme logis dan saintisme sempit</strong>: asumsi bahwa realitas hanya ada jika dapat ditangkap oleh indra fisik, diukur secara kuantitatif di laboratorium, dan menghasilkan keuntungan materiil seketika. Pola pikir reduksionis ini melahirkan <em>existential blindness</em> (kebutaan eksistensial), di mana manusia menganggap jiwa, makna hidup, moralitas objektif, dan kehidupan setelah mati sebagai ilusi belaka.
+    </p>
+    <p>
+        Wahyu QS. Al-Baqarah: 3 merombak arsitektur kognitif ini melalui konsep <strong>Al-Īmān bil-Ghayb</strong>:
+    </p>
+    <ul>
+        <li><strong>Ekspansi Spektrum Realitas:</strong> Akal manusia menyadari keterbatasan sensor indrawinya. Sebagaimana mata manusia tidak mampu melihat gelombang inframerah atau telinga tidak mampu mendengar ultrasonik tanpa alat bantu, akal manusia memerlukan "instrumen wahyu" untuk menangkap realitas transendental. Hal ini meruntuhkan kesombongan epistemologis (<em>cognitive arrogance</em>) dan menumbuhkan kerendahhatian intelektual.</li>
+        <li><strong>Pergeseran Horizon Keputusan (Temporal Discounting Shift):</strong> Dalam psikologi perilaku, manusia cenderung melakukan <em>hyperbolic discounting</em> (menilai tinggi kenikmatan instan saat ini dan meremehkan konsekuensi jangka panjang). Iman kepada yang gaib dan Hari Akhir merekalibrasi fungsi eksekutif otak di <em>prefrontal cortex</em>: setiap tindakan di dunia dinilai berdasarkan nilai abadi di akhirat, melahirkan integritas moral yang tidak goyah meskipun tidak ada manusia yang melihat.</li>
+    </ul>
+
+    <h3>2. Neuropsikologi Shalat: Restrukturisasi Sistem Stres & Regulasi Diri</h3>
+    <p>
+        Frasa <em>yuqīmūnaṣ-ṣalāh</em> (menegakkan shalat) secara neurobiologis merupakan mekanisme pemulihan homeostatis yang luar biasa bagi sistem saraf manusia:
+    </p>
+    <ul>
+        <li><strong>Penjinakan Amigdala & Aktivasi Vagus Nerve:</strong> Kehidupan modern memicu overaktivasi amigdala secara kronis akibat ancaman ekonomi, beban kerja, dan banjir informasi (<em>fight-or-flight state</em>). Shalat yang ditegakkan dengan thuma'ninah—di mana sujud meletakkan kepala sejajar atau lebih rendah dari jantung—meningkatkan aliran darah ke otak dan menstimulasi saraf vagus (<em>parasympathetic nervous system</em>). Ini menurunkan kadar kortisol, memperlambat detak jantung, dan memicu ketenangan batin mendalam.</li>
+        <li><strong>Meredam Default Mode Network (DMN):</strong> DMN adalah jaringan saraf otak yang aktif saat seseorang melamun, mengkhawatirkan masa depan, atau menyesali masa lalu (sumber utama kecemasan dan depresi). Gerakan shalat yang teratur diiringi pelafalan ayat yang dihayati secara sadar (<em>mindful prayer</em>) menonaktifkan hiperaktivitas DMN dan mengaktifkan <em>Task-Positive Network</em>, menghasilkan fokus mental yang jernih dan ketahanan psikologis (<em>resilience</em>).</li>
+    </ul>
+
+    <h3>3. Psikologi Kedermawanan: Meruntuhkan "Scarcity Mindset" Menjadi "Abundance Paradigm"</h3>
+    <p>
+        Secara evolusioner dan psikologis, naluri dasar manusia purba terprogram dalam ketakutan akan kelaparan dan kekurangan (<em>scarcity mindset</em>). Ketakutan ini memicu kecanduan menimbun harta (<em>hoarding behavior</em>), kerakusan kapitalistik, dan kecemasan finansial yang tak pernah terpuaskan.
+    </p>
+    <p>
+        Perintah <em>wa mimmā razaqnāhum yunfiqūn</em> melakukan terapi kognitif radikal:
+    </p>
+    <ul>
+        <li><strong>Menyembuhkan Ilusi Kepemilikan Mutlak:</strong> Kata <em>razaqnāhum</em> mengingatkan bahwa harta yang ada di tangan manusia adalah titipan murni dari Sang Khalik. Kesadaran ini mereduksi <em>loss aversion</em> (rasa sakit psikologis saat kehilangan materi). Seseorang yang sadar dirinya hanyalah penyalur (distributor) merasa ringan dan bahagia mengalirkan air rezeki kepada sesama.</li>
+        <li><strong>Aktivasi Sirkuit Kebahagiaan Altruistik (Helper's High):</strong> Riset neurosains modern membuktikan bahwa tindakan memberi dan berinfak mengaktifkan <em>mesolimbic dopamine pathway</em> (sistem penghargaan otak), melepaskan hormon oksitosin dan endorfin. Menafkahkan rezeki secara berkala melenyapkan racun kebencian sosial, kecemburuan, dan rasa cemas akan masa depan, menggantikannya dengan perasaan berkecukupan (<em>qanā'ah</em>) dan kelapangan dada.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban Abad 21)</h2>
+
+    <h3>1. Jebakan Positivisme Buta & Wabah Nihilisme Eksistensial</h3>
+    <p>
+        Peradaban abad ke-21 tengah berada di puncak krisis eksistensial. Di satu sisi, kecerdasan buatan (AI), eksplorasi antariksa, dan komputasi kuantum berkembang pesat; namun di sisi lain, manusia modern didera wabah depresi massal, kekosongan spiritual, dan kesepian akut (<em>the epidemic of loneliness</em>). Ketika iman kepada realitas gaib dicampakkan, manusia mereduksi eksistensinya hanya sebagai mesin biologis acak yang hidup tanpa tujuan hakiki dan berakhir menjadi abu pemakaman semata.
+    </p>
+    <p>
+        Akibat hilangnya iman pada yang gaib, masyarakat modern terjebak dalam <strong>pseudo-spiritualitas</strong>: sebagian menyembah materi dan popularitas digital, sebagian lain mencari pelarian pada obat-obatan penenang, astrologi daring, hingga okultisme modern demi mengisi ruang hampa di dada mereka. Ayat 3 Surah Al-Baqarah memberikan vonis telak: pemenuhan jiwa manusia hanya akan tercapai manakala epistemologinya terhubung kembali dengan Sang Pencipta Yang Mahagaib melalui wahyu yang otentik.
+    </p>
+
+    <h3>2. Krisis Penegakan Ibadah: Dekadensi Formalisme Tanpa Jiwa</h3>
+    <p>
+        Fenomena memprihatinkan di tengah mayoritas kaum muslimin kontemporer adalah tereduksinya shalat menjadi ritual mekanik tanpa kesadaran (<em>mindless routine</em>). Di era hiperkoneksi gawai cerdas, shalat kerap dilaksanakan secara tergesa-gesa di sela-sela denting notifikasi media sosial; ruku' dan sujud diselesaikan dalam hitungan detik tanpa thuma'ninah, dan pikiran melayang memikirkan urusan duniawi.
+    </p>
+    <p>
+        Ketiadaan <em>Iqāmatus-Ṣalāh</em> inilah yang menjelaskan paradoks sosiologis: mengapa di negeri-negeri yang masjidnya megah dan dipenuhi jamaah, praktik korupsi, kecurangan birokrasi, penipuan bisnis, dan ujaran kebencian di ruang publik masih marak merajalela? Shalat mereka baru berada pada taraf menggugurkan kewajiban lahiriah, belum mencapai derajat "menegakkan" yang sanggup menjadi benteng pencegah perbuatan keji dan mungkar (QS. Al-'Ankabūt: 45).
+    </p>
+
+    <h3>3. Ketimpangan Ekstrem, Hiper-Konsumerisme & Oligarki Global</h3>
+    <p>
+        Sistem ekonomi kapitalisme global telah menciptakan jurang ketimpangan yang mengerikan: laporan lembaga-lembaga ekonomi dunia menunjukkan bahwa segelintir konglomerat menguasai kekayaan yang setara dengan kekayaan separuh populasi termiskin di planet bumi. Budaya hiper-konsumerisme menciptakan ilusi bahwa harga diri manusia ditentukan oleh jenama pakaian, jenis kendaraan, dan saldo rekeningnya.
+    </p>
+    <p>
+        Prinsip <em>wa mimmā razaqnāhum yunfiqūn</em> adalah antitesis radikal terhadap tatanan oligarki dan kerakusan kapitalistik. Al-Qur'an menuntut agar harta kekayaan tidak hanya berputar di kalangan orang-orang kaya saja (<em>kay lā yakūna dūlatan baynal-aghniyā'i minkum</em>, QS. Al-Ḥasyr: 7). Ketika instrumen infaq, zakat, wakaf, dan sedekah dijalankan secara terinstitusionalisasi dan berkesinambungan, roda ekonomi berputar di akar rumput, kemiskinan struktural teratasi, dan kohesi sosial masyarakat terbangun kokoh tanpa kecemburuan kelas.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Audit Epistemologi Pagi Hari (5 Menit Muraqabatullah):</strong> Setiap bangun tidur sebelum menyentuh gawai atau memeriksa pesan pekerjaan, duduklah dengan tenang selama lima menit untuk mengkalibrasi iman kepada yang gaib. Sadarkan diri bahwa Allah Maha Melihat gerak-gerik batin, dua malaikat mencatat setiap kata yang terucap, dan seluruh keputusan profesional hari ini akan dipertanggungjawabkan di mahkamah akhirat. Jadikan kesadaran ini sebagai filter integritas kerja.
+            </li>
+            <li>
+                <strong>Menerapkan Protokol Shalat Khusyuk Berkelanjutan (Digital Detox Shalat):</strong> Buat aturan mutlak untuk meletakkan gawai dalam mode hening (<em>silent mode</em>) dan menjauhkannya dari jangkauan minimal 5 menit sebelum waktu shalat tiba. Sempurnakan wudhu dengan membasuh setiap anggota badan perlahan sambil mengingat gugurnya dosa, lakukan shalat berjamaah tepat waktu, dan tetapkan thuma'ninah minimal 3 detik diam tenang pada setiap ruku', i'tidal, sujud, dan duduk di antara dua sujud.
+            </li>
+            <li>
+                <strong>Otomasi Infaq Subuh Berkelanjutan (Micro-Habit Filantropi):</strong> Sisihkan persentase tetap (minimal 2,5% hingga 10%) dari setiap pendapatan yang masuk khusus untuk pos infaq kebajikan. Sebagai mikro-kebiasaan harian, sediakan "Kaleng Sedekah Subuh" di rumah atau atur autodebet sedekah digital setiap pagi sebelum memulai aktivitas. Alirkan rezeki secara konsisten kepada tetangga dhuafa, anak yatim, atau lembaga sosial amanah untuk meruntuhkan bibit kekikiran jiwa.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika aku mengaku beriman kepada hal-hal yang gaib, apakah keyakinanku terhadap janji-janji Allah dan pertanggungjawaban akhirat benar-benar nyata memandu tindakanku, ataukah dalam praktik harianku aku masih hidup seolah-olah dunia materi ini adalah satu-satunya realitas?
+            </li>
+            <li>
+                Sejauh mana shalat yang kulakukan lima kali sehari telah berhasil mendisiplinkan karakterku, meredakan kepanikan mentalku, dan mencegah lidah serta tanganku dari menyakiti sesama, ataukah shalatku selama ini hanya sekadar rutinitas jasmani yang kosong dari kehadiran hati?
+            </li>
+            <li>
+                Ketika memegang harta dan kekayaan, apakah di lubuk hatiku masih terselip kesombongan Qarun yang merasa bahwa semua ini adalah hasil kepintaranku sendiri, ataukah aku sungguh-sungguh sadar bahwa seluruhnya adalah titipan Allah (<em>razaqnāhum</em>) yang di dalamnya terdapat hak orang-orang yang membutuhkan?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Hayyu Yā Qayyūm, Dzat Yang Maha Mengetahui segala yang gaib dan yang nyata, anugerahkanlah ke dalam kalbu kami keimanan yang kokoh dan murni terhadap realitas gaib-Mu, keimanan yang meruntuhkan keraguan dan memerdekakan jiwa kami dari keterikatan duniawi yang fana. Jadikanlah kami hamba-hamba yang senantiasa menegakkan shalat dengan sempurna, shalat yang khusyuk, yang menjadi penyejuk mata hati kami dan perisai dari segala perbuatan keji serta mungkar. Lapangkanlah dada kami untuk menginfakkan sebagian dari rezeki yang telah Engkau karuniakan, bersihkanlah hati kami dari penyakit kikir dan cinta harta yang berlebihan, dan jadikanlah sedekah kami sebagai naungan penyejuk di hari saat tiada naungan selain naungan-Mu. Rabbanā taqabbal minnā, innaka Antas-Samī'ul-'Alīm. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-002 - QS. Al-Baqarah Ayat 2.html">&larr; QS. Al-Baqarah Ayat 2</a>
+        <span><strong>QS. Al-Baqarah [2]: 3</strong></span>
+        <a href="002-004 - QS. Al-Baqarah Ayat 4.html">Lanjut ke Ayat 4 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

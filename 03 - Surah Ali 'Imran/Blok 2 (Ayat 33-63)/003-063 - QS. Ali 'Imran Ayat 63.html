@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-063 - QS. Ali 'Imran Ayat 63 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-062 - QS. Ali 'Imran Ayat 62.html">&larr; Ayat Sebelumnya (QS. 3:62)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="../Blok 3 (Ayat 64-101)/003-064 - QS. Ali 'Imran Ayat 64.html">Ayat Berikutnya (QS. 3:64) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 5 (Ayat 59–63): Argumentasi Penciptaan Adam-'Isa, Sumpah Mubahalah, Kebenaran Mutlak & Vonis Fasad</span>
+        <span class="badge">6 Kata | 28 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 63</h1>
+    <div class="transliteration">
+        "Fa in tawallaw fa innallāha 'alīmum bil-mufsidīn(a)."
+    </div>
+    <div class="thematic-title">
+        Vonis Transendental Atas Pembangkangan Kebenaran: Dekonstruksi Epistemologi Pengingkaran Sebagai Fasad (Kerusakan Eksistensial) & Kemahatahuan Mutlak Allah Terhadap Para Perusak Peradaban
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 5: Penutup Blok 2, Kulminasi Dialektika Najran, Vonis Akhir Penolakan Mubahalah, dan Transisi Menuju Piagam 'Kalimatun Sawā'')
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        فَإِن تَوَلَّوْا۟ فَإِنَّ ٱللَّهَ عَلِيمٌۢ بِٱلْمُفْسِدِينَ ۝٦٣
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Kemudian jika mereka berpaling (dari hujah yang nyata, menolak kebenaran setelah datangnya ilmu wahyu, dan enggan menyambut ajakan mubahalah), maka sesungguhnya Allah Maha Mengetahui (segala hakikat lahir-batin, tipu daya motif, dan kadar kejahatan) orang-orang yang berbuat kerusakan."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat 63 adalah simpul penutup (<em>khatimah al-fasl</em>) dari bentangan panjang Blok 2 Surah Ali 'Imran (ayat 33–63). Setelah Al-Qur'an memaparkan genealogi keluarga 'Imran secara komprehensif, membongkar mitos penuhanan Nabi Isa AS melalui analogi penciptaan Adam AS pada ayat 59, menegaskan hakikat wahyu pada ayat 60, melontarkan tantangan pengadilan eksistensial tertinggi melalui sumpah laknat (<em>Mubāhalah</em>) pada ayat 61, dan mendeklarasikan bahwa narasi wahyu ini adalah <em>Al-Qashash Al-Haqq</em> pada ayat 62, maka ayat 63 menetapkan status ontologis dan moral bagi pihak yang menolak hujah tersebut.
+    </p>
+    <p>
+        Al-Qur'an tidak menyebut penolakan mereka sekadar "perbedaan pandangan teologis" atau "kebebasan berpendapat", melainkan melabelinya secara tegas sebagai <strong>"Ifsād" (kerusakan)</strong> dan para pelakunya sebagai <strong>"Al-Mufsidīn" (para perusak peradaban)</strong>. Dalam epistemologi Al-Qur'an, berpaling dari kebenaran aksiomatik yang telah terbukti secara rasional dan spiritual bukanlah kekeliruan kognitif biasa (<em>jahl</em>), melainkan kejahatan moral yang disengaja (<em>'inād</em>) demi mempertahankan kepentingan status sosial, kekuasaan imamat gerejawi, dan hegemoni ekonomi. Pengabaian terhadap tauhid murni merupakan bentuk perusakan paling mendasar terhadap tatanan fitrah kosmis, moralitas manusia, dan keadilan sosial.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>فَإِن</strong><br>(<em>Fa-in</em>)</td>
+                <td>
+                    <strong>Huruf Fā':</strong> Makhraj dari perut bibir bawah bertemu dengan ujung gigi seri atas; memiliki sifat hams, rikhwah, istifal, infitah, dan idzlaq.<br>
+                    <strong>Hamzah Qatha':</strong> Kasrah murni dengan sifat jahr dan syiddah.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Pertemuan Nūn Sākinah dengan huruf Tā' pada kata berikutnya; dibaca samar (<em>satr</em>) disertai ghunnah tarqiq sepanjang 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dengan fathah pada Fa', kasrah pada Hamzah, dan ikhfa' haqiqi dengan ghunnah tipis pada Nun sukun saat washal ke huruf Ta'. Bentuk partikel syarat <em>In</em> menegaskan ketidakpastian sikap pendengar: jika mereka berkeras kepala berpaling, konsekuensi keadilan Ilahi pasti menimpa mereka.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>تَوَلَّوْا۟</strong><br>(<em>Tawallaw</em>)</td>
+                <td>
+                    <strong>Huruf Tā':</strong> Memiliki sifat syiddah dan hams.<br>
+                    <strong>Wāw Musyaddadah:</strong> Fathah dengan penekanan suara (<strong>Nabr</strong>) dan sifat rakhawah.<br>
+                    <strong>Lām Musyaddadah:</strong> Fathah dengan sifat tawassuth (antara syiddah dan rikhwah).<br>
+                    <strong>Wāw Layyin:</strong> Huruf Wawu sukun yang didahului fathah, dilafalkan lembut dan lunak tanpa pemanjangan saat washal.<br>
+                    <strong>Alif Fāriqah:</strong> Sukun mutlak (tanda ortografi rasm pembeda jamak mudzakkar).
+                </td>
+                <td>
+                    • <strong>Jumhur Sepuluh Imam:</strong> Sepakat membaca <em>Tawallaw</em> dengan wazan fi'il madhi (فَعَلُوا) bermakna: "jika mereka telah atau tetap berpaling".<br>
+                    • <strong>Tinjauan Gramatika Ragam Wajah:</strong> Para ahli nahwu (termasuk Sibawaih dan Al-Farra') mencatat bahwa bentuk ini secara morfologis dapat diposisikan sebagai fi'il madhi yang menempati posisi fi'il syarat, atau fi'il mudhari' yang dihapus salah satu huruf Ta'-nya (asalnya: <em>tatawallaw</em>) untuk tujuan <em>takhfīf</em> (meringankan pelafalan). Konsensus mutawatir sepuluh imam menetapkan pelafalan tunggal: <em>Tawallaw</em>, menegaskan kebulatan tekad kaum pembangkang dalam membelakangi hujah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>فَإِنَّ</strong><br>(<em>Fa-inna</em>)</td>
+                <td>
+                    <strong>Fā' ar-Rābiṭhah:</strong> Mengikat jawab syarat dengan kalimat pengandaian sebelumnya.<br>
+                    <strong>Hamzah Qatha':</strong> Kasrah murni dengan tahqiq.<br>
+                    <strong>Ghunnah Akmal mā Takūn:</strong> Huruf Nūn bertasydid ditahan di rongga hidung (khaisyum) selama 2 harakat sempurna.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca kasrah pada Hamzah <em>Fa-inna</em> karena terletak pada permulaan jumlah jawab syarat yang berfungsi sebagai kalimat berita deklaratif (<em>jumlah khabariyyah</em>). Keberadaan taukid <em>Inna</em> berfungsi mematahkan segala keraguan pendengar akan kepastian pembalasan Allah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱللَّهَ</strong><br>(<em>Allāha</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal dari huruf Nun <em>fa-inna</em>.<br>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Karena didahului huruf berharakat fathah pada Nun musyaddadah, maka dua Lam Jalalah dibaca tebal dan megah dengan mengangkat pangkal lidah.<br>
+                    <strong>Huruf Hā':</strong> Fathah tarqiq dengan pelepasan hembusan nafas hams tipis.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca tafkhim pada Lam Jalalah dan membaca fathah pada huruf Ha' sebagai <em>Ismu Inna Manshub</em>. Kebesaran fonetik Lam tebal menghadirkan rasa gentar (<em>haybah</em>) bagi siapa pun yang berani menentang titah-Nya.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>عَلِيمٌۢ</strong><br>(<em>'Alīmun</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Makhraj wasathul-halq (tengah tenggorokan) dengan sifat jahr dan tawassuth.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Huruf Ya' sukun didahului kasrah pada Lam dipanjangkan 2 harakat saat washal.<br>
+                    <strong>Kaidah Iqlāb:</strong> Tanda Tanwīn Dhammah bertemu dengan huruf Bā' pada kata berikutnya; bunyi nun tanwin diubah total menjadi <strong>Mīm Sākinah</strong> yang disamarkan (<em>mukhfāh</em>) disertai dengungan ghunnah 2 harakat dengan merapatkan kedua bibir secara lembut tanpa tekanan berlebihan.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca hukum <strong>Iqlāb</strong> secara konsisten saat menyambung lafaz <em>'Alīmun</em> ke <em>bil-mufsidīn</em>. Shighah mubalaghah <em>Fa'īl</em> ('Alīm) menegaskan kemutlakan ilmu Allah yang meliputi getaran kalbu terdalam para penentang risalah.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>بِٱلْمُفْسِدِينَ ۝٦٣</strong><br>(<em>Bil-mufsidīn</em>)</td>
+                <td>
+                    <strong>Huruf Bā':</strong> Kasrah tarqiq murni.<br>
+                    <strong>Hamzah Washal & Idzhār Qamariyyah:</strong> Hamzah washal gugur; Lam ta'rif dibaca jelas dan terang.<br>
+                    <strong>Huruf Fā' Sākinah:</strong> Menampakkan sifat <strong>Hams</strong> dan <strong>Rikhwah</strong> yang mengalirkan nafas lembut tanpa letupan qalqalah.<br>
+                    <strong>Huruf Sīn Sākinah:</strong> Menampilkan sifat <strong>Shafīr</strong> (desis tajam), hams, dan rikhwah.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Karena waqaf di ujung ayat, Ya' mad sebelum Nun sukun dibaca dengan durasi <strong>2, 4, atau 6 harakat</strong> disertai sifat tawassuth pada huruf Nun yang dimatikan.
+                </td>
+                <td>
+                    • <strong>Seluruh Imam Sepuluh:</strong> Membaca mad 'aridh lis-sukun dengan pilihan qashr (2), tawassuth (4), atau thul (6) harakat saat berhenti di akhir ayat.<br>
+                    • <strong>Imam Hamzah & Warsy:</strong> Menjaga tarqiq pada seluruh vokal dan menyempurnakan idzhar qamariyyah tanpa saktah pada lam ta'rif (menurut wajah umum). Fashilah ditutup dengan nada huruf Nun sukun yang tegas, mengunci seluruh perdebatan teologis dengan vonis keadilan mutlak.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbābun Nuzūl — Penolakan Delegasi Kristen Najran terhadap Mubahalah (Shahīh Al-Bukhārī No. 4380, 4381 & Shahīh Muslim No. 2420):</strong><br>
+        Diriwayatkan dari Sahabat Ḥudzaifah bin al-Yamān r.a. dan Anas bin Mālik r.a.:<br>
+        Dua pembesar Kristen dari kawasan Najran, yakni <strong>Al-'Āqib (Abdul Masīḥ)</strong> dan <strong>As-Sayyid (Al-Ayham)</strong>, mendatangi Rasulullah ﷺ dengan niat awal untuk saling melaknat melalui sumpah Mubahalah (sebagaimana ditantang dalam QS. 3:61). Ketika mereka berdua menyendiri untuk merumuskan keputusan, salah seorang dari mereka berkata kepada rekannya:<br>
+        <em>"Lā taf'al! Fawallāhi la'in kāna Nabiyyan fa-bāhalanā, lā nufliḥu naḥnu wa lā 'aqibunā min ba'dinā!"</em><br>
+        (Jangan engkau lakukan mubahalah itu! Demi Allah, sekiranya dia benar-benar seorang Nabi lalu kita bermubahalah dengannya, niscaya kita tidak akan pernah beruntung dan tidak akan ada keturunan kita yang tersisa hidup di muka bumi!).<br>
+        Maka mereka berdua kembali menghadap Rasulullah ﷺ seraya berkata: <em>"Wahai Abu al-Qasim, sungguh kami telah memutuskan untuk tidak bermubahalah denganmu. Biarkanlah kami tetap di atas agama kami, dan tetapkanlah kewajiban jizyah atas kami, serta utuslah bersama kami seorang sahabatmu yang tepercaya untuk memutuskan sengketa harta di antara kami."</em> Maka Rasulullah ﷺ mengutus Abu 'Ubaidah bin al-Jarrah r.a. seraya bersabda: <em>"Ini adalah orang kepercayaan (amīn) umat ini."</em><br>
+        Maka Allah menurunkan QS. 3:63: <em><strong>"Fa in tawallaw fa innallāha 'alīmum bil-mufsidīn"</strong></em> sebagai penegasan bahwa kepulangan mereka tanpa mau beriman setelah mengetahui kebenaran kenabian Muhammad ﷺ adalah bentuk <em>tawallī</em> (berpaling) yang berakar dari kerusakan niat dan kecintaan pada duniawi.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Musnad Aḥmad (No. 2225) & Sunan At-Tirmidzī (No. 2999) dari Abdullah bin Abbas r.a. — Kedahsyatan Sanksi Sekiranya Mereka Bermubahalah:</strong><br>
+        Ibnu Abbas r.a. menuturkan bahwa Rasulullah ﷺ bersabda terkait delegasi Najran:<br>
+        <em>"Law kharaja alladzīna yubāhilūna la-raja'ū lā yajidūna ahlan wa lā mālan... walaw bāhalū la-aḍhramallāhu 'alayhimul-wādiya nāran!"</em><br>
+        (Sekiranya orang-orang yang diajak mubahalah itu berani melangkah keluar menyambut tantangan sumpah, niscaya ketika mereka pulang ke negerinya, mereka tidak akan mendapati lagi keluarga maupun harta benda... dan sekiranya mereka bermubahalah, sungguh Allah akan mengobarkan lembah Najran dengan api yang membakar hangus mereka semua hingga burung-burung di atas pepohonan pun binasa!).<br>
+        <strong>Derajat Hadits:</strong> Isnad hadits ini sahih sesuai syarat Imam Muslim; ditakhrij pula oleh Al-Hakim dalam <em>Al-Mustadrak</em> (Jilid 2, hal. 415) dan disepakati keshahihannya oleh Adz-Dzahabi.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Muslim (No. 91) dari Abdullah bin Mas'ud r.a. — Hakikat Penolakan Kebenaran Sebagai Puncak Keangkuhan:</strong><br>
+        Rasulullah ﷺ memberikan definisi otentik mengenai akar psikologis dari sikap <em>tawallī</em> (berpaling) dan <em>ifsād</em> (merusak):<br>
+        <em>"Al-Kibru baṭharul-ḥaqqi wa ghamṭhun-nās."</em><br>
+        (Kesombongan hakiki itu adalah <strong>menolak kebenaran (yang telah terbukti)</strong> dan meremehkan/merendahkan harkat sesama manusia).<br>
+        Hadits ini menjadi hujah takwil bahwa berpalingnya para elit Najran bukan karena cacat logika dalam argumentasi Nabi Muhammad ﷺ, melainkan karena kesombongan batin (<em>batharul-haqq</em>) yang takut kehilangan tahta dan gengsi sosial.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar W-L-Y (و-ل-ي — تَوَلَّوْا۟ / Tawallaw):</strong><br>
+            Ahmad bin Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: و-ل-ي) merumuskan bahwa prinsip semantik dasar dari akar kata ini adalah <em>al-qurbu wad-dunuww</em> (kedekatan dan keterikatan). Menariknya, kata <strong>Tawallā</strong> merupakan kategori kata <em>Al-Aḍhdhād</em> (kata yang memuat dua makna yang saling berlawanan bergantung pada preposisinya). Jika ia berpasangan dengan preposisi <em>ilā</em> (seperti: <em>tawallā ilayhi</em>) atau bermakna mengurus amanah (<em>wilāyah</em>), maknanya adalah mendekat dan bertanggung jawab. Namun jika ia digunakan secara mutlak atau berpasangan dengan preposisi <em>'an</em> (<em>tawallā 'anhu</em>), maknanya berbalik seratus delapan puluh derajat menjadi <strong>I'rāḍh</strong>—yakni membalikkan punggung secara fisik maupun mental, menjauh, dan memutuskan hubungan persekutuan.<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menegaskan: <em>"Tawallaw fī hādzihil-āyah: a'radhū 'an qubūlil-ḥujjah wa 'anil-īmān"</em> (Mereka memalingkan wajah dan kalbu mereka dari menerima hujah yang terang dan dari keimanan yang lurus). Ini bukan sekadar keengganan pasif, melainkan penolakan aktif: seseorang yang telah melihat matahari kebenaran di depan matanya, lalu sengaja memutar badan dan melangkah ke arah kegelapan.
+        </li>
+        <li>
+            <strong>2. Akar '-L-M (ع-ل-م — عَلِيمٌۢ / 'Alīm):</strong><br>
+            Menurut <em>Maqāyīs al-Lughah</em>, poros semantik dari akar ('-L-M) adalah <em>atsarun yatamayyazu bihisy-syay'</em> (tanda pembeda yang membuat sesuatu tersingkap jelas dari kerancuan). Lawan dari <em>Al-Jahl</em> (kebodohan). Bentuk morfologis <strong>'Alīm</strong> mengikuti wazan <em>Fa'īl</em> (shighah mubalaghah), mengindikasikan sifat kesempurnaan ilmu Allah yang bersifat absolut, permanen, mandiri, dan mencakup segala dimensi: mengetahui hakikat yang kasatmata maupun getaran niat yang disembunyikan di kedalaman dada manusia. Penggunaan atribut <em>'Alīm</em> di sini membawa nuansa ancaman transendental: Allah mengetahui motif politik delegasi Najran, ketakutan mereka kehilangan kekuasaan, dan rahasia bisikan mereka di malam hari.
+        </li>
+        <li>
+            <strong>3. Akar F-S-D (ف-س-د — ٱلْمُفْسِدِينَ / Al-Mufsidīn):</strong><br>
+            Ibnu Faris mendefinisikan akar (ف-س-د) sebagai <em>naqīḍhul-iṣhlāḥ, wa huwa khurūjusy-syay'i 'anil-i'tidāl</em> (kebalikan dari perbaikan; yaitu keluarnya sesuatu dari batas keseimbangan, proporsionalitas, dan keteraturan alaminya). Dikatakan dalam bahasa Arab: <em>fasadal-lahm</em> apabila daging telah membusuk dan kehilangan fungsi alaminya.<br>
+            Bentuk <strong>Al-Mufsidīn</strong> adalah isim fa'il jamak mudzakkar salim dari wazan <em>Af'ala - Yufsidu - Ifsādan</em>. Pola ini menunjukkan makna transitif-aktif (<em>ta'diyah</em>): bukan sekadar orang yang dirinya rusak (<em>fāsid</em>), melainkan <strong>orang yang secara aktif memproduksi, merekayasa, dan menyebarkan kerusakan kepada orang lain</strong>. Dengan demikian, Al-Qur'an memvonis bahwa para tokoh agama yang memalsukan kebenaran tauhid, memanipulasi kitab suci, dan menghalangi umatnya dari menyembah Allah Yang Maha Esa adalah agen-agen perusak tatanan spiritual dan peradaban kemanusiaan.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فَإِن</strong></td>
+                <td><em>Fā'</em>: Harf isti'nāf atau fashīḥah.<br><em>In</em>: Harf syarth jāzim mabnī 'alas-sukūn.</td>
+                <td>Harf syarth yang menjazamkan dua fi'il (fi'il syarat dan jawab syarat). Berfungsi menyusun premis logis pengandaian atas respons kaum pembangkang.</td>
+            </tr>
+            <tr>
+                <td><strong>تَوَلَّوْا۟</strong></td>
+                <td>Fi'il madhi mabni 'alal-dhammil-muqaddar 'alal-alif al-mahdzūfah li iltiqā'is-sākinayn; <em>Wāw</em>: Dhamīr muttashil; <em>Alif</em>: Fāriqah.</td>
+                <td>Fī mahalli jazmin <strong>Fi'lusy-Syarth</strong> bagi huruf <em>In</em>. Wawu al-jamā'ah mabni 'alas-sukūn fī mahalli raf'in <strong>Fā'il</strong> (subjek pelaku penolakan). Jumlah syarth <em>(In tawallaw)</em> musta'nafah (kalimat pembuka perikop konklusi).</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِنَّ</strong></td>
+                <td><em>Fā'</em>: Harf rābiṭhah li jawābi syarth.<br><em>Inna</em>: Harf tawkīd wa nashb.</td>
+                <td>Wajib dimasuki huruf Fa' karena jawab syarat berupa kalimat nominal (<em>jumlah ismiyyah</em>) yang didahului peranti taukid. <em>Inna</em> menasabkan isim dan merafakkan khabar.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Ism 'alam jalālah mufrad mudzakkar.</td>
+                <td><strong>Ismu Inna</strong> manshūb bil-fathah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلِيمٌۢ</strong></td>
+                <td>Shīghah mubālaghah wazan <em>fa'īl</em> (bermakna yang ilmunya sangat luas dan mendalam).</td>
+                <td><strong>Khabaru Inna</strong> marfū' bidh-dhammah azh-zhāhirah 'alā ākhirih. Mengandung kekuatan semantik pembalasan mutlak.</td>
+            </tr>
+            <tr>
+                <td><strong>بِٱلْمُفْسِدِينَ ۝٦٣</strong></td>
+                <td><em>Bā'</em>: Harf jarr.<br><em>Al-Mufsidīn</em>: Ism fā'il jam' mudzakkar sālim dari fi'il <em>afsada</em>.</td>
+                <td>Ism majrūr bil-Bā' wa 'alāmatu jarrihil-Yā' li-annahu jam' mudzakkar sālim. Jār wa majrūr <strong>Muta'alliq</strong> (terikat secara semantik dan gramatika) langsung kepada shighah <em>'Alīm</em>.<br>Seluruh jumlah ismiyyah <em>(Fa innallāha 'alīmum bil-mufsidīn)</em> fī mahalli jazmin <strong>Jawābusy-Syarth</strong>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb at-Tahdīd wal-Wa'īd bi-Dzātil-'Ilm (Ancaman Transendental Berbalut Sifat Ilmu):</strong><br>
+            Secara logika kalimat biasa, jika syarat berbunyi: <em>"Jika mereka berpaling"</em>, maka jawab yang lumrah adalah: <em>"Niscaya Allah akan menyiksa mereka"</em> atau <em>"Niscaya mereka akan merugi"</em>. Namun Al-Qur'an secara menakjubkan memilih jawab: <strong>"Fa innallāha 'alīmum bil-mufsidīn"</strong> (Maka sesungguhnya Allah Maha Mengetahui orang-orang yang berbuat kerusakan). Dalam disiplin balaghah Ma'ani, ini disebut <em>Iqāmatul-'Ilmi Maqāmal-Jazā'i lit-Tahdīd</em> (mendudukkan pengetahuan Allah pada posisi pembalasan demi menggetarkan jiwa pembangkang). Maknanya: Allah yang Maha Kuasa dan Maha Adil menyatakan secara eksplisit bahwa perbuatan mereka berada dalam radar pengawasan-Nya setiap detik. Jika Dzat Yang Menguasai neraka telah menyatakan Diri-Nya "Maha Mengetahui" kejahatan seorang pengkhianat, maka kepastian siksa yang melumat mereka di akhirat telah terkunci rapat tanpa celah ampunan.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Waḍh'uzh-Zhāhir Mawḍhi'al-Muḍhmar (Penempatan Isim Zhahir Menggantikan Isim Dhamir):</strong><br>
+            Allah SWT tidak berfirman: <em>Fa innallāha 'alīmum bihim</em> (Maka sesungguhnya Allah Maha Mengetahui mereka), melainkan berfirman: <strong>"Bil-Mufsidīn"</strong>. Para pakar balaghah mencatat tiga rahasia agung dari substitusi ini:
+            <ul>
+                <li><em>At-Tasjīl 'alayhim bil-fasād:</em> Pencatatan vonis hukum secara resmi bahwa keengganan mereka beriman pasca-hujah rasional adalah tindakan kejahatan terencana yang merusak tatanan peradaban (<em>ifsād</em>).</li>
+                <li><em>Bayānu 'illatil-jazā':</em> Menjelaskan kausa objektif mengapa mereka pantas diancam azab, yaitu karena mereka menyandang karakter destruktif yang meracuni fitrah tauhid umat manusia.</li>
+                <li><em>Al-Iṭhlāq wal-'Umūm:</em> Memperluas hukum ayat ini melintasi batas zaman; mencakup delegasi Kristen Najran dan berlaku bagi siapa saja hingga hari kiamat yang menolak kebenaran objektif demi mempertahankan kesesatan.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Isti'ārah Tashrīḥiyyah / Majāz 'Aqlī (Syirik Sebagai Puncak Kerusakan Kosmis):</strong><br>
+            Penggunaan diksi <em>Al-Ifsād</em> untuk menggambarkan sikap penolakan terhadap tauhid adalah bentuk <em>Isti'ārah</em> yang sangat tajam. Al-Qur'an meminjam konsep pembusukan materi biologis untuk melukiskan kerusakan sistemik yang ditimbulkan oleh doktrin politeisme dan fabrikasi dogma ketuhanan manusia. Sebagaimana racun yang merusak organ tubuh, doktrin penuhanan makhluk merusak nalar murni, merusak hubungan ontologis hamba dengan Rabb, dan merusak fondasi etika universal.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — At-Ta'rīḍh al-Hādim (Sindiran Mematikan terhadap Elit Najran):</strong><br>
+            Terdapat seni <em>Ta'rīḍh</em> (sindiran tingkat tinggi) yang ditujukan langsung kepada para uskup dan teolog Najran: Abu Haritsah dan Al-'Aqib. Mereka di mata kaumnya dipandang sebagai orang-orang suci, penjaga moral, dan pembawa perbaikan (<em>muslihūn</em>). Namun wahyu Al-Qur'an membongkar topeng kesucian itu: di hadapan Allah, mereka yang menyembunyikan kebenaran kenabian Muhammad demi mempertahankan upeti Romawi dan jubah sutra imamat sejatinya berstatus sebagai <strong>Al-Mufsidīn</strong> (gembong perusak nilai kemanusiaan).
+        </li>
+        <li>
+            <strong>I'jaz Fonetik & Fashilah Akustik:</strong><br>
+            Secara fonetika, transisi dari suara dengungan hidung yang lembut pada <strong>Iqlāb</strong> (<em>'Alīmum bil...</em>) menghadirkan jeda akustik yang hening dan menekan, seolah memberi ruang bagi jiwa untuk bergetar. Kemudian ritme ditutup oleh dentuman konsonan frikatif huruf Fa' dan Sin sukun pada <em>bil-mufsidīn</em>, diakhiri dengan resonansi vokal panjang Ya' dan Nun sukun yang muram dan berwibawa. Ritme ini menyempurnakan nada fashilah ayat 56 (<em>zhālimīn</em>), 57 (<em>zhālimīn</em>), dan menyegel kepastian penutupan Blok 2 dengan nada wibawa yang tak tertandingi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual Runtun dengan Ayat 59–62):</strong><br>
+            Struktur dialektika Klaster 5 Blok 2 dibangun dengan silogisme argumentatif yang kedap celah:
+            <ul>
+                <li><em>Ayat 59:</em> Menghancurkan premis penuhanan Isa AS secara rasional melalui analogi penciptaan Adam AS dari tanah (<em>Inna matsala 'Īsā 'indallāhi ka-matsali Ādam</em>). Jika tanpa bapak dijadikan alasan menjadi tuhan, maka Adam tanpa bapak dan ibu jauh lebih pantas.</li>
+                <li><em>Ayat 60:</em> Mengukuhkan kepastian wahyu dan melarang keraguan sedikit pun (<em>Al-ḥaqqu min Rabbika falā takun minal-mumtarīn</em>).</li>
+                <li><em>Ayat 61:</em> Ketika argumentasi nalar telah tuntas namun penentang masih membantah, Al-Qur'an menantang mereka pada pembuktian sumpah eksistensial hidup-mati: <em>Mubāhalah</em> (melibatkan diri, anak-anak, dan wanita untuk memohon laknat Allah atas para pendusta).</li>
+                <li><em>Ayat 62:</em> Memproklamasikan secara mutlak bahwa apa yang dituturkan Al-Qur'an adalah kebenaran historis murni (<em>Inna hādzā la-huwal-qaṣhaṣhul-ḥaqq</em>) dan menegaskan pilar tauhid: tidak ada ilah selain Allah.</li>
+                <li><em>Ayat 63:</em> Menutup seluruh rangkaian tersebut dengan palu godam keadilan: jika setelah seluruh tangga argumentasi ini mereka tetap membalikkan badan dan kabur (<em>Fa in tawallaw</em>), maka jelaslah sudah bahwa motif penolakan mereka bukanlah keraguan intelektual, melainkan kedurhakaan moral yang masuk ke dalam kategori <em>ifsād</em>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis Dialog Delegasi Kristen Najran):</strong><br>
+            Peristiwa ini terjadi di Masjid Nabawi sekitar tahun 9 atau 10 Hijriyah (Tahun Utusan / <em>'Āmul-Wufūd</em>). Najran adalah benteng peradaban Kristen terbesar di jazirah Arab bagian selatan (perbatasan Yaman), yang memiliki kaitan diplomatik dan teologis erat dengan Kekaisaran Bizantium (Romawi Timur) dan Kerajaan Aksum (Abisinia). Delegasi yang datang berjumlah 60 orang berkuda, dipimpin oleh kaum cendekiawan, panglima, dan uskup agung. Mereka berdebat dengan Nabi Muhammad ﷺ selama berhari-hari. Nabi mengizinkan mereka melakukan ibadah kebaktian di sisi sayap Masjid Nabawi menghadap ke timur—sebuah bukti toleransi peradaban Islam yang tiada tara.<br>
+            Namun ketika perdebatan teologis menyentuh substansi Trinitas, mereka membangkang. Ketika Nabi mengajak bermubahalah seraya membawa manusia-manusia tersuci: Sayyidah Fathimah, Sayyidina Ali, Hasan, dan Husain r.a., nyali para pembesar Najran runtuh seketika. Uskup Abu Haritsah melihat wajah-wajah suci tersebut dan berkata kepada kaumnya: <em>"Wahai bangsaku, sungguh aku melihat wajah-wajah yang sekiranya mereka berdoa kepada Allah untuk melenyapkan sebuah gunung dari tempatnya, niscaya Allah akan melenyapkannya! Jangan bermubahalah, atau kalian akan musnah!"</em> Mereka memilih mundur, menolak masuk Islam, dan bersedia membayar upeti jizyah tahunan berupa 2.000 potong pakaian (<em>ḥullah</em>). Ayat 63 memotret realitas psikologis ini: mereka mundur bukan karena hujah Islam lemah, melainkan karena mereka lebih mencintai eksistensi duniawi mereka daripada ketundukan pada kebenaran tauhid.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Argumentatif Menuju Blok 3: Ayat 64 dst):</strong><br>
+            Penetapan vonis <em>Al-Mufsidīn</em> pada ayat 63 menandai berakhirnya Blok 2 (Ayat 33–63). Namun keagungan arsitektur Al-Qur'an terpancar pada transisinya menuju Blok 3: Ayat 64 (<em>"Qul yā Ahlal-Kitābi ta'ālaw ilā kalimatin sawā'in baynanā wa baynakum..."</em>). Meskipun di ayat 63 Allah telah melabeli pembangkangan mereka sebagai kerusakan (<em>ifsād</em>), pintu diplomasi dan dialog peradaban tidak lantas dibakar habis! Pada ayat 64, Rasulullah ﷺ justru diperintahkan untuk merentangkan tangan rekonsiliasi universal: mengajak mereka kembali ke meja runding atas dasar <strong>Kalimatun Sawā'</strong> (titik temu universal: sama-sama menyembah Allah semata dan menolak tirani manusia mempertuhankan manusia lain). Inilah transisi luar biasa dari pembelaan akidah yang tegas (Blok 2) menuju piagam koeksistensi etis peradaban (Blok 3).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam para mufasir, Ibnu Jarir At-Tabari, menjelaskan makna ayat ini dengan sanad yang bersambung:<br>
+        <em>"Makna firman-Nya 'Fa in tawallaw': Maka jika mereka—yakni rombongan utusan dari kaum Nasrani Najran itu—berpaling dari apa yang engkau serukan kepada mereka wahai Muhammad, berupa pengakuan terhadap kebenaran perkara 'Isa bahwa ia adalah hamba Allah dan rasul-Nya, serta enggan bersumpah mubahalah bersamamu untuk membuktikan kebenaran... 'Fa innallāha 'alīmum bil-mufsidīn': Maka sesungguhnya Allah Maha Mengetahui siapa saja yang berbuat kerusakan di muka bumi-Nya dengan menolak ayat-ayat-Nya, mendustakan utusan-Nya, menyekutukan sesembahan lain bersama-Nya, dan memalingkan manusia dari jalan kebenaran. Kalimat ini mengandung ancaman yang amat keras dari Allah bagi mereka, bahwa Dia pasti akan membalas perbuatan mereka dan menimpakan azab yang menghinakan atas kerusakan akidah yang mereka pelihara."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menggarisbawahi bahwa penolakan mereka setelah datangnya bukti ilmiah adalah puncak kezaliman:<br>
+        <em>"Maksud ayat: Jika mereka berpaling dari kebenaran yang telah engkau paparkan secara gamblang, dan menolak ajakanmu untuk bermubahalah yang merupakan pemutus keraguan terakhir, maka ketahuilah bahwa mereka itu adalah orang-orang yang berbuat kerusakan (Al-Mufsidīn). Barangsiapa yang mendustakan kebenaran setelah tegaknya hujah rasional dan bukti mukjizat, tiadalah motifnya melainkan kezaliman, kesombongan, dan kerusakan moral batiniah. Dan Allah Maha Mengetahui mereka, tidak ada satu pun dari bisikan hati dan makar tersembunyi mereka yang luput dari pandangan-Nya, dan Dia akan menyiksa mereka dengan siksaan yang setimpal atas kerusakan yang mereka timbulkan."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi hukum dan keterkaitan antara kekufuran dengan kerusakan tatanan kosmis:<br>
+        <em>"Para ulama menetapkan bahwa kekufuran dan penolakan terhadap wahyu tauhid dinamakan 'Ifsād' (kerusakan). Mengapa demikian? Karena kemusyrikan dan maksiat merusak keteraturan tatanan alam semesta dan mencabut keberkahan bumi, sebagaimana firman-Nya: 'Zhaharal-fasādu fil-barri wal-baḥri bimā kasabat aydin-nās' (QS. Ar-Rum: 41). Orang yang menyembah selain Allah telah merusak hakikat tujuan penciptaan dirinya. Penolakan delegasi Najran terhadap mubahalah dan keengganan mereka memeluk Islam diposisikan oleh Allah sebagai ifsad. Namun, keluasan syariat Islam terbukti ketika Rasulullah ﷺ tidak memerangi mereka secara fisik setelah mereka menolak mubahalah, melainkan menerima tawaran damai mereka melalui akad dzimmah dan pembayaran jizyah. Ini membuktikan bahwa vonis 'mufsid' di ayat ini adalah penetapan vonis teologis dan moral di hadapan pengadilan Allah, bukan legitimasi pembantaian sewenang-wenang."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Az-Zamakhsyari (467–538 H) & Fakhruddin Ar-Razi (544–606 H):</strong><br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menyoroti keindahan balaghah penempatan isim zhahir:<br>
+        <em>"Mengapa Allah berfirman 'bil-mufsidīn' dan tidak berfirman 'bihim'? Tujuannya adalah untuk mencap mereka secara eksplisit dengan sifat perusak (at-tasjīl 'alayhim bi-shifatil-ifsād). Maknanya: barangsiapa yang menolak kebenaran yang terang-benderang seperti matahari di siang bolong, maka tidak ada keraguan lagi bahwa ia adalah gembong kerusakan yang merusak akal sehatnya sendiri dan merusak keyakinan orang-orang yang mengikutinya."</em><br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Mengembangkan hujah epistemologi rasional yang mendalam:<br>
+        <em>"Seseorang yang menolak hujah demonstratif (al-burhān al-qath'ī) yang dipaparkan dalam ayat 59–62 hanya memiliki dua kemungkinan: bodoh murni (jāhil) atau pembangkang keras kepala (mu'ānid). Kondisi delegasi Najran mustahil bodoh murni, karena mereka adalah para cendekiawan dan rahib yang menguasai kitab-kitab samawi. Maka pastilah penolakan mereka berakar dari 'inād (keangkuhan ego). Orang yang membangkang secara sadar terhadap kebenaran pasti akan bertindak merusak (mufsid): ia akan memutarbalikkan tafsir kitab suci, menyesatkan masyarakat awam demi mengamankan kedudukannya, dan menebarkan permusuhan terhadap para penyeru kebenaran. Kalimat 'Fa innallāha 'alīmum bil-mufsidīn' adalah bentuk ancaman paling menakutkan bagi orang yang berakal, karena murka Allah bergantung pada kesempurnaan ilmu-Nya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur mengurai dimensi psikologi politik para rahib Najran:<br>
+        <em>"Penyebutan 'Al-Mufsidīn' di ujung perikop ini adalah penelanjangan terhadap motif tersembunyi para pembesar Najran. Penolakan mereka terhadap Islam bukanlah didorong oleh keraguan ilmiah terhadap kerasulan Muhammad ﷺ, melainkan kekhawatiran hilangnya kekuasaan politik kependetaan mereka atas masyarakat Yaman, serta ketakutan terputusnya subsidi ekonomi dan perlindungan militer dari Kaisar Bizantium. Mereka mengorbankan keselamatan abadi umat mereka demi melanggengkan oligarki keagamaan mereka. Itulah hakikat kerusakan (ifsād) terbesar dalam sosiologi agama: ketika institusi spiritual berubah menjadi korporasi pemburu rente yang memperdagangkan ayat-ayat Allah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan getaran dialektika yang sangat tajam:<br>
+        <em>"Bantahan demi bantahan telah dikemukakan. Dalil akal telah diajukan: jika Isa anak Tuhan karena tidak berayah, maka Adam lebih pantas lagi. Dalil wahyu telah dibacakan. Terakhir, pintu mubahalah telah dibuka selebar-lebarnya! Tetapi apa yang terjadi? Para rahib dan pembesar Najran itu mundur teratur. Mereka tidak berani menatap mata Nabi Muhammad ﷺ dalam sumpah kutuk. Mereka takut mati! Sebab di dasar nurani mereka yang paling dalam, mereka tahu Nabi ini benar. Namun sayang seribu kali sayang, mereka berpaling. Mereka lebih memilih mempertahankan takhta uskup dan upeti jubah dunia. Maka jatuhlah vonis dari langit: mereka adalah Al-Mufsidīn! Orang yang merusak kebenaran, merusak nurani rakyat yang mereka pimpin. Al-Qur'an tidak memaksa mereka masuk Islam dengan pedang, tetapi Al-Qur'an tidak pernah berkompromi mencap tindakan hipokrit mereka sebagai kejahatan moral!"</em><br>
+        • <strong>Prof. Dr. M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menggarisbawahi integrasi moral dan ilmu Allah:<br>
+        <em>"Kata 'Alīm mengindikasikan bahwa Allah mengetahui secara terperinci apa yang kasat mata dan apa yang tersembunyi. Penggunaan kata 'Al-Mufsidīn' menegaskan bahwa orang yang menolak hujah yang pasti dan menolak berserah diri kepada kebenaran, secara otomatis telah mencabut dirinya dari barisan kaum muslihūn (pembangun peradaban). Pembangkangan terhadap nilai-nilai ketuhanan pada akhirnya akan selalu berujung pada kerusakan tatanan sosial, ketidakadilan hukum, dan dekadensi moral umat manusia."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI mendudukkan QS. Ali 'Imran: 63 sebagai landasan etika dialog antarumat beragama. Al-Qur'an mengajarkan kejujuran intelektual: sebuah dialog harus bertumpu pada pembuktian fakta objektif, bukan sekadar mempertahankan sentimen kelompok. Sikap delegasi Najran yang mundur dari mubahalah namun tetap mempertahankan doktrin teologi yang keliru di hadapan pengikutnya menjadi cermin peringatan: bahwa kefanatikan buta terhadap status quo sering kali membutakan manusia dari kebenaran yang nyata. Islam tetap menjamin hak hidup, kebebasan beribadah, dan perlindungan harta bagi kaum non-muslim yang terikat perjanjian damai (<em>Ahludz-Dzimmah</em>), sembari mempertahankan ketegasan batas teologis bahwa kebenaran mutlak hanya berada di sisi tauhidullah.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Konsensus Mufassir / Ijma')</th>
+                <th>Dinamika Penekanan (Ikhtilaf Tanawwu' / Variasi Analisis)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna Subjek 'Tawallaw'</strong></td>
+                <td>Sepakat merujuk kepada delegasi Kristen Najran (secara historis) dan berlaku umum bagi seluruh penentang risalah tauhid pasca-tegaknya hujah.</td>
+                <td>• At-Tabari & Ibnu Katsir: Menekankan penolakan mereka terhadap ajakan mubahalah.<br>• Ibnu 'Asyur: Menekankan penolakan terhadap substansi teologis penghambaan Nabi Isa AS.</td>
+            </tr>
+            <tr>
+                <td><strong>Hakekat Pelabelan 'Al-Mufsidīn'</strong></td>
+                <td>Sepakat bahwa membelakangi tauhid dan menyebarkan kesyirikan adalah kategori kejahatan moral yang merusak (<em>ifsād</em>).</td>
+                <td>• Al-Qurthubi: Meninjau dari dampak hilangnya berkah ekologis dan tatanan sosial bumi.<br>• Fakhruddin Ar-Razi: Meninjau dari kerusakan epistemik intelektual yang menyesatkan akal orang awam.</td>
+            </tr>
+            <tr>
+                <td><strong>Kedudukan Jawab Syarat 'Fa innallāha 'Alīm'</strong></td>
+                <td>Sepakat bahwa penyebutan ilmu Allah berfungsi sebagai ancaman siksaan yang pasti (<em>wa'īd wa tahdīd</em>), bukan sekadar informasi kognitif pasif.</td>
+                <td>• Az-Zamakhsyari: Menyoroti fungsi substitusi isim zhahir atas dhamir untuk penetapan dosa secara resmi.<br>• Quraish Shihab: Menyoroti fungsi pengawasan batin (muraqabah) bahwa Allah menguliti motif tersembunyi manusia.</td>
+            </tr>
+            <tr>
+                <td><strong>Status Sosiologis Non-Muslim Najran Pasca-Ayat</strong></td>
+                <td>Sepakat bahwa vonis 'mufsid' tidak membatalkan keabsahan perjanjian damai politik (<em>Aqdudz-Dzimmah</em>) dan kewajiban perlindungan darah mereka.</td>
+                <td>• Fuqaha Mazhab Syafi'i & Hanafi: Menjadikannya dalil penerimaan jizyah dari kaum musyrik Ahli Kitab Arab.<br>• Buya Hamka: Menegaskan batasan tegas antara toleransi sosial-politik dan ketegasan garis akidah tauhid.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan neuropsikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Ego-Defensive / Post-Truth vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Ego-Defensive / Post-Truth (Tawallaw)</th>
+                <th>Pola Pikir Qur'ani (Tunduk Pada Kebenaran)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Respon Terhadap Fakta yang Membatalkan Keyakinan Lama</strong></td>
+                <td><strong>Cognitive Resistance & Withdrawal:</strong> Ketika argumen lama terbukti runtuh, pelaku memilih lari (<em>tawallī</em>), mengalihkan isu, atau menyerang pribadi lawan demi menjaga muka (<em>saving face</em>).</td>
+                <td><strong>Intellectual Humility & Inqiyād:</strong> Mengakui keterbatasan nalar pribadi di hadapan kebenaran wahyu; berani mengoreksi paradigma lama demi keselarasan dengan fitrah transendental.</td>
+            </tr>
+            <tr>
+                <td><strong>Motivasi Utama Berpendapat</strong></td>
+                <td><strong>Preservasi Status & Keuntungan Kelompok:</strong> Mempertahankan opini semata-mata karena telah terikat modal politik, reputasi jabatan, atau kepentingan ekonomi oligarki.</td>
+                <td><strong>Pencarian Al-Haqq Objektif:</strong> Kebenaran dicari demi keridaan Allah semata, sekalipun konsekuensinya harus kehilangan privilese duniawi dan pujian manusia.</td>
+            </tr>
+            <tr>
+                <td><strong>Definisi Kerusakan (Ifsād)</strong></td>
+                <td><strong>Reduksionisme Fisik-Material:</strong> Kerusakan hanya dipahami jika ada gedung roboh atau kerugian finansial; pemalsuan akidah dan manipulasi moral dianggap hak asasi.</td>
+                <td><strong>Kerusakan Holistik-Sistemik:</strong> Kerusakan terbesar bermula dari kerusakan integritas epistemik—yakni memutarbalikkan fakta, menutupi kebenaran, dan memelihara kebohongan publik.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Sunk Cost of Pride & Status Quo Bias (Jebakan Biaya Keangkuhan dan Bias Status Quo):</strong><br>
+            <em>Premis Filosofis:</em> Mengapa para rahib Najran yang terpelajar menolak beriman padahal mereka mengetahui kebenaran Al-Qur'an? Dalam psikologi kognitif, ini adalah manifestasi ekstrem dari <strong>Status Quo Bias</strong> yang dipicu oleh <strong>Sunk Cost Fallacy of Ego</strong>. Para rahib telah menginvestasikan seluruh hidup mereka dalam hierarki gereja, menikmati upeti, penghormatan umat, dan legitimasi politik. Mengakui kerasulan Muhammad ﷺ berarti merobohkan seluruh menara gading status sosial mereka dalam sekejap.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Waspadalah ketika Anda mendapati diri Anda bersikukuh mempertahankan sebuah pendapat profesional atau keputusan bisnis yang jelas-jelas keliru. Tanyakan pada nurani Anda: <em>"Apakah aku mempertahankannya karena dalil ini benar, ataukah semata-mata karena aku terlalu malu untuk meminta maaf dan mengakui kesalahanku di depan umum?"</em> Memutus rantai keangkuhan sejak dini adalah penyelamat dari predikat <em>mufsid</em>.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Hidden Metric of Corruption (Model Kerusakan Batin Sistemik):</strong><br>
+            <em>Premis Filosofis:</em> Ayat 63 mengaitkan pembangkangan intelektual (<em>tawallī</em>) langsung dengan predikat perusak (<em>al-mufsidīn</em>). Ini merumuskan mental model bahwa: <strong>kerusakan lahiriah peradaban selalu didahului oleh korupsi kejujuran intelektual di ruang batin para pemimpinnya</strong>. Ketika para pemegang otoritas ilmu bersepakat untuk bungkam di hadapan kebenaran demi menjaga stabilitas kekuasaan semu, saat itulah pembusukan moral masyarakat dimulai.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Jangan pernah mengukur dampak sebuah kebohongan hanya dari kerugian hari ini. Mengkompromikan integritas kebenaran demi menyenangkan atasan atau demi mempertahankan jabatan adalah benih <em>ifsād</em> yang akan membusukkan ekosistem organisasi Anda dalam jangka panjang.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengurai Identity-Protective Cognition via Muraqabah</h3>
+    <p>
+        Secara neurobiologis, ketika manusia dihadapkan pada fakta objektif yang mengancam struktur identitas sosial atau ideologinya (sebagaimana dialami delegasi Najran saat diajak mubahalah), otak merespons fakta tersebut bukan sebagai informasi kognitif baru, melainkan sebagai ancaman fisik terhadap eksistensi diri. Sirkuit <strong>Amigdala</strong> menyala secara agresif memicu respons pertahanan <em>fight or flight</em> (lawan atau lari). Fenomena ini dikenal dalam sains kognitif modern sebagai <strong>Identity-Protective Cognition (Kognisi Perlindungan Identitas)</strong>. Ketika mereka tidak mampu melawan argumentasi Al-Qur'an (<em>fight</em>), mereka memilih opsi lari dan memalingkan muka (<em>flight / tawallaw</em>).
+    </p>
+    <p>
+        QS. 3:63 hadir sebagai penawar spiritual melalui mekanisme <strong>Muraqabatullāh (Kesadaran Pengawasan Transendental)</strong>. Frasa <em>"Fa innallāha 'alīmum bil-mufsidīn"</em> menembus lapisan pertahanan ego rasionalisasi otak manusia. Jiwa manusia diingatkan bahwa ia mungkin bisa memanipulasi persepsi publik, bisa tersenyum di hadapan kamera, dan bisa mempertahankan kursi jabatannya, namun korteks batinnya tidak akan pernah bisa berbohong di hadapan Dzat Yang Maha Mengetahui. Kesadaran akan kemahatahuan Allah ('Alīm) meredam kepanikan reaktif amigdala, mengaktifkan kembali fungsi prefrontal cortex yang jernih, dan membimbing jiwa menuju maqam <strong>Tazkiyatun Nafs</strong>: kerelaan menanggalkan kesombongan demi keselamatan abadi di hadirat Ilahi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Kontemporer: Pelacuran Intelektual & Hegemoni Oligarki Pengetahuan</h3>
+    <p>
+        Tragedi penolakan kebenaran oleh para uskup Najran demi mempertahankan privilese gerejawi bereinkarnasi secara masif di abad ke-21 dalam bentuk <strong>Pelacuran Intelektual (Intellectual Dishonesty)</strong>. Hari ini, kita menyaksikan bagaimana para saintis, akademisi bergelar profesor, pakar hukum, dan analis media bayaran sengaja memalingkan muka (<em>tawallaw</em>) dari data ilmiah dan fakta objektif. Mereka bersedia menerbitkan riset manipulatif untuk membela korporasi industri rokok, menutupi krisis pencemaran limbah industri, melegitimasi undang-undang yang merampas hak rakyat kecil, atau membenarkan genosida geopolitik demi mengamankan kucuran dana hibah penelitian dan kursi komisaris BUMN.
+    </p>
+    <p>
+        Al-Qur'an telah merumuskan diagnosis peradaban ini 14 abad silam melalui ayat 63: mereka yang mengorbankan integritas data dan menyembunyikan kebenaran demi mempertahankan tahta oligarki bukanlah pahlawan ilmu pengetahuan, melainkan <strong>Al-Mufsidīn</strong>. Mereka merusak nalar publik, merusak ekosistem keadilan, dan mewariskan kehancuran sistemik bagi generasi masa depan.
+    </p>
+
+    <h3>2. Dekonstruksi Peradaban Modern: Standar Ganda Geopolitik Global & Dekadensi Moral Pascamodern</h3>
+    <p>
+        Dalam lanskap hubungan internasional kontemporer, ayat ini menelanjangi kemunafikan tatanan global (<em>global double standards</em>). Negara-negara adidaya yang mendaku sebagai mercusuar demokrasi dan pembela hak asasi manusia kerap kali memalingkan punggung (<em>tawallaw</em>) ketika kejahatan kemanusiaan yang nyata terjadi di depan mata mereka—sebagaimana tragedi pembersihan etnis di Palestina dan belahan bumi tertindas lainnya. Ketika veto politik digunakan untuk melindungi penjahat perang demi kalkulasi hegemoni kekuasaan, retorika perdamaian mereka runtuh berkeping-keping.
+    </p>
+    <p>
+        Di ranah kultural, era pascamodernisme (<em>postmodernism</em>) mendewakan relativisme moral: mengklaim bahwa tidak ada kebenaran mutlak, semua hal hanyalah konstruksi sosial, dan penyimpangan fitrah seksual dilabeli sebagai kemajuan peradaban. Ketika diingatkan dengan ayat-ayat Allah, masyarakat hedonis modern berpaling seraya menuduh para penyeru kebenaran sebagai pihak yang intoleran. QS. 3:63 berdiri kokoh mendekonstruksi narasi palsu ini: kebenaran tauhid dan fitrah moral adalah hukum objektif semesta. Siapa pun yang berpaling darinya dan menjerumuskan masyarakat ke dalam kekacauan moral hakikatnya adalah perusak tatanan kemanusiaan yang pasti diadili oleh Allah Yang Maha Mengetahui.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Protokol 'Zero-Defensive' Saat Menghadapi Teguran Kebenaran:</strong><br>
+                Latihlah jiwa Anda untuk tidak membela diri secara reaktif ketika seseorang menunjukkan kekeliruan atau kesalahan faktual pada diri Anda (dalam rapat kerja, diskusi ilmiah, maupun urusan rumah tangga). Terapkan jeda 10 detik: tarik nafas dalam-dalam, tahan lidah dari melakukan sanggahan balik (<em>counter-argument</em>), lalu ucapkan kalimat: <em>"Jazākallāhu khayran, terima kasih atas koreksinya, saya akan verifikasi dan perbaiki hal tersebut."</em> Kebiasaan mikro ini mematikan benih kesombongan (<em>batharul-haqq</em>) yang menjadi akar penyakit <em>tawallī</em>.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Audit Integritas & Konflik Kepentingan Mingguan:</strong><br>
+                Sediakan waktu 15 menit setiap malam Jumat untuk mengaudit keputusan profesional, bisnis, atau akademik yang Anda buat selama sepekan. Ajukan pertanyaan pemutus: <em>"Apakah ada argumen yang sengaja saya putarbalikkan, ada laporan data yang saya percantik secara manipulatif, atau ada kebenaran yang sengaja saya bungkam semata-mata karena takut kehilangan kontrak, relasi bisnis, atau jabatan?"</em> Jika terbukti ada, segera buat nota koreksi perbaikan sebelum kebohongan tersebut beranak-pinak menjadi kerusakan sistemik.
+            </li>
+            <li>
+                <strong>Komitmen Hidup Berkelanjutan — Menjadi Duta Ishlah yang Anti-Kemunafikan:</strong><br>
+                Ketika Anda berada di tengah komunitas kerja, keluarga, atau organisasi yang sedang bersepakat melakukan penyimpangan etis (seperti rekayasa anggaran, manipulasi laporan, atau fitnah terhadap rekan kerja), tolak untuk ikut serta memalingkan muka (<em>tawallī</em>). Pilihlah posisi moral yang tegas: jika mampu, sampaikan kebenaran dengan hikmah dan data objektif; jika terancam, tolak untuk menandatangani kepalsuan tersebut dan tarik diri dari persekongkolan. Jadilah barisan <em>Al-Mushlihūn</em> yang memperbaiki kerusakan, bukan <em>Al-Mufsidīn</em> yang memperparah kezaliman.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Kejujuran Intelektual di Balik Topeng Gengsi:</strong> Pernahkah aku menolak sebuah kebenaran yang nyata—atau enggan mengakui kekalahan dalam sebuah perdebatan—semata-mata karena kebenaran itu disampaikan oleh orang yang status sosialnya lebih rendah dariku, atau karena pengakuan itu akan meruntuhkan reputasiku di mata manusia?
+            </li>
+            <li>
+                <strong>Uji Deteksi Benih 'Ifsād' dalam Peran Kehidupan:</strong> Apakah di lingkungan keluarga, tempat kerja, atau jamaah masyarakat, kehadiranku justru menciptakan perpecahan, menebarkan prasangka, dan merusak keharmonisan demi memuaskan ambisi egoku sendiri, sembari aku tetap merasa diriku sebagai orang yang baik?
+            </li>
+            <li>
+                <strong>Uji Kesadaran Muraqabah di Hadapan 'Alīmum bil-Mufsidīn':</strong> Ketika aku berhasil menyembunyikan motif licik, dalih pencitraan, dan kepentingan pribadiku dari pandangan seluruh manusia di dunia ini, apakah hatiku gemetar menyadari bahwa detik ini juga Allah SWT Yang Maha Mengetahui sedang menatap langsung ke dalam rongga kalbuku dan mencatat setiap detak kemunafikanku?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā 'Alīmu bi-kulli syay', yā Man lā yakhfā 'alayhi khāfiyatun fil-ardhi wa lā fis-samā'! Ya Allah, Dzat Yang Maha Mengetahui segala rahasia yang tersembunyi di kedalaman dada manusia! Kami bersujud di hadapan keagungan hujah-Mu, memohon perlindungan dari kehinaan hati yang memalingkan muka dari kebenaran firman-Mu. Bersihkanlah kalbu kami dari penyakit 'ujub, takabbur, dan riya' yang membuat kami buta dari melihat cahaya petunjuk-Mu. Lindungilah akal pikiran dan lisan kami dari melacurkan kebenaran demi recehan dunia yang fana, dan selamatkanlah kami dari tergolong ke dalam barisan orang-orang yang berbuat kerusakan (Al-Mufsidīn). Karuniakanlah kepada kami ketundukan jiwa para nabi dan para siddiqin, hiasilah pribadi kami dengan kerendahan hati untuk senantiasa tunduk di bawah naungan kebenaran, dan jadikanlah hidup dan mati kami sebagai agen-agen perbaikan (Al-Mushlihīn) yang menebarkan rahmat, tauhid, dan keadilan di muka bumi-Mu. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-062 - QS. Ali 'Imran Ayat 62.html">&larr; Kembali ke Ayat 62 (QS. 3:62)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 63</strong> (Penutup Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="../Blok 3 (Ayat 64-101)/003-064 - QS. Ali 'Imran Ayat 64.html">Lanjut ke Blok 3: Ayat 64 (QS. 3:64) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

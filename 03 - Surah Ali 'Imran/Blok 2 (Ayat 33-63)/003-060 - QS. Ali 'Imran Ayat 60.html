@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-060 - QS. Ali 'Imran Ayat 60 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-059 - QS. Ali 'Imran Ayat 59.html">&larr; Ayat Sebelumnya (QS. 3:59)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-061 - QS. Ali 'Imran Ayat 61.html">Ayat Berikutnya (QS. 3:61) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imrān & Mubahalah</span>
+        <span class="badge">Klaster 5 (Ayat 59–63): Puncak Argumentasi Rasional Penciptaan 'Īsā AS, Kepastian Kebenaran Mutlak, Tantangan Mubāhalah & Penegasan Monoteisme</span>
+        <span class="badge">7 Kata | 25 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 60</h1>
+    <div class="transliteration">
+        "Al-ḥaqqu mir-Rabbika falā takum-minal-mumtarīn(a)."
+    </div>
+    <div class="thematic-title">
+        Kepastian Epistemologis Kebenaran Wahyu & Gugurnya Keraguan Dogmatis: Dekonstruksi Keraguan Manusia di Bawah Otoritas Rububiyyah Mutlak
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 5: Puncak Hujah Tauhid, Kepastian Kebenaran Ilahi & Tantangan Mubahalah)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱلْحَقُّ مِن رَّبِّكَ فَلَا تَكُن مِّنَ ٱلْمُمْتَرِينَ ۝٦٠
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Kebenaran itu (datang) dari Tuhan Pemeliharamu, maka janganlah sekali-kali engkau (Muhammad, dan seluruh umat manusia) termasuk orang-orang yang ragu."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Doktrinal:</strong> Ayat ini merupakan ketetapan aksiomatis (<em>qadhīyah qath‘iyyah</em>) yang memungkasi analogi rasional agung pada ayat 59 sebelumnya: penciptaan Nabi Isa AS tanpa ayah biologis tidak ubahnya seperti penciptaan Nabi Adam AS tanpa ayah dan tanpa ibu melalui kalimat penciptaan <em>"Kun fa-yakūn"</em>. Huruf <em>alif lām</em> pada lafaz <strong>Al-Ḥaqqu</strong> berfungsi sebagai <em>lām lil-‘ahd adz-dzihnī wal-khārijī</em> (merujuk secara spesifik kepada hakikat penciptaan dan kedudukan kenabian Isa AS) sekaligus mencakup dimensi <em>al-istighrāq al-jinsī</em> (seluruh kebenaran mutlak yang melandasi tata kelola semesta dan syariat wahyu).
+    </p>
+    <p>
+        Penyandaran kebenaran kepada sifat rububiyyah <strong>mir-Rabbika</strong> (dari Tuhan Pemeliharamu) secara eksklusif menegaskan bahwa kebenaran sejati bukanlah produk konsensus politik kaisar, bukan hasil perdebatan teologi konsili manusia yang penuh kompromi, dan bukan pula ilusi spekulasi akal yang fana, melainkan pancaran ilmu langsung dari Zat Yang Memelihara, Mendidik, dan Mengatur seluruh eksistensi ciptaan. Adapun larangan <strong>falā takun minal-mumtarīn</strong> secara tekstual ditujukan kepada Nabi Muhammad ﷺ, namun secara substansi dan kaidah ushuliyyah berorientasi kepada seluruh umat manusia (<em>iyyāki a‘nī wasma‘ī yā jārah</em>). Seorang nabi mustahil dihinggapi keraguan teologis karena terlindungi oleh <em>‘ishmatun-nubuwwah</em>; larangan ini berfungsi mengokohkan keteguhan beliau (<em>tatsbīt</em>) sekaligus menjadi peringatan keras (<em>tarhīb syadīd</em>) bagi segenap mukallaf agar tidak membiarkan syubhat dan skeptisisme meracuni kejernihan akidah mereka.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱلْحَقُّ</strong><br>(<em>Al-Ḥaqqu</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Iẓhār Qamariyyah:</strong> Saat ibtida' dibaca fathah; lam ta'rif dibaca jelas tanpa ghunnah.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari wasathul-halq (tengah tenggorokan) dengan sifat hams, rikhwah, dan istifal.<br>
+                    <strong>Qāf Musyaddadah:</strong> Isti'la' mutlak di pangkal lidah, jahr, dan syiddah disertai sifat <strong>Nabr</strong> (penekanan suara kuat pada tasydid). Jika waqaf, berlaku <strong>Qalqalah Kubrā / Akbar</strong>.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca dengan rofa' dhammah: <em>Al-Ḥaqqu</em> (sebagai Mubtada' atau Khabar mubtada' mahdzuf). Terdapat riwayat syadzah dari Ali bin Abi Thalib dan Al-Hasan Al-Bashri yang membaca nashab (<em>Al-Ḥaqqa</em> sebagai maf'ul bih bagi fi'il mahdzuf: <em>ittabi'il-haqqa</em>), namun seluruh mushaf mutawatir menetapkan status marfu' sebagai ketetapan esensial kebenaran itu sendiri.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>مِن رَّبِّكَ</strong><br>(<em>Mir-Rabbika</em>)</td>
+                <td>
+                    <strong>Idghām Bilā Ghunnah (Kāmil):</strong> Nun sukun melebur sempurna ke dalam huruf Rā' tanpa menyisakan suara ghunnah sedikit pun.<br>
+                    <strong>Huruf Rā' Tafkhīm:</strong> Berharakat fathah dibaca tebal dengan getaran takrir terkontrol.<br>
+                    <strong>Bā' Musyaddadah:</strong> Sifat syiddah dan jahr.<br>
+                    <strong>Kāf Khithāb:</strong> Makhraj di pangkal lidah dengan hembusan nafas hams tipis.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idgham bila ghunnah sempurna pada nun mati yang bertemu ra', serta membaca tafkhim pada ra' fathah. Makna idgham kamil mencerminkan penyatuan tak terpisahkan antara kebenaran hakiki dengan sumber asalnya, yaitu Rububiyyah Allah Ta'ala.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>فَلَا</strong><br>(<em>Falā</em>)</td>
+                <td>
+                    <strong>Huruf Fā':</strong> Keluar dari perut bibir bawah bertemu ujung gigi seri atas dengan sifat hams dan rikhwah.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada alif setelah lam fathah, ditunaikan secara konsisten tanpa penambahan harakat.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca fathah pada Fa' dan mad thabi'i pada Lā an-nahiyah. Partikel larangan ini memutus segala potensi keraguan sejak titik mula kemunculannya di alam pikiran.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>تَكُن</strong><br>(<em>Takun</em>)</td>
+                <td>
+                    <strong>Huruf Tā':</strong> Sifat syiddah dan hams.<br>
+                    <strong>Kāf Madhmūmah:</strong> Vokal 'u' murni.<br>
+                    <strong>Nūn Jazm:</strong> Nun sukun asli karena masuknya <em>lā</em> nahiyah. Jika washal ke kata berikutnya, harakat nun berubah menjadi fathah 'aridlah (<em>fa-lā takuna</em>) guna menghindari pertemuan dua sukun (<em>iltiqā'us-sākinain</em>).
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam menetapkan fi'il mudhari' naqish majzum dengan pembuangan huruf wawu asal (<em>kāna - yakūnu &rarr; takun</em>) demi menghindari bertemunya dua sukun secara internal, dan membaca fathah pada nun saat washal ke <em>minal-mumtarīn</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>مِّنَ</strong><br>(<em>Mina</em>)</td>
+                <td>
+                    <strong>Huruf Jarr:</strong> Asalnya bersukun (<em>min</em>), dialihkan harakatnya menjadi fathah (<em>mina</em>) saat menyambung ke alif lam ma'rifah guna melancarkan fonotaktik pelafalan bahasa Arab tinggi.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca fathah pada nun <em>mina</em> saat washal menuju isim ma'rifah berikutnya secara mutawatir.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>ٱلْمُمْتَرِينَ ۝٦٠</strong><br>(<em>Al-Mumtarīn</em>)</td>
+                <td>
+                    <strong>Iẓhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Iẓhār Syafawī:</strong> Mīm sukun pertama diucapkan jelas di dua bibir tanpa ghunnah tambahan.<br>
+                    <strong>Rā' Muraqqaqah:</strong> Dibaca tipis (tarqīq) karena berharakat kasrah.<br>
+                    <strong>Mad ‘Āriḍh lis-Sukūn:</strong> Pada waqaf akhir ayat, Yā' mad dibaca 2, 4, atau 6 harakat disertai sifat tawassuṭh pada huruf Nūn sukun.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca wazan isim fa'il jamak dari bab ifti'al: <em>Al-Mumtarīn</em>, serta mentarqiqkan huruf Rā' karena kasrah asli. Penggunaan bentuk jamak mengukuhkan bahwa keraguan yang dilarang bukan sekadar bisikan sepintas, melainkan watak kaum yang menjadikan skeptisisme dan perdebatan kusir sebagai identitas kolektif mereka.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul: Klimaks Dialog Teologis dengan Delegasi Kristen Najran:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi‘ al-Bayān fī Ta’wīl al-Qur’ān</em> (No. 7195), Ibnu Abi Hatim, dan Ibnu Ishaq dalam <em>As-Sīrah an-Nabawiyyah</em> dari Az-Zuhri:<br>
+        <em>"Ketika delegasi Kristen Najran (yang dipimpin oleh Abdul Masih Al-'Aqib dan Uskup Abu Haritsah) berdebat sengit di Masjid Nabawi mengenai tabiat Isa Al-Masih dan menolak analogi logis penciptaan Adam AS tanpa ayah dan ibu di ayat 59, mereka tetap memperlihatkan sikap ingkar dan keragu-raguan yang dibuat-buat demi mempertahankan kedudukan politik keagamaan mereka. Maka Allah Subhanahu wa Ta'ala menurunkan ayat ini: <strong>'Al-ḥaqqu mir-Rabbika falā takum-minal-mumtarīn'</strong>. Ayat ini menjadi ketetapan pemutus bahwa apa yang diwahyukan kepada Nabi Muhammad ﷺ adalah kebenaran sejati dari Tuhan semesta alam, dan keraguan mereka sama sekali tidak berbobot di hadapan timbangan ilmu Ilahi."</em><br>
+        <strong>Derajat Atsar:</strong> Diterima dengan sanad Hasan mursal shahih al-makhraj, diperkuat oleh riwayat Ibnu Abbas r.a.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi‘ Al-Bukhārī (No. 4536) & Ṣhaḥīḥ Muslim (No. 156) dari Abu Hurairah r.a. — Maksumnya Para Nabi dari Keraguan:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>«Naḥnu aḥaqqu bisy-syakki min Ibrāhīma iż qāla: 'Rabbi arinī kayfa tuḥyil-mawtā, qāla awa lam tu’min, qāla balā walākin li-yaṭhma’inna qalbī'!»</em><br>
+        (Kita lebih berhak untuk ragu daripada Ibrahim ketika beliau berkata: "Ya Tuhanku, perlihatkanlah kepadaku bagaimana Engkau menghidupkan orang-orang mati." Allah berfirman: "Belum percayakah engkau?" Ibrahim menjawab: "Benar, aku telah percaya, tetapi agar tenang hatiku!").<br>
+        <strong>Faidah & Takhrij Hadits:</strong> Para ulama muhaqqiq (seperti Imam An-Nawawi dan Ibnu Hajar Al-'Asqalani) menjelaskan bahwa sabda ini menggunakan uslub tawadhu' dan pengandaian yang mustahil: jika Nabi Ibrahim AS saja tidak pernah ragu sedikit pun melainkan hanya memohon peningkatan derajat keyakinan dari <em>'Ilmul-Yaqin</em> ke <em>'Ainul-Yaqin</em>, maka Nabi Muhammad ﷺ tentu jauh lebih terlindungi dari keraguan teologis. Hadits ini menjadi landasan teologis bahwa larangan <em>falā takun minal-mumtarīn</em> adalah bentuk pengokohan kemaksuman nabi sekaligus edukasi keras bagi umatnya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Sunan At-Tirmidzī (No. 2518) & Musnad Aḥmad (No. 1723) dari Al-Hasan bin Ali r.a. — Kebenaran Melahirkan Ketenangan, Keraguan Melahirkan Kegelisahan:</strong><br>
+        Aku menghafal dari Rasulullah ﷺ sabda beliau:<br>
+        <em>«Da‘ mā yarībuka ilā mā lā yarībuka, fa-inna aṣh-ṣhidqa ṭhuma’nīnah, wa inna al-każiba rībah!»</em><br>
+        (Tinggalkanlah apa yang meragukanmu menuju apa yang tidak meragukanmu; karena sesungguhnya kebenaran/kejujuran itu melahirkan ketenteraman jiwa, sedangkan kebohongan/kebatilan itu membuahkan keraguan dan kegelisahan batin!).<br>
+        <strong>Derajat Hadits:</strong> Sahih menurut Imam At-Tirmidzi, Ibnu Hibban, dan Adz-Dzahabi. Hadits ini membedah psikologi frasa <em>Al-Haqq</em> versus <em>Al-Imtira'</em>: kebenaran wahyu dari Allah menancapkan ketenangan hakiki, sementara perdebatan teologi batil kaum penentang selalu diliputi keraguan kronis yang menyiksa jiwa.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Ḥ-Q-Q (ح-ق-ق — Al-Ḥaqq):</strong> Menurut Ibnu Faris dalam <em>Mu‘jam Maqāyīs al-Lughah</em>, akar kata ini berporos pada satu prinsip makna fundamental: <em>wujūbu asy-syay’i wa luzūmuh wa tsiqātuh</em> (kepastian keberadaan sesuatu, kemestian berlakunya, ketetapan yang tak tergoyahkan, dan kesesuaian mutlak dengan realitas objektif). Lawan katanya adalah <em>al-bāṭhil</em> (kesia-siaan, kepalsuan, dan kehampaan). Dalam <em>Lisān al-‘Arab</em> karya Ibnu Manzhur, dikatakan: <em>ḥaqqa al-amru yaḥiqqu</em> manakala urusan itu telah menjadi kenyataan pasti yang tak terbantahkan. Al-Haqq adalah salah satu Asmaul Husna Allah, dan seluruh firman-Nya adalah kebenaran murni yang steril dari distorsi waktu maupun tempat.
+        </li>
+        <li>
+            <strong>2. R-B-B (ر-ب-ب — Rabb):</strong> Ibnu Faris menegaskan bahwa akar kata ini berporos pada tiga makna agung: <em>al-mālik</em> (Pemilik mutlak), <em>as-sayyid al-muṭhā‘</em> (Pemimpin yang ditaati), dan <em>al-muṣhliḥ lit-tarbiyah</em> (Pendidik yang memelihara ciptaan-Nya tahap demi tahap menuju kesempurnaan). Penambahan kaf khithab (<em>Rabbika</em>) mengalirkan dimensi kedekatan personal, pembelaan protektif, dan legitimasi transendental bagi risalah Nabi Muhammad ﷺ.
+        </li>
+        <li>
+            <strong>3. M-R-Y (م-ر-ي — Al-Mumtarīn / Al-Miryah):</strong> Dalam <em>Maqāyīs al-Lughah</em>, akar kata ini memiliki medan makna fisik purba: <em>maryun-nāqah</em> (gerakan memerah susu unta dengan mengusap-usap dan menarik kantung susunya secara berulang-ulang). Dari makna fisik ini, bahasa Arab klasik mentransfernya ke ranah mental-intelektual: <em>al-miryah</em> adalah keraguan yang diperas-peras dan dicari-cari celahnya melalui perdebatan kusir (<em>al-jidāl</em>) dan kebimbangan yang bergejolak di dalam dada (<em>al-i‘tilāj fīṣh-ṣhadr</em>). <strong>Al-Mumtarī</strong> adalah subjek yang sengaja membiarkan dirinya terombang-ambing dalam keraguan atau berspekulasi menolak bukti-bukti nyata yang telah benderang.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱلْحَقُّ</strong><br>(<em>Al-Ḥaqqu</em>)</td>
+                <td>
+                    Ism tsulatsi mujarrad berwazan <em>fa‘l</em> (mashdar yang difungsikan sebagai isim dzat/shifat ma'rifah bil-alif wal-lām).
+                </td>
+                <td>
+                    Memiliki dua wajah i'rab mu'tabar di kalangan pakar nahwu:<br>
+                    • <strong>Wajah Utama (Madzhab Bashrah):</strong> <strong>Mubtada’</strong> marfu‘ bil-dhammah azh-zhāhirah ‘alā ākhirih.<br>
+                    • <strong>Wajah Alternatif:</strong> <strong>Khabar</strong> bagi mubtada’ mahdzūf yang ditakdirkan: <em>[Hāżā] al-ḥaqqu</em> (Inilah kebenaran itu), marfu‘ bil-dhammah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>مِن</strong><br>(<em>Min</em>)</td>
+                <td>
+                    Harfu jarrin mabniyyun ‘alās-sukūn.
+                </td>
+                <td>
+                    Huruf jar bermakna <em>ibtidā’ al-ghāyah al-ma‘nawiyyah</em> (menunjukkan sumber primordial kebenaran).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>رَّبِّكَ</strong><br>(<em>Rabbika</em>)</td>
+                <td>
+                    <em>Rabbi</em>: Ism majrūr bil-kasrah, mudhāf.<br>
+                    <em>Kāf</em>: Ism dhamīr muttashil lil-khithāb mabni ‘alal-fath.
+                </td>
+                <td>
+                    <em>Rabbi</em> majrur bi-min. Jar wa majrur muta‘alliq bi-maḥdzūf <strong>Khabar Mubtada’</strong> (jika <em>Al-Haqqu</em> dijadikan mubtada’), dengan takdir: <em>Al-Ḥaqqu kā’inun/mustaqirrun mir-Rabbika</em>. <em>Kāf</em> fi mahalli jarrin <strong>Mudhāf Ilayh</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>فَلَا</strong><br>(<em>Falā</em>)</td>
+                <td>
+                    <em>Fā’</em>: Harfu rābiṭhah / fashīḥah.<br>
+                    <em>Lā</em>: Harfu nahyin wa jazm.
+                </td>
+                <td>
+                    <em>Fā’</em> al-fashīḥah mengaitkan konsekuensi logis dari syarat yang tersirat (<em>iżā ‘alimta anna hāżal-ḥaqqa mir-Rabbika falā...</em>). <em>Lā</em> jazm nahiyah membatalkan kemandirian fi'il dan menuntut penghentian total.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>تَكُن</strong><br>(<em>Takun</em>)</td>
+                <td>
+                    Fi'il mudhari' naqish (dari <em>kāna - yakūnu</em>) majzum bi-lā an-nahiyah.
+                </td>
+                <td>
+                    Fi'il mudhari' naqish majzum, tanda jazm-nya adalah sukun pada huruf Nun. Isim <em>takun</em> adalah dhamir mustatir wujuban taqdiruhu <strong>Anta</strong> (engkau). Saat washal ke kata berikutnya, nun dibaca fathah 'aridlah guna menepis <em>iltiqā’us-sākinain</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>مِّنَ</strong><br>(<em>Mina</em>)</td>
+                <td>
+                    Harfu jarrin lil-tab‘īdh mabni ‘alās-sukūn al-munqallib fathan.
+                </td>
+                <td>
+                    Huruf jar bermakna keanggotaan/tab'idh (bagian dari kelompok), difathahkan nun-nya untuk menghindari pertemuan dua huruf mati.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُمْتَرِينَ ۝٦٠</strong><br>(<em>Al-Mumtarīn</em>)</td>
+                <td>
+                    Isim fa'il jamak mudzakkar salim dari fi'il khumasi <em>imtarā - yamtarī</em> (wazan <em>mufta‘ilūn</em> dari akar <em>m-r-y</em>).
+                </td>
+                <td>
+                    Ism majrūr bi-min, tanda jarnya adalah Yā’ karena jamak mudzakkar salim. Jar wa majrur muta‘alliq bi-maḥdzūf <strong>Khabar Takun</strong> (<em>kā’inan minhum</em>) fi mahalli nashbin.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Analisis Mahāllul-Jumlah:</strong></td>
+                <td>
+                    1. Jumlah Ismiyyah <em>Al-ḥaqqu mir-Rabbika</em> adalah <strong>Jumlah Musta’nafah Qath‘iyyah</strong> yang berfungsi sebagai proklamasi vonis doktrinal, <em>lā maḥalla lahā minal-i‘rāb</em>.<br>
+                    2. Jumlah Thalabiyyah Nahy <em>falā takun minal-mumtarīn</em> adalah <strong>Jawāb Syarth Muqaddar (Fashīḥah)</strong>, <em>lā maḥalla lahā minal-i‘rāb</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Ta‘rīf al-Musnad Ilayh bil-Alif wal-Lām (Eksklusivitas Hakikat Kebenaran):</strong> Lafaz <em>Al-Ḥaqqu</em> didefinisikan dengan alif lam lil-jins dan lil-'ahd. Ini menghasilkan makna <em>al-kamāl al-muṭhlaq</em>: kebenaran paripurna yang tidak mengandung cacat, keraguan, atau ambiguitas sedikit pun. Kebenaran penciptaan Isa AS telah mencapai puncak keterbukaan yang menutup pintu segala penafsiran trinitas yang menyimpang.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Qasr wal-Hashr bi-Wāsiṭhah Taqdīm al-Mubtada’ wa Ta‘alluqihi bil-Khabar:</strong> Konstruksi <em>Al-ḥaqqu mir-Rabbika</em> mengandung pembatasan makna implisit: kebenaran sejati itu HANYA bersumber dari Rabbmu, bukan dari desas-desus kaum Ahli Kitab, bukan dari konsili para kaisar, dan bukan dari teologi pagan yang disusupkan ke dalam ajaran monoteisme murni.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Iḍhāfah at-Tasyrīf wat-Ta’nīs (Penyandaran Pemuliaan Rabbika):</strong> Allah tidak berfirman <em>mir-Rabb</em> atau <em>minallāh</em>, melainkan memilih lafaz <em>mir-Rabbika</em> (Tuhan Pemeliharamu). Penggunaan kaf khithab ini memberikan fungsi <em>at-tasyrīf</em> (pemuliaan agung bagi Rasulullah ﷺ) sekaligus <em>at-tathmīn</em> (penenteraman batin): dakwah tauhid yang beliau sampaikan berada di bawah jaminan dan pemeliharaan langsung Sang Pencipta semesta.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah ‘an at-Tatsbīt wal-Istimrār (Larangan bagi Sosok Maksum):</strong> Larangan <em>falā takun</em> kepada Nabi ﷺ adalah bentuk <em>kināyah ‘alat-tatsbīt</em>. Sebagaimana seorang panglima tangguh yang dikatakan kepadanya: "Jangan gentar!", tujuannya bukan karena sang panglima penakut, melainkan untuk meneguhkan keteguhan yang telah ada serta memperingatkan para prajurit di bawah komandonya agar pantang mundur.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Diksi Al-Kauniyyah "Minal-Mumtarīn" vs "Falā Tamtari":</strong> Mengapa Al-Qur'an tidak menyatakan <em>falā tamtari</em> (maka janganlah engkau ragu), melainkan <em>falā takun minal-mumtarīn</em> (maka janganlah engkau menjadi bagian dari orang-orang yang ragu)? Penolakan masuk ke dalam barisan "orang-orang yang ragu" menunjukkan bahwa keraguan bukan sekadar kilatan pikiran, melainkan pola perilaku sosiologis kaum yang gemar berdebat kusir dan menolak hujah terang. Menghindari keraguan berarti memutus asosiasi mental dengan kelompok pembangkang tersebut.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Husnut-Takhallush (Transisi Sempurna Menuju Mubāhalah):</strong> Ayat 60 berfungsi sebagai simpul transisi luar biasa indah (<em>ḥusnut-takhalluṣh</em>) dari paparan argumentasi logika kosmik penciptaan Adam-Isa di ayat 59 menuju puncak tantangan sumpah laknat (<em>mubāhalah</em>) di ayat 61. Logika dituntaskan, kepastian ditegakkan, barulah pintu pertaruhan spiritual dibuka.
+        </li>
+        <li>
+            <strong>I'jaz Fonetik:</strong> Perpaduan artikulasi huruf tebal-kuat (<em>Qaf</em> musyaddadah dengan nabr tajam pada <em>Al-Haqqu</em>), getaran berat huruf (<em>Ra'</em> tafkhim pada <em>Rabbika</em>), dan desis lembut penolakan (<em>Fa</em> dan <em>Lam Alif</em> pada <em>fala</em>) yang dipungkasi rima mad 'aridh lis-sukun bernada tawassuth (<em>Al-Mumtarin</em>) menciptakan atmosfer keagungan yang memancarkan ketegasan mutlak tanpa kompromi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Sibāq (Korelasi Organik dengan QS. 3:59)</h3>
+    <p>
+        Pada ayat 59, Al-Qur'an mematahkan doktrin ketuhanan Isa AS dengan analogi rasional paling telak: <em>"Inna matsala ‘Īsā ‘indallāhi ka-matsali Ādama khalaqahū min turābin tsumma qāla lahū kun fa-yakūn"</em> (Sesungguhnya perumpamaan penciptaan Isa di sisi Allah adalah seperti penciptaan Adam; Dia menciptakannya dari tanah, kemudian Dia berfirman kepadanya: "Jadilah!", maka jadilah ia).
+    </p>
+    <p>
+        Secara <em>sibāq</em>, Ayat 60 adalah kesimpulan aksiomatis (<em>natījah hatmiyyah</em>) dari silogisme tersebut: jika penciptaan manusia tanpa ayah dan ibu (Adam) diakui sebagai bukti kemahakuasaan Allah tanpa menjadikannya tuhan, maka penciptaan manusia tanpa ayah saja (Isa) tentu jauh lebih masuk akal sebagai bukti kekuasaan-Nya. Maka, narasi wahyu inilah <strong>Al-Ḥaqq</strong> (kebenaran objektif yang kokoh), sedangkan teologi penuhanan Isa adalah spekulasi emosional yang rapuh.
+    </p>
+
+    <h3>2. Siyāq (Alur Tematik Blok 2 & Dialog Teologis dengan Delegasi Najran)</h3>
+    <p>
+        Ayat ini menempati posisi sentral dalam Klaster 5 (Ayat 59–63) dari Blok 2 Surah Ali 'Imran. Delegasi Kristen Najran yang dipimpin oleh para teolog berpengaruh (Al-'Aqib, As-Sayyid, dan Uskup Abu Haritsah) datang ke Madinah membawa bangunan dogma konsili yang telah mengakar berabad-abad. Mereka terkagum-kagum pada kelahiran Isa tanpa sperma laki-laki dan mukjizat-mukjizatnya, lalu menjadikannya dalil bahwa Isa adalah oknum Tuhan.
+    </p>
+    <p>
+        Al-Qur'an meluruskan kekeliruan tersebut dengan metodologi wahyu: mukjizat bukanlah bukti ketuhanan, melainkan tanda kenabian atas izin Allah. Siyāq ayat 60 menegaskan batas demarkasi tegas: kebenaran wahyu telah dibentangkan dengan gamblang di hadapan mereka di Masjid Nabawi; jika mereka masih bersikukuh menolak, itu bukan karena kekurangan dalil, melainkan karena keras kepala dan keterikatan pada gengsi kekuasaan keagamaan.
+    </p>
+
+    <h3>3. Liḥāq (Jembatan Menuju QS. 3:61 — Tantangan Sumpah Laknat / Mubāhalah)</h3>
+    <p>
+        Setelah hujah rasional dipaparkan (ayat 59) dan kepastian kebenaran dikunci tanpa menyisakan ruang keraguan (ayat 60), secara <em>liḥāq</em> narasi seketika melompat ke ayat 61: <em>"Fa-man ḥājjaka fīhi mim-ba‘di mā jā’aka minal-‘ilmi fa-qul ta‘ālaw nad‘u abnā’anā wa abnā’akum..."</em> (Maka siapa yang membantahmu tentang urusan Isa setelah datang kepadamu ilmu kebenaran ini, katakanlah: "Marilah kita memanggil anak-anak kami dan anak-anak kamu... lalu kita bermubahalah memohon laknat Allah atas kaum yang berdusta!").
+    </p>
+    <p>
+        Ayat 60 adalah fondasi legitimasi spiritual mubahalah: Rasulullah ﷺ berani menantang para pembesar Najran beserta seluruh anggota keluarga inti beliau (Fatimah, Ali, Hasan, dan Husain) karena keyakinan beliau telah mencapai derajat <em>Haqqul-Yaqin</em> yang mutlak bersumber dari <em>Rabbika</em>.
+    </p>
+
+    <h3>4. Rekonstruksi Sosio-Historis: Madaniyah, Dialog Najran, dan Wibawa Kenabian</h3>
+    <p>
+        Peristiwa Najran terjadi sekitar tahun 9–10 Hijriyah (<em>'Amul-Wufud</em> / Tahun Delegasi), ketika hegemoni paganisme Makkah telah runtuh pasca-Fathu Makkah dan Perang Hunain. Umat Islam kini berhadapan langsung dengan kekuatan teologis Kristen yang memiliki koneksi geopolitik dengan Imperium Romawi Bizantium (Abisinia dan Syam).
+    </p>
+    <p>
+        Dalam konteks sosio-historis ini, Al-Qur'an mendidik komunitas Madinah agar memiliki <strong>kedaulatan epistemologis</strong>. Umat Islam diajarkan untuk menghormati kehadiran delegasi non-muslim (bahkan Rasulullah ﷺ mengizinkan mereka beribadah di sayap Masjid Nabawi menghadap ke timur), namun dalam ruang dialektika akidah, Al-Qur'an tidak pernah berkompromi atau merelatifkan kebenaran tauhid. Kebenaran wahyu berdiri tegak di atas prinsip <em>mir-Rabbika</em> yang melucuti segala bentuk mitologi dan sinkretisme doktrinal.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi‘ al-Bayān fī Ta’wīl al-Qur’ān</em>:</strong><br>
+        At-Tabari menegaskan bahwa firman Allah <em>"Al-ḥaqqu mir-Rabbika"</em> bermakna: Kabar yang Aku turunkan kepadamu mengenai Isa putra Maryam—bahwa ia adalah hamba Allah, rasul-Nya, dan kalimat-Nya yang ditiupkan kepada Maryam—itulah kebenaran sejati dari Tuhanmu, bukan dongeng yang direkayasa oleh para rahib dan pendeta Nasrani. Mengenai firman-Nya <em>"falā takun minal-mumtarīn"</em>, At-Tabari menjelaskan: Janganlah engkau, wahai Muhammad, menjadi bagian dari mereka yang ragu-ragu terhadap berita yang datang dari Tuhanmu. Khithab ini secara lahiriah ditujukan kepada Nabi, namun khithab tersebut hakikatnya menyasar seluruh umat agar mereka kokoh di atas keyakinan tauhid dan tidak terpengaruh oleh keraguan delegasi Najran.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur’ān al-‘Azhīm</em>:</strong><br>
+        Ibnu Katsir menyoroti bahwa ayat ini adalah pemutus perkara (<em>al-qawlul-faṣhl</em>). Segala sesuatu selain kebenaran wahyu ini adalah kesesatan belaka. Beliau mengorelasikan ayat ini dengan firman Allah dalam QS. Al-Baqarah: 147 dan QS. Yunus: 94. Ibnu Katsir menggarisbawahi bahwa penegasan ini turun setelah dalil rasional penciptaan Adam (ayat 59) dibentangkan; maka siapa pun yang masih ragu setelah terangnya dalil tersebut sesungguhnya sedang mengikuti hawa nafsu dan kesombongan taklid nenek moyang.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi‘ li-Aḥkām al-Qur’ān</em>:</strong><br>
+        Al-Qurthubi membedah kaidah teologi dan bahasa: Apakah Nabi Muhammad ﷺ mungkin ragu? Al-Qurthubi menjawab tegas: <em>"Lā yajūzu ‘alar-Rasūl an yamtārī"</em> (Mustahil secara akal dan syariat bagi Rasulullah ﷺ untuk ragu terhadap wahyu yang diterimanya). Penuturan ayat ini menggunakan kaidah balaghah bangsa Arab yang masyhur: <em>Khāṭhaban-Nabiyya wa arādal-ummah</em> (Menyapa pemimpinnya, namun yang dimaksudkan adalah seluruh rakyat dan pengikutnya). Ini senada dengan peribahasa: <em>Iyyāki a‘nī wasma‘ī yā jārah</em>. Tujuannya adalah mendidik umat agar membuang jauh-jauh keraguan dan tidak terbuai oleh filsafat spekulatif perdebatan teologi Ahli Kitab.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Imam Fakhruddin Ar-Razi (w. 606 H):</strong><br>
+        Dalam <em>Al-Kasysyāf</em>, Az-Zamakhsyari menjelaskan bahwa lafaz <em>Al-Haqq</em> marfu' sebagai khabar bagi mubtada' mahdzuf (<em>Hadzal-Haqq</em>) atau sebagai mubtada' yang khabarnya <em>mir-Rabbika</em>. Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> menambahkan analisis filsafat ilmu epistemologis: Suatu proposisi yang telah ditegakkan dengan dalil aksiomatis rasional (analogi penciptaan Adam di ayat 59) berubah statusnya dari <em>nazharī</em> (spekulatif) menjadi <em>ḍharūrī</em> (pasti/aksiomatis). Maka keraguan (<em>al-miryah</em>) setelah terbitnya bukti aksiomatis bukanlah keraguan ilmiah, melainkan pembangkangan psikologis (<em>'inād</em>) akibat keangkuhan kabilah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu ‘Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur memaparkan bahwa kalimat ini berfungsi sebagai <em>fadzlakah</em> (rekapitulasi konklusif) dan penutup dari segmen debat rasional mengenai Isa AS. Penyandaran kepada <em>Rabbika</em> mengandung iltifat kasih sayang Allah kepada Nabi-Nya: bahwa apa yang engkau sampaikan bersumber dari Tuhan yang mendidikmu dengan hikmah, bukan hasil pemikiran manusia biasa. Ibnu 'Asyur juga menggarisbawahi bahwa kata <em>Al-Mumtarin</em> menggunakan wazan <em>ifti'al</em> yang menunjukkan upaya yang dipaksakan untuk ragu-ragu tatkala kebenaran telah benderang.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Hamka menyajikan penafsiran yang menggetarkan nurani: <em>"Kebenaran itu dari Tuhanmu! Bukan dari suara terbanyak musyawarah konsili para kaisar Romawi yang menetapkan dogma ketuhanan Isa dengan intrik kekuasaan politik! Kebenaran yang sejati terbit dari sisi Allah Yang Menciptakan alam. Jangan engkau ragu wahai Muhammad, dan jangan ragu wahai orang-orang yang beriman! Keraguan adalah penyakit yang melumpuhkan jiwa. Jika akal telah melihat terangnya perumpamaan Adam dan Isa, tegakkan kepalamu memegang tauhid, jangan gentar menghadapi kepongahan bantahan siapa pun."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> & Kemenag RI:</strong><br>
+        Quraish Shihab menggarisbawahi akar kata <em>Al-Mumtarīn</em> yang bermakna memerah susu unta; seolah-olah orang yang ragu memeras-meras akalnya untuk mencari celah keraguan padahal faktanya sudah sangat terang. Tafsir Kemenag RI menambahkan bahwa ayat ini meletakkan prinsip moderasi beragama: umat Islam dituntut bersikap santun dan terbuka dalam dialog lintas agama sebagaimana teladan Rasulullah ﷺ terhadap delegasi Najran, namun tetap memiliki integritas keyakinan yang kokoh tanpa kompromi teologis.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu Konsensus (Ijma')</th>
+                <th>Ragam Sudut Pandang Mufassir (Ikhtilaf)</th>
+                <th>Sintesis Konvergensi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Sasaran Khithab Larangan (*Falā Takun*)</strong></td>
+                <td>Sepakat bahwa Nabi Muhammad ﷺ mustahil terjangkiti keraguan teologis karena terjaga oleh *‘ishmah*.</td>
+                <td>
+                    • <strong>At-Tabari & Al-Qurthubi:</strong> Khithab ditujukan kepada Nabi secara redaksional, namun sasarannya adalah segenap umat mukallaf (*iyyāki a‘nī*).<br>
+                    • <strong>Ar-Razi & Ibnu 'Asyur:</strong> Khithab ditujukan kepada Nabi sebagai tuntutan kesinambungan keteguhan (*istimrār ‘alat-tatsbīt*) di atas puncak keyakinan.
+                </td>
+                <td>Larangan berfungsi ganda: peneguhan kemaksuman nabi sekaligus pagar doktrinal mutlak bagi umat dari racun keraguan.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Hakikat Diksi *Al-Haqq*</strong></td>
+                <td>Sepakat bahwa narasi penciptaan Isa AS dalam Al-Qur'an adalah kebenaran mutlak yang menafikan dogma trinitas.</td>
+                <td>
+                    • <strong>Mufassir Klasik:</strong> Menitikberatkan pada pembatalan klaim delegasi Kristen Najran dan kaum Yahudi.<br>
+                    • <strong>Mufassir Kontemporer (Hamka & Quraish Shihab):</strong> Memperluas cakupan pada kebenaran objektif wahyu yang melampaui manipulasi konsili politik manusia sepanjang sejarah.
+                </td>
+                <td>Kebenaran wahyu bersifat trans-historis: ia menghakimi seluruh konstruksi teologi manusiawi yang menyimpang dari poros tauhid.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Hakikat Keraguan (*Al-Miryah / Al-Imtira'*)</strong></td>
+                <td>Sepakat bahwa keraguan terhadap wahyu yang telah terbukti dalilnya adalah tercela secara syariat.</td>
+                <td>
+                    • <strong>Az-Zamakhsyari & Ibnu 'Asyur:</strong> *Al-Imtirā’* adalah keraguan yang dibuat-buat melalui silogisme debat kusir.<br>
+                    • <strong>Ar-Razi:</strong> Penolakan terhadap dalil aksiomatis yang timbul akibat penyakit hati taklid buta dan gengsi sosial.
+                </td>
+                <td>Skeptisisme dogmatis bukanlah aktivitas ilmiah yang netral, melainkan gejala distorsi psikologis yang menolak tunduk pada bukti nyata.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Posisi Ayat dalam Metodologi Dialog Antar-Agama</strong></td>
+                <td>Sepakat bahwa ayat ini menjadi fondasi penentu sebelum melangkah ke tahap mubahalah (konfrontasi spiritual).</td>
+                <td>
+                    • <strong>Ibnu Katsir:</strong> Pemutus perdebatan; tidak ada ruang kompromi setelah dalil ditegakkan.<br>
+                    • <strong>Kemenag RI & Quraish Shihab:</strong> Model dialog elegan: argumentasi rasional diutamakan, integritas iman dipertahankan, dan fanatisme buta ditinggalkan.
+                </td>
+                <td>Toleransi beradab berakar pada kejernihan epistemologis: menghormati pemeluk agama lain tanpa mengorbankan kepastian akidah tauhid.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Dekonstruksi Pola Pikir: Skeptisisme Sinis vs Kepastian Epistemik Qur'ani</h3>
+    <p>
+        Dalam peradaban sekuler dan filsafat pascamodern, keraguan permanen (<em>chronic skepticism</em>) sering dipuja sebagai simbol puncak kebebasan intelektual. Paradigma ini mengasumsikan bahwa tidak ada kebenaran objektif yang absolut (relativisme epistemik); seluruh klaim kebenaran dipandang sekadar konstruksi bahasa, bias kekuasaan, atau persepsi subjektif semata. Akibatnya, manusia modern terjebak dalam kelumpuhan keyakinan (<em>paralysis of conviction</em>), kehilangan kompas moral, dan rentan terhadap keputusasaan eksistensial.
+    </p>
+    <p>
+        QS. 3:60 melakukan rekonstruksi radikal terhadap arsitektur kognitif manusia:
+    </p>
+    <ul>
+        <li><strong>Pola Pikir Jahiliyah / Relativistik:</strong> Menempatkan akal spekulatif manusia sebagai hakim tunggal yang berputar-putar dalam ketidakpastian (<em>al-miryah</em>), memeras keraguan demi pembenaran hawa nafsu dan loyalitas kelompok.</li>
+        <li><strong>Pola Pikir Qur'ani (Rabbani):</strong> Menegaskan bahwa kebenaran sejati bersifat objektif dan berjangkar pada Sang Pencipta (<strong>Al-ḥaqqu mir-Rabbika</strong>). Akal difungsikan secara jernih untuk memahami hujah (seperti analogi Adam-Isa di ayat 59), lalu tunduk dalam kepastian keyakinan (<em>al-yaqīn</em>) yang menenteramkan kalbu. Keraguan bukanlah terminal akhir, melainkan kabut yang harus disingkirkan oleh cahaya wahyu.</li>
+    </ul>
+
+    <h3>2. Mental Model: "The Anchor of Divine Rububiyyah" (Prinsip Jangkar Epistemik Transendental)</h3>
+    <p>
+        Secara kognitif, pikiran manusia rentan terhadap distorsi kognitif seperti <em>confirmation bias</em>, manipulasi retorika kaum sofis, dan tekanan konformitas sosial (<em>social conformity pressure</em>). Ketika seorang individu tidak memiliki titik acuan mutlak di luar dirinya, ia akan mudah terombang-ambing oleh opini publik dan narasi mayoritas yang sesat.
+    </p>
+    <p>
+        Prinsip <strong>Mir-Rabbika</strong> berfungsi sebagai <em>Jangkar Transendental</em>. Rumusan mental model ini menyatakan:
+    </p>
+    <ul>
+        <li><strong>Premis:</strong> Setiap proposisi moral, teologis, dan eksistensial hanya memiliki validitas mutlak jika ia bersumber atau disahkan oleh Sang Pencipta dan Pemelihara semesta (<em>Ar-Rabb</em>).</li>
+        <li><strong>Aplikasi Kognitif:</strong> Ketika menghadapi benturan opini dan perdebatan doktrinal yang rumit, seorang mukmin tidak mengukur kebenaran berdasarkan jumlah pengikut, kemegahan atribut material, atau kehebatan retorika penuturnya, melainkan menyandarkan evaluasinya pada konsistensi wahyu Ilahi. Keraguan seketika gugur manakala kebenaran wahyu telah diverifikasi.</li>
+    </ul>
+
+    <h3>3. Neuropsikologi Keraguan & Tazkiyatun Nafs: Bahaya Patologis "Al-Imtira'"</h3>
+    <p>
+        Secara neurokognitif, keraguan yang dipelihara secara kronis memicu aktivasi terus-menerus pada <em>anterior cingulate cortex</em> (ACC) dan sistem limbik, melahirkan kecemasan bawah sadar, insomnia emosional, dan disonansi kognitif yang melelahkan (<em>cognitive exhaustion</em>).
+    </p>
+    <p>
+        Dalam perspektif tazkiyatun nafs, <em>Al-Miryah</em> adalah salah satu bentuk kotoran hati (<em>najāsah ma‘nawiyyah</em>) yang menghalangi masuknya nur ilahi. Penyakit ini sering kali berakar bukan dari kebodohan intelektual, melainkan dari penyakit takabur dan gengsi mengakui kebenaran yang dibawa oleh pihak lain. Perintah <strong>falā takun minal-mumtarīn</strong> adalah instruksi higienitas mental: bersihkan kalbu dari kesombongan, putus keterikatan pada perdebatan kusir yang sia-sia, dan biarkan fitrah menyatu dengan kebenaran hakiki hingga tercapai ketenteraman jiwa (<em>thuma’nīnatul-qalb</em>).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Post-Truth, Krisis Epistemik & Algoritma Echo-Chamber</h3>
+    <p>
+        Di era disrupsi digital abad ke-21, umat manusia menghadapi wabah <em>Post-Truth</em> (era pasca-kebenaran). Fakta objektif dan dalil ilmiah kerap kalah pengaruhnya dibandingkan manipulasi emosi, propaganda berbasis algoritma kecerdasan buatan, dan fabrikasi narasi di media sosial. Manusia modern terkurung dalam <em>echo chamber</em> (ruang gema) yang meneguhkan bias kelompok masing-masing, sehingga batas antara kebenaran sejati dan kebohongan viral menjadi kabur.
+    </p>
+    <p>
+        QS. 3:60 hadir sebagai kritik peradaban yang tajam: kebenaran tidak ditentukan oleh jumlah <em>views</em>, <em>likes</em>, atau algoritma tren global. Kebenaran yang sejati bersifat tunggal, objektif, dan bersumber dari Allah Subhanahu wa Ta'ala. Menolak menjadi <em>al-mumtarīn</em> di abad ke-21 menuntut disiplin berpikir kritis (<em>tabayyun</em>) agar tidak terombang-ambing oleh disinformasi dan perang persepsi kaum manipulator.
+    </p>
+
+    <h3>2. Sindrom Nihilisme Intelektual & Dekonstruksi Nilai Sakral</h3>
+    <p>
+        Di kalangan generasi muda urban, berkembang tren "keraguan elitis": menganggap bersikap skeptis terhadap agama dan nilai-nilai sakral sebagai tanda kecerdasan tingkat tinggi. Mereka mempertanyakan eksistensi Tuhan, kodrat biologis penciptaan, institusi keluarga, hingga kepastian moral dasar. Namun di balik kebanggaan semu tersebut, data kesehatan mental global mencatat ledakan kasus depresi eksistensial, krisis identitas, dan rasa hampa tanpa pegangan hidup.
+    </p>
+    <p>
+        Al-Qur'an mengingatkan bahwa keraguan yang tidak berujung bukanlah kemajuan peradaban, melainkan pembusukan jiwa. Menghancurkan jangkar kepastian Ilahi hanya akan menenggelamkan manusia ke dalam kegelapan nihilisme, di mana hidup kehilangan arah tujuan dan kematian dipandang sebagai kepunahan tanpa makna.
+    </p>
+
+    <h3>3. Etika Dialog Antar-Peradaban: Ketegasan Akidah di Tengah Pluralisme Modern</h3>
+    <p>
+        Tantangan peradaban modern lainnya adalah jebakan sinkretisme: gagasan bahwa semua agama sama persis sehingga tidak ada kebenaran eksklusif. Demi mencapai toleransi sosial, sebagian kalangan menuntut penanggalan identitas doktrinal masing-masing agama.
+    </p>
+    <p>
+        Teladan Rasulullah ﷺ dalam peristiwa Najran dan tuntunan QS. 3:60 mengajarkan model <strong>Toleransi Berprinsip (Principled Tolerance)</strong>: umat Islam diajarkan hidup berdampingan secara damai, menjalin muamalah yang adil, dan menghormati hak beribadah pemeluk agama lain, tanpa harus mengorbankan keyakinan tauhid yang murni. Ketegasan menyatakan bahwa Isa adalah hamba Allah dan bukan tuhan disampaikan dengan hujah yang jernih, adil, dan bermartabat tanpa kekerasan fisik, mencerminkan ketinggian adab peradaban Islam.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li>
+                <strong>Penerapan Protokol "Epistemic Fasting" & Kurasi Informasi (Mikro-Habit &lt; 5 Menit):</strong><br>
+                Segera tinggalkan grup obrolan, forum perdebatan kusir online, atau akun media sosial yang gemar memproduksi syubhat teologis, hoaks, dan provokasi permusuhan. Latih diri berhenti selama 10 detik sebelum membaca atau membagikan berita apa pun untuk memverifikasi keselarasan informasinya dengan prinsip kejujuran dan sumber otoritatif.
+            </li>
+            <li>
+                <strong>Membangun Fondasi Literasi Tauhid & Logika Islam Secara Terstruktur:</strong><br>
+                Alokasikan waktu khusus minimal 20 menit setiap hari untuk mengkaji tafsir Al-Qur'an dan kitab akidah ahlussunnah wal jama'ah yang muktabar (seperti memahami argumen-argumen rasional Al-Qur'an dalam meluruskan penyimpangan akidah), agar akal pikiran terlindungi dari distorsi dekonstruksi sekuler dan relativisme pascamodern.
+            </li>
+            <li>
+                <strong>Menegakkan Keputusan Berbasis Integritas Kebenaran dalam Ranah Profesional:</strong><br>
+                Terapkan kaidah <em>"Al-Ḥaqqu mir-Rabbika"</em> sebagai kompas etika di tempat kerja. Ketika ditekan oleh atasan atau rekan bisnis untuk melakukan manipulasi laporan, suap, atau kompromi moral demi keuntungan duniawi, tolak dengan santun namun teguh tanpa ragu-ragu (<em>zero doubt</em>), seraya meyakini bahwa rezeki sejati hanya berada di tangan Sang Pemelihara Semesta.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #805ad5;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>
+                Apakah di sudut terdalam kalbuku masih terselip keraguan terhadap kebenaran janji-janji Allah, ketetapan takdir-Nya, atau jaminan rezeki-Nya ketika aku diuji dengan kesulitan hidup yang sempit?
+            </li>
+            <li>
+                Sejauh mana keyakinanku pada kebenaran Al-Qur'an telah menjelma menjadi keberanian moral di ruang publik: apakah aku kerap mengompromikan prinsip iman hanya demi meraih validasi manusia, rasa aman sosial, atau popularitas semu?
+            </li>
+            <li>
+                Apakah aku sering mencari-cari dalih intelektual atau memeras keraguan (<em>al-imtira'</em>) terhadap hukum-hukum Allah semata-mata untuk membenarkan kemalasan ibadah dan menuruti hawa nafsu duniawiku?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 12px; font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 20px; direction: rtl; line-height: 2;">
+            اللَّهُمَّ رَبَّنَا، أَرِنَا الْحَقَّ حَقًّا وَارْزُقْنَا اتِّبَاعَهُ، وَأَرِنَا الْبَاطِلَ بَاطِلًا وَارْزُقْنَا اجْتِنَابَهُ. اللَّهُمَّ يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قُلُوبَنَا عَلَى دِينِكَ، وَيَا مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ. اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنَ الشَّكِّ وَالشِّرْكِ وَالرِّيَاءِ وَالسُّمْعَةِ وَالنِّفَاقِ وَسُوءِ الْأَخْلَاقِ، وَنَعُوذُ بِكَ أَنْ نَكُونَ مِنَ الْمُمْتَرِينَ. اللَّهُمَّ امْلَأْ قُلُوبَنَا بِنُورِ يَقِينِكَ، وَاشْرَحْ صُدُورَنَا بِفَيْضِ كِتَابِكَ، وَاجْعَلْنَا مِنْ دُعَاةِ الْحَقِّ وَأَنْصَارِ التَّوْحِيدِ، وَتَوَفَّنَا مُسْلِمِينَ مُؤْمِنِينَ غَيْرَ خَزَايَا وَلَا مَفْتُونِينَ.
+        </p>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah Tuhan Pemelihara kami, tampakkanlah kepada kami kebenaran sebagai kebenaran yang nyata dan karuniakanlah kepada kami kekuatan untuk mengikutinya; dan tampakkanlah kepada kami kebatilan sebagai kebatilan yang nyata dan anugerahkanlah kepada kami keteguhan untuk menjauhinya. Wahai Dzat Yang Membolak-balikkan kalbu, teguhkanlah kalbu kami di atas agama-Mu; wahai Dzat Yang Mengarahkan hati, arahkanlah hati kami untuk senantiasa taat kepada-Mu. Ya Allah, kami berlindung kepada-Mu dari keraguan, kemusyrikan, riya', sum'ah, kemunafikan, dan akhlak yang buruk, serta kami berlindung kepada-Mu dari menjadi bagian dari orang-orang yang bimbang dan ragu. Penuhilah kalbu kami dengan cahaya keyakinan dari sisi-Mu, lapangkanlah dada kami dengan limpahan hikmah Al-Qur'an-Mu, jadikanlah kami penyeru kebenaran dan pembela tauhid yang ikhlas, dan wafatkanlah kami dalam keadaan berserah diri dan beriman, tanpa ditimpa kehinaan dan fitnah yang menyesatkan. Āmīn Yā Rabbal-‘Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-059 - QS. Ali 'Imran Ayat 59.html">&larr; Kembali ke Ayat 59 (QS. 3:59)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 60</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-061 - QS. Ali 'Imran Ayat 61.html">Lanjut ke Ayat 61 (QS. 3:61) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

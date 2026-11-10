@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-046 - QS. Ali 'Imran Ayat 46 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-045 - QS. Ali 'Imran Ayat 45.html">&larr; Ayat Sebelumnya (QS. 3:45)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-047 - QS. Ali 'Imran Ayat 47.html">Ayat Berikutnya (QS. 3:47) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 3 (Ayat 45–51): Bisyārah Al-Masīḥ, Mukjizat Kalam Ayunan & Legitimasi Risalah Kenabian</span>
+        <span class="badge">7 Kata | 32 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 46</h1>
+    <div class="transliteration">
+        "Wa yukallimun-nāsa fīl-mahdi wa kahlan wa minash-shāliḥīn(a)."
+    </div>
+    <div class="thematic-title">
+        Mukjizat Kalam Ayunan & Nubuat Masa Dewasa: Paradoks Biologis Kenabian Isa Al-Masih, Pembelaan Kehormatan Maryam, serta Legitimasi Moralitas Kaum Shāliḥīn
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 3: Annuntiasi Al-Masih, Mukjizat Khāriqul-'Ādah & Integrasi Risalah Nubuwah)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَيُكَلِّمُ ٱلنَّاسَ فِى ٱلْمَهْدِ وَكَهْلًا وَمِنَ ٱلصَّـٰلِحِينَ ۝٤٦
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Dan dia berbicara kepada manusia (sejak masih berada) di dalam buaian (sebagai mukjizat luar biasa guna membela kesucian sang ibunda) dan ketika sudah dewasa (setelah mengemban risalah kenabian serta saat kembali turun ke bumi di akhir zaman), dan dia termasuk ke dalam golongan orang-orang yang saleh (yang teguh dalam ketaatan sempurna dan keselarasan ubudiyyah kepada Allah)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan mata rantai lanjutan dari kabar gembira (<em>bisyārah</em>) yang disampaikan para malaikat kepada Sayyidah Maryam pada ayat 45. Terdapat dua kutub temporal yang disandingkan secara mencengangkan: <em>fīl-mahd</em> (fase bayi dalam ayunan) dan <em>kahlan</em> (fase usia matang/dewasa). Berbicara pada waktu bayi merupakan mukjizat <em>khāriqul-'ādah</em> (merobek kebiasaan hukum alam) yang berfungsi sebagai pembuktian ilahi seketika (<em>instant exoneration</em>) untuk membebaskan Maryam dari fitnah zina keji yang dituduhkan para pemuka Yahudi. Sebaliknya, berbicara pada usia dewasa (<em>kahl</em>) secara biologis adalah fenomena normal manusiawi. Mengapa Al-Qur'an menyandingkan peristiwa supranatural bayi dengan fenomena alamiah kedewasaan dalam satu nafas nubuat malaikat?
+    </p>
+    <p>
+        Para ulama muhaqqiqin menjelaskan bahwa penyebutan <em>kahlan</em> mengandung tiga dimensi mukjizat sekaligus: <em>Pertama</em>, <strong>Nubuat Proteksi Eksistensial (Survival Prophecy)</strong>: janji ilahi bahwa bayi yang lahir tanpa ayah biologis ini tidak akan musnah atau berhasil dibunuh di masa kecilnya oleh makar tirani penguasa maupun konspirasi Yahudi; ia dijamin hidup sampai usia dewasa. <em>Kedua</em>, <strong>Nubuat Eskatologis</strong>: isyarat mutawatir mengenai turunnya kembali Nabi Isa AS ke bumi pada akhir zaman untuk memimpin umat dengan syariat Nabi Muhammad ﷺ hingga genap usia kedewasaannya sebelum wafat secara fitrah kemanusiaan. <em>Ketiga</em>, Penutup frasa <strong>wa minash-shāliḥīn</strong> mengunci status ontologis Isa Al-Masih: sehebat apa pun mukjizatnya berbicara di buaian, ia tetaplah seorang hamba yang saleh (<em>'abdullāh</em>), bukan tuhan anak, bukan personifikasi zat ilahi, dan steril dari dogma Trinitas yang diada-adakan delegasi Kristen Najran.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَيُكَلِّمُ</strong><br>(<em>Wa yukallimu</em>)</td>
+                <td>
+                    <strong>Wawu 'Athaf:</strong> Sifat infitah dan tarqiq.<br>
+                    <strong>Kāf Bertasydid Kasrah:</strong> Makhraj di pangkal lidah di bawah Qaf, memiliki sifat <em>syiddah</em> (tertahannya suara) disusul <em>hams</em> (lepasnya hembusan nafas halus).<br>
+                    <strong>Lām Bertasydid Kasrah:</strong> Mengalir suara secara parsial (<em>tawassuṭh</em>).<br>
+                    <strong>Mīm Dhammah:</strong> Pelafalan vokal bulat sempurna (<em>itmām al-ḥarakāt</em>).
+                </td>
+                <td>
+                    Seluruh Sepuluh Imam Qira'at Mutawatirah (Nāfi', Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Ḥamzah, Al-Kisā'ī, Abū Ja'far, Ya'qūb, dan Khalaf al-'Āsyir) sepakat membaca rafa' dengan dhammah pada huruf Mim: <em>wa yukallimu</em>. Kedudukannya adalah jumlah fi'liyyah yang diathafkan pada jumlah kabar sebelumnya atau sebagai <em>hal muqaddarah</em> / <em>isti'nāf bayānī</em>.<br>
+                    (<em>Catatan:</em> Diriwayatkan qira'at syadzah dari sebagian perawi non-mutawatir membaca nashab <em>wa yukallima</em> yang diathafkan pada taqdir <em>an yukallima</em> atau pada <em>wajīhan</em>, namun konsensus mutawatir imam sepuluh menetapkan bacaan rafa' <em>wa yukallimu</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلنَّاسَ</strong><br>(<em>An-nāsa</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lam Ta'rif melebur sepenuhnya ke huruf Nun bertasydid.<br>
+                    <strong>Ghunnah Akmal Mā Takūn:</strong> Dengungan pada Nun tasydid ditahan sempurna 2 harakat.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada alif.<br>
+                    <strong>Sīn Fathah:</strong> Memiliki sifat <em>hams</em>, <em>rikhwah</em>, dan <em>ṣhafīr</em> (desis tajam alami).
+                </td>
+                <td>
+                    Seluruh imam sepuluh membaca fathah murni (<em>fat-ḥah muḥaqqaqah</em>) tanpa imālah pada lafaz <em>an-nāsa</em> karena kedudukannya manshub sebagai maf'ul bih. (Perlu dicatat bahwa Imam Abū 'Amr dan ad-Dūrī hanya melakukan <em>imālah sughrā / taqlīl</em> pada kata <em>an-nās</em> apabila berharakat kasrah majrūr, sedangkan dalam posisi manshūb di ayat ini seluruh qari sepakat membacanya dengan fathah murni).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>فِى</strong><br>(<em>Fī</em>)</td>
+                <td>
+                    <strong>Huruf Fā':</strong> Keluar dari bagian dalam bibir bawah bertemu dengan ujung gigi seri atas, memiliki sifat <em>hams</em> dan <em>rikhwah</em>.<br>
+                    <strong>Ilqā' as-Sākinain (Gugurnya Mad saat Washal):</strong> Huruf Ya' mad dibuang secara fonetik saat menyambung ke kata berikutnya (<em>fīl-mahdi</em>) guna menghindari pertemuan dua huruf sukun berturut-turut.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca washal dengan menjatuhkan bunyi mad: <em>fil-mahdi</em>. Secara semantik, huruf <em>fī</em> di sini bermakna <em>zharafiyyah zamāniyyah wa ḥāliyyah</em> (dalam rentang waktu dan kondisi buaian).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلْمَهْدِ</strong><br>(<em>Al-mahdi</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam sukun dibaca terang dan jelas.<br>
+                    <strong>Huruf Hā' Sukun:</strong> Keluar dari pangkal tenggorokan paling dalam (<em>aqṣhal-ḥalq</em>), memiliki sifat <em>hams</em>, <em>rikhwah</em>, dan <em>istifāl</em>; wajib dialirkan nafasnya agar tidak lenyap atau tertukar dengan ha' wasath.<br>
+                    <strong>Dāl Kasrah:</strong> Sifat <em>syiddah</em> dan <em>jahr</em> dengan tarqīq.
+                </td>
+                <td>
+                    Sepuluh imam membaca kasrah pada Dal: <em>al-mahdi</em>. Makna rasm Utsmani merujuk pada ayunan atau ranjang tempat pembaringan bayi yang baru dilahirkan (<em>al-firāsy alladzī yumhadu liṣh-ṣhabiyyi</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَكَهْلًا</strong><br>(<em>Wa kahlan</em>)</td>
+                <td>
+                    <strong>Wawu 'Athaf:</strong> Sifat tarqīq.<br>
+                    <strong>Huruf Kāf Fathah:</strong> Hams dan syiddah.<br>
+                    <strong>Huruf Hā' Sukun:</strong> Hams dan rikhwah di pangkal tenggorokan.<br>
+                    <strong>Lām Alif Tanwin Fathah:</strong> Jika washal bertemu huruf Wawu berikutnya, dibaca <strong>Idghām Bighunnah</strong> (suara tanwin melebur ke Wawu disertai dengungan 2 harakat). Jika waqaf dibaca <strong>Mad 'Iwaḍh</strong> sepanjang 2 harakat (<em>kahlā</em>).
+                </td>
+                <td>
+                    Seluruh imam sepuluh mutawatir membaca fathah pada Kaf, sukun pada Ha', dan tanwin fathah manshub: <em>kahlan</em>. Bacaan ini menjadi <em>ḥāl</em> yang mengindikasikan fase kematangan usia dewasa antara 30 hingga 50 tahun.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَمِنَ</strong><br>(<em>Wa mina</em>)</td>
+                <td>
+                    <strong>Huruf Jār:</strong> Asalnya adalah <em>min</em> dengan nun sukun.<br>
+                    <strong>Tahrik bi-Fathah:</strong> Nun difathahkan secara 'āridh (aksidental) guna mencegah bertemunya dua sukun (<em>li-tafādī iltiqā'is-sākinain</em>) saat disambung ke Lam Ta'rif yang sukun pada kata berikutnya.
+                </td>
+                <td>
+                    Konsensus seluruh imam qira'at sepuluh membaca fathah pada Nun: <em>wa mina</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلصَّـٰلِحِينَ ۝٤٦</strong><br>(<em>Ash-shāliḥīn</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam melebur mutlak ke huruf Ṣhād.<br>
+                    <strong>Huruf Ṣhād Musyaddadah:</strong> Tingkat ketebalan tafkhīm tertinggi (<em>martabah ūlā</em>) karena memiliki sifat <em>isti'lā'</em>, <em>iṭhbāq</em>, <em>ṣhafīr</em>, dan berharakat fathah disusul alif khanjariyyah.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di ujung ayat 46, huruf Ya' mad dibaca dengan pilihan 2, 4, atau 6 harakat.<br>
+                    <strong>Nūn Waqaf:</strong> Ditutup dengan sifat <em>tawassuṭh</em> (suara tertahan sedang) dan ghunnah ashliyyah.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca dengan jamak mudzakkar salim majrur dengan Ya' (<em>ash-shāliḥīn</em>). Penutupan ayat ini selaras secara fonologis dengan ayat-ayat pemungkas di sekitarnya (seperti <em>al-muqarrabīn</em> di ayat 45).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Konteks Debat Teologis Delegasi Kristen Najran (Tafsīr Aṭh-Ṭhabarī, Asbābun Nuzūl karya Al-Wāḥidī, & Sīrah Ibni Isḥāq):</strong><br>
+        Ketika 60 delegasi elit Nasrani dari Najran yang dipimpin oleh Al-'Āqib (Abdul Masih) dan Uskup Abū Ḥāritsah bin 'Alqamah mendatangi Rasulullah ﷺ di Madinah, mereka mendebat hakikat Nabi Isa AS. Mereka berdalih: <em>"Bukankah Isa menghidupkan orang mati, menyembuhkan kusta, dan berbicara sejak masih di buaian? Maka tidak ada sosok yang mampu berbuat demikian melainkan dia adalah Allah atau Putra Allah!"</em><br>
+        Maka Allah menurunkan rentetan ayat dalam Surah Ali 'Imran ini (khususnya ayat 33–63) untuk meluruskan distorsi tersebut. Allah menegaskan bahwa kemampuannya berbicara di buaian (<em>fīl-mahd</em>) adalah <strong>Āyah</strong> (tanda mukjizat bukti kenabian dari Allah), bukan bukti ketuhanan. Sebab, jika ia adalah tuhan, tentu tidak akan disebut bahwa ia berbicara di masa <em>kahl</em> (dewasa yang mengalami penuaan fisik secara fitrah manusiawi) dan tidak akan dikelompokkan ke dalam <em>wa minash-shāliḥīn</em> (golongan hamba-hamba Allah yang saleh dan tunduk beribadah kepada-Nya).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi' Al-Bukhārī (No. 3436) & Ṣhaḥīḥ Muslim (No. 2550) dari Sahabat Abu Hurairah r.a. — Tiga Bayi Berbicara di Buaian:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Lam yatakallam fīl-mahdi illā tsalātsah: 'Īsabnu Maryam..."</em><br>
+        (Tidak ada manusia yang berbicara ketika masih berada di dalam buaian melainkan tiga orang: <strong>pertama</strong>, 'Isa putra Maryam; <strong>kedua</strong>, bayi dalam kisah Juraij sang ahli ibadah yang difitnah menzinai pelacur; dan <strong>ketiga</strong>, seorang bayi yang sedang menyusu pada ibunya, lalu lewat seorang penunggang kuda yang gagah lagi kaya...).<br>
+        <strong>Korelasi Teologis:</strong> Mukjizat Isa berbicara di ayunan adalah fakta historis kenabian yang sahih dan diakui secara mutlak dalam ortodoksi Islam. Kalam tersebut diucapkan Isa untuk membersihkan nama suci ibunya (Maryam) dari tuduhan zina keji kaum Yahudi, sebagaimana diabadikan dalam QS. Maryam: 30: <em>"Qāla innī 'abdullāh, ātāniyal-kitāba wa ja'alanī nabiyyā"</em> (Dia berkata: Sesungguhnya aku adalah hamba Allah, Dia memberiku Al-Kitab dan menjadikan aku seorang nabi).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Jāmi' Al-Bukhārī (No. 2222, 3448) & Ṣhaḥīḥ Muslim (No. 155) dari Abu Hurairah r.a. — Nubuat Turunnya Isa di Masa Kahl:</strong><br>
+        Rasulullah ﷺ bersumpah dengan nama Allah:<br>
+        <em>"Walladzī nafsī biyadihī layūsyikanna an yanzila fīkumubnu Maryama ḥakaman 'adlan, fa-yaksiras-ṣhalīb, wa yaqtulal-khinzīr, wa yadha'al-jizyah, wa yafīdhal-mālu ḥattā lā yaqbalahū aḥad!"</em><br>
+        (Demi Zat yang jiwaku berada di tangan-Nya, sungguh hampir tiba saatnya Ibnu Maryam akan turun di tengah-tengah kalian sebagai hakim yang adil; maka dia akan mematahkan salib, membunuh babi, menghapus jizyah, dan harta melimpah ruah hingga tak ada seorang pun yang mau menerimanya).<br>
+        <strong>Derajat Hadits:</strong> Mutawatir Ma'nawi. Hadits ini menjadi landasan tafsir para salaf (seperti Al-Hasan Al-Bashri dan Zaid bin Aslam) bahwa lafaz <em>wa kahlan</em> mencakup masa setelah beliau turun kembali ke bumi di akhir zaman.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. K-L-M (ك-ل-م — Yukallimu):</strong><br>
+            Menurut Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em>, akar kata ini memiliki poros makna semantik dasar: <em>at-ta'tsīr al-bāriz</em> (memberikan bekas yang nyata dan membekas). Dari akar ini lahir kata <em>al-kalm</em> yang bermakna luka fisik yang meninggalkan bekas, dan <em>al-kalām</em> (perkataan terstruktur) karena tuturan yang dipahami memberikan jejak pengaruh psikologis dan pemikiran yang mendalam pada akal pendengar. Bentuk fi'il <em>yukallimu</em> mengikuti wazan <em>fa''ala – yufa''ilu</em> (bab <em>taf'īl</em>) yang berfaedah <em>at-taktsīr</em> dan <em>al-mubālaghah</em>: bukan sekadar mengeluarkan bunyi gumaman bayi, melainkan tuturan artikulatif, runtut, berwibawa, dan dialogis dua arah kepada khalayak manusia (<em>an-nās</em>).
+        </li>
+        <li>
+            <strong>2. M-H-D (م-ه-د — Al-Mahd):</strong><br>
+            Ibnu Faris mencatat akar <em>mim-ha-dal</em> berporos pada makna <em>al-basṭh wat-tasyhīl wat-tashwiyah</em> (menghamparkan, meratakan, dan memudahkan sesuatu agar nyaman ditempati). Dari sini diturunkan kata <em>al-mihād</em> (hamparan bumi yang nyaman) dan <em>al-mahd</em> yang berarti ranjang bayi, ayunan, atau kain selimut tempat pembaringan anak yang baru lahir. Makna semantik ini menyoroti fase kelemahan absolut biologis manusia: bayi dalam buaian belum memiliki kekuatan motorik, giginya belum tumbuh, pita suaranya belum berkembang untuk berkata-kata, dan akalnya belum mengartikulasikan konsep rasional. Menghadirkan kata <em>fīl-mahd</em> mempertegas jurang mukjizat yang merobek kebiasaan kodrat materiil.
+        </li>
+        <li>
+            <strong>3. K-H-L (ك-ه-ل — Kahlan):</strong><br>
+            Dalam <em>Lisān al-'Arab</em> karya Ibnu Manzhūr dan <em>Tāj al-'Arūs</em>, lafaz <em>al-kahl</em> didefinisikan sebagai fase hidup manusia ketika telah melampaui masa muda (<em>asy-syabāb</em>) dan memasuki kematangan fisik, kekuatan akal budi, dan stabilitas emosi yang sempurna (<em>al-isytidād wal-quwwah</em>). Bangsa Arab klasik membagi etape usia laki-laki: <em>radhī'</em> (menyusu), <em>thifl</em> (kanak-kanak), <em>ghulām</em> (remaja), <em>syābb</em> (pemuda hingga usia 30-33 tahun), lalu <strong>kahl</strong> (usia antara 30/33 hingga 50 tahun, saat rambut mulai dihiasi uban halus dan kematangan intelektual mencapai puncaknya), kemudian <em>syaikh</em> (lansia di atas 50 tahun). Penyebutan <em>kahlan</em> di sini adalah mukjizat bahasa yang merangkum masa kedewasaan kenabian dan kematangan risalah.
+        </li>
+        <li>
+            <strong>4. Sh-L-Ḥ (ص-ل-ح — Ash-Shāliḥīn):</strong><br>
+            Akar kata <em>ṣhād-lām-ḥā</em> bermakna <em>dhidd al-fasād</em> (lawan mutlak dari segala bentuk kerusakan, disintegrasi, dan ketidaksesuaian). <em>Ash-Ṣhalāḥ</em> adalah kelayakan hakiki, keselarasan fitrah, dan kepatutan eksistensial. <em>Ash-Shāliḥūn</em> adalah mereka yang seluruh potensi spiritual, pikiran, ucapan, dan amalnya berada dalam kepatuhan total kepada syariat Allah, selaras dengan kehendak Ilahi, serta steril dari noda syirik dan pembangkangan nafsu.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Lengkap</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَيُكَلِّمُ</strong></td>
+                <td>Wawu: Ḥarf 'athaf.<br>Fi'il mudhāri' ma'lūm, wazan <em>fa''ala – yufa''ilu</em> (<em>Kallama – Yukallimu</em>). Fa'il: Dhamīr mustatir jawāzan taqdīruhū <em>Huwa</em> (kembali kepada Al-Masīḥ 'Īsā AS).</td>
+                <td>Fi'il mudhāri' marfū' bil-dhammah azh-zhāhirah. Jumlah fi'liyyah <em>yukallimu</em> diathafkan kepada jumlah <em>yubasysyiruki</em> pada ayat 45, atau berkedudukan fī maḥalli nashbin sebagai <strong>Ḥāl Muqaddarah</strong> (keadaan yang telah ditakdirkan) dari lafaz <em>bi-kalimatin</em> atau <em>ismuhū al-Masīḥ</em>, atau sebagai jumlah isti'nāf bayānī marfū'.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلنَّاسَ</strong></td>
+                <td>Isim jins jam'ī, mufradnya <em>insān</em>.</td>
+                <td><strong>Maf'ūl bih</strong> (objek penderita) manṣhūb bil-fat-ḥah azh-zhāhirah. Menunjukkan universalitas audiens dakwah dan persaksian kalamnya yang didengar secara nyata oleh khalayak masyarakat.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلْمَهْدِ</strong></td>
+                <td><em>Fī</em>: Ḥarf jār mabnī 'alas-sukūn.<br><em>Al-Mahd</em>: Isim majrūr bil-kasrah azh-zhāhirah.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> dengan fi'il <em>yukallimu</em> sebagai keterangan tempat dan kondisi (<em>zharaf makān / ḥāl</em>), dengan taqdīr: <em>ka'inan fīl-mahdi</em> (berbicara dalam keadaan masih berada di ayunan bayi).</td>
+            </tr>
+            <tr>
+                <td><strong>وَكَهْلًا</strong></td>
+                <td>Wawu: Ḥarf 'athaf.<br><em>Kahlan</em>: Shifat musyabbahah bi-ismi fā'il wazan <em>fa'l</em>.</td>
+                <td>Ma'ṭhūf atas maḥall jār wa majrūr sebelumnya (<em>fīl-mahdi</em>), karena frasa <em>fīl-mahdi</em> berkedudukan fī maḥalli nashbin ḥāl (dengan taqdīr: <em>yukallimun-nāsa radhī'an fīl-mahdi wa kahlan</em>). Maka <em>kahlan</em> berkedudukan <strong>Ḥāl Thāniyah</strong> yang manṣhūb bil-fat-ḥah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمِنَ ٱلصَّـٰلِحِينَ ۝٤٦</strong></td>
+                <td>Wawu: Ḥarf 'athaf.<br><em>Mina</em>: Ḥarf jār.<br><em>Ash-Shāliḥīn</em>: Isim fā'il jamak mudzakkar sālim majrūr bil-Yā'.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> bi-maḥdzūf ḥāl (ma'ṭhūf atas <em>kahlan</em> dan atas <em>wajīhan</em> di ayat 45), dengan taqdīr: <em>wa ka'inan minash-shāliḥīn</em>; atau fī maḥalli raf'in khabar bagi mubtada' maḥdzūf (<em>wa huwa minash-shāliḥīn</em>). Penutupan fāshilah ayat yang menyempurnakan derajat ubudiyyah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Retoris)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'āni — Uslūb al-'Aṭhaf bayna al-Khāriq wal-I'tiyādī (Penyandingan Harmonis antara Supranatural & Kemanusiaan Biasa):</strong><br>
+            Secara balaghah, mengathafkan <em>kahlan</em> (berbicara di waktu dewasa) kepada <em>fīl-mahd</em> (berbicara di buaian) memicu pertanyaan retoris: berbicara di usia dewasa bukanlah hal aneh bagi manusia, lalu mengapa dijadikan materi kabar gembira kenabian (<em>tabsyīr</em>)? Rahasia balaghahnya terletak pada <strong>Keseimbangan Bobot Hikmah (I'tilāf al-Ma'nā)</strong>: Al-Qur'an menegaskan bahwa kalam Isa Al-Masih ketika masih bayi berbobot mukjizat kenabian yang steril dari ketidaksadaran kanak-kanak, dan kalamnya ketika mencapai usia dewasa tetap terpelihara dalam kemurnian wahyu tanpa tergelincir pada tipu daya, ambisi politik, atau penyimpangan hawa nafsu kedewasaan. Di samping itu, penyandingan ini berfungsi sebagai <em>I'jāz Ikhbār bil-Ghaib</em> (pemberitaan masa depan yang pasti) bahwa ia akan selamat melintasi konspirasi musuh-musuhnya hingga menapaki usia dewasa.
+        </li>
+        <li>
+            <strong>Ilmu Bayān — Majāz Mursal bi-'Alāqah al-Maḥalliyyah (Penyebutan Tempat untuk Merujuk Kondisi Waktu):</strong><br>
+            Penyebutan <em>fīl-mahd</em> (di dalam ayunan) merupakan majaz mursal dengan relasi tempat (<em>al-maḥalliyyah</em>). Yang dimaksud secara hakiki bukanlah ranjang kayunya, melainkan fase masa menyusu yang sangat dini (<em>waqtu ath-thufulah ar-radhi'ah</em>). Ungkapan ini melukiskan visualisasi kinetik yang sangat hidup di benak pendengar: seorang orok tak berdaya yang berbaring di pembaringan tiba-tiba melafalkan argumentasi teologis dan hukum syariat yang memukau para cendekiawan Yahudi.
+        </li>
+        <li>
+            <strong>Ilmu Badī' — Aṭh-Ṭhibāq al-Khafī (Kontras Terselubung antara Dua Titik Ekstrem Kehidupan):</strong><br>
+            Terdapat seni <em>thibāq</em> (antitesis makna) yang sangat elok antara kelemahan absolut masa bayi (<em>al-mahd</em>) yang secara biologis bisu belum mampu merangkai kata, dengan kekuatan puncak fisik dan intelektual masa dewasa (<em>al-kahl</em>). Kedua fase ekstrem kehidupan manusia ini dirangkul dalam satu sifat kesalehan universal melalui penutup <em>wa minash-shāliḥīn</em>, menghasilkan harmoni fonetik dan semantik yang mempesona kalbu.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Intim dengan Ayat 45):</strong><br>
+            Pada ayat 45, para malaikat menyampaikan pengumuman agung (<em>annuntiasi</em>) bahwa Maryam akan dianugerahi seorang anak melalui kalimat Allah yang bergelar <em>Al-Masīḥ 'Īsā ibnu Maryam</em>, berkedudukan terkemuka di dunia dan akhirat (<em>wajīhan fid-dunyā wal-ākhirah</em>), serta termasuk orang-orang yang didekatkan kepada Allah (<em>wa minal-muqarrabīn</em>). Ayat 46 hadir seketika sebagai elaborasi empiris (<em>tafshīl ba'dal-ijmāl</em>) mengenai bagaimana kemuliaan tersebut terwujud dalam ruang sejarah: kemuliaannya di dunia diawali dengan kalam mukjizat pembelaan martabat ibunya sejak di ayunan, berlanjut pada kedewasaan dakwah risalah tauhid, dan dimahkotai dengan predikat <em>ash-shāliḥīn</em>.
+        </li>
+        <li>
+            <strong>Siyāq (Arsitektur Dialogis Perdebatan Najran & Dekonstruksi Teologi Salib):</strong><br>
+            Ayat ini berada di episentrum konfrontasi intelektual antara peradaban Islam yang baru tegak di Madinah dengan teologi Kristen Timur yang dianut delegasi Najran. Kaum Kristen Najran menjadikan mukjizat-mukjizat Isa AS sebagai premis palsu untuk menyimpulkan bahwa Isa adalah Tuhan yang menjelma (inkarnasi ilahi). Al-Qur'an meruntuhkan silogisme tersebut secara elegan: berbicara di buaian adalah anugerah mandat ilahi (<em>āyah</em>), bukan tabiat esensial zatnya; buktinya, ia mengalami proses alamiah menjadi dewasa (<em>kahlan</em>), dan hakikat kemanusiaannya tetap terikat dalam kategori <em>ash-shāliḥīn</em> (kaum yang beribadah kepada Allah). Selain itu, penyebutan <em>kahlan</em> menjadi pukulan telak bagi narasi penyaliban: jika mereka mengklaim Isa telah wafat disalib pada usia pemuda (sekitar 30-33 tahun) sebelum menyempurnakan masa <em>kahl</em>-nya di tengah manusia, maka nubuat Al-Qur'an memastikan bahwa Isa diselamatkan Allah ke langit dan pasti akan kembali ke bumi untuk menunaikan fase <em>kahlan</em> tersebut secara paripurna sebelum wafat.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Reaksi Keterkejutan Maryam di Ayat 47):</strong><br>
+            Mendengar rentetan kabar gembira yang luar biasa melampaui hukum kausalitas biologis ini, fitrah kemanusiaan Maryam bergetar hebat. Di ayat 47 Maryam merespons dengan penuh kepasrahan dan ketakjuban: <em>"Rabbi annā yakūnu lī waladun wa lam yamsasnī basyar..."</em> (Wahai Tuhanku, bagaimana mungkin aku memiliki seorang anak laki-laki padahal tidak pernah ada seorang laki-laki pun yang menyentuhku?). Pertanyaan Maryam ini dijawab tegas oleh Allah: <em>"Kadzālikillāhu yakhluqu mā yasyā'..."</em> (Demikianlah Allah menciptakan apa yang Dia kehendaki melalui titah Kun fa-yakūn).
+        </li>
+        <li>
+            <strong>Rekonstruksi Sosio-Historis (Konstelasi Tahun Delegasi / 'Āmul-Wufūd):</strong><br>
+            Peristiwa kedatangan delegasi Kristen Najran pada tahun 9–10 Hijriah merefleksikan kedewasaan diplomasi negara Madinah pasca-Fathu Makkah dan Perang Tabuk. Delegasi Najran adalah representasi aristokrasi gereja yang memiliki tradisi liturgis dan teologis mapan. Al-Qur'an tidak merendahkan pribadi Isa AS, bahkan memujinya dengan sebutan yang sangat agung (Al-Masih, Kalimatullah, Wajihan, berbicara di buaian). Namun Al-Qur'an secara radikal menolak penyembahan kepada ciptaan. Dengan menegaskan status <em>wa minash-shāliḥīn</em>, Al-Qur'an meletakkan fondasi teologis monoteisme murni (<em>at-tauḥīd al-khāliṣh</em>) sebagai satu-satunya kalimat pemersatu (<em>kalimatin sawā'</em>) antar-umat beragama.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭh-Ṭhabarī (w. 310 H) — Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān:</strong><br>
+        Syaikhul Mufassirin At-Tabari memaparkan dengan sanad sahih perdebatan para ulama salaf mengenai makna <em>wa kahlan</em>. Sebagian ulama berpendapat bahwa yang dimaksud adalah masa usia dewasa Isa ketika Allah menurunkan wahyu kenabian kepadanya di tengah Bani Israil sebelum diangkat ke langit. Namun At-Tabari menegaskan riwayat dari <strong>Al-Ḥasan Al-Bashrī</strong> dan <strong>Zaid bin Aslam</strong> yang menyatakan bahwa Nabi Isa diangkat ke langit ketika berusia sekitar tiga puluh tiga tahun (belum menuntaskan seluruh rentang masa kahl di bumi). Oleh karena itu, firman-Nya <em>wa kahlan</em> merupakan mukjizat janji pemberitaan masa depan bahwa Isa AS akan turun kembali ke bumi di akhir zaman, berkhutbah dan berbicara kepada umat manusia sebagai hakim yang adil di usia <em>kahl</em>, membunuh Dajjal, lalu wafat dan dikuburkan di bumi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Tafsīr al-Qur'ān al-'Azhīm:</strong><br>
+        Ibnu Katsir menjelaskan bahwa berbicara di buaian adalah mukjizat agung yang dianugerahkan Allah kepada Isa untuk menyucikan kehormatan ibundanya. Ketika Maryam membawa bayinya ke hadapan kaumnya, mereka mencelanya: <em>"Wahai Maryam, sungguh kamu telah membawa sesuatu yang sangat mungkar!"</em> Maryam hanya memberi isyarat ke arah bayinya. Mereka heran: <em>"Bagaimana kami akan berbicara dengan anak kecil yang masih dalam ayunan?"</em> Seketika bayi mungil itu bersuara lantang mendeklarasikan kenabiannya. Mengenai lafaz <em>wa kahlan</em>, Ibnu Katsir menggarisbawahi bahwa hikmah penyebutannya adalah penegasan seruan dakwah (<em>ad-da'wah ilallāh</em>): Isa menyeru manusia kepada peribadatan Allah semata di masa bayinya sebagai mukjizat luar biasa, dan ia menyeru manusia di masa dewasanya melalui wahyu kenabian yang kokoh.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Al-Jāmi' li-Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi membedah batasan filologis kata <em>al-kahl</em> menurut para pakar bahasa Arab: seseorang disebut <em>kahl</em> apabila telah genap berusia tiga puluh tiga atau tiga puluh empat tahun hingga mencapai usia lima puluh tahun. Al-Qurthubi menegaskan bahwa jika Isa diangkat ke langit pada usia 33 tahun, maka realisasi penuh predikat <em>kahlan</em> ini menjadi dalil qath'i bagi akidah Ahlussunnah wal Jama'ah mengenai turunnya Isa di akhir zaman. Beliau juga menyoroti aspek i'rab: pengathafan <em>wa kahlan</em> kepada <em>fīl-mahd</em> membuktikan bahwa di kedua masa tersebut Isa berbicara dengan kefasihan dan otoritas kenabian yang setara dalam membimbing manusia menuju tauhid.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) — Mafātīḥ al-Ghayb & Az-Zamakhsyarī (w. 538 H) — Al-Kasysyāf:</strong><br>
+        Ar-Razi membedah secara rasional-teologis: mengapa berbicara di waktu dewasa dimasukkan ke dalam rangkaian anugerah mukjizat? Ar-Razi menjawab dengan tiga argumentasi brilian: <em>Pertama</em>, berbicara di waktu buaian menunjukkan kekuasaan mutlak Allah menciptakan kemampuan bicara tanpa perantara kematangan alat ucap anatomis; sedangkan berbicara di masa dewasa menunjukkan kesempurnaan hikmah dan syariat. <em>Kedua</em>, ayat ini merupakan berita ghaib yang membuktikan kebenaran Al-Qur'an: bayi tersebut dijanjikan akan panjang umur hingga masa tua, selamat dari konspirasi para raja zhalim dan pembunuhan para pendeta Yahudi. <em>Ketiga</em>, ucapan yang disampaikan di waktu buaian memiliki substansi kematangan yang sama persis dengan ucapan orang dewasa yang paling bijaksana (<em>wa kāna kalāmuhū fīl-mahdi ka-kalāmihil-kahl</em>). Az-Zamakhsyari menambahkan bahwa frasa <em>wa minash-shāliḥīn</em> adalah penegasan derajat kemuliaan tertinggi; sebab mukjizat indrawi bisa saja berakhir, namun kesalehan abadi di sisi Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur menguraikan bahwa makna <em>yukallimun-nāsa</em> adalah pembicaraan risalah dan petunjuk kebenaran (<em>kalām at-ta'līm wal-irsyād</em>). Berbicara di ayunan ditujukan kepada orang-orang Yahudi yang berkumpul menuduh Maryam guna membungkam kedengkian mereka dan memulihkan nama baik keluarga 'Imran. Sedangkan pembicaraan di masa <em>kahl</em> adalah pengajaran kitab Injil, hikmah, dan hukum Taurat kepada seluruh Bani Israil. Beliau juga mencatat bahwa penegasan <em>wa minash-shāliḥīn</em> di akhir ayat berfungsi membendung potensi kultus individu: agar para pengikutnya tidak terjatuh pada penyembahan manusia, Al-Qur'an menegaskan bahwa martabat kenabian Isa berakar pada kesalehannya sebagai hamba Allah, bukan pada klaim keilahian.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — Tafsir Al-Azhar & Prof. Dr. M. Quraish Shihab — Tafsir Al-Mishbah:</strong><br>
+        Buya Hamka melukiskan suasana dramatis saat Maryam menggendong bayinya pulang ke kampung halamannya: tuduhan fitnah masyarakat begitu menusuk hati seorang gadis suci yang menjaga kehormatan. Namun Allah membela walinya melalui mukjizat lisan sang bayi. Buya Hamka menegaskan: <em>"Nabi Isa bukan anak Tuhan dan bukan tuhan, tetapi seorang anak manusia yang dipilih Allah menjadi nabi yang saleh."</em><br>
+        Quraish Shihab menggarisbawahi keindahan sistematika wahyu: Al-Qur'an menyandingkan <em>al-mahd</em> (lambang kelemahan fisik masa awal) dengan <em>al-kahl</em> (lambang kematangan dan ketenangan emosi). Beliau menyoroti bahwa kata <em>ash-shāliḥīn</em> menegaskan tolok ukur kemuliaan manusiawi di hadapan Allah: kehebatan mukjizat supranatural hanyalah instrumen pembuktian sementara, namun esensi kemuliaan hakiki seorang hamba adalah kesalehan perilakunya yang membawa maslahat bagi sesama manusia dan ketaatan kepada Sang Pencipta.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Fokus Analisis Tafsir</th>
+                <th>Titik Konsensus (Ijma' Mufassirin)</th>
+                <th>Ruang Perbedaan Nuansa (Ikhtilaf / Ragam Pendapat)</th>
+                <th>Konklusi Tarjih & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Kalam dalam Buaian (<em>Fīl-Mahd</em>)</strong></td>
+                <td>Seluruh ulama sepakat bahwa Isa AS berbicara secara nyata saat masih bayi merah di ayunan sebagai mukjizat <em>khāriqul-'ādah</em> untuk membebaskan Sayyidah Maryam dari tuduhan zina.</td>
+                <td>
+                    • Sebagian mufassir menyatakan ia hanya berbicara sekali saja di waktu bayi (saat membela ibunya), lalu diam seperti bayi biasa hingga mencapai usia wajar bicara.<br>
+                    • Sebagian lain (termasuk Al-Biqa'i) memandang ia senantiasa berbicara dengan hikmah kenabian sepanjang masa pertumbuhannya.
+                </td>
+                <td>Pendapat masyhur tarjih: Kalam bayi terjadi saat pembelaan di hadapan kaumnya (sebagaimana dirinci dalam QS. 19:30-33). Ini adalah pembuktian yuridis ilahiah seketika yang membatalkan tuntutan rajam terhadap Maryam.</td>
+            </tr>
+            <tr>
+                <td><strong>Signifikansi Penyebutan Usia Dewasa (<em>Kahlan</em>)</strong></td>
+                <td>Seluruh mufassir sepakat bahwa <em>kahlan</em> bermakna usia kematangan dewasa (sekitar 30–50 tahun) dan menjadi bagian integral dari nubuat malaikat kepada Maryam.</td>
+                <td>
+                    • <strong>Kelompok 1 (At-Tabari, Al-Hasan Al-Bashri, Ibnu Katsir):</strong> Merujuk pada masa turunnya kembali Nabi Isa di akhir zaman, karena beliau diangkat ke langit pada usia 33 tahun.<br>
+                    • <strong>Kelompok 2 (Az-Zamakhsyari, Ar-Razi, Ibnu 'Asyur):</strong> Merujuk pada masa dakwah beliau di bumi menjelang usia 30-an tahun sebelum peristiwa pengangkatan (<em>raf'</em>).
+                </td>
+                <td>Kedua dimensi ini terintegrasi secara indah: mencakup masa dakwahnya yang matang di tengah Bani Israil sekaligus isyarat eskatologis nubuat <em>nuzul 'Īsā</em> di akhir zaman sebagai penyempurnaan usia kemanusiaannya di bumi.</td>
+            </tr>
+            <tr>
+                <td><strong>Tujuan Penggabungan Dua Fase (<em>Al-Mahd & Al-Kahl</em>)</strong></td>
+                <td>Sepakat bahwa penggabungan ini menepis anggapan bahwa mukjizat hanyalah kebetulan semata, melainkan rencana agung ilahi yang melintasi rentang kehidupan sang nabi.</td>
+                <td>
+                    • Sisi perlindungan: Nubuat bahwa musuh-musuh dari kalangan pendeta tidak akan mampu membunuhnya saat bayi.<br>
+                    • Sisi kontinuitas risalah: Kebenaran ajarannya tidak berubah dari fase buaian hingga fase dewasa.
+                </td>
+                <td>Menjadi hujah telak membongkar dogma Trinitas delegasi Najran: sosok yang berkembang dari buaian menuju kedewasaan adalah makhluk (manusia biologis) yang tunduk pada ruang dan waktu, bukan Tuhan pencipta waktu.</td>
+            </tr>
+            <tr>
+                <td><strong>Predikat Akhir (<em>Wa Minash-Shāliḥīn</em>)</strong></td>
+                <td>Konsensus bahwa predikat ini menetapkan status ubudiyyah (kehambaan) Nabi Isa AS dan menempatkannya sejajar dalam barisan para nabi dan rasul terdahulu.</td>
+                <td>
+                    • Sebagian menekankan aspek hukum: kesalehan sebagai syarat legalitas kesaksian risalah.<br>
+                    • Sebagian menekankan tazkiyatun nafs: puncak martabat jiwa yang selamat dari segala syahwat dan riya'.
+                </td>
+                <td>Menegaskan prinsip monoteisme Al-Qur'an: puncak capaian makhluk tertinggi bukanlah menjadi tuhan, melainkan menjadi hamba Allah yang saleh secara paripurna.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Paradoks Otoritas Otentik (The Paradox of Authentic Authority)</h3>
+    <p>
+        Secara sosiologis dan neuropsikologis, persepsi manusia mengenai otoritas kebenaran sangat rentan dikelabui oleh bias eksternal: usia kronologis, senioritas kultural, gelar formal, dan kekuasaan hierarkis. Masyarakat Bani Israil pada masa kelahiran Nabi Isa dikuasai oleh hegemoni dewan rabi dan imam Sanhedrin yang merasa memonopoli kebenaran hukum semata-mata karena usia tua dan kedudukan keagamaan mereka.
+    </p>
+    <p>
+        Ayat ini menghadirkan perombakan mental model yang radikal: <strong>Kebenaran ilahi tidak terkekang oleh batas usia biologis.</strong> Melalui mukjizat <em>fīl-mahd</em>, Allah mendemonstrasikan bahwa suara kebenaran paling murni dapat memancar dari seorang bayi tak berdaya untuk meruntuhkan kesombongan institusional yang telah berkarat. Namun pada saat yang sama, Al-Qur'an tidak terjebak pada pemujaan instan terhadap sensasi usia muda; Allah menyambungkannya dengan <em>wa kahlan</em>. Ini membangun kognisi seimbang: kebenaran awal yang memukau harus diuji dan dimatangkan melalui ketekunan melintasi waktu hingga mencapai kedewasaan sejati.
+    </p>
+
+    <h3>2. Tabel Transformasi Kognisi: Pola Pikir Konvensional vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Evaluasi</th>
+                <th>Pola Pikir Konvensional / Feodalistik</th>
+                <th>Pola Pikir Transformatif Qur'ani (QS. 3:46)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Legitimasi Kebenaran & Usia</strong></td>
+                <td><em>Gerontokrasi Kultural:</em> Kebenaran dimonopoli oleh senioritas biologis; generasi muda atau pihak lemah dianggap pasti bodoh dan tidak layak didengar ("Anak kemarin sore tahu apa?").</td>
+                <td><em>Otoritas Substantif:</em> Kebenaran dinilai dari bobot wahyu dan integritas bukti, bukan usia penuturnya. Bayi di buaian membungkam para tetua yang menyimpang.</td>
+            </tr>
+            <tr>
+                <td><strong>Orientasi terhadap Mukjizat / Sensasi</strong></td>
+                <td><em>Sensasionalisme Mistis:</em> Memuja keajaiban fisik supranatural sebagai tujuan akhir, lalu mengkultuskan sosok pelakunya menjadi tuhan atau figur tanpa cela.</td>
+                <td><em>Orientasi Ketauhidan & Kehambaan:</em> Mukjizat hanyalah tanda kekuasaan Allah (<em>āyah</em>); tujuan akhirnya adalah ketaatan dan kesalehan moral (<em>wa minash-shāliḥīn</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Kedewasaan (Adulthood)</strong></td>
+                <td><em>Materialistik & Biologis:</em> Menganggap kedewasaan otomatis tercapai seiring bertambahnya usia, akumulasi kekayaan, atau dominasi sosial, tanpa mempedulikan integritas batin.</td>
+                <td><em>Integrasi Etika & Spiritualitas:</em> Usia <em>kahl</em> (dewasa) adalah fase puncak tanggung jawab peradaban, kematangan emosi, stabilitas akal, dan pengabdian tulus kepada umat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Dinamika Jiwa & Tazkiyatun Nafs: Bahaya "Infantile Spirituality"</h3>
+    <p>
+        Dalam perspektif tazkiyatun nafs, manusia sering kali mengalami anomali spiritual: memiliki tubuh yang menua hingga usia <em>kahl</em>, namun kondisi kejiwaan dan spiritualitasnya tetap berada dalam fase infantil (kekanak-kanakan). Jiwa yang infantil bercirikan: impulsif, haus pujian, mudah panik saat menghadapi cobaan, pendendam, dan bergantung mutlak pada figur makhluk.
+    </p>
+    <p>
+        QS. 3:46 memaparkan potret ideal pertumbuhan eksistensial manusia: dari kepolosan dan kemurnian fitrah masa bayi (<em>al-mahd</em>) bertumbuh menuju keteguhan prinsip, ketenangan hikmah, dan kematangan emosional masa dewasa (<em>al-kahl</em>), yang seluruhnya dipayungi oleh integritas kesalehan paripurna (<em>ash-shāliḥīn</em>). Kesalehan sejati bukanlah kepasifan mengurung diri, melainkan interaksi aktif membenahi tatanan masyarakat melalui tutur kata yang berwibawa (<em>yukallimun-nās</em>).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomena "Peter Pan Syndrome" & Kedewasaan yang Terdistorsi di Era Digital</h3>
+    <p>
+        Peradaban abad ke-21 tengah diguncang oleh krisis kedewasaan yang akut. Para sosiolog dan psikolog kontemporer mencatat maraknya fenomena <em>Peter Pan Syndrome</em> atau <em>adultescence</em>: jutaan individu telah berusia 30 hingga 40 tahun secara kronologis (memasuki usia <em>kahl</em>), namun secara emosional dan moral menolak untuk dewasa. Mereka kecanduan validasi instan media sosial, menghindari komitmen pernikahan dan pengasuhan keluarga, serta lari dari tanggung jawab kepemimpinan sosial demi mengejar kesenangan hedonis yang dangkal.
+    </p>
+    <p>
+        QS. 3:46 hadir sebagai kritik peradaban yang tajam: kemuliaan manusia tercapai ketika ia menapaki usia <em>kahl</em> dengan kedewasaan fungsional—berani berbicara menegakkan kebenaran (<em>yukallimun-nās</em>), memikul amanah peradaban, dan membuktikan kesalehan nyata di ruang publik.
+    </p>
+
+    <h3>2. Retorika Kosong vs Integritas Kesalehan: Fenomena "Influencer Charisma"</h3>
+    <p>
+        Dalam ekosistem komunikasi digital saat ini, kemampuan berbicara (<em>art of public speaking</em>) sering kali dipisahkan dari integritas moral. Publik modern begitu mudah terpesona oleh para pemengaruh (<em>influencer</em>), motivator, dan politisi populis yang fasih berorasi dan memanipulasi emosi massa melalui algoritma viralitas, meskipun kehidupan pribadi mereka sarat dengan skandal moral dan penipuan finansial.
+    </p>
+    <p>
+        Al-Qur'an menetapkan standar kalibrasi yang mutlak: kepandaian berkomunikasi kepada publik (<em>wa yukallimun-nās</em>) tidak memiliki nilai luhur sedikit pun di hadapan Allah jika tidak diikat dengan karakter <strong>wa minash-shāliḥīn</strong>. Ucapan Nabi Isa berbobot mukjizat bukan karena retorika panggung yang memukau, melainkan karena setiap patah katanya memancar dari kalbu yang suci, adil, selaras dengan wahyu, dan diwujudkan dalam pengorbanan nyata membela kaum yang tertindas.
+    </p>
+
+    <h3>3. Institusional "Gaslighting" terhadap Pembela Kebenaran</h3>
+    <p>
+        Kisah Maryam yang pulang menggendong bayinya lalu dihadang oleh caci maki para pemuka masyarakat mencerminkan realitas pahit pembela kebenaran di era modern. Sering kali para peniup peluit (<em>whistleblower</em>), aktivis integritas, dan perempuan pejuang moral yang membongkar korupsi institusional justru menjadi korban <em>victim blaming</em> dan perundungan massal (<em>cyberbullying</em>) oleh buzzer dan penguasa zalim.
+    </p>
+    <p>
+        Kalam pembelaan Nabi Isa sejak di buaian adalah inspirasi peradaban abadi: Allah tidak akan membiarkan kesucian hamba-Nya diinjak-injak selamanya. Kebenaran memiliki mekanisme pembuktian ilahi tersendiri yang pada akhirnya akan membungkam narasi palsu para manipulator kekuasaan.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li>
+                <strong>Audit Integritas Komunikasi Publik (Verbal Integrity Audit):</strong><br>
+                Lakukan disiplin evaluasi harian terhadap seluruh komunikasi lisan dan digital Anda. Sebelum berbicara di forum kerja, mengunggah konten di media sosial, atau merespons perdebatan, uji tuturan Anda dengan tiga filter Qur'ani: <em>Apakah perkataan ini mengandung kebenaran hakiki (bukan hoaks/fitnah)? Apakah memiliki maslahat perbaikan umat (ishlāḥ)? Dan apakah bersumber dari ketulusan hati (steril dari riya' dan kesombongan)?</em> Jadikan lisan Anda instrumen pembela kebenaran sebagaimana kalam Nabi Isa AS.
+            </li>
+            <li>
+                <strong>Penyusunan Rencana Kematangan Paruh Baya (The "Kahl" Life Roadmap):</strong><br>
+                Bagi Anda yang sedang menuju atau telah berada di usia dewasa (30–50 tahun), susunlah peta jalan transformasi hidup yang terukur. Alihkan fokus energi hidup dari sekadar mengejar akumulasi aset materiil dan popularitas semu menuju penguatan kontribusi sosial, pendalaman ilmu syariat, stabilisasi emosi keluarga, dan penyiapan warisan amal jariyah peradaban, agar Anda memasuki fase <em>kahl</em> dengan kehormatan spiritual yang utuh.
+            </li>
+            <li>
+                <strong>Advokasi & Keberpihakan Aktif pada Pihak Lemah yang Terfitnah:</strong><br>
+                Ambil tindakan nyata dalam kehidupan sosial Anda—baik di tempat kerja, organisasi, maupun komunitas—untuk membela rekan kerja, bawahan, atau kaum rentan yang menjadi korban fitnah keji, diskriminasi, dan ketidakadilan sistemik. Jangan diam menjadi penonton pasif ketika kehormatan orang-orang yang jujur dizalimi oleh opini mayoritas yang tersesat.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>
+                Apakah setiap patah kata dan tulisan yang keluar dari lisan serta jemari saya selama ini lebih banyak mendatangkan kedamaian, membela kebenaran, dan mengangkat martabat sesama; ataukah justru menjadi sumber fitnah, ghibah, dan kepalsuan yang membinasakan jiwa?
+            </li>
+            <li>
+                Seiring bertambahnya usia biologis saya menuju masa dewasa (<em>kahl</em>), apakah akal budi, kesabaran, dan ketaatan ibadah saya semakin matang dan bijaksana; ataukah saya hanya bertambah tua secara fisik namun tetap kerdil dan kekanak-kanakan dalam mengendalikan hawa nafsu?
+            </li>
+            <li>
+                Jika seluruh gelar duniawi, kekayaan harta, dan pujian manusia ditanggalkan dari diri saya hari ini, apakah saya telah memiliki kelayakan karakter di hadapan Allah untuk digolongkan ke dalam barisan orang-orang yang saleh (<em>wa minash-shāliḥīn</em>)?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Mu'allima Ibrāhīm, wa Yā Mufahhima Sulaymān, Yā Man anṭhaqa 'Īsabna Maryama fīl-mahdi ṣhabiyyā. Ya Allah Yang Maha Kuasa menuturkan lisan hamba pilihan-Mu sejak di buaian untuk memproklamasikan kebenaran dan menyucikan kehormatan hamba-hamba-Mu yang beriman. Kami memohon kepada-Mu, sucikanlah lisan kami dari perkataan bohong, fitnah, kesombongan, dan kata-kata yang sia-sia. Hiasilah tutur kata kami dengan hikmah kenabian, kejujuran nurani, dan keberanian membela kaum yang teraniaya. Ya Allah, berkahilah setiap jatah usia kami; karuniakanlah kepada kami kematangan akal, stabilitas jiwa, dan kelapangan dada di masa dewasa kami, serta jangan biarkan kami diperbudak oleh hawa nafsu yang merusak. Jadikanlah kami, anak keturunan kami, dan keluarga kami istiqamah berada di jalan ketauhidan yang lurus, dan kumpulkanlah kami kelak di hari kiamat bersama barisan hamba-hamba-Mu yang saleh di dalam surga-Mu yang abadi. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-045 - QS. Ali 'Imran Ayat 45.html">&larr; Kembali ke Ayat 45 (QS. 3:45)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 46</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-047 - QS. Ali 'Imran Ayat 47.html">Lanjut ke Ayat 47 (QS. 3:47) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

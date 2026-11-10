@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-008 - QS. Ali 'Imran Ayat 8 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.2;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-007 - QS. Ali 'Imran Ayat 7.html">&larr; Ayat Sebelumnya (QS. 3:7)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-009 - QS. Ali 'Imran Ayat 9.html">Ayat Berikutnya (QS. 3:9) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 1 (Ayat 1–9): Proklamasi Tauhid & Dialektika Muhkamat-Mutasyabihat</span>
+        <span class="badge">13 Kata | 56 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 8</h1>
+    <div class="transliteration">
+        "Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā wa hab lanā mil ladunka raḥmah, innaka antal-Wahhāb."
+    </div>
+    <div class="thematic-title">
+        Epistemologi Keteguhan Kalbu (Istiqāmatul-Qalb): Doa Ulama Rabbani Menolak Deviasi (Zaygh), Mengharap Rahmat Ladunniyyah, dan Pasrah Total di Bawah Kemahapemberian Al-Wahhāb
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 1: Fondasi Ketauhidan & Hermeneutika Al-Qur'an)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ ٱلْوَهَّابُ ۝٨
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Mereka berdoa): 'Wahai Tuhan Pemelihara kami, janganlah Engkau condongkan hati kami kepada kesesatan (deviasi dari kebenaran) setelah Engkau berikan petunjuk kepada kami, dan karuniakanlah kepada kami rahmat yang bersumber langsung dari sisi-Mu; sesungguhnya Engkau, hanya Engkaulah Yang Maha Pemberi (segala karunia tanpa pamrih dan tanpa batas).'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Epistemologi:</strong> Ayat ke-8 ini merupakan sambungan integral tak terpisahkan (<em>maṣabbul-kalām</em>) dari paparan epistemologis pada Ayat ke-7. Setelah Allah membedakan antara golongan penyimpang (<em>ahluz-zaygh</em>) yang mengejar ayat mutasyabihat demi fitnah dengan para cendekiawan sejati (<em>ar-rāsikhūna fil-'ilm</em>) yang berserah diri seraya mengimani seluruh wahyu, ayat ini menyingkap rahasia batin terdalam dari para ulama rabbani tersebut. Mereka tidak bersandar pada kehebatan rasio mereka, tidak pongah dengan ketajaman analisis mereka, dan tidak merasa terjamin aman oleh kedalaman ilmu mereka. Sebaliknya, kesadaran intelektual yang paripurna justru melahirkan getaran rasa takut (<em>khasy-yah</em>) dan kesadaran rapuhnya kalbu manusia jika dilepaskan dari taufik Ilahi. Doa ini adalah manifesto bahwa petunjuk (<em>hidayah</em>) bukanlah kepemilikan mutlak manusia, melainkan anugerah berkelanjutan yang sewaktu-waktu dapat tergelincir bila kalbu tidak dibentengi oleh rahmat <em>Al-Wahhāb</em>.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Potongan Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Kaidah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>رَبَّنَا</strong><br>(<em>Rabbanā</em>)</td>
+                <td>
+                    <strong>Rā' Mufakhkhamah:</strong> Huruf Ra' berharakat fathah dibaca tebal (tafkhīm).<br>
+                    <strong>Bā' Musyaddadah:</strong> Memiliki sifat Syiddah (suara tertahan kuat) dan Jahr (nafas tertahan).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif setelah Nun fathah dipanjangkan 2 harakat wajar.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca lafaz <em>Rabbanā</em> dengan fathah pada Ra' tebal, tasydid pada Ba', serta mad thabi'i 2 harakat saat washal. Dianggap sebagai nida' munada mudhaf yang huruf nida'-nya dibuang (<em>hadzfu harfin-nidā'</em>) untuk menunjukkan kedekatan munajat.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>لَا تُزِغْ</strong><br>(<em>Lā tuzigh</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Pada huruf Lam Alif dibaca 2 harakat.<br>
+                    <strong>Huruf Zāy:</strong> Makhraj di ujung lidah dengan rongga antara gigi seri atas dan bawah; memiliki sifat Shafir (desis tajam), Rikhwah, dan Jahr.<br>
+                    <strong>Huruf Ghayn Sukun:</strong> Terletak di Adnal-Halq (tenggorokan bagian atas); memiliki sifat Isti'lā' (tebal), Rikhwah (aliran suara lembut tanpa tersendat), dan Jahr. Wajib dijaga agar tidak ber-qalqalah (pantulan tidak sah).
+                </td>
+                <td>
+                    • <strong>Status I'rab Jazm:</strong> Seluruh imam membaca sukun pada huruf Ghayn karena tuntutan amil jazm <em>lā an-nāhiyah</em>.<br>
+                    • <strong>Pertemuan Ghayn Sukun dengan Qaf (تُزِغْ قُلُوبَنَا):</strong> Merupakan pertemuan dua huruf yang berdekatan makhraj (<em>Mutaqāribain</em>: Adnal-Halq bertemu Aqshal-Lisan). Seluruh sepuluh imam sepakat membaca <strong>Idzhār Ḥalqī / Idzhār Lughawī Mutlaq</strong> tanpa idgham, demi menjaga kejelasan sifat isti'la' dan rikhwah pada huruf Ghayn.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>قُلُوبَنَا</strong><br>(<em>Qulūbanā</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Aqshal-lisān (pangkal lidah) bertemu langit-langit lunak bagian dalam; memiliki sifat Isti'lā', Syiddah, dan Jahr.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu sukun setelah Lam dhammah dan Alif setelah Nun fathah masing-masing dibaca 2 harakat.
+                </td>
+                <td>
+                    Sepakat seluruh sepuluh imam membaca dhammah pada Qaf dan Lam serta fathah pada Ba' (sebagai maf'ul bih), dibaca bersambung dengan idzhar jelas setelah melafalkan ghayn sukun.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>بَعْدَ إِذْ</strong><br>(<em>Ba'da idz</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain Sukun:</strong> Terletak di Wasathul-Halq (tengah tenggorokan); memiliki sifat Tawassuth/Bayniyyah (aliran suara moderat).<br>
+                    <strong>Huruf Dzāl Sukun:</strong> Makhraj di ujung lidah bertemu ujung dua gigi seri atas; memiliki sifat Rikhwah dan Jahr.<br>
+                    <strong>Hamzah Qatha':</strong> Dibaca tahqiq jelas kasrah di awal kata <em>idz</em>.
+                </td>
+                <td>
+                    • <strong>Tahqīq Hamzah:</strong> Seluruh imam membaca tahqiq pada hamzah kasrah kata <em>idz</em>. Kaidah <em>Naql</em> Imam Warsy tidak berlaku di sini karena huruf Dal pada kata <em>ba'da</em> berharakat fathah (bukan sukun).<br>
+                    • <strong>Pertemuan Dzal Sukun dengan Ha' (إِذْ هَدَيْتَنَا):</strong> Merupakan <em>mutajānisain / mutaqāribain</em> yang disepakati oleh seluruh sepuluh imam untuk dibaca <strong>Idzhār Ḥaqīqī</strong> tanpa peleburan.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>هَدَيْتَنَا</strong><br>(<em>Hadaytanā</em>)</td>
+                <td>
+                    <strong>Huruf Hā':</strong> Terletak di Aqshal-Halq (pangkal tenggorokan); bersifat Hams dan Rikhwah.<br>
+                    <strong>Yā' Layyin (Līn):</strong> Ya' sukun didahului huruf berharakat fathah, diucapkan lunak mengalir tanpa tekanan berlebih.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Pada akhir kata (Nun Alif) dipanjangkan 2 harakat.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> pada huruf Dal yang terhubung ke <em>dzawātul-yā'</em> (akar kata <em>al-hudā / hadaitu</em>), melafalkannya condong penuh ke arah bunyi 'e' (kasrah).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqlīl (Imālah Shughrā / Bayna-bayna)</strong> sebagai salah satu jalan riwayatnya.<br>
+                    • <strong>Jumhur (Qālūn, Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Abū Ja'far, Ya'qūb):</strong> Membaca dengan <strong>Fat-ḥah Murni (Tafkhīm/Fath)</strong> tanpa imalah.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَهَبْ لَنَا</strong><br>(<em>Wa hab lanā</em>)</td>
+                <td>
+                    <strong>Huruf Bā' Sukun:</strong> Memiliki sifat <strong>Qalqalah Shughrā</strong> (pantulan ringan di tengah bacaan) karena Bā' sukun asli berada di akhir kata kerja amr.<br>
+                    <strong>Pertemuan Bā' Sukun dengan Lām:</strong> Huruf Syafawiyyah (dua bibir) bertemu huruf Dzalqiyyah (ujung lidah).
+                </td>
+                <td>
+                    • Seluruh sepuluh imam mutawatirah sepakat membaca dengan <strong>Idzhār</strong>, yakni memantulkan bunyi huruf Ba' (qalqalah shughra) secara presisi baru kemudian masuk ke huruf Lam tanpa meleburkan Ba' ke dalam Lam (<em>wahab lanā</em>). Riwayat idgham kabir Abu 'Amr tidak berlaku karena Ba' di sini berharakat sukun asli (jazm/bina').
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>مِن لَّدُنكَ</strong><br>(<em>Mil ladunka</em>)</td>
+                <td>
+                    <strong>Idghām Bilā Ghunnah:</strong> Nun sukun bertemu Lām, nun melebur sepenuhnya ke dalam lam bertasydid tanpa mendengung.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun pada <em>ladun</em> bertemu Kāf, disamarkan di makhraj pangkal lidah disertai ghunnah tarqīq 2 harakat.
+                </td>
+                <td>
+                    • <strong>Peleburan Nun ke Lam:</strong> Jumhur sepuluh imam sepakat membaca idgham kamil tanpa ghunnah (<em>mil-ladunka</em>).<br>
+                    • <strong>Harakat Dāl pada Ladun:</strong> Seluruh sepuluh imam sepakat membaca dhammah pada huruf Dal (<em>ladunka</em>). Variasi kasrah atau isymam riwayat Syu'bah hanya berlaku khusus pada lafaz <em>min ladunhi</em> di Surah Al-Kahf, bukan pada <em>ladunka</em> di Surah Ali 'Imran.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>رَحْمَةً ۚ</strong><br>(<em>Raḥmatan</em>)</td>
+                <td>
+                    <strong>Rā' Mufakhkhamah:</strong> Ra' fathah dibaca tebal.<br>
+                    <strong>Huruf Ḥā' Sukun:</strong> Wasathul-halq, memiliki sifat Hams (aliran nafas jelas) dan Rikhwah.<br>
+                    <strong>Kaidah Waqaf & Washal:</strong> Tanda Waqaf Jim (ۚ - Jā'iz). Jika waqaf, Ta' marbuthah berubah menjadi <strong>Hā' Sukun</strong> bersuara hams (<em>raḥmah</em>). Jika washal, tanwin fathah bertemu Hamzah qatha' pada <em>innaka</em> dibaca <strong>Idzhār Ḥalqī</strong> murni.
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat: saat waqaf mengganti ta' marbuthah menjadi ha' sukun (<em>rahmah</em>), dan saat washal membaca idzhar halqi tanpa jeda saktah dan tanpa ghunnah berlebih.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>إِنَّكَ أَنتَ</strong><br>(<em>Innaka anta</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Nun bertasydid pada <em>innaka</em> ditahan 2 harakat sempurna.<br>
+                    <strong>Tahqīq Dua Hamzah Qatha':</strong> Hamzah kasrah pada <em>innaka</em> dan hamzah fathah pada <em>anta</em> dibaca jelas tanpa tashil karena terpisah dalam dua kata berbeda.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu Tā' pada kata <em>anta</em> dibaca samar disertai dengung tipis (tarqiq) 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tahqiq kedua hamzah qatha' secara sempurna, serta men-tahqiq hukum ikhfa' pada kata <em>anta</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ٱلْوَهَّابُ ۝٨</strong><br>(<em>Al-Wahhāb</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas sebelum huruf Wāw.<br>
+                    <strong>Huruf Hā' Bertasydid:</strong> Aqshal-halq dengan penekanan tasyddid yang bersih.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Alif mad sebelum huruf Ba' yang disukunkan karena waqaf akhir ayat; boleh dibaca 2, 4, atau 6 harakat.<br>
+                    <strong>Qalqalah Kubrā:</strong> Huruf Bā' sukun 'aridh di akhir ayat dipantulkan kuat, tebal, dan bulat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat membaca waqaf dengan mad 'aridh lis-sukun (dengan kebebasan memilih wajah Qashr [2], Tawassuth [4], atau Thul [6 harakat]) yang diakhiri dengan pantulan Qalqalah Kubra yang kokoh pada huruf Ba'.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Jami' At-Tirmidzi (No. 2140 & 3522), Musnad Ahmad (No. 26576), dan Sunan Ibnu Majah (No. 3834) dari Ummul Mukminin Ummu Salamah r.a. dan 'Aisyah r.a. — Doa Paling Sering Dilantunkan Rasulullah ﷺ:</strong><br>
+        Syahr bin Hausyab meriwayatkan: Aku bertanya kepada Ummul Mukminin Ummu Salamah radhiyallahu 'anha: <em>"Wahai Ummul Mukminin, doa apakah yang paling sering dibaca oleh Rasulullah ﷺ apabila beliau sedang berada di sisimu?"</em> Ummu Salamah menjawab: Doa yang paling sering beliau baca adalah:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 21px; display: block; margin: 10px 0; direction: rtl; text-align: right;">
+        "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ"
+        </span>
+        <em>"Wahai Dzat Yang Maha Membolak-balikkan kalbu, teguhkanlah kalbuku di atas agama-Mu!"</em><br>
+        Maka aku bertanya kepada beliau: <em>"Wahai Rasulullah, betapa seringnya engkau memanjatkan doa ini, apakah engkau merasa khawatir?"</em> Rasulullah ﷺ menjawab:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "يَا أُمَّ سَلَمَةَ، إِنَّهُ لَيْسَ آدَمِيٌّ إِلَّا وَقَلْبُهُ بَيْنَ أُصْبُعَيْنِ مِنْ أَصَابِعِ اللَّهِ، فَمَنْ شَاءَ أَقَامَ، وَمَنْ شَاءَ أَزَاغَ"
+        </span>
+        <em>"Wahai Ummu Salamah, sesungguhnya tidak ada seorang anak cucu Adam pun melainkan kalbunya berada di antara dua jemari kekuasaan Allah. Siapa saja yang Allah kehendaki, maka Dia akan meluruskannya; dan siapa saja yang Dia kehendaki, maka Dia akan memalingkannya (menjadikannya condong menyimpang)."</em><br>
+        Kemudian Rasulullah ﷺ membaca firman Allah ta'ala (QS. Ali 'Imran: 8): <em>"Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā wa hab lanā mil ladunka raḥmah, innaka antal-Wahhāb."</em><br>
+        <strong>Derajat Sanad:</strong> Hadits Sahih. Dinyatakan Hasan Sahih oleh Imam At-Tirmidzi, dishahihkan oleh Imam Al-Hakim dalam <em>Al-Mustadrak</em> (No. 1941) dan disepakati oleh Imam Adz-Dzahabi serta Syaikh Al-Albani.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 2654) dari Sahabat Abdullah bin 'Amr bin Al-'Ash r.a. — Metafora Dua Jemari Ar-Rahman:</strong><br>
+        Bahwa ia mendengar Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "إِنَّ قُلُوبَ بَنِي آدَمَ كُلَّهَا بَيْنَ إِصْبَعَيْنِ مِنْ أَصَابِعِ الرَّحْمَنِ، كَقَلْبٍ وَاحِدٍ، يُصَرِّفُهُ حَيْثُ يَشَاءُ، ثُمَّ قَالَ رَسُولُ اللَّهِ ﷺ: اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ"
+        </span>
+        <em>"Sesungguhnya kalbu-kalbu seluruh anak cucu Adam berada di antara dua jemari dari jemari-jemari Ar-Rahman (Yang Maha Pengasih), laksana satu kalbu tunggal; Dia membolak-balikkannya menurut kehendak-Nya. Kemudian Rasulullah ﷺ berdoa: 'Ya Allah, Dzat Yang Maha Memalingkan kalbu, palingkanlah dan bimbinglah kalbu-kalbu kami senantiasa di atas ketaatan kepada-Mu!'"</em><br>
+        <strong>Derajat Sanad:</strong> Sahih menurut syarat Imam Muslim. Hadits ini menjadi landasan teologis Ahlus Sunnah wal Jama'ah bahwa dinamika keimanan manusia berada di bawah takdir dan kehendak mutlak Allah, sehingga seorang mukmin sejati tidak boleh sedetik pun bersandar pada kesucian atau keteguhan pribadinya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Asbabun Nuzul & Atsar Eksegetis Sahabat (Tafsir At-Tabari No. 6580 & Ad-Durrul Mantsur karya As-Suyuthi):</strong><br>
+        Diriwayatkan dari Abu Umamah Al-Bahili radhiyallahu 'anhu serta Mujahid bin Jabr: Ketika Allah menurunkan ayat ke-7 yang memaparkan betapa mengerikannya nasib <em>ahluz-zaygh</em>—orang-orang yang semula cerdas namun kemudian hatinya condong membelok hingga memburu fitnah dan merusak tatanan agama—maka para sahabat Nabi dan golongan <em>Ar-Rāsikhūna fil-'Ilm</em> merasa gemetar jiwanya. Mereka menyadari bahwa keilmuan yang mendalam tidak menjamin kekebalan dari racun fitnah jika Allah mencabut hidayah-Nya. Maka Allah mengabadikan munajat batin mereka dalam ayat ke-8 ini sebagai doa resmi yang diajarkan wahyu: <em>"Rabbanā lā tuzigh qulūbanā..."</em>. Doa ini adalah ekspresi ketakutan para ulama rabbani agar tidak terjerumus ke dalam lubang kesesatan yang sama seperti yang menimpa para pendeta Najran dan rabil Yahudi.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. R-B-B (ر-ب-ب — Rabb):</strong> 
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros tunggal akar kata ini pada makna: <strong>Kafālatu asy-syay'i wa tanmiyatuhū wa tarbiyatuhū ḥattā yablugha kamālah (pemeliharaan, pengasuhan berkesinambungan, dan penumbuhkembangan sesuatu setahap demi setahap hingga mencapai batas kesempurnaan hakikinya)</strong>. Kata <em>Rabb</em> memadukan tiga hakikat: Pencipta (<em>Al-Khāliq</em>), Pemilik Mutlak (<em>Al-Mālik</em>), dan Pengatur yang memelihara kehidupan fisik serta spiritual hamba-Nya (<em>Al-Murabbī wal-Mudabbir</em>). Memulai doa dengan <em>Rabbanā</em> adalah permohonan agar Allah melanjutkan proses pembinaan rohani hamba-Nya dan tidak menelantarkannya di tengah jalan.
+        </li>
+        <li><strong>2. Z-Y-Gh (ز-ي-غ — Tuzigh / Zaygh):</strong>
+            Dalam <em>Lisān al-'Arab</em> karya Ibnu Manzhur, <em>az-zaygh</em> berakar pada <strong>Al-Maylu 'anil-istiqāmah wal-inḥirāf 'an qashdis-sabīl (kemiringan, deviasi, membelok menjauh dari garis lurus yang seimbang)</strong>. Dikatakan <em>zāghatisy-syamsu</em> manakala matahari bergeser miring dari titik kulminasi tengah langit menuju barat; dan dikatakan <em>zāghat al-abṣhār</em> saat mata silap dan berpaling dari fokus penglihatan normal. Bentuk fi'il <em>tuzigh</em> (wazan <em>af'ala &rarr; yuzīghu</em>) berakar dari <em>azāgha</em> yang bermakna membiarkan condong atau memalingkan. Maka permohonan <em>lā tuzigh qulūbanā</em> adalah pinta agar kalbu tidak dibiarkan tergelincir miring ke dalam labirin keraguan, bid'ah, dan hawa nafsu setelah sebelumnya berada dalam kestabilan hidayah.
+        </li>
+        <li><strong>3. Q-L-B (ق-ل-ب — Qalb / Qulūb):</strong>
+            Ibnu Faris menegaskan bahwa akar huruf Qaf-Lam-Ba berporos pada makna: <strong>Taḥwīlu asy-syay'i 'an wajhihī wa taqallubuhū zhahran li bathn (membalikkan sesuatu dari satu sisi ke sisi lain, perputaran dinamis yang sangat fluktuatif)</strong>. Organ batin manusia dinamakan <em>qalb</em> justru karena sifat dasarnya yang amat tidak stabil, sangat cepat terpengaruh, dan mudah berbolak-balik laksana air mendidih dalam kancah atau bulu unggas yang diterpa angin topan di padang gersang. Menjamakkannya menjadi <em>qulūbanā</em> menandakan permohonan kolektif bagi seluruh denyut kesadaran umat beriman.
+        </li>
+        <li><strong>4. H-D-Y (ه-د-ي — Hadaytana / Al-Hudā):</strong>
+            Ibnu Faris menjelaskan porosnya adalah <strong>Ad-Dalālah wal-irsyād bi luthfin (penunjukan arah, bimbingan, dan penghantaran menuju tujuan dengan penuh kelembutan)</strong>. Dari akar ini lahir kata <em>hadiyyah</em> (pemberian kado yang menghadirkan kelembutan cinta). Dalam Al-Qur'an, hidayah mencakup dua tingkatan: <em>hidayatul-irsyad</em> (penjelasan dalil wahyu) dan <em>hidayatut-taufiq</em> (penyusupan cahaya iman ke relung dada). Kata <em>hadaytanā</em> mengisyaratkan pengakuan tulus hamba bahwa mereka telah menerima anugerah hidayah taufik tersebut, dan kini memohon agar anugerah itu tidak dicabut kembali.
+        </li>
+        <li><strong>5. W-H-B (و-ه-ب — Hab / Al-Wahhāb):</strong>
+            Ibnu Faris menyatakan bahwa poros maknanya adalah <strong>I'ṭhā'u asy-syay'i bilā 'iwadhin wa lā thalabin (pemberian murni suatu anugerah tanpa mengharapkan kompensasi, imbalan, pertukaran jasa, ataupun didahului oleh hak menuntut dari pihak penerima)</strong>. <em>Al-Hibah</em> adalah pemberian cuma-cuma. Bentuk mubalaghah <em>Al-Wahhāb</em> adalah Zat yang mengalirkan pemberian karunia secara berlimpah ruah, berulang kali, tanpa batas, tanpa henti, dan steril dari pamrih apapun.
+        </li>
+        <li><strong>6. L-D-N (ل-د-ن — Ladun / Ladunka):</strong>
+            Secara leksikografis dan sintaksis, <em>ladun</em> adalah zharf makan yang menunjukkan <strong>Abtadā'u ghāyatil-makān wal-makānah ma'al-qurbil-khāṣṣ (titik tolak permulaan ruang atau martabat yang disertai kedekatan eksklusif)</strong>. Kata <em>ladun</em> jauh lebih spesifik, mulia, dan intim daripada sekadar kata <em>'inda</em>. Bila <em>'indi</em> mencakup segala sesuatu di sisi seseorang baik yang hadir langsung maupun berjarak, maka <em>ladun</em> mengindikasikan anugerah yang datang langsung dari khazanah perbendaharaan rahmat Allah yang paling suci, murni, dan tidak terjamah oleh sebab-musabab duniawi lahiriah.
+        </li>
+        <li><strong>7. R-Ḥ-M (ر-ح-م — Raḥmah):</strong>
+            Ibnu Faris merumuskan porosnya pada: <strong>Ar-Riqqatu wal-'athfu war-ra'fah (kelembutan hati, belas kasih, perlindungan, dan keterikatan cinta yang mengayomi)</strong>. Sebagaimana rahim ibu menjadi tempat bertumbuhnya janin dalam lingkungan yang serba aman, penuh nutrisi, dan terlindung dari bahaya luar, demikianlah <em>raḥmah</em> Allah menjadi benteng kosmik yang memelihara jiwa mukmin dari kebinasaan fitnah pemikiran dan hawa nafsu.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>رَبَّنَا</strong></td>
+                <td>Isim jamid mutakallim ma'al-ghair mudhaf ilā dhamīr. <em>Nā</em>: Dhamīr muttashil lil-jamā'ah mabni 'alas-sukūn.</td>
+                <td><strong>Munādā Mudhaf</strong> manshūb bil-fathah adz-dzāhirah (adātun-nidā' mahdzūfah taqdīruhā: <em>Yā Rabbanā</em>). <em>Nā</em>: Fī maḥalli jarrin <strong>Mudhaf Ilayh</strong>. Jumlah nida'iyyah thalabiyyah.</td>
+            </tr>
+            <tr>
+                <td><strong>لَا</strong></td>
+                <td><em>Lā</em> an-Nāhiyyah (bermakna ad-Du'ā' wal-Iltijā'). Harf nahyin wa jazm mabni 'alas-sukun.</td>
+                <td>Harf yang menjazmkan fi'il mudhari', tidak memiliki tempat dalam i'rab (lā maḥalla lahā minal-i'rāb).</td>
+            </tr>
+            <tr>
+                <td><strong>تُزِغْ</strong></td>
+                <td>Fi'il mudhari' tsulatsi mazid bi hamzah (wazan <em>af'ala &rarr; yuzīghu</em>). Asal bentuknya <em>tuzīghu</em>, huruf 'illat Ya' dibuang untuk menghindari pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>).</td>
+                <td><strong>Fi'il Mudhāri' Majzūm</strong> bi <em>lā</em> an-nāhiyyah wa 'alāmatu jazmihi as-sukūn 'alā ākhirih. Fā'il-nya adalah <strong>Dhamīr Mustatir Wujūban</strong> taqdīruhū <em>Anta</em> (kembali kepada Zat Allah Yang Maha Suci dalam maqam permohonan batin).</td>
+            </tr>
+            <tr>
+                <td><strong>قُلُوبَنَا</strong></td>
+                <td><em>Qulūb</em>: Ism jamak taksīr dari <em>qalb</em> (wazan <em>fu'ūl</em>). <em>Nā</em>: Dhamīr muttashil mabni 'alas-sukūn.</td>
+                <td><em>Qulūba</em>: <strong>Maf'ūl Bih</strong> manshūb bil-fathah adz-dzāhirah, wa huwa mudhāf. <em>Nā</em>: Fī maḥalli jarrin <strong>Mudhaf Ilayh</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>بَعْدَ</strong></td>
+                <td>Ism zharf zaman mubham (wazan <em>fa'la</em>).</td>
+                <td><strong>Zharf Zamān</strong> manshūb 'alazh-zharfiyyah bil-fathah, muta'alliq bi fi'il <em>lā tuzigh</em> (penjelas koridor temporal doa), wa huwa mudhāf.</td>
+            </tr>
+            <tr>
+                <td><strong>إِذْ</strong></td>
+                <td>Ism zharf lima madhā minaz-zamān mabni 'alas-sukūn.</td>
+                <td>Fī maḥalli jarrin <strong>Mudhaf Ilayh</strong> bagi zharf <em>ba'da</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>هَدَيْتَنَا</strong></td>
+                <td><em>Hadayta</em>: Fi'il mādhī mabni 'alas-sukūn li-ittishālihī bi tā'il-fā'il. <em>Tā'</em>: Dhamīr mukhatab fi mahalli raf'in Fā'il. <em>Nā</em>: Dhamīr mutakallimin muttashil mabni 'alas-sukun.</td>
+                <td><em>Nā</em>: Fī maḥalli nashbin <strong>Maf'ūl Bih</strong>. Seluruh jumlah fi'liyyah <em>hadaytanā</em> berada <strong>fī maḥalli jarrin bil-idhāfah</strong> kepada zharf <em>idz</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَهَبْ</strong></td>
+                <td><em>Wawu</em>: Harf 'athaf. <em>Hab</em>: Fi'il amr (bermakna ad-du'ā') dari tsulatsi mujarrad <em>wahaba-yahabu</em> (wazan <em>fa'ala-yaf'alu</em>, fa'il fi'il berupa huruf 'illat wawu yang dibuang pada amr).</td>
+                <td><strong>Fi'il Amr Du'ā'ī</strong> mabni 'alas-sukūn, ma'ṭhūf 'alā jumlah <em>lā tuzigh</em>. Fā'il-nya adalah <strong>Dhamīr Mustatir Wujūban</strong> taqdīruhū <em>Anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَنَا</strong></td>
+                <td><em>Lām</em>: Harf jarr lil-ikhtishāsh. <em>Nā</em>: Dhamīr mutakallimin majrur bil-lam mabni 'alas-sukun.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>hab</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِن لَّدُنكَ</strong></td>
+                <td><em>Min</em>: Harf jarr li ibtidā'il-ghāyah. <em>Ladun</em>: Ism zharfi mabni 'alas-sukūn fī maḥalli jarrin bi <em>min</em>. <em>Kāf</em>: Dhamir khithab muttashil mabni 'alal-fath.</td>
+                <td><em>Kāf</em>: Fī maḥalli jarrin mudhaf ilayh. Syibhul jumlah <em>min ladunka</em> muta'alliq bi fi'il <em>hab</em>, atau fī maḥalli nashbin <strong>Ḥāl Muqaddamah</strong> dari <em>raḥmatan</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>رَحْمَةً ۚ</strong></td>
+                <td>Ism nakirah mashdar (wazan <em>fa'lah</em>). Menunjukkan jenis rahmat yang agung dan tak terhingga.</td>
+                <td><strong>Maf'ūl Bih</strong> manshūb bil-fathah adz-dzāhirah bagi fi'il <em>hab</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّكَ</strong></td>
+                <td><em>Inna</em>: Harf taukīd wa nashab mabni 'alal-fath. <em>Kāf</em>: Dhamīr muttashil lil-mukhāṭhab mabni 'alal-fath.</td>
+                <td><em>Kāf</em>: Fī maḥalli nashbin <strong>Ismu Inna</strong>. Seluruh jumlah ismiyyah berstatus sebagai <strong>Jumlah Ta'līliyyah</strong> (alasan permohonan, lā maḥalla lahā minal-i'rāb).</td>
+            </tr>
+            <tr>
+                <td><strong>أَنتَ</strong></td>
+                <td>Dhamīr munfashil lil-mukhathab mabni 'alal-fath.</td>
+                <td>Berstatus sebagai <strong>Dhamīr Faṣhl</strong> (lā maḥalla lahū minal-i'rāb) yang memperkuat taukid dan hashr; atau sebagai <strong>Mubtada' Tsānī</strong> yang khabarnya adalah <em>al-Wahhāb</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْوَهَّابُ ۝٨</strong></td>
+                <td>Isim shīghah mubālaghah (wazan <em>fa''āl</em>) mu'arraf bi alif-lam.</td>
+                <td><strong>Khabar Inna</strong> marfū' bil-dhammah adz-dzāhirah (atau khabar bagi mubtada' <em>anta</em>, dan jumlah ismiyyah <em>anta al-wahhāb</em> menjadi khabar inna).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Uslūb InSyā'ī Ṭhalabī Berdimensi Ad-Du'ā' wal-Iltijā':</strong> Kalimat <em>lā tuzigh</em> (secara lahiriah adalah bentuk nahyi/larangan) dan <em>hab lanā</em> (secara lahiriah adalah bentuk amr/perintah) bertransformasi secara pragmatik menjadi <strong>Uslūb Du'ā'</strong>. Ketika larangan dan perintah datang dari hamba yang dha'if menuju Allah Yang Maha Perkasa, maknanya beralih total menjadi permohonan perlindungan, kerendahan hati, dan ratapan batin (<em>al-istighātsah wal-iftiqār ilallāh</em>).</li>
+        <li><strong>Ilmu Ma'ani — Hadzfu Adātin-Nidā' (Pembuangan Partikel Panggilan "Yā"):</strong> Allah tidak berfirman <em>"Yā Rabbanā"</em>, melainkan langsung <em>"Rabbanā"</em>. Dalam kaidah balaghah ma'ani, pembuangan huruf nida' menunjukkan <strong>Qurbul-Munādī minal-Munādā</strong> (kedekatan yang amat intim tanpa perantara antara hamba yang berdoa dengan Tuhannya). Seolah-olah hamba berbisik langsung di hadapan hadirat Allah tanpa jarak akustik maupun spiritual.</li>
+        <li><strong>Ilmu Ma'ani — Taqdim Syibhil Jumlah "Min Ladunka" (Spesifikasi Sumber Ilahiah):</strong> Susunan kalimat mendahulukan <em>"min ladunka"</em> sebelum maf'ul bih <em>"raḥmatan"</em> (<em>wa hab lanā min ladunka raḥmah</em>, bukan <em>wa hab lanā raḥmatan min ladunka</em>). Pendahuluan ini berfungsi sebagai <strong>Al-Ihtimām wal-Ikhtiṣhāṣ</strong>: menegaskan bahwa rahmat yang diminta bukanlah rahmat duniawi biasa yang bisa diupayakan melalui sebab materiil, melainkan rahmat khusus spiritual yang semata-mata terpancar dari khazanah gaib Ilahi untuk mengunci keteguhan iman.</li>
+        <li><strong>Ilmu Ma'ani — Taukīd Bertumpuk & Pembatasan Mutlak (Uslūb al-Ḥaṣhr) pada Penutup Ayat:</strong> Penutup ayat <em>"Innaka Antal-Wahhāb"</em> dibangun dengan empat lapis penegasan epistemik yang mencengangkan:
+            <ul>
+                <li>Lapis 1: Partikel taukid <strong>Inna</strong> (sungguh pasti).</li>
+                <li>Lapis 2: <strong>Dhamīr Faṣhl 'Anta'</strong> yang memisahkan isim dan khabar sekaligus berfungsi menafikan sekutu (<em>al-ikhtishash</em>: Engkau, semata-mata Engkau, bukan dewa, bukan berhala, dan bukan kekuatan ego kami).</li>
+                <li>Lapis 3: <strong>Alif-Lām al-Jinsiyyah / al-'Ahdiyyah</strong> pada <em>Al-Wahhāb</em> yang mengindikasikan kesempurnaan mutlak sifat memberi tanpa tandingan.</li>
+                <li>Lapis 4: Shighah mubalaghah <strong>Fa''āl</strong> (<em>Al-Wahhāb</em>) yang menunjukkan kelimpahan pemberian yang tak terhitung jumlahnya.</li>
+            </ul>
+        </li>
+        <li><strong>Ilmu Bayan — Majāz Isti'ārah & Kināyah:</strong> Kata <em>Zaygh</em> (kemiringan fisik) dipinjam secara metaforis (<em>isti'ārah tashrīḥiyyah</em>) untuk melukiskan penyimpangan ideologis, kesesatan akidah, dan pembangkangan batin. Sedangkan frasa <em>"min ladunka raḥmah"</em> merupakan <em>kināyah</em> dari anugerah taufik, kekokohan ma'rifatullah, dan perlindungan dari syahwat serta syubhat.</li>
+        <li><strong>Ilmu Badi' — Raddul-'Ajuz 'alash-Shadr Antar-Ayat (Penyelarasan Retoris Lintas Ayat):</strong> Terjadi simetri retoris agung antara Ayat ke-7 dan Ayat ke-8. Di Ayat ke-7, Allah mengecam golongan sesat dengan kata <em>"fī qulūbihim zayghun"</em> (di dalam kalbu mereka ada penyakit penyimpangan). Maka di Ayat ke-8, para ulama sejati menyambutnya dengan doa kontras: <em>"Rabbanā lā tuzigh qulūbanā"</em> (Ya Tuhan kami, jangan Engkau biarkan kalbu kami terkena penyakit zaygh tersebut!). Ini adalah seni merajut koherensi teks tingkat tinggi (<em>husnut-tanafur wal-i'tilaf</em>).</li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik ke Belakang — Ayat 7 Menuju Ayat 8):</strong> 
+            Pada Ayat ke-7, Al-Qur'an membedah anatomi dua golongan manusia saat berhadapan dengan ayat muhkamat dan mutasyabihat:
+            <ol>
+                <li>Kubu <em>Ahluz-Zaygh</em>: memiliki penyakit batin, sengaja memburu teks multitafsir demi memicu fitnah disintegrasi dan memaksakan takwil hawa nafsu.</li>
+                <li>Kubu <em>Ar-Rāsikhūna fil-'Ilm</em>: cendekiawan yang mendalam ilmunya, yang merespons teks dengan kepasrahan agung: <em>"Āmannā bihī kullum min 'indi rabbinā"</em>.</li>
+            </ol>
+            Secara psikologis-sibāq, setelah para ulama <em>Ar-Rasikhun</em> menyaksikan betapa tragisnya akhir hidup orang-orang berpenyakit <em>zaygh</em> yang terseret arus fitnah, timbullah rasa ngeri dan gentar di hati mereka. Mereka tidak menepuk dada membanggakan kedalaman ilmunya. Sebaliknya, perkataan <em>"Āmannā bihī"</em> pada ayat 7 langsung disambung dengan ratapan doa pada ayat 8: <em>"Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā..."</em>. Doa ini adalah bukti empiris bahwa kedalaman ilmu yang hakiki selalu melahirkan ketakutan akan hilangnya taufik, bukan melahirkan arogansi intelektual.
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Dialog Najran & Ujian Ketahanan Madinah):</strong> 
+            Ayat ini diturunkan dalam konteks historis yang sangat krusial di Madinah:
+            <ol>
+                <li><strong>Goncangan Teologis Perdebatan Delegasi Kristen Najran:</strong> Sebanyak 60 tokoh bangsawan dan elit keagamaan Kristen Najran datang mendebat Nabi ﷺ di Masjid Nabawi. Mereka menggunakan retorika filosofis yang sangat lihai untuk membenarkan ketuhanan Isa AS melalui manipulasi teks wahyu. Umat Islam di Madinah—terutama mereka yang baru memeluk Islam—menyaksikan bagaimana orang-orang berpendidikan tinggi dan berjubah agama bisa sedemikian lihai membelokkan kebenaran demi mempertahankan doktrin warisan nenek moyang. Di tengah atmosfer perang pemikiran teologis inilah, kaum mukminin dibekali doa ayat 8 agar kalbu mereka tidak goyah atau terpesona oleh kelihaian logika para pemburu syubhat.</li>
+                <li><strong>Fase Transisi Antara Badar dan Uhud:</strong> Komunitas Muslim Madinah baru saja mengecap kemenangan gemilang di Perang Badar (tahun 2 H), namun bayang-bayang ancaman balas dendam Quraisy dan intrik kaum Yahudi serta kaum munafik di bawah pimpinan Abdullah bin Ubay bin Salul kian meruncing menuju tragedi Perang Uhud (tahun 3 H). Dalam situasi goncangan eksistensial dan ujian fisik yang berat, ancaman pembelokan hati (<em>zaygh</em>) dari komitmen jihad dan tauhid sangat nyata. Doa ini menjadi perisai batin bagi para sahabat Nabi agar tetap istiqamah di bawah panji Islam.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Organik ke Depan — Ayat 8 Menuju Ayat 9):</strong> 
+            Permohonan keteguhan kalbu di dunia pada Ayat ke-8 bukanlah tujuan akhir yang berhenti di alam fana, melainkan orientasi jangka panjang menuju Hari Pertanggungjawaban Abadi pada Ayat ke-9: <em>"Rabbanā innaka jāmi'un-nāsi li yawmin lā rayba fīh, innallāha lā yukhliful-mī'ād"</em> (Ya Tuhan kami, sesungguhnya Engkau mengumpulkan manusia pada suatu hari yang tiada keraguan padanya; sungguh Allah tidak pernah menyalahi janji). Kalbu dijaga dari <em>zaygh</em> di dunia ini semata-mata agar saat dibangkitkan di Mahsyar kelak, manusia menghadap Allah dengan <em>Qalbun Salīm</em> (hati yang selamat dan bersih dari kemusyrikan serta kemunafikan).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Riwayat Salaf & Makna "Lā Tuzigh":</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>, At-Tabari menegaskan bahwa doa ini adalah perkataan bersambung dari golongan <em>Ar-Rāsikhūna fil-'Ilm</em>. Beliau mengupas tuntas pertanyaan teologis mendasar: <em>Bagaimana mungkin seorang mukmin memohon "Jangan Engkau condongkan hati kami kepada kesesatan", padahal Allah Maha Adil dan tidak pernah menzalimi hamba-Nya?</em> At-Tabari menjelaskan maknanya berdasarkan atsar para sahabat: <em>"Maksud dari 'Lā tuzigh qulūbanā' adalah: Wahai Tuhan kami, janganlah Engkau palingkan hati kami dari petunjuk kebenaran yang telah Engkau anugerahkan, janganlah Engkau cabut taufik-Mu dari kami, dan janganlah Engkau telantarkan kami kepada daya upaya diri kami sendiri sehingga kami terseret mengikuti hawa nafsu dan kesesatan orang-orang yang condong menyimpang (ahluz-zaygh)."</em> Keadilan Allah terwujud manakala Dia memberikan taufik kepada siapa yang Dia kehendaki atas dasar hikmah, dan mencabutnya dari orang-orang sombong sebagai keadilan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Korelasi Sunnah Nabawiyyah & Takut Kehilangan Iman:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir mengaitkan ayat ini dengan tradisi ibadah Nabi Muhammad ﷺ yang senantiasa melazimkan doa keteguhan hati dalam shalat malam dan sujud beliau. Ibnu Katsir menggarisbawahi: jika seorang Rasulullah ﷺ—makhluk paling mulia yang maksum dan dijamin surga—masih sedemikian khusyuk dan gentar memohon agar kalbunya tidak dipalingkan oleh Allah, maka betapa jauh lebih butuhnya manusia biasa yang sarat dosa terhadap doa ini! Beliau mengutip riwayat Abu Bakar Ash-Shiddiq r.a. yang membaca ayat ini pada rakaat ketiga shalat Maghrib secara pelan (<em>sirr</em>) setelah membaca Surat Al-Fatihah, untuk menegaskan bahwa para sahabat Nabi menjadikan ayat ini sebagai wirid penjaga iman sepanjang hayat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Dialektika Teologis: Bantahan Ahlus Sunnah terhadap Qadariyyah:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi menjadikan QS. 3:8 sebagai amunisi dalil qath'i untuk meruntuhkan doktrin kaum Mu'tazilah dan Qadariyyah yang meyakini bahwa manusia menciptakan perbuatannya sendiri secara independen dan bahwa Allah "wajib" memberikan petunjuk (<em>wujūbus-shalah wal-ashlah</em>). Al-Qurthubi berargumen tajam: <em>"Seandainya pembelokan hati (al-izāghah) dan pemberian petunjuk (al-hidāyah) mutlak berada di bawah kuasa independen manusia dan bukan di tangan Allah, niscaya doa para ulama rabbani 'Lā tuzigh qulūbanā' ini menjadi tidak ada gunanya (laghwan) dan sia-sia belaka! Doa mereka kepada Allah adalah bukti tekstual yang tak terbantahkan bahwa Allah-lah yang membolak-balikkan hati, mencondongkan siapa yang Dia kehendaki menurut keadilan-Nya, dan meneguhkan siapa yang Dia kasihi menurut kemurahan-Nya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Balaghah & Dimensi "Al-Wahhāb":</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi menyingkap rahasia mengapa ayat ini ditutup dengan nama Allah <strong>Al-Wahhāb</strong>. Beliau menjelaskan: kata <em>Al-Hibah</em> secara rasional hanya sah jika memenuhi tiga syarat: (1) Sang pemberi memberikan manfaat murni tanpa pamrih imbalan materi atau pujian, (2) Penerima sama sekali tidak memiliki modal hak hukum untuk menuntut, dan (3) Pemberian itu menyelamatkan penerima dari marabahaya. Ketiga syarat ini mustahil dipenuhi secara mutlak oleh sesama makhluk, karena manusia memberi pasti ada tendensi sosial atau emosional. Hanya Allah semata Zat yang memberi hidayah dan rahmat murni tanpa membutuhkan balasan dari semesta alam. Adapun Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti keindahan sastra pengulangan zharf: <em>"ba'da idz hadaytanā"</em> memperjelas betapa besarnya nikmat yang telah diterima, sehingga kehilangan nikmat itu setelah merasakannya adalah malapetaka paling mengerikan (<em>asyaddu minal-'adamal-ashlī</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir Ibnu 'Āsyūr (w. 1393 H) — Kontinuitas Istiqamah & Psikologi Sosial Umat:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur menganalisis ayat ini dari kacamata sosiologi peradaban dan kesinambungan hidayah (<em>istimrārul-hudā</em>). Beliau memaparkan bahwa bahaya terbesar yang mengancam komunitas beriman bukanlah ketiadaan ilmu pada fase awal, melainkan kelelahan mental, pembusukan internal, dan pergeseran orientasi (<em>gradual ideological drift</em>) setelah mereka lama mengecap stabilitas dan kemenangan. Hidayah awal yang diterima para pendahulu sering kali mengalami erosi pada generasi penerus jika tidak diiringi permohonan <em>rahmah ladunniyyah</em>. Doa ini adalah mekanisme pemeliharaan kesadaran historis dan spiritual agar peradaban Islam tidak lapuk dari dalam.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka, Prof. Dr. M. Quraish Shihab & Kemenag RI — Kontekstualisasi Jiwa Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> menuturkan dengan nada haru yang menyentuh sanubari: <em>"Berapa banyak orang yang di masa mudanya rajin beribadah, teguh memegang idealisme kebenaran, dan gigih memperjuangkan agama; namun ketika hari tuanya tiba, setelah ia mencicipi manisnya kekuasaan, pangkat, dan limpahan harta, hatinya berbelok (zaygh). Ia menjual agamanya dengan harga murah. Maka ayat ini adalah ratapan harian orang beriman yang sadar bahwa mempertahankan iman jauh lebih berat daripada memulainya."</em><br>
+        Sementara Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menegaskan dimensi <em>"min ladunka"</em>: permohonan rahmat ladunniyyah adalah pengakuan bahwa nalar manusia memiliki keterbatasan dalam menyaring syubhat modernitas. Dibutuhkan perlindungan khusus langsung dari Allah untuk menjaga kejernihan intuisi nurani agar tidak tertipu oleh polesan kebatilan yang berbusana sains atau modernitas.<br>
+        Kementerian Agama RI (<em>Tafsir Al-Qur'an Tematik</em>) menambahkan bahwa ayat ini menjadi fondasi penting bagi pembinaan karakter bangsa: ilmu dan kecerdasan intelektual tanpa benteng moral dan doa kepada Tuhan hanya akan melahirkan koruptor-koruptor berdasi yang lihai memelintir regulasi demi kepentingan pribadi.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Pembicara Doa</strong></td>
+                <td>Sepakat bahwa redaksi doa ini diajarkan langsung oleh Allah melalui wahyu dan menjadi tuntunan ibadah bagi seluruh umat Nabi Muhammad ﷺ.</td>
+                <td>
+                    • <strong>Jumhur Mufasir (At-Tabari, Ibnu Katsir, Ibnu 'Asyur):</strong> Menjadikannya sebagai lanjutan isi ucapan (<em>Maqūlul-Qawl</em>) dari golongan <em>Ar-Rāsikhūna fil-'Ilm</em> pada ayat ke-7.<br>
+                    • <strong>Sebagian Mufasir:</strong> Kalimat ini adalah kalam musta'naf berupa perintah implisit dari Allah kepada Rasulullah ﷺ dan seluruh orang beriman untuk senantiasa memanjatkan munajat ini.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Teologi Pembelokan Kalbu (Al-Izāghah)</strong></td>
+                <td>Sepakat bahwa Allah Maha Suci dari kezaliman dan bahwa penyesatan Allah atas seseorang merupakan konsekuensi keadilan atas penolakan hamba terhadap kebenaran.</td>
+                <td>
+                    • <strong>Ahlus Sunnah:</strong> Allah-lah Pencipta segala perbuatan, pemegang takdir mutlak yang membolak-balikkan hati hamba sesuai kehendak-Nya (pencabutan taufik).<br>
+                    • <strong>Mu'tazilah (Az-Zamakhsyari):</strong> Menakwilkan <em>lā tuzigh</em> dengan arti: "Janganlah Engkau memperlakukan kami seperti Engkau memperlakukan orang-orang sesat," menolak penisbatan langsung penciptaan kesesatan kepada Allah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Rahmat Ladunniyyah (Min Ladunka)</strong></td>
+                <td>Sepakat bahwa rahmat yang dimohon adalah perlindungan spiritual khusus yang menjamin keselamatan dunia dan akhirat.</td>
+                <td>
+                    • Sebagian mufasir memfokuskannya pada karunia keteguhan akidah (<em>tsabātul-īmān</em>) hingga husnul khatimah.<br>
+                    • Sebagian lain memperluas maknanya mencakup pengampunan dosa, kelapangan rezeki yang berkah, taufik beramal saleh, dan ma'rifatullah yang menenteramkan batin.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur mental berikut merupakan ikhtiar tadabbur dan perumusan model berpikir reflektif manusiawi, bukan klaim kebenaran wahyu mutlak dan sepenuhnya steril dari cocoklogi pseudosains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Otonomi Palsu vs Pola Pikir Ketergantungan Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Sekuler Modern (Ilusi Otonomi)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Ar-Rāsikhūn)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Persepsi terhadap Hidayah & Kebenaran</strong></td>
+                <td><em>Entitlement & Static Ownership:</em> Menganggap kebenaran dan keshalihan sebagai prestasi pribadi (<em>self-made virtue</em>) atau hak paten permanen yang telah dibeli oleh amal dan gelar akademis.</td>
+                <td><em>Dynamic Divine Stewardship:</em> Memandang hidayah sebagai amanah cairan rahmat yang rapuh dan dinamis, yang wajib terus dimohonkan pemeliharaannya setiap helaan nafas kepada Sang Pemilik Sejati.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Kedalaman Ilmu</strong></td>
+                <td><em>Epistemic Arrogance:</em> Semakin tinggi ilmu dan gelar, semakin merasa kebal dari kesalahan nalar; memandang rendah orang lain yang dianggap awam atau tersesat.</td>
+                <td><em>Epistemic Vigilance & Humility:</em> Semakin mendalam ilmu, semakin sadar akan labirin kerancuan akal dan semakin gentar akan bahaya bias kognitif; melahirkan ketundukan total di hadapan <em>Al-Wahhāb</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Pusat Sandaran Keberhasilan (Locus of Control)</strong></td>
+                <td><em>Internal Hubris / Fatalistik Pasif:</em> Menyandarkan nasib sepenuhnya pada ketajaman IQ dan kekuatan kehendak diri; atau sebaliknya menyalahkan takdir tanpa ikhtiar doa perlindungan.</td>
+                <td><em>Integrated Reliance (Tawakkal Aktif):</em> Mengoptimalkan riset ilmiah dan ketaatan syariat secara maksimal, namun menyandarkan keteguhan akhir 100% pada taufik dan rahmat Allah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Model Mental 1: "The Dynamic Equilibrium of the Soul" (Kaidah Keseimbangan Dinamis Kalbu):</strong>
+            Kalbu manusia (<em>qalb</em>) secara ontologis bukanlah monumen batu karang statis yang sekali tegak akan kokoh selamanya. Kalbu bekerja laksana sistem kesetimbangan dinamis (<em>dynamic equilibrium</em>) yang setiap detik dipengaruhi oleh vektor-vektor eksternal: paparan informasi digital, godaan materi, gesekan ego sosial, dan bisikan nafsu internal. Tanpa adanya pasokan energi penstabil dari luar (yakni <em>rahmah ladunniyyah</em> dari Allah), sistem kalbu secara alami akan meluncur menuju entropi (kerusakan dan kecondongan menyimpang/<em>zaygh</em>). Oleh karena itu, istiqamah bukanlah titik henti, melainkan proses pengoreksian arah (<em>course correction</em>) yang dilakukan terus-menerus melalui doa dan muhasabah.
+        </li>
+        <li><strong>Model Mental 2: "The Zero-Entitlement Principle" (Prinsip Nol Hak Menuntut Karunia):</strong>
+            Nama Allah <strong>Al-Wahhāb</strong> menuntut pembongkaran total terhadap mentalitas transaksi (<em>quid pro quo</em>) di hadapan Tuhan. Hamba tidak memiliki modal piutang apapun kepada Allah. Petunjuk yang kita rasakan kemarin (<em>ba'da idz hadaytanā</em>) adalah murni hibah cuma-cuma, bukan imbalan wajib atas kehebatan kita. Kesadaran "Nol Hak Menuntut" melahirkan integritas murni: kita beribadah dan menjaga keteguhan bukan untuk memeras jaminan takdir dari Allah, melainkan sebagai ekspresi syukur makhluk yang sepenuhnya fakir di hadapan Maha Dermawan.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Anatomi 'Cognitive Drift' & Bahaya Ujub</h3>
+    <p>
+        Penyimpangan keyakinan dan etika (<em>zaygh</em>) hampir tidak pernah terjadi secara mendadak dalam skala besar. Secara psikologis dan neurokognitif, manusia mengalami apa yang disebut sebagai <strong>Cognitive Drift (Pergeseran Kognitif Halus)</strong>. Bermula dari satu kompromi kecil terhadap prinsip muhkam, pembiaran syubhat kecil di media sosial, atau setitik rasa bangga diri (<em>'ujub</em>) atas capaian dakwah dan intelektual.
+    </p>
+    <p>
+        Ketika benih <em>'ujub</em> masuk ke dalam jiwa, otak secara bawah sadar mengaktifkan bias konfirmasi narsistik: seseorang mulai memaklumi dosa-dosanya sendiri seraya menganggap dirinya telah berada di level spiritual yang tinggi. Pada titik inilah, Allah membiarkan orang tersebut tergelincir mengikuti kecondongan hatinya (<em>fa-lammā zāghū azāghallāhu qulūbahum</em> — QS. As-Saff: 5). Kalbu menjadi keras membatu dan kehilangan kepekaan nurani.
+    </p>
+    <p>
+        Tazkiyatun nafs memandang permohonan <em>"Lā tuzigh qulūbanā"</em> sebagai vaksin preventif harian untuk membunuh kuman <em>'ujub</em> dan memutus rantai pergeseran kognitif sebelum menjadi permanen. Dengan mengakui bahwa hati ini berada di bawah kendali Allah, seorang mukmin mempertahankan fleksibilitas kognitif spiritualnya untuk senantiasa siap ditegur, diajari, dan diarahkan kembali ke jalan yang lurus.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomena "Deconstructing Faith", Eks-Muslim & Erosi Spiritualitas di Era Digital</h3>
+    <p>
+        Di abad ke-21, dunia Islam menyaksikan gelombang fenomena sosiologis yang sangat memilukan: maraknya fenomena <em>faith deconstruction</em> (pembongkaran keyakinan secara sistematis) di kalangan anak-anak muda terdidik Muslim, mahasiswa universitas terkemuka, bahkan putra-putri dari keluarga agamis (<em>ba'da idz hadaytanā</em>).
+    </p>
+    <p>
+        Melalui paparan algoritma media sosial (Reddit, podcast ateisme, video TikTok sekuler) yang menyajikan narasi-narasi sinis terhadap agama tanpa bekal epistemologi yang memadai, banyak individu yang perlahan mengalami <em>zaygh</em>. Mereka yang semula rajin shalat dan hafal Al-Qur'an mulai meragukan keadilan syariat, terjebak dalam perangkap agnostisisme, hingga berakhir pada apostasi diam-diam (<em>silent apostasy</em>). QS. 3:8 adalah diagnosis abadi terhadap realitas ini: runtuhnya iman manusia modern bukan karena Al-Qur'an kekurangan dalil logis, melainkan karena kalbu mereka telah kehilangan kehangatan rahmat Allah akibat terpapar racun kesombongan intelektual dan ketiadaan perlindungan batin.
+    </p>
+
+    <h3>2. Tragedi Degradasi Moral & Pembusukan Integritas Tokoh Publik</h3>
+    <p>
+        Fenomena pembelokan hati pasca-menerima petunjuk (<em>ba'da idz hadaytana</em>) terlihat sangat nyata di panggung sosial-politik kontemporer:
+    </p>
+    <ul>
+        <li><strong>Aktivis & Tokoh Agama yang Terkooptasi:</strong> Berapa banyak figur yang dahulunya dikenal sebagai pejuang keadilan yang vokal, aktivis dakwah yang bersahaja, atau ulama yang zuhud; namun begitu diberi secuil porsi kekuasaan politik, jabatan komisaris, atau gemerlap proyek duniawi, orientasi hidupnya berbelok 180 derajat. Mereka yang dahulunya mengharamkan kezaliman kini menjadi pembela paling gigih bagi penindasan dan korupsi.</li>
+        <li><strong>Skandal Moral Tokoh Spiritual:</strong> Terbongkarnya berbagai kasus pelecehan seksual, manipulasi donasi publik, dan penipuan finansial berkedok lembaga pendidikan agama di berbagai belahan dunia menelanjangi kenyataan pahit: bahwa pemahaman agama yang matang secara kognitif sama sekali tidak menjamin integritas moral jika sang tokoh tidak senantiasa membasahi sujudnya dengan doa perlindungan dari <em>zaygh</em>.</li>
+    </ul>
+
+    <h3>3. Krisis "Spiritual Narcissism" di Tengah Budaya Pop-Dakwah</h3>
+    <p>
+        Di era algoritma visual, aktivitas keagamaan rentan tereduksi menjadi komoditas konten pamer kesalehan (<em>spiritual narcissism</em>). Para pembicara instan berlomba-lomba memamerkan jumlah pengikut, retorika puitis, dan label kesucian. Budaya ini menumbuhkan benih <em>zaygh</em> yang sangat halus: seseorang merasa bahwa dirinya telah menjadi perantara hidayah bagi ribuan orang, sehingga mustahil dirinya sendiri akan tersesat. QS. 3:8 menampar ilusi ini dengan keras: Rasulullah ﷺ dan para ulama <em>Ar-Rasikhun</em> yang ilmunya seluas samudra tidak pernah merasa aman dari pembelokan hati, bagaimana mungkin seorang konten kreator dakwah berani merasa aman dari tipu daya nafsunya sendiri?
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Rutinitas Dzikir Sujud Akhir & Wirid Shalat Maghrib:</strong>
+                <br>• Jadikan doa QS. 3:8 sebagai bacaan wajib pada sujud terakhir dalam shalat fardhu atau shalat witir malam hari, minimal satu kali setiap hari: <em>"Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā wa hab lanā mil ladunka raḥmah, innaka antal-Wahhāb"</em>.
+                <br>• Hidupkan kembali sunnah Sahabat Abu Bakar Ash-Shiddiq r.a.: baca ayat ini secara perlahan (<em>sirr</em>) di dalam hati setelah Surat Al-Fatihah pada rakaat ketiga shalat Maghrib, seraya membayangkan diri kita sedang memohon penguncian iman hingga hembusan nafas terakhir.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Post-Success Humility Check":</strong>
+                Setiap kali Anda meraih keberhasilan besar dalam hidup—seperti memenangkan tender bisnis, memperoleh kenaikan jabatan karier, lulus sidang akademis dengan predikat tertinggi, atau sukses memimpin program keagamaan—terapkan protokol jeda:
+                <br>• Larang diri Anda membuat unggahan status yang bernada membanggakan kehebatan pribadi (<em>self-aggrandizement</em>).
+                <br>• Ambillah air wudhu, lakukan shalat sunnah syukur dua rakaat, dan lafazkan doa: <em>"Hādzā min fadhli Rabbī... Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā"</em>. Sadari bahwa kemenangan hari ini adalah ladang ujian baru yang sangat rawan memicu pembelokan hati.
+            </li>
+            <li><strong>Komitmen Etika Relasional: Mengganti Celaan Moral dengan Doa Perlindungan:</strong>
+                Saat Anda melihat teman kerja, figur publik, atau saudara sesama muslim tergelincir ke dalam perbuatan maksiat, skandal etika, atau kekeliruan pemikiran, terapkan aturan etika bersikap:
+                <br>• Tahan lisan dan jari Anda dari memviralkan aibnya, mencacinya di media sosial, atau merasa lebih suci daripada dirinya.
+                <br>• Seketika ucapkan di dalam hati: <em>"Alḥamdulillāhil-ladzī 'āfānī mimmab-talāka bihī wa fadh-dhalanī 'alā katsīrim mimman khalaqa tafdhīlā"</em>, disusul doa: <em>"Ya Allah, luruskanlah hatinya dan janganlah Engkau condongkan hatiku kepada kesesatan sebagaimana dia tergelincir."</em>
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Apakah di balik kesibukanku belajar agama, menuntut ilmu, atau berdakwah selama ini, diam-diam terselip rasa aman dan angkuh bahwa aku adalah "orang terpilih" yang dijamin selamat, sehingga aku lupa gemetar memohon keteguhan iman kepada Allah?</li>
+            <li>Setelah Allah memberikan banyak petunjuk dan kemudahan dalam hidupku (<em>ba'da idz hadaytanā</em>), di bagian mana dari urusan keuanganku, pergaulanku, dan privasi gawaku yang diam-diam mulai miring (<em>zaygh</em>) mengompromikan hukum Allah demi kenikmatan sesaat?</li>
+            <li>Seandainya malam ini malaikat maut datang menjemputku, apakah kalbu yang kubawa menghadap Allah adalah kalbu yang tulus bergantung pada rahmat <em>Al-Wahhāb</em>, ataukah kalbu yang dipenuhi rasa bangga atas tumpukan amal fana yang sejatinya tiada berharga tanpa taufik-Nya?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Rabbanā, Yā Muqallibal-Qulūb, Yā Muṣharrifal-Qulūb. Wahai Tuhan Yang Menggenggam seluruh denyut nadi dan gejolak kalbu kami di antara dua jemari kekuasaan dan kasih sayang-Mu. Kami bersujud mengakui betapa lemahnya jiwa kami, betapa rentannya pendirian kami, dan betapa fakirnya diri kami dari rahmat-Mu.
+            <br><br>
+            Allāhumma innaka a'thaytanā ni'matal-īmāni wal-islām min ghayri an nas'aluk, falā taḥrimnā ni'matats-tsabāti 'alayhā wa naḥnu nas'aluk. Ya Allah, Engkau telah menganugerahkan nikmat iman, petunjuk Al-Qur'an, dan jalan Islam kepada kami bahkan sebelum kami sanggup memintanya; maka janganlah Engkau haramkan bagi kami nikmat keteguhan di atas jalan ini manakala kami kini bersimpuh meratap memohon kepada-Mu.
+            <br><br>
+            Rabbanā lā tuzigh qulūbanā ba'da idz hadaytanā wa hab lanā mil ladunka raḥmah, innaka antal-Wahhāb. Ya Allah, lindungilah dada kami dari bisikan ujub, kesombongan intelektual, dan racun syubhat yang membelokkan arah langkah kami. Siramilah sanubari kami dengan embun rahmat ladunniyyah dari sisi-Mu, agar mata hati kami senantiasa awas membedakan yang hak dari yang batil, dan agar kaki kami mantap menapaki jalan para Nabi dan shalihin hingga akhir hayat kami.
+            <br><br>
+            Yā Allāh, jadikanlah sebaik-baik umur kami adalah pada penghujungnya, sebaik-baik amal kami adalah pada penutupnya, dan sebaik-baik hari perjumpaan kami dengan-Mu adalah hari di mana Engkau memanggil kami dalam keadaan ridha dan diridhai, berhiaskan kalbun salim, dengan kalimat tauhid Lā ilāha illallāh Muḥammadur Rasūlullāh. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-007 - QS. Ali 'Imran Ayat 7.html">&larr; Kembali ke Ayat 7 (QS. 3:7)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 8</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-009 - QS. Ali 'Imran Ayat 9.html">Lanjut ke Ayat 9 (QS. 3:9) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-013 - QS. Ali 'Imran Ayat 13 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-012 - QS. Ali 'Imran Ayat 12.html">&larr; Ayat Sebelumnya (QS. 3:12)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-014 - QS. Ali 'Imran Ayat 14.html">Ayat Berikutnya (QS. 3:14) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 2 (Ayat 10–20): Ilusi Kekuatan Materialis, Kehancuran Tirani & Hakikat Kesaksian Tauhid</span>
+        <span class="badge">29 Kata | 114 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 13</h1>
+    <div class="transliteration">
+        "Qad kāna lakum āyatun fī fi'ataynil-taqatā, fi'atun tuqātilu fī sabīlillāhi wa ukhrā kāfiratuy yarawnahum mitslayhim ra'yal-'ayn(i), wallāhu yu'ayyidu bi-nashrihī may yasyā'(u), inna fī dzālika la-'ibratal li'ulil-abshār(i)."
+    </div>
+    <div class="thematic-title">
+        Mukjizat Asimetris Perang Badar & Dekonstruksi Nalar Materialisme Militer: Mengapa 313 Kaum Beriman Menundukkan 1.000 Pasukan Elit Quraisy, Rahasia Pembalikan Persepsi Visual, dan Menembus Tabir Fakta Sejarah Menuju Mata Batin Ilahi (Ūlī al-Abshār)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 2: Ilusi Kekuatan Materialis, Kehancuran Tirani & Hakikat Kesaksian Tauhid)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        قَدْ كَانَ لَكُمْ ءَايَةٌ فِى فِئَتَيْنِ ٱلْتَقَتَا ۖ فِئَةٌ تُقَـٰتِلُ فِى سَبِيلِ ٱللَّهِ وَأُخْرَىٰ كَافِرَةٌ يَرَوْنَهُم مِّثْلَيْهِمْ رَأْىَ ٱلْعَيْنِ ۚ وَٱللَّهُ يُؤَيِّدُ بِنَصْرِهِۦ مَن يَشَآءُ ۗ إِنَّ فِى ذَٰلِكَ لَعِبْرَةً لِّأُو۟لِى ٱلْأَبْصَـٰرِ ۝١٣
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Sungguh telah ada bukti nyata (tanda kekuasaan Allah yang tak terbantahkan) bagi kalian pada dua golongan yang saling berhadapan (dalam pertempuran di Badar): satu golongan berperang di jalan Allah (kaum mukminin) dan golongan yang lain kafir (musyrikin Makkah), yang melihat mereka (dengan mata kepala sendiri) dua kali lipat banyaknya dari mereka. Dan Allah menguatkan dengan pertolongan-Nya siapa yang Dia kehendaki. Sesungguhnya pada yang demikian itu benar-benar terdapat pelajaran berharga bagi orang-orang yang memiliki mata batin (penglihatan akal budi yang mendalam)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan verifikasi empiris-historis langsung atas deklarasi kekalahan orang-orang kafir yang ditegaskan pada ayat 12 sebelumnya (<em>satughlabūn</em>). Al-Qur'an tidak berbicara secara abstrak, melainkan menunjuk sebuah peristiwa faktual yang dialami, disaksikan, dan tidak dapat disangkal oleh para penduduk Jazirah Arab: <strong>Perang Badar Al-Kubra (17 Ramadhan 2 H)</strong>. Ayat ini membedah benturan asimetris antara dua kubu: pasukan muslim yang berjumlah 313 personil dengan perbekalan sangat minim berhadapan dengan pasukan musyrikin Quraisy berjumlah 1.000 prajurit elit berperisai dan bersenjata lengkap. Frasa <em>yarawnahum mitslayhim ra'yal-'ayn</em> memotret intervensi Ilahi dalam rekayasa persepsi visual di medan tempur: Allah menggetarkan nyali kaum kafir dengan memperlihatkan jumlah kaum mukminin berlipat ganda, sementara pertolongan malaikat menyempurnakan kemenangan tersebut. Penutup ayat menegaskan bahwa peristiwa Badar bukan sekadar catatan perang masa silam, melainkan <em>'ibrah</em> (jembatan pemahaman universal) bagi <em>ūlī al-abshār</em>—orang-orang yang mampu melampaui pengamatan mata lahiriah menuju ketajaman mata batin tauhid.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>قَدْ كَانَ</strong><br>(<em>Qad kāna</em>)</td>
+                <td>
+                    <strong>Qalqalah Shughrā pada Dāl:</strong> Huruf Dāl berharakat sukun asli di tengah kalimat, keluar dari ujung lidah bertemu pangkal gigi seri atas dengan sifat jahar, syiddah, dan getaran membal ringan.<br>
+                    <strong>Huruf Qāf:</strong> Isti'lā' dan infitāḥ di pangkal lidah.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Dua harakat pada Alif kata <em>kāna</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idzhār pada huruf Dāl sukun kata <em>qad</em> saat bertemu huruf Kāf (tidak diidghamkan). Partikel <em>qad</em> di sini berfungsi sebagai <em>harf taḥqīq</em> pemantap kepastian bahwa tanda kekuasaan tersebut telah nyata dan pernah terjadi dalam realitas sejarah.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>لَكُمْ ءَايَةٌ</strong><br>(<em>Lakum āyatun</em>)</td>
+                <td>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu Hamzah qatha' dibaca jelas tanpa dengung tambahan.<br>
+                    <strong>Mad Badal:</strong> Hamzah mendahului huruf Alif mad dibaca 2 harakat.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwīn dhammah bertemu huruf Fā' dibaca samar disertai dengung tipis (tarqīq).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca Mad Badal pada kata <em>āyatun</em> dengan tiga wajah ketukan: <strong>Qaṣhr (2 harakat)</strong>, <strong>Tawassuṭh (4 harakat)</strong>, dan <strong>Ṭhūl (6 harakat)</strong>.<br>
+                    • <strong>Ibnu Katsīr & Abū Ja'far:</strong> Membaca shilah mīm al-jam' jika washal: <em>lakumū āyatun</em> (dengan mad jaiz munfashil 2 harakat).<br>
+                    • <strong>Jumhur Imam:</strong> Membaca sukun mīm jamā' dengan idzhar syafawi dan qashr mad badal 2 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>فِى فِئَتَيْنِ ٱلْتَقَتَا ۖ</strong><br>(<em>Fī fi'ataynil-taqatā</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Ya' sukun didahului kasrah.<br>
+                    <strong>Hamzah Sākinah / Maftūḥah:</strong> Huruf Hamzah pada <em>fi'atayn</em> keluar dari aqshal halq.<br>
+                    <strong>Yā' Līn:</strong> Pada <em>-tayn</em> dibaca lembut.<br>
+                    <strong>Kasrah 'Āridhah & Hamzah Washal:</strong> Nun pada <em>fi'atayni</em> dikasrahkan untuk menyambung ke Lam sukun <em>iltaqatā</em> (mencegah iltiqā'us-sākinayn). Hamzah washal gugur saat washal.<br>
+                    <strong>Tanda Waqaf Shila (ۖ):</strong> Al-Washlu awlā (menyambung bacaan lebih utama).
+                </td>
+                <td>
+                    • <strong>Abū Ja'far:</strong> Membaca tashīl / ibdāl hamzah maftūḥah setelah kasrah menjadi huruf Yā' maftūḥah murni: <em>fiyatayni</em>.<br>
+                    • <strong>Ḥamzah:</strong> Saat waqaf pada kata <em>fi'atayn</em>, memiliki wajah tashīl bain-baina atau ibdāl.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca taḥqīq hamzah secara tegas: <em>fi'ataynil-taqatā</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>فِئَةٌ تُقَـٰتِلُ</strong><br>(<em>Fi'atun tuqātilu</em>)</td>
+                <td>
+                    <strong>Taḥqīq Hamzah:</strong> Dari pangkal tenggorokan.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwīn dhammah bertemu huruf Tā' dibaca samar dengan ghunnah muraqqaqah.<br>
+                    <strong>Alif Khanjariyyah:</strong> Mad thabi'i 2 harakat setelah huruf Qāf isti'lā'.
+                </td>
+                <td>
+                    • <strong>Abū Ja'far:</strong> Membaca ibdāl hamzah menjadi Yā': <em>fiyatun tuqātilu</em>.<br>
+                    • <strong>Jumhur Sepuluh Imam:</strong> Membaca taḥqīq hamzah. Seluruh imam membaca fi'il mudhari' wazan mufa'alah (<em>tuqātilu</em>) marfu' dengan dhammah.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فِى سَبِيلِ ٱللَّهِ</strong><br>(<em>Fī sabīlillāh</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Dua harakat pada Ya' <em>sabīl</em>.<br>
+                    <strong>Tarqīq Lām Jalālah:</strong> Huruf Lam pada lafaz Allah dibaca tipis (tarqīq/muraqqaqah) karena didahului harakat kasrah pada huruf Lam kata <em>sabīli</em>.
+                </td>
+                <td>
+                    Konsensus mutlak seluruh sepuluh imam mutawatirah membaca tarqīq pada Lam Jalālah secara lembut dan syar'i.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَأُخْرَىٰ كَافِرَةٌ</strong><br>(<em>Wa ukhrā kāfirah</em>)</td>
+                <td>
+                    <strong>Huruf Khā':</strong> Isti'lā' dan rakhāwah di adnal halq disertai hembusan hams.<br>
+                    <strong>Rā' Mufakhkhamah:</strong> Huruf Ra' dibaca tebal.<br>
+                    <strong>Alif Maqshūrah:</strong> Mad thabi'i pada <em>ukhrā</em>.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwīn bertemu Yā' pada kata berikutnya adalah <strong>Idghām Bighunnah</strong>.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca <strong>Taqīl (Imālah Shughrā)</strong> pada Alif maqshūrah kata <em>ukhrā</em> karena termasuk dzawātul-yā' yang memiliki ra'.<br>
+                    • <strong>Abū 'Amr, Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca <strong>Imālah Kubrā</strong> pada Alif kata <em>ukhrā</em> (suara condong mendekati vokal 'e').<br>
+                    • <strong>Jumhur Imam (termasuk Ḥafsh):</strong> Membaca fat-ḥah murni tanpa imālah.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>يَرَوْنَهُم</strong><br>(<em>Yarawnahum / Tarawnahum</em>)</td>
+                <td>
+                    <strong>Wāwu Līn:</strong> Wawu sukun didahului fathah diucapkan lentur tanpa sentakan.<br>
+                    <strong>Idzhār Syafawī / Idghām Mīmī:</strong> Mim sukun bertemu Mim pada kata <em>mitslayhim</em> menjadi <strong>Idghām Mīmī (Idghām Mutamātsilayn Shaghīr)</strong> disertai dengung 2 harakat.
+                </td>
+                <td>
+                    <strong>VARIASI QIRA'AT UTAMA:</strong><br>
+                    • <strong>Nāfi' (Qālūn & Warsy) dan Ya'qūb al-Ḥadhramī:</strong> Membaca dengan huruf <strong>Tā' Khithāb</strong>: <strong>تَرَوْنَهُمْ</strong> (<em>Tarawnahum</em> - "Kalian melihat mereka").<br>
+                    • <strong>Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Ḥamzah, Al-Kisā'ī, Abū Ja'far, dan Khalaf:</strong> Membaca dengan huruf <strong>Yā' Ghaib</strong>: <strong>يَرَوْنَهُم</strong> (<em>Yarawnahum</em> - "Mereka melihat mereka").<br>
+                    <em>Kedua bacaan ini saling melengkapi realitas mukjizat persepsi psikologis di Perang Badar.</em>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مِّثْلَيْهِمْ رَأْىَ ٱلْعَيْنِ ۚ</strong><br>(<em>Mitslayhim ra'yal-'ayn</em>)</td>
+                <td>
+                    <strong>Huruf Tsā':</strong> Keluar dari ujung lidah bertemu ujung gigi seri atas (hams dan rakhāwah).<br>
+                    <strong>Yā' Līn:</strong> Pada <em>mitslay-</em> dan <em>al-'ayn</em>.<br>
+                    <strong>Huruf Rā' Tafkhīm:</strong> Ra' maftuhah dibaca tebal.<br>
+                    <strong>Taḥqīq Hamzah Sākinah:</strong> Hamzah sukun pada <em>ra'ya</em> disuarakan tajam tanpa pantulan qalqalah.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif pada <em>al-'ayn</em> dibaca jelas.<br>
+                    <strong>Tanda Waqaf Jā'iz (ۚ):</strong> Boleh waqaf dan boleh washal.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi' & Abū Ja'far:</strong> Membaca ibdāl hamzah sukun menjadi Alif mad: <strong>رَايَ الْعَيْنِ</strong> (<em>Rāyal-'ayn</em>).<br>
+                    • <strong>Ḥamzah:</strong> Saat waqaf membaca tashīl atau ibdāl Alif.<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca taḥqīq hamzah sukun (<em>Ra'yal-'ayn</em>).<br>
+                    • Kaidah mīm jamā' pada <em>mitslayhim</em>: Ibnu Katsir dan Abu Ja'far membaca shilah jika washal (<em>mitslayhimū</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَٱللَّهُ يُؤَيِّدُ</strong><br>(<em>Wallāhu yu'ayyidu</em>)</td>
+                <td>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Dibaca tebal karena didahului harakat fathah Wāwu.<br>
+                    <strong>Nabr pada Yā' Musyaddadah:</strong> Penekanan vokal tajam agar tasydid terdengar jelas tanpa jeda terputus.<br>
+                    <strong>Taḥqīq Hamzah:</strong> Hamzah berharakat fathah setelah ya' dhammah.
+                </td>
+                <td>
+                    • <strong>Abū Ja'far:</strong> Membaca ibdāl hamzah maftūḥah setelah dhammah menjadi huruf Wāwu maftūḥah: <strong>يُوَيِّدُ</strong> (<em>Yuwayyidu</em>).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca taḥqīq hamzah secara murni: <em>Yu'ayyidu</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>بِنَصْرِهِۦ مَن يَشَآءُ ۗ</strong><br>(<em>Bi-nashrihī may yasyā'</em>)</td>
+                <td>
+                    <strong>Shād Isti'lā' & Iṭhbāq:</strong> Huruf Shad sukun memiliki desis shafir yang kuat.<br>
+                    <strong>Tarqīq Rā':</strong> Ra' kasrah dibaca tipis.<br>
+                    <strong>Mad Shilah Qashīrah:</strong> Dua harakat pada Hā' kināyah <em>nashrihī</em>.<br>
+                    <strong>Idghām Bighunnah:</strong> Nūn sukun bertemu Yā' dibaca mendengung 2 harakat.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Wajib dipanjangkan karena huruf mad bertemu hamzah dalam satu kata.<br>
+                    <strong>Tanda Waqaf Lāzim / Mustaḥab (ۗ):</strong> Al-Waqfu awlā (berhenti lebih utama).
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca Mad Wājib Muttaṣhil sepanjang <strong>6 Harakat Penuh (Ṭhūl)</strong>.<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Ḥamzah & Hisyām:</strong> Memiliki tata cara waqaf khusus pada kata <em>yasyā'</em> (ibdāl 6 harakat, tashīl bil-madd wal-qashr, dan raum).
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>إِنَّ فِى ذَٰلِكَ لَعِبْرَةً</strong><br>(<em>Inna fī dzālika la-'ibrah</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid ditahan dengungnya secara sempurna (akmal mā yakūn) 2 harakat.<br>
+                    <strong>Lām Ibtidā' Muzahlaqah:</strong> Huruf Lam fathah berfungsi mengokohkan taukīd khabar inna.<br>
+                    <strong>Qalqalah Shughrā pada Bā':</strong> Ba' sukun membal ringan di bibir.<br>
+                    <strong>Waqaf Tā' Marbūṭhah:</strong> Huruf Ta' marbuthah saat waqaf berubah menjadi Hā' sukun bersuara lembut.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca ghunnah sempurna pada <em>inna</em>, tahqiq 'Ain wasathul halq, dan merubah ta' marbuthah menjadi ha' sukun saat waqaf. Saat washal, tanwin bertemu Lam adalah <strong>Idghām Bilā Ghunnah</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>لِّأُو۟لِى ٱلْأَبْصَـٰرِ ۝١٣</strong><br>(<em>Li'ulil-abshār</em>)</td>
+                <td>
+                    <strong>Wāwu Zā'idah:</strong> Huruf Wawu tertulis dalam rasm tetapi gugur secara fonetis.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Qalqalah Shughrā pada Bā':</strong> Huruf Ba' sukun bergetar ringan.<br>
+                    <strong>Shād Isti'lā' & Mad 'Āriḍh lis-Sukūn:</strong> 2, 4, atau 6 harakat saat waqaf di ujung ayat.<br>
+                    <strong>Tarqīq Huruf Rā':</strong> Ra' sukun 'āridh dibaca tipis (tarqīq) saat waqaf karena harakat asalnya adalah kasrah.
+                </td>
+                <td>
+                    • <strong>Abū 'Amr (Ad-Dūrī & As-Sūsī):</strong> Membaca <strong>Imālah Kubrā</strong> pada Alif kata <em>al-abshār</em> karena berdekatan dengan Ra' kasrah mutatharrifah (dibaca condong ke <em>al-abshēr</em>).<br>
+                    • <strong>Ad-Dūrī 'an Al-Kisā'ī & Warsy:</strong> Membaca <strong>Taqīl (Imālah Shughrā)</strong>.<br>
+                    • <strong>Jumhur Imam (termasuk Ḥafsh):</strong> Membaca fat-ḥah murni tanpa imālah. Seluruh imam sepakat membaca tarqīq pada Ra' saat waqaf.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul: Kepongahan Tokoh Yahudi Pasca-Badar & Dekrit Pembalasan Ilahi (Sunan Abī Dāwūd No. 3001, Tafsīr Aṭ-Ṭabarī, & Asbāb An-Nuzūl karya Al-Wāḥidī):</strong><br>
+        Diriwayatkan dari Sahabat Abdullah bin Abbas r.a.:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "لَمَّا أَصَابَ رَسُولُ اللَّهِ ﷺ قُرَيْشًا يَوْمَ بَدْرٍ، وَقَدِمَ الْمَدِينَةَ، جَمَعَ الْيَهُودَ فِي سُوقِ بَنِي قَيْنُقَاعَ، فَقَالَ: «يَا مَعْشَرَ يَهُودَ، أَسْلِمُوا قَبْلَ أَنْ يُصِيبَكُمْ مِثْلُ مَا أَصَابَ قُرَيْشًا». قَالُوا: «يَا مُحَمَّدُ، لَا يَغُرَّنَّكَ مِنْ نَفْسِكَ أَنَّكَ قَتَلْتَ نَفَرًا مِنْ قُرَيْشٍ كَانُوا أَغْمَارًا لَا يَعْرِفُونَ الْقِتَالَ، إِنَّكَ لَوْ قَاتَلْتَنَا لَعَرَفْتَ أَنَّا نَحْنُ النَّاسُ، وَأَنَّكَ لَمْ تَلْقَ مِثْلَنَا!» فَأَنْزَلَ اللَّهُ تَعَالَى: ﴿قُل لِّلَّذِينَ كَفَرُوا۟ سَتُغْلَبُونَ﴾ إِلَى قَوْلِهِ: ﴿لِّأُو۟لِى ٱلْأَبْصَـٰرِ﴾."
+        </span>
+        <em>"Tatkala Rasulullah ﷺ berhasil menundukkan kaum Quraisy pada Perang Badar dan kembali ke Madinah, beliau mengumpulkan orang-orang Yahudi di pasar Bani Qainuqa'. Beliau bersabda: 'Wahai orang-orang Yahudi, masuklah Islam sebelum kalian ditimpa kekalahan kehancuran sebagaimana yang menimpa kaum Quraisy!' Maka para pemuka Yahudi menjawab dengan pongah: 'Wahai Muhammad, janganlah engkau tertipu oleh dirimu sendiri hanya karena engkau berhasil membunuh segelintir orang Quraisy yang dungu dan tidak paham seni berperang! Demi Allah, sekiranya engkau memerangi kami, niscaya engkau akan tahu siapa pendekar sejati yang sesungguhnya, dan bahwa engkau belum pernah menghadapi petarung tangguh seperti kami!' Maka Allah menurunkan ayat ke-12 dan 13 ini."</em><br>
+        <strong>Derajat Sanad:</strong> Sahih menurut Imam Al-Hakim, disepakati oleh Adz-Dzahabi, dan dinilai hasan-sahih oleh Al-Albani.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 3953) dari Sahabat Al-Barā' bin 'Āzib r.a. — Konfirmasi Jumlah Pasukan Badar Setara Pasukan Thālūt:</strong><br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "كُنَّا نَتَحَدَّثُ أَنَّ أَصْحَابَ بَدْرٍ ثَلاَثَمِائَةٍ وَبِضْعَةَ عَشَرَ، عَلَى عِدَّةِ أَصْحَابِ طَالُوتَ الَّذِينَ جَاوَزُوا مَعَهُ النَّهَرَ، وَمَا جَاوَزَ مَعَهُ إِلاَّ مُؤْمِنٌ!"
+        </span>
+        <em>"Kami para sahabat Nabi sering memperbincangkan bahwa jumlah personil pasukan Badar adalah 313 orang, persis setara dengan jumlah tentara Thalut yang berhasil menyeberangi sungai bersama beliau; dan tidak ada yang mampu menyeberang bersamanya kecuali orang yang benar-benar beriman!"</em><br>
+        <strong>Status Hadits:</strong> Sahih Al-Bukhari. Menjadi bukti teologis bahwa kemenangan Badar bukanlah peristiwa kebetulan, melainkan kesinambungan sunnatullah kemenangan segelintir kaum beriman atas tirani raksasa (QS. Al-Baqarah: 249).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Riwayat Sahabat Abdullah bin Mas'ūd r.a. (Tafsīr Aṭ-Ṭabarī & Ibnu Abī Ḥātim) — Kesaksian Lapangan tentang Rekayasa Persepsi Penglihatan:</strong><br>
+        Ibnu Mas'ud r.a. bersaksi tentang realitas mukjizat pembalikan pandangan mata di medan Badar:<br>
+        <em>"Sungguh pandangan mata kami di Badar sempat dibuat melihat kaum musyrikin tampak sangat sedikit di mata kami, sampai-sampai aku berbisik kepada seorang prajurit di sebelahku: 'Apakah menurutmu mereka berjumlah tujuh puluh orang?' Prajurit itu menjawab: 'Kulihat mereka sekitar seratus orang.' Namun ketika pertempuran berkecamuk hebat dan pasukan mereka kami tawan, barulah kami tahu bahwa jumlah mereka sesungguhnya adalah seribu personil bersenjata lengkap!"</em><br>
+        <strong>Korelasi Tafsir:</strong> Menjelaskan harmonisasi dinamis antara QS. Al-Anfal: 44 (mereka tampak sedikit di awal perang agar kaum mukminin berani maju) dan QS. Ali 'Imran: 13 (kaum mukminin tampak dua kali lipat banyaknya di mata musuh sehingga meruntuhkan moril psikologis musyrikin).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. F-'-T (ف-أ-ت — Fi'ah / فِئَةٌ):</strong>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros maknanya pada: <strong>Al-Jam'u wal-Inziwā' (الجَمْعُ وَالانْزِوَاءُ - sekelompok orang yang berhimpun, bersatu, dan memisahkan diri dari massa umum demi sebuah misi atau ideologi yang sama)</strong>. Berbeda dengan kata <em>jamā'ah</em> (kerumunan umum) atau <em>qawm</em> (komunitas etnis), kata <em>fi'ah</em> secara khusus mengacu pada formasi kelompok tempur atau fraksi militan yang solid dan siap saling menopang (<em>al-qith'ah minal-jaysy</em>). Pengulangan kata <em>fi'atayn</em> dan <em>fi'atun</em> menegaskan bahwa pertarungan Badar bukan benturan dua suku bangsa, melainkan perang antara dua korps ideologis yang bertolak belakang.
+        </li>
+        <li><strong>2. L-Q-Y (ل-ق-ي — Iltaqatā / اِلْتَقَتَا):</strong>
+            Porosnya adalah <strong>Muwājahatu Syay'in li-Syay' (المُوَاجَهَةُ - perjumpaan fisik berhadap-hadapan secara langsung tanpa tabir pembatas)</strong>. Mengikuti wazan <em>Ifta'ala</em> (افتعل) yang menunjukkan kesengajaan, intensitas, dan interaksi mutualistik. Dua pasukan itu tidak sekadar berpapasan dari kejauhan, melainkan saling menatap mata, mengunci target, dan bentrok dalam pertempuran jarak dekat yang menentukan hidup mati.
+        </li>
+        <li><strong>3. Q-T-L (ق-ت-ل — Tuqātilu / تُقَاتِلُ):</strong>
+            Mengikuti wazan mufa'alah (<em>qātala - yuqātilu</em>) yang mengandung faedah <em>al-musyārakah bayna itsnayn</em> (interaksi tempur dua arah). Penggunaan fi'il mudhari' (<em>tuqātilu</em>) menggambarkan dinamika pertempuran yang hidup (<em>istihḍhār ash-shūrah</em>), di mana desingan pedang dan denting perisai dihadirkan kembali di hadapan ruang imajinasi pendengar wahyu.
+        </li>
+        <li><strong>4. R-Hamzah-Y (ر-أ-ي — Yarawnahum & Ra'yal-'Ayn / رَأْيَ الْعَيْنِ):</strong>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> membedakan tiga jenis <em>ru'yah</em>: <em>ru'yah bashariyyah</em> (penglihatan indrawi mata), <em>ru'yah qalbiyyah</em> (pandangan batin/keyakinan), dan <em>ru'yah manāmiyyah</em> (mimpi). Penegasan frasa <strong>Ra'yal-'Ayn</strong> (رَأْيَ الْعَيْنِ) menggunakan mashdar yang disandarkan kepada organ mata (<em>idhafah lil-alat</em>). Ini adalah penegasan lingual mutlak bahwa peristiwa melihat musuh berlipat ganda bukanlah halusinasi massal, bukan mimpi tidur, dan bukan metafora abstrak, melainkan data optik visual nyata yang ditangkap langsung oleh kornea dan retina mata para prajurit di medan laga.
+        </li>
+        <li><strong>5. M-Th-L (م-ث-ل — Mitslayhim / مِثْلَيْهِمْ):</strong>
+            Porosnya adalah <strong>Ash-Syabah wal-Qadr (الشَّبَهُ وَالقَدْرُ - keserupaan bentuk dan presisi ukuran takaran ganda)</strong>. Bentuk tatsniyah (dual) dari <em>mitsl</em> berarti tepat dua kali lipat ukuran dari entitas yang dijadikan pembanding.
+        </li>
+        <li><strong>6. A-Y-D (أ-ي-د — Yu'ayyidu / يُؤَيِّدُ):</strong>
+            Ibnu Faris mencatat poros maknanya adalah <strong>Al-Quwwah wat-Tasyyīd (القُوَّةُ وَالتَّشْدِيدُ - pengokohan pilar, penopangan struktur yang rentan runtuh, dan pemberian tenaga luar biasa)</strong>. Berakar dari kata <em>al-īd</em> (kekuatan kokoh, sebagaimana dalam firman-Nya: <em>wadzkur 'abdanā Dāwūda dzal-aydi</em> - QS. Shad: 17). Allah tidak sekadar menolong secara pasif, melainkan menginjeksikan sokongan struktural dan tenaga metafisik yang mengubah kelemahan logistik menjadi hegemoni kemenangan mutlak.
+        </li>
+        <li><strong>7. '-B-R (ع-ب-r — 'Ibrah / لَعِبْرَةً):</strong>
+            Poros leksikalnya adalah <strong>Al-Intiqālu wal-Juwāz min Ḥālin ilā Ḥāl (الانْتِقَالُ - perpindahan, penyeberangan, dan melintasi sungai dari satu tepian ke tepian lain)</strong>. Kata <em>'ibarah</em> (penyeberangan perahu), <em>isti'ārah</em> (metafora), dan <em>'abrah</em> (air mata yang menetes menyeberangi pipi) berasal dari akar yang sama. Disebut <strong>'Ibrah</strong> (pelajaran berharga) karena ia menuntut sebuah lompatan kognitif: akal manusia menyeberang (<em>al-'ubūr</em>) dari fakta empiris sejarah kasat mata menuju hakikat hukum universal transendental yang ada di baliknya.
+        </li>
+        <li><strong>8. B-Sh-R (ب-ص-r — Al-Abshār / لِّأُو۟لِى ٱلْأَبْصَـٰرِ):</strong>
+            Jamak dari <em>bashar</em> (mata indrawi) atau <em>bashīrah</em> (mata batin). Secara semantik Al-Qur'an, lafaz <em>Ūlī al-Abshār</em> adalah gelar kehormatan bagi individu yang mampu mengintegrasikan pengamatan mata kepala (data empiris) dengan kejernihan nurani dan rasio kontemplatif (data wahyu).
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>قَدْ</strong></td>
+                <td>Harf taḥqīq mabni 'alas-sukūn.</td>
+                <td>Masuk pada fi'il madhi berfungsi memantapkan kepastian kejadian (taḥqīq).</td>
+            </tr>
+            <tr>
+                <td><strong>كَانَ</strong></td>
+                <td>Fi'il madhi nāqish mabni 'alal-fath.</td>
+                <td>Merafa'kan isim dan menashabkan khabar (atau kāna tāmmahmakna: telah terwujud).</td>
+            </tr>
+            <tr>
+                <td><strong>لَكُمْ</strong></td>
+                <td>Lām harf jarr, Kum dhamir jamak khithab majrur.</td>
+                <td>Jārr wa majrūr muta'alliq bi mahdzūf <strong>Khabar Kāna Muqaddam</strong> fī maḥalli nashbin.</td>
+            </tr>
+            <tr>
+                <td><strong>ءَايَةٌ</strong></td>
+                <td>Ism mufrad mu'annats wazan <em>fa'alah</em>.</td>
+                <td><strong>Ismu Kāna Mu'akhkhar</strong> marfu' bil-dhammah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى فِئَتَيْنِ</strong></td>
+                <td><em>Fī</em>: Harf jarr. <em>Fi'atayni</em>: Ism mutsannā majrur bil-yā'.</td>
+                <td>Jārr wa majrūr muta'alliq bi na'at/sifat bagi <em>āyatun</em> (tanda yang termanifestasi pada dua kubu).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْتَقَتَا ۖ</strong></td>
+                <td>Fi'il madhi wazan <em>ifta'ala</em> mabni 'alal-fathal-muqaddar. Alif itsnayn: fa'il.</td>
+                <td>Jumlah fi'liyyah <em>iltaqatā</em> fī maḥalli jarri <strong>Na'at / Sifat</strong> bagi <em>fi'atayn</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فِئَةٌ</strong></td>
+                <td>Ism mufrad marfu' bil-dhammah.</td>
+                <td><strong>Badal Ba'dh min Kull</strong> dari <em>fi'atayn</em> marfu' (atau khabar bagi mubtada' mahdzuf: <em>ihdāhumā fi'atun</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>تُقَـٰتِلُ</strong></td>
+                <td>Fi'il mudhari' wazan <em>fa'ala</em> marfu' bil-dhammah. Fa'il dhamir mustatir <em>hiya</em>.</td>
+                <td>Jumlah fi'liyyah <em>tuqātilu</em> fī maḥalli raf'in <strong>Na'at / Sifat</strong> bagi <em>fi'atun</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى سَبِيلِ ٱللَّهِ</strong></td>
+                <td>Jārr wa majrūr, <em>Allāhi</em> mudhaf ilayh majrur.</td>
+                <td>Muta'alliq bi fi'il <em>tuqātilu</em> (menjelaskan orientasi dan niat juang).</td>
+            </tr>
+            <tr>
+                <td><strong>وَأُخْرَىٰ</strong></td>
+                <td>Wawu harf 'athaf. <em>Ukhrā</em> ism ma'thūf wazan <em>fu'lā</em>.</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>fi'atun</em> marfu' bil-dhammah al-muqaddarah 'alal-alif.</td>
+            </tr>
+            <tr>
+                <td><strong>كَافِرَةٌ</strong></td>
+                <td>Ism fā'il mu'annats wazan <em>fā'ilah</em>.</td>
+                <td><strong>Na'at / Sifat</strong> bagi <em>ukhrā</em> marfu' bil-dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>يَرَوْنَهُم</strong></td>
+                <td>Fi'il mudhari' (wazan <em>yaf'alūna</em>). Wawu: Fa'il. <em>Hum</em>: Maf'ul bih awwal.</td>
+                <td>Jumlah fi'liyyah fī maḥalli raf'in <strong>Na'at Tsānī</strong> bagi <em>ukhrā</em> (atau fi mahalli nashbin Hal).</td>
+            </tr>
+            <tr>
+                <td><strong>مِّثْلَيْهِمْ</strong></td>
+                <td>Ism mutsannā manshub bil-ya' mudhaf. <em>Him</em>: Mudhaf ilayh.</td>
+                <td><strong>Maf'ūl Bih Tsānī</strong> bagi <em>yarawnahum</em> (atau Hal manshub bil-ya').</td>
+            </tr>
+            <tr>
+                <td><strong>رَأْىَ ٱلْعَيْنِ ۚ</strong></td>
+                <td><em>Ra'ya</em>: Mashdar mu'akkad manshub. <em>Al-'Ayni</em>: Mudhaf ilayh majrur.</td>
+                <td><strong>Maf'ūl Muṭhlaq</strong> li-ta'kīdi fi'lihī (mempertegas kepastian visual inderawi).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td>Wawu isti'nafiyyah, Ism jalalah marfu'.</td>
+                <td><strong>Mubtada'</strong> marfu' bil-dhammah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>يُؤَيِّدُ</strong></td>
+                <td>Fi'il mudhari' wazan <em>fa''ala</em> marfu'. Fa'il dhamir mustatir <em>Huwa</em>.</td>
+                <td>Jumlah fi'liyyah fī maḥalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>Allāhu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِنَصْرِهِۦ</strong></td>
+                <td>Bā' harf jarr sababiyyah/isti'anah. <em>Nashri</em> majrur mudhaf. <em>Hī</em> mudhaf ilayh.</td>
+                <td>Jārr wa majrūr muta'alliq bi fi'il <em>yu'ayyidu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن يَشَآءُ ۗ</strong></td>
+                <td><em>Man</em> ism maushūl mabni maf'ul bih. <em>Yasyā'u</em> fi'il mudhari' shilah maushul.</td>
+                <td><em>Man</em> fī maḥalli nashbin <strong>Maf'ūl Bih</strong> bagi fi'il <em>yu'ayyidu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّ فِى ذَٰلِكَ</strong></td>
+                <td><em>Inna</em> harf taukid. <em>Fī dzālika</em> jar wa majrur muta'alliq bi khabar inna muqaddam.</td>
+                <td>Fī maḥalli raf'in <strong>Khabar Inna Muqaddam</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَعِبْرَةً</strong></td>
+                <td>Lām taukīd muzahlaqah. <em>'Ibratan</em> ism inna mu'akhkhar.</td>
+                <td><strong>Ismu Inna Mu'akhkhar</strong> manshūb bil-fat-ḥah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>لِّأُو۟لِى ٱلْأَبْصَـٰرِ ۝١٣</strong></td>
+                <td>Lām harf jarr. <em>Ūlī</em> mulhaq jamak mudzakkar majrur bil-ya' mudhaf. <em>Al-Abshār</em> mudhaf ilayh.</td>
+                <td>Jārr wa majrūr muta'alliq bi na'at bagi kata <em>'ibratan</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Taqdim al-Khabar "Lakum" (Pengkhususan Audiens & Desakan Psikologis):</strong> Struktur ayat mendahulukan jar-majrur <em>lakum</em> sebelum isim kana (<em>qad kāna lakum āyah</em>). Secara balaghah, ini berfungsi sebagai <em>al-i'tinā' wal-ikhtishāṣh</em>: ayat ini secara personal menohok audiens di Madinah (khususnya kaum kafir Quraisy, Yahudi, dan kaum munafik). Bukti sejarah itu berada di depan mata mereka sendiri, bukan dongeng peradaban asing yang jauh, sehingga tidak ada ruang untuk berkelit.</li>
+        <li><strong>Ilmu Ma'ani — Uslub Badal Ba'dh min Kull & Husnut-Taqsim:</strong> Pemaparan dua kubu dengan perincian <em>fi'atun tuqātilu fī sabīlillāh</em> dan <em>wa ukhrā kāfirah</em> adalah puncak keindahan pemilahan analitis (<em>at-taqsīm al-badī'</em>). Menghilangkan penyebutan kata "fi'atun" pada kubu kedua dan menggantinya dengan sifat mutlak <em>wa ukhrā kāfirah</em> menegaskan bahwa identitas utama kubu musuh hanyalah satu: kekufuran yang menentang kebenaran.</li>
+        <li><strong>Ilmu Bayan — Maf'ul Muthlaq Mu'akkad "Ra'yal-'Ayn" (Penolak Keraguan & Skeptisisme):</strong> Penggunaan frasa <em>ra'yal-'ayn</em> berfungsi menghancurkan segala bentuk relativisme epistemologis. Al-Qur'an menegaskan bahwa fenomena pelipatgandaan jumlah pasukan tersebut terjadi secara empiris di depan retina mata, bukan sekadar bisikan desas-desus atau propaganda batin.</li>
+        <li><strong>Ilmu Badi' — Al-Muqābalah ash-Sharīḥah:</strong> Benturan kontras yang amat tajam antara:
+            <ul>
+                <li><em>Fi'atun tuqātilu fī sabīlillāh</em> (Berjuang menegakkan keadilan transendental, ikhlas lillāh, mengorbankan jiwa raga demi wahyu).</li>
+                <li><em>Wa ukhrā kāfirah</em> (Berjuang demi prestise materialisme, membela tatanan oligarki syirik, dan pongah atas kekuatan modal fisik).</li>
+            </ul>
+        </li>
+        <li><strong>Ilmu Bayan — Majāz Mursal 'Alaqah Juz'iyyah pada "Al-Abshār":</strong> Penyebutan kata <em>al-abshār</em> (mata kepala) sejatinya memaksudkan <em>al-bashā'ir</em> (mata batin akal budi). Seseorang yang hanya memiliki mata fisik tetapi gagal menangkap pesan tauhid di balik kemenangan Badar dianggap buta secara hakiki (QS. Al-Hajj: 46: <em>Fa innahā lā ta'mal-abshāru wa lākin ta'mal-qulūbullatī fish-shudūr</em>).</li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 11 & 12):</strong>
+            <br>• Pada <strong>Ayat 11</strong>, Allah menyajikan analogi historis masa lampau: runtuhnya rezim Fir'aun dan bangsa-bangsa terdahulu yang memiliki supremasi piramida emas dan pasukan militer tak tertandingi namun ditenggelamkan seketika.
+            <br>• Pada <strong>Ayat 12</strong>, Allah memerintahkan Rasul-Nya mendeklarasikan vonis masa depan: <em>"Qul lilladzīna kafarū satughlabūna wa tuḥsyarūna ilā jahannam"</em> (Katakan kepada orang-orang kafir: Kalian pasti akan dikalahkan di dunia dan digiring ke neraka Jahannam).
+            <br>• Masuklah <strong>Ayat 13</strong> sebagai bukti laboratorium sejarah paling mutakhir: Jika kalian meragukan kehancuran Fir'aun di masa lampau (Ayat 11) dan skeptis terhadap ancaman kekalahan masa depan (Ayat 12), maka tengoklah bukti empiris yang baru saja terjadi beberapa bulan lalu di lembah Badar (Ayat 13)!
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Dinamika Pasca-Badar & Dialog dengan Yahudi Madinah):</strong>
+            Kemenangan spektakuler Perang Badar pada bulan Ramadhan tahun 2 Hijriah mengubah peta geopolitik Jazirah Arab secara radikal. Kekuatan aristokrasi musyrikin Makkah kehilangan 70 tokoh elit panglima perangnya (termasuk Abu Jahal, Umayyah bin Khalaf, dan Utbah bin Rabi'ah). Peristiwa ini memicu guncangan psikologis dahsyat di Madinah:
+            <ol>
+                <li><strong>Goncangan Komunitas Yahudi (Bani Qainuqa'):</strong> Selama ini Yahudi memegang monopoli pasar senjata dan emas di Madinah seraya memandang rendah kaum muslimin. Ketika Nabi mengajak mereka masuk Islam demi menghindari nasib buruk Quraisy, arogansi etnosentris mereka meledak. Mereka meremehkan kemenangan Badar sebagai keberuntungan melawan prajurit amatir. Ayat 13 membongkar narsisme militeristik ini: Badar bukan kebetulan taktis, melainkan intervensi langsung Allah Penegak Semesta.</li>
+                <li><strong>Kepanikan Kaum Munafik (Abdullah bin Ubay bin Salul):</strong> Pasca-Badar, kaum munafik terpaksa berpura-pura masuk Islam karena melihat angin hegemoni telah berpindah ke tangan Rasulullah ﷺ, meski batin mereka menyimpan kedengkian mendalam.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Menuju Dekonstruksi Syahwat Duniawi pada Ayat 14):</strong>
+            Setelah membuktikan bahwa kekuatan militer dan jumlah pasukan tidak ada artinya di hadapan Allah (Ayat 13), Al-Qur'an pada <strong>Ayat 14</strong> langsung membongkar akar penyakit psikologis yang membuat manusia dibutakan dari tanda-tanda kebesaran tersebut: <em>"Zuyyina lin-nāsi ḥubbusy-syahawāti minan-nisā'i wal-banīna wal-qanāṭhīril-muqanṭharati minadz-dzahabi wal-fidh-dhah..."</em>. Manusia menjadi sombong dan menolak tunduk kepada kebenaran semata-mata karena hati mereka telah mabuk oleh kecintaan berlebihan pada syahwat materiil duniawi!
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Dialektika Qira'at & Penafsiran Subjek Penglihatan:</strong><br>
+        Dalam <em>Jāmi' al-Bayān</em>, At-Tabari membedah secara mendalam siapakah subjek dan objek pada kata <em>yarawnahum</em> (mereka melihat mereka):
+        <br>• Jika dibaca <em>Tarawnahum</em> (bacaan Nafi' dan Ya'qub): Maknanya adalah <em>"Kalian wahai segenap audiens manusia (atau wahai kaum Yahudi/Quraisy) menyaksikan dengan mata kepala sendiri bagaimana kaum muslimin menundukkan musuh yang dua kali lipat banyaknya."</em>
+        <br>• Jika dibaca <em>Yarawnahum</em> (bacaan mayoritas imam): At-Tabari menegaskan pendapat paling shahih menurut riwayat salaf: <strong>Kaum musyrikin melihat kaum mukminin seolah-olah berjumlah dua kali lipat dari pasukan musyrikin</strong> (yakni musyrikin melihat muslimin tampak berjumlah 2.000 personil!). Penglihatan ini menginjeksikan rasa panik, disorientasi mental, dan teror psikologis yang melumpuhkan koordinasi tempur Quraisy seketika.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Harmonisasi Dinamika Persepsi Visual (Badar: Awal vs Pertempuran):</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir mengharmonisasikan ayat ini dengan firman Allah dalam QS. Al-Anfal: 44 (<em>"Dan ketika Dia memperlihatkan mereka kepada kalian saat bertemu hanya sedikit dalam pandangan mata kalian, dan Dia menjadikan kalian tampak sedikit dalam pandangan mata mereka..."</em>). Ibnu Katsir mengurai kronologi mukjizat dua fase:
+        <ol>
+            <li><strong>Fase Persiapan Sebelum Bentrok:</strong> Allah menampakkan jumlah musyrikin tampak sedikit di mata muslimin agar kaum mukminin berani maju tanpa gentar; dan Allah menampakkan muslimin sedikit di mata musyrikin agar musyrikin sombong, lengah, dan tidak menyusun strategi defensif yang cermat.</li>
+            <li><strong>Fase Berkecamuknya Perang:</strong> Begitu kedua pedang beradu, Allah membalik persepsi visual musyrikin: pasukan muslimin tiba-tiba terlihat membengkak dua kali lipat banyaknya dari pasukan musyrikin (diperkuat kehadiran 1.000 malaikat berpakaian putih bersorban hijau), sehingga meremukkan nyali musuh hingga kocar-kacir melarikan diri!</li>
+        </ol>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Dimensi Fiqih Jihad, Asimetri Kekuatan, & Kaidah Tawakkal:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi mengaitkan ayat ini dengan hukum fiqih ketahanan tempur dalam Islam: Pada asalnya, seorang muslim diwajibkan bertahan melawan sepuluh musuh (QS. Al-Anfal: 65), kemudian diringankan hukumnya menjadi wajib bertahan menghadapi dua musuh (rasio 1:2) sebagaimana dalam QS. Al-Anfal: 66. Perang Badar adalah manifestasi batas kritis asimetri tersebut: 313 personil muslim berhadapan dengan hampir 1.000 prajurit kafir (rasio 1:3). Al-Qurthubi menegaskan bahwa kemenangan tidak pernah ditentukan oleh hitungan kuantitas fisik, melainkan oleh legitimasi keimanan dan pertolongan Ilahi (<em>bi-nashrihī may yasyā'</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Hermeneutika Rasional & Epistemologi 'Ibrah:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi mengkaji logika penutup ayat: <em>"Inna fī dzālika la-'ibratan li-ulil-abshār"</em>. Ar-Razi menjelaskan bahwa manusia terbagi menjadi dua golongan:
+        <br>• <strong>Ash-hābul-Zhāhir:</strong> Manusia dangkal yang memandang kemenangan perang semata-mata sebagai variabel cuaca, kebetulan geografis, atau kekeliruan taktis sesaat.
+        <br>• <strong>Ūlī al-Abshār:</strong> Manusia berakal budi yang menggunakan data empiris Badar untuk melompat melintasi dinding materialisme: mereka menyimpulkan secara pasti bahwa semesta ini dikendalikan oleh Dzat Yang Maha Berkehendak (<em>Al-Fa''āl limā yurīd</em>), di mana hukum sebab-akibat material tunduk mutlak di bawah kekuasaan Allah Al-Qayyum.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Sosiologi Sejarah & Hukum Kejatuhan Aristokrasi Angkuh:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur memaparkan tesis sosiologis: Kehancuran pasukan musyrikin di Badar adalah konsekuensi tak terelakkan dari <em>"The Hubris of Aristocracy"</em> (kebangkrutan moral kaum aristokrat). Bangsawan Quraisy berangkat ke Badar bukan demi membela tanah air, melainkan demi gengsi sosial, minum khamar, menabuh genderang, dan bernyanyi bersama budak-budak wanita (sebagaimana dicatat dalam QS. Al-Anfal: 47: <em>batha-ran wa ri'ā'an-nās</em>). Pasukan yang bergerak atas dorongan keangkuhan hedonistik niscaya mengalami disorientasi moral tatkala berhadapan dengan barisan prajurit yang siap menyambut syahid demi nilai-nilai transendental.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Sentuhan Jiwa Nusantara & Ketahanan Spiritual:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan suasana Badar dengan narasi perjuangan kemerdekaan: <em>"Berapa kali dalam sejarah perjuangan bangsa-bangsa di dunia, kaum yang kecil perlengkapannya, bambu runcing di tangannya, tetapi dadanya dipenuhi keyakinan kepada Allah dan keadilan, sanggup mematahkan laras-laras meriam penjajah yang angkuh!"</em> Hamka menegaskan bahwa Badar adalah proklamasi abadi: ruh iman senantiasa lebih unggul daripada besi baja.<br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menggarisbawahi bahwa kata <em>yu'ayyidu</em> mengisyaratkan bahwa pertolongan Allah baru turun tatkala kaum beriman telah mengerahkan seluruh ikhtiar persiapan logistik yang mereka mampui secara maksimal; Allah tidak membantu kaum pemalas yang berpangku tangan atas nama takdir. Kemenag RI merangkum bahwa ayat ini menjadi fondasi optimisme nasional: jangan pernah merasa kerdil di hadapan hegemoni peradaban asing manakala kita memegang teguh integritas moral dan persatuan.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Identitas Peristiwa Historis</strong></td>
+                <td>Seluruh ulama dan mufasir sepakat bahwa dua kubu yang dimaksud dalam ayat 13 adalah pasukan Muslimin dan Musyrikin pada <strong>Perang Badar Al-Kubra</strong>.</td>
+                <td>
+                    • Tidak ada khilaf mengenai lokus peristiwa historis Badar. Namun sebagian ulama (seperti Al-Qashimi) memperluas signifikansinya sebagai kaidah umum bagi seluruh konfrontasi haq vs batil sepanjang zaman.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Subjek Penglihatan "Yarawnahum Mitslayhim"</strong></td>
+                <td>Sepakat bahwa terjadi manipulasi persepsi visual yang nyata atas kuasa Allah untuk memenangkan kaum mukminin.</td>
+                <td>
+                    • <strong>Jumhur Mufasir (At-Tabari, Ibnu 'Abbas, Ar-Razi):</strong> Kaum musyrikin melihat kaum muslimin dua kali lipat lebih banyak dari jumlah musyrikin (tampak 2.000 orang), sehingga meremukkan nyali mereka.<br>
+                    • <strong>Sebagian Mufasir (Al-Hasan Al-Bashri, Az-Zamakhsyari):</strong> Kaum mukminin melihat kaum musyrikin hanya dua kali lipat dari jumlah kaum muslimin (tampak 600-an orang, padahal aslinya 1.000), agar kaum muslimin mantap bertarung sesuai izin rasio 1:2.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Tafsir Qira'at "Tarawnahum" vs "Yarawnahum"</strong></td>
+                <td>Sepakat bahwa kedua variasi qira'at mutawatirah tersebut sah dan saling melengkapi keutuhan mukjizat Al-Qur'an.</td>
+                <td>
+                    • <strong>Qira'at "Yarawnahum" (Ya'):</strong> Menarasikan fakta psikologis di internal medan pertempuran antara dua kubu yang bertarung.<br>
+                    • <strong>Qira'at "Tarawnahum" (Ta'):</strong> Menjadikan seluruh audiens (kaum Quraisy, Yahudi Madinah, dan kita generasi hari ini) sebagai saksi sejarah yang diajak melihat keajaiban tersebut secara visual.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Materialistis vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Materialisme Sekuler (Linier)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Trans-Empiris & Asimetris)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Kalkulasi Kekuatan & Peluang</strong></td>
+                <td><em>Deterministik Linier:</em> Kemenangan adalah fungsi mutlak dari keunggulan rasio matematis: jumlah personil, anggaran logistik, dan persenjataan fisik. Minoritas pasti kalah.</td>
+                <td><em>Non-Linier Transendental:</em> Kuantitas fisik hanyalah variabel sekunder; variabel primer adalah kohesi moral, legitimasi kebenaran, dan pertolongan Allah (<em>yu'ayyidu bi-nashrih</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Penilaian Terhadap Fakta Lapangan</strong></td>
+                <td><em>Retinal Myopia (Kebutaan Indrawi):</em> Terjebak pada data visual kasat mata semata; apa yang tampak besar dianggap absolut tak terkalahkan.</td>
+                <td><em>'Ibrah-Orientation (Penetrasi Batin):</em> Menjadikan data indrawi sebagai pijakan awal untuk melompat menembus hakikat hukum Ilahi di balik layar peradaban.</td>
+            </tr>
+            <tr>
+                <td><strong>Respon Terhadap Ketimpangan Peluang</strong></td>
+                <td><em>Defeatist Paralysis:</em> Mengalami kepanikan mental dan keputusasaan tatkala menghadapi tantangan hidup yang secara hitungan statistik tampak mustahil diatasi.</td>
+                <td><em>Calm Resilience (Sakinah Strategis):</em> Bertindak maksimal dalam batas kapasitas ikhtiar sembari menyerahkan titik akhir hasil perjuangan kepada Allah Al-Qayyum.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Tiga Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Asymmetric Faith Advantage" (Keunggulan Asimetris Berbasis Integritas):</strong>
+            Dalam teori strategi militer dan dinamika persaingan, pihak yang memiliki logistik raksasa sering kali mengidap inersia birokrasi, arogansi kognitif, dan motivasi egoistik yang rapuh. Sebaliknya, entitas kecil yang dipersatukan oleh nilai-nilai luhur transendental memiliki tingkat kelincahan, ketahanan mental, dan keberanian berkorban tanpa batas. Ketika keunggulan moral dan spiritualitas ini hadir secara murni, ia melahirkan daya dobrak tak terduga yang mampu meruntuhkan hegemoni kekuatan mapan.
+        </li>
+        <li><strong>Mental Model 2: "The Perceptual Distortion of Hubris" (Bias Persepsi Kesombongan):</strong>
+            Kesombongan narsistik (<em>hubris</em>) merusak kemampuan sistem kognitif dalam membaca realitas. Pasukan Quraisy dan para pemuka Yahudi terjebak dalam <em>confirmation bias</em>: mereka meyakini bahwa superioritas modal masa lalu menjamin kemenangan masa depan. Distorsi persepsi ini membuat mereka abai terhadap peringatan bahaya, ceroboh dalam perencanaan, dan rentan mengalami histeria massal tatkala menghadapi perlawanan gigih yang tidak terduga.
+        </li>
+        <li><strong>Mental Model 3: "The Trans-Empirical 'Ibrah Bridge" (Prinsip Jembatan Penyeberangan Hikmah):</strong>
+            Data empiris (kejadian sejarah, krisis pribadi, kegagalan bisnis) bukanlah terminal akhir pengetahuan. Hukum <em>'Ibrah</em> menuntut akal manusia untuk melakukan penyeberangan epistemologis: melintasi peristiwa partikular (seperti kemenangan 313 di Badar) menuju penemuan prinsip universal: bahwa keadilan moral pada akhirnya selalu mengalahkan kezaliman materialistik. Tanpa jembatan <em>'ibrah</em>, manusia hanya menjadi perekam sejarah yang buta makna.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Ketakutan vs Ketenangan (Sakinah)</h3>
+    <p>
+        Secara neurobiologis, ketika manusia berada di bawah tekanan ancaman maut atau ketidakpastian ekstrem, amigdala memicu respons stres intens (<em>fight-or-flight</em>) dengan membanjiri sirkulasi darah menggunakan hormon kortisol dan adrenalin. Jika jiwa tidak memiliki jangkar spiritual yang kokoh, respons ini bermutasi menjadi kepanikan akut (<em>amygdala hijack</em>) yang melumpuhkan korteks prefrontal—wilayah otak yang bertanggung jawab atas analisis rasional, kejernihan persepsi, dan koordinasi taktis.
+    </p>
+    <p>
+        Inilah yang menimpa pasukan musyrikin di medan Badar: kepanikan massal mendistorsi penglihatan mereka sehingga pasukan muslimin tampak berlipat ganda, memicu histeria kolektif yang membuat barisan tentara berkuda mereka tercerai-berai. Sebaliknya, kaum mukminin yang dipenuhi keikhlasan tauhid dan doa Rasulullah ﷺ dianugerahi <strong>Sakinah</strong> (ketenangan ilahiah mendalam). Ketenangan batin ini menurunkan overaktivitas amigdala, menstabilkan denyut jantung, dan mempertahankan fungsi korteks prefrontal pada level optimal (<em>hyper-focused state</em>), sehingga segelintir prajurit mampu bertempur dengan presisi tinggi, keberanian luar biasa, dan memetik kemenangan gemilang.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Perang Asimetris Kontemporer: Kegagalan Superpower Berteknologi Tinggi di Hadapan Ketahanan Spiritual</h3>
+    <p>
+        Di abad ke-21, fenomena Badar terus berulang dalam dinamika geopolitik global. Kita menyaksikan bagaimana kekuatan-kekuatan militer adidaya yang ditopang oleh anggaran pertahanan triliunan dolar, jet siluman generasi kelima, kecerdasan buatan (AI) pemandu rudal, dan persenjataan tercanggih sering kali gagal total menaklukkan komunitas pejuang tertindas yang mempertahankan tanah air mereka. Dari kegagalan superpower di Vietnam dan pegunungan terjal Afghanistan, hingga ketahanan rakyat Palestina di Jalur Gaza yang terkepung: superioritas teknologi dan daya hancur mesin perang ternyata tidak mampu meremukkan spirit manusia yang siap menyambut kematian demi membela kehormatan dan kebenaran wahyu. Realitas ini menampar arogansi militeristik modern: senjata canggih tidak pernah mampu membeli nyali tempur dan legitimasi moral.
+    </p>
+
+    <h3>2. "The Mirage of Superiority": Disrupsi Korporasi & Keruntuhan Raksasa Bisnis yang Pongah</h3>
+    <p>
+        Dalam lanskap ekonomi dan industri teknologi abad ke-21, hukum QS. 3:13 termanifestasi dalam fenomena disrupsi inovasi. Perusahaan-perusahaan multinasional raksasa dengan kapital triliunan rupiah dan monopoli pasar puluhan tahun (seperti Kodak, Nokia, atau Yahoo) mendadak bangkrut dan terlempar dari gelanggang oleh kemunculan perusahaan rintisan (<em>start-up</em>) berskala kecil yang beroperasi dari garasi sempit. Korporasi raksasa tersebut runtuh bukan karena kekurangan uang, melainkan karena keangkuhan struktural, kelambanan birokrasi, dan kebutaan mata batin manajemen terhadap perubahan zaman. Entitas kecil yang lincah, berintegritas, dan solutif berhasil membalikkan peta kekuatan industri dalam sekejap mata.
+    </p>
+
+    <h3>3. Industri Rekayasa Persepsi & Perang Informasi di Era Post-Truth</h3>
+    <p>
+        Di era disrupsi digital dan media sosial hari ini, manipulasi persepsi visual yang dahulu terjadi di Badar kini dieksploitasi oleh industri oligarki melalui manipulasi algoritma, pasukan siber (<em>buzzer</em>), kampanye bot, dan teknologi pemalsuan digital (<em>deepfake</em>). Publik modern digiring untuk "melihat apa yang diinginkan oleh penguasa kapital": kebohongan yang diviralkan jutaan kali tampak sebagai kebenaran mutlak, sementara kebenaran yang bersuara lirih dicitrakan sebagai ancaman teroris atau distorsi radikal. Di sinilah seruan <em>Ūlī al-Abshār</em> menjadi amat genting: masyarakat Muslim abad ke-21 dituntut memiliki imunitas kognitif dan ketajaman mata batin digital agar tidak mudah terintimidasi oleh ilusi angka trending topic dan rekayasa opini publik yang batil.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol "Audit Mata Batin (Bashirah Check)" Sebelum Merespons Informasi:</strong>
+                <br>• Setiap kali Anda melihat berita heboh di media sosial, ancaman krisis ekonomi yang menakutkan, atau angka-angka statistik yang mengintimidasi, tahan diri Anda selama 3 menit tanpa bereaksi spontan.
+                <br>• Pejamkan mata, tarik nafas dalam-dalam, dan tanyakan pada diri sendiri: <em>"Apakah aku sedang melihat fenomena ini hanya dengan mata kepala yang rapuh dan mudah ditipu ilusi manusia, ataukah aku memandangnya dengan bashirah tauhid bahwa Allah yang memegang kendali semesta?"</em> Latihan mikro ini meredam kepanikan amigdala dan mengembalikan kejernihan akal sehat.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Badar Asymmetry Matrix" Menghadapi Tekanan Hidup:</strong>
+                Ketika Anda berhadapan dengan situasi sulit di mana sumber daya Anda tampak sangat minim (modal finansial tipis, jaringan koneksi terbatas, pesaing bisnis raksasa yang curang):
+                <br>• Tolak mentalitas pecundang (<em>defeatist mindset</em>) yang ingin menyerah sebelum bertarung.
+                <br>• Maksimalkan persiapan ikhtiar pada area yang berada di bawah kendali penuh Anda (peningkatan kapabilitas kompetensi, etos kerja profesional, dan doa khusyuk).
+                <br>• Putuskan melangkah dengan keyakinan penuh bahwa keberkahan Ilahi bekerja melalui mekanisme non-linier yang sanggup melipatgandakan dampak ikhtiar kecil Anda.
+            </li>
+            <li><strong>Komitmen Etika Relasional: Membela Kebenaran Tanpa Terintimidasi oleh Hegemoni Mayoritas:</strong>
+                Dalam lingkungan kerja, komunitas, atau ruang keluarga, berkomitmenlah untuk tetap berdiri tegak membela nilai integritas, kejujuran, dan keadilan moral, meskipun Anda berada di pihak minoritas yang sendirian. Tolak kompromi terhadap praktik korupsi, manipulasi laporan keuangan, atau gosip fitnah berjamaah. Ingatlah bahwa satu orang yang berdiri di atas kebenaran hakiki sejatinya adalah mayoritas sejati bersama pertolongan Allah.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Ketika aku menghadapi persoalan hidup yang besar dan rumit, apakah rasa gentarku lebih dipicu oleh rasa takut kepada besarnya kekuatan manusia dan uang, daripada rasa takut dan takzimku kepada keagungan Allah Yang Maha Mengokohkan pertolongan?</li>
+            <li>Seberapa sering aku mengejek atau memandang sebelah mata usaha kebaikan orang lain hanya karena mereka terlihat kecil, miskin logistik, dan tidak memiliki pengikut yang banyak di media sosial?</li>
+            <li>Apakah mataku selama ini hanya berfungsi sebagai jendela indrawi biologis yang merekam kilau fana dunia, ataukah telah menjelma menjadi <em>al-abshār</em>—mata batin yang menembus peristiwa sejarah demi menemukan tanda-tanda kebesaran Allah?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Mu'ayyida bin-nashri man yasyā', Yā Man qaharat qudratuhū kulla jabbārin 'anīd. Ya Allah Tuhan Yang Menguatkan dengan pertolongan-Mu siapa saja yang Engkau kehendaki, Yang keperkasaan kekuasaan-Mu menundukkan seluruh penguasa tirani yang sombong. Kami bersujud mengakui betapa kerdilnya jiwa kami di hadapan takdir-Mu, dan betapa seringnya mata kepala kami tertipu oleh fatamorgana kekuatan materiil duniawi.
+            <br><br>
+            Allāhumma arinal-ḥaqqa ḥaqqan warzuqnāt-tibā'ah, wa arinal-bāṭhila bāṭhilan warzuqnāj-tinābah. Ya Allah, singkapkanlah tabir ilusi dari mata batin kami. Anugerahilah kami ketajaman penglihatan kaum Ūlī al-Abshār, agar kami mampu membaca tanda-tanda kebesaran-Mu dalam setiap lembaran sejarah dan dinamika kehidupan kami. Jangan biarkan hati kami ciut dan gentar menghadapi hegemoni kebatilan, betapa pun besarnya pasukan mereka dan betapa pun megahnya pundi-pundi harta mereka.
+            <br><br>
+            Kukuhkanlah kaki kami di atas jalan-Mu sebagaimana Engkau telah mengokohkan kaki para sahabat Nabi di lembah Badar. Siramkanlah ketenangan sakinah ke dalam rongga dada kami tatkala badai ujian hidup menerpa, dan kuatkanlah kelemahan kami dengan pertolongan rahmat-Mu yang tak terbatas. Jadikanlah setiap hembusan nafas kami semata-mata berjuang di jalan-Mu (fī sabīlik), wafatkanlah kami dalam keadaan husnul khatimah di atas kalimat tauhid, dan kumpulkanlah kami di akhirat kelak bersama para Nabi, kaum shiddiqin, syuhada, dan shalihin. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-012 - QS. Ali 'Imran Ayat 12.html">&larr; Kembali ke Ayat 12 (QS. 3:12)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 13</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-014 - QS. Ali 'Imran Ayat 14.html">Lanjut ke Ayat 14 (QS. 3:14) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

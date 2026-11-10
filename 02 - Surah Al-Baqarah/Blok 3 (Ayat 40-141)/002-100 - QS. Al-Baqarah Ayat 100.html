@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-100 - QS. Al-Baqarah Ayat 100 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-099 - QS. Al-Baqarah Ayat 99.html">&larr; Ayat Sebelumnya (QS. 2:99)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-101 - QS. Al-Baqarah Ayat 101.html">Ayat Berikutnya (QS. 2:101) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 3 (Ayat 40–141) | Klaster 8: Penentangan Perjanjian & Pembangkangan Wahyu (Ayat 97–103)</span>
+        <span class="badge">10 Kata | 44 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 100</h1>
+    <div class="transliteration">
+        "A-wa-kullamā 'āhadū 'ahdan nabadzahū farīqum minhum, bal aktsaruhum lā yu'minūn(a)"
+    </div>
+    <div class="thematic-title">
+        Anatomi Pengkhianatan Berulang &amp; Dekonstruksi Tabiat Pembangkangan Komitmen: Fenomenologi Pencampakkan Ikatan Suci (Nabadzah), Distingsi Faksi Pelanggar vs Mayoritas Nir-Iman, dan Kehancuran Integritas Moral Peradaban
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Ayat 40–141 | Blok 3: Sejarah, Kritik, &amp; Dialektika Bani Israil + Kiblat Ibrahim AS)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks &amp; Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa &amp; Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S &amp; 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi &amp; Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis &amp; Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah &amp; Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        أَوَكُلَّمَا عَـٰهَدُوا۟ عَهْدًۭا نَّبَذَهُۥ فَرِيقٌۭ مِّنْهُم ۚ بَلْ أَكْثَرُهُمْ لَا يُؤْمِنُونَ ۝١٠٠
+    </div>
+
+    <h3>Terjemahan Presisi &amp; Nuansa Makna</h3>
+    <div class="translation">
+        "Dan patutkah (mereka bersikap sedemikian ingkar), setiap kali mereka mengikat suatu perjanjian (baik dengan Allah maupun sesama manusia), segolongan dari mereka mencampakkannya (begitu saja bagaikan benda tak berharga)? Bahkan sebagian besar dari mereka sebenarnya tidak beriman (sehingga tidak memiliki komitmen moral untuk setia)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Huruf hamzah di awal lafaz <em>a-wa-kullamā</em> adalah <em>hamzah istifhām inkārī taubīkhī</em> (pertanyaan bernada penolakan dan kecaman keras), yang dirangkai dengan huruf <em>waw 'athaf</em> untuk mengaitkan tabiat tercela ini dengan pembangkangan sebelumnya di Ayat 99. Diksi <em>kullamā</em> berfungsi memberikan penegasan bahwa pelanggaran janji tersebut bukanlah anomali insidental yang terjadi sekali dua kali, melainkan sebuah <strong>siklus perilaku patologis yang berulang secara terus-menerus sepanjang sejarah</strong>. Kata <em>nabadzahū</em> secara semantik jauh lebih tajam daripada sekadar <em>naqadhahū</em> (membatalkannya); <em>nabadza</em> menggambarkan tindakan melempar atau membuang sesuatu ke belakang punggung dengan penuh kehinaan dan ketidakpedulian. Terakhir, partikel <em>bal</em> (idhrāb intiqālī) mengalihkan sorotan dari tindakan lahiriah segolongan elit pengkhianat (<em>farīqun minhum</em>) menuju akar penyakit eksistensial mayoritas masyarakat mereka: kekosongan iman yang sejati (<em>bal aktsaruhum lā yu'minūn</em>).
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika &amp; Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz &amp; Rasm</th>
+                <th>Kaidah Tajwid, Makharij &amp; Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) &amp; Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>أَوَكُلَّمَا</strong><br>(<em>A-wa-kullamā</em>)</td>
+                <td>
+                    <strong>Hamzah Istifham:</strong> Keluar dari pangkal tenggorokan (<em>aqshal halq</em>) dengan sifat <em>syiddah</em> dan <em>jahr</em>.<br>
+                    <strong>Waw 'Athaf:</strong> Keluar dari dua bibir yang membulat (<em>asy-syafatain</em>) dengan harakat fathah murni.<br>
+                    <strong>Kāf &amp; Lām Tasydid:</strong> Huruf Kaf memiliki sifat <em>syiddah</em> dan <em>hams</em>. Lam bertasydid dibaca dengan penekanan terukur (<em>nabr</em>) tanpa berlebihan.<br>
+                    <strong>Mad Ashli/Thabi'i:</strong> Pada alif di ujung lafaz (2 harakat).
+                </td>
+                <td>
+                    • <strong>Jumhur Sepuluh Imam:</strong> Membaca dengan fathah pada huruf Waw (<em>A-wa-kullamā</em>), sebagai hamzah istifham inkari yang mendahului huruf 'athaf Waw.<br>
+                    • <strong>Abu Ja'far Al-Madani &amp; Sebagian Riwayat:</strong> Diriwayatkan membaca sukun pada huruf Waw dalam qira'at non-masyhur, namun dalam jalur mutawatirnya sepakat membaca fathah sesuai mushaf Imam. Fathah pada Waw menegaskan kesinambungan logis antara kecaman atas kefasikan mereka di ayat 99 dengan tabiat ingkar janji di ayat 100.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>عَـٰهَدُوا۟</strong><br>(<em>'Āhadū</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>) dengan sifat <em>jahr</em>, <em>tawassuth</em>, dan <em>istifal</em>.<br>
+                    <strong>Mad Ashli:</strong> Pada <em>alif khanjaraniyyah</em> setelah 'Ain (2 harakat) dan Waw jama'ah (2 harakat jika washal).<br>
+                    <strong>Huruf Hā':</strong> Keluar dari pangkal tenggorokan dengan hembusan nafas lembut (<em>hams</em> dan <em>rikhwah</em>).<br>
+                    <strong>Alif Fariqah:</strong> Tertulis dalam rasm (عاهدوا۟) namun tidak diucapkan saat washal maupun waqaf.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca lafaz ini dengan <em>'āhadū</em> (wazan <em>fā'ala</em>), menetapkan bahwa perjanjian tersebut merupakan perbuatan timbal-balik (<em>musyārakah</em>) yang mengikat kedua belah pihak secara sadar dan sukarela, bukan paksaan sepihak.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>عَهْدًۭا</strong><br>(<em>'Ahdan</em>)</td>
+                <td>
+                    <strong>Huruf Hā' Sukun:</strong> Terbaca sukun murni dengan aliran nafas yang jelas (<em>hams</em>). Tidak boleh dipantulkan karena bukan huruf qalqalah.<br>
+                    <strong>Huruf Dāl &amp; Tanwin:</strong> Dal keluar dari ujung lidah bertemu pangkal gigi seri atas. Tanwin fathah bertemu huruf Nun pada kata berikutnya menghasilkan hukum <strong>Idghām Bighunnah</strong> (lebur dengan dengung sempurna selama 2 harakat).
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca dengan harakat manshub ber-tanwin (<em>'ahdan</em>) sebagai <em>maf'ūl muthlaq</em> penguat (<em>ta'kīd</em>). Ketika waqaf darurat, seluruh imam mengganti tanwin menjadi alif mad 'iwadh (dibaca: <em>'ahdā</em>, 2 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>نَّبَذَهُۥ</strong><br>(<em>Nabadzahū</em>)</td>
+                <td>
+                    <strong>Huruf Nūn Bertasydid:</strong> Terjadi akibat idgham bighunnah dari tanwin sebelumnya (<em>ghunnah akmal mā takūn</em>).<br>
+                    <strong>Huruf Bā':</strong> Keluar dari dua bibir terkatup rapat dengan sifat <em>jahr</em> dan <em>syiddah</em>.<br>
+                    <strong>Huruf Żāl:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas (<em>litsawiyyah</em>), dibaca tipis (<em>tarqiq</em>).<br>
+                    <strong>Shilah Sughrā:</strong> Hā' kināyah berharakat dhammah diapit dua huruf berharakat, dibaca panjang 2 harakat saat washal (<em>nabadzahū farīq</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca dengan <em>shilah sughrā</em> pada ha' dhamir ketika washal (2 harakat) dan sukun tanpa mad saat waqaf (<em>nabadzah</em>). Konsensus ini menegaskan kepastian objek yang dicampakkan (yaitu perjanjian suci tersebut).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَرِيقٌۭ</strong><br>(<em>Farīqun</em>)</td>
+                <td>
+                    <strong>Huruf Fā':</strong> Keluar dari perut bibir bawah dengan ujung gigi seri atas (<em>hams</em> dan <em>rikhwah</em>).<br>
+                    <strong>Huruf Rā' Kasrah:</strong> Dibaca <strong>Tarqiq</strong> (tipis) oleh seluruh imam kecuali kaidah khusus Warsy yang menipiskannya secara alami karena kasrah.<br>
+                    <strong>Mad Ashli:</strong> Huruf Ya sukun setelah kasrah (2 harakat).<br>
+                    <strong>Huruf Qāf &amp; Tanwin:</strong> Qaf memiliki sifat <em>isti'lā'</em> dan <em>jahr</em>. Tanwin dhammah bertemu huruf Mim pada kata berikutnya menghasilkan hukum <strong>Idghām Bighunnah</strong> (lebur berdengung 2 harakat).
+                </td>
+                <td>
+                    Seluruh imam membaca dengan dhammah ber-tanwin sebagai <em>fā'il</em> (subjek pelaku). Pola tankīr (indefinit) dipertahankan oleh seluruh transmisi mutawatir untuk menandaskan ketelitian hukum Al-Qur'an yang tidak memvonis seluruh kelompok secara serampangan.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>مِّنْهُم ۚ</strong><br>(<em>Minhum</em>)</td>
+                <td>
+                    <strong>Huruf Mīm Kasrah:</strong> Lebur dari tanwin sebelumnya.<br>
+                    <strong>Nūn Sukun Bertemu Hā':</strong> Hukum <strong>Idzhār Halqī</strong> murni tanpa dengung tambahan; suara nun tertahan sedang (<em>tawassuth</em>).<br>
+                    <strong>Mīm Jama':</strong> Bertemu huruf Ba' pada kata berikutnya (<em>bal</em>). Terjadi hukum <strong>Idzhār Syafawī</strong> bagi mayoritas imam saat washal.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsir &amp; Abu Ja'far:</strong> Membaca dengan <strong>Shilah Mīm al-Jam'</strong> ketika washal ke kata sesudahnya: <em>"minhumū bal..."</em> (panjang 2 harakat).<br>
+                    • <strong>Imam Qalun 'an Nafi':</strong> Memiliki dua jalur bacaan yang sama-sama sahih: sukun mim jama' (<em>minhum bal</em>) dan shilah mim jama' (<em>minhumū bal</em>).<br>
+                    • <strong>Tujuh Imam Lainnya:</strong> Membaca sukun murni pada mim jama' (<em>minhum bal</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>بَلْ</strong><br>(<em>Bal</em>)</td>
+                <td>
+                    <strong>Huruf Bā':</strong> Keluar dari dua bibir dengan sifat <em>jahr</em> dan <em>syiddah</em>.<br>
+                    <strong>Huruf Lām Sukun:</strong> Terbaca jelas (<strong>Idzhār</strong>) karena bertemu huruf Hamzah (bukan huruf Ra atau Lam). Aliran suara berada pada sifat <em>tawassuth</em> (antara tertahan dan mengalir bebas).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca lafaz ini dengan sukun pada Lam (<em>bal</em>), tanpa idgham atau saktah, berfungsi mutlak sebagai huruf <em>idhrāb</em> (peralihan diskursus).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>أَكْثَرُهُمْ</strong><br>(<em>Aktsaruhum</em>)</td>
+                <td>
+                    <strong>Hamzah Qatha':</strong> Dibaca tahqiq jelas dari pangkal tenggorokan.<br>
+                    <strong>Huruf Tsa' Sukun:</strong> Keluar dari ujung lidah bertemu ujung gigi seri atas, memiliki sifat <em>hams</em> (nafas berhembus) dan <em>rikhwah</em>.<br>
+                    <strong>Huruf Rā' Dhammah:</strong> Dibaca <strong>Tafkhīm</strong> (tebal).<br>
+                    <strong>Mīm Jama':</strong> Bertemu huruf Lam pada kata berikutnya menghasilkan <strong>Idzhār Syafawī</strong> yang tegas.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsir &amp; Abu Ja'far:</strong> Membaca dengan <strong>Shilah Mīm al-Jam'</strong> saat washal: <em>"aktsaruhumū lā..."</em>.<br>
+                    • <strong>Qalun:</strong> Dua wajah (sukun dan shilah).<br>
+                    • <strong>Tujuh Imam Lainnya:</strong> Membaca sukun murni (<em>aktsaruhum lā...</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>لَا</strong><br>(<em>Lā</em>)</td>
+                <td>
+                    <strong>Huruf Lām &amp; Alif:</strong> Huruf Lam tipis (<em>tarqiq</em>) disambung alif mad ashli, dipanjangkan 2 harakat saat washal maupun waqaf.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca seragam dengan <em>lā nāfiyah</em> (menafikan perbuatan iman).
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>يُؤْمِنُونَ ۝١٠٠</strong><br>(<em>Yu'minūn</em>)</td>
+                <td>
+                    <strong>Huruf Yā' Dhammah:</strong> Keluar dari tengah lidah bertemu langit-langit keras.<br>
+                    <strong>Hamzah Sukun:</strong> Terletak di pangkal tenggorokan dengan sifat <em>syiddah</em> sempurna (suara tertahan mutlak).<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Huruf Waw mad bertemu Nun yang disukunkan karena waqaf di akhir ayat; boleh dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuth</em> pada huruf Nun.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nafi', As-Susi 'an Abi 'Amr, &amp; Abu Ja'far:</strong> Membaca dengan <strong>Ibdāl Hamzah</strong> menjadi huruf Waw mad murni yang dipanjangkan: <em>"Yūminūn"</em> (يُومِنُونَ), karena kaidah mereka mengganti hamzah sukun yang menempati posisi fa' fi'il.<br>
+                    • <strong>Imam Hamzah Al-Kufi:</strong> Membaca <em>tahqīq</em> saat washal (<em>yu'minūn</em>) dan membaca <em>ibdāl</em> menjadi Waw (<em>yūminūn</em>) khusus ketika waqaf.<br>
+                    • <strong>Enam Imam Lainnya ('Ashim, Ibnu Katsir, Al-Kisa'i, Ibnu 'Amir, Ya'qub, Khalaf al-'Asyir):</strong> Membaca dengan <strong>Tahqīq Hamzah</strong> secara konsisten baik washal maupun waqaf: <em>"Yu'minūn"</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul &amp; Hadits Sahih Penjelas</h3>
+    <p>
+        Secara kronologi pewahyuan, ayat ini diturunkan di Madinah pada fase konsolidasi awal masyarakat Islam, merespons dialog teologis dan manuver politik para tokoh Yahudi Madinah yang secara sistematis mendistorsi sejarah kenabian dan mengingkari perjanjian teologis yang tercantum di dalam kitab suci mereka sendiri.
+    </p>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Riwayat Ibnu Abbas r.a. (Tafsir At-Tabari No. 1656 &amp; Tafsir Ibnu Abi Hatim No. 977, Sanad Hasan):</strong><br>
+        Diriwayatkan oleh Muhammad bin Ishaq, dari Muhammad bin Abi Muhammad, dari Ikrimah atau Sa'id bin Jubair, dari Abdullah bin Abbas r.a., ia berkata: Ketika Rasulullah ﷺ mengingatkan orang-orang Yahudi Madinah tentang perjanjian yang telah diambil Allah atas mereka (dalam Taurat untuk mengimani dan menolong Nabi akhir zaman), berkatalah <strong>Malik bin Ash-Shaif</strong> (salah seorang tokoh elit rabi Yahudi Madinah): <em>"Wallāhi mā 'uhida ilaynā fī Muḥammadin 'ahdun, wa lā ukhidza 'alaynā lahū mītsāq"</em> (Demi Allah, tidak pernah ada perjanjian apa pun yang diikatkan kepada kami mengenai Muhammad, dan tidak pernah diambil sumpah setia dari kami untuk mengikutinya!). Maka Allah ﷻ menurunkan ayat ini: <em>"A-wa-kullamā 'āhadū 'ahdan nabadzahū farīqum minhum, bal aktsaruhum lā yu'minūn."</em><br>
+        <em>Analisis Sanad:</em> Riwayat ini berderajat <strong>Hasan</strong> dan memiliki jalur penguat (<em>syawāhid</em>) dari jalur Ibnu Juraij dan As-Suddi, membuktikan konteks historis penolakan terang-terangan para pemuka Yahudi terhadap nubuat Rasulullah ﷺ.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 33) &amp; Sahih Muslim (No. 59) dari Abdullah bin 'Amr r.a. — Ciri Hakiki Kemunafikan:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Arba'un man kunna fīhi kāna munāfiqan khālishan, wa man kānat fīhi khashlatun minhunna kānat fīhi khashlatun minan-nifāqi hattā yada'ahā: idzā-tumina khāna, wa idzā haddatsa kadzaba, <strong>wa idzā 'āhada ghadara</strong>, wa idzā khāshama fajara."</em><br>
+        (Empat perkara yang apabila seluruhnya ada pada diri seseorang, maka ia adalah munafiq murni; dan barangsiapa yang memiliki salah satu sifat di antaranya, maka dalam dirinya terdapat satu cabang kemunafikan hingga ia meninggalkannya: jika dipercaya ia berkhianat, jika berbicara ia berdusta, <strong>jika mengikat perjanjian ia membatalkannya secara khianat</strong>, dan jika bertikai ia melampaui batas). Hadits ini memberikan dasar teologis bahwa mencampakkan perjanjian adalah indikator klinis penyakit kemunafikan yang merusak akidah.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhari (No. 3177) &amp; Sahih Muslim (No. 1735) dari Ali bin Abi Thalib r.a. &amp; Abdullah bin Umar r.a. — Konsekuensi Kosmik Pengkhianatan Janji:</strong><br>
+        Rasulullah ﷺ menegaskan hukum syariat dan eskatologis: <em>"Dzimmatul-muslimīna wāhidatun yas'ā bihā adnāhum, fa-man akhfara musliman fa-'alayhi la'natullāhi wal-malā'ikati wan-nāsi ajma'īn, lā yuqbalu minhu yawmal-qiyāmati sharfun wa lā 'adl... <strong>Wa li-kulli ghādirin liwā'un yawmal-qiyāmati yusyra'u lahū bi-qadri ghadratihī, yuqālu: Hādzihī ghadratu fulān bin fulān!</strong>"</em><br>
+        (Jaminan perlindungan kaum Muslimin itu satu, diupayakan oleh orang yang paling rendah derajatnya sekalipun. Barangsiapa yang merusak perjanjian damai seorang Muslim, maka baginya laknat Allah, malaikat, dan seluruh manusia; tidak diterima darinya amalan wajib maupun sunnah pada hari kiamat... <strong>Dan setiap pengkhianat janji akan memiliki panji kehinaan pada hari kiamat yang dikibarkan setinggi kadar pengkhianatannya, lalu diserukan: Inilah pengkhianatan si Fulan bin Fulan!</strong>).
+    </div>
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Bukhari (No. 2227) dari Abu Hurairah r.a. — Deklarasi Perang Ilahi terhadap Pengingkar Komitmen:</strong><br>
+        Rasulullah ﷺ meriwayatkan firman Allah (Hadits Qudsi): <em>"Qālallāhu Ta'ālā: Tsalātsatun Anā khashmuhum yawmal-qiyāmah: <strong>rajulun a'ṭhā bī tsumma ghadar</strong>, wa rajulun bā'a hurran fa-akala tsamanahu, wa rajulun ista'jara ajīran fastawfā minhu wa lam yu'ṭihī ajrah."</em><br>
+        (Allah Ta'ala berfirman: Tiga golongan yang Aku sendiri menjadi musuh dan penuntut mereka pada hari kiamat: <strong>seseorang yang memberikan sumpah/janji atas nama-Ku lalu ia berkhianat</strong>, seseorang yang menjual orang merdeka lalu memakan hasil penjualannya, dan seseorang yang menyewa tenaga pekerja dan telah diselesaikan pekerjaannya namun ia tidak membayarkan upahnya).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis &amp; Balaghah)</h2>
+
+    <h3>Analisis Etimologi &amp; Medan Semantik Akar Kata (Mu'jam Maqāyīs al-Lughah &amp; Lisān al-'Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. '-H-D (ع-ه-د — Al-'Ahd &amp; 'Āhadū):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> merumuskan bahwa akar kata <em>'Ain-Hā'-Dāl</em> berpusat pada dua poros makna utama: <em>al-wushlānu baynas-syay'aini wal-iltizām</em> (menyambungkan dua hal secara erat dan saling mengikat) serta <em>ar-ri'āyah wal-hifzh</em> (pemeliharaan, pengawasan, dan perlindungan yang berkesinambungan). Bangsa Arab menyebut air hujan pertama yang menyuburkan tanah sebagai <em>al-'uhdah</em> karena ia memperbarui kehidupan. Kata <em>al-'ahd</em> adalah ikatan komitmen sakral yang menuntut pemeliharaan terus-menerus tanpa putus.<br>
+            Bentuk kata kerja <strong>'Āhadū (عَـٰهَدُوا)</strong> berwazan <em>fā'ala</em> (<em>mufā'alah</em>), menandakan relasi interaktif dua pihak (bilateral): sebuah perjanjian yang disepakati secara sadar melalui akad timbal-balik, baik ikatan perjanjian primordial antara manusia dengan Allah di bukit Sinai (<em>Mītsāq</em>), maupun pakta sosial-politik yang diikat dengan Rasulullah ﷺ di Madinah. Penambahan <em>maf'ūl muthlaq</em> <strong>'Ahdan (عَهْدًا)</strong> mempertegas dimensi kesakralan dan kekuatan hukum dari komitmen yang diikrarkan.
+        </li>
+        <li>
+            <strong>2. N-B-DZ (ن-ب-ذ — Nabadzahu):</strong><br>
+            Akar kata <em>Nūn-Bā'-Żāl</em> menurut Ibnu Faris berporos pada satu makna sahih: <em>al-ilhā'u wat-tharhu min yadika qillata ikhtirāsin bihi aw istikhfāfan</em> (melempar, mencampakkan, dan menjatuhkan sesuatu dari tangan karena menganggapnya hina, tidak berharga, dan sama sekali tidak dipedulikan). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menambahkan: <em>an-nabdzu: tharhukas-syay'a amāmaka aw warā'aka</em> (mencampakkan sesuatu ke depan atau ke belakang tubuhmu). Dari akar kata ini lahir istilah <em>al-laqīth al-manbūdz</em> (bayi malang yang dibuang oleh orang tuanya di jalanan).<br>
+            Pemilihan diksi <strong>Nabadzahū</strong> dan bukan sekadar <em>naqadhahū</em> (mengurainya) atau <em>fasakhahū</em> (membatalkannya) mengandung muatan visual-psikologis yang sangat menghujam: mereka memperlakukan perjanjian suci yang disaksikan oleh Sang Pencipta alam semesta bagaikan remah-remah sampah yang dicampakkan ke tanah tanpa beban moral sedikit pun!
+        </li>
+        <li>
+            <strong>3. F-R-Q (ف-ر-ق — Farīqun):</strong><br>
+            Akar kata <em>Fā'-Rā'-Qāf</em> berporos pada pemisahan, pemilahan, dan pembagian sesuatu dari kesatuan induknya (<em>al-faṣlu wat-tamyīz</em>). <strong>Al-Farīq</strong> adalah sekelompok orang yang memisahkan diri dari kelompok besarnya untuk mengambil sikap, pandangan, atau tindakan tertentu. Bentuk <em>tankīr</em> (indefinit / tanpa alif lam) pada kata <em>farīqun</em> mengindikasikan <strong>keadilan objektif wahyu (al-inshāf al-Qur'ānī)</strong>: Al-Qur'an tidak memvonis seluruh individu Yahudi secara mutlak dan serampangan; Al-Qur'an mengakui bahwa pada fase awal, pengkhianatan formal digerakkan oleh satu faksi/sekelompok elit pembangkang, sementara segelintir lainnya (seperti Abdullah bin Salam r.a. dan kawan-kawannya) tetap setia pada kebenaran.
+        </li>
+        <li>
+            <strong>4. K-TS-R (ك-ث-ر — Aktsaruhum):</strong><br>
+            Akar kata <em>Kāf-Tsa'-Rā'</em> menunjukkan kelimpahan, kelebihan jumlah, dan dominasi kuantitatif (kebalikan dari <em>al-qillah</em>). Bentuk <em>af'alu at-tafdhīl</em> <strong>Aktsaruhum (أَكْثَرُهُمْ)</strong> bermakna mayoritas mutlak yang mendominasi populasi. Kehadiran kata ini mengoreksi ilusi bahwa penyimpangan hanya terjadi pada segelintir orang: meskipun yang mencampakkan secara terbuka adalah satu faksi (<em>farīq</em>), namun mayoritas masyarakat mereka (<em>aktsaruhum</em>) memiliki sikap batin yang identik: nir-iman dan merestui pelanggaran tersebut.
+        </li>
+        <li>
+            <strong>5. A-M-N (أ-م-ن — Lā Yu'minūn):</strong><br>
+            Akar kata <em>Hamzah-Mīm-Nūn</em> berpusat pada dua pilar makna: <em>ath-thuma'nīnah</em> (ketenangan dan rasa aman dari rasa takut) serta <em>al-amānah</em> (integritas pemenuhan janji yang merupakan lawan dari khianat). Bentuk fi'il mudhari' <strong>Lā Yu'minūn (لَا يُؤْمِنُونَ)</strong> menegaskan penafian keimanan yang bersifat kontinu dan menetap: ketiadaan iman dalam hati mereka adalah akar kausalitas utama mengapa mereka tidak pernah merasa terikat oleh amanah perjanjian apa pun.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf &amp; I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq &amp; Mahallul Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>أَ</strong></td>
+                <td>Hamzah Istifham, harf mabni 'alal-fath.</td>
+                <td>Huruf istifham inkari taubikhi, menempati posisi awal kalimat (<em>lahu shadāratul kalām</em>), tidak memiliki kedudukan i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>وَ</strong></td>
+                <td>Harf 'Athaf, mabni 'alal-fath.</td>
+                <td>Huruf penghubung yang mengathafkan jumlah ini kepada narasi pembangkangan di ayat sebelumnya (Ayat 99: <em>wa mā yakfuru bihā illal-fāsiqūn</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>كُلَّمَا</strong></td>
+                <td>Tersusun dari <em>Kull</em> (isim jins) dan <em>Mā</em> Mashdariyyah Zharafiyyah.</td>
+                <td>Zharf zaman mabni/manshub mutadhammin ma'nasy-syarth (kata keterangan waktu yang mengandung makna syarat pengulangan). Muta'alliq kepada jawab syarth (<em>nabadzahū</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>عَـٰهَدُوا۟</strong></td>
+                <td>Fi'il madhi wazan <em>fā'ala</em>, mabni 'aladh-dhammi karena bersambung dengan Waw Jama'ah.</td>
+                <td>Fi'il syarat dari <em>kullamā</em>. Waw Jama'ah adalah dhomir muttashil mabni 'alas-sukun fi mahalli raf'in <strong>Fā'il</strong>. Alif fariqah penanda jamak.</td>
+            </tr>
+            <tr>
+                <td><strong>عَهْدًۭا</strong></td>
+                <td>Isim mashdar dari <em>'ahada</em> di atas wazan <em>fa'l</em>.</td>
+                <td>Manshub dengan fathah zhahirah berkedudukan sebagai <strong>Maf'ūl Muthlaq</strong> untuk menegaskan perbuatan (<em>li-ta'kīdil fi'li</em>). Opsi kedua: Maf'ul bih (makna: memberi janji).</td>
+            </tr>
+            <tr>
+                <td><strong>نَّبَذَهُۥ</strong></td>
+                <td>Fi'il madhi mujarrad wazan <em>fa'ala</em> mabni 'alal-fath; bersambung dengan Hā' dhamir gha'ib.</td>
+                <td>Jumlah fi'liyyah ini adalah <strong>Jawab Syarth</strong> dari <em>kullamā</em>, <em>lā mahalla lahā minal i'rāb</em>. Hā' dhamir muttashil mabni 'aladh-dhammi fi mahalli nashbin <strong>Maf'ūl Bih</strong> (merujuk ke <em>al-'ahd</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>فَرِيقٌۭ</strong></td>
+                <td>Isim jamak di atas wazan <em>fa'īl</em> dengan tanwin tanda nakirah.</td>
+                <td>Marfu' dengan tanda dhammah zhahirah di ujungnya berkedudukan sebagai <strong>Fā'il</strong> (subjek pelaku) dari fi'il <em>nabadzahu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّنْهُم</strong></td>
+                <td><em>Min</em> huruf jarr lil-tab'īdh; <em>Hum</em> dhomir jama' mudzakkar gha'ib mabni 'alas-sukun.</td>
+                <td>Jār wa majrūr syibhul jumlah fi mahalli raf'in berkedudukan sebagai <strong>Na'at / Sifat</strong> bagi lafaz <em>farīqun</em> (sekelompok orang yang merupakan bagian dari mereka).</td>
+            </tr>
+            <tr>
+                <td><strong>بَلْ</strong></td>
+                <td>Harf Idhrāb Intiqālī, mabni 'alas-sukun.</td>
+                <td>Huruf peralihan makna dari satu diskursus menuju tingkatan diskursus lain yang lebih esensial dan mendasar, tidak memiliki kedudukan i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>أَكْثَرُهُمْ</strong></td>
+                <td><em>Aktsaru</em> isim tafdhil mudhaf; <em>Hum</em> dhomir muttashil mudhaf ilayh.</td>
+                <td><em>Aktsaru</em> marfu' dengan dhammah zhahirah berkedudukan sebagai <strong>Mubtada'</strong> (subjek kalimat baru). <em>Hum</em> fi mahalli jarrin Mudhaf Ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>لَا</strong></td>
+                <td>Harf Nafyin ghair 'āmil, mabni 'alas-sukun.</td>
+                <td>Huruf penafi yang meniadakan perbuatan fi'il mudhari' tanpa mengubah i'rabnya.</td>
+            </tr>
+            <tr>
+                <td><strong>يُؤْمِنُونَ</strong></td>
+                <td>Fi'il mudhari' dari <em>āmana – yu'minu</em> (bābul if'āl).</td>
+                <td>Marfu' dengan tanda <strong>Tsubūtun-Nūn</strong> karena termasuk <em>af'ālul khamsah</em>. Waw Jama'ah fi mahalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah <em>(lā yu'minūn)</em> fi mahalli raf'in <strong>Khabar Mubtada'</strong> dari <em>aktsaruhum</em>. Seluruh jumlah ismiyyah berstatus <em>Isti'nāfiyyah</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' &amp; I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Retorika Hamzah Istifhām Inkārī Taubīkhī (استفهام إنكاري توبيخي):</strong><br>
+            Penggunaan hamzah di awal kalimat bukan bertujuan meminta informasi faktual (<em>istikhbār</em>), melainkan instrumen retoris tertinggi untuk melancarkan celaan keras, keheranan mendalam, dan penelanjangan atas keganjilan moral yang melampaui batas kewajaran. Pertanyaan ini seakan-akan mengguncang akal budi pendengar: <em>"Bagaimana mungkin ada sekelompok manusia yang setiap kali mengikat janji suci di hadapan Allah dan manusia, mereka selalu mencampakkannya tanpa rasa bersalah?!"</em>. Hamzah ini meruntuhkan legitimasi moral kaum pelanggar janji di hadapan publik sejarah.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Fungsi Gramatikal "Kullamā" sebagai Pola Repetisi Siklis (إفادة التكرار والاستمرار):</strong><br>
+            Dalam gramatika Arab, partikel <em>kullamā</em> berbeda secara fundamental dengan <em>idzā</em> atau <em>in</em>. <em>Kullamā</em> meniscayakan pengulangan syarat dan jawab secara berulang-ulang tanpa terputus (<em>tikrārul-wuqū'</em>). Ini mengungkapkan bahwa pengkhianatan Bani Israil bukanlah kecelakaan situasional, melainkan <strong>tabiat karakter yang telah membatu (habitual betrayal)</strong>. Sejak zaman Nabi Musa di lembah Sinai, perjanjian dengan Nabi Isa, hingga pakta damai dengan Nabi Muhammad ﷺ di Madinah, pola mereka selalu sama: berjanji ketika tertekan, lalu mengkhianati ketika merasa aman.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Majaz Isti'ārah &amp; Visualisasi Plastis pada Kata "Nabadzahū" (التجسيم والتصوير الفني):</strong><br>
+            Alih-alih menggunakan kata abstrak seperti <em>naqadha</em> (membatalkan akad), Al-Qur'an memilih kata <em>nabadzahū</em>. Ini adalah gaya <em>isti'ārah tamtsīliyyah</em> atau tajsīm (personifikasi konkret): perjanjian suci yang sarat tanggung jawab moral dan spiritual dianalogikan bagaikan <strong>benda fisik sepele, kotor, dan tidak bernilai yang dilemparkan begitu saja ke comberan atau ke belakang punggung</strong>. Gaya visual ini memancarkan arogansi ekstrem sang pelaku sekaligus kehinaan nasib perjanjian tersebut di mata mereka.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Keadilan Tankīr "Farīqun" vs Eskalasi "Aktsaruhum" (التنكير للإنصاف والإضراب الانتقالي):</strong><br>
+            Kehadiran kata <em>farīqun</em> secara nakirah adalah bukti integritas keadilan firman Allah. Al-Qur'an tidak mengatakan <em>"nabadzūhu jamī'an"</em> (mereka semua mencampakkannya), karena selalu ada segelintir jiwa yang jujur di antara mereka. Namun, balaghah Al-Qur'an tidak berhenti di situ; partikel <em>bal</em> (idhrāb intiqālī) seketika melompat dari ranah perilaku parsial ke ranah psikososial kolektif: <em>"bal aktsaruhum lā yu'minūn"</em>. Jika pelaku pelanggaran terbuka adalah faksi elit konspirator (<em>farīq</em>), maka mayoritas rakyatnya (<em>aktsaruhum</em>) menanggung dosa sistemik karena mereka hidup dalam ketiadaan iman sejati dan meridhai manuver para elit tersebut.
+        </li>
+        <li>
+            <strong>Ilmu Badi' &amp; I'jaz Fonetik — Harmoni Akustik Desis dan Hentakan Suara:</strong><br>
+            Terdapat kontras fonetik yang dramatis: aliran desis lembut huruf <em>Żāl</em> pada kata <em>'āhadū</em> dan <em>nabadzahū</em> memberikan efek suara yang halus, namun seketika terpotong oleh hentakan keras huruf <em>Qāf</em> pada <em>farīqun</em> dan letupan <em>Bā'</em> pada <em>bal</em>. Perpaduan ini merefleksikan suasana psikologis perjanjian: ikatan janji yang awalnya diikrarkan dengan kelembutan lisan, tiba-tiba dirobek secara kasar oleh pengkhianatan. Ayat ini kemudian ditutup dengan dengung panjang mad huruf <em>Waw</em> dan <em>Nun</em> pada <em>lā yu'minūn</em>, meninggalkan gema kehampaan moral yang murung dan tragis.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S &amp; 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S &amp; 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Tautan Teks Mendahului — Korelasi Kausalitas dengan Ayat 99):</strong><br>
+            Pada Ayat 99, Allah menegaskan kedaulatan epistemologis wahyu: <em>"Wa laqad anzalnā ilaika āyātim-bayyināt, wa mā yakfuru bihā illal-fāsiqūn"</em> (Dan sungguh Kami telah menurunkan kepadamu bukti-bukti kebenaran yang benderang, dan tidak ada yang mengingkarinya melainkan orang-orang yang fasik). Ayat 100 langsung menyambung dengan partikel <em>A-wa</em> (Dan apakah patut...?), membongkar manifestasi klinis dari 'kefasikan' tersebut. Penolakan mereka terhadap ayat-ayat Al-Qur'an bukanlah karena bukti yang kurang jelas, melainkan karena mereka mengidap <strong>patologi historis pembatalan komitmen</strong>: jangankan mengakui Al-Qur'an yang baru turun, perjanjian suci yang telah terpatri ratusan tahun di dalam kitab Taurat mereka sendiri pun selalu mereka campakkan setiap kali berbenturan dengan hawa nafsu.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 3: Kritik &amp; Dialektika Bani Israil, Ayat 40–141):</strong><br>
+            Ayat 100 menempati posisi sentral dalam <strong>Klaster 8 (Ayat 97–103)</strong> yang menguliti argumen-argumen manipulatif kaum Yahudi Madinah dalam menolak risalah Islam. Siyāq ayat-ayat ini memperlihatkan rantai pembangkangan yang sistematis:
+            <br>• <em>Ayat 97–98:</em> Alasan sentimen personal dan kebencian irasional kepada Malaikat Jibril as.
+            <br>• <em>Ayat 99:</em> Penolakan keras kepala terhadap mukjizat Al-Qur'an yang jelas.
+            <br>• <em>Ayat 100:</em> Penelanjangan watak turun-temurun dalam mencampakkan perjanjian (<em>'ahd</em>).
+            <br>• <em>Ayat 101–102:</em> Puncak kejatuhan moral: mencampakkan Taurat ke belakang punggung demi mempelajari sihir Babilonia dan tipu daya setan Harut-Marut.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 101 — Dari Perjanjian Abstrak ke Perilaku Konkret):</strong><br>
+            Pernyataan umum <em>nabadzahū farīqum minhum</em> di Ayat 100 secara retoris memantik pertanyaan: <em>"Bagaimanakah bentuk konkret pencampakkan janji tersebut di era kenabian Muhammad ﷺ?"</em>. Ayat 101 seketika menjawab secara definitif: <em>"Wa lammā jā'ahum rasūlum-min 'indillāhi mushaddiqul-limā ma'ahum, <strong>nabadza farīqum-minalladzīna ūtul-kitāba kitāballāhi warā'a zhuhūrihim ka-annahum lā ya'lamūn</strong>"</em>. Kata <em>nabadza</em> diulang kembali pada ayat 101 untuk membuktikan bahwa ketika Rasulullah ﷺ datang membenarkan Taurat, respons mereka adalah mencampakkan Kitabullah itu ke belakang punggung mereka seolah-olah mereka adalah orang-orang yang bodoh dan buta huruf!
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis Madaniyah: Geopolitik Yatsrib &amp; Manuver Elit Yahudi</h3>
+    <p>
+        Pasca-Hijrah tahun 622 M, Rasulullah ﷺ meletakkan fondasi konstitusional peradaban Madinah melalui <strong>Piagam Madinah (Mītsāq al-Madīnah)</strong>. Piagam ini adalah sebuah konsensus sosial-politik modern yang mengikat komunitas Muslim (Muhajirin dan Anshar) dengan komunitas Yahudi (Bani Qainuqa, Bani Nadhir, dan Bani Quraizhah) sebagai satu kesatuan politik (<em>ummatun wāhidah</em>) yang wajib saling membela menghadapi agresi luar dan menjaga perdamaian internal.
+    </p>
+    <p>
+        Namun, watak sosiologis elit Yahudi Madinah terbiasa dengan dominasi ekonomi ribawi dan politik adu domba antara suku Aus dan Khazraj sebelum kedatangan Islam. Ketika persaudaraan Islam menyatukan masyarakat Madinah di bawah panji tauhid, hegemoni mereka runtuh. Di balik kepatuhan formal di atas kertas, tokoh-tokoh mereka seperti Ka'ab bin Al-Asyraf, Huyay bin Akhthab, dan Malik bin Ash-Shaif terus merancang konspirasi bawah tanah. Ketika ditagih komitmen mereka terhadap Taurat yang memerintahkan iman kepada nabi akhir zaman, Malik bin Ash-Shaif bersumpah bohong di hadapan kaumnya bahwa janji itu tidak pernah ada. Pengkhianatan ini mencapai puncaknya ketika Bani Qainuqa melanggar kehormatan wanita muslimah dan mengancam perang, Bani Nadhir berkonspirasi membunuh Nabi ﷺ dengan menjatuhkan batu penggilingan dari atas atap benteng, dan Bani Quraizhah merobek pakta pertahanan Madinah di saat genting Perang Ahzab/Khandaq ketika puluhan ribu pasukan sekutu mengepung Madinah. Ayat ini mengabadikan diagnosis abadi atas kerapuhan komitmen kaum yang kehilangan integritas iman.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi &amp; Mazhab (8 Ulama &amp; Otoritas)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur &amp; Analisis Riwayat):</strong><br>
+        At-Tabari mendudukkan ayat ini sebagai teguran keras terhadap arogansi rabi-rabi Yahudi Madinah yang mengingkari nubuat Taurat. Menukil riwayat Ibnu Abbas tentang Malik bin Ash-Shaif, At-Tabari menegaskan bahwa kata <em>'ahadū 'ahdan</em> mencakup dua lapis ikatan: perjanjian pertama yang diikat Allah atas nenek moyang mereka di bukit Tursina untuk berpegang teguh pada syariat Taurat, dan perjanjian kedua yang diikat oleh kaum Yahudi kontemporer dengan Nabi Muhammad ﷺ di Madinah. Mengenai kata <em>nabadzahū</em>, At-Tabari menafsirkannya sebagai: <em>"Raddūhu wa naqadhūhu wa tharahūhu warā'a zhuhūrihim"</em> (Mereka menolaknya, merobeknya, dan membuangnya ke belakang punggung mereka tanpa rasa takut). At-Tabari menegaskan bahwa <em>bal aktsaruhum lā yu'minūn</em> adalah ketetapan takdir: mayoritas mereka secara batin mendustakan kebenaran batiniah Taurat itu sendiri, sehingga pengkhianatan lahiriah hanyalah konsekuensi wajar dari kekafiran yang mengakar di dalam dada.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Ayat &amp; Teologi Salaf):</strong><br>
+        Ibnu Katsir menyoroti kesinambungan historis kejahatan pembatalan sumpah ini. Beliau mengorelasikan ayat ini dengan firman Allah di QS. Al-Ma'idah Ayat 13: <em>"Fa-bimā naqdhihim mītsāqahum la'annāhum wa ja'alnā qulūbahum qāsiyah"</em> (Maka karena mereka melanggar janjinya, Kami mengutuk mereka dan Kami jadikan hati mereka membatu). Ibnu Katsir menggarisbawahi bahwa watak melanggar janji adalah kutukan yang menyebabkan hati mereka mengeras dari menerima petunjuk. Beliau menjelaskan bahwa makna <em>bal aktsaruhum lā yu'minūn</em> berfungsi sebagai <em>ta'līl</em> (penjelasan kausatif): penyebab utama mereka begitu enteng mencampakkan janji suci adalah karena mayoritas mereka sama sekali tidak memiliki keimanan yang sejati kepada Allah, hari kiamat, dan kitab suci mereka sendiri; agama bagi mereka hanyalah identitas kebanggaan etnis, bukan komitmen spiritual yang menuntut ketaatan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih &amp; Etika Hukum):</strong><br>
+        Al-Qurthubi memfokuskan analisisnya pada dimensi fiqih kewajiban menepati janji (<em>wujūb al-wafā' bil-'uhūd</em>) dan kehancuran status hukum bagi para pengkhianat. Beliau menjelaskan bahwa perjanjian (<em>al-'ahd</em>) mencakup segala bentuk akad yang sah: janji hamba kepada Allah, perjanjian damai antarbangsa (<em>mu'āhadah</em>), pakta pertahanan, hingga akad muamalah transaksi harian. Al-Qurthubi mengutip kaidah hukum: seorang kafir harbi yang mengikat perjanjian damai (<em>mu'āhad</em>) haram ditumpahkan darahnya selama ia menepati janji; namun apabila mereka mencampakkan perjanjian tersebut (<em>nabadzū al-'ahda</em>), maka perlindungan hukum mereka gugur seketika. Beliau memperingatkan umat Islam agar tidak terjangkit penyakit Bani Israil ini, seraya mengutip hadits panji pengkhianat pada hari kiamat sebagai peringatan moral paling menakutkan bagi para pemimpin dan masyarakat yang mengabaikan komitmen.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) &amp; Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> &amp; <em>Mafātīḥul-Ghayb</em> (Kajian Balaghah &amp; Dialektika Teologis):</strong><br>
+        Az-Zamakhsyari mengupas kedalaman balaghah hamzah istifham: bagaimana pertanyaan retoris ini mempermalukan posisi intelektual lawan dialog dengan menghadapkannya pada kontradiksi internal mereka sendiri. Bagaimana mungkin bangsa yang mengklaim sebagai "umat pilihan Allah" memiliki rekam jejak kriminalitas moral yang berulang-ulang mencampakkan perjanjian Allah?<br>
+        Ar-Razi kemudian memecahkan sebuah dialektika filosofis: <em>"Mengapa Allah menyebut 'farīqun minhum' (sebagian) pada tindakan mencampakkan janji, namun menutupnya dengan 'bal aktsaruhum lā yu'minūn' (mayoritas mereka tidak beriman)?"</em> Ar-Razi menjawab dengan sangat tajam: Pelanggaran komitmen formal sering kali diinisiasi dan dieksekusi secara teknis oleh elit politik dan para pemimpin agama (<em>ar-ru'asā' wal-aḥbār</em>) yang terwakili oleh kata <em>farīq</em>; namun masyarakat awam mereka (<em>al-'awāmm</em>) yang berjumlah mayoritas (<em>aktsar</em>) ikut memikul tanggung jawab moral yang sama karena mereka hidup dalam kepalsuan iman, membebek secara taklid buta, dan tidak pernah melakukan koreksi kritis atas kezaliman para pemimpin mereka. Keridhaan atas pengkhianatan adalah persekutuan dalam dosa pengkhianatan itu sendiri.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em> (Analisis Sosiologi Politik &amp; Maqashid Syariah):</strong><br>
+        Ibnu 'Asyur membedah ayat ini dari perspektif <strong>sosiologi integritas bangsa (Integritas Komitmen sebagai Tiang Kohesi Peradaban)</strong>. Beliau menegaskan bahwa sebuah peradaban hanya dapat berdiri kokoh jika di antara warganya dan para pemimpinnya terdapat rasa saling percaya (<em>mutual trust</em>) yang diikat oleh kesakralan janji. Ketika sebuah bangsa menjadikan pembatalan komitmen sebagai instrumen politik oportunistik yang sah, maka modal sosial (<em>social capital</em>) bangsa tersebut hancur berkeping-keping. Ibnu 'Asyur menganalisis bahwa penggunaan kata <em>nabadzahū</em> mencerminkan hilangnya rasa malu kolektif (<em>suqūṭul-ḥayā'</em>): mereka tidak lagi merasa bersalah saat melanggar janji, melainkan menganggapnya sebagai kecerdikan diplomasi. Inilah tanda pembusukan peradaban yang paling parah, yang mendahului kejatuhan dan kehinaan mereka di panggung sejarah dunia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Kajian Adabi Ijtima'i &amp; Kontekstual Nusantara):</strong><br>
+        Quraish Shihab menguraikan bahwa kata <em>'ahd</em> dalam terminologi Al-Qur'an memiliki dimensi vertikal dan horizontal. Dalam ayat ini, Allah menelanjangi betapa hinanya sikap seseorang yang hanya setia pada komitmen selama komitmen tersebut mendatangkan keuntungan material, namun segera mencampakkannya (<em>nabadza</em>) begitu ia dituntut untuk berkorban atau tunduk pada aturan kebenaran. Quraish Shihab mengingatkan masyarakat modern, khususnya di Indonesia: ayat ini adalah kritik tajam bagi dunia politik transaksional, di mana sumpah jabatan, pakta integritas, dan janji kampanye kerap dicampakkan ke keranjang sampah begitu kekuasaan diraih. Sikap batin seperti ini, menurut beliau, adalah replika dari watak <em>farīqum minhum</em> yang dikecam keras oleh Al-Qur'an.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Buya Hamka — <em>Tafsir Al-Azhar</em> (Ketahanan Spiritual &amp; Refleksi Sejarah Bangsa):</strong><br>
+        Buya Hamka mengajak pembaca merenungkan sejarah panjang perjalanan umat manusia. Hamka menulis: <em>"Bani Israil diberi aneka ragam kemuliaan, diutus kepada mereka nabi demi nabi. Namun penyakit yang paling merusak bangsa itu adalah 'mungkir janji'. Mulut manis berikrar di hadapan Musa, tetapi di belakang mereka menyembah anak lembu emas. Berjanji setia kepada Taurat, tetapi ayat-ayatnya mereka jual demi keuntungan dinar yang sedikit."</em> Hamka mengaitkannya dengan etika perjuangan bangsa: martabat seseorang terletak pada kata-katanya. Jika seorang manusia atau sebuah bangsa telah kehilangan harga diri komitmennya, maka ia tidak akan pernah lagi dipercaya oleh kawan maupun lawan. Hamka menegaskan bahwa obat satu-satunya bagi penyakit ingkar janji adalah memperbarui iman yang hidup di dalam jiwa, karena orang yang beriman hakiki akan selalu merasa bahwa Allah adalah saksi pertama atas setiap kata yang meluncur dari lidahnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>8. Kementerian Agama RI — <em>Al-Qur'an dan Tafsirnya / Tafsir Tematik</em> (Perspektif Kebangsaan):</strong><br>
+        Kemenag RI menggarisbawahi bahwa menepati janji (<em>al-wafā' bil-'ahd</em>) adalah salah satu sendi paling fundamental dalam merajut kerukunan hidup berbangsa dan bernegara. Ayat 100 ini dijadikan peringatan bagi seluruh elemen bangsa: pelanggaran terhadap konsensus nasional, manipulasi hukum, serta pengabaian amanah rakyat oleh para pemangku kebijakan akan melahirkan krisis ketidakpercayaan publik (<em>distrust</em>) yang dapat meretakkan integrasi bangsa. Al-Qur'an mengingatkan bahwa akar dari kerapuhan moral tersebut adalah ketiadaan komitmen ketuhanan yang murni dalam menjalankan roda kehidupan sosial-politik.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') &amp; Dinamika Analisis (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Analisis</th>
+                <th>Konsensus Mufassirin (Ijma')</th>
+                <th>Dinamika Penekanan &amp; Sudut Pandang Khusus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Identitas &amp; Jenis Perjanjian ('Ahd)</strong></td>
+                <td>Mencakup perjanjian teologis mengimani nabi akhir zaman dalam Taurat serta pakta sosial-politik yang diikat di Madinah.</td>
+                <td>At-Tabari &amp; Ibnu Katsir menekankan perjanjian Taurat di bukit Sinai; Al-Qurthubi &amp; Kemenag memperluasnya ke seluruh akad muamalah, hukum internasional, dan konsensus kebangsaan; Quraish Shihab menyoroti dimensi etika komitmen universal.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Semantik "Nabadzahū"</strong></td>
+                <td>Bermakna pembatalan perjanjian yang dilakukan dengan sikap penghinaan, pengabaian total, dan ketiadaan rasa bersalah.</td>
+                <td>Az-Zamakhsyari menyoroti majaz tajsīm (melempar benda kotor); Ibnu 'Asyur memandangnya sebagai indikator runtuhnya rasa malu kolektif bangsa; Hamka menyoroti kebiasaan 'mungkir janji' sebagai kanker moral turun-temurun.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan "Farīq" dengan "Bal Aktsaruhum"</strong></td>
+                <td>Tindakan pembatalan terbuka dilakukan oleh satu kelompok, namun disokong oleh mentalitas nir-iman dari mayoritas massa.</td>
+                <td>Ar-Razi membedah dialektika peran elit politik-agama (<em>farīq</em>) versus kepatuhan buta massa awam (<em>aktsar</em>); Ibnu Katsir memandang <em>lā yu'minūn</em> sebagai akar kausatif internal; Quraish Shihab mengaitkannya dengan hipokrisi politik modern.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Mental Model &amp; Tazkiyatun Nafs)</h2>
+    <p>
+        <em>Catatan Metodologis: Analisis dalam lensa ini adalah pembacaan hermeneutika kognitif dan psikologis manusiawi untuk memahami dinamika jiwa manusia dalam merespons wahyu, bukan klaim kebenaran wahyu mutlak itu sendiri, serta steril dari pseudosains atau pencocokan teori secara serampangan.</em>
+    </p>
+
+    <h3>1. Rekonstruksi Paradigma Berpikir: Pola Pikir Lama vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter Evaluasi</th>
+                <th>Pola Pikir Lama (Oportunisme Transaksional / Pragmatisme Cair)</th>
+                <th>Pola Pikir Qur'ani (Integritas Sakral Komitmen / 'Ahdullāh)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Perjanjian (Nature of Covenant)</strong></td>
+                <td>Janji dipandang sebagai alat tawar-menawar sementara (<em>instrumental utility</em>) yang boleh dimanipulasi, direvisi, atau dibatalkan kapan pun situasi tidak lagi menguntungkan secara materiil.</td>
+                <td>Janji dipandang sebagai ikatan sakral eksistensial yang disaksikan oleh Allah (<em>Mītsāqan Ghalīzhā</em>); komitmen moral mengikat secara absolut melampaui fluktuasi untung-rugi personal.</td>
+            </tr>
+            <tr>
+                <td><strong>Mekanisme Respons Konflik Kepentingan</strong></td>
+                <td>Mencampakkan komitmen (<em>nabadza</em>) dengan mencari rasionalisasi hukum, menyalahkan pihak lain, atau mendistorsi redaksi teks kesepakatan demi menyelamatkan kepentingan diri.</td>
+                <td>Tetap memegang teguh komitmen meskipun menuntut pengorbanan ego, harta, atau status sosial (<em>al-wafā' bil-'ahdi walaw 'alā anfusikum</em>), demi menjaga kesucian iman.</td>
+            </tr>
+            <tr>
+                <td><strong>Fondasi Integritas Diri</strong></td>
+                <td>Bergantung pada pengawasan eksternal dan sanksi hukum legalistik; jika ada celah hukum untuk lolos, komitmen akan segera dilanggar.</td>
+                <td>Berakar pada keimanan batin yang hidup (<em>Muraqabatullāh</em>); menjaga integritas karena meyakini pengawasan Allah yang Maha Mengetahui rahasia kalbu.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Kaidah Berpikir Sistemik (Mental Models)</h3>
+    <ul>
+        <li>
+            <strong>1. Mental Model: "The Covenant Elasticity Trap" (Jebakan Komitmen Elastis):</strong><br>
+            Kecenderungan distorsi kognitif di mana seseorang memandang batas-batas komitmen moral sebagai sesuatu yang fleksibel dan elastis. Pelanggaran besar terhadap prinsip integritas tidak pernah terjadi secara tiba-tiba; ia selalu diawali dari pembiaran atas pelanggaran janji-janji mikro (<em>micro-broken promises</em>) dalam keseharian dengan alasan "hanya hal sepele". Pembiasaan ini melatih sirkuit otak untuk menoleransi ketidakjujuran, hingga pada titik kritis, seseorang mampu mencampakkan (<em>nabadza</em>) sumpah jabatan, amanah keluarga, atau prinsip akidah tanpa ada lagi rasa bersalah di dalam hatinya.
+        </li>
+        <li>
+            <strong>2. Mental Model: "The Root-Symptom Disconnect" (Keterpisahan Gejala dari Akar Masalah):</strong><br>
+            Berdasarkan frasa <em>"nabadzahū farīqum minhum, bal aktsaruhum lā yu'minūn"</em>, Al-Qur'an mengajarkan kaidah diagnosis sistemik: <strong>Perilaku lahiriah yang menyimpang hanyalah gejala klinis (symptom); akar kausalitas sejatinya adalah krisis keyakinan di tingkat fondasi batin (root cause)</strong>. Mengatasi krisis integritas dalam sebuah organisasi atau negara tidak akan pernah berhasil jika hanya mengandalkan perbaikan regulasi hukum prosedural semata tanpa membenahi sistem nilai, kesadaran spiritual, dan integritas iman individu-individu di dalamnya.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Disonansi &amp; Patologi Nafsu (Tazkiyatun Nafs)</h3>
+    <p>
+        Secara neurokognitif, ketika manusia berhadapan dengan situasi di mana pemenuhan janji menuntut pengorbanan yang menyakitkan bagi egonya, terjadi pertarungan sengit antara dua sistem saraf utama:
+    </p>
+    <ul>
+        <li>
+            <strong>Konflik Neurokognitif (dlPFC vs Amygdala &amp; Nucleus Accumbens):</strong> <em>Dorsolateral Prefrontal Cortex (dlPFC)</em> yang bertanggung jawab atas kontrol eksekutif dan kepatuhan pada aturan moral jangka panjang ditekan oleh dorongan primitif dari <em>amygdala</em> (rasa takut kehilangan status/harta) dan <em>nucleus accumbens</em> (hasrat mengejar keuntungan instan). Untuk meredakan ketegangan neurokognitif (<em>cognitive dissonance</em>) akibat pelanggaran moral tersebut, otak mengaktifkan mekanisme pertahanan ego berupa <strong>rasionalisasi agresif</strong>: mendistorsi realitas, menuduh pihak lain yang bersalah, hingga akhirnya secara sadar mencampakkan (<em>nabadzahu</em>) komitmen tersebut dari kesadaran aktifnya.
+        </li>
+        <li>
+            <strong>Diagnosis Tazkiyatun Nafs: Bahaya "Nifāq Khāfī" (Kemunafikan Terselubung):</strong><br>
+            Dalam tradisi tazkiyatun nafs, kebiasaan mengingkari janji adalah pintu gerbang utama membusuknya kalbu. Sebagaimana dijelaskan oleh Imam Al-Ghazali dalam <em>Iḥyā' 'Ulūmiddīn</em>, setiap kali seseorang mengingkari janjinya, setitik noda hitam menempel pada cermin kalbunya. Jika dibiarkan, noda-noda tersebut menyatu menjadi karat (<em>ar-rān</em>) yang mengeras menjadi <em>qaswatul qalb</em> (hati yang membatu). Pada stadium akhir, kalbu kehilangan sensitivitas spiritualnya sama sekali, terperosok ke dalam derajat <em>bal aktsaruhum lā yu'minūn</em>: mereka mengaku beragama, namun nurani mereka telah mati dari getaran iman sejati.
+        </li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer &amp; Kritik Peradaban)</h2>
+
+    <h3>1. Krisis Geopolitik Global: Fenomenologi "Nabadzahū" dalam Pakta Hukum Internasional</h3>
+    <p>
+        Jika kita membaca dinamika tatanan dunia abad ke-21 melalui kacamata QS. Al-Baqarah Ayat 100, kita menyaksikan bagaimana ayat ini terproyeksi secara telanjang dalam krisis geopolitik global. Dunia modern membanggakan keberadaan Perserikatan Bangsa-Bangsa (PBB), Mahkamah Internasional (ICJ), Konvensi Jenewa, serta berbagai pakta non-proliferasi senjata dan perubahan iklim. Namun, fakta empiris memperlihatkan bahwa negara-negara hegemoni global dan entitas imperialis secara konsisten <strong>mencampakkan (nabadzahu)</strong> ratusan resolusi internasional begitu resolusi tersebut menyentuh kepentingan strategis mereka:
+    </p>
+    <ul>
+        <li>
+            <strong>Tragedi Kemanusiaan di Palestina:</strong> Pelanggaran sistematis terhadap hak-hak bangsa Palestina, pembantaian genosidal di Gaza, dan perampasan tanah secara ilegal adalah manifestasi modern yang mengulang persis perilaku para elit pembangkang yang dikisahkan dalam ayat ini. Kesepakatan damai berkali-kali ditandatangani di hadapan publik internasional, namun setiap kali pula dicampakkan ke keranjang sampah oleh faksi-faksi ekstremis tanpa sanksi yang berarti.
+        </li>
+        <li>
+            <strong>Kerapuhan Perjanjian Iklim (The Climate Betrayal):</strong> Negara-negara industri raksasa berulang kali mengikat komitmen dalam traktat global (seperti Paris Agreement) untuk menekan emisi karbon. Namun, setiap kali siklus pemilu domestik berganti atau kebutuhan korporasi energi fosil mendesak, komitmen penyelamatan biosfer bumi tersebut dicampakkan begitu saja, mengorbankan masa depan miliaran generasi mendatang demi keuntungan oligarki sesaat.
+        </li>
+    </ul>
+
+    <h3>2. Degradasi Integritas di Era Digital: Budaya "Ghosting" &amp; Komodifikasi Janji</h3>
+    <p>
+        Dalam skala sosial-mikro, revolusi teknologi digital dan komunikasi asinkron telah melahirkan patologi sosial baru yang sangat merisaukan: <strong>budaya pengabaian komitmen tanpa beban (The Disposable Commitment Culture)</strong>:
+    </p>
+    <ul>
+        <li>
+            <strong>Normalisasi Fenomena "Ghosting" &amp; Pelanggaran Kontrak Gig-Economy:</strong> Di era aplikasi kencan dan media sosial, memutuskan komitmen emosional atau janji relasi dilakukan semudah menekan tombol <em>block</em> atau menghilang tanpa penjelasan (<em>ghosting</em>). Dalam dunia profesional <em>freelance</em> dan <em>gig-economy</em>, pembatalan sepihak atas proyek kerja, pengabaian pembayaran vendor, dan pengingkaran perjanjian lisan kerap terjadi di balik anonimitas layar digital. Janji telah tereduksi menjadi teks piksel yang dapat dihapus kapan saja tanpa ada penyesalan nurani.
+        </li>
+        <li>
+            <strong>Demokrasi Teatrikal &amp; Komodifikasi Janji Politik:</strong> Kontrak politik dalam pemilu kontemporer telah bermutasi menjadi komoditas iklan pemasaran (<em>marketing gimmick</em>). Janji-janji kampanye disusun oleh konsultan citra bukan untuk ditepati, melainkan untuk mengecoh emosi pemilih (<em>framing effect</em>). Begitu mandat kekuasaan berhasil direbut, janji-janji kerakyatan tersebut dicampakkan (<em>nabadzahu fariq</em>) di bawah meja koalisi oligarki, melahirkan krisis ketidakpercayaan publik kronis (<em>public cynicism</em>) dan apatisme generasi muda terhadap institusi negara.
+        </li>
+    </ul>
+
+    <h3>3. Solusi Peradaban: Rekonstruksi Budaya "Amanah Absolut" Berbasis Tauhid</h3>
+    <p>
+        Peradaban modern yang berdiri di atas sekularisme dan utilitarianisme materialistis telah membuktikan ketidakmampuannya dalam menjaga kesucian komitmen manusia. Hukum positif buatan manusia selalu menyisakan celah interpretasi bagi para pengacara lihai untuk membenarkan pengkhianatan. Solusi fundamental yang ditawarkan Al-Qur'an adalah mengembalikan dimensi <strong>Sakralitas Transenden ke dalam setiap Akad</strong>:
+    </p>
+    <p>
+        Setiap perjanjian antarmanusia harus diposisikan sebagai derivasi dari perjanjian hamba dengan Allah (<em>'Ahdullāh</em>). Ketika kesadaran eskatologis hidup di dalam dada—bahwa setiap kata yang diikrarkan akan dimintai pertanggungjawaban di hadapan Mahkamah Ilahi dan bahwa pengkhianat akan dihinakan dengan panji kehinaan di padang mahsyar—maka sebuah masyarakat akan memiliki benteng pertahanan moral yang mandiri, menghidupkan kembali peradaban yang berkeadaban, adil, dan bermartabat.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret &amp; Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata Terukur (Aksi Konkret &amp; Kebiasaan Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Audit Komitmen &amp; "Zero-Debt" Janji Tertunda (Mikro-Habit &lt; 5 Menit):</strong><br>
+                Sediakan waktu 5 menit setiap malam sebelum tidur untuk melakukan audit mental atas seluruh perkataan dan janji yang diucapkan hari itu (baik kepada keluarga, rekan kerja, anak, maupun klien). Tuliskan dalam catatan pribadi daftar komitmen yang belum terpenuhi. Terapkan prinsip: segera lunasi atau mintalah pembaharuan kesepakatan secara jujur dan rendah hati. Jangan biarkan ada satu pun janji kecil yang terbengkalai tanpa kejelasan, agar kalbu terbebas dari akumulasi noda kemunafikan mikro.
+            </li>
+            <li>
+                <strong>Protokol Keputusan: "Under-Promise, Over-Deliver" (Decision Rule):</strong><br>
+                Dalam setiap negosiasi profesional, bisnis, maupun pergaulan personal, terapkan aturan ketat: <em>Jangan pernah mengumbar janji di atas kapasitas nyata hanya demi meraih simpati atau memenangkan proyek</em>. Timbang secara matang sebelum berucap <em>"Ya, saya sanggup"</em>. Katakan dengan tegas batasan kemampuan kita, dan apabila telah berkomitmen, penuhilah melebihi ekspektasi pihak lain sebagai manifestasi akhlak <em>ihsan</em> dan pemeliharaan amanah.
+            </li>
+            <li>
+                <strong>Pemberantasan Budaya "Ghosting" dalam Komunikasi Digital (Etika Hubungan Sosial):</strong><br>
+                Buat komitmen pribadi untuk tidak pernah melakukan pengabaian sepihak (<em>ghosting</em>) dalam urusan pekerjaan maupun relasi sosial. Apabila terjadi pembatalan janji temu, penolakan tawaran kerja sama, atau ketidaksanggupan melanjutkan sebuah kesepakatan, sampaikan pesan klarifikasi secara sopan, jelas, dan bertanggung jawab sesegera mungkin. Hormati waktu dan perasaan orang lain sebagaimana kita ingin dihormati.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                <strong>Refleksi atas Janji Purba &amp; Shalat:</strong> Setiap hari dalam shalat aku mengikrarkan janji <em>"Iyyāka na'budu wa iyyāka nasta'īn"</em> serta doa iftitah <em>"Inna shalātī wa nusukī wa mahyāya wa mamātī lillāhi Rabbil-'ālamīn"</em>. Apakah ikrar sakral itu telah benar-benar mewarnai orientasi hidupku, ataukah aku mencampakkannya (<em>nabadzahu</em>) begitu kakiku melangkah keluar dari sajadah demi mengejar ambisi duniawi?
+            </li>
+            <li>
+                <strong>Refleksi atas Integritas Relasi Sosial:</strong> Berapa kali dalam sepekan terakhir aku meremehkan janji kecil kepada orang-orang terdekatku (pasangan, anak, orang tua, sahabat) dengan dalih "mereka pasti maklum"? Apakah tanpa kusadari aku tengah melatih jiwaku menjadi pribadi yang mengentengkan sumpah setia?
+            </li>
+            <li>
+                <strong>Refleksi atas Akar Keimanan:</strong> Ketika membaca vonis Ilahi <em>"bal aktsaruhum lā yu'minūn"</em>, apakah aku berani memeriksa kejujuran imanku sendiri? Apakah ketaatanku pada syariat Allah selama ini tegak di atas keyakinan iman yang tulus dan kokoh, ataukah sekadar topeng sosial yang rapuh yang siap kulepaskan setiap kali berbenturan dengan kesenangan hawa nafsu?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat &amp; Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Hayyu yā Qayyūm, Yā Mālikal-Mulk, Yā Man lā yukhliful-mī'ād. Segala puji bagi-Mu yang telah membimbing kami melalui peringatan-peringatan agung dalam kitab suci-Mu. Ya Allah, kami berlindung kepada-Mu dari penyakit kehinaan mencampakkan janji, dari kebiasaan berdusta dalam berkomitmen, dan dari segala cabang kemunafikan yang merusak keimanan kami. Anugerahkanlah kepada kami jiwa yang merdeka, dada yang dipenuhi integritas kejujuran (shidq), dan kalbu yang senantiasa setia menepati amanah di hadapan-Mu dan di hadapan sesama hamba-Mu. Teguhkanlah langkah kami untuk senantiasa memelihara perjanjian kami dengan-Mu hingga hembusan nafas terakhir, dan selamatkanlah kami dari kehinaan panji pengkhianatan di yaumul qiyamah kelak. Āmīn Yā Mujības-sā'ilīn, wal-hamdulillāhi Rabbil-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-099 - QS. Al-Baqarah Ayat 99.html">&larr; Kembali ke Ayat 99 (QS. 2:99)</a>
+        <span><strong>QS. Al-Baqarah [2]: 100</strong></span>
+        <a href="002-101 - QS. Al-Baqarah Ayat 101.html">Lanjut ke Ayat 101 (QS. 2:101) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

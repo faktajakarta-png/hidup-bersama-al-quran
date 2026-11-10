@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-038 - QS. Ali 'Imran Ayat 38 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-037 - QS. Ali 'Imran Ayat 37.html">&larr; Ayat Sebelumnya (QS. 3:37)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-039 - QS. Ali 'Imran Ayat 39.html">Ayat Berikutnya (QS. 3:39) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian</span>
+        <span class="badge">Klaster 2 (Ayat 38–41): Mihrab Kemustahilan & Doa Zakariya</span>
+        <span class="badge">15 Kata | 54 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 38</h1>
+    <div class="transliteration">
+        "Hunālika da'ā Zakariyyā Rabbah(ū), qāla Rabbi hab lī mil-ladunka dzurriyyatan ṭhayyibah(tan), innaka Samī'ud-du'ā'(i)."
+    </div>
+    <div class="thematic-title">
+        Mihrab Kemustahilan & Resonansi Ketauhidan Melampaui Hukum Biologis: Doa Sakral Nabi Zakariya AS, Karunia Dzurriyyah Thayyibah, dan Keyakinan Mutlak pada Kedaulatan Samī'ud-Du'ā'
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 2: Doa Zakariya di Hadapan Mukjizat Maryam Menuju Fajar Kelahiran Yahya AS)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        هُنَالِكَ دَعَا زَكَرِيَّا رَبَّهُۥ ۖ قَالَ رَبِّ هَبْ لِى مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً ۖ إِنَّكَ سَمِيعُ ٱلدُّعَآءِ ۝٣٨
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Di sanalah (pada momentum sakral ketika menyaksikan mukjizat rizki Maryam), Zakariya berdoa kepada Tuhannya. Dia berkata: 'Wahai Tuhanku, anugerahkanlah kepadaku dari sisi-Mu (secara langsung melalui perbendaharaan gaib-Mu) seorang keturunan yang baik (suci, bertakwa, dan berakhlak mulia). Sungguh, Engkau Maha Mendengar (lagi Maha Mengabulkan) doa.'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini menandai titik balik psikologis dan spiritual yang sangat agung dalam narasi keluarga suci Bani Israil. Kata pembuka <strong>هُنَالِكَ (Hunālika)</strong> secara leksikal merupakan kata tunjuk tempat jauh (<em>ism isyārah lil-makān al-ba'īd</em>), namun di sini dipinjam secara metaforis (<em>isti'ārah tab'iyyah</em>) untuk menunjuk pada momentum waktu yang luar biasa krusial (<em>az-zamān al-khāṣṣ</em>), yakni saat Nabi Zakariya AS tercengang menyaksikan hidangan buah-buahan musim dingin di musim panas dan buah musim panas di musim dingin yang dianugerahkan Allah kepada Maryam di dalam mihrabnya (sebagaimana dipaparkan pada ayat 37: <em>"Innallāha yarzuqu may yasyā'u bi-ghayri ḥisāb"</em>).
+    </p>
+    <p>
+        Pemandangan transenden tersebut meluluhlantakkan batas kalkulasi rasional dan keputusasaan biologis Nabi Zakariya. Kendati rambutnya telah memutih rapuh oleh usia senja dan istrinya divonis mandul sejak masa muda, Zakariya menyadari bahwa Tuhan yang mampu menumbuhkan buah tanpa musim niscaya Mahakuasa menumbuhkan benih kehidupan dalam rahim yang telah kering. Kata <strong>هَبْ لِى (Hab lī)</strong> menuntut karunia murni (hibah) tanpa kompensasi kausalitas fisik, dipertegas dengan <strong>مِن لَّدُنكَ (mil-ladunka)</strong> yakni langsung dari perbendaharaan rahmat Ilahi yang mengatasi hukum alam horizontal, demi melahirkan <strong>ذُرِّيَّةً طَيِّبَةً (dzurriyyatan ṭhayyibatan)</strong>—bukan sekadar penyambung nama biologis klan, melainkan pemegang estafet kenabian yang suci. Ayat ini ditutup dengan pengakuan tauhid yang kukuh: <strong>إِنَّكَ سَمِيعُ ٱلدُّعَآءِ (Innaka Samī'ud-du'ā')</strong>, di mana asma <em>Samī'</em> di sini berfaedah <em>Mujīb</em> (Maha Memperkenankan permohonan hamba).
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>هُنَالِكَ</strong><br>(<em>Hunālika</em>)</td>
+                <td>
+                    <strong>Huruf Hā' (هـ):</strong> Keluar dari pangkal tenggorokan (<em>aqshal halq</em>) dengan sifat <em>Hams</em>, <em>Rikhwah</em>, dan <em>Istifal</em>.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Dua harakat pada huruf Nun yang bertemu Alif.<br>
+                    <strong>Huruf Lām & Kāf:</strong> Dibaca tarqiq (tipis), dengan sifat hams halus pada pelepasan makhraj Kaf dari pangkal lidah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fathah pada Ha', memanjangkan Alif dua harakat, kasrah pada Lam, dan fathah pada Kaf khithab (<em>Hunālika</em>). Zharaf makan ini disepakati berfungsi sebagai penunjuk momentum psikospiritual yang dramatis.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>دَعَا</strong><br>(<em>Da'ā</em>)</td>
+                <td>
+                    <strong>Huruf Dāl (د):</strong> Keluar dari ujung lidah bertemu pangkal dua gigi seri atas dengan sifat <em>Jahr</em> dan <em>Syiddah</em>.<br>
+                    <strong>Huruf 'Ain (ع):</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>) dengan sifat <em>Tawassuth</em>.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Dua harakat pada Alif layyinah di akhir kata.
+                </td>
+                <td>
+                    Akar kata ini berstatus <em>wāwī</em> (asalnya <em>da'awtu</em> / <em>yad'ū</em>). Oleh karena itu, seluruh imam mutawatirah membaca dengan <strong>Fat-ḥ murni</strong> tanpa imālah kubrā maupun taqlīl, karena imalah pada mazhab Hamzah, Al-Kisa'i, dan Warsy hanya berlaku pada dzawatul ya' (kata berakar Ya') atau sebab khusus lainnya.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>زَكَرِيَّا</strong><br>(<em>Zakariyyā</em>)</td>
+                <td>
+                    <strong>Huruf Zāy (ز):</strong> Keluar dari ujung lidah bertemu rongga antara gigi seri atas dan bawah dengan sifat <em>Ṣhafīr</em> dan <em>Jahr</em>.<br>
+                    <strong>Huruf Kāf:</strong> Hams, huruf Rā' dibaca tarqiq karena berharakat kasrah.<br>
+                    <strong>Yā' Musyaddadah:</strong> Ditekan dengan sifat <strong>Nabr</strong> agar suara tasydid terdengar jelas tanpa tergelincir menjadi mad semata.
+                </td>
+                <td>
+                    • <strong>'Āṣhim (termasuk riwayat Ḥafṣh dan Syu'bah), Ḥamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca bil-Qaṣhr tanpa hamzah: <strong>(زَكَرِيَّا - Zakariyyā)</strong> dengan alif maqshurah di akhir kata (marfu' dengan dhammah muqaddarah).<br>
+                    • <strong>Nāfi', Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, Abū Ja'far, dan Ya'qūb:</strong> Membaca bil-Madd wal-Hamz: <strong>(زَكَرِيَّاءُ - Zakariyyā'u)</strong> dengan hamzah berharakat dhammah di akhirnya sebagai fa'il marfu' (isim mamnu' minash-sharf karena perpaduan 'alamiyyah dan alif ta'nits mamdudah). Ini adalah variasi dialektika fasih bahasa Arab kuno.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>رَبَّهُۥ ۖ</strong><br>(<em>Rabbahū</em>)</td>
+                <td>
+                    <strong>Huruf Rā':</strong> Mufakhkhamah (tebal) karena berharakat fathah.<br>
+                    <strong>Bā' Musyaddadah:</strong> Memiliki sifat syiddah dan nabr.<br>
+                    <strong>Mad Ṣhilah Ṣhughrā:</strong> Wawu kecil setelah Ha' dhamir dibaca 2 harakat saat washal karena berada di antara dua huruf hidup (huruf Ba' berharakat fathah dan Qaf pada kata berikutnya).
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca nashab pada huruf Ba' (<em>Rabbahu</em>) sebagai maf'ul bih. Jika waqaf ikhtibari pada kata ini, Ha' dibaca sukun tanpa mad (<em>Rabbah</em>). Tanda waqaf <em>ṣhalā</em> menunjukkan washal lebih utama.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>قَالَ</strong><br>(<em>Qāla</em>)</td>
+                <td>
+                    <strong>Huruf Qāf (ق):</strong> Pangkal lidah menempel ke langit-langit lunak (<em>aqshal lisan ma'a al-hanak al-a'la</em>). Memiliki sifat <em>Isti'lā'</em> dan <em>Jahr</em>, mencapai tingkat tafkhim tertinggi (Martabah 1) karena berharakat fathah diikuti Alif.<br>
+                    <strong>Huruf Lām:</strong> Dibaca tarqiq murni.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca fathah pada Qaf dan Lam. Hamzah dan Al-Kisa'i tidak mengimālahkan fi'il madhi tiga huruf berakar wawi ini (asalnya <em>qawala</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>رَبِّ</strong><br>(<em>Rabbi</em>)</td>
+                <td>
+                    <strong>Rā' Mufakhkhamah:</strong> Tebal.<br>
+                    <strong>Bā' Musyaddadah Makshūrah:</strong> Nabr kokoh tanpa memanjangkan vokal kasrah.<br>
+                    <strong>Ḥadzf Yā' al-Iḍhāfah:</strong> Huruf Ya' mutakallim dibuang secara rasm dan lafaz, menyisakan kasrah sebagai dalil kedekatan munajat.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca kasrah tanpa memanjangkan ya' (<em>Rabbi</em>), melambangkan seruan mesra hamba yang bersujud menghadap Tuhannya tanpa sekat perantara (<em>al-munādā al-muḍhāf</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>هَبْ لِى</strong><br>(<em>Hab lī</em>)</td>
+                <td>
+                    <strong>Huruf Hā':</strong> Hams dan rikhwah.<br>
+                    <strong>Huruf Bā' Sukun:</strong> <strong>Qalqalah Ṣhughrā</strong> dengan pantulan ringan dan jernih di tengah rangkaian kalimat.<br>
+                    <strong>Lām Kasrah:</strong> Tarqiq, diikuti Ya' mad thabi'i 2 harakat.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca sukun pada Ba' (fi'il amr bermakna du'a) disertai qalqalah sughra, serta sukun pada Ya' mutakallim (<em>lī</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مِن لَّدُنكَ</strong><br>(<em>Mil-ladunka</em>)</td>
+                <td>
+                    <strong>Idghām Bilā Ghunnah:</strong> Nun sukun pada <em>min</em> melebur secara sempurna (<em>kāmil</em>) ke dalam huruf Lām pada <em>ladunka</em> tanpa menyisakan dengung.<br>
+                    <strong>Huruf Dāl:</strong> Bersifat jahr dan syiddah berharakat dhammah.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun pada <em>ladunka</em> bertemu huruf Kāf, disamarkan dengan ghunnah tipis (tarqiq) 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idgham bila ghunnah pada <em>mil-ladunka</em> serta ikhfa' haqiqi sebelum huruf kaf.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>ذُرِّيَّةً طَيِّبَةً ۖ</strong><br>(<em>Dzurriyyatan ṭhayyibatan</em>)</td>
+                <td>
+                    <strong>Huruf Żāl (ذ):</strong> Rikhwah dan istifal.<br>
+                    <strong>Rā' Musyaddadah Makshūrah:</strong> Wajib dibaca <strong>Tarqīq</strong> (tipis) karena berharakat kasrah.<br>
+                    <strong>Yā' Musyaddadah:</strong> Sifat nabr.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin fathah pada <em>dzurriyyatan</em> bertemu huruf <strong>Ṭhā' (ط)</strong> dibaca samar dengan <strong>Ghunnah Mufakhkhamah (Tebal)</strong> karena Tha' adalah huruf isti'la dan ithbaq.<br>
+                    <strong>Waqaf pada Ṭhayyibah:</strong> Jika waqaf darurat, ta' marbuthah berubah menjadi <strong>Hā' Sukun</strong> (<em>ṭhayyibah</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca wazan <em>dzurriyyatan</em> dengan tasydid pada Ra' kasrah dan Ya' fathah, berstatus maf'ul bih manshub bil-fathah.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>إِنَّكَ</strong><br>(<em>Innaka</em>)</td>
+                <td>
+                    <strong>Hamzah Qathha':</strong> Tahqiq tajam dari aqshal halq.<br>
+                    <strong>Ghunnah Akmal mā Takūn:</strong> Huruf Nūn musyaddadah ditahan dengungnya selama 2 harakat penuh.<br>
+                    <strong>Huruf Kāf:</strong> Fathah tarqiq dengan pelepasan hams lembut.
+                </td>
+                <td>
+                    Seluruh imam membaca kasrah pada hamzah <em>Inna</em> sebagai awal kalimat baru (<em>isti'nāf bayānī / ta'līl</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>سَمِيعُ</strong><br>(<em>Samī'u</em>)</td>
+                <td>
+                    <strong>Huruf Sīn:</strong> Hams, rikhwah, shafir.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Dua harakat pada kasrah Mim diikuti Ya' sukun.<br>
+                    <strong>Huruf 'Ain:</strong> Tawassuth dari wasathul halq berharakat dhammah.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca rafa' dengan dhammah tanpa tanwin (<em>Samī'u</em>) karena berkedudukan sebagai mudhaf kepada lafaz <em>ad-Du'ā'</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>ٱلدُّعَآءِ ۝٣٨</strong><br>(<em>Ad-Du'ā'i</em>)</td>
+                <td>
+                    <strong>Hamzah Washal Saqithah:</strong> Gugur saat washal dengan huruf 'Ain pada <em>Samī'u</em>.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Huruf Lam melebur total ke dalam huruf Dāl musyaddadah.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf mad Alif bertemu hamzah dalam satu kata.<br>
+                    <strong>Hukum Waqaf Akhir Ayat:</strong> Hamzah diberi sukun 'aridh, menimbulkan hukum <strong>Mad 'Āriḍh lis-Sukūn / Mad Muttaṣhil 'Āriḍh</strong> dengan sifat syiddah dan jahr pada huruf Hamzah.
+                </td>
+                <td>
+                    • <strong>Saat Washal:</strong><br>
+                    - <strong>Warsy dan Ḥamzah:</strong> Membaca mad muttashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    - <strong>Mayoritas Imam ('Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf, dkk.):</strong> Membaca dengan <strong>Tawassuṭh / Fuwaiqot-Tawassuth (4–5 Harakat)</strong>.<br>
+                    • <strong>Saat Waqaf:</strong> Boleh dibaca 4, 5, atau 6 harakat disertai waqaf dengan <em>Isymām</em> atau <em>Rawm</em> pada harakat kasrah hamzah menurut kaidah qira'at mutawatirah.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul & Atsar Mufassirin Tabi'in — Hubungan Mihrab Maryam dengan Doa Zakariya:</strong><br>
+        Diriwayatkan oleh Imam Ath-Thabari dalam <em>Jāmi' al-Bayān</em> (Jilid 5, hlm. 248, No. 6928), Ibnu Abi Hatim dalam <em>Tafsīr-nya</em> (Jilid 2, hlm. 598), dan Al-Hafizh Ibnu Katsir dalam <em>Tafsīr al-Qur'ān al-'Azhīm</em> melalui sanad sahih dari Sahabat Abdullah bin Abbas r.a., Qatadah, Mujahid, dan Ikrimah:<br>
+        <em>"Tatkala Nabi Zakariya AS melihat di hadapan Maryam terdapat buah-buahan musim panas pada musim dingin, dan buah-buahan musim dingin pada musim panas, berkatalah Zakariya: 'Wahai Maryam, dari manakah engkau memperoleh buah-buahan ini?' Maryam menjawab: 'Ia berasal dari sisi Allah, sesungguhnya Allah memberi rezeki kepada siapa saja yang Dia kehendaki tanpa perhitungan' (QS. 3:37). Pada saat itulah (هُنَالِكَ), menyalalah gelora kerinduan di dalam kalbu Zakariya untuk memiliki keturunan. Beliau berkata dalam batinnya: 'Sesungguhnya Zat yang Mahakuasa mendatangkan buah di luar musimnya tanpa pohon dan sebab normal, niscaya Mahakuasa pula menganugerahkanku seorang anak meskipun usiaku telah sangat tua dan rahim istriku telah mandul.' Maka seketika itu pula Zakariya berdiri menghadap kiblat di mihrabnya seraya memanjatkan doa ini."</em><br>
+        <strong>Derajat Riwayat:</strong> Atsar tabi'in berderajat Hasan/Sahih dengan banyak jalur penguat (<em>syawāhid</em>) yang disepakati oleh seluruh mufassir bil-ma'tsur.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 2682) dari Sahabat Abu Hurairah r.a. — Adab Berdoa Tanpa Rasa Putus Asa:</strong><br>
+        Rasulullah ﷺ menegaskan poros keyakinan doa yang dipraktikkan Nabi Zakariya AS:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«يُسْتَجَابُ لِأَحَدِكُمْ مَا لَمْ يَعْجَلْ، يَقُولُ: دَعَوْتُ فَلَمْ يُسْتَجَبْ لِي»</div>
+        <em>"Pasti akan dikabulkan doa salah seorang di antara kalian selama ia tidak tergesa-gesa, yaitu ia berkata: 'Aku telah berdoa berulang kali, tetapi doaku tidak kunjung dikabulkan.'"</em><br>
+        <strong>Korelasi Ayat:</strong> Nabi Zakariya AS telah puluhan tahun berdoa dalam kesunyian tanpa pernah merasa lelah atau kecewa kepada Tuhannya (<em>"Wa lam akum bi-du'ā'ika Rabbi syaqiyyā"</em> - QS. 19:4), hingga pada momentum ayat ini Allah memperlihatkan tanda pengabulan-Nya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhari (No. 3431) dan Muslim (No. 162) — Kedudukan Luhur Nabi Yahya AS:</strong><br>
+        Dalam peristiwa Mi'raj, Rasulullah ﷺ bersabda saat tiba di langit kedua:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«فَفُتِحَ لَنَا، فَإِذَا أَنَا بِابْنَيْ الخَالَةِ عِيسَى ابْنِ مَرْيَمَ وَيَحْيَى بْنِ زَكَرِيَّاءَ، صَلَوَاتُ اللَّهِ عَلَيْهِمَا، فَرَحَّبَا وَدَعَوَا لِي بِخَيْرٍ»</div>
+        <em>"Maka dibukakan pintu bagi kami di langit kedua, tiba-tiba aku bertemu dengan dua orang saudara sepupu: 'Isa putra Maryam dan Yahya bin Zakariya—semoga shalawat Allah tercurah atas keduanya. Mereka berdua menyambutku dengan hangat dan mendoakan kebaikan untukku."</em><br>
+        <strong>Korelasi Ayat:</strong> Hadits sahih ini membuktikan bahwa anak yang dimohonkan Zakariya melalui ikrar <em>dzurriyyatan thayyibah</em> adalah sosok Nabi Yahya AS yang diangkat derajatnya berdampingan dengan Nabi 'Isa AS di tempat kemuliaan langit.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sunan At-Tirmidzi (No. 2863) dan Musnad Ahmad (No. 17990) — Karakteristik Kesucian Yahya AS:</strong><br>
+        Dari Al-Harits Al-Asy'ari r.a., Rasulullah ﷺ bersabda bahwa Allah memerintahkan Yahya bin Zakariya dengan lima kalimat suci untuk diamalkan dan diajarkan kepada Bani Israil, di antaranya adalah memurnikan tauhid dan menjaga salat.<br>
+        <strong>Derajat Hadits:</strong> Sahih menurut Imam At-Tirmidzi, Ibnu Hibban (No. 6233), dan Al-Hakim dalam <em>Al-Mustadrak</em> (2/360).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. H-N-A / H-N-L-K (ه-ن-ا — Hunālika):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> dan Ibnu Manzhur dalam <em>Lisān al-'Arab</em> memaparkan bahwa asal kata <em>hunā</em> adalah isyarat bagi tempat yang dekat (<em>lil-makān al-qarīb</em>). Ketika dimasuki huruf Lām (<em>lām al-bu'd</em>) dan Kāf (<em>kāf al-khiṭhāb</em>) menjadi <strong>هُنَالِكَ (Hunālika)</strong>, maknanya meluas menjadi penunjukan tempat yang jauh, atau penunjukan momentum waktu yang sangat agung dan sarat makna psikospiritual (<em>isti'ārah tab'iyyah li-az-zamān</em>). Kata ini menunjukkan titik temu antara ketakjuban akal di hadapan keajaiban mihrab Maryam dengan ledakan asa spiritual yang melahirkan doa.
+        </li>
+        <li>
+            <strong>2. D-'-W (د-ع-و — Da'ā):</strong><br>
+            Ibnu Faris menegaskan bahwa akar huruf Dāl-'Ain-Wawu berporos pada satu makna esensial: <em>an tumīla asy-syay'a ilayka bi-ṣhawtika wa kalāmika</em> (mencondongkan dan memanggil sesuatu ke arahmu menggunakan suara dan perkataanmu). Ibnu Manzhur menambahkan dalam <em>Lisān al-'Arab</em> bahwa <em>ad-Du'ā'</em> dalam terminologi syariat adalah penghadapan total seorang hamba yang fakir kepada Tuhannya Yang Maha Kaya dengan merendahkan diri, memohon pertolongan, dan menaruh pengharapan semata kepada-Nya. Penggunaan fi'il madhi <em>da'ā</em> (telah berdoa) menunjukkan kemantapan dan kesegeraan tindakan Zakariya tanpa keraguan sedetik pun.
+        </li>
+        <li>
+            <strong>3. W-H-B (و-ه-ب — Hab lī):</strong><br>
+            Ibnu Faris merumuskan bahwa akar kata Wawu-Hā'-Bā' berporos pada makna: <em>an ta'jila i'ṭhā'a syay'in bi-lā 'iwaḍh</em> (memberikan sesuatu secara cuma-cuma tanpa menuntut ganti, imbalan, atau kompensasi). Kata <em>Al-Hibah</em> dalam bahasa Arab klasik adalah pemberian yang murni bersumber dari kemurahan hati sang pemberi, bukan karena sang penerima berhak atasnya berdasarkan hukum kausalitas. Zakariya sadar bahwa secara biologis dan medis ia dan istrinya tidak memiliki 'hak alami' untuk melahirkan anak; oleh sebab itu ia tidak menggunakan kata <em>a'ṭhinī</em> (berilah aku), melainkan <strong>هَبْ لِى (Hab lī)</strong>—anugerahkanlah sebagai hibah murni dari mukjizat-Mu!
+        </li>
+        <li>
+            <strong>4. L-D-N (ل-د-ن — Mil-ladunka):</strong><br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> membedakan secara tajam antara kata <em>'inda</em> (عِنْدَ) dan <em>ladun</em> (لَدُنْ). Kata <em>ladun</em> menunjukkan kedekatan yang jauh lebih intim, sumber yang sangat privat, serta perbendaharaan rahasia yang tidak dapat dijangkau oleh tangan makhluk. Frasa <strong>مِن لَّدُنكَ (mil-ladunka)</strong> bermakna permohonan karunia yang melompati (<em>bypass</em>) hukum kausalitas horizontal duniawi, semata-mata turun secara vertikal dari otoritas Ilahi yang berfirman <em>"Kun fa-yakūn"</em>.
+        </li>
+        <li>
+            <strong>5. DZr-R-W / DZr-R-R (ذ-ر-ر — Dzurriyyah):</strong><br>
+            Akar kata Dzal-Ra'-Ra' berporos pada makna menebarkan dan memperbanyak sesuatu yang sangat renik (seperti semut halus atau debu yang berterbangan disebut <em>adz-dzarr</em>). Keturunan manusia dinamakan <em>dzurriyyah</em> karena seluruh umat manusia bermula dari benih yang sangat halus yang ditebarkan Allah dalam rahim, kemudian bertunas menjadi cabang-cabang generasi peradaban yang berkesinambungan. Bentuk mufrad <em>dzurriyyatan</em> mencakup makna satu anak hingga keturunan cucu-cicit seterusnya.
+        </li>
+        <li>
+            <strong>6. Ṭh-Y-B (ط-ي-ب — Ṭhayyibah):</strong><br>
+            Akar kata Ṭhā'-Yā'-Bā' berporos pada kesucian, kebersihan dari segala cacat, kelezatan yang menenteramkan batin, dan kebaikan yang diridhai syariat. <em>Dzurriyyah thayyibah</em> adalah generasi yang bersih akidahnya dari kemusyrikan, luhur akhlaknya dari keburukan perangai, dan berbakti kepada orang tua serta umat.
+        </li>
+        <li>
+            <strong>7. S-M-' (س-م-ع — Samī'ud-Du'ā'):</strong><br>
+            Ibnu Faris menjelaskan bahwa akar Sin-Mim-'Ain berarti menangkap suara dengan telinga jiwa. Jika dikaitkan dengan doa hamba kepada Allah (<em>Samī'ud-du'ā'</em>), maknanya bergeser secara semantik menjadi <strong>Al-Mujīb</strong> (Maha Memperkenankan dan Mengabulkan), sebagaimana ucapan hamba saat bangkit dari ruku': <em>"Sami'allāhu liman ḥamidah"</em> (Semoga Allah mengabulkan dan menerima pujian orang yang memuji-Nya).
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>هُنَالِكَ</strong></td>
+                <td>Isim isyarah lil-makan/zaman al-ba'id + Lam bu'd + Kaf khithab.</td>
+                <td>Isim isyarah mabni fi mahalli nashbin zharaf zaman/makan, <strong>muta'alliq</strong> dengan fi'il <em>da'ā</em> yang jatuh setelahnya. Didahulukan untuk faedah perhatian khusus.</td>
+            </tr>
+            <tr>
+                <td><strong>دَعَا</strong></td>
+                <td>Fi'il madhi tsulatsi mujarrad mu'tal lam (naqish wawiy).</td>
+                <td>Mabni 'alal-fath al-muqaddar 'alal-alif li ta'adzdzur. Jumlah fi'liyyah <em>da'ā...</em> berstatus <em>isti'nāfiyyah</em> (permulaan narasi baru).</td>
+            </tr>
+            <tr>
+                <td><strong>زَكَرِيَّا</strong></td>
+                <td>Isim 'alam 'ajami, mamnu' minash-sharf lil-'alamiyyah wal-'ujmah.</td>
+                <td><strong>Fā'il</strong> bagi fi'il <em>da'ā</em>, marfu' bil-dhammah al-muqaddarah 'alal-alif (menurut qira'at bil-qashr), atau marfu' bil-dhammah azh-zhahirah pada hamzah (menurut qira'at bil-madd: <em>Zakariyyā'u</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>رَبَّهُۥ ۖ</strong></td>
+                <td>Isim mufrad mudhaf + Dhamir gha'ib muttashil Ha' mudhaf ilaih.</td>
+                <td><strong>Maf'ūl Bih</strong> manshub bil-fathah azh-zhahirah pada huruf Ba'. Ha' dhamir mabni 'alad-dhamm fi mahalli jarrin mudhaf ilaih.</td>
+            </tr>
+            <tr>
+                <td><strong>قَالَ</strong></td>
+                <td>Fi'il madhi tsulatsi mujarrad, fa'il-nya dhamir mustatir taqdiruhu <em>Huwa</em>.</td>
+                <td>Mabni 'alal-fath. Jumlah fi'liyyah <em>qāla...</em> berstatus sebagai <strong>Badal</strong> dari <em>da'ā</em> atau <em>isti'nāf bayānī</em> (penjelas bagaimana rincian doa tersebut diucapkan).</td>
+            </tr>
+            <tr>
+                <td><strong>رَبِّ</strong></td>
+                <td>Isim munada mudhaf ila ya'il-mutakallim al-mahdzufah.</td>
+                <td>Munada manshub bil-fathah al-muqaddarah pada huruf sebelum ya' mutakallim. Ya' dibuang li takhfif wad-dalalah 'alal-qurb. Pembuka maqul al-qaul.</td>
+            </tr>
+            <tr>
+                <td><strong>هَبْ</strong></td>
+                <td>Fi'il amr wazan <em>fa'al-yaf'il</em> (mu'tal mitsal wawiy <em>wahaba-yahabu</em>).</td>
+                <td>Mabni 'alas-sukun, fa'il-nya dhamir mustatir wujuban taqdiruhu <em>Anta</em>. Bermakna permohonan/doa (<em>du'ā' wa thalab</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>لِى</strong></td>
+                <td>Harf jar Lam + Ya' mutakallim dhamir muttashil.</td>
+                <td>Jar wa majrur mabni <strong>muta'alliq</strong> langsung dengan fi'il <em>hab</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِن</strong></td>
+                <td>Harf jar menunjukkan permulaan asal (<em>ibtida' al-ghayah</em>).</td>
+                <td>Harf mabni 'alas-sukun, diidghamkan ke dalam lam pada <em>ladunka</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَّدُنكَ</strong></td>
+                <td>Isim zharaf mabni 'alas-sukun fi mahalli jarrin bi-min + Kaf mudhaf ilaih.</td>
+                <td>Jar wa majrur <em>mil-ladunka</em> <strong>muta'alliq</strong> dengan fi'il <em>hab</em> atau menjadi hal mahdzuf bagi <em>dzurriyyatan</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ذُرِّيَّةً</strong></td>
+                <td>Isim mufrad wazan <em>fu''liyyah</em>, bertindak sebagai isim jins.</td>
+                <td><strong>Maf'ūl Bih</strong> bagi fi'il <em>hab</em>, manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>طَيِّبَةً ۖ</strong></td>
+                <td>Isim sifat musyabbahah wazan <em>fai'ilah</em>.</td>
+                <td><strong>Na'at / Ṣhifah</strong> bagi <em>dzurriyyatan</em>, manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّكَ</strong></td>
+                <td>Harf taukid wa nashab + Kaf khithab mukhatab dhamir muttashil.</td>
+                <td>Kaf mabni 'alal-fath fi mahalli nashbin <strong>Ismu Inna</strong>. Jumlah ini berstatus <em>ta'līliyyah</em> (alasan penguat permohonan).</td>
+            </tr>
+            <tr>
+                <td><strong>سَمِيعُ</strong></td>
+                <td>Shighah mubalaghah wazan <em>fa'īl</em> bertindak sebagai mudhaf.</td>
+                <td><strong>Khabar Inna</strong> marfu' bil-dhammah azh-zhahirah wahuwa mudhaf.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلدُّعَآءِ ۝٣٨</strong></td>
+                <td>Isim masdar wazan <em>fi'āl</em> dari fi'il <em>da'ā</em>.</td>
+                <td><strong>Mudhaf Ilaih</strong> majrur bil-kasrah azh-zhahirah di bawah huruf hamzah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & Estetika Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Isti'ārah Makāniyyah Zamāniyyah pada "Hunālika":</strong><br>
+            Penggunaan kata tunjuk tempat jauh <strong>هُنَالِكَ</strong> untuk menandai 'waktu/momentum' adalah bentuk <em>Isti'arah Tab'iyyah</em> yang sangat memukau. Al-Qur'an menggambarkan momentum batin Nabi Zakariya saat menyaksikan keajaiban rizki Maryam seolah-olah sebuah tempat fisik yang nyata dan kokoh di mana doa dipanjatkan. Ini mengajarkan bahwa ada ruang dan waktu sakral di mana tirai ijabah langit terbuka lebar.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Ījāz bil-Ḥadzf & Keintiman Munajat (رَبِّ):</strong><br>
+            Pembuangan harf nida' (<em>Yā</em>) pada seruan <strong>رَبِّ (Rabbi)</strong> tanpa kata perantara mengindikasikan kedekatan spiritual yang tak berjarak antara kalbu Zakariya dan Allah. Penyeruan dengan nama <em>Ar-Rabb</em> (Sang Pemelihara yang menumbuhkan dari ketiadaan) sangat serasi dengan hajat permohonan penciptaan janin baru dalam rahim.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Diksi Khusus "Hab lī" & "Mil-ladunka":</strong><br>
+            Pemilihan fi'il <strong>هَبْ (Hab)</strong> alih-alih <em>a'ṭhinī</em> (berilah aku) atau <em>ij'al lī</em> (jadikanlah bagiku) mencerminkan puncak adab ketauhidan: Zakariya menyadari dirinya tidak memiliki modal kausalitas biologis lagi, maka anak itu dimohonkan murni sebagai karunia cuma-cuma (hibah). Penambahan <strong>مِن لَّدُنكَ (mil-ladunka)</strong> semakin mempertegas permohonan bypass hukum alam, yakni semata-mata bersumber dari perbendaharaan rahmat khusus yang melampaui logika sebab-akibat material.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah 'anit-Taqwā pada "Dzurriyyatan Ṭhayyibah":</strong><br>
+            Penyebutan sifat <em>ṭhayyibatan</em> (yang baik/suci) adalah kinayah dari kesalehan akidah, kemurnian garis keturunan, dan ketaatan ibadah. Zakariya tidak memohon sembarang anak biologis untuk sekadar membanggakan jumlah keturunan di hadapan Bani Israil, melainkan memohon keturunan yang mewarisi integritas kenabian dan membela risalah tauhid.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Jinās Isytiqāq & Ḥusnut-Ta'līl:</strong><br>
+            Ayat ini dibuka dengan fi'il <strong>دَعَا (da'ā)</strong> dan ditutup dengan isim masdar <strong>ٱلدُّعَآءِ (ad-du'ā')</strong>. Perpaduan ini melahirkan <em>Jinās Isytiqāq</em> yang menghadirkan harmoni fonetik yang sangat menyentuh pendengaran. Penutupan dengan <strong>إِنَّكَ سَمِيعُ ٱلدُّعَآءِ</strong> berfungsi sebagai <em>Husnut-Ta'lil</em>: Zakariya mengunci munajatnya dengan memuji sifat Allah yang Maha Memperkenankan doa hamba-hamba-Nya yang berserah diri.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Metodologi Integratif 2S & 1L</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Harmoni dengan Ayat Sebelumnya - QS. 3:37):</strong><br>
+            Pada ayat 37, narasi menggambarkan pemeliharaan luar biasa atas diri Maryam binti 'Imran di bawah asuhan Nabi Zakariya. Setiap kali Zakariya memasuki mihrab Maryam, ia mendapati hidangan rizki yang ajaib. Ketika ditanya, Maryam menjawab dengan kalimat tauhid yang menggetarkan: <em>"Innallāha yarzuqu may yasyā'u bi-ghayri ḥisāb"</em> (Sesungguhnya Allah memberi rezeki kepada siapa yang dikehendaki-Nya tanpa perhitungan). Ayat 38 hadir sebagai reaksi langsung dari peristiwa tersebut: kalimat Maryam menjadi percikan api spiritual yang membakar keputusasaan Zakariya, mendorongnya untuk seketika memanjatkan doa memohon anak dari Allah Yang Mahakuasa.
+        </li>
+        <li>
+            <strong>Siyāq (Konteks Makro Surah & Dialektika Kristologi Delegasi Kristen Najran):</strong><br>
+            Konteks makro Surah Ali 'Imran ditujukan untuk membongkar syubhat kristologi yang dibawa oleh delegasi Kristen Najran pada tahun 9 Hijriah di Madinah. Mereka mendewakan Nabi 'Isa AS karena kelahirannya yang ajaib tanpa ayah biologis. Melalui kisah Zakariya di ayat 38–41, Al-Qur'an menyajikan hujah tandingan yang telak dan rasional: jika Allah mampu menciptakan Yahya dari pertemuan sperma seorang kakek tua renta dengan sel telur seorang wanita mandul (dua sebab kemustahilan biologis), maka Allah tentu jauh lebih mampu menciptakan 'Isa dari seorang perawan suci tanpa perantara laki-laki! Keduanya adalah hamba dan nabi Allah yang lahir dari mukjizat Ilahi, bukan tuhan dan bukan anak tuhan.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat Berikutnya - QS. 3:39–41):</strong><br>
+            Doa yang dipanjatkan di mihrab pada ayat 38 langsung disambut dengan kecepatan ijabah pada ayat 39: <em>"Fa-nādathul-malā'ikatu wa huwa qā'imuy-yuṣhallī fīl-miḥrābi annallāha yubasysyiruka bi-Yaḥyā..."</em> (Maka malaikat memanggilnya ketika ia sedang berdiri salat di mihrab: 'Sesungguhnya Allah menyampaikan kabar gembira kepadamu dengan kelahiran Yahya...'). Rangkaian ini membuktikan bahwa doa yang lahir dari ketulusan dan keyakinan mutlak tidak pernah ditolak oleh Allah.
+        </li>
+    </ul>
+
+    <h3>2. Rekonstruksi Sosio-Historis & Realitas Baitul Maqdis Abad ke-1 SM</h3>
+    <p>
+        Nabi Zakariya AS hidup pada era kemunduran moral dan spiritual Bani Israil di bawah hegemoni kekuasaan Romawi dan elite dinasti Herodes sekitar abad ke-1 Sebelum Masehi. Di Haikal Sulaiman (Baitul Maqdis), jabatan keimaman dan pelayanan ibadah mulai terancam oleh formalisme kaku, komersialisasi kuil, dan intrik politik para pemuka agama Farisi dan Saduki.
+    </p>
+    <p>
+        Dalam situasi krisis kepemimpinan moral tersebut, Nabi Zakariya mendambakan seorang pewaris kenabian. Sebagaimana dijelaskan dalam Surah Maryam ayat 5 (<em>"Wa innī khiftul-mawāliya miw-warā'ī"</em> - Dan sungguh aku mengkhawatirkan kerabatku sepeninggalku), Zakariya cemas jika kepemimpinan spiritual jatuh ke tangan orang-orang fasik yang akan merusak ajaran Taurat. Kehadiran Maryam di mihrab menjadi oasis kesucian yang menginspirasi Zakariya: peradaban yang rusak ini hanya bisa diselamatkan oleh lahirnya generasi baru yang <em>thayyib</em>—generasi yang lahir dari mukjizat ketulusan doa dan dididik dalam mihrab ketakwaan.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>:</strong><br>
+        At-Tabari menjelaskan bahwa kata <em>Hunālika</em> menandai titik perubahan keyakinan: tatkala Zakariya melihat fenomena di luar nalar hukum alam berupa buah musim dingin hadir di musim panas pada diri Maryam, timbullah rasa tamak yang terpuji (<em>ath-thama' fī karamillāh</em>) untuk memohon keturunan. At-Tabari menegaskan bahwa doa Zakariya bukanlah bentuk keraguan terhadap ketetapan takdir, melainkan ekspresi husnudzan tertinggi bahwa kekuasaan Allah tidak pernah terkekang oleh usia tua maupun kemandulan biologis.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menyoroti keindahan sifat anak yang diminta: <em>dzurriyyatan thayyibatan</em>, yakni anak yang suci agamanya, luhur pekertinya, dan taat kepada Allah sebagaimana Maryam. Ibnu Katsir mengutip korelasi dengan ayat penutup: <em>"Innaka Samī'ud-du'ā'"</em>, yaitu Engkau Maha Mendengar setiap rintihan suara hamba yang memanggil-Mu dan Engkau Maha Kuasa memperkenankan apa yang secara logika manusia dianggap mustahil.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi fikih dan tasawuf dari ayat ini: Pertama, kebolehan bahkan anjuran bagi orang beriman untuk memohon keturunan yang saleh demi memakmurkan bumi dengan ibadah. Kedua, disyariatkannya mencari waktu dan tempat yang mulia untuk berdoa (<em>at-tabarruk bi-az-zamān wal-makān al-fāḍhil</em>); Zakariya sengaja berdoa di mihrab tempat turunnya karamah Maryam karena di tempat itulah rahmat Allah sedang tercurah deras. Ketiga, haramnya berputus asa dari rahmat Allah dalam kondisi selemah apa pun.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (544–606 H) & Az-Zamakhsyari (467–538 H):</strong><br>
+        Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> mengulas dialektika teologis kausalitas: Alam semesta diatur oleh hukum kebiasaan ('<em>ādiyyah</em>), bukan hukum kepastian mutlak yang berdiri sendiri. Allah adalah <em>Musabbibul-Asbāb</em> (Pencipta Sebab) yang berkuasa melahirkan akibat tanpa perantara sebab yang biasa. Zakariya menyadari prinsip filosofis ini saat melihat rizki Maryam. Sementara Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menggarisbawahi kehalusan balaghah kata <em>mil-ladunka</em>: permintaan anak ini bukan melalui perantaraan medis atau sebab alami, melainkan anugerah eksklusif langsung dari perbendaharaan 'Kun' milik Ilahi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Muhammad At-Tahir Ibnu 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur menyajikan pembacaan psikologis dan peradaban yang memikat: Kesalehan Maryam menjadi katalisator kebangkitan harapan Nabi Zakariya. Ini menunjukkan hukum sosiologis bahwa pemandangan kesucian dan keajaiban iman pada generasi muda mampu menyalakan kembali semangat perjuangan para tetua yang telah meredup. Diksi <em>dzurriyyah</em> (bentuk tunggal namun bermakna kelompok) menandakan bahwa visi Zakariya bukan hanya menginginkan satu anak biologis, melainkan menginginkan lahirnya trah garis keturunan peradaban yang terus memperjuangkan tauhid.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) — <em>Tafsir Al-Azhar</em> & Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Buya Hamka menulis dengan kehangatan sastra: <em>"Zakariya telah tua, kepalanya telah beruban putih laksana salju, langkahnya telah lambat. Namun kalbunya tetap muda dalam pengharapan kepada Allah. Pemandangan di mihrab Maryam membuka kembali jendela asa yang telah lama terkunci oleh kebiasaan dunia."</em> Sementara Quraish Shihab menegaskan bahwa doa Nabi Zakariya adalah manifestasi kerendahan hati: beliau tidak meminta anak untuk menjadi kebanggaan materiil atau penerus takhta duniawi, melainkan semata-mata keturunan yang <em>thayyib</em>—yang menyejukkan pandangan mata orang tua dan menenangkan kehidupan masyarakat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Konseptual Kementerian Agama RI (Tafsir Tematik Kemenag):</strong><br>
+        Kemenag RI menegaskan bahwa ayat ini menjadi fondasi teologis bagi pembinaan keluarga sakinah dan ketahanan generasi bangsa. Kualitas generasi masa depan (<em>dzurriyyah thayyibah</em>) ditentukan oleh kebersihan motif orang tua sejak memanjatkan doa, kesiapan mendidik dalam nilai ketakwaan, dan keyakinan spiritual yang kokoh di tengah badai krisis moral.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu / Ijma' Mufassirin (Ittifāq)</th>
+                <th>Dinamika Ikhtilaf / Ragam Sudut Pandang Penafsiran</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Pemicu Munajat Zakariya (Makna "Hunālika")</strong></td>
+                <td>Seluruh mufassir sepakat bahwa doa Zakariya dipicu secara langsung oleh pemandangan rizki buah ajaib di mihrab Maryam (QS. 3:37).</td>
+                <td>
+                    • <strong>Mayoritas Mufassir Klasik:</strong> Menitikberatkan pada keajaiban fisik buah musim dingin di musim panas sebagai bukti kekuasaan Allah.<br>
+                    • <strong>Mufassir Maqashidi (Ibnu 'Asyur):</strong> Menekankan pengaruh resonansi psikologis kesucian kepribadian Maryam terhadap batin Zakariya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Permintaan "Mil-ladunka"</strong></td>
+                <td>Sepakat maknanya adalah memohon anugerah langsung dari Allah yang melampaui kemampuan ikhtiar manusiawi.</td>
+                <td>
+                    • <strong>Pendekatan Teologis Asy'ariyyah (Ar-Razi):</strong> Penegasan bahwa Allah menciptakan sesuatu tanpa terikat rantai kausalitas materi.<br>
+                    • <strong>Pendekatan Adab Doa (Ibnu Katsir & Quraish Shihab):</strong> Pengakuan totalitas ketidakberdayaan hamba yang menyerahkan urusan sepenuhnya kepada kemurahan Ilahi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan Makna "Dzurriyyatan Ṭhayyibatan"</strong></td>
+                <td>Sepakat maknanya adalah keturunan yang bertakwa, suci jiwanya, dan taat beribadah kepada Allah.</td>
+                <td>
+                    • <strong>Ulama Fikih & Tarbiyah:</strong> Doa permohonan anak yang berbakti kepada orang tua dan luhur pekertinya.<br>
+                    • <strong>Ulama Tafsir Risalah:</strong> Permohonan pewaris tugas kenabian untuk memimpin umat Bani Israil agar tidak tersesat sepeninggal beliau.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Fikih Tabarruk Tempat & Waktu</strong></td>
+                <td>Sepakat bahwa berdoa di tempat orang-orang saleh beribadah dan pada momentum turunnya rahmat memiliki keutamaan khusus.</td>
+                <td>
+                    • <strong>Imam Al-Qurthubi & Mayoritas Fuqaha:</strong> Menjadikan ayat ini dalil sahnya mencari berkah tempat (mihrab tempat ibadah) untuk memanjatkan doa.<br>
+                    • <strong>Ulama Atsar:</strong> Mengingatkan bahwa yang mengabulkan doa mutlak adalah Allah semata, keberadaan tempat hanyalah sarana kekhusyukan hati.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur mental model berikut merupakan ikhtiar tadabbur, perenungan sistemik, dan sintesis psikologis manusiawi; bukan klaim penafsiran wahyu yang mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Determinisme Biologis vs Pola Pikir Mukjizat Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kesadaran</th>
+                <th>Pola Pikir Determinisme Kaku (Sekuler / Materialistis)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Model Nabi Zakariya AS)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Pandangan terhadap Hukum Sebab-Akibat</strong></td>
+                <td><strong>Kausalitas Absolut & Tertutup:</strong> Menganggap hukum alam, kalkulasi statistik, dan vonis medis sebagai kepastian mutlak yang tidak dapat diubah sama sekali.</td>
+                <td><strong>Kausalitas Terbuka (Musabbibul-Asbāb):</strong> Menghormati hukum alam sebagai kebiasaan ciptaan Ilahi, namun meyakini bahwa Sang Pencipta sebab memiliki kekuasaan tak terbatas untuk menerobos hukum tersebut.</td>
+            </tr>
+            <tr>
+                <td><strong>Reaksi terhadap Kebuntuan Hidup</strong></td>
+                <td><strong>Keputusasaan & Kematian Harapan:</strong> Menyerah pada kondisi fisik/usia, merasa masa depan telah selesai ketika pintu kalkulasi manusiawi tertutup rapat.</td>
+                <td><strong>Aktivasi Pengharapan Transenden (Hunālika):</strong> Menjadikan kebuntuan manusiawi sebagai momentum titik tolak untuk bersujud dan mengetuk perbendaharaan gaib Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>Sumber Permohonan (Locus of Resource)</strong></td>
+                <td><strong>Sumber Daya Horizontal:</strong> Bergantung sepenuhnya pada koneksi relasi manusia, kekuatan finansial, dan teknologi materi semata.</td>
+                <td><strong>Akses Vertikal (Mil-Ladunka):</strong> Menyandarkan harapan pada perbendaharaan rahmat Allah yang melampaui perhitungan laba-rugi materi duniawi.</td>
+            </tr>
+            <tr>
+                <td><strong>Orientasi Memiliki Keturunan</strong></td>
+                <td><strong>Ego Narsisistik & Pewaris Materi:</strong> Anak sebagai alat penerus gengsi keluarga, penjamin hari tua, atau aset penumpuk modal finansial.</td>
+                <td><strong>Pewaris Nilai Luhur (Dzurriyyah Ṭhayyibah):</strong> Anak sebagai proyek peradaban akhirat, penebar rahmat, dan pembela kebenaran di muka bumi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Mihrab Resonance Principle" (Prinsip Resonansi Ekosistem Spiritual)</strong><br>
+            <em>Premis Dasar:</em> Kapasitas keyakinan seseorang sangat dipengaruhi oleh ekosistem dan figur yang berada di sekelilingnya. Ketika seseorang terus-menerus bergaul dengan lingkungan yang pesimistis dan materialistis, batas mentalnya (<em>mental ceiling</em>) akan menyempit. Sebaliknya, ketika Nabi Zakariya memasuki mihrab Maryam—sebuah lingkungan yang dipenuhi getaran keikhlasan dan mukjizat rizki tanpa perhitungan—frekuensi keimanannya teresonansi secara instan. Pemandangan kesucian itu meruntuhkan belenggu skeptisisme usianya, melahirkan keberanian untuk meminta sesuatu yang secara biologis dianggap mustahil.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Mil-Ladunka Bypass" (Penerobosan Kausalitas Sekunder Menuju Sumber Primer)</strong><br>
+            <em>Premis Dasar:</em> Dalam menavigasi krisis kehidupan, manusia sering kali mengalami <em>tunnel vision</em>: mengira bahwa satu-satunya jalan keluar hanyalah melalui rantai sebab-akibat horizontal yang terlihat. Konsep <em>mil-ladunka</em> mengajarkan rumus berpikir bahwa ketika seluruh saluran kausalitas sekunder (dokter, pengadilan, logika pasar, kekuatan modal) telah menyatakan kebuntuan, seorang mukmin tidak pernah kehilangan opsi, karena ia memiliki akses langsung menuju Sang Penguasa Kausalitas Primer. Keyakinan ini melahirkan ketenangan mental yang tak tergoyahkan.
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <p>
+        Secara neuropsikologis, manusia yang telah lama mengalami kegagalan berulang rentan terjerumus ke dalam kondisi patologis yang disebut <strong>Learned Helplessness</strong> (ketidakberdayaan yang dipelajari) dan <strong>Age-Induced Despair</strong>—situasi di mana otak menghentikan produksi harapan karena meyakini bahwa segala ikhtiar tidak akan pernah membuahkan hasil.
+    </p>
+    <p>
+        Peristiwa dalam QS. 3:38 mendemonstrasikan proses <em>cognitive reappraisal</em> dan <em>neuro-spiritual reset</em> yang luar biasa. Melalui pengamatan terhadap rizki Maryam, otak dan kalbu Nabi Zakariya mengalami pemulihan plastisitas harapan (<em>neuro-hope plasticity</em>). Beliau menolak menyerah pada degenerasi biologis sel-sel tubuhnya. Dengan melantunkan doa <em>"Rabbi hab lī mil-ladunka dzurriyyatan thayyibah"</em> dalam kesunyian mihrab, sistem saraf otonom Zakariya mengalami transisi dari kepanikan/kecemasan menuju ketenangan parasimpatis yang mendalam (<em>ithmi'nānul qalb</em>), didukung oleh pengakuan mutlak bahwa Tuhannya adalah <em>Samī'ud-Du'ā'</em>.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomena "Biological Nihilism", Resesi Demografi & Tren Childfree di Era Algoritma</h3>
+    <p>
+        Di abad ke-21, peradaban modern sedang dilanda gelombang krisis eksistensial yang belum pernah terjadi dalam sejarah: fenomena resesi demografi global, anjloknya tingkat fertilitas di berbagai negara maju, dan maraknya gerakan <em>childfree</em> yang disuarakan di platform media sosial. Banyak generasi muda hari ini terjebak dalam apa yang dapat didiagnosis sebagai <strong>Biological & Existential Nihilism</strong>.
+    </p>
+    <p>
+        Mereka enggan memiliki keturunan bukan semata karena kendala medis biologis, melainkan akibat keputusasaan terhadap masa depan: ketakutan akan beban biaya pengasuhan (<em>financial anxiety</em>), kecemasan terhadap perubahan iklim dan kehancuran bumi, serta hilangnya makna hidup transenden. Ketiadaan visi spiritual membuat anak dipersepsikan semata-mata sebagai "beban ekonomi" dan "liabilitas kebebasan personal", bukan sebagai amanah suci pelanjut estafet kebajikan peradaban.
+    </p>
+
+    <h3>2. Kritik Peradaban: Dekonstruksi Paradigma Tekno-Scientism & Solusi Qur'ani</h3>
+    <p>
+        Di sisi lain, bagi pasangan yang merindukan buah hati, peradaban tekno-saintisme modern cenderung mereduksi proses reproduksi manusia menjadi sekadar transaksi bioteknologi mekanistis yang dingin. Keberhasilan kehamilan diukur semata dari kecanggihan program IVF (bayi tabung), skrining genetik embrio, dan suntikan hormon berbiaya fantastis, seraya menepikan dimensi doa dan tawakal kepada Sang Pemberi Kehidupan. Ketika teknologi kedokteran angkat tangan dan memvonis kemandulan absolut, banyak pasangan mengalami kehancuran mental yang berujung pada perceraian dan depresi klinis akut.
+    </p>
+    <p>
+        QS. 3:38 menghadirkan dekonstruksi tajam sekaligus terapi peradaban yang membebaskan: <strong>Harapan manusia tidak boleh digantungkan pada mesin laboratorium atau saldo rekening, melainkan pada kemurahan Samī'ud-Du'ā'!</strong> Nabi Zakariya mengajarkan etika peradaban yang seimbang: kita tidak menafikan realitas biologis, namun kita menolak diperbudak oleh vonis keputusasaan materiil. Mukjizat kelahiran Yahya membuktikan bahwa selama seorang hamba masih mampu bersujud di mihrab ketulusan, tidak pernah ada kata "terlambat" atau "mustahil" di hadapan Allah SWT.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Perilaku)</h3>
+        <ol>
+            <li>
+                <strong>Protokol Mihrab Harian & Mikro-Habit Doa Zakariya (&lt; 5 Menit):</strong><br>
+                Sediakan satu sudut khusus yang tenang dan bersih di dalam rumah atau ruang kerja sebagai "mihrab personal". Setiap selesai menunaikan salat tahajud atau salat fardhu, luangkan waktu 3 menit untuk berdiam dalam kekhusyukan seraya melafalkan doa Nabi Zakariya dengan penuh penghayatan batin: <em>"Rabbi hab lī mil-ladunka dzurriyyatan ṭhayyibatan, innaka Samī'ud-du'ā'"</em>. Niatkan doa ini bukan hanya untuk anak kandung, melainkan bagi seluruh generasi muda yang berada di bawah asuhan dan bimbingan Anda.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) Menghadapi "Deadlock" Kehidupan:</strong><br>
+                Terapkan rumus <strong>"Mil-Ladunka Protocol"</strong> ketika menghadapi vonis kebuntuan hidup (baik berupa diagnosis penyakit berat, kebuntuan karier, maupun krisis rumah tangga). <em>Langkah konkret:</em> Lakukan ikhtiar profesional dan medis terbaik yang dimungkinkan syariat, namun hapus kata "pasti gagal" atau "sudah mustahil" dari kamus pikiran Anda. Segera alihkan ketergantungan hati dari makhluk kepada intervensi langsung Allah, dengan memperbanyak sedekah sunyi dan doa di sepertiga malam terakhir.
+            </li>
+            <li>
+                <strong>Komitmen Kurasi Lingkungan & Etika Resonansi Kebajikan (The Mihrab Effect):</strong><br>
+                Secara berkala, lakukan audit terhadap lingkungan sosial dan konsumsi media digital Anda. Jauhkan diri dari lingkaran pergaulan yang gemar mengeluh, menabur pesimisme, dan memandang hidup secara materialistis. Aktiflah menghadiri majelis ilmu orang-orang saleh dan jalin silaturahmi dengan keluarga-keluarga bertakwa agar frekuensi keimanan Anda senantiasa terisi dan terinspirasi untuk terus beramal saleh, meneladani bagaimana Zakariya terinspirasi oleh Maryam.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Ketika aku memohon keturunan, kekayaan, atau kesuksesan kepada Allah, apakah motif terdalam hatiku murni menginginkan lahirnya kebaikan peradaban (<em>dzurriyyatan ṭhayyibah</em>) yang diridhai-Nya, ataukah aku diam-diam hanya menginginkan pemuas gengsi sosial dan alat pamer di hadapan sesama manusia?
+            </li>
+            <li>
+                Seberapa sering aku membatasi kemahakuasaan Allah dengan kalkulasi akal kerdilku sendiri—merasa doaku tidak mungkin terkabul hanya karena pintu-pintu sebab materiil di hadapanku terlihat telah terkunci rapat?
+            </li>
+            <li>
+                Ketika aku menyaksikan nikmat luar biasa dan anugerah tak terduga yang Allah curahkan kepada saudaraku, apakah hatiku terbakar oleh racun dengki (hasad), ataukah pemandangan itu justru menggerakkan kalbuku untuk segera bersujud memohon kemurahan-Nya sebagaimana Nabi Zakariya terinspirasi oleh keajaiban Maryam?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Samī'ud-Du'ā', Yā Mujība Da'watil-Muḍhṭharrīn, Yā Man Lā Yu'jizuhū Syay'un fil-Arḍhi wa Lā fis-Samā'. Wahai Allah Yang Maha Mendengar setiap bisikan kalbu yang paling rahasia dan Maha Mengabulkan permohonan hamba-hamba-Mu yang berada di ujung kepasrahan. Sebagaimana Engkau telah menyalakan fajar harapan di dalam kalbu Nabi-Mu Zakariya tatkala menyaksikan keajaiban di mihrab Maryam, nyalakanlah pula lentera keimanan dan harapan di dalam jiwa kami yang rapuh ini. Jangan biarkan kami berputus asa dari luasnya rahmat-Mu tatkala pintu-pintu duniawi tampak tertutup di hadapan mata kami. Karuniakanlah kepada kami dari sisi-Mu—melalui perbendaharaan gaib-Mu yang tanpa batas—keturunan yang suci akidahnya, luhur akhlaknya, menyejukkan pandangan mata kami, dan teguh memperjuangkan syariat-Mu di muka bumi. Jadikanlah keluarga kami pelopor ketakwaan dan benteng penjaga tauhid hingga yaumul qiyamah. Sungguh, Engkaulah sebaik-baik Pelindung dan Maha Memperkenankan doa. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-037 - QS. Ali 'Imran Ayat 37.html">&larr; Kembali ke Ayat 37 (QS. 3:37)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 38</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-039 - QS. Ali 'Imran Ayat 39.html">Lanjut ke Ayat 39 (QS. 3:39) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

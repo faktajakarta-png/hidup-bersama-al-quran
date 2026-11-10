@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-027 - QS. Ali 'Imran Ayat 27 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-026 - QS. Ali 'Imran Ayat 26.html">&larr; Ayat Sebelumnya (QS. 3:26)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-028 - QS. Ali 'Imran Ayat 28.html">Ayat Berikutnya (QS. 3:28) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 4 (Ayat 26–32): Kedaulatan Mutlak Allah atas Kekuasaan, Takdir Kosmis & Konsekuensi Loyalitas</span>
+        <span class="badge">21 Kata | 81 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 27</h1>
+    <div class="transliteration">
+        "Tūlijul-layla fin-nahāri wa tūlijun-nahāra fil-layl(i), wa tukhrijul-ḥayya minal-mayyiti wa tukhrijul-mayyita minal-ḥayy(i), wa tarzuqu man tasyā'u bighayri ḥisāb(in)."
+    </div>
+    <div class="thematic-title">
+        Kedaulatan Kosmis & Regenerasi Eksistensial: Dialektika Sirkulasi Siang-Malam, Kehidupan dari Kematian, dan Limpahan Rezeki Tanpa Batas
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 4: Kedaulatan Mutlak Allah atas Alam Semesta & Takdir Makhluk)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        تُولِجُ ٱلَّيْلَ فِى ٱلنَّهَارِ وَتُولِجُ ٱلنَّهَارَ فِى ٱلَّيْلِ ۖ وَتُخْرِجُ ٱلْحَىَّ مِنَ ٱلْمَيِّتِ وَتُخْرِجُ ٱلْمَيِّتَ مِنَ ٱلْحَىِّ ۖ وَتَرْزُقُ مَن تَشَآءُ بِغَيْرِ حِسَابٍ ۝٢٧
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Engkau masukkan malam ke dalam siang dan Engkau masukkan siang ke dalam malam; Engkau keluarkan yang hidup dari yang mati dan Engkau keluarkan yang mati dari yang hidup; dan Engkau beri rezeki siapa saja yang Engkau kehendaki tanpa perhitungan (tanpa batas batasan hitungan matematis, tanpa ada yang menuntut pertanggungjawaban, dan dari sumber yang tiada terduga)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat 27 merupakan kelanjutan organik langsung (<em>'athaf bayān</em> dan pembuktian empiris-kosmologis) dari ayat 26 (<em>Qulillāhumma Mālikal-Mulki...</em>). Jika ayat 26 mendeklarasikan kedaulatan Allah atas panggung sejarah sosiopolitik manusia (merotasi kekuasaan, melantik para raja, mencabut dinasti, memuliakan, dan menghinakan siapa yang dikehendaki), maka ayat 27 membentangkan argumentasi kosmologis (<em>ad-dalā'il al-āfāqiyyah</em>) yang membuktikan kebenaran klaim tersebut. Zat yang mengendalikan rotasi jagat raya dengan memasukkan malam ke dalam siang (<em>īlāj</em>) secara presisi, mentransformasikan kehidupan biologis maupun spiritual dari kematian (<em>al-iḥyā' wal-imātah</em>), serta melimpahkan rezeki tanpa hisab, tentu teramat berkuasa untuk mencabut kekuasaan dari imperium adidaya mana pun dan menyerahkannya kepada hamba-hamba-Nya yang tertindas.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>تُولِجُ</strong><br>(<em>Tūliju</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Wawu sukun setelah dhammah dibaca 2 harakat.<br>
+                    <strong>Huruf Tā':</strong> Dari ujung lidah bertemu pangkal gigi seri atas dengan sifat hams.<br>
+                    <strong>Huruf Jīm:</strong> Sifat jahr dan syiddah, makhraj wasathul lisan, berharakat dhammah i'rab.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat membaca dengan ta' khithab marfu' (dhammah) pada huruf jim: <em>Tūliju</em> (fi'il mudhari' muta'addi dari bab af'ala: <em>awlaja – yūliju</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلَّيْلَ</strong><br>(<em>Al-layla</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Idghām Syamsiyyah:</strong> Lam ta'rif melebur ke dalam huruf Lam kedua bertasydid.<br>
+                    <strong>Huruf Līn:</strong> Yā' sukun jatuh setelah fathah diucapkan lembut dan mengalir tanpa tersentak.<br>
+                    <strong>Harakat Fathah:</strong> Nashab sebagai maf'ul bih.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca fathah pada huruf Lam akhir (<em>al-layla</em>) sebagai maf'ul bih manshub bagi fi'il <em>tūliju</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>فِى ٱلنَّهَارِ</strong><br>(<em>Fin-nahāri</em>)</td>
+                <td>
+                    <strong>Iltiqā'us-Sākinayn (Gugurnya Mad):</strong> Yā' mad pada <em>fī</em> digugurkan bunyinya secara fonetik saat washal bertemu huruf Nūn bertasydid.<br>
+                    <strong>Idghām Syamsiyyah & Ghunnah Musyaddadah:</strong> Lam ta'rif melebur ke Nūn disertai ghunnah sempurna 2 harakat.<br>
+                    <strong>Tarqīq ar-Rā':</strong> Huruf Rā' berharakat kasrah dibaca tipis (muraqqaqah).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Menerapkan <em>Taqīl/Imālah Ṣhughrā</em> (taqlīl bayna-bayna) pada alif sebelum huruf Rā' mutatharrifah yang berharakat kasrah (<em>an-nahāri</em>).<br>
+                    • <strong>Abū 'Amr, Ad-Dūrī, & Ḥamzah:</strong> Menerapkan imālah kubrā atau taqlil sesuai jalur sanad masing-masing.<br>
+                    • <strong>Jumhur Imam (termasuk Ḥafṣh):</strong> Membaca dengan fathah murni (fat-ḥah muḥaqqaqah).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَتُولِجُ ٱلنَّهَارَ</strong><br>(<em>Wa tūlijun-nahāra</em>)</td>
+                <td>
+                    <strong>Wawu 'Athaf:</strong> Dibaca fathah jelas.<br>
+                    <strong>Tūliju:</strong> Mad thabi'i 2 harakat.<br>
+                    <strong>Idghām Syamsiyyah & Ghunnah:</strong> Pada huruf Nūn.<br>
+                    <strong>Tafkhīm ar-Rā':</strong> Rā' berharakat fathah dibaca tebal.
+                </td>
+                <td>
+                    Seluruh imam membaca nashab pada <em>an-nahāra</em> sebagai maf'ul bih bagi fi'il <em>tūliju</em> yang kedua.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فِى ٱلَّيْلِ ۖ</strong><br>(<em>Fil-layli</em>)</td>
+                <td>
+                    <strong>Washal & Idghām Syamsiyyah:</strong> Yā' mad gugur saat washal; lam ta'rif melebur ke Lam <em>al-layl</em>.<br>
+                    <strong>Mad Līn 'Āriḍh lis-Sukūn (saat waqaf):</strong> Jika berhenti pada tanda waqaf shala, dibaca 2, 4, atau 6 harakat dengan mematangkan sifat tawassuth pada Lam sukun.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca majrur bil-kasrah pada huruf Lam saat washal, dan sukun dengan sifat tawassuth saat waqaf ikhtiyari.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَتُخْرِجُ</strong><br>(<em>Wa tukhriju</em>)</td>
+                <td>
+                    <strong>Huruf Khā':</strong> Dari adnal halq, memiliki sifat hams, rikhwah, dan tafkhim martabat keempat (sukun).<br>
+                    <strong>Tarqīq ar-Rā':</strong> Rā' kasrah dibaca tipis.<br>
+                    <strong>Huruf Jīm:</strong> Marfu' bil-dhammah.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca dengan ta' khithab marfu': <em>wa tukhriju</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلْحَىَّ</strong><br>(<em>Al-ḥayya</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca terang sebelum huruf Ḥā'.<br>
+                    <strong>Huruf Ḥā':</strong> Makhraj wasathul halq dengan sifat hams dan rikhwah.<br>
+                    <strong>Yā' Musyaddadah:</strong> Fathah disertai sifat <strong>Nabr</strong> (penekanan artikulasi tajam agar tasydid terdengar kokoh).
+                </td>
+                <td>
+                    Konsensus sepuluh imam membaca fathah bertasydid (<em>al-ḥayya</em>) sebagai maf'ul bih manshub.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مِنَ ٱلْمَيِّتِ</strong><br>(<em>Minal-mayyiti</em> / <em>minal-mayti</em>)</td>
+                <td>
+                    <strong>Tahrik bil-Fath:</strong> Nūn pada <em>min</em> difathahkan untuk menghindari bertemunya dua sukun.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Yā' Musyaddadah / Mukhaffafah:</strong> Tergantung jalur qira'at.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr, Abū 'Amr, dan Syu'bah ('an 'Āṣhim):</strong> Membaca dengan <strong>Takhfīf Yā' Sukun (المَيْتِ - <em>al-mayti</em>)</strong>.<br>
+                    • <strong>Nāfi', Ibnu 'Āmir, Ḥafṣh ('an 'Āṣhim), Ḥamzah, Al-Kisā'ī, Abū Ja'far, Ya'qūb, Khalaf:</strong> Membaca dengan <strong>Tasydīd Yā' Kasrah (المَيِّتِ - <em>al-mayyiti</em>)</strong>.<br>
+                    <em>Catatan:</em> Kedua bacaan mutawatir; wazan <em>fay'il</em> (tasydid) dan <em>fa'l</em> (takhfif) adalah dua dialek fasih dalam bahasa Arab yang sama-sama menunjukkan entitas yang telah kehilangan kehidupan.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَتُخْرِجُ ٱلْمَيِّتَ</strong><br>(<em>Wa tukhrijul-mayyita</em> / <em>mayta</em>)</td>
+                <td>
+                    <strong>Kaidah Fonetik Serupa:</strong> Khā' sukun tafkhim, Rā' tarqiq, Jīm dhammah washal ke Lam sukun qamariyyah.<br>
+                    <strong>Yā' Fathah:</strong> Nashab sebagai maf'ul bih.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr, Abū 'Amr, dan Syu'bah:</strong> Membaca dengan <strong>Takhfīf (المَيْتَ - <em>al-mayta</em>)</strong> manshub.<br>
+                    • <strong>Sisa Sepuluh Imam (termasuk Ḥafṣh):</strong> Membaca dengan <strong>Tasydīd (المَيِّتَ - <em>al-mayyita</em>)</strong> manshub bil-fathah.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>مِنَ ٱلْحَىِّ ۖ</strong><br>(<em>Minal-ḥayyi</em>)</td>
+                <td>
+                    <strong>Nūn Fathah Washal:</strong> Ke Lam sukun qamariyyah.<br>
+                    <strong>Yā' Musyaddadah Kasrah:</strong> Majrur dengan sifat nabr saat washal; jika waqaf, ya' disukunkan dengan sifat nabr mutlak.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca kasrah bertasydid pada huruf Yā' (<em>minal-ḥayyi</em>) sebagai majrur bi-min.
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>وَتَرْزُقُ</strong><br>(<em>Wa tarzuqu</em>)</td>
+                <td>
+                    <strong>Tafkhīm ar-Rā':</strong> Rā' sukun jatuh setelah fathah dibaca tebal (tafkhim mutlak).<br>
+                    <strong>Huruf Zāy:</strong> Sifat jahr, rikhwah, dan shafīr (desis tajam).<br>
+                    <strong>Huruf Qāf:</strong> Isti'la' mutlak di pangkal lidah.
+                </td>
+                <td>
+                    Seluruh imam membaca dengan ta' khithab marfu' bil-dhammah: <em>wa tarzuqu</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>مَن تَشَآءُ</strong><br>(<em>Man tasyā'u</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Tā' disamarkan bunyinya dengan dengung tipis (tarqīq) 2 harakat.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf Alif mad bertemu hamzah dalam satu kata, dibaca panjang 4–5 harakat (atau 6 harakat).
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad wajib muttashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf:</strong> Membaca dengan panjang <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Ḥamzah & Hisyām (saat waqaf):</strong> Menerapkan kaidah <em>Waqaf 'alal-Hamz</em> (tashīl dengan mad/qashr, atau ibdāl menjadi alif murni 6 atau 2 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>بِغَيْرِ حِسَابٍ ۝٢٧</strong><br>(<em>Bighayri ḥisāb</em>)</td>
+                <td>
+                    <strong>Huruf Līn:</strong> Yā' sukun setelah fathah pada <em>bighayri</em>.<br>
+                    <strong>Tarqīq ar-Rā':</strong> Rā' kasrah dibaca tipis.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf penutup ayat dibaca 2, 4, atau 6 harakat.<br>
+                    <strong>Qalqalah Kubrā:</strong> Huruf Bā' berharakat kasratain saat waqaf menjadi sukun 'aridh, dipantulkan dengan dentang kuat dan tebal di kedua bibir.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca kasratain (<em>ḥisābin</em>) saat washal, dan waqaf dengan sukun disertai pantulan Qalqalah Kubra yang bulat pada huruf Bā'.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Riwayat Ibnu 'Abbās r.a., Qatādah & Ibnu Is-ḥāq — Janji Runtuhnya Imperium Kisra & Kaisar pada Perang Khandaq (Ahzab):</strong><br>
+        Tatkala Rasulullah ﷺ memukul batu besar yang teramat keras di dalam parit (Khandaq) dengan beliung, memancarlah kilatan cahaya pertama ke arah Yaman, kilatan kedua ke arah Syam (Romawi), dan kilatan ketiga ke arah timur (Persia/Kisra). Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "اللهُ أَكْبَرُ! أُعْطِيتُ مَفَاتِيحَ الشَّامِ... اللهُ أَكْبَرُ! أُعْطِيتُ مَفَاتِيحَ فَارِسَ... اللهُ أَكْبَرُ! أُعْطِيتُ مَفَاتِيحَ الْيَمَنِ"
+        </span>
+        Mendengar kabar gembira tersebut, kaum munafik di Madinah mencemooh seraya berkata sinis: <em>"Tidakkah kalian heran melihat Muhammad? Ia menjanjikan kepada kalian istana-istana Kisra di Madain dan Kaisar di Konstantinopel, padahal untuk buang hajat saja kita tidak merasa aman karena ketakutan terkepung!"</em><br>
+        Maka Allah menurunkan QS. Ali 'Imran: 26–27 untuk membungkam keangkuhan kaum munafik dan membuktikan bahwa bagi Allah yang mengendalikan pergantian siang-malam dan menghidupkan bumi yang mati, menumbangkan adidaya dunia dan memenangkan kaum mukminin adalah perkara yang teramat mudah (Tafsir At-Tabari, Ibnu Katsir, dan Al-Wahidi dalam <em>Asbāb an-Nuzūl</em>).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Riwayat Imam Aṭ-Ṭhabarānī (Al-Mu'jam al-Kabīr No. 18245 & Al-Mu'jam aṣh-Ṣhaghīr No. 558) dari Mu'ādz bin Jabal r.a. — Doa Pelunas Hutang Sebesar Gunung Uhud:</strong><br>
+        Sahabat Mu'adz bin Jabal r.a. tertinggal dari shalat Jumat bersama Nabi ﷺ karena tertahan oleh seorang Yahudi yang menagih hutangnya. Ketika Rasulullah ﷺ menanyakannya, Mu'adz menceritakan kesulitan finansialnya. Maka Rasulullah ﷺ bersabda mengajarinya doa agung:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "أَلَا أُعَلِّمُكَ دُعَاءً تَدْعُو بِهِ، لَوْ كَانَ عَلَيْكَ مِثْلُ جَبَلِ أُحُدٍ دَيْنًا لَأَدَّاهُ اللهُ عَنْكَ؟ قُلْ يَا مُعَاذُ: قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَنْ تَشَاءُ وَتَنْزِعُ الْمُلْكَ مِمَّنْ تَشَاءُ وَتُعِزُّ مَنْ تَشَاءُ وَتُذِلُّ مَنْ تَشَاءُ بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. تُولِجُ اللَّيْلَ فِي النَّهَارِ وَتُولِجُ النَّهَارَ فِي اللَّيْلِ وَتُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَتُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَتَرْزُقُ مَنْ تَشَاءُ بِغَيْرِ حِسَابٍ. رَحْمَنَ الدُّنْيَا وَالْآخِرَةِ وَرَحِيمَهُمَا، تُعْطِيهِمَا مَنْ تَشَاءُ وَتَمْنَعُ مِنْهُمَا مَنْ تَشَاءُ، ارْحَمْنِي رَحْمَةً تُغْنِينِي بِهَا عَنْ رَحْمَةِ مَنْ سِوَاكَ"
+        </span>
+        <em>"Maukah engkau aku ajarkan sebuah doa yang apabila engkau membacanya, seandainya engkau memikul hutang sebesar Gunung Uhud emas niscaya Allah akan melunaskannya untukmu? Ucapkanlah wahai Mu'adz: (Bacalah QS. Ali 'Imran: 26–27 sampai 'bighayri hisab'), lalu sambunglah: 'Wahai Dzat Yang Maha Pengasih lagi Maha Penyayang di dunia dan di akhirat, Engkau berikan keduanya kepada siapa yang Engkau kehendaki dan Engkau cegah dari siapa yang Engkau kehendaki, limpahkanlah rahmat kepadaku dengan sebuah rahmat yang mencukupkanku dari membutuhkan belas kasihan selain-Mu!'"</em><br>
+        <strong>Derajat Hadits:</strong> Hadits hasan lighairihi menurut Al-Hafizh Al-Mundziri dalam <em>At-Targhīb wat-Tarhīb</em> dan Al-Haitsami dalam <em>Majma' az-Zawā'id</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Ṣhaḥīḥ Al-Bukhārī (No. 4935) & Muslim (No. 2874) dari Abū Hurairah r.a. — Perumpamaan Menghidupkan yang Mati (Al-Ba'ts):</strong><br>
+        Rasulullah ﷺ bersabda mengenai bukti kekuasaan Allah mengeluarkan yang hidup dari yang mati:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "كُلُّ ابْنِ آدَمَ يَأْكُلُهُ التُّرَابُ إِلَّا عَجْبَ الذَّنَبِ، مِنْهُ خُلِقَ وَفِيهِ يُرَكَّبُ، ثُمَّ يُنْزِلُ اللهُ مِنَ السَّمَاءِ مَاءً فَيَنْبُتُونَ كَمَا يَنْبُتُ الْبَقْلُ"
+        </span>
+        <em>"Setiap bagian dari jasad anak cucu Adam akan dimakan oleh tanah kubur kecuali tulang ekornya ('ajbudz-dzanab); darinya ia diciptakan pertama kali dan padanya ia akan dirakit kembali. Kemudian Allah menurunkan air hujan dari langit, maka manusia bangkit hidup kembali sebagaimana tumbuhnya tunas tetumbuhan hijau dari tanah yang mati."</em>
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. W-L-J (و-ل-ج — Yūliju / Īlāj):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> menegaskan poros semantiknya pada: <strong>Ad-Dukhūl fī Syay'in bi-Luthfin wa Khifāyah wa Mudhāyaqah (الولوج: دخول الشيء في الشيء بلطف وسلاسة وضيق - masuknya suatu entitas ke dalam ruang atau entitas lain secara amat halus, bertahap, dan meresap tanpa menimbulkan benturan keras yang merusak)</strong>. Kata <em>al-walījah</em> digunakan dalam bahasa Arab untuk menyebut teman dekat yang rahasianya menyatu ke dalam batin seseorang. Dalam konteks ayat, <em>īlāj</em> melukiskan bagaimana pergeseran malam ke siang (dan sebaliknya) berlangsung dengan kehalusan kosmis luar biasa: menit demi menit cahaya fajar menyusup perlahan mengikis kegelapan tanpa ada jeda kehampaan waktu yang menghentak sistem penglihatan manusia.
+        </li>
+        <li><strong>2. L-Y-L (ل-ي-ل — Al-Layl):</strong>
+            Porosnya adalah <strong>As-Satru wal-Izhlam was-Sukūn (الستر والإظلام - penutupan, peredupan cahaya, dan penenangan energi gerak)</strong>. Malam adalah tirai kosmik yang menidurkan aktivitas visual lahiriah dan mengistirahatkan makhluk, sekaligus menjadi mihrab perjumpaan hening antara hamba dan Sang Khaliq.
+        </li>
+        <li><strong>3. N-H-R (ن-ه-ر — An-Nahār):</strong>
+            Porosnya adalah <strong>Al-Ittisā' wal-Infijār biḍh-Dhiyā' (السعة وتفجر الضوء - pancaran cahaya yang meluas dan membanjir secara benderang)</strong>. Kata <em>an-nahar</em> memiliki akar yang sama dengan <em>an-nahr</em> (sungai yang membelah bumi dengan air melimpah). Siang dinamai <em>nahār</em> karena cahaya matahari membanjiri ufuk secara terbuka, membangkitkan kehidupan makhluk untuk berikhtiar mencari karunia.
+        </li>
+        <li><strong>4. KH-R-J (خ-ر-ج — Tukhriju / Ikhraj):</strong>
+            Porosnya adalah <strong>Al-Burūz minal-Makān wal-Infishāl (البروز والظهور بعد الاستتار - penampakan, pemisahan diri, dan pemunculan wujud ke alam nyata setelah sebelumnya tersembunyi dalam rahim ketiadaan atau kegelapan)</strong>. Mengeluarkan yang hidup dari yang mati melukiskan mukjizat metamorfosis eksistensial: bagaimana struktur yang tampak beku dan binasa diubah oleh Allah menjadi entitas yang berdenyut, sadar, dan bertumbuh.
+        </li>
+        <li><strong>5. Ḥ-Y-Y (ح-ي-ي — Al-Ḥayy):</strong>
+            Porosnya adalah <strong>Al-Kawn fī Ḥālatil-Iḥsās wal-Harakah wan-Namā' (الحياة: النماء والحس والحركة - kehidupan sejati yang ditandai dengan daya rasa, kesadaran aktif, pertumbuhan organik, dan kesuburan)</strong>. Secara spiritual, <em>Al-Hayy</em> merujuk pada kalbu yang disinari oleh ma'rifatullah dan wahyu, sedangkan secara biologis merujuk pada sel hidup yang membelah dan bernafas.
+        </li>
+        <li><strong>6. M-W-T (م-و-ت — Al-Mayyit / Al-Mayt):</strong>
+            Porosnya adalah <strong>As-Sukūn wal-Jumūd wa Dhihābul-Quwwah (السكون والهمود وفقدان الروح - kebekuan gerak, ketiadaan impuls respon, dan kepunahan energi kehidupan)</strong>. Kematian bukan sekadar berhentinya detak jantung, melainkan mencakup tanah tandus tanpa vegetasi, sperma tanpa nyawa, biji kering yang terkubur di bawah tanah, serta kalbu manusia yang membatu dalam kekufuran dan kebodohan.
+        </li>
+        <li><strong>7. R-Z-Q (ر-ز-ق — Yarzuqu / Rizq):</strong>
+            Porosnya adalah <strong>Al-'Athā'ul-Jārī al-Mun-tafa' bih (العطاء المتصل الذي ينفع صاحبه - anugerah berkesinambungan yang mendatangkan manfaat nyata bagi kelangsungan hidup hamba)</strong>. Rezeki bukan sekadar uang tunai, melainkan mencakup oksigen, kesehatan sel organ, ketenangan akal, taufik ibadah, dan hikmah pemahaman Al-Qur'an.
+        </li>
+        <li><strong>8. SY-Y-' (ش-ي-ء — Tasyā' / Masyī'ah):</strong>
+            Porosnya adalah <strong>An-Nafādz wal-Qadhā' al-Lāzim (نفوذ الإرادة وتحققها حتما - kehendak mutlak yang mengikat dan pasti terlaksana tanpa ada kekuatan apa pun yang mampu merintangi)</strong>. Jika Allah menghendaki rezeki bagi seorang hamba, seluruh konspirasi manusia untuk menghalanginya akan hancur lebur.
+        </li>
+        <li><strong>9. Ḥ-S-B (ح-س-ب — Ḥisāb):</strong>
+            Porosnya adalah <strong>Al-'Add wal-Iḥshā' wal-Muqābalah wal-Mudhayyaqah (العد والتقدير والمساءلة - perhitungan matematis, penimbangan neraca untung-rugi, penjatahan berbasis kuota, dan tuntutan pertanggungjawaban)</strong>. Frasa <em>bighayri hisāb</em> menafikan seluruh keterbatasan kalkulasi makhluk dari perbendaharaan Allah Yang Maha Kaya.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>تُولِجُ</strong></td>
+                <td>Fi'il mudhari' mu'tal fa' (mitsal wawi) dari bab <em>if'āl</em> (<em>awlaja – yūliju</em>), muta'addi.</td>
+                <td>Fi'il mudhari' marfu' bil-dhammah zhahirah. Fa'il-nya adalah dhamir mustatir wujuban takdirnya: <strong>Anta (أَنْتَ)</strong> kembali kepada Allah. Jumlah fi'liyyah ini ma'thufah atas ayat sebelumnya.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّيْلَ</strong></td>
+                <td>Isim jins ma'rifah bil-lām, mufrad mudzakkar.</td>
+                <td><strong>Maf'ūl bih awwal</strong> manshub bil-fathah azh-zhahirah 'ala akhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلنَّهَارِ</strong></td>
+                <td><em>Fī</em>: Harf jarr lil-zharafiyyah. <em>An-Nahāri</em>: Isim majrur bil-kasrah.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tūliju</em> (atau berkedudukan sebagai maf'ul tsani majazi).</td>
+            </tr>
+            <tr>
+                <td><strong>وَتُولِجُ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' muta'addi, fa'il dhamir mustatir <em>Anta</em>.</td>
+                <td>Ma'thuf atas fi'il mudhari' pertama, marfu' bil-dhammah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلنَّهَارَ</strong></td>
+                <td>Isim ma'rifah bil-lām, manshub.</td>
+                <td><strong>Maf'ūl bih</strong> manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلَّيْلِ ۖ</strong></td>
+                <td>Harf jarr wa isim majrur bil-kasrah.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tūliju</em> yang kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>وَتُخْرِجُ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' tsulatsi mazid bi-hamzah dari bab <em>af'ala</em> (<em>akhraja – yukhriju</em>).</td>
+                <td>Ma'thuf atas jumlah fi'liyyah sebelumnya, marfu' bil-dhammah; fa'il dhamir mustatir wujuban <em>Anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْحَىَّ</strong></td>
+                <td>Sifat musyabbahah wazan <em>fa'l</em> min <em>ḥayya – yaḥyā</em>, ma'rifah bil-lām.</td>
+                <td><strong>Maf'ūl bih</strong> manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ ٱلْمَيِّتِ</strong></td>
+                <td><em>Min</em>: Harf jarr libtida'il-ghāyah. <em>Al-Mayyiti</em>: Sifat musyabbahah wazan <em>fay'il</em> (atau <em>fa'l</em> pada qira'at takhfif).</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tukhriju</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَتُخْرِجُ ٱلْمَيِّتَ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' dan maf'ul bih manshub.</td>
+                <td><em>Al-Mayyita</em>: <strong>Maf'ūl bih</strong> manshub bil-fathah; fa'il dhamir mustatir <em>Anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ ٱلْحَىِّ ۖ</strong></td>
+                <td>Harf jarr wa majrur bil-kasrah.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tukhriju</em> yang kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>وَتَرْزُقُ</strong></td>
+                <td>Wawu 'athaf. Fi'il mudhari' tsulatsi mujarrad (<em>razaqa – yarzuqu</em>).</td>
+                <td>Fi'il mudhari' marfu' bil-dhammah; fa'il dhamir mustatir wujuban <em>Anta</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن تَشَآءُ</strong></td>
+                <td><em>Man</em>: Isim maushul mabni 'alas-sukun. <em>Tasyā'u</em>: Fi'il mudhari' marfu', fa'il <em>Anta</em>, 'aid mahdzuf (<em>tasyā'uhū</em>).</td>
+                <td><em>Man</em> fī maḥalli nashbin <strong>Maf'ūl bih</strong> bagi fi'il <em>tarzuqu</em>. Jumlah fi'liyyah <em>tasyā'u</em> adalah <strong>Ṣhilatul-Mawṣhūl</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>بِغَيْرِ حِسَابٍ ۝٢٧</strong></td>
+                <td><em>Bā'</em>: Harf jarr lil-mukhālathah / mulābasah. <em>Ghayri</em>: Isim majrur bil-kasrah mudhaf. <em>Ḥisābin</em>: Mudhaf ilayh majrur bil-kasratain.</td>
+                <td>Jārr wa majrūr fī maḥalli nashbin <strong>Ḥāl</strong> (keadaan rezeki yang dilimpahkan tanpa batas hitungan), atau muta'alliq bi fi'il <em>tarzuqu</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Tikrār al-Af'āl al-Muḍhāri'ah (Dinamika Keberlanjutan Kosmis):</strong>
+            Penggunaan lima fi'il mudhari' berturut-turut (<em>tūliju, tūliju, tukhriju, tukhriju, tarzuqu</em>) berfungsi mengekspresikan <strong>At-Tajaddud wal-Istimrār (kontinuitas dinamis yang selalu diperbarui tanpa henti)</strong>. Allah tidak hanya menciptakan semesta sekali lalu meninggalkannya berjalan mekanis otomatis, melainkan Dia senantiasa aktif mengatur, merajut waktu, menyuntikkan kehidupan pada materi mati, dan mengalirkan rezeki kepada miliaran makhluk setiap milidetik.
+        </li>
+        <li><strong>Ilmu Ma'ani — Uslūb at-Tadz-yīl pada "Bighayri Ḥisāb":</strong>
+            Penutupan ayat dengan klausul <em>bighayri hisāb</em> merupakan gaya <em>tadz-yīl</em> (kalimat penegas universal pasca rincian). Dalam balaghah, ini berfungsi menegaskan bahwa perbendaharaan Allah adalah tak bertepi (<em>ghayru maḥdūd</em>). Bila raja-raja dunia memberi dengan hitungan anggaran ketat karena khawatir miskin, Allah melimpahkan rezeki tanpa kalkulasi matematis, tanpa pamrih imbalan, dan tanpa ada yang mampu mengaudit ketetapan-Nya.
+        </li>
+        <li><strong>Ilmu Bayan — Al-Isti'ārah aṭh-Ṭhaba'iyyah pada Lafaz "Īlāj" (الولوج):</strong>
+            Pemilihan kata <em>īlāj</em> (memasukkan benang ke lubang jarum atau menyusupkan sesuatu ke celah sempit) adalah majaz/isti'arah yang teramat indah. Al-Qur'an menggambarkan malam dan siang seolah-olah dua lembar kain kosmis yang saling dirajut oleh jemari takdir Ilahi: ketika siang memanjang di musim panas, malam tidak dipotong secara paksa, melainkan disusupkan dan dilebur secara halus ke dalam siang; dan ketika musim dingin tiba, malam perlahan merayap mengambil kembali jatah waktu siang tanpa ada benturan gelombang elektromagnetik yang membinasakan makhluk hidup.
+        </li>
+        <li><strong>Ilmu Badi' — Al-Muqābalah al-Murakkabah & Aṭh-Ṭhibāq al-I'jāzī:</strong>
+            Ayat ini adalah mahakarya seni Badi' yang memadukan <strong>Ṭhibāq al-Ījāb</strong> (antonim biner) secara berlipat:
+            <ul>
+                <li><em>Al-Layl</em> (malam) vs <em>An-Nahār</em> (siang).</li>
+                <li><em>Al-Ḥayy</em> (hidup) vs <em>Al-Mayyit</em> (mati).</li>
+                <li><em>Īlājul-Layl fin-Nahār</em> berhadapan simetris dengan <em>Īlājun-Nahār fil-Layl</em>.</li>
+                <li><em>Ikhrajul-Ḥayy minal-Mayyit</em> berhadapan simetris dengan <em>Ikhrajul-Mayyit minal-Ḥayy</em>.</li>
+            </ul>
+            Simetri ini bukan sekadar permainan estetika retorika verbal, melainkan cerminan hukum keseimbangan kosmis (<em>law of cosmic symmetry and homeostasis</em>) yang menjaga kelestarian biosfer bumi.
+        </li>
+        <li><strong>I'jaz Fonetik — Ritme Gelombang Kontras & Dentangan Qalqalah Kubra:</strong>
+            Ayat dibuka dengan kelembutan bunyi mad thabi'i dan desis halus huruf hams (<em>tūliju, fin-nahāri</em>), meluncur bergelombang dalam rima yang tenang, lalu menaik intensitasnya ketika menyebut benturan hidup dan mati (<em>al-ḥayya, al-mayyiti</em>) yang diwarnai penekanan nabr pada tasydid, disusul bentangan mad wajib muttashil yang luas pada <em>tasyā'u</em>, dan dipungkas secara dramatis oleh hentakan <strong>Qalqalah Kubrā</strong> pada huruf Bā' ber-sukun 'aridh: <strong>Ḥisāb! ۝٢٧</strong>. Hentakan bibir pada huruf Ba' ini seolah mengunci rapat pintu kalkulasi manusia: di hadapan kekuasaan Allah, segala hitungan matematis akal makhluk terhenti tak berdaya!
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik Intim dengan Ayat 26):</strong>
+            Ayat 26 mendeklarasikan kedaulatan Allah atas sejarah sosial politik manusia: <em>"Engkau berikan kerajaan kepada siapa yang Engkau kehendaki, Engkau cabut kerajaan dari siapa yang Engkau kehendaki..."</em>. Muncul pertanyaan di benak orang-orang ragu: <em>"Bagaimana mungkin entitas Ilahi mampu merotasi peradaban manusia yang begitu kompleks?"</em><br>
+            Ayat 27 seketika menjawab dengan memaparkan bukti <em>'ālam al-khalq</em> (penciptaan fisik kosmis): Perhatikanlah rotasi malam dan siang yang ribuan tahun tidak pernah meleset satu detik pun! Perhatikanlah bagaimana sel-sel kehidupan dihidupkan dari materi tanah yang mati! Bagi Dzat yang mengendalikan mesin raksasa kosmos semesta ini, merotasi kekuasaan para penguasa di panggung bumi hanyalah persoalan amat sepele!
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Bantahan Trinitas Najran, Krisis Khandaq & Oligarki Yahudi):</strong>
+            Konteks Madaniyah ayat ini menghantam tiga poros tantangan peradaban sekaligus:
+            <ol>
+                <li><strong>Dekonstruksi Teologi Trinitas Delegasi Kristen Najran:</strong> Kaum Kristen Najran mendewakan Nabi Isa AS semata-mata karena mukjizat beliau dapat menghidupkan orang mati atas izin Allah. Ayat 27 meluruskan akidah tauhid: hak prerogatif absolut mematikan dan menghidupkan (<em>Al-Iḥyā' wal-Imātah</em>) adalah mutlak milik Allah semata! Isa AS hanyalah salah satu instrumen hamba yang diciptakan Allah dari rahim seorang ibu perawan yang fana, dan ia sendiri tidak memiliki kuasa memberi rezeki tanpa hisab kepada alam semesta.</li>
+                <li><strong>Penguatan Mental Kaum Mukminin di Tengah Kepungan Perang Khandaq:</strong> Ketika 10.000 pasukan koalisi musyrikin Quraisy dan kabilah Arab mengepung Madinah, para sahabat kelaparan hingga mengganjal perut dengan batu. Kaum munafik menertawakan janji Rasulullah ﷺ tentang penaklukan Romawi dan Persia. Ayat ini diturunkan sebagai 'injeksi spiritual' transendental: Allah yang memasukkan siang ke malam dan menghidupkan bumi yang mati akan mengeluarkan kemenangan gemilang dari rahim krisis kepungan Khandaq yang mencekam!</li>
+                <li><strong>Pukulan Telak terhadap Kesombongan Ekonomi Kaum Yahudi Madinah:</strong> Para konglomerat Yahudi memonopoli pasar kurma dan sistem keuangan ribawi di Madinah, merasa bahwa rezeki berada di bawah kendali kartel mereka. Ayat ini menegaskan: <em>Wa tarzuqu man tasyā'u bighayri hisāb</em>. Rezeki kaum beriman tidak bergantung pada belas kasihan oligarki pasar Madinah, melainkan mengalir langsung dari Sang Pemilik Perbendaharaan Langit dan Bumi.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Transendental Menuju Ayat 28):</strong>
+            Konsekuensi logis dari ayat 26 dan 27 ditegaskan pada ayat 28: <em>"Lā yattakhidzil-mu'minūnal-kāfirīna awliyā'a min dūnil-mu'minīn..."</em> (Janganlah orang-orang mukmin menjadikan orang-orang kafir sebagai wali/pelindung setia dengan meninggalkan orang-orang mukmin). Hubungan kausalitasnya sangat gamblang: <em>"Jika Allah adalah satu-satunya Pemilik kerajaan sejati, Penguasa siang-malam, Penghidup yang mati, dan Penjamin rezeki tanpa batas, atas dasar apa seorang mukmin menggadaikan loyalitas batinnya (wala') dan mengemis perlindungan kepada rezim kekafiran?"</em> Ketergantungan politik kepada musuh Allah adalah tanda rusaknya pemahaman tauhid atas ayat 27!
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭ-Ṭhabarī (w. 310 H) — Riwayat Salaf, Mekanisme Īlāj & Makna Fisik-Spiritual:</strong><br>
+        Dalam <em>Jāmi' al-Bayān</em>, At-Tabari meriwayatkan penafsiran para sahabat dan tabi'in (seperti Ibnu Abbas, Mujahid, dan Qatadah). Mengenai <em>tūlijul-layla fin-nahār</em>, At-Tabari menegaskan: Allah mengambil sebagian jam malam lalu memasukkannya ke dalam jam siang sehingga siang memanjang dan malam memendek di musim panas; dan sebaliknya mengambil jam siang dimasukkan ke dalam malam sehingga malam memanjang di musim dingin.<br>
+        Mengenai <em>tukhrijul-ḥayya minal-mayyit</em>, At-Tabari memaparkan dua dimensi eksegesis yang sama-sama sahih:
+        <ul>
+            <li><strong>Dimensi Fisik-Biologis:</strong> Mengeluarkan manusia hidup dari air mani (sperma) yang mati, mengeluarkan anak ayam yang hidup dari butir telur yang mati, dan menumbuhkan tanaman hijau segar dari biji benih yang kering.</li>
+            <li><strong>Dimensi Spiritual-Akidah:</strong> Mengeluarkan seorang mukmin yang bertauhid dari sulbi orang tua kafir (seperti Sahabat Ikrimah bin Abi Jahl dari gembong kekafiran Abu Jahl), serta melahirkan orang kafir dari orang tua mukmin (seperti putra Nabi Nuh AS).</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Harmonisasi Takdir Kosmis & Kebangkitan Hari Kiamat:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir menggarisbawahi bahwa ayat ini adalah hujah ontologis bagi keniscayaan Hari Kebangkitan (<em>Al-Ba'ts</em>). Kaum musyrikin menolak percaya bahwa tulang-belulang yang telah hancur luluh di dalam tanah mampu dihidupkan kembali. Allah menyanggah mereka: pandanglah pergantian siang dan malam serta tumbuhnya tetumbuhan hijau dari tanah gersang! Dzat yang melakukan keajaiban ini setiap hari tentu tidak akan pernah kesulitan membangkitkan miliaran jasad manusia pada tiupan sangkakala kelak.<br>
+        Terkait <em>wa tarzuqu man tasyā'u bighayri hisāb</em>, Ibnu Katsir menjelaskan: <em>"Allah menganugerahkan rezeki kepada siapa saja yang Dia kehendaki dari kalangan hamba-Nya dengan pemberian yang melimpah ruah, tanpa hitungan takaran kikir, dan Dia tidak dimintai pertanggungjawaban atas apa yang Dia perbuat, sedangkan makhluk-Nyalah yang akan dihisab dan dimintai pertanggungjawaban."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Tinjauan Bahasa, Fiqih Rezeki & Tawakal Sejati:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah dialektika qira'at antara <em>al-mayyit</em> (dengan tasydid) dan <em>al-mayt</em> (dengan takhkfif). Beliau menukil kaidah lughah bahwa kata <em>al-mayyit</em> digunakan bagi entitas yang belum mati namun sedang menuju kematian (sebagaimana firman Allah: <em>Innaka mayyitun wa innahum mayyitūn</em>), sedangkan <em>al-mayt</em> secara spesifik digunakan untuk bangkai yang telah terlepas rohnya secara tuntas. Penggunaan kedua lafaz ini dalam qira'at mutawatirah menegaskan bahwa Allah berkuasa atas seluruh fase transisi eksistensi makhluk.<br>
+        Al-Qurthubi juga menegaskan kaidah fiqih tawakal: penegasan bahwa rezeki datang <em>bighayri hisāb</em> bukanlah pembenaran untuk berpangku tangan (<em>al-kasal</em>), melainkan penghancuran terhadap keputusasaan mental (<em>al-ya's</em>). Seorang hamba wajib berikhtiar secara syar'i, namun meyakini bahwa hasil rezeki semata-mata adalah karunia kemurahan Allah yang melampaui rumus-rumus ikhtiarnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Argumen Kosmologi Rasional (Burhān al-Ḥudūts):</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi merumuskan bahwa ayat 27 memuat empat dalil kebesaran Ilahi yang mematahkan filsafat kaum naturalis (<em>ad-dahriyyah</em>):
+        <ol>
+            <li><strong>Dalil Perubahan Falak (Rotasi Siang-Malam):</strong> Alam semesta tidak statis, melainkan bergerak dalam perubahan konstan. Setiap entitas yang mengalami perubahan (<em>mutaghayyir</em>) pasti berstatus baru (<em>ḥādits</em>), dan setiap yang baru membutuhkan Pencipta Yang Maha Menghendaki (<em>Al-Mukhashshish</em>).</li>
+            <li><strong>Dalil Anorganik ke Organik (Mati ke Hidup):</strong> Perpaduan unsur-unsur kimiawi tanah, air, dan udara tidak memiliki kesadaran sendiri untuk membentuk sel hidup. Maka lahirnya kehidupan dari materi mati adalah bukti tak terbantahkan adanya intervensi Dzat Yang Maha Mengetahui lagi Maha Kuasa.</li>
+        </ol>
+        Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti kedalaman balaghah muqabalah yang membuktikan kesempurnaan hikmah Ilahi: tidak ada kekuatan materiil semesta yang mampu menahan laju terbitnya siang atau menolak datangnya malam.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Dinamika Peradaban:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur memaparkan bahwa pergantian siang-malam dan rotasi kehidupan dari kematian adalah hukum peradaban (<em>sunnatullāh fil-ijtima'</em>). Bangsa-bangsa yang hari ini berada dalam puncak kemakmuran dan hegemoni (berada di posisi 'siang' yang benderang) pada akhirnya akan mengalami masa senja kemunduran dan kegelapan 'malam' manakala nilai moralnya runtuh. Sebaliknya, umat yang hari ini terpuruk, miskin, dan tampak mati tidak boleh berputus asa; sebab Allah senantiasa menyiapkan bibit-bibit generasi baru untuk memancarkan fajar kebangkitan peradaban baru dari rahim kepunahan generasi lama.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Optimisme Nusantara & Rezeki Holistik:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan dengan untaian kata menggugah sanubari: <em>"Ayat ini adalah fajar harapan bagi jiwa-jiwa yang sedang remuk redam. Ketika malam penderitaan hidupmu terasa begitu pekat dan panjang, ingatlah firman Tuhanmu: Dia memasukkan siang ke dalam malam! Fajar kemenangan pasti menyingsing. Ketika usahamu bangkrut, badanmu sakit, dan jalanmu seolah buntu mati, ingatlah: Dia mengeluarkan yang hidup dari yang mati! Tuhan sanggup menumbuhkan kembali kebahagiaan dari reruntuhan air matamu."</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menguraikan makna <em>bighayri hisāb</em>: rezeki Allah tidak tunduk pada perhitungan deret hitung manusia. Sering kali manusia bekerja memeras keringat di satu pintu rezeki, namun Allah membukakan pintu rezeki tak terduga dari sepuluh pintu lain yang tak pernah ia perhitungkan sebelumnya. Kemenag RI menyimpulkan bahwa ayat ini menanamkan etos tawakal aktif: bekerja keras sembari menyandarkan hasil sepenuhnya pada kemurahan Allah Yang Maha Pemurah.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Mekanisme Fisik "Īlājul-Layl fin-Nahār"</strong></td>
+                <td>Sepakat bahwa ayat ini menegaskan perubahan rotasi waktu bumi dan kekuasaan mutlak Allah atas peredaran matahari dan bumi.</td>
+                <td>
+                    • <strong>Mayoritas Salaf (At-Tabari, Ibnu Katsir):</strong> Memaknai secara fenomena kasat mata, yakni penambahan dan pengurangan durasi jam siang-malam sesuai pergantian musim (panas dan dingin).<br>
+                    • <strong>Mufassir Kontemporer (Ibnu 'Asyur, Quraish Shihab):</strong> Memaknai lebih luas mencakup fenomena rotasi bumi pada porosnya yang menghasilkan batas fajar/senja yang bergerak bertahap menyelimuti belahan bumi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan Makna "Al-Ḥayy minal-Mayyit"</strong></td>
+                <td>Sepakat bahwa ayat ini mencakup transformasi fisik ciptaan Allah dan kekuasaan-Nya menghidupkan manusia di hari kiamat.</td>
+                <td>
+                    • <strong>Tafsir Fisik-Biologis (Az-Zajjaj, Al-Qurthubi):</strong> Fokus pada siklus biologis konkret: sperma menjadi manusia, telur menjadi burung, biji mati menjadi pohon.<br>
+                    • <strong>Tafsir Maknawi-Spiritual (Al-Hasan Al-Bashri, Mujahid):</strong> Menjangkau dimensi rohani, yakni melahirkan mukmin berjiwa hidup dari orang tua kafir yang berjiwa mati, atau lahirnya orang alim dari keluarga awam.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat "Bighayri Ḥisāb"</strong></td>
+                <td>Sepakat bahwa rezeki Allah tidak memiliki batas akhir dan tidak ada kekuatan apa pun yang dapat membatasi pemberian-Nya.</td>
+                <td>
+                    • <strong>Pendekatan Kuantitatif (Ibnu Katsir):</strong> Pemberian yang sangat melimpah tanpa kuota dan tanpa kekhawatiran berkurangnya perbendaharaan Allah.<br>
+                    • <strong>Pendekatan Teologis-Kedaulatan (Ar-Razi, Al-Qurthubi):</strong> Allah memberi tanpa ada pihak auditor yang berhak menuntut perhitungan (<em>lā yus'alu 'ammā yaf'al</em>) dan tanpa ada kewajiban balas jasa dari makhluk.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Mekanistik Sempit vs Pola Pikir Qur'ani Siklis-Regeneratif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Mekanistik-Materialistik (Scarcity Bias)</th>
+                <th>Pola Pikir Qur'ani Siklis-Regeneratif (QS. 3:27)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Persepsi terhadap Perubahan Waktu</strong></td>
+                <td><em>Linear & Destructive:</em> Waktu dipandang sebagai garis lurus yang terus menua menuju kehancuran dan kehabisan sumber daya; memicu kepanikan eksistensial (<em>existential dread</em>).</td>
+                <td><em>Cyclical & Generative (Īlāj):</em> Waktu adalah siklus perajutan kosmis yang selalu memperbarui diri; kegelapan malam bukanlah kematian abadi, melainkan fase inkubasi fajar baru.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Titik Nadir / Kegagalan</strong></td>
+                <td><em>Learned Helplessness:</em> Memandang kegagalan, kebangkrutan, atau penyakit sebagai jalan buntu permanen (kematian eksistensi) yang melahirkan depresi klinis.</td>
+                <td><em>Paradoxical Hope (Al-Ḥayy minal-Mayyit):</em> Memahami bahwa sistem kehidupan dirancang untuk melahirkan regenerasi dari materi mati; titik nadir adalah 'tanah subur' tempat benih kesuksesan baru bertunas.</td>
+            </tr>
+            <tr>
+                <td><strong>Model Mental tentang Rezeki</strong></td>
+                <td><em>Zero-Sum Game & Mathematical Anxiety:</em> Rezeki dianggap kue terbatas yang harus diperebutkan dengan sikut-menyikut; kecemasan konstan terhadap angka tabungan.</td>
+                <td><em>Non-Linear Abundance Mindset:</em> Rezeki bersumber dari Dzat Yang Maha Melimpah <em>bighayri ḥisāb</em>; ikhtiar manusiawi bermitra dengan karunia tak terduga yang melampaui logika matematis.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Seamless Ingress Principle" (Hukum Transisi Halus):</strong>
+            Dalam ayat 27, Allah memperkenalkan konsep <em>īlāj</em>—perubahan dramatis yang dieksekusi secara gradual dan halus tanpa friksi yang merusak. Dalam psikologi perubahan perilaku dan kepemimpinan organisasi, model ini mengajarkan bahwa transformasi besar tidak boleh dipaksakan melalui revolusi radikal yang memicu resistensi syok mental, melainkan melalui <strong>mikro-kebiasaan bertahap</strong> (<em>incremental shifts</em>) yang meresap perlahan ke dalam kultur jiwa sebagaimana malam meresap ke dalam siang.
+        </li>
+        <li><strong>Mental Model 2: "The Regenerative Loop" (Kelahiran dari Titik Kematian):</strong>
+            Manusia modern sering mengalami kelumpuhan mental manakala menghadapi fase 'mati': putus hubungan, di-PHK dari pekerjaan, atau kehilangan status sosial. Model <em>yukhrijul-ḥayya minal-mayyiti</em> memprogram ulang persepsi kognitif: kematian suatu fase adalah syarat biologis dan spiritual bagi lahirnya fase kehidupan yang lebih matang. Tanpa terurainya biji benih di dalam tanah gelap (kematian wujud biji), pohon rindang berbuah lebat tidak akan pernah tumbuh.
+        </li>
+        <li><strong>Mental Model 3: "The Non-Linear Math of Divine Grace" (Matematika Keberlimpahan Ilahi):</strong>
+            Otak manusia secara evolusioner terkunci dalam pemikiran linear: 1 + 1 = 2 (kerja 8 jam = hasil 8 unit). Namun klausul <em>wa tarzuqu man tasyā'u bighayri hisāb</em> membongkar jebakan linearitas ini. Dalam kehidupan seorang mukmin, ada faktor pengali Ilahi (<em>barakah multiplier</em>): jejaring takdir, pertolongan orang asing, ide cemerlang tiba-tiba, atau perlindungan dari bencana tak terduga yang menyelamatkan miliaran rupiah. Mental model ini membebaskan jiwa dari ketakutan akan kemiskinan (<em>scarcity mindset</em>).
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengharmonisasikan Ritme Sirkadian Batin</h3>
+    <p>
+        Secara neurobiologis, jam biologis tubuh manusia (<em>circadian rhythm</em>) yang diatur oleh nukleus suprakiasmatik di hipotalamus sangat bergantung pada pergantian cahaya dan kegelapan (melatonin dan kortisol). Ketika manusia abad ke-21 merusak ritme ini dengan paparan cahaya biru gawai tanpa henti di tengah malam, terjadi kekacauan hormonal yang berujung pada insomnia, kecemasan kronis, dan kekeringan spiritual.
+    </p>
+    <p>
+        Tadabbur QS. 3:27 membawa terapi <strong>Tazkiyatun Nafs berbasis Penyelarasan Kosmis</strong>. Jiwa diajak kembali bersujud pada harmoni alam: menjadikan malam sebagai ruang istirahat hening untuk bermunajat dan mengistirahatkan ego, serta menjadikan siang sebagai ruang jihad ikhtiar yang penuh vitalitas. Pengakuan bahwa rezeki mengalir <em>bighayri hisāb</em> meredakan stimulasi berlebih amigdala (pusat kecemasan otak), mematikan sinyal bahaya palsu tentang masa depan finansial, dan mengaktifkan ketenangan batin mendalam (<em>ithmi'nānul-qalb</em>) yang menyehatkan fisik dan rohani.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. "The Burnout Society" & Distorsi Ritme Sirkadian Peradaban Digital</h3>
+    <p>
+        Filsuf kontemporer Byung-Chul Han mengidentifikasi bahwa masyarakat abad ke-21 telah berubah menjadi <em>The Burnout Society</em> (masyarakat yang mengalami kelelahan mental akut). Budaya kapitalisme digital 24/7 telah menghapus batas sakral antara malam dan siang: manusia dituntut untuk selalu online, membalas email tengah malam, dan terus berproduksi tanpa henti seolah-olah mereka adalah mesin pabrik. Cahaya lampu kota dan layar gawai membunuh hak malam untuk menenangkan jiwa. Fenomena ini adalah pemberontakan destruktif terhadap sunnatullah <em>tūlijul-layla fin-nahār wa tūlijun-nahāra fil-layl</em>. Ketika manusia menolak beristirahat mengikuti ritme malam yang ditakdirkan Allah, tubuh dan jiwanya runtuh dalam wabah depresi, stroke usia muda, dan kehampaan eksistensial.
+    </p>
+
+    <h3>2. Jebakan "Scarcity Mindset" dalam Sistem Ekonomi Predatorik</h3>
+    <p>
+        Arsitektur ekonomi global kontemporer dibangun di atas dogma kelangkaan mutlak (<em>scarcity dogma</em>): sumber daya selalu dianggap langka, sehingga manusia harus saling memangsa dalam persaingan predatorik untuk menumpuk modal. Oligarki menimbun kekayaan triliunan dolar, sementara miliaran manusia terjebak dalam kecemasan ekonomi harian yang melemahkan martabat kemanusiaan.
+    </p>
+    <p>
+        QS. 3:27 mendekonstruksi delusi kelangkaan tersebut: bumi dan langit ini dikelola oleh Dzat Yang Melimpahkan rezeki <em>bighayri hisāb</em>. Krisis kemiskinan dunia hari ini bukanlah karena ketiadaan rezeki dari langit, melainkan akibat kezaliman sistem distribusi, keserakahan akumulasi modal segelintir konglomerat, dan rusaknya etika keadilan. Umat Islam dipanggil untuk membangun sistem ekonomi alternatif: ekonomi syariah yang adil, mengalirkan filantropi zakat-wakaf, dan membebaskan kaum tertindas dari jeratan rentenir.
+    </p>
+
+    <h3>3. Krisis Ekologis & Harapan Regenerasi Peradaban Pasca-Krisis</h3>
+    <p>
+        Dunia hari ini dilanda krisis iklim global, kepunahan biodiversitas, dan kekeringan ekstrem. Banyak saintis muda dan aktivis lingkungan jatuh ke dalam <em>climate doomism</em> (keputusasaan fatalistik bahwa bumi tidak lagi memiliki masa depan).
+    </p>
+    <p>
+        Di tengah keputusasaan global ini, QS. 3:27 memancarkan visi teologis yang tangguh: <em>Yukhrijul-ḥayya minal-mayyit</em>. Alam ciptaan Allah memiliki kapasitas regeneratif (<em>regenerative resilience</em>) yang luar biasa jika manusia menghentikan kezaliman eksploitasi mereka. Sebagaimana tanah gurun yang mati mampu meledak dengan padang rumput hijau hanya dalam beberapa hari pasca hujan lebat, peradaban manusia pun memiliki harapan untuk bangkit kembali dari abu kehancuran moral dan ekologi jika kembali menyelaraskan sistem hidupnya dengan petunjuk Al-Qur'an.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Melazimkan Doa Pelunas Hutang & Beban Hidup Pasca-Shalat:</strong>
+                <br>• Setiap selesai shalat fardhu Subuh dan Ashar, atau saat zikir pagi dan petang, amalkan doa Nabi ﷺ kepada Mu'adz bin Jabal r.a. dengan membaca QS. Ali 'Imran: 26–27 dilanjutkan munajat:
+                <br><em>"Allāhumma Mālikal-mulki tu'til-mulka man tasyā'u wa tanzi'ul-mulka mimman tasyā', wa tu'izzu man tasyā'u wa tudzillu man tasyā', biyadikal-khayr, innaka 'alā kulli syay'in qadīr. Tūlijul-layla fin-nahāri wa tūlijun-nahāra fil-layl, wa tukhrijul-ḥayya minal-mayyiti wa tukhrijul-mayyita minal-ḥayy, wa tarzuqu man tasyā'u bighayri ḥisāb. <strong>Raḥmānad-dunyā wal-ākhirati wa Raḥīmahumā, tu'ṭhīhimā man tasyā'u wa tamna'u minhumā man tasyā', irḥamnī raḥmatan tughnīnī bihā 'an raḥmati man siwāk</strong>"</em>.
+            </li>
+            <li><strong>Protokol Transisi Bertahap (The Īlāj Protocol) dalam Mengelola Kebiasaan & Emosi:</strong>
+                <br>• Bila Anda berniat menghentikan kebiasaan buruk (kecanduan gawai, tidur larut, maksiat mata) atau membangun kebiasaan baru (tahajud, membaca Al-Qur'an, olahraga):
+                <br>&nbsp;&nbsp;1. Terapkan prinsip <em>īlāj</em> (penyusupan halus): jangan melakukan perubahan ekstrem 180 derajat yang memicu kelelahan mental, melainkan geser durasi 10 menit setiap 3 hari secara konsisten.
+                <br>&nbsp;&nbsp;2. Sadarilah transisi waktu malam: matikan seluruh layar gawai 60 menit sebelum tidur demi menyelaraskan melatonin tubuh dengan keheningan malam yang diciptakan Allah.
+            </li>
+            <li><strong>Audit Mentalitas Keberlimpahan (Abundance Philanthropy Action):</strong>
+                <br>• Untuk membunuh racun <em>scarcity mindset</em> (takut miskin dan pelit):
+                <br>&nbsp;&nbsp;1. Sisihkan infak subuh secara harian (walaupun Rp 5.000 atau Rp 10.000) tepat saat transisi fajar, niatkan sebagai ikrar tauhid bahwa Allah yang memasukkan fajar ke dalam malam pasti akan melimpahkan rezeki tanpa hisab hari itu.
+                <br>&nbsp;&nbsp;2. Lunaskan utang moral: berhentilah meratapi kegagalan masa lalu (fase 'mati'), mulailah menulis 3 langkah aksi konkret hari ini untuk menghidupkan kembali proyek kebaikan atau ikhtiar rezeki baru.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Ketika pintu-pintu ikhtiar duniaku tampak tertutup rapat dan usahaku menemui jalan buntu, apakah hatiku jatuh ke dalam keputusasaan yang menafikan kemahakuasaan Allah mengeluarkan kehidupan dari kematian, ataukah aku tetap bersabar menanti fajar pertolongan-Nya?</li>
+            <li>Apakah aku selama ini memperlakukan rezeki semata-mata sebagai hasil kepintaran kalkulasi matematis otakku sendiri, ataukah aku sungguh-sungguh menyadari bahwa setiap suap makanan yang masuk ke mulutku adalah belas kasihan Allah Yang Melimpahkan karunia tanpa hisab?</li>
+            <li>Sejauh mana aku menghormati hak tubuh dan jiwaku dalam menyelaraskan diri dengan ritme malam dan siang yang diciptakan Allah: apakah malamku habis diisi kesia-siaan gawai dan maksiat, sementara siangku dihabiskan dalam kemalasan dan kelalaian?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Mūlijal-layli fin-nahāri wa Yā Mūlijan-nahāri fil-layl, Yā Mukhrijal-ḥayyi minal-mayyiti wa Yā Mukhrijal-mayyiti minal-ḥayy, Yā Man yarzuqu man yasyā'u bighayri ḥisāb.
+            <br><br>
+            Ya Allah Tuhan Yang Maha Lembut merajut gelapnya malam ke dalam terangnya siang, Yang Maha Agung mengeluarkan denyut kehidupan dari rahim kematian, Yang Maha Kaya melimpahkan perbendaharaan karunia tanpa perhitungan angka dan tanpa batas kekurangan.
+            <br><br>
+            Kami bersimpuh di hadapan-Mu dengan mengakui kefakiran, kelemahan, dan sempitnya kalkulasi akal kami. Ya Rabb, tatkala malam duka, kegelisahan, dan kesempitan hidup menyelimuti dada kami, terbitkanlah di dalamnya fajar ketenangan, petunjuk wahyu, dan jalan keluar dari sisi-Mu. Dan tatkala kalbu kami membeku layu oleh kelalaian dan dosa-dosa kami, hidupkanlah kembali jiwa kami dengan siraman ma'rifat dan manisnya bermunajat kepada-Mu.
+            <br><br>
+            Allāhummaqdhi 'annad-dayna wa aghninā minal-faqr. Ya Allah, lunaskanlah lilitan hutang-hutang kami, cukupkanlah kebutuhan keluarga kami dengan rezeki-Mu yang halal, berkah, dan melimpah dari arah yang tiada pernah kami sangka-sangka. Bersihkanlah hati kami dari ketakutan akan kemiskinan dunia, dan jangan pernah biarkan kami mengemis kehormatan kepada makhluk yang sama-sama lemah.
+            <br><br>
+            Bimbinglah kami untuk senantiasa hidup selaras dengan syariat dan sunnah alam-Mu. Jadikanlah setiap hembusan nafas kami sebagai tasbih pengagungan atas kebesaran-Mu, hingga tiba saatnya Engkau memanggil kami pulang dalam keadaan husnul khatimah, menghembuskan nafas terakhir di atas kalimat tauhid: Lā Ilāha Illallāh Muḥammadur Rasūlullāh. Āmīn Yā Mujības-Sā'ilīn, Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-026 - QS. Ali 'Imran Ayat 26.html">&larr; Kembali ke Ayat 26 (QS. 3:26)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 27</strong> (Blok 1: Keteguhan Akidah & Kedaulatan Kosmis)</span>
+        <a href="003-028 - QS. Ali 'Imran Ayat 28.html">Lanjut ke Ayat 28 (QS. 3:28) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

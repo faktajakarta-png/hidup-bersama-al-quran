@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-001 - QS. Ali 'Imran Ayat 1 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="../003-000 - Pengantar & Peta Maqasid Surah Ali 'Imran.html">&larr; Pengantar & Peta Maqasid (QS. 3:0)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-002 - QS. Ali 'Imran Ayat 2.html">Ayat Berikutnya (QS. 3:2) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 1 (Ayat 1–9): Proklamasi Tauhid & Dialektika Muhkamat-Mutasyabihat</span>
+        <span class="badge">1 Kata | 3 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 1</h1>
+    <div class="transliteration">
+        "Alif Lām Mīm."
+    </div>
+    <div class="thematic-title">
+        Huruf Muqaṭhṭha'ah sebagai Proklamasi Kemukjizatan Wahyu, Penakluk Kesombongan Bahasa Manusia, & Pintu Gerbang Menuju Kerendahan Hati Epistemologis
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 1: Fondasi Ketauhidan & Hermeneutika Al-Qur'an)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        الٓمٓ ۝١
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Alif Lām Mīm."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Karakter Fonetik:</strong> <em>Al-Ḥurūf al-Muqaṭhṭha'ah</em> (huruf-huruf fonemis pembuka surah) dibaca dengan menyebut nama-nama asli hurufnya dalam fonologi Arab klasik, bukan dibaca harakat bunyinya: <em>Alif</em> (tiga huruf tanpa mad), <em>Lām</em> (tiga huruf dengan alif mad di tengah diakhiri mim sukun), dan <em>Mīm</em> (tiga huruf dengan ya mad di tengah diakhiri mim sukun). Dalam tradisi eksegesis salaf, kelompok ayat ini dikategorikan ke dalam <em>al-mutasyābihāt</em> yang maknanya hakiki berada dalam ilmu Allah (<em>Allāhu a'lamu bi-murādihī bih</em>), sekaligus berfungsi sebagai deklarasi mukjizat fonetik (<em>i'jāz shawtī</em>): Al-Qur'an diturunkan menggunakan abjad alfabetik yang sama dengan bahasa yang digunakan bangsa Arab sehari-hari, namun tidak ada satu manusia pun yang mampu menyusun rangkaian kata yang menandingi ketinggian sastra, hikmah, dan hukum Al-Qur'an.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Fonologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>الٓ</strong><br>(<em>Alif</em>)</td>
+                <td>
+                    <strong>Huruf Hamzah, Lam, Fa':</strong> Keluar berturut-turut dari aqshal halq (Hamzah), ujung tepi lidah (Lam), dan bibir bawah bertemu gigi seri atas (Fa').<br>
+                    <strong>Karakteristik:</strong> Dibaca tanpa mad (panjang 1 harakat normal) karena tidak memiliki huruf mad di tengah namanya.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca nama huruf <em>Alif</em> secara lugas tanpa mad dan tanpa perubahan harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ـلٓـ</strong><br>(<em>Lām</em>)</td>
+                <td>
+                    <strong>Mad Lāzim Ḥarfī Mutsaqqal:</strong> Huruf Alif mad di tengah nama Lam bertemu dengan huruf Mim bertasydid (karena idgham mimi ke dalam huruf Mim berikutnya).<br>
+                    <strong>Panjang Mad:</strong> Wajib dibaca panjang <strong>6 harakat (Ṭhūl)</strong> secara ijma'.<br>
+                    <strong>Ghunnah Idghām:</strong> Ghunnah Musyaddadah 2 harakat sempurna saat menyambung Lam ke Mim.
+                </td>
+                <td>
+                    Konsensus qira'at mutawatirah membaca mad lazim harfi mutsaqqal 6 harakat disertai idgham mimi bertasydid dan dengung ghunnah 2 harakat saat menggabungkan <em>Lām</em> dengan <em>Mīm</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ـمٓ</strong><br>(<em>Mīm</em>)</td>
+                <td>
+                    <strong>Mad Lāzim Ḥarfī Mukhaffaf:</strong> Huruf Ya mad di tengah nama Mim bertemu huruf Mim sukun asli tanpa tasydid sesudahnya (jika waqaf).<br>
+                    <strong>Panjang Mad:</strong> Wajib dibaca panjang <strong>6 harakat (Ṭhūl)</strong> saat waqaf di ujung ayat 1.
+                </td>
+                <td>
+                    <strong>Dua Kaidah Akbar saat Washal ke Ayat 2 (الم الله):</strong><br>
+                    Jika pembaca memilih untuk <strong>menyambung (washal)</strong> bacaan Ayat 1 dengan Ayat 2 (<em>Allāhu lā ilāha illā Huwa</em>), maka terjadi pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>) antara Mim sukun pada <em>Mīm</em> dengan Lam sukun pada lafazh jalalah <em>Allāh</em>. Seluruh sepuluh imam mutawatirah sepakat menggerakkan Mim sukun dengan <strong>Harakat Fatḥah</strong> (<em>Mīma-llāhu</em>). Dalam kondisi washal ini, terdapat dua wajah bacaan mutawatir:
+                    <br>1. <strong>Wajah Ṭhūl (6 Harakat):</strong> Mempertahankan panjang mad 6 harakat dengan memandang pada asal huruf (<em>ashl</em>) yang berkedudukan sukun.
+                    <br>2. <strong>Wajah Qaṣhr (2 Harakat):</strong> Memendekkan mad menjadi 2 harakat biasa karena memandang pada harakat fathah yang baru datang (<em>'āridh</em>) pada huruf Mim.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <p>
+        Pewahyuan awal Surah Ali 'Imran berakar pada peristiwa sejarah besar yang terdokumentasi secara muttashil:
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Riwayat Imam Ibnu Jarir At-Tabari (Tafsīr At-Ṭhabarī 3/164) & Ibnu Isḥāq dari Muhammad bin Ja'far bin Az-Zubair — Kedatangan Delegasi Kristen Najran:</strong><br>
+        Seluruh mufassir salaf bersepakat bahwa lebih dari delapan puluh ayat pertama Surah Ali 'Imran turun berkenaan dengan kedatangan <strong>Delegasi Kaum Nasrani Najran</strong> (terdiri dari 60 orang tokoh elit, dipimpin oleh Al-'Āqib, As-Sayyid, dan Uskup Abu Haritsah bin 'Alqamah) ke Madinah al-Munawwarah. Mereka mendatangi Masjid Nabawi mengenakan jubah kebesaran emas dan sutra untuk berdialog teologis mengenai hakikat ketuhanan Nabi Isa Al-Masih AS. Ketika mereka bersikukuh menuhankan Isa karena kelahirannya tanpa ayah biologis, Allah Ta'ala menurunkan firman-Nya dari pembuka surah <em>Alif Lām Mīm. Allāhu lā ilāha illā Huwal-Ḥayyul-Qayyūm</em> untuk membongkar kerancuan teologis trinitas dan menegakkan monoteisme murni (Tauhidullah).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi' At-Tirmidzī (No. 2910) dari Sahabat Abdullah bin Mas'ud r.a. — Pahala Agung Pembacaan Huruf Fonemis:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Man qara'a ḥarfan min kitābillāhi fa-lahū bihī ḥasanah, wal-ḥasanatu bi-'asyri amtsālihā. Lā aqūlu: Alif-Lām-Mīm ḥarfun, wa lākin: Alifun ḥarfun, wa Lāmun ḥarfun, wa Mīmun ḥarfun."</em><br>
+        (Barangsiapa membaca satu huruf dari Kitab Allah, maka baginya satu kebajikan, dan satu kebajikan dilipatgandakan menjadi sepuluh kali lipat semisalnya. Aku tidak mengatakan bahwa Alif-Lam-Mim itu satu huruf, melainkan: Alif adalah satu huruf, Lam adalah satu huruf, dan Mim adalah satu huruf).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Karakter Fonetik & Semantik Huruf Muqaṭhṭha'ah</h3>
+    <ul>
+        <li><strong>Alif (ا):</strong> Keluar dari pangkal tenggorokan paling dalam (<em>aqshal halq</em>). Melambangkan awal mula hembusan nafas eksistensi dan ketauhidan yang tegak lurus.</li>
+        <li><strong>Lām (ل):</strong> Keluar dari tepi ujung lidah yang luas (<em>makhraj lisan</em>) di tengah rongga mulut. Melambangkan perantara risalah dan penyampaian wahyu.</li>
+        <li><strong>Mīm (م):</strong> Keluar dari dua bibir yang terkatup rapat (<em>asy-syafatayn</em>). Melambangkan puncak akhir artikulasi suara dan kesempurnaan penutupan.</li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab</h3>
+    <p>
+        Para pakar nahwu Kufah dan Bashrah menetapkan beberapa wajah kedudukan sintaksis (i'rab) bagi <em>Alif Lām Mīm</em>:
+    </p>
+    <ul>
+        <li><strong>Wajah Pertama (Rājih):</strong> Huruf-huruf ini berkedudukan <em>Lā maḥalla lahā minal-i'rāb</em> (tidak memiliki posisi sintaksis), mabni atas sukun pada nama masing-masing huruf, berfungsi murni sebagai pembuka bunyi (<em>istiftāh shawtī</em>) untuk menarik perhatian pendengar.</li>
+        <li><strong>Wajah Kedua:</strong> Berkedudukan <strong>Fi Mahalli Raf'in Mubtada'</strong> (sebagai nama surah), sedangkan khabar-nya adalah lafazh jalalah atau firman sesudahnya.</li>
+        <li><strong>Wajah Ketiga:</strong> Berkedudukan <strong>Fi Mahalli Nashbin Maf'ūl Bih</strong> bagi fi'il mahdzūf yang ditakdirkan: <em>Utlu Alif Lām Mīm</em> (Bacalah Alif Lam Mim).</li>
+    </ul>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Al-Istiftāḥ bi-Uslūb at-Tanbīh (Efek Kejut Psikologis):</strong> Bangsa Arab terbiasa dengan pembukaan syair berupa pujian, ratapan reruntuhan tenda (<em>al-buka' 'alal-atlal</em>), atau panggilan. Mendengar untaian huruf fonemis yang terputus (<em>muqaththa'ah</em>) seketika menghentikan kegaduhan mereka dan memaksa telinga mereka menyimak dengan penuh rasa penasaran.</li>
+        <li><strong>Ilmu Bayan — I'jāzul-Qur'ān at-Tahaddī (Tantangan Bahasa):</strong> Al-Qur'an menantang sastrawan terhebat: "Bahan baku Al-Qur'an ini hanyalah huruf Alif, Lam, Mim yang kalian kenal sejak kecil. Namun mengapa kalian tidak sanggup membuat satu surah pun yang menyamainya jika bukan karena Al-Qur'an adalah firman Sang Pencipta semesta?"</li>
+        <li><strong>Ilmu Badi' — Husnut-Tashrīf wa Itilāful-Ashwāt (Harmoni Akustik):</strong> Perpaduan vokal tenggorokan (Alif), lidah (Lam), dan bibir (Mim) mencakup seluruh bentang topografi alat ucap manusia dari titik terdalam hingga terluar.</li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Hubungan dengan Penutup Al-Baqarah):</strong> Al-Baqarah ditutup dengan doa keteguhan iman dan pertolongan mengalahkan kaum kafir (<em>fanshurnā 'alal-qawmil-kāfirīn</em>). Ayat pertama Ali 'Imran membuka gerbang jawaban: kemenangan sejati diraih melalui keteguhan akidah tauhid yang diproklamasikan sejak huruf pertama.</li>
+        <li><strong>Siyāq (Poros Tematik Blok 1 Ali 'Imran):</strong> Membangun benteng epistemologi umat Islam di Madinah agar tidak terpengaruh oleh kerancuan filsafat Yunani dan teologi trinitas yang dibawa oleh para rahib terpelajar dari Najran.</li>
+        <li><strong>Liḥāq (Jembatan ke Ayat 2):</strong> <em>Alif Lām Mīm</em> menjadi alas pengantar menuju deklarasi monoteisme teragung di Ayat 2: <em>"Allāhu lā ilāha illā Huwal-Ḥayyul-Qayyūm"</em>.</li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H):</strong> Menghimpun atsar para sahabat (Abu Bakar, Umar, Ali, dan Ibnu Mas'ud) yang menegaskan: <em>"Inna li-kulli kitābin shafwatan, wa shafwatu hādzal-kitābi ḥurūful-tahajjī"</em> (Sesungguhnya setiap kitab suci memiliki rahasia inti, dan rahasia inti Al-Qur'an adalah huruf-huruf ejaan pembuka surah ini). At-Tabari menegaskan sikap tafwīdh ma'a ta'zīm (menyerahkan kepastian hakikat maknanya kepada Allah seraya meyakini ketinggian hikmahnya).
+    </div>
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H):</strong> Menolak keras spekulasi hisab jumal (numerologi ramalan masa depan) yang pernah dicoba oleh sebagian rabi Yahudi saat mendengar <em>Alif Lam Mim</em>. Ibnu Katsir menegaskan bahwa huruf-huruf ini diturunkan untuk membuktikan kemukjizatan Al-Qur'an, bukan untuk ramalan mistik.
+    </div>
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H):</strong> Memaparkan ragam penafsiran salaf dan menetapkan bahwa huruf muqaththa'ah adalah sumpah Allah (<em>qasam</em>) atas kemuliaan nama-nama-Nya sekaligus tanda pembuka mukjizat yang membungkam para penentang wahyu.
+    </div>
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (w. 606 H) & Az-Zamakhsyari (w. 538 H):</strong> Ar-Razi mengulas dimensi filosofis: huruf-huruf tunggal adalah lambang unsur-unsur dasar pembentuk alam semesta (atom materi), sebagaimana Alif Lam Mim adalah unsur dasar pembentuk kalam. Menghubungkan huruf dengan firman di Ayat 2 mengajarkan manusia untuk merenungi keagungan Sang Arsitek Kosmik.
+    </div>
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H):</strong> Menjelaskan bahwa pengulangan <em>Alif Lam Mim</em> pada pembuka Surah Al-Baqarah dan Ali 'Imran merupakan pengikat stilistika dua surah kembar (<em>Az-Zahrawan</em>) yang berfungsi menyatukan tema peradaban hukum dengan tema pertahanan akidah.
+    </div>
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) & Prof. Dr. M. Quraish Shihab:</strong> Buya Hamka menekankan bahwa <em>Alif Lam Mim</em> menghentikan kepongahan akal manusia: betapapun tingginya ilmu manusia, selalu ada batas rahasia yang hanya diketahui oleh Allah. Quraish Shihab menambahkan bahwa huruf-huruf ini melatih manusia untuk berani berkata "aku tidak tahu" (<em>la adri</em>) sebagai permulaan dari kearifan intelektual sejati.
+    </div>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Kerendahan Hati Epistemologis)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+    <h3>1. Dekonstruksi "Epistemic Arrogance" (Arogansi Pengetahuan)</h3>
+    <p>
+        Salah satu bias kognitif paling kronis pada manusia modern adalah ilusi pengetahuan serba tahu (<em>illusion of explanatory depth</em>). Manusia mengira bahwa segala sesuatu dalam realitas dapat dipecahkan, diukur, dan dijelaskan secara rasionalitas sempit. <em>Alif Lām Mīm</em> hadir sebagai rem kognitif (<em>cognitive brake</em>) yang meruntuhkan ilusi tersebut sejak pintu gerbang surah. Al-Qur'an memaksa akal yang sombong untuk bersimpuh dan mengakui batas horizon pengetahuannya di hadapan Kemahatahuan Ilahi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+    <h3>Sikap Manusia di Hadapan Era "Information Overload" & Kecerdasan Buatan</h3>
+    <p>
+        Di era kecerdasan buatan (AI) dan ledakan data digital abad ke-21, manusia kerap terjebak pada penyembahan algoritma dan pemujaan teknologi, merasa bahwa tiada misteri yang tersisa di alam semesta. QS. 3:1 mengingatkan peradaban modern bahwa data dan informasi bukanlah hikmah (<em>wisdom</em>). Kehebatan komputasi terbesar manusia tidak akan pernah sanggup menembus rahasia esensi ketuhanan dan makna wahyu terdalam tanpa adanya petunjuk dan kerendahan hati spiritual.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Membiasakan Diri Berkata "Wallahu A'lam" (Aku Tidak Tahu):</strong> Latihlah lisan dan intelektual untuk tidak terburu-buru menghukumi atau berbicara tentang perkara agama/keilmuan yang tidak dikuasai secara mendalam, meneladani kerendahan hati para sahabat di hadapan ayat muqaththa'ah.</li>
+            <li><strong>Menjaga Disiplin Fonetika Al-Qur'an:</strong> Ketika membaca <em>Alif Lām Mīm</em> dalam tilawah harian maupun shalat, sempurnakanlah hak-hak tajwidnya: panjangkan 6 harakat penuh pada Lam dan Mim, sempurnakan ghunnah idgham mimi 2 harakat, dan hayati getaran mukjizat bunyi wahyu.</li>
+            <li><strong>Menjauhi Ramalan Numerologi & Mistisisme Sembrono:</strong> Lindungi keluarga dan masyarakat dari praktik cocoklogi huruf Al-Qur'an untuk ramalan nasib, judi angka, atau klaim akhir zaman spekulatif yang tidak berdasar pada sunnah shahihah.</li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>Apakah aku selama ini terlalu sombong mengandalkan logikaku sendiri hingga enggan tunduk pada ketetapan Allah yang belum mampu kupahami secara akal fikiran?</li>
+            <li>Sejauh mana kerendahan hatiku ketika berhadapan dengan misteri kehidupan dan takdir Ilahi yang tidak sesuai dengan kalkulasi rencanaku?</li>
+            <li>Apakah pembacaan ayat-ayat suci Al-Qur'an telah membangkitkan rasa takzim dan getaran rindu di dalam dadaku, ataukah tilawahku hanya sekadar rutinitas lisan yang hampa dari tadabbur?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā 'Alīma bi-kulli syay', yā Man anzalal-kitāba bi-lisānin 'arabiyyin mubīn. Ya Allah yang Maha Mengetahui rahasia huruf-huruf firman-Mu dan yang menundukkan lisan para sastrawan di hadapan mukjizat kalam-Mu. Karuniakanlah kepada kami ketundukan iman dan kerendahan hati intelektual untuk senantiasa mengagungkan wahyu-Mu. Jadikanlah setiap huruf Al-Qur'an yang kami baca sebagai cahaya penerang kegelapan kubur kami, pemberi syafaat di hari penghitungan, dan penuntun langkah kami menuju keteguhan tauhid di hadapan badai fitnah duniawi. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="../003-000 - Pengantar & Peta Maqasid Surah Ali 'Imran.html">&larr; Kembali ke Pengantar (QS. 3:0)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 1</strong> (Blok 1: Keteguhan Akidah)</span>
+        <a href="003-002 - QS. Ali 'Imran Ayat 2.html">Lanjut ke Ayat 2 (QS. 3:2) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

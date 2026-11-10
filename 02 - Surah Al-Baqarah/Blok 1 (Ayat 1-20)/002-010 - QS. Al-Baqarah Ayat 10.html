@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-010 - QS. Al-Baqarah Ayat 10 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-009 - QS. Al-Baqarah Ayat 9.html">&larr; Ayat Sebelumnya (QS. 2:9)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-011 - QS. Al-Baqarah Ayat 11.html">Ayat Berikutnya (QS. 2:11) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Sanām al-Qur'ān)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 1 Klaster 3: Patologi Kaum Munafik (Ayat 8–20)</span>
+        <span class="badge">11 Kata | 48 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 10</h1>
+    <div class="transliteration">
+        "Fī qulūbihim maraḍun fazādahumullāhu maraḍā(n), wa lahum 'ażābun alīmum bimā kānū yakżibūn(a)"
+    </div>
+    <div class="thematic-title">
+        Patologi Kardiovaskular Spiritual: Lingkaran Setan Pembusukan Hati (Feedback Loop), Dialektika Istidraj Qalbiyyah, Qira'at Yakdzibuna vs Yukadzdzibuna, dan Konsekuensi Kebohongan Eksistensial
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Ayat 10 | Blok 1 Klaster 3: Anatomi Psiko-Spiritual Kemunafikan, Dekadensi Moral, dan Hukuman Eksistensial)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS, TERJEMAHAN & HADITS -->
+    <h2 id="lensa-1">Lensa 1: Tekstual, Filologis & Transmisi Hadits</h2>
+
+    <div class="arabic">
+        فِى قُلُوبِهِم مَّرَضٌ فَزَادَهُمُ ٱللَّهُ مَرَضًا ۖ وَلَهُمْ عَذَابٌ أَلِيمٌۢ بِمَا كَانُوا۟ يَكْذِبُونَ
+    </div>
+
+    <div class="translation">
+        <strong>Terjemahan Presisi:</strong> "Dalam hati mereka ada penyakit, lalu Allah menambah penyakit itu kepada mereka; dan bagi mereka azab yang sangat pedih disebabkan kebohongan yang selalu mereka lakukan [atau: disebabkan pendustaan mereka terhadap kebenaran]."
+    </div>
+
+    <h3>Tabel Analisis Kata per Kata (Mufradat), Fonetik & Kaidah Qira'at</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafazh Rasm</th>
+                <th>Transliterasi</th>
+                <th>Arti Harfiah</th>
+                <th>Kaidah Tajwid</th>
+                <th>Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at 'Asyrah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فِى</strong></td>
+                <td>fī</td>
+                <td>Di dalam</td>
+                <td>Mad Thabi'i (2 harakat) pada ya' sukun setelah kasrah.</td>
+                <td>Fa' (ف) keluar dari ujung gigi seri atas menyentuh perut bibir bawah (Hams, Rakhawah, Istifal, Infitah).</td>
+                <td>Muttafaq 'alaih (seluruh 10 Imam sepakat membaca mad thabi'i 2 harakat saat washal dengan kata berikutnya yang berharakat).</td>
+            </tr>
+            <tr>
+                <td><strong>قُلُوبِهِم</strong></td>
+                <td>qulūbihim</td>
+                <td>Hati-hati mereka</td>
+                <td>Mad Thabi'i pada wawu sukun; Tarqiq pada ra' kasrah (jika ada); Idzhar Syafawi pada mim sukun bertemu mim berikutnya (diidghamkan jika bertasydid).</td>
+                <td>Qaf (ق): Pangkal lidah paling belakang menyentuh langit-langit lunak (Jahr, Syiddah, Isti'la', Infitah, Qalqalah bila sukun). Lam (ل): Ujung lidah samping menyentuh gusi atas (Tawassuth).</td>
+                <td>Imam Hamzah, Ya'qub membaca ضم الهاء (qulūbuhum) dalam kondisi tertentu, namun mayoritas membaca kasrah ha' (qulūbihim). Ibnu Katsir dan Qalun (salah satu wajah) membaca Shilah Mim Jamak (qulūbihimū).</td>
+            </tr>
+            <tr>
+                <td><strong>مَّرَضٌ</strong></td>
+                <td>maraḍun</td>
+                <td>Penyakit / cacat orientasi</td>
+                <td>Idgham Mimi / Mitslain Shaghir antara mim sukun sebelumnya dengan mim bertasydid; Tafkhim pada Ra' fathah dan Dhad; Ikhfa' Haqiqi pada tanwin bertemu fa'.</td>
+                <td>Mim (م): Dua bibir tertutup rapat (Ghunnah, Tawassuth). Ra' (ر): Punggung ujung lidah ke gusi (Inhiraf, Takrir). Dhad (ض): Tepi lidah menyentuh gigi geraham atas (Istithalah, Ithbaq, Isti'la').</td>
+                <td>Seluruh 10 Imam membaca maradhun dengan fathah mim dan ra', serta dhammah pada dhad bertanwin sebagai mubtada' mu'akhkhar.</td>
+            </tr>
+            <tr>
+                <td><strong>فَزَادَهُمُ</strong></td>
+                <td>fazādahumu</td>
+                <td>Lalu menambah kepada mereka</td>
+                <td>Mad Thabi'i pada za' alif (2 harakat); Dhommah pada mim jamak karena bertemu washal sukun/tasydid isim jalalah (takhallush min iltiqa'i as-sakinain).</td>
+                <td>Zay (ز): Ujung lidah sejajar di atas gigi seri bawah (Shafir, Jahr, Rakhawah). Dal (د): Ujung lidah menyentuh pangkal gigi seri atas (Syiddah, Jahr).</td>
+                <td>Imam Hamzah, Al-Kisa'i, dan Khalaf al-'Asyir membaca Imalah kubra pada huruf Zay (fizīdahum / fe-zēdahum) karena asal wawi/ya'i pada fi'il ajwaf. Riwayat Hafsh 'an 'Ashim membaca fathah murni (tanpa imalah).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Allāhu</td>
+                <td>Allah</td>
+                <td>Tafkhim Lam Jalalah karena didahului oleh harakat dhammah pada mim jamak (fazādahumullāhu).</td>
+                <td>Lam (ل) tebal (taghlizh): Pangkal lidah terangkat sebagian. Ha' (هـ): Tenggorokan bagian bawah / aqshal halq (Hams, Rakhawah).</td>
+                <td>Sepakat seluruh qurra' dalam tafkhim Lam Jalalah setelah harakat dhammah.</td>
+            </tr>
+            <tr>
+                <td><strong>مَرَضًا</strong></td>
+                <td>maraḍā(n)</td>
+                <td>(Berupa) penyakit</td>
+                <td>Tafkhim pada Ra' dan Dhad; Idgham Bighunnah jika washal dengan wawu berikutnya; Mad 'Iwadh (2 harakat) jika waqaf.</td>
+                <td>Karakteristik Dhad (ض) dengan istithalah (perpanjangan makhraj di sepanjang tepi lidah) sangat dominan untuk memberi bobot fonetik ketertekanan.</td>
+                <td>Seluruh qira'at mutawatirah sepakat membaca nashab (maradhan) sebagai maf'ul bih kedua bagi fi'il zada (atau tamyiz menurut mazhab kufah).</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَهُمْ</strong></td>
+                <td>wa lahum</td>
+                <td>Dan bagi mereka</td>
+                <td>Idzhar Syafawi pada mim sukun bertemu 'ain; harakat wawu fathah tarqiq.</td>
+                <td>Wawu (و): Dua bibir membulat (infitah). Ha' (هـ): Aqshal halq. Mim (م): Dua bibir.</td>
+                <td>Sebagaimana mim jamak lainnya: Ibnu Katsir membaca shilah (wa lahumū), Warsy membaca shilah jika bertemu hamzah qatha', sedangkan Hafsh membaca sukun tanpa shilah.</td>
+            </tr>
+            <tr>
+                <td><strong>عَذَابٌ</strong></td>
+                <td>'ażābun</td>
+                <td>Siksaan / azab</td>
+                <td>Mad Thabi'i pada dzal alif; Idzhar Halqi pada tanwin bertemu hamzah pada alīmun.</td>
+                <td>'Ain (ع): Wastul halq (tengah tenggorokan). Dzal (ذ): Ujung lidah keluar sedikit di antara gigi seri atas dan bawah (Jahr, Rakhawah).</td>
+                <td>Sepakat seluruh 10 Imam membaca 'adzābun secara marfu' sebagai mubtada' mu'akhkhar.</td>
+            </tr>
+            <tr>
+                <td><strong>أَلِيمٌۢ</strong></td>
+                <td>alīmum</td>
+                <td>Yang sangat pedih</td>
+                <td>Mad Thabi'i / Mad Lin pada ya' kasrah; Iqlab pada tanwin dhammah bertemu ba' menjadi suara mim dengan ghunnah 2 harakat.</td>
+                <td>Hamzah (ء): Aqshal halq (Syiddah murni). Lam (ل): Tepi ujung lidah. Ya' (ي): Tengah lidah.</td>
+                <td>Iqlab tanwin di hadapan huruf Ba' disepakati oleh seluruh qurra' dengan menutup dua bibir secara lembut tanpa penekanan berlebihan (ithbaq asy-syafatain / furjah khafifah).</td>
+            </tr>
+            <tr>
+                <td><strong>بِمَا</strong></td>
+                <td>bimā</td>
+                <td>Disebabkan apa yang / dengan sebab</td>
+                <td>Mad Thabi'i pada mim alif (2 harakat); Ba' sababiyyah dibaca kasrah tarqiq.</td>
+                <td>Ba' (ب): Kedua bibir merapat rapat (Syiddah, Jahr). Mim (م): Syafawi dengan ghunnah bawaan.</td>
+                <td>Seluruh Imam membaca bimā dengan mad thabi'i 2 harakat.</td>
+            </tr>
+            <tr>
+                <td><strong>كَانُوا۟</strong></td>
+                <td>kānū</td>
+                <td>Mereka selalu / mereka telah terbiasa</td>
+                <td>Mad Thabi'i pada kaf alif dan nun wawu; Alif fariqah di ujung kata gugur dalam lafal, tetap dalam rasm.</td>
+                <td>Kaf (ك): Pangkal lidah sedikit di depan huruf Qaf (Hams, Syiddah). Nun (ن): Ujung lidah ke gusi atas.</td>
+                <td>Muttafaq 'alaih. Menunjukkan istimrar (kontinuitas perilaku lampau yang mendarah daging).</td>
+            </tr>
+            <tr>
+                <td><strong>يَكْذِبُونَ / يُكَذِّبُونَ</strong></td>
+                <td>yakżibūna / yukażżibūna</td>
+                <td>Mereka berdusta / mereka mendustakan</td>
+                <td>Mad 'Aridh lissukun (2, 4, atau 6 harakat) pada saat waqaf di akhir ayat; Hams pada kaf sukun (pada qira'at takhfif).</td>
+                <td>Dzal (ذ): Ujung lidah dengan ujung gigi seri atas. Ba' (ب): Bertasydid pada qira'at tasydid, kasrah pada keduanya.</td>
+                <td><strong>VARIASI QIRA'AT UTAMA:</strong><br>
+                1. <em>Qira'at 'Ashim, Hamzah, Al-Kisa'i, dan Khalaf al-'Asyir (Kufiyyun):</em> Membaca <strong>يَكْذِبُونَ (yakżibūn)</strong> dengan fathah ya', sukun kaf, dan takhfif (tanpa tasydid). Maknanya: berdusta dalam ucapan mereka yang mengklaim beriman padahal kafir di batin.<br>
+                2. <em>Qira'at Nafi', Ibnu Katsir, Abu 'Amr, Ibnu 'Amir, Abu Ja'far, dan Ya'qub al-Hadhrami (Haramain, Bashrah, Syam):</em> Membaca <strong>يُكَذِّبُونَ (yukażżibūn)</strong> dengan dhammah ya', fathah kaf, dan tasydid dzal kasrah (wazan fa''ala). Maknanya: mendustakan para nabi, wahyu Al-Qur'an, dan hari pembalasan.<br>
+                <strong>Harmoni Makna:</strong> Kedua qira'at ini saling melengkapi (kalamullah yang mencakup dua dimensi dosa sekaligus): mereka berdusta dalam pengakuan lahiriahnya, dan sekaligus mendustakan kebenaran Ilahiah dalam batinnya!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Nabawi Terkait</h3>
+    <div class="hadith-box">
+        <strong>Hadits 1: Karakteristik Genetik Kemunafikan</strong><br>
+        عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: <em>«آيَةُ الْمُنَافِقِ ثَلَاثٌ: إِذَا حَدَّثَ كَذَبَ، وَإِذَا وَعَدَ أَخْلَفَ، وَإِذَا اؤْتُمِنَ خَانَ»</em><br>
+        <strong>Mukharrij:</strong> Diriwayatkan oleh Shahih Al-Bukhari (Kitab al-Iman, Bab 'Alamatul Munafiq, No. 33) dan Shahih Muslim (Kitab al-Iman, No. 59).<br>
+        <strong>Sanad & Derajat:</strong> Shahih Muttafaq 'Alaih.<br>
+        <strong>Korelasi Ayat:</strong> Ayat 10 memungkasi vonis azab dengan klausa <em>"bimā kānū yakżibūn"</em>. Hadits ini menegaskan bahwa kebohongan (<em>idza haddatsa kadzaba</em>) adalah pilar pertama dan poros dari seluruh manifestasi kemunafikan.
+    </div>
+
+    <div class="hadith-box">
+        <strong>Hadits 2: Mekanisme Fitnah Menodai dan Membusukkan Kalbu</strong><br>
+        عَنْ حُذَيْفَةَ بْنِ الْيَمَانِ رَضِيَ اللَّهُ عَنْهُ قَالَ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: <em>«تُعْرَضُ الْفِتَنُ عَلَى الْقُلُوبِ كَالْحَصِيرِ عُودًا عُودًا، فَأَيُّ قَلْبٍ أُشْرِبَهَا نُكِتَ فِيهِ نُكْتَةٌ سَوْدَاءُ، وَأَيُّ قَلْبٍ أَنْكَرَهَا نُكِتَ فِيهِ نُكْتَةٌ بَيْضَاءُ، حَتَّى تَصِيرَ عَلَى قَلْبَيْنِ: عَلَى أَبْيَضَ مِثْلِ الصَّفَا فَلَا تَضُرُّهُ فِتْنَةٌ مَا دَامَتِ السَّمَاوَاتُ وَالْأَرْضُ، وَالْآخَرِ أَسْوَدَ مُرْبَادًّا كَالْكُوزِ مُجَخِّيًا لَا يَعْرِفُ مَعْرُوفًا وَلَا يُنْكِرُ مُنْكَرًا إِلَّا مَا أُشْرِبَ مِنْ هَوَاهُ»</em><br>
+        <strong>Mukharrij:</strong> Diriwayatkan oleh Shahih Muslim (Kitab al-Iman, Bab Bayan Anna al-Islam Yabda'u Ghariban, No. 144).<br>
+        <strong>Sanad & Derajat:</strong> Shahih.<br>
+        <strong>Korelasi Ayat:</strong> Hadits ini menjelaskan secara fisiologis-ruhiyah frasa <em>"fa-zādahumullāhu maraḍā"</em>. Ketika fitnah syubuhat dan nifaq diserap oleh kalbu, titik hitam (<em>nuktah sauda'</em>) akan bertambah secara inkremental hingga kalbu menjadi terbalik bagai cangkir tertelungkup (<em>kāl-kūzi mujakhkhiyan</em>), kehilangan total kapasitas kognitif dan persepsi moralnya.
+    </div>
+
+    <!-- LENSA 2: BAHASA & BALAGHAH -->
+    <h2 id="lensa-2">Lensa 2: Leksikografi, Morfosintaksis & Balaghah</h2>
+
+    <h3>1. Kajian Leksikografi & Medan Semantik (Semantika Qur'ani)</h3>
+    <p>
+        Pemahaman terhadap ayat ini bertumpu pada dekonstruksi tiga akar kata kunci dalam korpus leksikografi klasik:
+    </p>
+    <ul>
+        <li>
+            <strong>Akar Kata م - ر - ض (M-R-Dh):</strong> Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> meletakkan kaidah universal: <em>"Al-Mim war-Ra' wadh-Dhad ash-lun wahid yadullu 'ala khurujisy-syai' 'an haddish-shihhah wal-i'tidal"</em> (akar mim-ra'-dhad menunjukkan keluarnya sesuatu dari batas kesehatan, proporsi ideal, dan keseimbangan alaminya). Sesuatu dikatakan <em>marīdh</em> apabila ia mengalami deviasi, kelemahan, atau kerusakan fungsional dari rancangan aslinya. Dalam <em>Lisān al-'Arab</em> karya Ibnu Manzhur, <em>al-maraḍ</em> mencakup dua dimensi: penyakit fisik (badan) dan penyakit maknawi (jiwa). Penyakit jiwa terbagi menjadi dua cabang mematikan: <em>maradhusy-syakk</em> (keraguan eksistensial terhadap tauhid) dan <em>maradhusy-syahwah</em> (penyakit nafsu amoral, sebagaimana dalam QS. Al-Ahzab: 32). Di ayat ini, penyakit tersebut adalah pembusukan akidah, kedengkian akut (hasad), dan kepalsuan batiniah.
+        </li>
+        <li>
+            <strong>Akar Kata ز - ي - د (Z-Y-D):</strong> Menunjukkan pertambahan kuantitas, intensitas, atau akselerasi eksponensial dari suatu kondisi. Dalam morfologi Arab, kata kerja <em>zāda</em> bermakna menumbuhkan atau melipatgandakan. Penisbatan perbuatan ini kepada Allah (<em>fazādahumullāhu</em>) mencerminkan sunnatullah deterministik: barangsiapa yang secara sadar menanam dan memelihara bibit racun dalam kalbunya, maka sistem kosmik Allah akan memfasilitasi pembesaran racun tersebut hingga menghancurkan pelakunya sendiri.
+        </li>
+        <li>
+            <strong>Akar Kata ك - ذ - ب (K-Dz-B):</strong> Antitesis mutlak dari <em>ash-shidq</em> (kejujuran/keselarasan). <em>Al-Kadzib</em> adalah ketidaksesuaian antara pernyataan lahiriah atau fenotipe perilaku dengan kenyataan objektif batiniah. Bentuk <em>fi'il tsulatsi mujarrad</em> (<em>kadzaba</em>) menekankan tindakan memproduksi kepalsuan, sedangkan bentuk <em>fa''ala</em> (<em>kadzdzaba</em>) menekankan penolakan agresif dan pengingkaran terhadap kebenaran yang disampaikan pihak lain.
+        </li>
+    </ul>
+
+    <h3>2. Tabel Analisis Morfosintaksis (I'rab & Sharaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Kata / Frasa</th>
+                <th>Kedudukan Nahwu (I'rab)</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Fungsi Sintaksis & Implikasi Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فِي قُلُوبِهِمْ</strong></td>
+                <td>Jar wa majrur; <em>fī</em> huruf jar mabni 'alal sukun; <em>qulūbi</em> isim majrur bil-kasrah, mudhaf; <em>him</em> dhamir muttashil mabni 'alas sukun fi mahalli jarr mudhaf ilayh.</td>
+                <td><em>Qulūb</em> adalah jamak taksir dari <em>qalb</em> (قَلْبٌ) mengikuti wazan <em>fu'ūl</em> (فُعُولٌ), isim jamid yang menunjukkan organ pusat kesadaran dan kehendak.</td>
+                <td>Syibh jumlah muta'alliq bi mahdzuf khabar muqaddam (didahulukan). Memberikan faedah <em>hasyr / ikhtishash</em>: menegaskan bahwa episentrum dari segala manuver penipuan mereka berakar tepat di dalam kalbu.</td>
+            </tr>
+            <tr>
+                <td><strong>مَرَضٌ</strong></td>
+                <td>Mubtada' mu'akhkhar (diakhirkan) marfu' bi ad-dhammah azh-zhahirah 'ala akhirihi.</td>
+                <td>Masdar dari <em>maridha - yamradhu - maradhan</em> (مَرِضَ - يَمْرَضُ - مَرَضًا). Isim jins yang ditanwinkan.</td>
+                <td>Tankir (bentuk indefinit) berfungsi sebagai <em>tanwin at-tahwil</em> (menunjukkan betapa dahsyat, berbahaya, dan mengerikannya penyakit tersebut) sekaligus <em>at-tahqir</em> (kehinaan kualitas batin mereka).</td>
+            </tr>
+            <tr>
+                <td><strong>فَـ</strong></td>
+                <td>Harf 'athaf atau Fa' Sababiyyah Fasihiyyah mabni 'alal fath.</td>
+                <td>Partikel penghubung yang berfaedah <em>at-tartib wat-ta'qib bis-sabab</em> (urutan langsung yang timbul akibat sebab sebelumnya).</td>
+                <td>Menghubungkan akibat penambahan penyakit dengan keberadaan penyakit yang mereka rawat sendiri di klausul sebelumnya secara niscaya tanpa jeda waktu.</td>
+            </tr>
+            <tr>
+                <td><strong>زَادَهُمُ</strong></td>
+                <td><em>Zāda</em>: fi'il madhi mabni 'alal fath; <em>hum</em>: dhamir muttashil mabni 'alas sukun (didhammahkan karena iltiqa' sakinain) fi mahalli nashb maf'ul bih awwal.</td>
+                <td>Fi'il Tsulatsi Mujarrad Mu'tall 'Ain (Ajwaf Wawi/Ya'i) dari <em>zāda - yazīdu</em> (زَادَ - يَزِيدُ). Bersifat muta'addi ke dua maf'ul.</td>
+                <td>Menyatakan aksi Ilahi yang pasti terjadi (madhi li tahaqquq al-wuqu').</td>
+            </tr>
+            <tr>
+                <td><strong>اللَّهُ</strong></td>
+                <td>Fa'il marfu' bi ad-dhammah azh-zhahirah 'ala akhirihi.</td>
+                <td>Lafzhul Jalalah, 'Alam 'ala Dzat al-Muqaddasah.</td>
+                <td>Penetapan Allah sebagai Pelaksana mutlak dari hukum sunnatullah azab spiritual.</td>
+            </tr>
+            <tr>
+                <td><strong>مَرَضًا</strong></td>
+                <td>Maf'ul bih tsani (objek kedua) bagi fi'il <em>zāda</em>, manshub bi al-fathah azh-zhahirah (sebagian ulama kufah menganggapnya tamyiz).</td>
+                <td>Masdar nakirah manshub.</td>
+                <td>Menunjukkan jenis eskalasi yang ditambahkan: Allah tidak menambahkan kemuliaan atau kedamaian, melainkan memperparah substansi pembusukan batin mereka.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَهُمْ</strong></td>
+                <td>Wawu isti'nafiyah (atau haliyah); <em>lahum</em> jar wa majrur syibh jumlah fi mahalli raf'in khabar muqaddam.</td>
+                <td>Harf jar <em>li</em> bermakna istihqaq (hak kelayakan hukuman) menempel pada dhamir jamak <em>hum</em>.</td>
+                <td>Khabar muqaddam yang menegaskan kepastian penerimaan siksa yang telah disiapkan khusus untuk mereka.</td>
+            </tr>
+            <tr>
+                <td><strong>عَذَابٌ</strong></td>
+                <td>Mubtada' mu'akhkhar marfu' bi ad-dhammah azh-zhahirah.</td>
+                <td>Isim masdar dari <em>'adzdzaba - yu'adzdzibu</em> (عَذَّبَ - يُعَذِّبُ), bermakna siksaan yang menahan kenikmatan hidup.</td>
+                <td>Inti subjek penalti akhirat yang menanti kaum munafik.</td>
+            </tr>
+            <tr>
+                <td><strong>أَلِيمٌ</strong></td>
+                <td>Na'at / sifat bagi <em>'adzābun</em>, marfu' bi ad-dhammah azh-zhahirah.</td>
+                <td>Shifah Musyabbahah bi Ismil Fa'il atas wazan <em>fa'īl</em> (فَعِيلٌ) bermakna <em>mu'lim</em> (مُؤْلِمٌ - yang menimbulkan rasa sakit yang menembus batas ketahanan jiwa).</td>
+                <td>Mendeskripsikan intensitas siksaan yang melampaui rasa sakit fisik, meremukkan seluruh persepsi sensori dan mental.</td>
+            </tr>
+            <tr>
+                <td><strong>بِمَا</strong></td>
+                <td>Al-Ba' harf jar sababiyyah; <em>mā</em> masdariyyah (atau maushulah).</td>
+                <td>Kombinasi partikel kausalitas (ba' as-sababiyyah) dan instrumen nominalisasi (masdariyyah).</td>
+                <td>Jar-majrur muta'alliq bi <em>alīm</em> atau bi <em>'adzāb</em>. Menegaskan prinsip keadilan Ilahi: azab pedih ini bukan kezaliman Allah, melainkan akibat logis dari amal perbuatan mereka.</td>
+            </tr>
+            <tr>
+                <td><strong>كَانُوا يَكْذِبُونَ</strong></td>
+                <td><em>Kānū</em>: fi'il madhi naqis, wawu isim kana. <em>Yakdzibūn</em>: fi'il mudhari' marfu' bi tsubutin nun, wawu fa'il. Jumlah fi'liyyah fi mahalli nashb khabar kana.</td>
+                <td>Penggabungan <em>kāna</em> dengan fi'il mudhari' (<em>kānū yakżibūn</em>) mengindikasikan <em>al-istimrār wat-takrār</em> (perilaku yang berulang-ulang, terbiasa, dan mendarah daging).</td>
+                <td>Mashdar mu'awwal (<em>bi-kawnihim yakżibūn</em> / <em>bi-kadzibihim</em>) berada fi mahalli jarr bil-ba'. Menunjukkan bahwa vonis azab dijatuhkan karena habituasi dusta yang terus diproduksi sepanjang hidup.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Analisis Balaghah (Retorika Al-Qur'an Berdimensi Empat)</h3>
+    <p>
+        Keindahan dan ketajaman sastra pada ayat 10 Surah Al-Baqarah ini mendemonstrasikan keajaiban mukjizat bahasa yang menembus relung psikologi manusia:
+    </p>
+    <ul>
+        <li>
+            <strong>Ilmu Al-Ma'ani (Struktur & Kausalitas):</strong> 
+            Terjadi <em>Taqdīm al-Khabar</em> pada frasa <em>"Fī qulūbihim maraḍun"</em>. Mengapa Allah tidak menyatakan <em>"Maraḍun fī qulūbihim"</em>? Pendahuluan wadah (<em>fī qulūbihim</em>) sebelum penyakitnya berfungsi sebagai <em>al-ikhtishāsh wal-qashr</em> (pengkhususan), membongkar topeng luar mereka. Kaum munafik mungkin memiliki postur tubuh yang menawan (<em>tu'jibuka ajsāmuhum</em>, QS. 63:4) dan retorika lisan yang manis (QS. 2:204), namun Allah mengarahkan sorotan tepat ke titik tersembunyi yang menjadi sarang pembusukan mereka: kalbu. Selanjutnya, penggunaan <em>Fa' as-Sababiyyah</em> pada <em>"fazādahumullāh"</em> menegaskan <em>ta'qib bila tarakhin</em> (respons instan tanpa penundaan); ketika sebuah sistem biologis atau spiritual membiarkan patogen bersarang, eskalasi penyakit adalah konsekuensi alamiah yang berjalan seketika.
+        </li>
+        <li>
+            <strong>Ilmu Al-Bayan (Metafora & Alegori):</strong>
+            Ayat ini memuat <em>Isti'ārah Tashrīḥiyyah Ashliyyah</em>. Kata <em>al-maraḍ</em> (penyakit biologis jasmani) dipinjam untuk menggambarkan fenomena keraguan (<em>asy-syakk</em>), kedengkian (<em>al-ḥasad</em>), dan kemunafikan (<em>an-nifāq</em>). Persamaan (<em>wajh asy-syabah</em>) antara keduanya sangat presisi: sebagaimana penyakit fisik membuat lidah orang sakit merasa bahwa madu yang manis terasa pahit, demikian pula penyakit nifaq membuat kalbu pelakunya merasakan kebenaran wahyu sebagai ancaman yang menyakitkan, dan melihat penipuan serta keburukan sebagai strategi keselamatan.
+        </li>
+        <li>
+            <strong>Ilmu Al-Badi' (Estetika & Kontras):</strong>
+            Terdapat <em>Jinās Isytiqāq</em> antara kata kerja <em>zādahum</em> dengan penambahan objek <em>maraḍā</em>, serta keselarasan fonik akhir (<em>fashilah</em>) pada huruf Nun dan Mim (<em>'alīm - yakżibūn</em>) yang mengunci ritme ancaman dengan ketukan yang berwibawa dan menakutkan (<em>iqa' ar-rahbah</em>). Terdapat pula <em>Thibaq Khofi</em> (kontras tersembunyi) antara klaim keimanan palsu yang pura-pura manis di ayat 8-9 dengan kenyataan rasa sakit yang menyiksa (<em>'adzabun alīm</em>) di ayat 10.
+        </li>
+        <li>
+            <strong>Dimensi Fonetik & Simbolisme Suara:</strong>
+            Pergeseran bunyi dari huruf-huruf tebal dan berbobot (<em>isti'la'</em> dan <em>ithbaq</em> pada Qaf dan Dhad di kata <em>qulūbihim maraḍun</em>) menuju ledakan huruf Zay yang berdesis tajam (<em>Shafir</em> pada <em>fazādahum</em>) melukiskan secara akustik bagaimana penyakit yang awalnya terpendam di dalam kalbu meletup menjadi gelombang kehancuran yang tak terbendung.
+        </li>
+    </ul>
+
+    <!-- LENSA 3: KONTEKS 2S & 1L -->
+    <h2 id="lensa-3">Lensa 3: Konteks Intertekstual (2S & 1L) & Sosio-Historis</h2>
+
+    <h3>1. Analisis 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <p>
+        Memahami ayat 10 secara terisolasi akan mereduksi kedalaman maknanya. Integrasi 2S & 1L membuka arsitektur logika Al-Qur'an yang mahasempurna:
+    </p>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Logis dengan Ayat Sebelumnya):</strong>
+            Pada ayat 9, Allah mendiagnosis bahwa kaum munafik berusaha menipu Allah dan orang-orang beriman, namun sejatinya mereka hanya menipu diri mereka sendiri tanpa mereka sadari (<em>wa mā yakhda'ūna illā anfusahum wa mā yasy'urūn</em>). Timbul pertanyaan reflektif: <em>Mengapa manusia yang berakal sehat bersikukuh melakukan penipuan diri yang begitu konyol dan bunuh diri intelektual tersebut?</em> Ayat 10 hadir sebagai jawaban kausalitas ontologis: <strong>Fī qulūbihim maraḍun</strong> (Karena episentrum persepsi mereka—yakni kalbu—sedang lumpuh dan terinfeksi penyakit mematikan). Kebohongan perilaku di ayat 9 adalah gejala luar (<em>symptom</em>), sedangkan ayat 10 membedah akar penyebab patologisnya (<em>etiology</em>).
+        </li>
+        <li>
+            <strong>Siyāq (Alur Dinamika Internal Ayat):</strong>
+            Siyāq ayat 10 melukiskan dialektika penegakan keadilan Ilahi melalui hukum sebab-akibat (<em>causal feedback loop</em>). Allah tidak menciptakan penyakit itu secara zalim pada awalnya; ayat ini berbunyi <em>fī qulūbihim maraḍun</em> (penyakit itu sudah ada karena pilihan bebas mereka yang mendengki dan meragukan kebenaran), lalu sebagai hukum sunnatullah, Allah menambahkan penyakit tersebut (<em>fazādahumullāhu maraḍā</em>). Puncak siyāq ditutup dengan kepastian pembalasan eskatologis (<em>wa lahum 'ażābun alīm</em>) yang ditalikan langsung dengan tabiat dusta mereka (<em>bimā kānū yakżibūn</em>).
+        </li>
+        <li>
+            <strong>Liḥāq (Koneksi Organik dengan Ayat Setelahnya):</strong>
+            Pada ayat 11–12, dipaparkan bagaimana ketika dikatakan kepada mereka: <em>"Lā tufsidū fīl-ardh"</em> (Janganlah membuat kerusakan di muka bumi), mereka dengan penuh arogansi menjawab: <em>"Innamā naḥnu mushliḥūn"</em> (Sesungguhnya kami justru orang-orang yang melakukan perbaikan/reformasi). Korelasinya sangat mengerikan: penambahan penyakit (<em>fazādahumullāhu maraḍā</em>) di ayat 10 telah mencapai stadium terminal di ayat 11, di mana kemampuan membedakan antara perusakan (<em>ifsād</em>) dan perbaikan (<em>ishlāḥ</em>) telah terbalik 180 derajat. Hati yang sakit parah menganggap perusakan sistemik sebagai karya peradaban.
+        </li>
+    </ul>
+
+    <h3>2. Konteks Sosio-Historis Yatsrib (Madinah Munawwarah)</h3>
+    <p>
+        Pascaperistiwa Hijrah Nabi ﷺ ke Madinah dan kemenangan monumental kaum muslimin dalam Perang Badar (2 H), peta geopolitik Madinah mengalami pergeseran tektonik. Abdullah bin Ubay bin Salul—yang sebelum kedatangan Nabi ﷺ telah dipersiapkan mahkota kepemimpinannya oleh kabilah Aus dan Khazraj—mendapati ambisi politik dinasti pribadinya runtuh total. Di sisi lain, sebagian elite Yahudi Madinah merasa supremasi ekonomi dan teologis mereka terancam.
+    </p>
+    <p>
+        Ketidakmampuan secara militer dan sosial untuk menentang Islam secara frontal memaksa mereka mengadopsi doktrin kamuflase (<em>nifaq</em>). Namun, menyaksikan dakwah Nabi ﷺ semakin berkembang, para sahabat semakin solid, dan kekuasaan Islam meluas, setiap kemenangan kaum muslimin justru terasa bagaikan sembilu yang menyayat dada mereka. Penyakit dengki (<em>al-ḥasad</em>) dan dendam politik yang terpendam di dalam kalbu mereka kian membakar, membuat hidup mereka selalu berada dalam siksaan kecemasan dan paranoia internal sebelum datangnya azab akhirat.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Zaman & Madzhab</h2>
+
+    <p>
+        Enam mufasir agung sepanjang sejarah peradaban Islam memberikan sorotan tajam dari pelbagai sudut pandang epistemologis terhadap ayat ini:
+    </p>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (Wafat 310 H / Era Salaf Klasik - Tafsir bi al-Ma'tsur):</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>, At-Tabari menegaskan berdasarkan transmisi riwayat dari Ibnu Abbas dan Ibnu Mas'ud r.a. bahwa makna <em>al-maraḍ</em> adalah <em>asy-syakk</em> (keraguan yang merusak keyakinan) dan <em>an-nifāq</em> (kemunafikan). Mengenai frasa <em>fazādahumullāhu maraḍā</em>, At-Tabari menjelaskan bahwa maknanya: setiap kali Allah menurunkan kewajiban baru, ayat-ayat Al-Qur'an baru, atau menganugerahkan kemenangan militer kepada Nabi ﷺ, kaum munafik semakin mendustakannya dan merasa tersiksa oleh kedengkian mereka sendiri. Dengan demikian, penambahan penyakit tersebut merupakan buah dari penolakan berulang mereka terhadap wahyu yang terus bertambah (sebagaimana firman-Nya dalam QS. At-Taubah: 125).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (Wafat 774 H / Era Pertengahan - Integrasi Hadits & Atsar):</strong><br>
+        Dalam <em>Tafsīr al-Qur'ān al-'Azhīm</em>, Ibnu Katsir mengelaborasi kaidah universal Ilahi: <em>Al-Jazā'u min Jinsi al-'Amal</em> (Balasan itu setimpal dengan jenis perbuatannya). Allah memperlakukan mereka sesuai dengan penyakit yang mereka simpan di dalam dada. Mengutip Abdurrahman bin Zaid bin Aslam, Ibnu Katsir menerangkan bahwa penyakit di sini adalah penyakit dalam urusan agama, bukan penyakit pada raga. Penambahan penyakit oleh Allah adalah bentuk <em>istidrāj</em> (pembiaran yang membinasakan) dan hukuman moral langsung di dunia: kemunafikan membuahkan keraguan yang kian pekat hingga mereka sama sekali tidak mampu lagi menemukan pintu tobat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (Wafat 671 H / Era Keemasan Andalus - Fiqh & Leksikal):</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah dimensi fisiologis-spiritual kalbu. Beliau memaparkan bahwa penyakit kalbu jauh lebih berbahaya daripada penyakit jasmani; jika penyakit jasmani hanya memutuskan kehidupan fana di dunia, maka penyakit kalbu memutuskan keselamatan abadi di akhirat dan menjerumuskan pelakunya ke dalam dasar neraka (<em>ad-dark al-asfal minan nar</em>). Al-Qurthubi juga menganalisis variasi qira'at: jika dibaca <em>yakżibūn</em>, maka penekanannya pada dosa lisan mereka yang berdusta dalam berikrar, sedangkan jika dibaca <em>yukażżibūn</em>, penekanannya pada dosa akidah mereka yang mendustakan risalah kenabian Muhammad ﷺ. Kedua perbuatan ini berkelindan saling menguatkan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (Al-Kasysyaf) & Fakhruddin Ar-Razi (Mafatih al-Ghaib) (Era Skolastik & Teologi Kritis):</strong><br>
+        Ar-Razi membedah dialektika teologis tajam seputar penisbatan kata kerja <em>fazādahumullāh</em> kepada Allah: Mengapa Allah yang menambah penyakit mereka, lalu Allah pula yang menyiksa mereka? Kaum Mu'tazilah menakwilkannya bahwa Allah disebut "menambah" karena Allah terus menurunkan syariat yang membuat mereka bertambah sakit karena kedengkian mereka sendiri (bukan penciptaan penyakit secara langsung). Namun Fakhruddin Ar-Razi dengan brilian membuktikan dari sudut Asy'ariyyah dan psikologi filsafat bahwa jiwa manusia tunduk pada keniscayaan kausalitas penciptaan Allah: ketika seseorang berulang kali memilih kegelapan dan menolak dalil-dalil rasional kebenaran, Allah menjadikan karakter pembangkangan itu mengkristal dan mengakar di dalam kalbunya secara deterministik sebagai sunnatullah tabiat jiwa.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab (Tafsir Al-Mishbah - Hermeneutika Kontemporer):</strong><br>
+        Quraish Shihab menjelaskan bahwa kata <em>maraḍ</em> dalam konteks psikologi Al-Qur'an melambangkan hilangnya keseimbangan mental-spiritual. Orang yang memiliki penyakit hati hidup dalam disonansi kognitif yang konstan: antara nurani batinnya yang mengakui kebenaran Islam dengan arogansi egonya yang menolak untuk tunduk. Allah "menambah" penyakit mereka bukan dengan cara menzalimi mereka, melainkan dengan membiarkan berlakunya hukum psikologis: kebohongan yang dirawat akan menuntut lahirnya kebohongan-kebohongan baru untuk menutupi kebohongan lama, hingga jiwa mereka terjebak dalam lingkaran setan kepalsuan yang membuat mereka semakin sengsara.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (Tafsir Al-Azhar - Refleksi Sosio-Kultural Nusantara):</strong><br>
+        Buya Hamka melukiskan kepedihan eksistensial orang munafik dengan sangat menyentuh. Penyakit hati yang paling ganas adalah <em>hasad</em> (iri dengki). Ketika melihat Nabi Muhammad ﷺ dicintai umat dan panji tauhid berkibar, hati kaum munafik serasa terbakar. Hamka menggambarkan: "Orang yang berpenyakit hati itu tersiksa oleh kemajuan orang lain. Kemajuan Islam adalah racun bagi jiwa mereka, dan kehancuran Islam adalah obat yang mereka harapkan namun tak kunjung tiba." Di dunia mereka sudah tersiksa oleh penyakit batinnya sendiri, dan di akhirat kelak siksaan pedih (<em>'adzabun alim</em>) telah menanti mereka akibat kebiasaan berdusta dan kepalsuan hidup.
+    </div>
+
+    <h3>Matriks Komparatif Ulama: Titik Temu (Ijma') & Variasi Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu Konsensus (Ijma')</th>
+                <th>Variasi Sudut Pandang / Nuansa Mazhab (Ikhtilaf)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat <em>Al-Maraḍ</em> (Penyakit)</strong></td>
+                <td>Seluruh ulama sepakat bahwa penyakit dalam ayat ini adalah penyakit maknawi yang merusak akidah, bukan sekadar patologi organ biologis tubuh.</td>
+                <td>At-Tabari & Ibnu Katsir membatasi pada <em>syakk</em> (ragu) dan <em>nifaq</em>; Al-Qurthubi & Hamka memperluasnya ke penyakit moral seperti <em>hasad</em> (dengki), kikir, dan dendam; Ar-Razi & Quraish Shihab menekankannya sebagai distorsi persepsi rasional dan disonansi kognitif.</td>
+            </tr>
+            <tr>
+                <td><strong>Mekanisme <em>Fazādahumullāhu Maraḍā</em></strong></td>
+                <td>Semua mufasir sepakat bahwa penambahan penyakit ini berjalan adil dan merupakan akibat langsung dari pilihan pembangkangan kaum munafik itu sendiri.</td>
+                <td>Ulama Mu'tazilah menafsirkan penambahan ini sebagai kiasan atas turunnya beban syariat baru yang mereka benci; Ulama Ahlus Sunnah (Asy'ariyyah/Maturidiyyah) menegaskan berlakunya takdir dan sunnatullah pembentukan karakter batiniah di mana dosa melahirkan kegelapan baru.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan Qira'at <em>Yakdzibūn</em> vs <em>Yukadzdzibūn</em></strong></td>
+                <td>Keduanya mutawatir dan saling membenarkan integritas teks Al-Qur'an.</td>
+                <td>Qira'at Kufah (<em>yakżibūn</em>) menekankan sisi etika/moralitas lisan kaum munafik yang gemar berbohong; Qira'at Haramain/Syam/Bashrah (<em>yukażżibūn</em>) menekankan sisi teologis yaitu penolakan terang-terangan terhadap ayat-ayat Allah dan Rasul-Nya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI & NEUROSAINS -->
+    <h2 id="lensa-5">Lensa 5: Kognisi, Neurosains & Tazkiyatun Nafs</h2>
+
+    <h3>1. Dekonstruksi Model Mental: Dari Pola Pikir Jahiliyah Menuju Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Usang / Sekuler-Jahiliyah</th>
+                <th>Pola Pikir Transformatif Qur'ani (Surah 2:10)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Kebohongan</strong></td>
+                <td>Memandang dusta sebagai alat pragmatis untuk menyelamatkan diri, menjaga reputasi sosial, atau meraih keuntungan politis tanpa konsekuensi internal.</td>
+                <td>Menyadari bahwa setiap dusta adalah racun korosif yang merusak sistem operasi kalbu; dusta menghancurkan integritas eksistensial pelakunya sebelum merugikan orang lain.</td>
+            </tr>
+            <tr>
+                <td><strong>Evolusi Dosa & Kejahatan</strong></td>
+                <td>Mengira bahwa perbuatan buruk bersifat statis dan dapat dihentikan kapan saja sesuka hati tanpa bekas.</td>
+                <td>Memahami hukum <em>Systemic Feedback Loop</em>: dosa yang tidak ditaubati secara otomatis mengundang dosa berikutnya dan memperlemah daya tahan moral jiwa (<em>fazādahumullāhu maraḍā</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Pusat Kesehatan Manusia</strong></td>
+                <td>Mereduksi kesehatan hanya pada parameter fisik-jasmani (biomarker darah, kebugaran otot, penampilan luar).</td>
+                <td>Menetapkan <em>Qalb</em> (kalbu spiritual) sebagai episentrum sejati; raga yang bugar tanpa kalbu yang salim (<em>qolbun salim</em>) adalah bangkai berjalan yang membusuk dari dalam.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Model Berpikir Sistemik: Positive Feedback Loop Pembusukan Kalbu</h3>
+    <p>
+        Dalam terminologi rekayasa sistem (<em>systems dynamics</em>), ayat 10 memetakan model <strong>Destructive Reinforcing Loop (R-Loop)</strong> atau lingkaran setan amplifikasi keburukan:
+    </p>
+    <div style="background: #f1f5f9; padding: 22px; border-radius: 8px; border: 1px solid #cbd5e1; margin: 18px 0;">
+        <ol style="margin-bottom: 0;">
+            <li><strong>Initial State (Input Awal):</strong> Membiarkan secuil bibit keraguan, iri hati, atau ketidaktulusan bersarang di kalbu (<em>fī qulūbihim maraḍun</em>).</li>
+            <li><strong>Behavioral Coping (Reaksi Perilaku):</strong> Untuk menyembunyikan kecacatan ini dari komunitas, individu memproduksi kebohongan dan persona palsu (<em>yakhda'ūn / yakżibūn</em>).</li>
+            <li><strong>Systemic Amplification (Intervensi Hukum Kosmik):</strong> Berlakunya sunnatullah pembiasaan moral; penolakan terhadap kebenaran menurunkan sensitivitas nurani dan memfasilitasi proliferasi penyakit jiwa baru (<em>fazādahumullāhu maraḍā</em>).</li>
+            <li><strong>Cognitive Distortion (Distorsi Persepsi):</strong> Ketidakmampuan membedakan kebenaran dari kebatilan, menganggap pengrusakan sebagai perbaikan (Ayat 11).</li>
+            <li><strong>Terminal Ruin (Output Akhir):</strong> Terjebak dalam ketergantungan dusta permanen yang berakhir pada kepedihan eksistensial di dunia dan siksa abadi (<em>'ażābun alīm</em>).</li>
+        </ol>
+    </div>
+
+    <h3>3. Wawasan Neurosains & Psikologi Moral: Desensitisasi Amigdala Terhadap Kebohongan</h3>
+    <p>
+        Penelitian terobosan yang dipublikasikan oleh Tali Sharot, Neil Garrett, dkk. dalam jurnal <em>Nature Neuroscience</em> (2016) bertajuk <em>"The brain adapts to dishonesty"</em> memberikan analogi ilmiah yang sangat mencengangkan terhadap mekanisme <em>fazādahumullāhu maraḍā</em>. Melalui pemindaian fMRI (<em>functional Magnetic Resonance Imaging</em>), para peneliti menemukan bahwa ketika seseorang berbohong untuk pertama kali, amigdala—pusat pemrosesan emosi, rasa takut, dan kecemasan di otak—menunjukkan lonjakan aktivitas yang luar biasa tinggi (merasakan sinyal bahaya, rasa bersalah, dan kegelisahan akut).
+    </p>
+    <p>
+        Namun, ketika kebohongan tersebut terus diulang untuk kepentingan diri, aktivitas amigdala mengalami penurunan respons secara drastis (<em>neural adaptation / desensitization</em>). Otak beradaptasi terhadap ketidakjujuran. Akibatnya, pada kebohongan kedua, ketiga, dan seterusnya, rem emosional otak melemah, membuka jalan bagi produksi kebohongan yang jauh lebih masif tanpa memicu rasa bersalah sedikit pun. Secara neurologis, ketidakjujuran yang dipelihara secara sistemik merombak sirkuit saraf otak, merefleksikan kebenaran Qur'ani: membiarkan kebohongan kecil akan mengeskalasi volume kebohongan berikutnya, hingga hati terkunci rapat dan mati rasa.
+    </p>
+
+    <!-- LENSA 6: REALITAS KONTEMPORER -->
+    <h2 id="lensa-6">Lensa 6: Diagnosis Realitas Kontemporer & Kritik Paradigma Sekuler</h2>
+
+    <h3>1. Fenomenologi Krisis Integritas Abad ke-21 (Era Post-Truth & Deepfake)</h3>
+    <p>
+        Ayat 10 Surah Al-Baqarah ini bekerja bagaikan cermin raksasa yang menelanjangi peradaban abad ke-21. Kita hidup di era <em>post-truth</em> di mana batas antara fakta objektif dan narasi fabrikasi telah dikaburkan secara sengaja demi kepentingan kekuasaan dan monetisasi kapital. Beberapa manifestasi modern dari patologi kemunafikan ini mencakup:
+    </p>
+    <ul>
+        <li>
+            <strong>Teknologi Deepfake & Manipulasi Informasi Sintetis:</strong> Rekayasa kecerdasan buatan yang mampu memalsukan wajah, suara, dan peristiwa secara sempurna merupakan perwujudan teknologi paling mutakhir dari <em>kānū yakżibūn</em>. Industri manipulasi persepsi publik, bot media sosial, dan tim pendengung (<em>buzzers</em>) dirancang khusus untuk memproduksi penipuan berskala industri.
+        </li>
+        <li>
+            <strong>Erosi Modal Sosial (Social Trust Collapse):</strong> Sebagaimana dianalisis oleh sosiolog Francis Fukuyama dalam karyanya <em>Trust: The Social Virtues and the Creation of Prosperity</em>, modal paling berharga dalam suatu peradaban bukanlah cadangan minyak atau emas, melainkan tingkat kepercayaan publik (<em>social trust</em>). Ketika penyakit kemunafikan, korupsi terselubung, dan kepalsuan retorika politik dinormalisasi, fondasi kepercayaan masyarakat runtuh, melipatgandakan biaya transaksi sosial, hukum, dan ekonomi secara destruktif.
+        </li>
+        <li>
+            <strong>Persona Digital & Split Personality (Disonansi Ruang Siber):</strong> Generasi media sosial kontemporer dipaksa hidup dalam kepura-puraan algoritma; menampilkan citra kehidupan yang suci, glamor, dan bahagia demi panen validasi instan, sementara batin mereka didera depresi, kesepian, dan kecemasan eksistensial. Jurang antara persona virtual dengan realitas kalbu yang rapuh ini adalah inkarnasi modern dari <em>fī qulūbihim maraḍun</em>.
+        </li>
+    </ul>
+
+    <h3>2. Kritik Terhadap Paradigma Reduksionisme Sekuler</h3>
+    <p>
+        Paradigma psikologi sekuler modern kerap melakukan simplifikasi berbahaya dengan mereduksi seluruh penyakit jiwa manusia semata-mata menjadi ketidakseimbangan neurotransmiter (seperti serotonin atau dopamin) di sinapsis otak, atau menganggap kebohongan politis sebagai sekadar "taktik adaptif evolusioner untuk bertahan hidup" (<em>evolutionary deception strategy</em>). 
+    </p>
+    <p>
+        Al-Qur'an membongkar kekeliruan reduksionis ini. Meskipun dimensi biologis dan hormonal adalah instrumen fisik, akar terdalam dari kerusakan moral dan kepalsuan hidup terletak pada <strong>krisis spiritual kalbu</strong>: penolakan terhadap kebenaran mutlak (al-Haqq), pengagungan hawa nafsu ego di atas hukum Ilahi, dan hilangnya kesadaran akan akuntabilitas eskatologis. Mengobati kebohongan dan kemunafikan sistemik hanya dengan terapi farmakologis atau manajemen citra <em>public relations</em> tanpa menyentuh pembersihan kalbu (<em>tazkiyatun nafs</em>) adalah ilusi medis yang justru akan mempercepat pembusukan peradaban.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS & MUHASABAH -->
+    <h2 id="lensa-7">Lensa 7: Transformasi Praksis, Muhasabah & Doa Tadabbur</h2>
+
+    <h3>1. Tiga Tindakan Mikro-Aksi Nyata (Actionable Steps)</h3>
+    <div class="highlight-box">
+        <ol>
+            <li>
+                <strong>Audit Radikal Kejujuran Harian (Daily Radical Truthfulness Audit):</strong>
+                Tetapkan waktu 10 menit setiap malam sebelum tidur untuk mengaudit seluruh interaksi lisan, tulisan, dan aktivitas digital sepanjang hari. Identifikasi setiap kebohongan kecil (<em>white lies</em>), pembesaran fakta (<em>exaggeration</em>), penyembunyian kebenaran demi pencitraan, atau manipulasi impresi di media sosial. Buat komitmen tegas: jika mendapati kebohongan yang merugikan pihak lain, segera hubungi dan luruskan faktanya, serta perbanyak istighfar memohon pemulihan kalbu.
+            </li>
+            <li>
+                <strong>Protokol Terapi Antidote Penyakit Dengki (Anti-Hasad Covert Protocol):</strong>
+                Penyakit hati tumbuh subur melalui kedengkian terhadap kesuksesan orang lain. Kapan pun dada Anda merasa sesak atau terusik melihat rekan kerja, kawan, atau figur publik menerima nikmat kekayaan, promosi jabatan, atau pujian: lakukan aksi kontraintuitif secara rahasia. Doakan orang tersebut secara spesifik dalam sujud tahajud Anda agar nikmatnya diberkahi, dan salurkan sedekah tersembunyi atas nama kebaikan mereka tanpa pernah memberitahukannya kepada siapa pun. Tindakan ini meremukkan arogansi ego dan membakar habis benih <em>maraḍ</em> di kalbu.
+            </li>
+            <li>
+                <strong>Deklarasi Pembersihan Jejak Digital Manipulatif:</strong>
+                Lakukan kurasi menyeluruh terhadap linimasa media sosial Anda. Hapus setiap postingan, status, foto, atau komentar masa lalu yang berisi kepalsuan, framing tendensius, pamer kesalehan semu (<em>riya'</em>), atau informasi yang tidak valid. Ambil komitmen mutlak untuk tidak pernah membagikan tautan atau berita apa pun yang belum terverifikasi secara sahih kebenarannya (<em>tabayyun</em>), memutus mata rantai penyebaran dusta digital.
+            </li>
+        </ol>
+    </div>
+
+    <h3>2. Tiga Pertanyaan Refleksi Batin (Muhasabah Mendalam)</h3>
+    <div class="reflection-box">
+        <ol>
+            <li>
+                <em>Seberapa lebar jurang pemisah antara persona religius/profesional yang saya pertontonkan di ruang publik dengan hakikat batin saya ketika berada dalam kesendirian yang hanya disaksikan oleh Allah Ta'ala?</em>
+            </li>
+            <li>
+                <em>Ketika saya melihat saudara seiman atau rekan saya mendapatkan anugerah nikmat besar dari Allah, apakah detak jantung pertama saya melahirkan rasa syukur yang tulus, ataukah rasa sakit, getir, dan kecemburuan terpendam yang berusaha saya tutupi dengan senyum palsu?</em>
+            </li>
+            <li>
+                <em>Apakah kebohongan-kebohongan kecil yang saya anggap lumrah demi menyelamatkan muka selama ini sedang melatih otak dan kalbu saya untuk mati rasa, sehingga tanpa sadar saya sedang memasuki stadium feedback loop pembusukan jiwa yang digambarkan dalam ayat ini?</em>
+            </li>
+        </ol>
+    </div>
+
+    <h3>3. Munajat & Doa Tadabbur Ayat</h3>
+    <div class="doa-box">
+        <p style="text-align: center; font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 24px; line-height: 2; margin-bottom: 15px; direction: rtl;">
+            اللَّهُمَّ طَهِّرْ قَلْبِي مِنَ النِّفَاقِ، وَعَمَلِي مِنَ الرِّيَاءِ، وَلِسَانِي مِنَ الْكَذِبِ، وَعَيْنِي مِنَ الْخِيَانَةِ، فَإِنَّكَ تَعْلَمُ خَائِنَةَ الْأَعْيُنِ وَمَا تُخْفِي الصُّدُورُ. اللَّهُمَّ يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ، وَأَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ.
+        </p>
+        <p style="font-style: italic; color: #78350f; margin-bottom: 0;">
+            "Ya Allah, Yang Maha Mengetahui rahasia sanubari! Bersihkanlah kalbuku dari segala residu kemunafikan, sucikanlah amal perbuatanku dari penyakit riya' dan pencitraan, selamatkanlah lisanku dari memproduksi kebohongan, dan peliharalah mataku dari pandangan khianat; sesungguhnya Engkau Maha Mengetahui lirikan mata yang khianat dan apa yang disembunyikan oleh dada manusia. Wahai Dzat yang membolak-balikkan hati, teguhkanlah kalbuku di atas kebenaran agama-Mu. Aku berlindung kepada-Mu dari bertambahnya penyakit di dalam jiwa, dari hilangnya nikmat petunjuk-Mu, dari berubahnya kesejahteraan pemberian-Mu, dari datangnya bencana-Mu yang tiba-tiba, dan dari segala bentuk murka-Mu. Karuniakanlah kepadaku kalbu yang salim, yang mencintai kejujuran dan membenci kepalsuan, hingga aku menghadap-Mu dalam keadaan ridha dan diridhai. Āmīn Yā Rabbal 'Ālamīn."
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-009 - QS. Al-Baqarah Ayat 9.html">&larr; Kembali: QS. Al-Baqarah Ayat 9</a>
+        <span><strong>Kajian Ensiklopedis Surah Al-Baqarah [2]: 10</strong></span>
+        <a href="002-011 - QS. Al-Baqarah Ayat 11.html">Lanjut: QS. Al-Baqarah Ayat 11 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

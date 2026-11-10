@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-004 - QS. Ali 'Imran Ayat 4 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 33px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-003 - QS. Ali 'Imran Ayat 3.html">&larr; Ayat Sebelumnya (QS. 3:3)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-005 - QS. Ali 'Imran Ayat 5.html">Ayat Berikutnya (QS. 3:5) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 1 (Ayat 1–9): Proklamasi Tauhid & Dialektika Muhkamat-Mutasyabihat</span>
+        <span class="badge">18 Kata | 74 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 4</h1>
+    <div class="transliteration">
+        "Min qablu hudan lin-nāsi wa anzalal-furqān(a), innalladzīna kafarū bi-āyātillāhi lahum 'adzābun syadīd(un), wallāhu 'azīzun dzuntiqām(in)."
+    </div>
+    <div class="thematic-title">
+        Turunnya Al-Furqān Sebagai Pembeda Mutlak Al-Ḥaqq dan Al-Bāṭhil: Konsekuensi Eskatologis Penolakan Wahyu di Bawah Kedaulatan Al-'Azīz Dzū Intiqām
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 1: Proklamasi Tauhid & Dialektika Muhkamat-Mutasyabihat)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        مِن قَبْلُ هُدًۮى لِّلنَّاسِ وَأَنزَلَ ٱلْفُرْقَانَ ۗ إِنَّ ٱلَّذِينَ كَفَرُوا۟ بِـَٔايَـٰتِ ٱللَّهِ لَهُمْ عَذَابٌۭ شَدِيدٌۭ ۗ وَٱللَّهُ عَزِيزٌۭ ذُو ٱنتِقَامٍ ۝٤
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Kitab-kitab samawi itu diturunkan) sebelum (turunnya Al-Qur'an) sebagai petunjuk bagi umat manusia (pada zamannya), dan Dia telah menurunkan Al-Furqān (kitab pembeda yang memisahkan secara mutlak antara kebenaran hakiki dan kebatilan, keimanan dan kekafiran, serta tauhid murni dan kesyirikan). Sesungguhnya orang-orang yang mengingkari tanda-tanda kebesaran dan ayat-ayat Allah, bagi mereka azab yang sangat keras lagi pedih; dan Allah Maha Perkasa (tak terkalahkan dalam keagungan-Nya) lagi Pemilik Pembalasan (yang menegakkan keadilan mutlak atas setiap pembangkangan)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan penuntas logis dari klausa penurunan kitab suci pada ayat ke-3. Frasa <em>min qablu hudan lin-nāsi</em> memberikan penegasan historis berdimensi aksiologis: Taurat dan Injil yang murni diturunkan sebelum Al-Qur'an sebagai petunjuk temporal dan lokal bagi kaumnya pada masanya. Namun, seiring masuknya interpolasi (<em>tahrīf</em>) manusiawi ke dalam naskah-naskah tersebut dan berakhirnya dispensasi kenabian terdahulu, Allah menurunkan <strong>Al-Furqān</strong>. Penyebutan <em>Al-Furqān</em> di sini membawa tiga lapisan makna fundamental: (1) Al-Qur'an sebagai kitab penguji dan penyaring (<em>muhaimin</em>) yang membedakan fakta wahyu orisinal dari mitologi fabrikasi manusia; (2) argumen-argumen rasional-spiritual tak terbantahkan yang memutus keraguan batin; dan (3) pertolongan pemisah kemenangan di medan laga (sebagaimana Perang Badar dinamai <em>Yawm al-Furqān</em>). Ayat ini kemudian ditutup dengan maklumat eskatologis yang menggetarkan: penolakan terhadap ayat-ayat Allah yang telah dipaparkan dengan sejelas-jelasnya bukanlah sekadar "perbedaan opini akademis", melainkan pembangkangan ontologis yang pasti berhadapan dengan murka dan pembalasan setimpal dari Allah Yang Maha Perkasa (<em>'Azīzun Dzū Intiqām</em>).
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>مِن قَبْلُ</strong><br>(<em>Min qablu</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukūn bertemu huruf Qāf dengan ghunnah tebal (<em>tafkhīm</em>) tingkat tertinggi karena Qāf adalah huruf isti'lā' mutlak di aqshal-lisān.<br>
+                    <strong>Mabnī 'aladh-Dhamm:</strong> Kata <em>qablu</em> berharakat dhammah tunggal tanpa tanwin karena terputus dari idhāfah secara lafal namun maknanya diniatkan (<em>munqathi' 'an al-idhāfah lafzhan lā ma'nan</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah berijma' membaca <em>qablu</em> dengan mabni dhammah. Dalam ilmu fawāshil (penghitungan ayat), madzhab Kūfī (yang kita pakai) menetapkan ayat 3 berakhir pada <em>wal-Injīl</em> dan ayat 4 dimulai dengan <em>min qablu</em>, sedangkan riwayat Syāmī dan Baṣhrī menghitung potongan ini bersambung dalam nafas ayat sebelumnya tanpa mengubah struktur kata.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>هُدًۮى لِّلنَّاسِ</strong><br>(<em>Hudal lin-nās</em>)</td>
+                <td>
+                    <strong>Idghām Bilā Ghunnah:</strong> Tanwīn dāl bertemu Lām diringankan tanpa dengung pada mayoritas riwayat.<br>
+                    <strong>Imālah & Taqlīl:</strong> Huruf Alif layyinah maqsūrah pada kata <em>hudan</em> menjadi arena variasi fonetis qira'at.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> murni (mendekatkan fathah ke kasrah dan alif ke ya: <em>hudē lin-nās</em>).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqlīl / Bayna-bayna</strong> (antara fathah dan imalah).<br>
+                    • <strong>Imam Lainnya (termasuk Ḥafṣh 'an 'Āṣhim):</strong> Membaca dengan <strong>Fat-ḥ</strong> murni (tajrīd).<br>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca idgham tanwin pada Lam dengan ghunnah menurut thariqah tertentu.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَأَنزَلَ ٱلْفُرْقَانَ</strong><br>(<em>Wa anzalal-furqān</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukūn bertemu Zāy dengan ghunnah tipis (tarqīq) dan desis safīr.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lām ta'rīf pada <em>al-Furqān</em> dibaca jelas.<br>
+                    <strong>Tafkhīm Rā' Sukūn:</strong> Huruf Rā' sukūn dibaca tebal karena didahului harakat dhammah pada huruf Fā'.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il madhi tsulatsi mazid <em>anzala</em> (bukan <em>nazzala</em>) dengan maf'ūl bih <em>al-furqāna</em> manshub bil-fathah. Penegasan bentuk <em>anzala</em> (penurunan komprehensif sekaligus) menggarisbawahi status Al-Furqan sebagai tolok ukur prinsipil yang tuntas.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>إِنَّ ٱلَّذِينَ كَفَرُوا۟</strong><br>(<em>Innalladzīna kafarū</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid ditahan 2 harakat dengan kesempurnaan dengung (<em>akmal mā takūn</em>).<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lām ta'rīf melebur ke dalam Lām musyaddadah pada ism maushūl.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad pada <em>kafarū</em> dibaca panjang 2 harakat.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca tahqiq pada kasrah hamzah <em>Inna</em> sebagai permulaan kalimat taukidiyah (isti'nāf bayānī), dan mengokohkan mad thabi'i pada <em>kafarū</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>بِـَٔايَـٰتِ ٱللَّهِ</strong><br>(<em>Bi-āyātillāh</em>)</td>
+                <td>
+                    <strong>Mad Badal:</strong> Hamzah mendahului huruf alif mad pada <em>āyāti</em>.<br>
+                    <strong>Tarqīq Lām Jalālah:</strong> Huruf Lām pada lafaz Allāh dibaca tipis mengalir karena didahului harakat kasrah pada huruf Tā' <em>bi-āyāti</em>.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca mad badal dengan tiga jalan (<strong>Tatslītsul-Badal: 2, 4, atau 6 harakat</strong>: Qashr, Tawassuth, Thūl).<br>
+                    • <strong>Jumhur Sembilan Imam (termasuk Ḥafṣh):</strong> Membaca mad badal secara konsisten dengan <strong>Qaṣhr (2 Harakat)</strong> saja.<br>
+                    Seluruh imam sepakat mentarqiq (menipiskan) Lam Jalalah karena kasrah sebelumnya.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>لَهُمْ عَذَابٌۭ شَدِيدٌۭ</strong><br>(<em>Lahum 'adzābun syadīd</em>)</td>
+                <td>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukūn bertemu 'Ain dibaca jelas tanpa ghunnah berlebih.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwīn dhommah pada <em>'adzābun</em> bertemu huruf Syīn dengan ghunnah tarqiq disertai sifat tafasysyī.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn & Qalqalah Kubrā:</strong> Saat waqaf pada <em>syadīd</em>, huruf Dāl dipantulkan kuat (qalqalah kubra) dengan panjang mad 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr & Abū Ja'far:</strong> Membaca <strong>Ṣhilah Mīm al-Jam'</strong> secara mutlak (<em>lahumū 'adzābun</em>) dengan panjang 2 harakat.<br>
+                    • <strong>Qālūn 'an Nāfi':</strong> Memiliki dua jalur riwayat yang sah: sukun mim jam' (<em>lahum</em>) atau shilah mim jam' (<em>lahumū</em>).<br>
+                    • <strong>Imam Lainnya:</strong> Membaca sukun murni pada mim jam' tanpa shilah.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَٱللَّهُ عَزِيزٌۭ ذُو ٱنتِقَامٍ ۝٤</strong><br>(<em>Wallāhu 'azīzun dzuntiqām</em>)</td>
+                <td>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Dibaca tebal karena didahului wawu fathah.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwīn pada <em>'azīzun</em> bertemu huruf Dzal.<br>
+                    <strong>Hamzah Washal & Ikhfā':</strong> Huruf Wāwu pada <em>Dzū</em> langsung menyambung ke Nūn sukūn <em>intiqām</em> (hamzah washal gugur); Nūn sukūn di-ikhfā'-kan ke huruf Tā' dengan ghunnah tipis.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf fashilah ayat 4, Mīm sukun dibaca tawassuth dengan pilihan mad 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca wazan <em>'Azīz</em> (sifat musyabbahah marfu' dengan tanwin), <em>Dzū</em> (ism asma'ul khamsah marfu' bil-wawu), dan <em>intiqām</em> (mashdar khumasi majrur bil-kasrah). Keselarasan fonetik huruf Mīm di akhir ayat menciptakan <em>tanāsub al-fawāṣhil</em> yang berirama megah dan berwibawa.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbābun Nuzūl Delegasi Kristen Najran (Tafsīr Aṭh-Ṭhabarī, Jilid 6, hlm. 154; Sīrah Ibnu Hisyām, Jilid 1, hlm. 573 dari Ibnu Isḥāq):</strong><br>
+        Ketika enam puluh orang utusan terkemuka Kristen dari Najran yang dipimpin oleh Abdul Masih (Al-'Aqib), Al-Ayham (As-Sayyid), dan Uskup Abu Haritsah bin 'Alqamah berdebat panjang dengan Rasulullah ﷺ di Masjid Nabawi mengenai status Nabi Isa AS, mereka bersikeras mempertahankan dogma trinitas dan menolak bukti-bukti kebenaran Al-Qur'an kendati tanda-tanda kenabian telah terbentang di depan mata. Mereka menolak Al-Furqan yang memisahkan antara status hamba ciptaan (<em>'abdullāh</em>) dan status tuhan pencipta (<em>ilāh</em>). Maka turunlah ayat-ayat pembuka Surah Ali 'Imran hingga ayat ke-80-an, di mana ayat 4 ini menjadi maklumat tegas bahwa penolakan mereka atas ayat-ayat Allah bukanlah kebebasan berekspresi tanpa akibat, melainkan kekafiran yang diancam dengan azab keras dari Allah Yang Maha Perkasa lagi Pemilik Pembalasan.<br>
+        <strong>Derajat Riwayat:</strong> Hasan li-ghairih, diterima secara konsensus oleh para pakar sejarah dan mufasir ma'tsur.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Ṣhaḥīḥ Al-Bukhārī (No. 4734) & Ṣhaḥīḥ Muslim (No. 2673) dari Sahabat Jabir bin Abdillah r.a. — Makna Hakiki Al-Furqān:</strong><br>
+        Dalam hadits panjang tentang perumpamaan Rasulullah ﷺ dan para nabi, para malaikat berkata di dekat kepala beliau saat beliau tidur:<br>
+        <em>"Inna li-ṣhāḥibikum hādzā matsalan... fa-Muḥammadun ﷺ farqun baynan-nās (wa fī riwāyatin: furqānun baynan-nās)!"</em><br>
+        (Sesungguhnya bagi sahabat kalian ini ada suatu perumpamaan... Maka Nabi Muhammad ﷺ adalah <strong>Pemisah / Tolok Ukur Pembeda (Al-Furqān)</strong> di antara umat manusia: siapa yang menaatinya berarti menaati Allah, dan siapa yang mendurhakainya berarti mendurhakai Allah, dan Muhammad adalah pembeda yang memisahkan manusia antara yang beriman dan yang kafir, yang hak dan yang batil).<br>
+        <strong>Derajat Hadits:</strong> Muttafaqun 'Alayh (Keshahihan Tertinggi).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Ṣhaḥīḥ Muslim (No. 2577) dari Abu Hurairah r.a. — Sifat Al-'Izzah dan Keadilan Retributif Pembalasan Allah:</strong><br>
+        Rasulullah ﷺ meriwayatkan dalam Hadits Qudsi, Allah Tabāraka wa Ta'ālā berfirman:<br>
+        <em>"Al-'Izzu izārī, wal-kibriyā'u ridā'ī, fa-man yunāzi'unī fī wāḥidin minhumā 'adzdzabtuh!"</em><br>
+        (Keperkasaan / Kemuliaan adalah pakaian dalam-Ku, dan Kesombongan / Keagungan adalah selendang-Ku. Maka barangsiapa yang berani lancang merebut salah satu dari keduanya dari-Ku, niscaya Aku mengazabnya!).<br>
+        Hadits ini adalah eksplanasi langsung terhadap nama agung <strong>Al-'Azīz Dzū Intiqām</strong>: keperkasaan Allah meniscayakan bahwa tidak ada kekuatan tandingan di alam semesta yang mampu menghalangi keadilan pembalasan-Nya terhadap para penentang kebenaran.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Q-B-L (ق - ب - ل — Qablu):</strong><br>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ق-ب-ل) merumuskan bahwa akar kata ini berporos pada satu prinsip makna utama (<em>aṣhlun wāḥid</em>), yaitu <strong>menghadap ke depan (al-muwājahah) dan mendahului dalam waktu atau kedudukan (at-taqaddum)</strong>. Dari sini lahir kata <em>qablu</em> (sebelum) yang menandakan kronologi masa lalu. Ibnu Manzhūr dalam <em>Lisān al-'Arab</em> menambahkan bahwa kata <em>qablu</em> ketika diputus dari idhāfah secara lafal (<em>qaṭh' 'an al-idhāfah</em>) dan dimabnikan dhammah, maknanya mencakup keseluruhan masa sebelum turunnya Al-Qur'an: yakni masa turunnya Taurat kepada Nabi Musa AS dan Injil kepada Nabi Isa AS sebagai petunjuk yang mendahului risalah akhir zaman.
+        </li>
+        <li>
+            <strong>2. H-D-Y (ه - د - ي — Hudan):</strong><br>
+            Ibnu Fāris memaparkan dua poros makna: pertama, <em>at-taqaddum lid-dalālah</em> (berjalan di depan untuk membimbing jalan), dan kedua, <em>al-luthf wal-ikhyār</em> (kelembutan dan pemberian hadiah tulus). Kata <em>hudan</em> berbentuk mashdar mutlak yang dialihfungsikan menjadi sifat hiperbolik (<em>al-mubālaghah bil-mashdar</em>). Ini mengindikasikan bahwa Taurat dan Injil pada saat diturunkan bukan sekadar "mengandung petunjuk", melainkan merupakan <strong>personifikasi petunjuk itu sendiri</strong> yang memandu manusia dari kegelapan paganisme menuju cahaya tauhid.
+        </li>
+        <li>
+            <strong>3. F-R-Q (ف - ر - ق — Al-Furqān):</strong><br>
+            Ibnu Fāris menegaskan bahwa poros dasarnya adalah <strong>pemisahan, pemilahan, dan pembelahan yang tegas antara dua hal yang bercampur baur (tamyīz asy-syai' 'an ghayrih wa fashluh)</strong>. Mengikuti wazan <em>Fu'lān</em> (فُعْلَان) yang berkonotasi kelimpahan, kesempurnaan, dan intensitas mutlak. <em>Al-Furqān</em> bukan sekadar pembeda biasa, melainkan instrumen Ilahi pamungkas yang membelah kebenaran dari kebatilan, mukjizat rasional pemutus keraguan syubhat, serta filter ontologis yang memilah kesucian akidah tauhid dari virus tahrif dan politeisme.
+        </li>
+        <li>
+            <strong>4. K-F-R (ك - ف - ر — Kafarū):</strong><br>
+            Akar kata ini berporos pada makna <strong>menutupi, menyelubungi, dan menyembunyikan sesuatu (as-satr wat-taghṭhiyah)</strong>. Petani dalam bahasa Arab kuno disebut <em>kāfir</em> karena menutupi benih dengan tanah. Dalam semantik Al-Qur'an, orang kafir dinamakan demikian karena nuraninya sebenarnya menangkap bukti-bukti kebenaran ayat-ayat Allah, namun ia sengaja menutupi, menimbun, dan menyangkal fitrah tersebut dengan keangkuhan ego, fanatisme buta, dan hawa nafsu.
+        </li>
+        <li>
+            <strong>5. '-Z-Z (ع - ز - ز — 'Azīz):</strong><br>
+            Ibnu Fāris menjelaskan bahwa akar ini berporos pada <strong>kekuatan tak tertandingi (asy-syiddah wal-quwwah), kelangkaan yang tak bernilai tandingan (an-nafāsah wal-qillat), dan ketakterkalahkan (al-ghalabah)</strong>. Orang Arab berkata: <em>"Man 'azza bazza"</em> (siapa yang perkasa niscaya menang). Allah adalah <em>Al-'Azīz</em>: Dzat yang memiliki keperkasaan mutlak, tidak pernah bisa dikalahkan oleh konspirasi makhluk-Nya, dan tidak bergantung pada siapa pun.
+        </li>
+        <li>
+            <strong>6. N-Q-M (ن - ق - م — Intiqām):</strong><br>
+            Ibnu Fāris memaparkan bahwa poros makna dasarnya adalah <strong>pengingkaran terhadap perbuatan jahat yang berujung pada penjatuhan sanksi setimpal (inkār asy-syai' wal-mu'āqabah 'alayh)</strong>. Di dalam <em>Lisān al-'Arab</em>, ditegaskan bahwa <em>intiqām</em> ketika disandarkan kepada Allah bukan bermakna "dendam emosional atau pelampiasan amarah yang dibutakan nafsu" (sebagaimana dendam manusiawi yang lemah), melainkan bermakna <strong>keadilan retributif kosmis (al-'adl al-inṣhāfī)</strong>: penegakan sanksi hukum yang adil, proporsional, dan tak terelakkan atas kezaliman yang disengaja.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>مِن قَبْلُ</strong></td>
+                <td><em>Min</em>: Harf jarr ashli.<br><em>Qablu</em>: Zharf zaman ghair mutasharrif.</td>
+                <td><em>Qablu</em> ism mabni 'aladh-dhamm fi mahalli jarrin bi-<em>min</em> li-qath'ihi 'anil-idhafah lafzhan. Jar-majrur muta'alliq dengan fi'il <em>anzala</em> pada ayat 3 (atau muta'alliq dengan <em>hudan</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>هُدًۮى</strong></td>
+                <td>Mashdar tsulatsi (<em>hadā - yahdī</em>) wazan <em>fu'al</em>, ism maqsūr.</td>
+                <td>Manshūb 'alal-ḥāliyyah (menjadi <strong>Ḥāl</strong> dari at-Tawrāh wal-Injīl, taqdirnya: <em>hādiyatayni</em>), atau maf'ūl li-ajlih (alasan penurunan kitab). Harakat nashab fathah muqaddarah 'alal-alif lil-ta'adzdzur.</td>
+            </tr>
+            <tr>
+                <td><strong>لِّلنَّاسِ</strong></td>
+                <td>Lām harf jarr lil-ikhtishash.<br><em>An-nās</em>: Ism majrūr.</td>
+                <td>Jār wa majrūr muta'alliq bi-mashdar <em>hudan</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَأَنزَلَ</strong></td>
+                <td>Wāwu 'aṭhaf.<br><em>Anzala</em>: Fi'il mādhī bab af'ala (rubā'ī mazīd).</td>
+                <td>Fi'il mādhī mabnī 'alal-fatḥ. Fā'il dhamīr mustatir jawāzan taqdīruhū <em>Huwa</em> (kembali kepada Allāh). Ma'thūf kepada fi'il <em>anzala</em> sebelumnya.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْفُرْقَانَ</strong></td>
+                <td>Mashdar wazan <em>Fu'lān</em>, isim ma'rifah bi-al.</td>
+                <td><strong>Maf'ūl bih</strong> manshūb bil-fatḥah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّ</strong></td>
+                <td>Ḥarf tawkīd wa nashab (nāsikh).</td>
+                <td>Mabnī 'alal-fatḥ, menashabkan isim dan merafa'kan khabar. Awal jumlah isti'nāfiyah bayāniyyah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong></td>
+                <td>Ism mawshūl lil-jam'il-mudzakkar.</td>
+                <td>Mabnī 'alal-fatḥ fī maḥalli nashbin <strong>Ism Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>كَفَرُوا۟</strong></td>
+                <td>Fi'il mādhī wazan <em>fa'ala</em> bersambung Wāwu jamā'ah.</td>
+                <td>Fi'il mādhī mabnī 'aladh-dhamm, Wāwu jamā'ah dhamīr muttashil fī maḥalli raf'in fā'il, Alif fāriqah. Jumlah fi'liyyah ini adalah <strong>Ṣhilatul-Mawshūl</strong> (lā maḥalla lahā minal-i'rāb).</td>
+            </tr>
+            <tr>
+                <td><strong>بِـَٔايَـٰتِ ٱللَّهِ</strong></td>
+                <td>Bā' harf jarr; <em>Āyāti</em> jamak mu'annats salim majrur; <em>Allāh</em> ism jalālah mudhāfun ilayh.</td>
+                <td>Jār wa majrūr muta'alliq bi-fi'il <em>kafarū</em>. Lafzhul-jalālah majrūr bil-kasrah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>لَهُمْ</strong></td>
+                <td>Lām harf jarr lil-istihqāq; <em>Hum</em> dhamir jamak.</td>
+                <td>Jār wa majrūr syibh jumlah fī maḥalli raf'in <strong>Khabar Muqaddam</strong> bagi mubtada' <em>'adzābun</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>عَذَابٌۭ شَدِيدٌۭ</strong></td>
+                <td><em>'Adzāb</em>: Isim nakirah marfu'; <em>Syadīd</em>: Sifat musyabbahah wazan <em>fa'īl</em>.</td>
+                <td><em>'Adzābun</em> <strong>Mubtada' Mu'akhkhar</strong> marfū' bidh-dhammah. <em>Syadīdun</em> na'at / sifat baginya marfū' bidh-dhammah. Jumlah ismiyyah (<em>lahum 'adzābun syadīd</em>) fī maḥalli raf'in <strong>Khabar Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td>Wāwu isti'nāfiyah.<br><em>Allāh</em>: Ism jalālah.</td>
+                <td><strong>Mubtada'</strong> marfū' bidh-dhammah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>عَزِيزٌۭ</strong></td>
+                <td>Ṣhifah musyabbahah wazan <em>fa'īl</em>.</td>
+                <td><strong>Khabar Awwal</strong> marfū' bidh-dhammah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ذُو ٱنتِقَامٍ ۝٤</strong></td>
+                <td><em>Dzū</em>: Asmā'ul-khamsah marfu' bil-wawu;<br><em>Intiqām</em>: Mashdar khumāsī majrur.</td>
+                <td><em>Dzū</em> <strong>Khabar Tsānī</strong> marfū' bil-wāw wa huwa mudhāf. <em>Intiqāmin</em> mudhāfun ilayh majrūr bil-kasrah. Jumlah ismiyyah ini isti'nāfiyah tamhīdiyyah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'āni — Taqdim al-Khabar 'ala al-Mubtada' (Eksklusivitas Hukuman Eskatologis):</strong><br>
+            Frasa <em>lahum 'adzābun syadīd</em> mendahulukan khabar syibh jumlah <em>lahum</em> atas mubtada' <em>'adzāb</em>. Dalam kaidah balaghah, pendahuluan ini berfungsi sebagai <em>al-ikhtishāṣh wat-ta'kīd</em> (pengkhususan dan penegasan mutlak): bahwa azab yang maha dahsyat itu sudah dipastikan dan dikunci secara khusus bagi mereka yang sengaja membangkang setelah terangnya Al-Furqan, sekaligus menutup celah bahwa mereka bisa meloloskan diri dari vonis Ilahi.
+        </li>
+        <li>
+            <strong>Ilmu Ma'āni — Al-Iltifāt dan Pengulangan Isim Zhāhir Menegakkan Haibah:</strong><br>
+            Alih-alih menggunakan kata ganti (dhamir) seperti <em>wa Huwa 'azīz</em>, ayat ini mengulang nama agung dengan isim zhahir: <strong>"Wallāhu 'Azīzun Dzū Intiqām"</strong>. Pengulangan nama Allāh yang berdampingan dengan sifat keperkasaan (<em>Al-'Izzah</em>) melahirkan efek <em>al-mahābah wat-tahwīl</em> (membangkitkan rasa gentar, takzim, dan wibawa kosmis tertinggi di dalam jiwa pendengarnya).
+        </li>
+        <li>
+            <strong>Ilmu Bayān — Isti'ārah Tashrīḥiyyah & Majāz 'Aqlī pada Nama "Al-Furqān":</strong><br>
+            Pemberian nama Al-Qur'an sebagai <em>Al-Furqān</em> adalah puncak keindahan bayan. Kitab suci yang merupakan sekumpulan ayat dan lafal dipinjamkan sifat mashdar <em>al-furqān</em> (pemisahan murni). Ini adalah <em>isti'ārah bi-ithlāqil-mashdar 'alal-ism</em>, seolah-olah wahyu ini bukan lagi sekadar instrumen yang memisahkan, melainkan Al-Qur'an itu sendiri adalah "Pemisahan Hakiki yang Menjelma Menjadi Kitab".
+        </li>
+        <li>
+            <strong>Ilmu Bayān — I'jāz al-Qaṣhr pada Konstruksi "Dzū Intiqām":</strong><br>
+            Al-Qur'an tidak menyatakan <em>Wallāhu muntaqim</em> (Allah pembalas), melainkan menggunakan konstruksi mudhaf <strong>Dzū Intiqām</strong> (Pemilik Otoritas Pembalasan). Konstruksi ini mengandung kepadatan makna luar biasa (<em>ījāz al-qaṣhr</em>): kata <em>Dzū</em> menunjukkan bahwa sifat keadilan retributif dan kepemilikan hak mutlak untuk membalas kezaliman melekat abadi pada kedaulatan Allah, dan bahwa pembalasan-Nya memiliki bobot yang tak tertandingi oleh pembalasan makhluk mana pun di jagat raya.
+        </li>
+        <li>
+            <strong>Ilmu Badī' — Aṭh-Ṭhibāq al-Khafī (Kontras Harmonis antara Petunjuk dan Pembalasan):</strong><br>
+            Terdapat kontras tersembunyi yang sangat memukau antara kata <strong>hudan</strong> (petunjuk, rahmat, kelembutan bimbingan bagi yang mencari kebenaran) di awal ayat, dengan frasa <strong>'adzābun syadīd</strong> dan <strong>dzū intiqām</strong> di akhir ayat bagi yang membangkang. Kontras ini membentuk harmoni dialektis antara <em>at-targhīb</em> (harapan keselamatan) dan <em>at-tarhīb</em> (peringatan ancaman keras), menjaga keseimbangan psikologis manusia antara rasa harap (<em>rajā'</em>) dan rasa takut (<em>khawf</em>).
+        </li>
+        <li>
+            <strong>I'jāz Fonetik & Tanāsub al-Fawāṣhil:</strong><br>
+            Penutupan ayat dengan fonem bibir tertutup Mim bersukun (<em>intiqām</em>) yang didahului vokal panjang Alif mad melahirkan resonansi suara bariton yang berat, kokoh, dan menggelegar. Nada akustik ini secara subliminal menanamkan pesan ketegasan vonis hukum yang telah diputuskan dan ditutup tanpa ada banding lagi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual dengan Ayat 1, 2, dan 3):</strong><br>
+            Ayat 1 membuka dengan huruf muqaththa'ah <em>Alif-Lām-Mīm</em> sebagai penakluk arogansi bahasa; Ayat 2 memproklamasikan identitas Dzat Sang Pengirim Wahyu yang Maha Hidup dan Maha Mandiri Menegakkan Alam (<em>Al-Ḥayyul-Qayyūm</em>); Ayat 3 membeberkan proses pewahyuan kitab: Al-Qur'an diturunkan bertahap dengan kebenaran (<em>bil-ḥaqq</em>) membenarkan kitab-kitab sebelumnya (Taurat dan Injil). Maka ayat 4 hadir menyempurnakan mata rantai tersebut: menegaskan bahwa Taurat dan Injil berfungsi <em>min qablu hudan lin-nāsi</em> (pada masanya di masa silam), lalu Allah menurunkan <strong>Al-Furqān</strong> sebagai kriteria pemungkas universal. Struktur sibāq ini bergerak indah dari Metafisika Dzat &rarr; Aksiologi Wahyu &rarr; Kronologi Sejarah &rarr; Kriteria Pembeda Hakiki &rarr; Konsekuensi Eskatologis.
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis: Debat Madinah, Delegasi Kristen Najran & Pasca-Uhud):</strong><br>
+            Konteks sosiologis turunnya ayat ini berada pada fase kematangan peradaban Islam di Madinah. Umat Islam menghadapi dua medan ujian besar: (1) <em>Ujian Militer-Politik</em> pasca Perang Badar dan Uhud yang menguji ketahanan mental menghadapi kekuatan koalisi hegemoni luar; dan (2) <em>Ujian Intelektual-Teologis</em> saat berhadapan dengan delegasi Kristen Najran (sekitar tahun 9–10 H). Delegasi Najran adalah representasi elit teologi Kristen terpelajar jazirah Arab yang membawa argumen-argumen filsafat teologis untuk melegitimasi ketuhanan Isa AS. Dalam siyaq inilah ayat 4 turun bagaikan pedang epistemik: Al-Qur'an mengakui kemuliaan Taurat dan Injil orisinal sebagai petunjuk masa lalu, namun menegaskan bahwa kitab yang ada di tangan mereka kini harus diuji melalui <em>Al-Furqān</em>. Penolakan terhadap Al-Furqan bukan lagi dipandang sebagai sekadar "ijtihad budaya", melainkan kekafiran terhadap ayat-ayat Allah yang pasti menuai murka dari <em>'Azīzun Dzū Intiqām</em>.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Hermeneutis ke Ayat 5 dan Kelanjutan Klaster 1):</strong><br>
+            Pemberitahuan bahwa Allah adalah <em>'Azīzun Dzū Intiqām</em> di ujung ayat 4 secara natural menimbulkan pertanyaan batin: "Bagaimana Allah menjalankan pembalasan itu secara adil tanpa ada yang terlewat atau tertukar?" Maka ayat 5 seketika menjawabnya dengan fondasi epistemik mutlak: <em>"Inna-llāha lā yakhfā 'alayhi syai'un fil-ardhi wa lā fis-samā'"</em> (Sesungguhnya bagi Allah tidak ada sesuatu pun yang tersembunyi, baik di bumi maupun di langit). Pembalasan Allah tegak di atas Maha Tahu yang sempurna: konspirasi tersembunyi di balik jubah agamawan, distorsi teks di balik dinding biara, serta keangkuhan rahasia di dalam dada para penolak wahyu terpantau secara transparan tanpa ada yang luput sebutir debu pun.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭh-Ṭhabarī (w. 310 H) — <em>Jāmi' al-Bayān fī Ta'wīl al-Qur'ān</em>:</strong><br>
+        Aṭh-Ṭhabarī mengkaji secara mendalam silang pendapat para ulama salaf mengenai makna <em>Al-Furqān</em> pada ayat ini. Sebagian perawi menafsirkannya sebagai pertolongan dan kemenangan di medan perang (sebagaimana penafsiran Qatadah atas Perang Badar), namun At-Tabari merajihkan bahwa <em>Al-Furqān</em> di sini adalah <strong>Al-Qur'an itu sendiri beserta seluruh bukti rasional pembeda</strong> yang diturunkan Allah kepada Nabi Muhammad ﷺ untuk memisahkan secara total antara yang hak dan yang batil, petunjuk dan kesesatan. Mengenai frasa <em>Dzū Intiqām</em>, At-Tabari menegaskan: Allah memiliki hak pembalasan mutlak terhadap orang-orang yang mengingkari hujah-hujah-Nya setelah bukti ditegakkan, dan tidak ada pembangkang yang dapat lolos dari kekuasaan-Nya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsīr membedah korelasi harmonis antara penyebutan Taurat, Injil, dan Al-Furqan. Beliau menjelaskan bahwa frasa <em>min qablu hudan lin-nās</em> menegaskan fungsi kedua kitab terdahulu bagi zamannya masing-masing. Kemudian Allah menurunkan <em>Al-Furqān</em>, yaitu pemisah antara hidayah dan kesesatan, antara kebenaran tauhid dan kepalsuan syirik, melalui dalil-dalil yang terang dan mukjizat yang benderang. Ibnu Katsir menggarisbawahi: <em>"Barangsiapa yang mengingkari ayat-ayat Allah—yakni mendustakan bukti keesaan-Nya dan menolak para rasul-Nya—maka bagi mereka azab yang sangat keras pada hari kiamat, dan Allah Maha Perkasa yang keagungan-Nya tidak tertandingi serta memiliki pembalasan terhadap orang-orang yang mendustakan-Nya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubī menyoroti aspek i'rab dan teologis dari nama sifat Allah <em>Dzū Intiqām</em>. Beliau menegaskan bahwa dalam tradisi akidah ahlussunnah, Allah tidak dinamai secara mutlak berdiri sendiri dengan nama <em>Al-Muntaqim</em> dalam Asma'ul Husna tanpa ikatan konteks (<em>muqayyad</em>), melainkan senantiasa disandingkan sebagai <em>Dzū Intiqām</em> atau <em>Inna minal-mujrimīna muntaqimūn</em>. Hal ini menunjukkan bahwa <em>intiqām</em> Allah adalah <strong>manifestasi dari keadilan hukum (al-'adl)</strong> untuk memulihkan kebenaran dan menghukum para perusak moral yang keras kepala, bukan didorong oleh hawa nafsu permusuhan atau kezaliman. Al-Qurthubi juga menjelaskan bahwa kata <em>hudan</em> menjadi hal bagi kitab-kitab tersebut, yang menunjukkan kewajiban bagi setiap generasi untuk mengikuti petunjuk wahyu yang sah pada zamannya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Imam Az-Zamakhsyarī (w. 538 H):</strong><br>
+        Ar-Rāzī dalam <em>Mafātīḥ al-Ghayb</em> mengajukan pertanyaan hermeneutis tajam: Mengapa Allah menyebutkan <em>Al-Furqān</em> setelah sebelumnya pada ayat 3 sudah menyebutkan <em>Al-Kitāb</em>? Ar-Razi menjawab bahwa penyebutan <em>Al-Kitab</em> menunjuk pada eksistensi materi mushaf wahyu yang dibaca, sedangkan <em>Al-Furqan</em> menunjuk pada <strong>fungsi epistemologis wahyu sebagai alat pemutus dan pembeda rasional</strong>. Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan bahwa <em>Al-Furqan</em> adalah genus pembeda yang mencakup mukjizat mukjizat aqliyah yang menyertai Al-Qur'an, sehingga meruntuhkan segala bentuk keraguan teologis kelompok lawan. Ar-Razi juga menegaskan bahwa sifat <em>'Azīz</em> membuktikan kemahakuasaan Allah secara ontologis, dan <em>Dzū Intiqām</em> membuktikan pelaksanaan keadilan-Nya secara de facto.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Āsyūr membedah dimensi maqashidi dan historis ayat ini secara cemerlang. Beliau mencatat bahwa penggunaan kata <em>min qablu</em> mengisyaratkan perpindahan zaman peradaban manusia: era Taurat dan Injil adalah fase persiapan partikular bagi bani Israil, sedangkan era <em>Al-Furqān</em> adalah era universalitas akal budi umat manusia seluruhnya. Al-Qur'an dinamai <em>Al-Furqan</em> karena ia membebaskan akal manusia dari jeratan dogma mitologis, taklid buta leluhur, dan kompromi teologis yang merusak ketauhidan. Ibnu 'Asyur juga menggarisbawahi bahwa penutup ayat dengan sifat <em>'Azīzun Dzū Intiqām</em> adalah pesan geopolitik ilahiah: agama Islam tidak akan pernah bisa dipadamkan oleh konspirasi kekaisaran Romawi maupun hegemoni manapun, karena Sang Pemilik Wahyu adalah Dzat Yang Maha Perkasa yang memiliki instrumen pembalasan sejarah untuk menumbangkan peradaban zalim.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — <em>Tafsīr Al-Azhar</em> & Prof. Dr. M. Quraish Shihab — <em>Tafsīr Al-Mishbāḥ</em>:</strong><br>
+        Buya Hamka menulis dengan penuh penghayatan jiwa: <em>"Al-Furqan adalah pemisah yang tegas di antara yang benar dengan yang salah. Manusia tanpa Al-Furqan akan tersesat di tengah rimba kebingungan filsafat duniawi. Mereka menyangka kemajuan materi adalah keselamatan, padahal jika akidah runtuh, mereka sedang meluncur ke jurang kehancuran."</em> Buya Hamka mengingatkan bahwa orang-orang yang sombong menolak Al-Furqan akan menghadapi Allah Yang Maha Perkasa. Sementara itu, Quraish Shihab dalam <em>Al-Mishbah</em> menguraikan kata <em>adzāb</em> yang secara harfiah berarti sesuatu yang menyiksa dan memedihkan jiwa dan raga. Quraish Shihab menggarisbawahi bahwa sifat <em>'Azīz</em> mendahului <em>Dzū Intiqām</em> untuk menegaskan bahwa pembalasan Allah murni bersumber dari kedaulatan dan kekuasaan mutlak yang adil, bukan karena Allah merasa terancam oleh kekafiran makhluk-Nya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Kementerian Agama Republik Indonesia — <em>Al-Qur'an dan Tafsirnya (Edisi Penyempurnaan)</em>:</strong><br>
+        Tafsir Kemenag RI menegaskan bahwa ayat ini meletakkan fondasi teologis relasi antar-umat beragama: Islam mengakui nilai historis kitab-kitab samawi masa lalu sebagai pembimbing umat pada zamannya, tetapi Al-Qur'an sebagai Al-Furqan adalah pedoman hidup terakhir yang wajib diimani. Penolakan terhadap ayat-ayat Allah mengandung implikasi eskatologis berupa azab yang keras di akhirat dan kerugian moral di dunia, menegaskan pentingnya konsistensi dalam memegang kebenaran tauhid di tengah pluralitas keyakinan.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Kesepakatan Ulama (Ijmā' / Ittifāq)</th>
+                <th>Dinamika Variasi Penafsiran (Ikhtilāf Tanawwu')</th>
+                <th>Implikasi Hermeneutis & Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Makna "Al-Furqān"</strong></td>
+                <td>Seluruh mufasir sepakat bahwa Al-Furqān adalah instrumen pembeda mutlak antara kebenaran wahyu dan kebatilan kekufuran.</td>
+                <td>
+                    • <strong>Mayoritas (Ibnu Abbas, Tabari, Qatadah):</strong> Al-Qur'an itu sendiri yang memisahkan hak dan batil.<br>
+                    • <strong>Sebagian Mufasir:</strong> Genus seluruh kitab samawi dan mukjizat para nabi.<br>
+                    • <strong>Mujahid & Ar-Razi:</strong> Hujah-hujah aqliyah rasional pemutus syubhat.<br>
+                    • <strong>As-Suddi:</strong> Pertolongan kemenangan militer pemisah antara kubu tauhid dan paganisme (Badar).
+                </td>
+                <td>Menunjukkan kekayaan dimensi Al-Qur'an yang berfungsi simultan sebagai teks wahyu, mukjizat rasional, pedoman etika, dan kekuatan sejarah peradaban.</td>
+            </tr>
+            <tr>
+                <td><strong>Fungsi "Min Qablu Hudan lin-Nās"</strong></td>
+                <td>Sepakat bahwa Taurat dan Injil asli diturunkan sebelum Al-Qur'an sebagai petunjuk hidup bagi kaum yang dituju pada masanya.</td>
+                <td>
+                    • <strong>Ibnu Katsir & Al-Qurthubi:</strong> Menjadi dalil bahwa syariat terdahulu bersifat temporal dan lokal.<br>
+                    • <strong>Ibnu 'Asyur:</strong> Menandai transisi sosiologis dari fase bimbingan partikular menuju kematangan intelektual universal umat manusia di bawah Al-Qur'an.
+                </td>
+                <td>Mengokohkan teologi Islam yang menghormati kontinuitas kenabian (prophetic continuity) sekaligus menegaskan status Al-Qur'an sebagai penutup dan penyempurna (superseding).</td>
+            </tr>
+            <tr>
+                <td><strong>Sifat "Wallāhu 'Azīzun Dzū Intiqām"</strong></td>
+                <td>Sepakat bahwa Allah Maha Perkasa dan memiliki wewenang mutlak untuk menjatuhkan siksa kepada pembangkang tanpa ada yang mampu menghalangi-Nya.</td>
+                <td>
+                    • <strong>Asy'ariyyah (Al-Qurthubi, Ar-Razi):</strong> <em>Intiqām</em> bukan nama mandiri melainkan sifat fi'il yang bersumber dari keadilan mutlak Allah untuk menghukum orang zalim.<br>
+                    • <strong>Salaf / Atsari (Ibnu Katsir):</strong> Menetapkan sifat ini sesuai keagungan Allah tanpa takyif, ta'thil, dan tamsyil.<br>
+                    • <strong>Zamakhsyari (Mu'tazilah):</strong> Penegasan hukum kepastian janji dan ancaman (<em>al-wa'd wal-wa'id</em>).
+                </td>
+                <td>Membentengi umat dari ilusi deisme atau kebebasan tanpa akuntabilitas: keadilan kosmis Allah pasti ditegakkan atas setiap penentang moral dan kebenaran wahyu.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Relativisme Epistemik vs Paradigma Furqani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Sekuler Kontemporer</th>
+                <th>Pola Pikir Qur'ani (Paradigma Furqānī)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Standar Kebenaran</strong></td>
+                <td><strong>Relativisme Moral & Epistemik:</strong> "Semua kebenaran bersifat relatif, bergantung selera individu atau konstruksi sosial; tidak ada yang berhak mengklaim standar benar-salah secara mutlak."</td>
+                <td><strong>Objektivitas Nilai Ilahiah (Al-Furqān):</strong> Kebenaran (Al-Ḥaqq) memiliki standar objektif yang diturunkan oleh Sang Maha Mengetahui, memisahkan secara jernih antara kebaikan hakiki dan kebatilan destruktif.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Bukti</strong></td>
+                <td><strong>Bias Konfirmasi & Defensif Ego:</strong> Menolak fakta dan kebenaran yang tidak sejalan dengan kepentingan materi, kenyamanan status quo, atau nafsu pribadi.</td>
+                <td><strong>Integritas Intelektual & Kerendahan Hati:</strong> Tunduk pada bukti rasional-spiritual wahyu (<em>al-bayyināt</em>) kendati harus mengoreksi asumsi diri dan tradisi lama.</td>
+            </tr>
+            <tr>
+                <td><strong>Akuntabilitas Tindakan</strong></td>
+                <td><strong>Ilusi Impunity (Bebas Konsekuensi):</strong> Merasa bahwa selama pelanggaran hukum moral tidak terdeteksi oleh sesama manusia atau aparat dunia, seseorang aman dari akibat.</td>
+                <td><strong>Kesadaran Hukum Keadilan Kosmis:</strong> Menyadari bahwa alam semesta dinaungi oleh <em>'Azīzun Dzū Intiqām</em>; setiap pembangkangan moral pasti menuai konsekuensi retributif cepat atau lambat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Furqanic Filter Principle (Prinsip Filter Pemilah Esensi):</strong><br>
+            Dalam dunia yang bising dengan jutaan opini, informasi, dan godaan ideologis, seorang mukmin mengaktifkan <em>Furqanic Filter</em> di dalam kognisinya. Filter ini bekerja dengan mengajukan tiga pertanyaan kritis sebelum menyerap atau mengambil keputusan: (a) Apakah gagasan ini selaras dengan prinsip tauhid dan keadilan wahyu? (b) Apakah ini kebenaran hakiki (<em>haqq</em>) atau sekadar ilusi kemasan yang dibungkus tren (<em>bathil</em>)? (c) Apakah tindakan ini membawa keselamatan abadi atau menjerumuskan ke dalam murka Allah? Model mental ini menyelamatkan akal budi dari degradasi intelektual di tengah banjir bandang informasi.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Inescapable Retribution Principle (Kaidah Kepastian Akuntabilitas Moral):</strong><br>
+            Kaidah ini merombak kalkulasi risiko manusia modern. Berdasarkan nama <em>Al-'Azīz Dzū Intiqām</em>, kezaliman dan pengingkaran terhadap kebenaran bukanlah variabel yang hilang tanpa bekas dalam sistem semesta. Menolak kebenaran setelah mengetahuinya akan melahirkan konsekuensi kehancuran psikologis di dunia (kegelisahan eksistensial, kekosongan jiwa, kehancuran reputasi) dan azab pedih di akhirat. Keputusan hidup dibangun bukan di atas asas "apa yang menguntungkan saat ini", melainkan "apa yang selamat di hadapan Sang Pemilik Keadilan Pembalasan".
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <p>
+        Mengapa manusia yang berakal sehat terjerumus ke dalam perilaku <em>kafarū bi-āyātillāh</em> (menolak ayat-ayat Allah padahal bukti sudah sangat nyata)? Secara neuropsikologis dan spiritual, penolakan ini bukan disebabkan oleh kegagalan logika (<em>intellectual failure</em>), melainkan oleh <strong>pembajakan ego dan disonansi kognitif (affective hijack by pride)</strong>.
+    </p>
+    <p>
+        Ketika ayat-ayat Al-Furqan membongkar kepalsuan sesembahan duniawi—baik itu pemujaan berhala, penyembahan materi, atau pendewaan manusia—ego yang telah terlanjur menikmati privilege kekuasaan dan validasi sosial akan mengalami keterancaman eksistensial. Untuk meredakan rasa tidak nyaman akibat ketegangan antara "fakta kebenaran" dan "kenyamanan hawa nafsu", otak bawah sadar memilih jalan pintas berupa <em>denial</em> (penyangkalan agresif) dan pelecehan terhadap kebenaran.
+    </p>
+    <p>
+        Dalam perspektif <strong>Tazkiyatun Nafs</strong>, ayat ini mendiagnosis bahwa kekafiran berakar dari penyakit hati yang paling berbahaya: <strong>Al-Kibr (Kesombongan Batin)</strong>, yang didefinisikan oleh Rasulullah ﷺ sebagai <em>"batharul-haqq wa ghamthun-nās"</em> (menolak kebenaran dan merendahkan manusia). Terapi penyucian jiwa yang ditawarkan oleh ayat ini adalah merenungi keperkasaan Allah (<em>Al-'Azīz</em>) dan mengingat bahwa jiwa yang lemah ini sama sekali tidak memiliki daya tahan di hadapan pembalasan-Nya (<em>Dzū Intiqām</em>). Kesadaran ini merontokkan arogansi intelektual dan mengembalikan kalbu ke fitrah kehambaan yang suci.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Era Post-Truth & Krisis "Al-Furqān" Digital</h3>
+    <p>
+        Abad ke-21 ditandai oleh disrupsi informasi yang belum pernah terjadi dalam sejarah peradaban manusia: era <em>Post-Truth</em>, algoritma kecerdasan buatan (AI), deepfake, dan ekonomi atensi media sosial. Pada era ini, batasan antara fakta objektif dan fabrikasi rekayasa menjadi kabur secara mengerikan. Kebohongan yang diamplifikasi ribuan bot algoritma mampu merekayasa persepsi publik dan membunuh karakter kebenaran dalam hitungan detik.
+    </p>
+    <p>
+        Manusia kontemporer mengalami <strong>krisis Al-Furqan yang akut</strong>: masyarakat modern memiliki kelimpahan data raksasa (<em>big data</em>) dan teknologi analitik canggih, namun kehilangan kompas pembeda moral untuk memilah mana yang mulia dan mana yang hina, mana yang memanusiakan dan mana yang merusak peradaban. Tanpa Al-Furqan Ilahi, peradaban digital berisiko memproduksi generasi yang pintar secara teknis namun buta secara spiritual, mudah dimanipulasi oleh propaganda tiran dan industri kesesatan global.
+    </p>
+
+    <h3>2. Kritik Peradaban: Hegemoni Global & Ilusi Kekebalan Hukum (Impunity)</h3>
+    <p>
+        Di panggung geopolitik dan ekonomi internasional abad ke-21, kita menyaksikan arogansi negara-negara adidaya dan konglomerasi multinasional yang menindas kaum lemah, menjarah sumber daya alam, memveto keadilan kemanusiaan di panggung global, serta menormalisasi pelanggaran hak asasi manusia demi kepentingan modal. Para penguasa tiran ini hidup dalam ilusi <em>impunity</em>: mereka merasa kebal dari hukum internasional karena memegang hegemoni senjata dan finansial.
+    </p>
+    <p>
+        Firman Allah <strong>"Wallāhu 'Azīzun Dzū Intiqām"</strong> datang sebagai kritik peradaban paling radikal. Sejarah membuktikan bahwa tidak ada imperium arogan yang mampu bertahan melawan hukum keadilan retributif Allah: Firaun tenggelam di puncak kecongkakannya, Namrud binasa oleh makhluk terkecil, dan imperium-imperium tiran modern runtuh dari dalam oleh pembusukan moral mereka sendiri. Ayat ini memberikan suntikan harapan dan keberanian bagi kaum tertindas (<em>mustadh'afīn</em>) bahwa keadilan sejati pasti tegak, dan para penindas yang mengingkari ayat-ayat kebenaran akan menghadapi hisab yang maha dahsyat di hadapan Sang Maha Perkasa.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit Harian: "The 60-Second Furqanic Pause" (Validasi Moral Sebelum Bereaksi):</strong><br>
+                Setiap kali menerima berita, isu viral di media sosial, atau tawaran bisnis yang meragukan, wajibkan diri untuk berhenti selama 60 detik. Gunakan waktu satu menit itu untuk mengaktifkan fungsi <em>Furqan</em>: teliti kebenaran informasinya (<em>tabayyun</em>), periksa motif batin Anda (apakah terdorong nafsu ghibah/keuntungan haram), dan pastikan Anda tidak menyebarkan atau mengambil keputusan yang berbau kebatilan atau fitnah.
+            </li>
+            <li>
+                <strong>Protokol Keputusan Moral: Audit "Zero Kompromi" atas Batasan Halal-Haram:</strong><br>
+                Dalam karier profesional, birokrasi, dan transaksi finansial, tetapkan garis batas tegas yang tidak boleh dinegosiasikan: tolak secara mutlak segala bentuk suap, manipulasi laporan, kecurangan data, atau kezaliman terhadap bawahan kendati dibungkus dengan alasan "tuntutan target" atau "kebiasaan kantor". Ingatkan diri sendiri pada saat menghadapi tekanan kompromi: <em>Allah Maha Perkasa (Al-'Azīz) yang menjamin rezekiku, dan Dia Pemilik Pembalasan (Dzū Intiqām) jika aku berkhianat.</em>
+            </li>
+            <li>
+                <strong>Komitmen Sosial-Intelektual: Menjadi Duta Al-Furqan di Ruang Publik:</strong><br>
+                Gunakan kemampuan berbicara, menulis, atau platform digital Anda untuk mengedukasi masyarakat dengan konten-konten yang mencerahkan, menyuarakan kebenaran dengan hikmah dan etika luhur, meluruskan pemahaman keagamaan yang ekstrem atau menyimpang, serta membela hak-hak mereka yang terzalimi tanpa takut pada celaan manusia.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Refleksi Integritas Epistemik:</strong> Ketika ayat-ayat Al-Qur'an atau nasihat kebenaran datang menegur kesalahan, kebiasaan buruk, atau cara hidupku yang keliru, apakah hatiku segera tunduk dengan penuh kerendahan hati, ataukah egoku mencari-cari seribu dalih dan pembenaran untuk menolaknya?
+            </li>
+            <li>
+                <strong>Refleksi Kompas Kehidupan:</strong> Apakah selama ini Al-Qur'an telah benar-benar berfungsi sebagai <em>Al-Furqān</em> (pembeda mutlak) dalam menentukan standar benar-salah gaya hidupku, ataukah aku masih menjadikan tren media sosial, gengsi pergaulan, dan penilaian manusia sebagai kompas utamaku?
+            </li>
+            <li>
+                <strong>Refleksi Khawf terhadap Al-'Azīz Dzū Intiqām:</strong> Seberapa sering rasa takut dan gentarku kepada keadilan pembalasan Allah hadir menahan tanganku ketika memiliki kesempatan untuk berbuat zalim, mengambil hak orang lain, atau bermaksiat di saat situasi sepi dan aman dari pantauan mata manusia?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Allāh, Yā 'Azīzu Yā Dzāl-Intiqām, Yā Man anzala 'alā 'abdihil-kitāba bil-ḥaqqi wa anzalal-furqān. Ya Allah, Dzat Yang Maha Perkasa dalam kedaulatan-Nya lagi Maha Menegakkan keadilan pembalasan yang sempurna. Kami bersujud memohon perlindungan-Mu dari kebutaan batin dan kesombongan hati yang membuat kami lalai serta mengingkari ayat-ayat-Mu yang agung.<br><br>
+            Karuniakanlah kepada kalbu kami cahaya <strong>Al-Furqān</strong>: perlihatkanlah kepada kami bahwa yang benar itu benar dan anugerahilah kami kekuatan untuk mengikutinya, serta perlihatkanlah kepada kami bahwa yang batil itu batil dan anugerahilah kami keteguhan untuk menjauhinya. Selamatkanlah kami, keluarga kami, dan bangsa kami dari siksa-Mu yang amat pedih di dunia dan akhirat.<br><br>
+            Jangan jadikan kami termasuk golongan orang-orang yang tertipu oleh kemewahan dunia yang fana, dan wafatkanlah kami dalam keadaan memegang teguh akidah tauhid yang murni di atas jalan para nabi dan syuhada. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-003 - QS. Ali 'Imran Ayat 3.html">&larr; Kembali ke Ayat 3 (QS. 3:3)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 4</strong> (Blok 1: Keteguhan Akidah)</span>
+        <a href="003-005 - QS. Ali 'Imran Ayat 5.html">Lanjut ke Ayat 5 (QS. 3:5) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

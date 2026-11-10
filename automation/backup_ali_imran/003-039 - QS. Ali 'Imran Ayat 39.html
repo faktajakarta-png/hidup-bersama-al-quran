@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-039 - QS. Ali 'Imran Ayat 39 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-038 - QS. Ali 'Imran Ayat 38.html">&larr; Ayat Sebelumnya (QS. 3:38)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-040 - QS. Ali 'Imran Ayat 40.html">Ayat Berikutnya (QS. 3:40) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian</span>
+        <span class="badge">Klaster 2 Blok 2 (Ayat 38–41): Mihrab Kenabian, Doa Zakariya & Mukjizat Kelahiran Yahya AS</span>
+        <span class="badge">20 Kata | 89 Huruf Rasm</span>
+        <span class="badge">Juz 3 (Rub' 2 Hizb 5)</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 39</h1>
+    <div class="transliteration">
+        "Fa-nādathul-malā'ikatu wa huwa qā'imuy-yuṣhallī fīl-miḥrābi annallāha yubasysyiruka bi-Yaḥyā muṣhaddiqam bi-kalimatim minallāhi wa sayyidaw-wa ḥaṣhūraw-wa nabiyyam minaṣh-ṣhāliḥīn(a)."
+    </div>
+    <div class="thematic-title">
+        Manifestasi Ijabah di Bilik Mihrab: Kabar Gembira Kelahiran Yahya AS, Pembenaran Kalimah Allah ('Isa AS), Ketinggian Integritas (Sayyidan), Asketisme Suci (Hashuran), dan Kenabian Rabbani
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Ayat 39: Titik Balik Sejarah Spiritual, Penaklukan Hukum Biologis & Arketipe Pewaris Risalah Zakariya AS)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        فَنَادَتْهُ ٱلْمَلَـٰٓئِكَةُ وَهُوَ قَآئِمٌ يُصَلِّى فِى ٱلْمِحْرَابِ أَنَّ ٱللَّهَ يُبَشِّرُكَ بِيَحْيَىٰ مُصَدِّقًۢا بِكَلِمَةٍ مِّنَ ٱللَّهِ وَسَيِّدًا وَحَصُورًا وَنَبِيًّا مِّنَ ٱلصَّـٰلِحِينَ ۝٣٩
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Maka malaikat (Jibril 'alaihissalam) memanggilnya ketika ia sedang berdiri melaksanakan shalat di dalam mihrab: 'Sesungguhnya Allah menyampaikan kabar gembira kepadamu dengan (kelahiran putramu) Yahya, yang membenarkan sebuah firman (kalimah) dari Allah ('Isa AS), seorang pemimpin (panutan luhur berintegritas tinggi), yang menahan diri (dari dorongan syahwat rendah dan kelezatan fana), serta seorang nabi dari kalangan orang-orang yang saleh.'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan klimaks dramatik spiritual yang menjawab tuntas doa penuh harap Nabi Zakariya AS pada ayat 38 (<em>"Rabbi hab lī mil ladunka dzurriyyatan thayyibah..."</em>). Kata penghubung <em>Fā'</em> pada awal lafaz <em>fa-nādathu</em> adalah <em>Fā' at-ta'qīb as-sababiyyah</em> yang mengisyaratkan kecepatan pengabulan tanpa jeda yang melalaikan. Jawaban langit turun bukan ketika Zakariya sedang duduk berpangku tangan atau bernegosiasi dengan manusia, melainkan saat ia berada pada kondisi eksistensial puncak: <strong>qā'imun yuṣhallī fīl-miḥrāb</strong> (sedang berdiri tegak menghadapkan seluruh jiwa raganya dalam shalat di ruang pengasingan suci).
+    </p>
+    <p>
+        Wahyu ini memproklamasikan profil spektakuler Yahya AS melalui lima gelar kemuliaan terpadu yang belum pernah disematkan secara sekaligus kepada nabi mana pun sebelumnya:
+    </p>
+    <ul>
+        <li><strong>1. Bi-Yaḥyā (بِيَحْيَىٰ):</strong> Pemberian nama langsung dari Allah SWT (<em>al-tasmiyah al-ilāhiyyah</em>) sebelum sang anak dilahirkan. Nama ini menyiratkan kehidupan hakiki (iman, kenabian, dan kesyahidan), sekaligus menghidupkan rahim sang ibu yang secara medis divonis mandul serta usia ayah yang telah mencapai kepikunan fisik.</li>
+        <li><strong>2. Muṣhaddiqam bi-kalimatin minallāh (مُصَدِّقًا بِكَلِمَةٍ مِّنَ اللَّهِ):</strong> Sosok pertama yang membenarkan, membela, dan bersaksi atas risalah serta kelahiran ajaib Nabi 'Isa AS (yang bergelar <em>Kalimatullāh</em>).</li>
+        <li><strong>3. Sayyidan (وَسَيِّدًا):</strong> Pemimpin moral dan panutan agung spiritual yang ditaati kaumnya karena keluhuran ilmu, adab, dan penundukan nafsu, bukan karena kekuatan dinasti atau kekayaan material.</li>
+        <li><strong>4. Ḥaṣhūran (وَحَصُورًا):</strong> Pribadi yang membentengi dirinya secara sempurna dari syahwat rendah, steril dari dosa, dan mengendalikan gejolak biologis demi mendedikasikan seluruh kapasitas hidupnya bagi ketaatan kepada Allah.</li>
+        <li><strong>5. Nabiyyam minaṣh-ṣhāliḥīn (وَنَبِيًّا مِّنَ الصَّالِحِينَ):</strong> Puncak capaian nubuwah yang berakar dari trah kesalehan leluhur, memadukan mahkota wahyu dengan integritas amal kebajikan paripurna.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Makharij & Sifat Huruf, serta Variasi Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm Utsmani</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Lughawi-Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>فَنَادَتْهُ ٱلْمَلَـٰٓئِكَةُ</strong><br>(<em>Fa-nādathul-malā'ikah</em>)</td>
+                <td>
+                    <strong>Fā' Ta'qīb:</strong> Makhraj dari perut bibir bawah dengan ujung gigi seri atas, sifat hams dan rikhwah.<br>
+                    <strong>Mad Wajib Muttashil:</strong> Huruf mad Alif bertemu Hamzah dalam satu kata (<em>Al-Malā'ikah</em>), dibaca 4–5 harakat (Hafsh) atau 6 harakat (Warsy & Hamzah).<br>
+                    <strong>Idzhār Qamariyyah:</strong> Pada huruf Lam ta'rif dibaca jelas. Ta' marbuthah dibaca 'Ta' berharakat dhammah saat washal, dan berubah menjadi Ha' sukun saat waqaf darurat.
+                </td>
+                <td>
+                    • <strong>Hamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca dengan bentuk mudzakkar: <strong>فَنَادَاهُ الْمَلَائِكَةُ</strong> (<em>Fa-nādāhul-malā'ikah</em>) disertai <strong>Imālah Kubrā</strong> pada huruf Dal dan Alif (<em>Fa-nādēhu</em>) bagi Hamzah dan Al-Kisa'i.<br>
+                    <em>Argumen Lughawi:</em> Malaikat adalah jamak taksir majazi (<em>jama' taksīr</em>) yang boleh ditadzkirkan (dianggap mudzakkar) berdasarkan makna kelompok (<em>ar-rahth</em> atau <em>al-fariq</em>), atau karena yang bersuara hakikatnya adalah satu malaikat agung, yakni Jibril AS.<br>
+                    • <strong>Tujuh Imam Lainnya (Nāfi', Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Abū Ja'far, Ya'qūb):</strong> Membaca dengan Ta' ta'nits: <strong>فَنَادَتْهُ الْمَلَائِكَةُ</strong> (<em>Fa-nādathul-malā'ikah</em>) karena lafaz jamak taksir berstatus mu'annats majazi (<em>jama'ah minal-mala'ikah</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>وَهُوَ قَآئِمٌ يُصَلِّى</strong><br>(<em>Wa huwa qā'imuy-yuṣhallī</em>)</td>
+                <td>
+                    <strong>Wawu Hāl:</strong> Membuka jumlah haliyyah.<br>
+                    <strong>Dhamīr Munfaṣhil:</strong> <em>Huwa</em> dengan hembusan nafas hams pada huruf Ha'.<br>
+                    <strong>Mad Wajib Muttashil:</strong> Pada <em>Qā'imun</em> (4–5 harakat). Huruf Qaf memiliki sifat isti'la' dan jahr.<br>
+                    <strong>Idghām Bighunnah (Ma'al-Ghunnah):</strong> Tanwin dhammah pada <em>qā'imun</em> melebur sempurna ke dalam huruf Ya' disertai ghunnah 2 harakat.<br>
+                    <strong>Huruf Ṣhād:</strong> Memiliki sifat isti'la', ithbaq, dan shafir. Lam bertasydid memiliki sifat tawassuth (tidak boleh terputus).
+                </td>
+                <td>
+                    • <strong>Abū 'Amr, Al-Kisā'ī, dan Abū Ja'far:</strong> Membaca dengan mensukunkan huruf Ha' dhamir jika didahului wawu: <strong>وَهْوَ</strong> (<em>Wah-wa qā'imun...</em>) demi meringankan pengucapan (<em>takhfīf</em>).<br>
+                    • <strong>Imam Lainnya (Nāfi', Ibnu Katsīr, Ibnu 'Āmir, 'Āṣhim, Ḥamzah, Khalaf al-'Āsyir, Ya'qūb):</strong> Membaca dengan tahqiq dhammah pada huruf Ha': <strong>وَهُوَ</strong> (<em>Wa huwa</em>).<br>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca idgham <strong>tanpa ghunnah</strong> (<em>Idghām Bilā Ghunnah</em>) pada tanwin bertemu Ya' (<em>qā'imuy-yuṣhallī</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>فِى ٱلْمِحْرَابِ</strong><br>(<em>Fīl-miḥrāb</em>)</td>
+                <td>
+                    <strong>Gugurnya Mad Thabi'i:</strong> Ya' sukun pada <em>fī</em> gugur saat washal demi menghindari bertemunya dua huruf sukun (<em>iltiqā'us-sākinayn</em>).<br>
+                    <strong>Huruf Ḥā' Sakīnah:</strong> Keluar dari wasathul halq (tengah tenggorokan) dengan sifat hams dan rikhwah murni.<br>
+                    <strong>Huruf Rā' Mufakhkhamah:</strong> Dibaca tebal (tafkhim) karena berharakat fathah diikuti Alif.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn & Qalqalah Kubrā:</strong> Jika berhenti (waqaf) pada kata <em>al-miḥrāb</em>, Alif dibaca 2, 4, atau 6 harakat dan Ba' disukunkan dengan hentakan qalqalah memantul kokoh.
+                </td>
+                <td>
+                    • <strong>Ad-Dūrī 'an Abī 'Amr:</strong> Membaca dengan <strong>Imālah</strong> (mencondongkan bunyi fathah ke arah kasrah) pada huruf Alif sebelum Ra' majrur di ujung kata: <em>Fīl-miḥrēb</em>.<br>
+                    • <strong>Seluruh Imam Lainnya:</strong> Membaca fathah murni (<em>Fatḥ/Tahqīq</em>) pada Alif kata <em>Al-Miḥrāb</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>أَنَّ ٱللَّهَ</strong><br>(<em>Annallāha</em> / <em>Innallāha</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Wajib ditahan 2 harakat pada Nun bertasydid.<br>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Huruf Lam pada lafaz Allah dibaca tebal dan berat karena didahului oleh vokal fathah Nun.
+                </td>
+                <td>
+                    • <strong>Ḥamzah dan Al-Kisā'ī:</strong> Membaca dengan kasrah hamzah: <strong>إِنَّ اللَّهَ</strong> (<em>Innallāha</em>).<br>
+                    <em>Argumen Lughawi:</em> Menganggap nida' (panggilan) berfungsi semakna dengan ucapan (<em>al-qaul</em>), sehingga hamzah di-kasrah-kan sebagai pembuka hikayat ucapan (<em>kasr hamzah inna ba'dal-qaul</em>: fa-nādathu qā'ilatan: Innallāha...).<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca dengan fathah hamzah: <strong>أَنَّ اللَّهَ</strong> (<em>Annallāha</em>) dengan takdir huruf jar yang dibuang (<em>bi-anna</em> atau <em>li-anna</em>): <em>fa-nādathul-malā'ikatu bi-annallāha...</em>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>يُبَشِّرُكَ</strong><br>(<em>Yubasysyiruka</em> / <em>Yabsyuruka</em>)</td>
+                <td>
+                    <strong>Huruf Syīn Musyaddadah:</strong> Memiliki sifat <strong>Tafasysyī</strong> (penyebaran angin yang luas di rongga mulut) disertai hams dan rikhwah.<br>
+                    <strong>Huruf Rā' Muraqqaqah:</strong> Dibaca tipis (tarqiq) karena menyandang harakat kasrah.<br>
+                    <strong>Huruf Kāf:</strong> Disertai sifat hams saat melepaskan vokal dhammah.
+                </td>
+                <td>
+                    • <strong>Ḥamzah:</strong> Membaca dari fi'il tsulatsi mujarrad: <strong>يَبْشُرُكَ</strong> (<em>Yabsyuruka</em>) dengan fathah Ya', sukun Ba', dan dhammah Syin tanpa tasydid (wazan <em>ya'fulu</em> dari <em>basyara-yabsyuru</em>).<br>
+                    • <strong>Sembilan Imam Lainnya (termasuk 'Āṣhim riwayat Ḥafṣh):</strong> Membaca dengan wazan <em>Taf'īl</em>: <strong>يُبَشِّرُكَ</strong> (<em>Yubasysyiruka</em>) dengan dhammah Ya', fathah Ba', dan kasrah Syin bertasydid (dari <em>basysyara-yubasysyiru</em>), yang mengindikasikan intensitas dan agungnya berita gembira tersebut.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>بِيَحْيَىٰ</strong><br>(<em>Bi-Yaḥyā</em>)</td>
+                <td>
+                    <strong>Ba' Kasrah:</strong> Harf jarr dibaca tipis (tarqiq).<br>
+                    <strong>Huruf Ḥā' Sakīnah:</strong> Sifat hams dan rikhwah keluar dari tengah tenggorokan.<br>
+                    <strong>Alif Layyinah Maqṣhūrah:</strong> Mad thabi'i 2 harakat saat waqaf.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqlīl / Bayna-bayna</strong> (suara vokal antara fathah dan imalah) pada Alif maqsūrah <em>Yaḥyā</em> karena tergolong <em>dzawātul-yā'</em>.<br>
+                    • <strong>Ḥamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> murni mendekati vokal 'e' (<em>Bi-Yaḥyē</em>).<br>
+                    • <strong>Abū 'Amr:</strong> Membaca dengan Taqlil.<br>
+                    • <strong>Ibnu Katsīr, Ibnu 'Āmir, 'Āṣhim, Abū Ja'far, Ya'qūb:</strong> Membaca dengan Fathah murni (<em>Fatḥ/Tahqīq</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>مُصَدِّقًۢا بِكَلِمَةٍ</strong><br>(<em>Muṣhaddiqam bi-kalimah</em>)</td>
+                <td>
+                    <strong>Huruf Ṣhād Musyaddadah:</strong> Isti'la' mutlak dan ithbaq.<br>
+                    <strong>Huruf Dāl Musyaddadah:</strong> Memiliki sifat jahr dan syiddah.<br>
+                    <strong>Hukum Iqlāb:</strong> Tanwin fathah pada <em>muṣhaddiqan</em> bertemu huruf Bā' pada <em>bi-kalimatin</em> berubah menjadi suara Mīm mukhfāh disertai ghunnah sempurna 2 harakat.<br>
+                    <strong>Kāf & Tā' Marbūṭhah:</strong> Keduanya memiliki sifat hams tipis.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca iqlab pada pertemuan tanwin dengan Ba', serta membaca tasydid fathah pada Dal dan kasrah pada Ta' marbuthah saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مِّنَ ٱللَّهِ وَسَيِّدًا</strong><br>(<em>Minallāhi wa sayyidā</em>)</td>
+                <td>
+                    <strong>Nun Fathah 'Aridhah:</strong> Diberi fathah untuk menyambung ke lafaz Jalalah.<br>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Dibaca tebal.<br>
+                    <strong>Huruf Yā' Musyaddadah (Sayyidan):</strong> Wajib dibaca dengan sifat <strong>Nabr</strong> (penekanan suara yang kokoh agar tasydid terdengar jelas tanpa tergelincir menjadi mad).<br>
+                    <strong>Idghām Bighunnah:</strong> Tanwin fathah pada <em>sayyidan</em> bertemu Wawu dibaca dengung 2 harakat.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam:</strong> Membaca Idgham Bighunnah (dengung 2 harakat) pada tanwin bertemu Wawu.<br>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca Idgham <strong>tanpa ghunnah</strong> (<em>Idghām Bilā Ghunnah</em>) pada tanwin bertemu Wawu (<em>wa sayyidaw-wa ḥaṣhūrā</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَحَصُورًا وَنَبِيًّا</strong><br>(<em>Wa ḥaṣhūraw-wa nabiyyā</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā':</strong> Tarqiq, wasathul halq.<br>
+                    <strong>Huruf Ṣhād:</strong> Isti'la' dan ithbaq pada wazan fa'ūl.<br>
+                    <strong>Wawu Mad Ṭhabī'ī:</strong> Panjang 2 harakat.<br>
+                    <strong>Yā' Musyaddadah pada Nabiyyan:</strong> Disertai sifat nabr.
+                </td>
+                <td>
+                    • <strong>Nāfi' (khususnya riwayat Warsy):</strong> Membaca lafaz <em>Nabiyyan</em> dengan <strong>Hamzah</strong>: <strong>وَنَبِيٓئًا</strong> (<em>Wa nabī'an</em>) dari akar kata <em>An-Naba'</em> (berita agung samawi).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca dengan Ya' musyaddadah tanpa hamzah: <strong>وَنَبِيًّا</strong> (<em>Wa nabiyyan</em>) mengikuti akar kata keluhuran derajat (<em>an-nabwah</em>) atau penyampai wahyu.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>مِّنَ ٱلصَّـٰلِحِينَ ۝٣٩</strong><br>(<em>Minaṣh-ṣhāliḥīn</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur sepenuhnya ke dalam huruf Ṣhād.<br>
+                    <strong>Ṣhād Marfu'ah bil-Alif:</strong> Puncak martabat tafkhim (isti'la' dan ithbaq derajat tertinggi).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf akhir ayat di lafaz <em>Al-Ṣhāliḥīn</em>, huruf Ya' mad bertemu Nun sukun dibaca 2, 4, atau 6 harakat disertai penyempurnaan sifat tawassuth pada huruf Nun sukun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca rafa' pada sifat kesalehan ini dan membolehkan tiga wajah panjang (qashr 2 harakat, tawassuth 4 harakat, atau thul 6 harakat) saat waqaf di ujung ayat.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul & Konteks Ijabah Doa di Mihrab:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (Jilid 5, hlm. 358–363) dan Ibnu Katsir dalam <em>Tafsīr-nya</em> (Jilid 2, hlm. 36) melalui sanad sahih dari Qatadah, Ikrimah, dan As-Suddi:<br>
+        <em>"Ketika Nabi Zakariya AS melihat karamah agung pada diri Maryam binti 'Imran di dalam mihrab—di mana ia mendapati buah-buahan musim dingin hadir di musim panas, dan buah-buahan musim panas hadir di musim dingin tanpa sebab hukum alam biasa—bergejolaklah keyakinan tauhid di dalam lubuk batin Zakariya. Beliau berkata dalam batinnya: 'Zat Yang Maha Kuasa menghadirkan buah-buahan di luar musimnya tanpa pohon pembuahan, niscaya Maha Kuasa menganugerahkanku seorang anak meskipun istriku mandul dan tulang belulangku telah rapuh!' Maka seketika itu ia berdiri shalat menghadap kiblat di dalam mihrab dan bermunajat (QS. 3:38). Belum sempat ia menyelesaikan shalatnya dan melangkah keluar bilik, Malaikat Jibril AS datang memanggilnya membawa proklamasi takdir Ilahi: bahwa Allah mengaruniakan seorang putra bernama Yahya."</em><br>
+        <strong>Korelasi Ayat:</strong> Riwayat ini menjadi landasan kaidah usul: <em>"Inna 'indallāhi lā ta'jizu 'anhu al-asbāb"</em> (Sebab-sebab material tunduk mutlak di bawah kehendak Sang Pencipta sebab).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi' At-Tirmidzī (No. 2863) & Musnad Aḥmad (No. 17170) dari Sahabat Al-Ḥārits Al-Asy'arī r.a. — Lima Pilar Risalah Nabi Yahya AS:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«إِنَّ اللَّهَ أَمَرَ يَحْيَى بْنَ زَكَرِيَّا بِخَمْسِ كَلِمَاتٍ أَنْ يَعْمَلَ بِهَا، وَيَأْمُرَ بَنِي إِسْرَائِيلَ أَنْ يَعْمَلُوا بِهَا... أَنْ تَعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا، وَأَمَرَكُمْ بِالصَّلَاةِ فَإِنَّ اللَّهَ يَنْصِبُ وَجْهَهُ لِوَجْهِ عَبْدِهِ فِي صَلَاتِهِ مَا لَمْ يَلْتَفِتْ، وَأَمَرَكُمْ بِالصِّيَامِ، وَأَمَرَكُمْ بِالصَّدَقَةِ، وَأَمَرَكُمْ أَنْ تَذْكُرُوا اللَّهَ»</div>
+        <em>"Sesungguhnya Allah memerintahkan Yahya bin Zakariya dengan lima kalimat agar ia mengamalkannya dan memerintahkan Bani Israil untuk mengamalkannya: (1) Menyembah Allah semata dan tidak menyekutukan-Nya dengan sesuatu apa pun; (2) Mendirikan shalat, karena sesungguhnya Allah menghadapkan wajah-Nya kepada wajah hamba-Nya dalam shalat selama ia tidak berpaling; (3) Berpuasa; (4) Bersedekah; dan (5) Senantiasa berdzikir mengingat Allah."</em><br>
+        <strong>Derajat Hadits:</strong> Hadits Shahih menurut Imam At-Tirmidzi, Ibnu Khuzaimah, dan Al-Hakim. Hadits ini membuktikan hakikat sifat <strong>Sayyidan</strong> dan <strong>Nabiyyan minaṣh-ṣhāliḥīn</strong> pada diri Nabi Yahya AS.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Musnad Aḥmad (No. 2292), Al-Bazzār, dan Al-Mustadrak Al-Ḥākim (Jilid 2, hlm. 540) dari Ibnu 'Abbās r.a. — Kesucian Mutlak Gelar "Ḥaṣhūran":</strong><br>
+        Rasulullah ﷺ bersabda memaparkan kemurnian moral Nabi Yahya AS:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«مَا مِنْ أَحَدٍ مِنْ وَلَدِ آدَمَ إِلَّا قَدْ أَخْطَأَ أَوْ هَمَّ بِخَطِيئَةٍ، إِلَّا يَحْيَى بْنَ زَكَرِيَّا، مَا كَانَ يَنْبَغِي لَهُ أَنْ يَهُمَّ بِذَنْبٍ وَلَا عَمِلَهُ»</div>
+        <em>"Tidak ada seorang pun dari anak keturunan Adam melainkan pernah berbuat kesalahan atau berkehendak melakukan kesalahan, kecuali Yahya bin Zakariya; tidaklah layak baginya untuk berkehendak melakukan dosa dan tidak pernah pula ia melakukannya."</em><br>
+        <strong>Penjelasan Status & Makna:</strong> Sanad hadits ini jayyid/hasan. Hadits ini menjadi dalil qath'i bagi Ahlus Sunnah bahwa makna <em>ḥaṣhūran</em> adalah terpeliharanya jiwa secara maksum dari dosa dan penundukan syahwat secara mutlak demi Allah, bukan akibat cacat biologis/impotensi sebagaimana dugaan keliru sebagian penafsir Israelit.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Bukhārī (No. 3433) & Muslim (No. 162) dalam Peristiwa Isrā' Mi'rāj — Ikatan Persaudaraan Kenabian:</strong><br>
+        Rasulullah ﷺ menceritakan pertemuannya di langit kedua:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«فَفُتِحَ لَنَا، فَإِذَا أَنَا بِابْنَيْ الخَالَةِ عِيسَى ابْنِ مَرْيَمَ وَيَحْيَى بْنِ زَكَرِيَّا صَلَوَاتُ اللَّهِ عَلَيْهِمَا، فَرَحَّبَا وَدَعَوَا لِي بِخَيْرٍ»</div>
+        <em>"Maka dibukakan pintu bagi kami di langit kedua, lalu aku bertemu dengan dua putra bibi yang saling bersaudara dekat: 'Isa putra Maryam dan Yahya bin Zakariya shalawatullahi 'alaihimā. Keduanya menyambutku dengan hangat dan mendoakan kebaikan untukku."</em><br>
+        <strong>Korelasi Ayat:</strong> Hadits ini mengonfirmasi sifat <em>muṣhaddiqam bi-kalimatim minallāh</em>: Yahya dan 'Isa adalah mitra risalah sezaman yang saling memvalidasi, menyucikan, dan memperkuat dakwah tauhid di bumi Palestina.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. N-D-Y (ن-د-ي — Nādā / Munādāh):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ن-د-ي) menjelaskan bahwa akar kata ini berporos pada dua makna asal: (1) <em>al-ijtima'</em> (berkumpulnya sekelompok orang di suatu balai pertemuan, dinamakan <em>an-nādī</em> atau <em>an-nadwah</em>), dan (2) <em>raf'u ash-shawt</em> (meninggikan suara panggilan dari kejauhan). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menambahkan bahwa <em>an-nidā'</em> berbeda dengan <em>ad-du'ā'</em>: nida' adalah panggilan bersuara lantang yang memanggil eksistensi seseorang agar menyimak titah agung. Penggunaan bentuk <em>fa-nādathu</em> menunjukkan bahwa malaikat memanggil Zakariya dengan suara malaikat yang berwibawa, menembus sekat-sekat materi bilik mihrab.
+        </li>
+        <li>
+            <strong>2. Ḥ-R-B (ح-ر-ب — Al-Miḥrāb):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> memaparkan bahwa akar Ha'-Ra'-Ba' berporos pada peperangan, perlawanan sengit, dan puncak tempat yang terlindung. Kata <em>Al-Miḥrāb</em> secara leksikografis memiliki dua dimensi makna memukau: (a) Tempat paling mulia, terhormat, dan terdepan di sebuah istana atau rumah ibadah (<em>ashaddu al-majālisi rif'atan</em>); (b) Dinamakan <em>miḥrāb</em> karena seorang hamba yang memasukinya hakikatnya sedang 'berperang' (<em>yuḥāribu</em>) melawan bisikan setan, godaan syahwat, dan kelalaian nafsu duniawi. Ruang mihrab Zakariya di Baitul Maqdis adalah bilik isolasi spiritual (<em>sanctuary</em>) yang terputus dari kebisingan pasar dan intrik politik Romawi.
+        </li>
+        <li>
+            <strong>3. B-SY-R (ب-ش-ر — Yubasysyiru):</strong><br>
+            Akar kata Ba'-Syin-Ra' berporos pada terbukanya permukaan sesuatu (<em>zhuhūr asy-syay'</em>), dari sanalah kulit manusia dinamakan <em>basyarah</em>. Berita gembira disebut <em>busyra</em> atau <em>bisyārah</em> karena ketika kabar tersebut tiba, ia secara spontan mengubah ekspresi biologis kulit wajah penerimanya: peredaran darah meningkat, wajah merona berseri-seri, dan gurat kesedihan lenyap seketika. Berita dari malaikat ini merombak total keputusasaan fisik Zakariya menjadi luapan kebahagiaan suci.
+        </li>
+        <li>
+            <strong>4. Ḥ-Y-Y (ح-ي-ي — Yaḥyā):</strong><br>
+            Ibnu Manzhur mencatat bahwa <em>Yaḥyā</em> adalah isim 'alam manqul dari fi'il mudhari' (ia akan hidup). Nama ini memiliki kedalaman semantik multidimensi: (1) Allah menghidupkan kalbunya dengan cahaya wahyu dan iman sejak kanak-kanak; (2) Allah menghidupkan rahim ibunya yang telah 'mati' secara biologis; (3) Allah menjadikannya mati syahid sehingga ia tetap hidup abadi di sisi Tuhannya (<em>aḥyā'un 'inda Rabbihim yurzaqūn</em>); dan (4) Namanya belum pernah disandang oleh siapa pun dalam sejarah manusia sebelum dirinya (sebagaimana ditegaskan dalam Maryam: 7: <em>"lam naj'al lahū min qablu samiyyā"</em>).
+        </li>
+        <li>
+            <strong>5. S-Y-D (س-ي-د — Sayyidan):</strong><br>
+            Akar kata Sin-Ya'-Dal berporos pada ketinggian kedudukan, kekuatan wibawa, dan kepemimpinan moral yang menaungi umat. Dalam <em>Lisān al-'Arab</em>, <em>as-sayyid</em> adalah: <em>"Al-ḥalīm alladzī lā yastafizzuhul-ghadhab, wal-faqīh ad-dīn, wal-karīm al-akhlāq"</em> (Sosok yang santun yang tidak mudah diguncang oleh amarah, mendalam pemahaman agamanya, dan mulia akhlaknya). Yahya dinobatkan sebagai <em>sayyid</em> karena ia memimpin manusia dengan keteladanan zuhud dan hikmah kenabian, bukan dengan pedang atau tirani takhta.
+        </li>
+        <li>
+            <strong>6. Ḥ-ṢH-R (ح-ص-r — Ḥaṣhūran):</strong><br>
+            Mengikuti wazan mubalaghah <em>Fa'ūl</em> (فَعُول) dari akar Ḥā'-Ṣhād-Rā' yang bermakna mengepung, membatasi, dan memenjarakan sesuatu agar tidak lepas. <em>Al-Ḥaṣhūr</em> secara terminologi Al-Qur'an adalah pribadi yang secara sengaja dan tangguh memenjarakan nafsunya dari godaan syahwat rendah, menjauhkan diri dari perbuatan sia-sia, dan mengendalikan gejolak biologis demi menyatukan seluruh energi hidupnya untuk beribadah kepada Allah.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فَنَادَتْهُ</strong></td>
+                <td><em>Fā'</em>: Harf 'athaf ta'qībiyyah sababiyyah.<br><em>Nādat</em>: Fi'il madhi tsulatsi mazid bi-harf (wazan <em>fā'ala</em>), mabni 'alal-fath al-muqaddar 'alal-alif al-mahdzufah li-ttishal bi-ta'it-ta'nits.<br><em>Hu</em>: Dhamir muttashil mabni 'alad-dhamm.</td>
+                <td><em>Fā'</em> mengaitkan peristiwa ini langsung dengan doa di ayat 38. <em>Nādat</em> fi'il madhi. Dhamir <em>-hu</em> fi mahalli nashbin <strong>Maf'ūl Bih Awwal</strong> (merujuk kepada Nabi Zakariya AS).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمَلَـٰٓئِكَةُ</strong></td>
+                <td>Isim jamak taksir (mufrad: <em>malak</em>), ma'rifah bil-alif wal-lam.</td>
+                <td><strong>Fā'il</strong> bagi fi'il <em>nādat</em>, marfu' bil-dhammah azh-zhahirah pada ujungnya.</td>
+            </tr>
+            <tr>
+                <td><strong>وَهُوَ</strong></td>
+                <td><em>Wawu</em>: Wāwul-Hāl.<br><em>Huwa</em>: Dhamir munfashil gha'ib mabni 'alal-fath.</td>
+                <td><em>Huwa</em> fi mahalli raf'in <strong>Mubtada'</strong>. Seluruh jumlah ismiyyah ini berada fi mahalli nashbin <strong>Ḥāl</strong> bagi dhamir <em>-hu</em> pada <em>nādathu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>قَآئِمٌ</strong></td>
+                <td>Isim fa'il wazan <em>fā'il</em> dari fi'il tsulatsi <em>qāma-yaqūmu</em>.</td>
+                <td><strong>Khabar Mubtada'</strong> marfu' bil-dhammah azh-zhahirah. Menyimpan dhamir mustatir taqdiruhu <em>huwa</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>يُصَلِّى</strong></td>
+                <td>Fi'il mudhari' tsulatsi mazid bi-harf wazan <em>fa''ala-yufa''ilu</em>. Fa'il dhamir mustatir <em>huwa</em>.</td>
+                <td>Marfu' bil-dhammah al-muqaddarah 'alal-ya' li-tsiqal. Jumlah fi'liyyah <em>yuṣhallī</em> fi mahalli nashbin <strong>Ḥāl Tsāniyah</strong> dari dhamir pada <em>qā'im</em>, atau khabar tsani bagi mubtada'.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلْمِحْرَابِ</strong></td>
+                <td><em>Fī</em>: Harf jarr zharafiyyah makāniyyah.<br><em>Al-Miḥrāb</em>: Isim makan majrur bil-kasrah.</td>
+                <td>Jar wa majrur <strong>muta'alliq</strong> dengan fi'il <em>yuṣhallī</em> (menjelaskan lokus shalat).</td>
+            </tr>
+            <tr>
+                <td><strong>أَنَّ</strong></td>
+                <td>Harf taukid wa nashab wa mashdariyyah. (Dalam qira'at Hamzah/Kisa'i: <em>Inna</em> harf taukid hikayatul qawl).</td>
+                <td>Menashabkan isim dan merafa'kan khabar. Mashdar mu'awwal dari <em>anna</em> beserta ma'mul-nya berada fi mahalli jarrin bi-harfi jar mahdzuf ditakdirkan: <em>bi-anna</em>, <strong>muta'alliq</strong> dengan fi'il <em>nādathu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Lafzhul jalālah, isim 'alam mu'azhzham.</td>
+                <td><strong>Ismu Anna</strong> manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>يُبَشِّرُكَ</strong></td>
+                <td>Fi'il mudhari' wazan <em>fa''ala</em> + Kaf khithāb dhamir muttashil. Fa'il dhamir mustatir <em>Huwa</em> (Allah).</td>
+                <td>Fi'il mudhari' marfu' bil-dhammah. Kaf mabni 'alal-fath fi mahalli nashbin <strong>Maf'ūl Bih</strong>. Jumlah fi'liyyah <em>yubasysyiruka</em> fi mahalli raf'in <strong>Khabaru Anna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِيَحْيَىٰ</strong></td>
+                <td>Bā' harf jarr ilshāq wa ta'diyah + Isim 'alam mamnu' minash-sharf.</td>
+                <td>Majrur bil-fathah al-muqaddarah 'alal-alif li-ta'adzdzur pengganti kasrah karena mamnu' minash-sharf ('alamiyyah dan wazan fi'il). Jar wa majrur <strong>muta'alliq</strong> dengan fi'il <em>yubasysyiruka</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مُصَدِّقًۢا</strong></td>
+                <td>Isim fa'il wazan <em>mufa''il</em> dari fi'il <em>ṣhaddaqo-yuṣhaddiqu</em>.</td>
+                <td><strong>Ḥāl Awwal</strong> (keterangan keadaan pertama) manshub bil-fathah azh-zhahirah dari shāhibul hāl <em>Yaḥyā</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِكَلِمَةٍ</strong></td>
+                <td>Bā' harf jarr + Isim mufrad majrur bil-kasrah.</td>
+                <td>Jar wa majrur <strong>muta'alliq</strong> dengan isim fa'il <em>muṣhaddiqan</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّنَ ٱللَّهِ</strong></td>
+                <td><em>Min</em>: Harf jarr ibtidā' ghāyah / nasy'ah + Lafzhul Jalālah majrur.</td>
+                <td>Jar wa majrur <strong>muta'alliq</strong> dengan sifat/na'at mahdzuf bagi <em>kalimatin</em> (ditakdirkan: <em>kā'inatan minallāh</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَسَيِّدًا</strong></td>
+                <td>Wawu 'athaf + Sifat musyabbahah wazan <em>fay'il</em>.</td>
+                <td><strong>Ma'ṭhūf</strong> atas <em>muṣhaddiqan</em>, manshub bil-fathah azh-zhahirah (atau Ḥāl Tsānī).</td>
+            </tr>
+            <tr>
+                <td><strong>وَحَصُورًا</strong></td>
+                <td>Wawu 'athaf + Shighah mubalaghah wazan <em>fa'ūl</em>.</td>
+                <td><strong>Ma'ṭhūf</strong> atas <em>sayyidan</em>, manshub bil-fathah azh-zhahirah (atau Ḥāl Tsālits).</td>
+            </tr>
+            <tr>
+                <td><strong>وَنَبِيًّا</strong></td>
+                <td>Wawu 'athaf + Isim wazan <em>fa'īl</em> bermakna mubalaghah nubuwah.</td>
+                <td><strong>Ma'ṭhūf</strong> atas sifat-sifat sebelumnya, manshub bil-fathah azh-zhahirah (atau Ḥāl Rābi').</td>
+            </tr>
+            <tr>
+                <td><strong>مِّنَ ٱلصَّـٰلِحِينَ ۝٣٩</strong></td>
+                <td><em>Min</em> harf jarr tab'īdh / tabyīn + Jamak mudzakkar salim majrur bil-yā'.</td>
+                <td>Jar wa majrur <strong>muta'alliq</strong> dengan sifat/na'at mahdzuf bagi <em>nabiyyan</em> (ditakdirkan: <em>kā'inan minaṣh-ṣhāliḥīn</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & Estetika Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Fā' at-Ta'qīb & Akselerasi Ijabah Tanpa Jeda:</strong><br>
+            Penggunaan huruf <em>Fā'</em> pada awal <strong>فَنَادَتْهُ (Fa-nādathu)</strong> yang menyambung langsung peristiwa doa di ayat 38 (<em>Hunālika da'ā Zakariyyā Rabbah...</em>) mengindikasikan <em>at-ta'qīb al-mubāsyir</em> (respons instan). Dalam balaghah, ini membuktikan bahwa doa yang dipanjatkan dengan keikhlasan radikal di tempat suci tidak mengalami penundaan di sisi Allah; hijab antara doa dan ijabah runtuh seketika.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Jumlah al-Ḥāliyyah & Waktu Emas Pertemuan Spiritual:</strong><br>
+            Klausul <strong>وَهُوَ قَائِمٌ يُصَلِّي فِي الْمِحْرَابِ</strong> didatangkan dalam format kalimat keadaan (<em>jumlah haliyyah</em>) dengan perpaduan isim fa'il (<em>qā'imun</em> — keteguhan sikap fisik) dan fi'il mudhari' (<em>yuṣhallī</em> — kontinuitas dinamika batin). Hal ini memberikan faedah balaghah bahwa anugerah supranatural turun saat seorang hamba sedang berada pada puncak kepatuhan mikrokosmik: berdiri tegak menghadap Allah dalam shalat di ruang penyendirian suci.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Majāz al-Mursal / Tasmiyatul-Musabbab bi-Ismis-Sabab pada "Kalimatin minallāh":</strong><br>
+            Penyebutan Nabi 'Isa AS dengan sebutan <strong>بِكَلِمَةٍ مِّنَ اللَّهِ</strong> merupakan majaz mursal tingkat tinggi. 'Isa disebut "Kalimah" karena kelahirannya terjadi secara langsung melalui firman penciptaan <em>"Kun"</em> (Jadilah!) tanpa perantara sperma ayah biologis. Penggunaan gelar ini memuliakan hakikat kenabian 'Isa sekaligus membatalkan anggapan trinitas kaum Kristen Najran: 'Isa adalah ciptaan yang lahir dari titah kalimat Allah, bukan anak biologis Allah!
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah 'an 'Iffatin-Nafs (Kesucian Diri Paripurna) pada "Ḥaṣhūran":</strong><br>
+            Penyebutan <em>ḥaṣhūran</em> adalah kinayah dari integritas moral tingkat tertinggi. Yahya digambarkan bukan sebagai sosok yang lemah syahwat, melainkan sosok perkasa yang mampu 'mengepung' dan menundukkan syahwatnya di bawah kendali akal dan wahyu Ilahi.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-I'tilāf & Ḥusnut-Tartīb (Harmoni Gradasi Karakter Kenabian):</strong><br>
+            Rentetan gelar Yahya disusun dengan keindahan urutan logis-spiritual yang sempurna:
+            <br>• Dimulai dari <em>Muṣhaddiqan</em>: kemurnian intelektual dan kebenaran akidah (membenarkan wahyu).
+            <br>• Dilanjutkan <em>Sayyidan</em>: kapasitas kepemimpinan sosial dan wibawa di mata manusia.
+            <br>• Disempurnakan <em>Ḥaṣhūran</em>: benteng moral internal dan kesucian asketisme batin.
+            <br>• Dipuncaki <em>Nabiyyam minaṣh-ṣhāliḥīn</em>: mahkota nubuwah dan keterikatan dengan para pembawa risalah suci terdahulu.
+        </li>
+        <li>
+            <strong>Estetika Fonetik — I'jāz al-Fawāṣhil:</strong><br>
+            Ayat ini ditutup dengan rima vokal panjang diiringi konsonan sengau (<em>Mad 'Aridh lis-Sukun</em> pada <em>Aṣh-Ṣhāliḥīn</em>). Getaran suara Lam-Ya'-Nun memberikan ketenangan akustik yang mendalam, menghadirkan rasa damai dan keyakinan mantap bahwa doa yang mustahil secara akal biologis telah terkabul dengan sempurna di panggung takdir.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Metodologi Integratif 2S & 1L</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Harmoni dengan Ayat 37 & 38):</strong><br>
+            Pada ayat 37, Allah memperlihatkan bagaimana Maryam binti 'Imran dipelihara di mihrab dan menerima rezeki supranatural (<em>annā laki hādzā? qālat huwa min 'indillāh</em>). Pemandangan mukjizat rezeki tanpa hukum sebab-akibat material ini membakar keberanian iman Zakariya pada ayat 38 untuk memohon mukjizat keturunan: <em>"Hunālika da'ā Zakariyyā Rabbah..."</em>. Ayat 39 adalah konklusi kilat dari rentetan peristiwa tersebut: Allah membuktikan bahwa sebagaimana Dia memberi rezeki buah di luar musimnya kepada Maryam, Dia juga menganugerahkan buah hati di luar musim biologis kepada Zakariya!
+        </li>
+        <li>
+            <strong>Siyāq (Konteks Makro Surah & Debat Kristologi Delegasi Kristen Najran):</strong><br>
+            Dalam konteks perdebatan teologis dengan 60 delegasi elite Kristen Najran di Madinah, kisah kelahiran Nabi Yahya AS dalam ayat ini memegang peranan krusial sebagai <em>argumentum a fortiori</em> (analogi penguat): Jika Allah berkuasa menciptakan Yahya dari perpaduan sperma orang tua yang telah berusia lanjut (sekitar 90–100 tahun) dan rahim wanita yang divonis mandul seumur hidupnya, maka mengapa kalian menganggap mustahil Allah berkuasa menciptakan 'Isa dari rahim perawan Maryam tanpa ayah biologis? Kelahiran keduanya adalah bukti kekuasaan mutlak Allah (<em>āyātullāh</em>), bukan dalih untuk mengangkat manusia menjadi tuhan atau anak tuhan!
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 40 & 41):</strong><br>
+            Meskipun kabar gembira telah dideklarasikan oleh malaikat di ayat 39, watak fitrah kemanusiaan Zakariya mengalami keterkejutan rasional pada ayat 40: <em>"Rabbi annā yakūnu lī ghulām..."</em> (Bagaimana mungkin aku mendapatkan anak sementara aku telah sangat tua dan istriku mandul?). Hal ini dijawab oleh Allah: <em>"Kadzālikallāhu yaf'alu mā yasyā'"</em>, lalu disusul dengan pemberian tanda kehamilan berupa puasa bicara selama tiga hari di ayat 41.
+        </li>
+    </ul>
+
+    <h3>2. Rekonstruksi Sosio-Historis & Realitas Baitul Maqdis Abad ke-1 SM</h3>
+    <p>
+        Secara sosio-historis, Palestina pada abad ke-1 Sebelum Masehi berada di bawah penjajahan ganda: hegemoni militer Kekaisaran Romawi yang bengis dan kekuasaan boneka Dinasti Herodes yang lalim dan korup. Institusi keagamaan Baitul Maqdis (Haikal) mengalami dekadensi moral parah: para rahib Farisi dan Saduki terjerumus dalam komersialisasi ritual kuil, munafik, dan kolaborasi politik demi mengamankan kasta ekonomi mereka.
+    </p>
+    <p>
+        Nabi Zakariya AS menyaksikan kehancuran moral kaumnya dan cemas bahwa risalah tauhid warisan nabi-nabi Bani Israil akan punah ditelan kemunafikan para elite agama tersebut. Kelahiran Yahya AS yang diproklamasikan dalam QS. 3:39 bukan sekadar kelahiran anak pewaris harta keluarga, melainkan kelahiran seorang reformator spiritual revolusioner. Yahya dipersiapkan menjadi pemimpin moral (<em>sayyidan</em>) yang hidup asketis di padang gurun, berani menegur kezaliman penguasa Herodes Antipas, dan membuka jalan bagi risalah Al-Masih 'Isa AS di tengah kebobrokan peradaban Yahudi masa itu.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>:</strong><br>
+        At-Tabari membedah makna lafaz <em>Al-Malā'ikah</em>: meskipun menggunakan bentuk jamak, mayoritas ulama tafsir salaf (seperti Ibnu Abbas, Qatadah, dan As-Suddi) sepakat bahwa yang memanggil adalah Malaikat Jibril AS secara tunggal. Bangsa Arab lazim menyebut nama kelompok untuk mewakili satu individu agung yang mewakili jenisnya. Terkait sifat <em>ḥaṣhūran</em>, At-Tabari menegaskan bahwa Yahya menahan diri dari syahwat duniawi dan kesenangan fana demi menyibukkan diri dengan ibadah kepada Tuhannya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menyoroti frasa <em>muṣhaddiqam bi-kalimatim minallāh</em>. Beliau mengutip riwayat dari Ar-Rabi' bin Anas dan Al-Hasan Al-Bashri bahwa Yahya AS adalah manusia pertama yang membenarkan kenabian 'Isa AS. Ibunda Yahya dan ibunda 'Isa saling berjumpa saat keduanya hamil; janin dalam kandungan ibunda Yahya bersujud memberi penghormatan kepada janin 'Isa di dalam kandungan Maryam. Ibnu Katsir juga membantah keras anggapan sebagian riwayat Israiliyat yang mengartikan <em>ḥaṣhūr</em> sebagai laki-laki impoten atau tidak memiliki alat kelamin, seraya menegaskan bahwa kemuliaan seorang nabi menuntut kesempurnaan fisik biologis, sehingga maknanya adalah kesucian batin dalam menundukkan syahwat, bukan cacat tubuh.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi fikih dan tasawuf dari ayat ini: Pertama, keutamaan shalat sebagai media terbaik turunnya rahmat dan ijabah doa; Zakariya tidak dipanggil malaikat kecuali saat ia sedang berdiri shalat. Kedua, Al-Qurthubi mengulas apakah membujang (selibat) lebih mulia daripada menikah berdasarkan sifat <em>ḥaṣhūr</em> Yahya. Beliau menyimpulkan bahwa dalam syariat Islam, menikah adalah sunnah mu'akkadah yang lebih utama (sebagaimana teladan Nabi Muhammad ﷺ), sedangkan sikap Yahya adalah syariat khusus pada zamannya yang fokus total pada perjuangan rohani di tengah situasi genting Bani Israil.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (544–606 H) & Az-Zamakhsyari (467–538 H):</strong><br>
+        Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> menjelaskan keterkaitan filosofis antara nama <em>Yaḥyā</em> dan takdir penciptaannya: hidupnya Yahya melambangkan hidupnya kembali harapan iman di tengah masyarakat yang kalbunya telah mati. Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan bahwa gelar <em>Sayyidan</em> diletakkan mendahului <em>Ḥaṣhūran</em> untuk menunjukkan bahwa prasyarat utama kepemimpinan spiritual sejati di hadapan Allah adalah kemampuan menaklukkan nafsu pribadi; seseorang tidak layak menjadi <em>sayyid</em> (tuan/pemimpin bagi orang lain) sebelum ia mampu menjadi <em>sayyid</em> atas syahwat dirinya sendiri!
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Muhammad At-Tahir Ibnu 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur memaparkan analisis sosiologis dan reformasi politik kenabian: gelar <em>Sayyid</em> pada diri Yahya adalah legitimasi kepemimpinan moral yang meruntuhkan hegemoni kepemimpinan tirani Romawi dan korupsi para rabi Haikal. Yahya dihadirkan sebagai representasi otoritas alternatif: pemimpin yang tidak memiliki tentara, tidak mengumpulkan emas, tetapi ditaati oleh seluruh lapisan rakyat karena integritas asketismenya (<em>ḥaṣhūran</em>) dan keberaniannya membela firman Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) — <em>Tafsir Al-Azhar</em> & Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Buya Hamka menulis dengan gaya sastra reflektif: <em>"Zakariya shalat di mihrab bukan untuk meminta kemewahan dunia, melainkan memohon agar pelita dakwah tidak padam setelah ia menutup mata. Dan Allah menjawab doa orang tua yang tulus itu saat kakinya masih berdiri tegak di hadapan sajadah."</em> Quraish Shihab menggarisbawahi paradoks mukjizat: pengabulan doa Yahya membuktikan bahwa kepasrahan total di mihrab mampu melipatgandakan peluang yang secara kalkulasi matematis manusiawi dinilai mustahil atau nol persen.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Konseptual Kementerian Agama RI (Tafsir Tematik Kemenag):</strong><br>
+        Kemenag RI menegaskan bahwa ayat ini memuat prototipe ideal profil pemuda dan generasi penerus bangsa: memiliki akidah yang kokoh (<em>muṣhaddiqan</em>), berjiwa kepemimpinan yang berwibawa (<em>sayyidan</em>), mampu menahan diri dari pornografi, narkoba, dan pergaulan bebas (<em>ḥaṣhūran</em>), serta aktif berkontribusi dalam kesalehan sosial (<em>minaṣh-ṣhāliḥīn</em>).
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu / Konsensus Ulama (Ittifāq)</th>
+                <th>Dinamika Perbedaan Pendapat (Ikhtilāf) Mufassirin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Identitas Penyeru (Al-Malā'ikah)</strong></td>
+                <td>Sepakat bahwa panggilan tersebut merupakan wahyu resmi dari Allah SWT melalui perantara malaikat.</td>
+                <td>
+                    • <strong>Mayoritas Mufassir (At-Tabari, Ibnu Katsir, Al-Qurthubi):</strong> Yang bersuara adalah Malaikat Jibril AS secara tunggal (menggunakan bentuk jamak untuk pengagungan/perwakilan jenis).<br>
+                    • <strong>Sebagian Mufassir Lughawi:</strong> Sekelompok malaikat hadir bersama-sama menyerukan kabar gembira tersebut untuk memuliakan maqam Zakariya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Makna "Bi-kalimatin minallāh"</strong></td>
+                <td>Sepakat bahwa yang dimaksud dengan "Kalimah" di sini merujuk kepada Nabi 'Isa putra Maryam AS.</td>
+                <td>
+                    • <strong>Jumhur Ulama:</strong> 'Isa disebut Kalimah karena diciptakan dengan firman <em>"Kun"</em> tanpa ayah.<br>
+                    • <strong>Pendapat Minoritas (Abu Ubaidah):</strong> Bermakna kitab suci wahyu atau janji pertolongan Allah yang ditegakkan oleh risalah kenabian.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Karakter "Ḥaṣhūran"</strong></td>
+                <td>Sepakat bahwa sifat ini merupakan pujian kesucian moral tertinggi dan penundukan nafsu demi ibadah.</td>
+                <td>
+                    • <strong>Jumhur Ahli Tahqiq (Ibnu Katsir, Ibnu 'Asyur, Quraish Shihab):</strong> Mampu menahan diri dari syahwat haram dan menjauhi kelezatan duniawi tanpa mengalami kecacatan fisik biologis.<br>
+                    • <strong>Pendapat Israiliyat Klasik (Ditolak Ulama Tahqiq):</strong> Menganggap Yahya terlahir tanpa hasrat seksual biologis atau impoten.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hukum Membujang (Selibat) dalam Islam</strong></td>
+                <td>Sepakat bahwa dalam syariat Nabi Muhammad ﷺ pernikahan adalah sunnah yang sangat dianjurkan.</td>
+                <td>
+                    • <strong>Mazhab Fikih:</strong> Selibat Yahya adalah kekhususan syariat terdahulu (<em>syar'u man qablanā</em>) yang telah dinasakh oleh anjuran nikah umat Nabi Muhammad ﷺ.<br>
+                    • <strong>Ulama Tasawuf:</strong> Boleh membujang secara darurat hanya bagi individu yang khawatir terjatuh dalam kezaliman nafkah dan mencurahkan hidupnya untuk ilmu/agama.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur mental model berikut merupakan ikhtiar tadabbur, perenungan sistemik, dan sintesis psikologis manusiawi; bukan klaim penafsiran wahyu yang mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Materialistis vs Pola Pikir Qur'ani Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kesadaran</th>
+                <th>Pola Pikir Manusiawi Biasa (Materialistis / Deterministik)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Model Mihrab Zakariya AS)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Memandang Hukum Alam & Sebab-Akibat</strong></td>
+                <td><strong>Determinis Kaku:</strong> Menganggap hukum biologis dan keterbatasan materi bersifat mutlak; jika vonis medis menyatakan mandul dan usia senja, maka pintu kemungkinan telah tertutup rapat.</td>
+                <td><strong>Kedaulatan Sang Pencipta Sebab:</strong> Menghormati ikhtiar hukum alam, namun menyadari bahwa hukum sebab-akibat tunduk mutlak di bawah kehendak Zat Yang Maha Menjadikan sebab.</td>
+            </tr>
+            <tr>
+                <td><strong>Waktu dan Lokus Berdoa</strong></td>
+                <td><strong>Transaksional & Reaktif:</strong> Berdoa hanya saat panik terdesak, sering kali sambil memikirkan solusi teknis manusiawi dan mengabaikan kekhusyukan ruang batin.</td>
+                <td><strong>The Mihrab State:</strong> Menata ruang isolasi spiritual (mihrab) dan menghubungkan permohonan dengan puncak ibadah shalat fisik dan batin (<em>qā'imun yuṣhallī</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Karakter Kepemimpinan (Konsep Pemimpin)</strong></td>
+                <td><strong>Dominasi, Harta & Popularitas:</strong> Pemimpin diukur dari jumlah pengikut, pengaruh kekuasaan, akumulasi kekayaan, dan pemuasan gaya hidup hedonis.</td>
+                <td><strong>Integritas Sayyid-Hashur:</strong> Kepemimpinan sejati berakar dari penguasaan diri atas syahwat (<em>ḥaṣhūr</em>), keberanian membenarkan kebenaran (<em>muṣhaddiq</em>), dan kesalehan personal.</td>
+            </tr>
+            <tr>
+                <td><strong>Pengendalian Syahwat Biologis & Emosi</strong></td>
+                <td><strong>Pelampiasan Tanpa Batas (Hedonisme):</strong> Menganggap kebebasan sejati adalah menuruti setiap dorongan libido dan keinginan insting tanpa rasa bersalah.</td>
+                <td><strong>Asketisme Rabbani yang Terarah:</strong> Mampu membentengi diri (<em>ḥaṣhūr</em>), mengalihkan dorongan energi biologis menuju sublimasi karya luhur dan pengabdian peradaban.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Mihrab State of Mind" (Kondisi Khusyuk Total sebagai Akselerator Ijabah)</strong><br>
+            <em>Premis:</em> Pikiran manusia modern sering kali terjebak dalam disonansi kognitif akibat banjir informasi (<em>information overload</em>), sehingga doa yang terucap di lisan tidak sinkron dengan keyakinan di kedalaman bawah sadar. <em>Mihrab State</em> adalah kondisi di mana seseorang melakukan pemutusan koneksi total dari distraksi eksternal (mengisolasi diri secara fisik dan mental), lalu memusatkan seluruh fokus perhatian pada shalat yang hening. Dalam kondisi gelombang otak yang sangat koheren ini, ketakutan ego luruh dan kepasrahan mutlak kepada Allah melahirkan resonansi spiritual yang membuka pintu-pintu kemustahilan.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Sayyid-Ḥaṣhūr Paradox" (Kekuasaan yang Tegak di Atas Pengendalian Diri)</strong><br>
+            <em>Premis:</em> Paradoks terbesar kekuasaan manusia adalah: <em>"Siapa yang tidak mampu memimpin dirinya sendiri, tidak akan pernah mampu memimpin orang lain dengan selamat."</em> Al-Qur'an menyandingkan kata <em>Sayyidan</em> (pemimpin berdaulat) berdampingan dengan <em>Ḥaṣhūran</em> (orang yang mampu memenjarakan syahwatnya). Otoritas sejati yang melahirkan rasa hormat organik dari bawahan bukan bersumber dari pangkat formal, melainkan dari kekaguman terhadap integritas moral seorang pemimpin yang tidak mempan disuap oleh syahwat uang, jabatan, atau godaan biologis.
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <p>
+        Secara neurobiologis dan psikologi kognitif, posisi <em>qā'imun yuṣhallī fīl-miḥrāb</em> (berdiri shalat dalam keheningan mihrab) memicu aktivasi sistem saraf parasimpatis, menurunkan produksi hormon kortisol (stres) dan adrenalin, serta menenangkan aktivitas <em>Default Mode Network</em> (DMN) di otak yang bertanggung jawab atas kecemasan masa lalu dan ketakutan masa depan.
+    </p>
+    <p>
+        Sementara itu, konsep <strong>Ḥaṣhūr</strong> dalam tinjauan tazkiyatun nafs adalah terapi radikal terhadap <em>dopamine addiction</em> (kecanduan dopamin instan). Di tengah budaya modern yang memanjakan pemenuhan hasrat tanpa jeda, kemampuan untuk menahan diri (<em>delayed gratification</em> dan <em>self-regulation</em>) menguatkan fungsi <em>prefrontal cortex</em>. Jiwa yang terlatih menjadi <em>ḥaṣhūr</em> tidak akan diperbudak oleh impuls hewani (<em>an-nafs al-ammārah bis-sū'</em>), melainkan naik menuju derajat <em>an-nafs al-muthma'innah</em> yang tenang di bawah bimbingan wahyu.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomena "Crisis of Leadership" di Tengah Hiperseksualitas & Skandal Kekuasaan</h3>
+    <p>
+        Dunia abad ke-21 sedang menyaksikan keruntuhan moral para pemimpin global. Di berbagai belahan dunia—baik di panggung politik korporasi, institusi negara, bahkan lembaga keagamaan—terjadi rentetan skandal memalukan: pelecehan seksual, korupsi anggaran publik, pesta hedonis rahasia para elite, dan kompromi etika demi mempertahankan dinasti kekuasaan.
+    </p>
+    <p>
+        Akar dari patologi peradaban ini adalah pemisahan fatal antara kepemimpinan (<em>sayyid</em>) dan pengendalian nafsu (<em>ḥaṣhūr</em>). Budaya sekuler modern mendewakan kecerdasan teknokratis dan karisma pencitraan publik, seraya mengabaikan integritas ruang privat. Akibatnya, lahir para pemimpin bermental sosiopat: tampak memukau di panggung pidato dan media sosial, namun menjadi budak dari syahwat rendah di ruang-ruang tertutup.
+    </p>
+
+    <h3>2. Kritik Peradaban: Degradasi Makna "Sayyid" Menjadi Sekadar "Influencer" Algoritma</h3>
+    <p>
+        Peradaban digital telah mendevaluasi gelar kehormatan kepemimpinan. Hari ini, seseorang dinobatkan menjadi panutan (<em>leader/influencer</em>) semata-mata karena jumlah <em>followers</em>, viralitas sensasi receh, atau kepiawaian memainkan algoritma media sosial, meskipun ia steril dari kedalaman ilmu dan keluhuran moral.
+    </p>
+    <p>
+        QS. 3:39 menghadirkan tamparan keras terhadap peradaban dangkal ini: <strong>Gelar Sayyid sejati di sisi Allah dan sejarah manusia bukan produk fabrikasi algoritma atau kekayaan materi, melainkan mahkota yang ditempa melalui asketisme spiritual, kesucian batin dari syahwat duniawi, serta keberanian berdiri membela kebenaran (muṣhaddiqan bil-ḥaqq)!</strong> Nabi Yahya AS tidak memiliki tentara bersenjata dan tidak mewariskan istana megah, namun namanya abadi harum melintasi ribuan tahun sebagai arketipe pemimpin suci yang tidak terbeli oleh emas kekaisaran Romawi maupun intrik kotor istana Herodes.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Perilaku)</h3>
+        <ol>
+            <li>
+                <strong>Membangun "Mihrab Harian" (Protokol Shalat Sunyi Tanpa Distraksi Digital &lt; 20 Menit):</strong><br>
+                Tetapkan satu sudut khusus yang bersih di dalam rumah atau ruang kerja sebagai 'mihrab privat' Anda. Luangkan waktu minimal 15–20 menit setiap hari (terutama di sepertiga malam terakhir atau waktu dhuha) untuk melakukan shalat sunnah dua rakaat secara hening. Letakkan ponsel pintar di ruangan lain dalam kondisi senyap. Berdirilah tegak (<em>qā'imun yuṣhallī</em>) dan tumpahkan seluruh keluh kesah, harapan mustahil, dan permohonan hajat hidup Anda hanya kepada Allah di sudut tersebut.
+            </li>
+            <li>
+                <strong>Protokol Asketisme Suci (Latihan "Ḥaṣhūr" Puasa Syahwat Visual & Hedonisme):</strong><br>
+                Latih kekuatan menahan diri dari godaan syahwat rendah secara konkret: tetapkan komitmen 'puasa digital' dari konten-konten pornografi, akun-akun perangsang birahi di media sosial, serta belanja impulsif (<em>hedonic treadmill</em>). Jika muncul dorongan syahwat yang melalaikan, tundukkan pandangan seketika dan alihkan energi fisik tersebut menjadi gerakan shalat sunnah atau sedekah spontan demi menjaga kemurnian batin.
+            </li>
+            <li>
+                <strong>Memvalidasi Kebenaran & Menolak Kemunafikan Publik (Praksis "Muṣhaddiqan"):</strong><br>
+                Jadilah pribadi yang berani membenarkan, membela, dan mendukung figur-figur yang memperjuangkan kebenaran moral dan keadilan di lingkungan kerja, keluarga, maupun masyarakat—bahkan ketika opini publik sedang membenci atau mencemooh mereka akibat banjir fitnah media. Jangan pernah menjual suara dan nurani Anda demi menyenangkan atasan yang zalim atau mengejar validasi komunal semu.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Ketika aku menghadapi persoalan hidup yang tampak mustahil dan buntu secara kalkulasi manusiawi, apakah aku segera berlari menghamparkan sajadah di 'mihrab' untuk bersujud kepada Allah, ataukah aku sibuk mengemis simpati dan solusi kepada sesama manusia yang sama-sama lemah?
+            </li>
+            <li>
+                Sejauh mana aku mampu menjadi 'tuan' atas diriku sendiri: apakah aku yang mengendalikan pandangan mata, syahwat seksual, dan ambisi hartaku (<em>ḥaṣhūr</em>), ataukah aku telah lama menjadi tawanan yang diperbudak oleh hawa nafsu rendahku sendiri?
+            </li>
+            <li>
+                Jika Allah menganugerahkanku posisi kehormatan, wibawa, atau kepemimpinan sosial (<em>sayyid</em>), apakah pengaruh tersebut kugunakan untuk membenarkan risalah kebenaran Ilahi dan melayani orang-orang yang tertindas, ataukah semata-mata kujadikan panggung kepalsuan untuk memperkaya diri dan keluargaku?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Mujībad-Da'awāt, Yā Qāḍhiyal-Ḥājāt, Yā Man Lā Ya'jizuhū Syay'un fil-Arḍhi wa Lā fis-Samā'. Ya Allah, Tuhan Yang Maha Mendengar rintihan hamba-Nya di kedalaman mihrab malam. Sebagaimana Engkau telah mengabulkan doa Nabi Zakariya di luar perhitungan biologis manusia dan menganugerahkannya putra suci Yahya, maka dengarkanlah desah doa kami yang penuh dengan kelemahan dan dosa ini. Ya Allah, anugerahkanlah kepada kami dan keturunan kami sifat membenarkan firman-Mu (muṣhaddiqan bi-kalimatik), jadikanlah kami pemimpin-pemimpin yang berwibawa di atas landasan takwa (sayyidan), bentengilah jiwa dan raga kami dari fitnah syahwat duniawi yang merusak (ḥaṣhūran), dan kumpulkanlah kami kelak di surga-Mu bersama barisan para nabi dan orang-orang yang saleh. Hidupkanlah kalbu kami dengan cahaya makrifat-Mu, dan jadikanlah setiap langkah shalat kami sebagai sarana mendekat menuju keridhaan-Mu yang abadi. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-038 - QS. Ali 'Imran Ayat 38.html">&larr; Kembali ke Ayat 38 (QS. 3:38)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 39</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-040 - QS. Ali 'Imran Ayat 40.html">Lanjut ke Ayat 40 (QS. 3:40) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

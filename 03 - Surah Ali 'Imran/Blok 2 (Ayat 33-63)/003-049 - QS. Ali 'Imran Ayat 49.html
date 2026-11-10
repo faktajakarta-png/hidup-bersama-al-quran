@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-049 - QS. Ali 'Imran Ayat 49 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-048 - QS. Ali 'Imran Ayat 48.html">&larr; Ayat Sebelumnya (QS. 3:48)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-050 - QS. Ali 'Imran Ayat 50.html">Ayat Berikutnya (QS. 3:50) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 3 (Ayat 45–51): Bisyarah Al-Masih, Kalimatullah & Mukjizat Kenabian Isa</span>
+        <span class="badge">45 Kata | 184 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 49</h1>
+    <div class="transliteration">
+        "Wa rasūlan ilā banī Isrā'īla annī qad ji'tukum bi-āyatim-mir-rabbikum annī akhluqu lakum minat-thīni ka-hai'atith-thairi fa-anfukhu fīhi fa-yakūnu thairam-bi-idznillāh(i), wa ubri'ul-akmaha wal-abrasha wa uḥyil-mawtā bi-idznillāh(i), wa unabbi'ukum bi-mā ta'kulūna wa mā taddakhirūna fī buyūtikum, inna fī dzālika la-āyatal-lakum in kuntum-mu'minīn(a)."
+    </div>
+    <div class="thematic-title">
+        Manifestasi Mukjizat Empiris Al-Masih & Dekonstruksi Ketuhanan Makhluk: Penciptaan Burung dari Lempung, Penyembuhan Kusta-Kebutaan, Kebangkitan Orang Mati, dan Pembacaan Hal Ghaib di Bawah Klausul Mutlak "Bi-idznillāh"
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 3: Teologi Bisyarah, Insan Kamil & Mukjizat Kenabian Isa)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَرَسُولًا إِلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ أَنِّى قَدْ جِئْتُكُم بِـَٔايَةٍۢ مِّن رَّبِّكُمْ ۖ أَنِّىٓ أَخْلُقُ لَكُم مِّنَ ٱلطِّينِ كَهَيْـَٔةِ ٱلطَّيْرِ فَأَنفُخُ فِيهِ فَيَكُونُ طَيْرًۢا بِإِذْنِ ٱللَّهِ ۖ وَأُبْرِئُ ٱلْأَكْمَهَ وَٱلْأَبْرَصَ وَأُحْىِ ٱلْمَوْتَىٰ بِإِذْنِ ٱللَّهِ ۖ وَأُنَبِّئُكُم بِمَا تَأْكُلُونَ وَمَا تَدَّخِرُونَ فِى بُيُوتِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لَّكُمْ إِن كُنتُم مُّؤْمِنِينَ ۝٤٩
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Dan (sebagai) seorang rasul kepada Bani Israil (dia berkata): 'Sungguh, aku telah datang kepadamu dengan membawa tanda (mukjizat nyata) dari Tuhanmu, yaitu sesungguhnya aku membentuk bagi kalian dari tanah liat seperti bentuk burung, lalu aku meniup padanya, maka jadilah ia seekor burung dengan izin Allah; dan aku menyembuhkan orang yang buta sejak lahir dan orang yang berpenyakit kusta; dan aku menghidupkan orang mati dengan izin Allah; serta aku memberitahukan kepadamu apa yang kalian makan dan apa yang kalian simpan di rumah-rumah kalian. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda (bukti kebenaran risalahku) bagi kalian, jika kalian adalah orang-orang yang beriman'."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan proklamasi resmi risalah Isa Al-Masih di hadapan Bani Israil yang merangkum empat rumpun mukjizat fisik-empiris spektakuler yang menundukkan rasionalitas materiil zamannya:
+    </p>
+    <ul>
+        <li><strong>Demarkasi Ontologis Dua Kali Klausul "Bi-idznillāh" (بِإِذْنِ اللَّهِ):</strong> Pengulangan eksplisit klausul ini pada peristiwa penciptaan burung dari tanah liat dan pembangkitan orang mati adalah <em>hujjah qath'iyyah</em> yang memisahkan hak prerogatif ketuhanan (<em>al-uluhiyyah</em>) dari kapasitas kenabian (<em>an-nubuwwah</em>). Mukjizat tersebut bukan bersumber dari energi otonom Isa, melainkan perkenan dan izin penciptaan Allah semata.</li>
+        <li><strong>Rasūlan ilā Banī Isrā'īl:</strong> Penegasan batas teritorial dan demografis risalah: Isa diutus secara spesifik kepada Bani Israil untuk mereformasi kekakuan formalisme Taurat, bukan sebagai tuhan semesta alam.</li>
+        <li><strong>Al-Akmah wal-Abrash:</strong> Pemilihan diksi <em>al-akmah</em> (buta sejak dalam rahim) dan <em>al-abrash</em> (penderita kusta/lepra parah) adalah mukjizat yang membidik puncak pencapaian peradaban kedokteran era Helenistik, di mana kedua penyakit tersebut secara mutlak divonis mustahil disembuhkan oleh ilmu medis.</li>
+        <li><strong>In fī dzālika la-āyatal-lakum in kuntum mu'minīn:</strong> Penguncian ayat dengan syarat keimanan menegaskan bahwa mukjizat empiris kasat mata sebesar apa pun tidak akan membuahkan hidayah bagi hati yang tertutup oleh keangkuhan dan kedengkian intelektual.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَرَسُولًا إِلَىٰ بَنِىٓ إِسْرَٰٓءِيلَ</strong><br>(<em>Wa rasūlan ilā banī Isrā'īl</em>)</td>
+                <td>
+                    • <strong>Ra' Tafkhīm:</strong> Berharakat fathah dibaca tebal.<br>
+                    • <strong>Izh-hār Ḥalqī:</strong> Tanwin fathah <em>rasūlan</em> bertemu hamzah qatha' <em>ilā</em> dibaca jelas tanpa ghunnah tambahan.<br>
+                    • <strong>Mad Jā'iz Munfaṣhil:</strong> Pada <em>banī</em> bertemu hamzah <em>Isrā'īl</em>.<br>
+                    • <strong>Mad Wājib Muttaṣhil:</strong> Pada kata <em>Isrā'īl</em>.<br>
+                    • <strong>Ra' Tarqīq:</strong> Huruf Ra' pada <em>Isrā'īl</em> dibaca tipis karena didahului kasrah ashliyyah.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca Mad Munfashil dan Muttashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca munfashil dengan <strong>Qaṣhr (2 Harakat)</strong>.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Pilihan Qashr (2) atau Tawassuth (4).<br>
+                    • Seluruh sepuluh imam membaca fathah tanpa tanwin pada <em>Isrā'īla</em> (mamnū' minash-sharf karena 'alamiyyah dan 'ujmah).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>أَنِّى قَدْ جِئْتُكُم بِـَٔايَةٍۢ مِّن رَّبِّكُمْ</strong><br>(<em>Annī/Innī qad ji'tukum bi-āyatim-mir-rabbikum</em>)</td>
+                <td>
+                    • <strong>Ghunnah Musyaddadah:</strong> Nun bertasydid ditahan 2 harakat.<br>
+                    • <strong>Qalqalah Ṣhughrā:</strong> Huruf Dal sukun pada <em>qad</em> memantul ringan.<br>
+                    • <strong>Ikhfā' Syafawī:</strong> Mim sukun pada <em>ji'tukum</em> bertemu huruf Ba' dibaca samar dengan dengung bibir.<br>
+                    • <strong>Mad Badal:</strong> Hamzah mendahului alif mad pada <em>bi-āyah</em>.<br>
+                    • <strong>Iqlāb:</strong> Tanwin kasrah bertemu Mim menghasilkan Idghām Bighunnah Kāmil.<br>
+                    • <strong>Idghām Bilā Ghunnah:</strong> Nun sukun bertemu Ra' pada <em>mir-rabbikum</em>.
+                </td>
+                <td>
+                    • <strong>Nāfi' (Qālūn & Warsy):</strong> Membaca dengan <strong>Kasrah Hamzah: إِنِّي</strong> (<em>Innī qad ji'tukum</em>) sebagai permulaan kalam hikayah perkataan Isa.<br>
+                    • <strong>Sembilan Imam Lainnya (Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Ḥamzah, Al-Kisā'ī, Abū Ja'far, Ya'qūb, Khalaf al-'Āsyir):</strong> Membaca dengan <strong>Fat-ḥah Hamzah: أَنِّي</strong> (<em>Annī qad ji'tukum</em>) dengan taqdir huruf jar: <em>bi-annī</em> (bahwa sesungguhnya aku).<br>
+                    • <strong>Warsy & Abū Ja'far:</strong> Membaca <strong>Ibdāl Hamzah</strong> sukun menjadi ya' mad: <strong>جِيتُكُم</strong> (<em>jītukum</em>). Ḥamzah membaca ibdal saat waqaf.<br>
+                    • <strong>Warsy:</strong> Membaca <strong>Mad Badal</strong> pada <em>bi-āyah</em> dengan 3 wajah: Qashr (2), Tawassuth (4), atau Thul (6 Harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>أَنِّىٓ أَخْلُقُ لَكُم مِّنَ ٱلطِّينِ</strong><br>(<em>Annī/Innī akhluqu lakum minat-thīn</em>)</td>
+                <td>
+                    • <strong>Mad Jā'iz Munfaṣhil:</strong> Ya' mad bertemu hamzah qatha' fathah pada <em>akhluqu</em>.<br>
+                    • <strong>Huruf Khā' (خ):</strong> Isti'la', rikhwah, dan tafkhim martabat kedua.<br>
+                    • <strong>Idghām Mīmī (Mutamātsilain):</strong> Mim sukun <em>lakum</em> melebur sempurna ke Mim <em>mina</em> disertai ghunnah.<br>
+                    • <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur ke huruf Ṭhā' (ithbaq dan isti'la' mutlak).
+                </td>
+                <td>
+                    • <strong>Nāfi' (Qālūn & Warsy):</strong> Membaca <strong>Kasrah Hamzah: إِنِّيٓ أَخْلُقُ</strong> (<em>Innī akhluqu</em>).<br>
+                    • <strong>Jumhur Imam:</strong> Membaca <strong>Fat-ḥah Hamzah: أَنِّيٓ أَخْلُقُ</strong> (<em>Annī akhluqu</em>) sebagai badal penjelasan dari lafaz <em>bi-āyah</em>.<br>
+                    • <strong>Nāfi', Abū Ja'far:</strong> Membaca fathah ya' idhafah saat washal: <em>anniya / inniya akhluqu</em>.<br>
+                    • Kadar panjang mad munfashil mengikuti madzhab qira'at masing-masing (Warsy & Hamzah 6 harakat; jumhur 4-5 harakat; Ibnu Katsir, Abu Ja'far, Ya'qub 2 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>كَهَيْـَٔةِ ٱلطَّيْرِ فَأَنفُخُ فِيهِ</strong><br>(<em>Ka-hai'atith-thairi fa-anfukhu fīh(i)</em>)</td>
+                <td>
+                    • <strong>Mad Līn:</strong> Ya' sukun didahului fathah pada <em>hai'ah</em>.<br>
+                    • <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur ke Ṭhā' pada <em>ath-thair</em>.<br>
+                    • <strong>Ra' Tarqīq:</strong> Huruf Ra' kasrah pada <em>ath-thair</em> dibaca tipis.<br>
+                    • <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Fā' pada <em>fa-anfukhu</em> dibaca samar di bibir bawah.<br>
+                    • <strong>Ha' Dhamīr:</strong> Dibaca tanpa shilah saat waqaf; dibaca mad shilah shughra saat washal bila huruf sesudahnya berharakat.
+                </td>
+                <td>
+                    • <strong>Abū Ja'far:</strong> Membaca dengan <strong>Ibdāl Hamzah menjadi Yā' Musyaddadah: كَهَيَّةِ</strong> (<em>ka-hayyati</em>).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca dengan <strong>Taḥqīq Hamzah</strong>: <em>ka-hai'ati</em>.<br>
+                    • Seluruh sepuluh imam membaca tafkhim pada Tha' dan tarqiq pada Ra' <em>ath-thair</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَيَكُونُ طَيْرًۢا بِإِذْنِ ٱللَّهِ</strong><br>(<em>Fa-yakūnu thairam/thā'iram bi-idznillāh</em>)</td>
+                <td>
+                    • <strong>Iqlāb:</strong> Tanwin fathah <em>thairan</em> bertemu Ba' berubah menjadi suara Mim tersembunyi dengan dengung 2 harakat.<br>
+                    • <strong>Dzāl (ذ):</strong> Sifat rikhwah dan jahr di ujung lidah.<br>
+                    • <strong>Lam Jalālah Tarqīq:</strong> Dibaca tipis karena didahului harakat kasrah pada <em>bi-idzni</em>.<br>
+                    • <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di lafaz Jalālah, dibaca 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    • <strong>Nāfi' (khusus riwayat Warsy) dan Abū Ja'far:</strong> Membaca bentuk mufrad dengan alif mad: <strong>فَيَكُونُ طَائِرًا</strong> (<em>fa-yakūnu thā'iran</em>) dengan mad wajib muttashil.<br>
+                    • <strong>Jumhur Imam (Qālūn, Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Ḥamzah, Al-Kisā'ī, Ya'qūb, Khalaf al-'Āsyir):</strong> Membaca isim jins jamak tanpa alif: <strong>فَيَكُونُ طَيْرًا</strong> (<em>fa-yakūnu thairan</em>).<br>
+                    <em>Implikasi Teologis:</em> Qira'at <em>thā'iran</em> menegaskan wujud konkret satu ekor burung yang seketika mengepakkan sayap di hadapan mata mereka, sedangkan qira'at <em>thairan</em> menegaskan spesies burung sempurna yang dapat berkembang biak dengan izin Allah.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَأُبْرِئُ ٱلْأَكْمَهَ وَٱلْأَبْرَصَ</strong><br>(<em>Wa ubri'ul-akmaha wal-abrash</em>)</td>
+                <td>
+                    • <strong>Qalqalah Ṣhughrā:</strong> Ba' sukun pada <em>ubri'u</em> memantul ringan.<br>
+                    • <strong>Ra' Tarqīq:</strong> Kasrah pada <em>ubri'u</em>.<br>
+                    • <strong>Izh-hār Qamariyyah:</strong> Lam ta'rif dibaca jelas pada <em>al-akmah</em> dan <em>al-abrash</em>.<br>
+                    • <strong>Kāf Hams:</strong> Huruf Kaf sukun pada <em>al-akmah</em> disertai letupan hembusan nafas halus.<br>
+                    • <strong>Ṣhād (ص):</strong> Sifat isti'la', ithbaq, dan shafir di ujung lidah.
+                </td>
+                <td>
+                    • <strong>Warsy:</strong> Membaca dengan <strong>Naql Harakat Hamzah</strong> ke huruf Lam sukun sebelumnya: <strong>وَيُبْرِئُ لَكْمَهَ وَلَبْرَصَ</strong> (<em>wa ubri'ul-lakmaha wal-labrasha</em>) tanpa membunyikan hamzah qatha'.<br>
+                    • <strong>Ḥamzah:</strong> Membaca saktah (jeda tanpa nafas) pada Lam ta'rif saat washal (<em>al-akmah</em>), dan tahqiq atau tashil hamzah saat waqaf.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca tahqiq hamzah secara sempurna dengan izh-har qamariyyah.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَأُحْىِ ٱلْمَوْتَىٰ بِإِذْنِ ٱللَّهِ</strong><br>(<em>Wa uḥyil-mawtā bi-idznillāh</em>)</td>
+                <td>
+                    • <strong>Ḥā' Wasathul Halq:</strong> Hams dan rikhwah pada <em>uḥyī</em>.<br>
+                    • <strong>Isqāṭhul Mad (Gugurnya Mad):</strong> Ya' mad pada <em>uḥyī</em> gugur saat washal karena bertemu sukun pada <em>al-mawtā</em> (<em>iltiqā'us-sākinain</em>).<br>
+                    • <strong>Wawu Līn:</strong> Wawu sukun didahului fathah pada <em>al-mawtā</em>.<br>
+                    • <strong>Lam Jalālah Tarqīq:</strong> Dibaca tipis karena kasrah <em>bi-idzni</em>.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca <strong>Imālah Kubrā</strong> pada alif maqshurah kata <strong>ٱلْمَوْتَىٰ</strong> (mencondongkan harakat fathah ke kasrah dan alif ke ya').<br>
+                    • <strong>Warsy & Abū 'Amr:</strong> Membaca dengan <strong>Taqīl / Bayna-bayna</strong> (antara fathah dan imalah).<br>
+                    • <strong>Jumhur Imam ('Āṣhim, Ibnu Katsīr, Ibnu 'Āmir, Qālūn, Abū Ja'far, Ya'qūb):</strong> Membaca <strong>Fat-ḥah Khāliṣhah</strong>.<br>
+                    <em>Implikasi:</em> Penegasan klausul kedua <em>bi-idznillāh</em> mengunci fakta bahwa membangkitkan mayat adalah murni izin Allah, bukan sifat ketuhanan Isa.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَأُنَبِّئُكُم بِمَا تَأْكُلُونَ</strong><br>(<em>Wa unabbi'ukum bi-mā ta'kulūn</em>)</td>
+                <td>
+                    • <strong>Bā' Musyaddadah:</strong> Fathah disertai tasydid kasrah pada <em>unabbi'u</em>.<br>
+                    • <strong>Ikhfā' Syafawī:</strong> Mim sukun pada <em>unabbi'ukum</em> bertemu Ba' pada <em>bi-mā</em>.<br>
+                    • <strong>Hamzah Sākinah:</strong> Huruf Hamzah sukun pada <em>ta'kulūn</em> memiliki sifat syiddah dan jahr mutlak (suara tertahan sempurna di pangkal tenggorokan).
+                </td>
+                <td>
+                    • <strong>Warsy, Abū Ja'far:</strong> Membaca <strong>Ibdāl Hamzah Sukun</strong> menjadi Alif Mad: <strong>تَاكُلُونَ</strong> (<em>tākulūn</em>). Ḥamzah membaca ibdal saat waqaf.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca <strong>Taḥqīq Hamzah Sukun</strong>: <em>ta'kulūn</em>.<br>
+                    • Seluruh imam sepakat membaca ikhfa' syafawi pada pertemuan mim sukun dengan ba'.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَمَا تَدَّخِرُونَ فِى بُيُوتِكُمْ</strong><br>(<em>Wa mā taddakhirūna fī buyūtikum/biyūtikum</em>)</td>
+                <td>
+                    • <strong>Dāl Bertasydid:</strong> Hasil idghām huruf Tā' ifti'āl ke Dzāl asal (<em>tadz-takhirūna</em> menjadi <em>taddakhirūn</em>).<br>
+                    • <strong>Khā' Tarqīq:</strong> Kasrah pada <em>taddakhirūn</em> dibaca tipis.<br>
+                    • <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada <em>mā</em> dan <em>fī</em>.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr, Abū 'Amr, Warsy, Ibnu 'Āmir, Abū Ja'far, Ya'qūb:</strong> Membaca dengan <strong>Kasrah Huruf Bā': بِيُوتِكُمْ</strong> (<em>biyūtikum</em>) untuk keselarasan harakat dengan Ya'.<br>
+                    • <strong>'Āṣhim (Hafsh), Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir, Qālūn:</strong> Membaca dengan <strong>Ḍhammah Huruf Bā': بُيُوتِكُمْ</strong> (<em>buyūtikum</em>) mengikuti pola jamak ashli <em>fu'ūl</em>.<br>
+                    • Makna tetap padu: mengungkap rahasia makanan yang mereka timbun di kamar-kamar terdalam mereka.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لَّكُمْ إِن كُنتُم مُّؤْمِنِينَ ۝٤٩</strong><br>(<em>Inna fī dzālika la-āyatal-lakum in kuntum-mu'minīn</em>)</td>
+                <td>
+                    • <strong>Ghunnah Musyaddadah:</strong> Pada <em>inna</em>.<br>
+                    • <strong>Idghām Bilā Ghunnah:</strong> Tanwin fathah <em>la-āyatan</em> bertemu Lam <em>lakum</em>.<br>
+                    • <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu Kaf (<em>in kuntum</em>) dan Nun sukun bertemu Ta' (<em>kuntum</em>).<br>
+                    • <strong>Idghām Mīmī:</strong> Mim sukun <em>kuntum</em> melebur ke Mim <em>mu'minīn</em>.<br>
+                    • <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf ayat 49 dibaca 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    • <strong>Warsy & Abū Ja'far:</strong> Membaca <strong>Ibdāl Hamzah Sukun</strong> menjadi Wāwu Mad: <strong>مُّومِنِينَ</strong> (<em>mūminīn</em>). Ḥamzah membaca ibdal saat waqaf.<br>
+                    • <strong>Warsy:</strong> Membaca <strong>Mad Badal</strong> pada <em>la-āyah</em> dengan 2, 4, atau 6 harakat.<br>
+                    • Seluruh sepuluh imam mutawatirah sepakat membaca idgham bila ghunnah pada <em>la-āyatal-lakum</em> dan idgham mimi pada <em>kuntum-mu'minīn</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 4981) dan Imam Muslim (No. 152) dari Sahabat Abū Hurairah r.a. — Konteks Epistemologis Mukjizat Para Nabi:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "مَا مِنَ الأَنْبِيَاءِ نَبِيٌّ إِلَّا أُعْطِيَ مِنَ الآيَاتِ مَا مِثْلُهُ آمَنَ عَلَيْهِ البَشَرُ، وَإِنَّمَا كَانَ الَّذِي أُوتِيتُهُ وَحْيًا أَوْحَاهُ اللَّهُ إِلَيَّ، فَأَرْجُو أَنْ أَكُونَ أَكْثَرَهُمْ تَابِعًا يَوْمَ القِيَامَةِ"
+        </span>
+        <em>"Tidak ada seorang pun di antara para nabi melainkan dianugerahi tanda-tanda mukjizat yang membuat manusia beriman kepadanya. Dan sesungguhnya yang dianugerahkan kepadaku adalah wahyu (Al-Qur'an) yang diwahyukan Allah kepadaku. Maka aku berharap menjadi nabi yang paling banyak pengikutnya pada hari kiamat."</em><br>
+        <strong>Syarah Takhrij:</strong> Hadits ini meletakkan kaidah universal mukjizat: setiap nabi dibekali mukjizat inderawi yang menundukkan disiplin ilmu paling bergengsi pada zamannya. Nabi Musa dibekali penakluk sihir Firaun, Nabi Isa dibekali penakluk ilmu kedokteran dan biologi empiris (menghidupkan tanah liat, menyembuhkan lepra-kebutaan, membangkitkan mayat), dan Nabi Muhammad ﷺ dibekali mukjizat intelektual abadi berupa wahyu Al-Qur'an.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 3445) & Imam Muslim (No. 28) dari Sahabat 'Ubādah bin Aṣh-Ṣhāmit r.a. — Kedudukan Ontologis Isa Al-Masih:</strong><br>
+        Rasulullah ﷺ menetapkan syahadat keselamatan akidah:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "مَنْ شَهِدَ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَأَنَّ عِيسَى عَبْدُ اللَّهِ وَرَسُولُهُ، وَكَلِمَتُهُ أَلْقَاهَا إِلَى مَرْيَمَ وَرُوحٌ مِنْهُ... أَدْخَلَهُ اللَّهُ الجَنَّةَ عَلَى مَا كَانَ مِنَ العَمَلِ"
+        </span>
+        <em>"Barangsiapa bersaksi bahwa tiada tuhan yang berhak disembah selain Allah semata tiada sekutu bagi-Nya, dan bahwa Muhammad adalah hamba dan rasul-Nya, dan bahwa Isa adalah hamba Allah dan rasul-Nya, serta kalimat-Nya yang Dia sampaikan kepada Maryam dan ruh dari-Nya... niscaya Allah akan memasukkannya ke dalam surga bagaimanapun amal perbuatannya."</em><br>
+        <strong>Korelasi Ayat:</strong> Hadits ini mengokohkan hakikat firman Allah dalam QS. 3:49: kehebatan mukjizat Isa sama sekali tidak mengangkatnya menjadi sekutu Allah, melainkan membuktikan statusnya yang murni sebagai <em>'Abdullāh wa Rasūluh</em> (hamba Allah dan utusan-Nya).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Asbābun Nuzūl: Konfrontasi Hermeneutis & Dialog Teologis Delegasi Kristen Najran (Wafd Najrān):</strong><br>
+        Diriwayatkan oleh Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> dan Ibnu Ishaq dalam <em>As-Sīrah an-Nabawiyyah</em> dari Muhammad bin Ja'far bin Az-Zubair:<br>
+        Ketika 60 delegasi pembesar Kristen Najran mendatangi Masjid Nabawi untuk berdebat teologis, para uskup mereka mengajukan syubhat kristologis: <em>"Wahai Muhammad, tidakkah engkau mengakui bahwa Isa mampu membentuk burung dari tanah lalu meniupnya hingga hidup, menyembuhkan orang buta sejak lahir dan kusta, serta membangkitkan mayat dari kubur? Adakah yang sanggup melakukan perbuatan menciptakan dan menghidupkan maut selain Allah? Maka Isa pastilah Allah atau anak Allah!"</em><br>
+        Maka Allah SWT menurunkan rangkaian ayat Surah Ali 'Imran, khususnya ayat 49, untuk membantah logika mereka: Isa sendiri memproklamirkan bahwa ia datang membawa tanda dari Tuhan kalian (<em>bi-āyatim-mir-rabbikum</em>), dan dua kali mengulang penegasan bahwa seluruh penciptaan burung dan pembangkitan maut itu terlaksana <strong>بِإِذْنِ اللَّهِ</strong> (<em>dengan izin Allah</em>), bukan dengan kodrat otonom dirinya.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Kh-L-Q (خ-ل-ق — Akhluqu):</strong> Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros semantik akar ini pada: <em>"taqdīrusy-syai' wa taswiyatuh"</em> (menakar, memperkirakan, mendesain ukuran, dan merancang proporsi sesuatu secara cermat). Makna asal <em>khalq</em> dalam leksikografi Arab murni bukanlah mewujudkan sesuatu dari ketiadaan mutlak (<em>al-ījād min al-'adam</em>—yang merupakan hak mutlak Allah semata), melainkan membentuk dan menata bahan yang sudah ada. Ketika Isa berkata <em>akhluqu lakum minat-thīn</em>, maknanya adalah <em>uqaddiru wa ushawwiru</em> (aku menakar bentuk dan mendesain rupa dari tanah liat). Inilah rahasia mengapa Allah menyifati diri-Nya sebagai <em>Aḥsanul-Khāliqīn</em> (Sebaik-baik penakar wujud).</li>
+        <li><strong>2. N-F-Kh (ن-ف-خ — Fa-anfukhu fīhi):</strong> Berporos pada <em>"khurūju rīḥin min fami aw ghayrih bi-quwwah"</em> (hembusan angin/nafas yang keluar secara kuat). Nafkh adalah wasilah fisik yang dititahkan Allah untuk mentransmisikan daya hidup (ruh) ke dalam materi lempung, analog dengan peniupan ruh ke dalam jasad Adam AS dan rahim Maryam.</li>
+        <li><strong>3. Th-Y-R (ط-ي-ر — Ath-Thair / Thā'iran):</strong> Berporos pada <em>"al-harakah wal-irtifā' fil-hawā' bis-sur'ah"</em> (gerak melesat lepas landas dan melayang di udara). Transformasi lempung yang pejal, dingin, dan berat menjadi makhluk berdarah panas, bertulang rongga, dan sanggup terbang melawan gravitasi adalah mukjizat biologis paling visual di hadapan mata manusia.</li>
+        <li><strong>4. K-M-H (ك-م-ه — Al-Akmah):</strong> Ibnu Manzhur dalam <em>Lisān al-'Arab</em> dan Ibnu Faris menegaskan bahwa <em>al-akmah</em> adalah <em>"alladzī yūladu a'mā"</em> (orang yang terlahir buta sejak dari rahim ibunya tanpa memiliki organ penglihatan yang utuh). Menyembuhkan kebutaan biasa akibat katarak atau infeksi dapat diikhtiarkan tabib, namun menumbuhkan fungsi penglihatan pada mata yang cacat total sejak lahir berada di luar hukum kausalitas medis.</li>
+        <li><strong>5. B-R-Sh (ب-ر-ص — Al-Abrash):</strong> Berporos pada noda putih atau perubahan warna kulit akibat penyakit kusta/lepra purba yang merusak pigmen kulit dan jaringan saraf, menyebabkan pembusukan jaringan tubuh, serta membuat penderitanya dikucilkan secara sosial. Menyembuhkan lepra kronis seketika dengan sentuhan tangan Isa adalah penaklukan mutlak atas ilmu medis.</li>
+        <li><strong>6. Kh-Z-N / D-Kh-R (ذ-خ-ر — Taddakhirūn):</strong> Berakar dari <em>Dzal-Kha-Ra</em> yang bermakna <em>"habsul-māl awit-tha'ām li-waqtil-hājah"</em> (menyimpan dan menyembunyikan makanan atau harta untuk kebutuhan masa depan). Bentuk <em>taddakhirūn</em> (bab ifti'āl: <em>tadz-takhirūna</em>) menunjukkan upaya sungguh-sungguh dalam menimbun logistik di ruang privat rumah mereka.</li>
+    </ul>
+
+    <h3>Tabel Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَرَسُولًا</strong></td>
+                <td>Wāwu 'athaf / isti'nāf; <em>Rasūlan</em> isim mufrad nakirah manshub.</td>
+                <td>Manshub sebagai <strong>Maf'ūl bih</strong> bagi fi'il mahdzuf: <em>wa nu'allimuhū... wa nar-siluhū rasūlan</em>, atau ma'thuf kepada hal <em>wajīhan</em> pada ayat 45 (<em>wajīhan... wa rasūlan</em>).</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>إِلَىٰ بَنِىٓ</strong></td>
+                <td><em>Ilā</em> harf jar; <em>Banī</em> mulhaq jamak mudzakkar salim mudhaf.</td>
+                <td>Jar wa majrur muta'alliq dengan lafaz <em>rasūlan</em>; tanda jar-nya adalah huruf Yā' karena mulhaq bil-jam'il-mudzakkaris-salim.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>إِسْرَٰٓءِيلَ</strong></td>
+                <td>Isim 'alam 'ajamī mudhaf ilaih.</td>
+                <td><strong>Mudhaf Ilaih</strong> majrur dengan tanda fathah pengganti kasrah karena isim mamnū' minash-sharf ('ilmu al-'alamiyyah wal-'ujmah).</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>أَنِّى / إِنِّى</strong></td>
+                <td>Harf taukid wa nashab; Yā' dhamir muttashil.</td>
+                <td>Bagi yang membaca <em>Innī</em>: jumlah isti'nafiyyah maqul qaul mahdzuf (<em>qā'ilan: innī...</em>). Bagi yang membaca <em>Annī</em>: fi mahalli jarrin bi-harfi jarrin mahdzuf (<em>bi-annī</em>) muta'alliq bi-rasūlan. Yā' ismu inna/anna fi mahalli nashbin.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>قَدْ جِئْتُكُم</strong></td>
+                <td><em>Qad</em> harf tahqīq; <em>Ji'tu</em> fi'il madhi wa fa'il; <em>Kum</em> dhamir maf'ul bih.</td>
+                <td>Fi'il madhi mabni 'alas-sukun, Ta' fa'il; <em>Kum</em> maf'ul bih fi mahalli nashbin. Seluruh jumlah fi'liyyah fi mahalli raf'in <strong>Khabar Inna/Anna</strong>.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>بِـَٔايَةٍۢ مِّن رَّبِّكُمْ</strong></td>
+                <td>Bā' harf jar; <em>Āyatin</em> majrur; <em>Min rabbikum</em> jar wa majrur mudhaf ilaih.</td>
+                <td><em>Bi-āyatin</em> muta'alliq bi-fi'il <em>ji'tukum</em>; <em>mir-rabbikum</em> syibh jumlah berkedudukan sebagai <strong>Na'at (Sifat)</strong> bagi kata <em>āyatin</em>.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>أَنِّىٓ أَخْلُقُ</strong></td>
+                <td>Harf taukid wa nashab; Yā' ismu anna; <em>Akhluqu</em> fi'il mudhari' marfu'.</td>
+                <td>Jumlah <em>Annī akhluqu</em> berkedudukan sebagai <strong>Badal</strong> dari kata <em>āyatin</em> (badal isytimal), atau ta'lil bagi kedatangannya membawa mukjizat. Fa'il <em>akhluqu</em> dhamir mustatir takdirnya <em>Ana</em>.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>لَكُم مِّنَ ٱلطِّينِ</strong></td>
+                <td>Jar wa majrur muta'alliq bi-akhluqu; <em>Minath-thīni</em> jar wa majrur bayaniyyah.</td>
+                <td><em>Lakum</em> muta'alliq bi-akhluqu; <em>minath-thīn</em> muta'alliq bi-akhluqu atau berkedudukan sebagai hal dari maf'ul bih berikutnya.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>كَهَيْـَٔةِ ٱلطَّيْرِ</strong></td>
+                <td>Kāf isim bermakna <em>mitsla</em> (atau harf jar); <em>Hai'ati</em> mudhaf; <em>Ath-Thairi</em> mudhaf ilaih.</td>
+                <td>Berkedudukan sebagai <strong>Maf'ūl bih</strong> bagi fi'il <em>akhluqu</em> (yakni: <em>akhluqu lakum syai'an mitsla hai'atith-thair</em>), atau syibh jumlah hal dari maf'ul mahdzuf.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>فَأَنفُخُ فِيهِ</strong></td>
+                <td>Fā' 'athaf ta'qīb; <em>Anfukhu</em> fi'il mudhari'; <em>Fīhi</em> jar wa majrur.</td>
+                <td>Fi'il mudhari' ma'thuf kepada <em>akhluqu</em>; <em>fīhi</em> muta'alliq bi-anfukhu (dhamir mudzakkar merujuk ke benda tanah liat bentukan burung).</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>فَيَكُونُ طَيْرًۢا</strong></td>
+                <td>Fā' sababiyyah / 'athaf; <em>Yakūnu</em> fi'il mudhari' naqis; <em>Ṭhairan</em> khabar kaana.</td>
+                <td><em>Yakūnu</em> marfu', isimnya dhamir mustatir takdirnya <em>huwa</em>; <em>ṭhairan</em> (atau <em>ṭhā'iran</em>) <strong>Khabar Yakūnu</strong> manshub dengan fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>بِإِذْنِ ٱللَّهِ</strong></td>
+                <td>Bā' sababiyyah / mushahabah; <em>Idzni</em> majrur; Lafaz Jalālah mudhaf ilaih.</td>
+                <td>Jar wa majrur muta'alliq bi-fi'il <em>yakūnu</em> atau berkedudukan sebagai <strong>Ḥāl</strong> (dalam keadaan disertai izin dan kehendak mutlak Allah SWT).</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>وَأُبْرِئُ ٱلْأَكْمَهَ</strong></td>
+                <td>Wāwu 'athaf; <em>Ubri'u</em> fi'il mudhari'; <em>Al-Akmaha</em> isim maf'ul bih.</td>
+                <td>Fi'il mudhari' ma'thuf kepada <em>akhluqu</em>; fa'il mustatir <em>ana</em>; <em>Al-Akmaha</em> <strong>Maf'ūl bih</strong> manshub dengan fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><strong>وَٱلْأَبْرَصَ</strong></td>
+                <td>Wāwu 'athaf; <em>Al-Abrasha</em> isim manshub.</td>
+                <td><strong>Ma'thūf</strong> kepada <em>al-akmaha</em>, manshub dengan tanda fathah zhahirah.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><strong>وَأُحْىِ ٱلْمَوْتَىٰ</strong></td>
+                <td>Wāwu 'athaf; <em>Uḥyī</em> fi'il mudhari' marfu'; <em>Al-Mawtā</em> maf'ul bih.</td>
+                <td>Fi'il mudhari' marfu' bidh-dhammah muqaddarah; <em>Al-Mawtā</em> <strong>Maf'ūl bih</strong> manshub bil-fathah al-muqaddarah di atas alif maqshurah.</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><strong>بِإِذْنِ ٱللَّهِ</strong></td>
+                <td>Bā' harf jar; <em>Idzni</em> majrur; Lafaz Jalālah mudhaf ilaih.</td>
+                <td>Jar wa majrur muta'alliq bi-fi'il <em>uḥyī</em>, berfungsi sebagai <em>ta'kīd li-daf'isy-syubhah</em> (penegasan mutlak pemusnah syubhat penuhanan).</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><strong>وَأُنَبِّئُكُم بِمَا تَأْكُلُونَ</strong></td>
+                <td>Wāwu 'athaf; <em>Unabbi'u</em> fi'il mudhari'; <em>Kum</em> maf'ul awwal; <em>Bi-mā</em> jar wa majrur.</td>
+                <td><em>Unabbi'u</em> fi'il mudhari' bab taf'il; <em>Kum</em> maf'ul bih awwal; <em>Bi-mā</em> muta'alliq bi-unabbi'u (maf'ul tsani); jumlah <em>ta'kulūna</em> shilah maushul lā mahalla lahā.</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td><strong>وَمَا تَدَّخِرُونَ</strong></td>
+                <td>Wāwu 'athaf; <em>Mā</em> isim maushul; <em>Taddakhirūna</em> fi'il mudhari' marfu'.</td>
+                <td><em>Mā</em> ma'thuf kepada <em>mā</em> sebelumnya; <em>Taddakhirūna</em> fi'il mudhari' marfu' bi-tsubūtin-nūn, Wāwu fa'il. Shilah maushul.</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td><strong>فِى بُيُوتِكُمْ</strong></td>
+                <td><em>Fī</em> harf jar zharafiyyah; <em>Buyūtikum</em> majrur mudhaf; <em>Kum</em> mudhaf ilaih.</td>
+                <td>Jar wa majrur muta'alliq bi-fi'il <em>taddakhirūna</em>; <em>Kum</em> dhamir fi mahalli jarrin mudhaf ilaih.</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td><strong>إِنَّ فِى ذَٰلِكَ لَـَٔايَةًۭ لَّكُمْ</strong></td>
+                <td><em>Inna</em> harf taukid; <em>Fī dzālika</em> khabar inna muqaddam; <em>La-āyatan</em> ismu inna mu'akhkhar.</td>
+                <td><em>Fī dzālika</em> syibh jumlah fi mahalli raf'in <strong>Khabar Inna Muqaddam</strong>; Lām adalah <em>Lām Muzahlaqah</em> (ta'kid); <em>Āyatan</em> <strong>Ismu Inna Mu'akhkhar</strong> manshub; <em>Lakum</em> syibh jumlah na'at.</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td><strong>إِن كُنتُم مُّؤْمِنِينَ</strong></td>
+                <td><em>In</em> harf syarth jāzim; <em>Kuntum</em> fi'il madhi naqis; <em>Mu'minīna</em> khabar kaana.</td>
+                <td><em>Kuntum</em> fi mahalli jazmin fi'lu syarth, Ta' fa'il; <em>Mu'minīna</em> khabar kāna manshub bil-yā'. <strong>Jawābus-syarṭh mahdzūf</strong> ditakdirkan: <em>fa-āminū bī wa shaddiqūnī</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ānī — Tikrār al-Iḥtirās (Pengulangan Klausul Proteksi Teologis "Bi-idznillāh"):</strong><br>
+            Al-Qur'an mengulang klausul <strong>بِإِذْنِ اللَّهِ</strong> tepat dua kali: pertama pada penciptaan burung dari tanah liat, dan kedua pada penghidupan orang mati. Dalam balaghah, ini dinamakan teknik <em>Al-Iḥtirās</em> (pencegahan dini dari kesalahpahaman). Menciptakan wujud hidup dan membangkitkan maut adalah dua ranah yang paling mudah memicu delusi ketuhanan bagi saksi mata. Pengulangan ini membentengi akidah umat agar tidak ada celah sedikit pun untuk menganggap Isa bersekutu dalam zat atau perbuatan Allah.
+        </li>
+        <li><strong>Ilmu Bayān — At-Tasybīh at-Tamtsīlī wa At-Tashwīr al-I'jāzī (Visualisasi Kinestetik Mukjizat):</strong><br>
+            Frasa <em>"ka-hai'atith-thairi fa-anfukhu fīhi fa-yakūnu thairam-bi-idznillāh"</em> melukiskan adegan dramatis bertahap melalui huruf <em>Fā'</em> (ta'qibiyyah bila tarākhin): dari lempung mati dibentuk miniatur burung, seketika ditiup nafas kenabian, dan tanpa jeda (<em>fa-yakūnu</em>) tanah liat itu berubah menjadi burung bernyawa yang terbang melayang.
+        </li>
+        <li><strong>Ilmu Bayān — Ta'bīr bil-Khaṣhā'iṣh al-Mu'jizah (Diksi Spesifik Melampaui Istilah Medis):</strong><br>
+            Al-Qur'an tidak menggunakan kata umum <em>al-a'mā</em> (orang buta) melainkan <strong>ٱلْأَكْمَهَ</strong> (buta kongenital sejak rahim), dan menggunakan <strong>ٱلْأَبْرَصَ</strong> (lepra basah stadium terminal). Pemilihan diksi ini membuktikan bahwa risalah Isa menghantam kemustahilan medis tertinggi peradaban zamannya.
+        </li>
+        <li><strong>Ilmu Badī' — Aṭh-Ṭhibāq al-Khafī wal-Jalī (Kontras Menghidupkan dan Mematikan):</strong><br>
+            Terdapat thibaq sempurna antara <strong>أُحْىِ</strong> (aku menghidupkan) dan <strong>ٱلْمَوْتَىٰ</strong> (orang-orang yang mati). Juga terdapat thibaq antara <strong>تَأْكُلُونَ</strong> (apa yang kalian konsumsi saat ini/jangka pendek) dan <strong>تَدَّخِرُونَ</strong> (apa yang kalian simpan dan timbun untuk masa depan).
+        </li>
+        <li><strong>Ilmu Ma'ānī — Ta'līqul-Jazā' bisy-Syarṭh (Uslūb Istifzāz al-Qulūb):</strong><br>
+            Penutup ayat dengan <strong>إِن كُنتُم مُّؤْمِنِينَ</strong> (<em>jika kalian adalah orang-orang yang beriman</em>) bukan menunjukkan keraguan Allah, melainkan uslub <em>tahjīj wa istinhādh</em> (menyudutkan keangkuhan intelektual mereka): bukti telah begitu melimpah dan tak terbantahkan, maka jika kalian tetap menolak, penghalangnya bukanlah kurangnya bukti rasional, melainkan ketiadaan kehendak iman di dalam hati kalian!
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Teks Sebelumnya - QS. 3:48):</strong><br>
+            Pada ayat 48, Allah mengumumkan kurikulum Ilahi yang dianugerahkan kepada Isa: <em>"Wa yu'allimuhul-kitāba wal-ḥikmata wat-taurāta wal-injīl"</em> (Dia mengajarkan kepadanya Kitab, Hikmah, Taurat, dan Injil). Setelah dibekali fondasi epistemologi syariat dan kearifan wahyu, ayat 49 langsung menampilkan operasionalisasi risalah Isa di medan dakwah: ia diterjunkan sebagai rasul yang dibekali mukjizat kasat mata untuk menundukkan penentangan Bani Israil.
+        </li>
+        <li><strong>Siyāq (Alur Tema Blok 2: Genealogi Kesucian & Teologi Kenabian, Ayat 33–63):</strong><br>
+            Ayat 49 adalah katalog terlengkap mukjizat kenabian Isa Al-Masih dalam Al-Qur'an. Posisi ayat ini di Blok 2 berfungsi sebagai benteng teologis ganda:
+            <ol>
+                <li>Membongkar tuduhan keji kaum Yahudi yang menuduh Isa sebagai penyihir penipu (<em>sāḥir kadzdāb</em>) dan anak haram; Al-Qur'an membuktikan bahwa mukjizatnya adalah tanda kenabian suci dari Tuhan (<em>bi-āyatim-mir-rabbikum</em>).</li>
+                <li>Membongkar doktrin penuhanan kaum Kristen Najran yang menjadikan mukjizat-mukjizat tersebut sebagai pembenaran atas Trinitas dan status "Anak Allah"; Al-Qur'an mengunci fakta bahwa Isa sendiri yang memproklamirkan bahwa semua itu semata-mata terjadi <em>bi-idznillāh</em>.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Proyeksi Teks Sesudahnya - QS. 3:50–51):</strong><br>
+            Mukjizat empiris di ayat 49 segera disambung oleh ayat 50 yang menegaskan misi syariatnya: <em>"Wa mushaddiqal-limā bayna yadayya minat-taurāti wa li-uḥilla lakum ba'dhal-ladzī ḥurrima 'alaikum..."</em>. Mukjizat kasat mata dihadirkan terlebih dahulu untuk meruntuhkan resistensi akal, sehingga Bani Israil siap menerima reformasi hukum yang meringankan beban syariat mereka di ayat 50, dan akhirnya tunduk pada kesimpulan tauhid murni di ayat 51: <em>"Innallāha rabbī wa rabbukum fa'budūh, hādzā shirāṭhum-mustaqīm"</em>.
+        </li>
+        <li><strong>Rekonstruksi Sosio-Historis: Dinamika Bani Israil Abad 1 M & Debat Najran 9 H:</strong><br>
+            <p>
+                <strong>Kondisi Bani Israil Era Isa:</strong> Masyarakat Yahudi abad ke-1 Masehi terbelah parah. Kaum Farisi tenggelam dalam legalisme kaku, kemunafikan ritualistik, dan komersialisasi agama; kaum Saduki tenggelam dalam materialisme skeptis yang mengingkari kebangkitan maut dan alam ghaib; sementara pengaruh kebudayaan Helenistik Yunani-Romawi membanggakan kemajuan ilmu anatomi dan kedokteran tabib Galenik/Hippokratik. Mukjizat Isa menghantam seluruh sendi keangkuhan ini sekaligus:
+            </p>
+            <ul>
+                <li>Menyembuhkan kusta dan buta sejak lahir mempermalukan para tabib Hellenis yang sombong.</li>
+                <li>Membangkitkan orang mati menampar kaum Saduki yang menolak adanya hari berbangkit.</li>
+                <li>Menebak apa yang mereka makan dan apa yang mereka simpan di dalam rumah membongkar kerakusan para pendeta Farisi yang diam-diam menimbun harta jemaat.</li>
+            </ul>
+            <p>
+                <strong>Konteks Madaniyah (Tahun 9 H):</strong> Ketika delegasi Kristen Najran memamerkan keagungan Isa untuk menjustifikasi penuhanannya di hadapan Nabi Muhammad ﷺ, ayat ini dibacakan untuk menyadarkan mereka bahwa dokumen tertua dan paling autentik tentang Isa Al-Masih membuktikan bahwa beliau adalah seorang rasul yang tawadhu', yang setiap detik menyandarkan mukjizatnya pada izin Allah SWT.
+            </p>
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭ-Ṭhabarī (w. 310 H) — Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān:</strong><br>
+        At-Tabari memaparkan dengan sanad bersambung riwayat para salaf (Wahb bin Munabbih, As-Suddi, dan Qatadah). Beliau menjelaskan bahwa burung yang dibentuk Isa dari tanah liat adalah kelelawar (<em>al-khuffāsy</em>), karena kelelawar adalah ciptaan burung yang paling unik dan kompleks (memiliki gigi, menyusui, melahirkan, dan terbang tanpa bulu unggas biasa). Mengenai <em>al-akmah</em>, At-Tabari menegaskan konsensus bahasa bahwa ia adalah orang yang lahir tanpa penglihatan sejak dari rahim. At-Tabari menggarisbawahi hikmah teologis: <em>"Allah menjadikan mukjizat Isa pada hal-hal yang tidak mampu dijangkau oleh tabib mana pun, agar menjadi bukti qath'i bahwa kekuasaan tersebut bersumber langsung dari Sang Pencipta alam semesta, bukan hasil trik manusiawi."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Tafsīr al-Qur'ān al-'Azhīm:</strong><br>
+        Ibnu Katsir menjelaskan kaidah kesesuaian mukjizat dengan tantangan zaman: <em>"Allah mengutus setiap nabi dengan mukjizat yang sejenis dengan kepakaran tertinggi kaumnya. Pada zaman Musa, sihir mencapai puncaknya, maka Allah membekalinya tongkat yang menelan segala sihir mereka. Pada zaman Isa, ilmu kedokteran (ath-thibb) dan biologi fisik mencapai kemegahan luar biasa, maka Isa dibekali mukjizat menyembuhkan penyakit yang divonis mati oleh kedokteran dan menghidupkan mayat. Ketika para tabib menyaksikan orang mati bangkit dari kubur dan orang buta sejak lahir seketika melihat, mereka sadar bahwa ini melampaui hukum fisika dan kedokteran, ini adalah tanda kebesaran Allah!"</em> Ibnu Katsir juga menegaskan bahwa klausul <em>bi-idznillāh</em> adalah pemungkas yang menghancurkan seluruh bangunan akidah Trinitas.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Al-Jāmi' li-Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi menyoroti dimensi fiqih sosial dan kritik moral terhadap penimbunan harta. Mengapa Isa menyebutkan: <em>"wa mā taddakhirūna fī buyūtikum"</em>? Al-Qurthubi menjelaskan bahwa sebagian Bani Israil meragukan mukjizat Isa dan bersikap kikir, menyembunyikan makanan lezat dan harta di kamar-kamar rahasia mereka seraya berpura-pura miskin di hadapan Isa. Isa lalu berkata: 'Fulan, engkau hari ini makan hidangan ini, dan engkau menyembunyikan gandum serta dinar sekian banyak di sudut rumahmu!' Ketika mereka memeriksa dan terbukti seratus persen tepat, mereka tak berkutik. Al-Qurthubi menegaskan bahwa ayat ini menjadi dalil haramnya menimbun kebutuhan pokok (<em>iḥtikār</em>) yang memicu krisis sosial masyarakat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) — Mafātīḥ al-Ghaib & Az-Zamakhsyarī (w. 538 H) — Al-Kasysyāf:</strong><br>
+        Ar-Razi membedah secara filosofis dialektika kausalitas: Kaum materialis menuduh mustahil lempung padat menjadi daging dan darah seketika tanpa proses pembuahan jutaan tahun. Ar-Razi menjawab bahwa hukum sebab-akibat bukanlah kepastian mutlak yang independen (<em>wājib al-wujūd</em>), melainkan kebiasaan alam (<em>al-'ādah</em>) yang diciptakan Allah. Allah Mahakuasa melipat proses waktu kimiawi dalam satu detik melalui sabda <em>Kun</em>. Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan keindahan uslub: penyebutan <em>"fa-anfukhu fīhi fa-yakūnu thairan"</em> menggunakan huruf fa' ta'qibiyyah tanpa jeda untuk menunjukkan betapa dahsyatnya kepatuhan materi fisik ketika disentuh oleh izin Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur menganalisis psikologi Bani Israil yang mengidap penyakit materialisme empiris akut. Jiwa mereka telah mengeras bagai batu, sehingga nasihat etika murni tidak mempan tanpa pembuktian visual yang mencengangkan panca indera. Ibnu 'Asyur juga melakukan studi komparatif dengan naskah Injil Sinoptik (Kisah penyembuhan orang buta sejak lahir dalam Injil Yohanes 9:1-7, penyembuhan lepra dalam Matius 8:1-4, dan pembangkitan Lazarus dalam Yohanes 11:38-44). Al-Qur'an membenarkan fakta historis mukjizat-mukjizat tersebut, namun membersihkannya dari interpolasi teologis penuhanan yang disisipkan oleh konsili-konsili gereja pasca-apostolik.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — Tafsir Al-Azhar:</strong><br>
+        Buya Hamka melukiskan ketawadhuan Isa Al-Masih dengan untaian kata yang mengharukan: <em>"Nabi Isa tidak pernah membusungkan dada di hadapan kaumnya. Setiap kali burung tanah liat itu terbang ke udara, setiap kali orang kusta sembuh kulitnya, setiap kali mayat bangkit kembali, Nabi Isa tertunduk seraya berkata: 'Bi-idznillāh! Dengan izin Allah! Bukan karena kesaktian pribadiku, bukan karena aku anak Tuhan!' Celakanya, orang-orang yang datang kemudian terpesona pada peribadi sang Nabi, lalu mengangkatnya menjadi Tuhan yang disembah. Al-Qur'an datang membetulkan kembali jalan sejarah yang tersesat itu, mengembalikan Isa ke singgasana kemanusiaannya yang agung sebagai utusan Allah yang suci."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Prof. Dr. M. Quraish Shihab — Tafsir Al-Mishbah:</strong><br>
+        Quraish Shihab menggarisbawahi bahwa mukjizat bukanlah sihir. Sihir menipu pandangan mata dan mempermainkan persepsi optik, sedangkan mukjizat merombak realitas materiil secara nyata atas kehendak Pencipta alam. Terkait pembacaan hal ghaib (makanan dan simpanan rumah), Quraish Shihab menjelaskan bahwa ini membuktikan ilmu nabi mencakup hal-hal privat yang tidak diketahui publik, namun ilmu tersebut terbatas pada apa yang diwahyukan Allah kepadanya. Penutup ayat <em>"in kuntum mu'minīn"</em> menjadi peringatan keras: mukjizat hanya bermanfaat bagi jiwa yang jujur mencari kebenaran, bukan bagi jiwa yang congkak dan keras kepala.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>8. Kementerian Agama RI (Tafsir Tahlili):</strong><br>
+        Kemenag RI menyimpulkan bahwa mukjizat-mukjizat Nabi Isa AS adalah bukti historis kenabian yang memiliki dimensi kemanusiaan tinggi: menyembuhkan penyakit masyarakat, menghidupkan harapan, dan membongkar kepalsuan moral kaum elit. Pendekatan dakwah bil-hikmah yang dicontohkan Isa mengajarkan pentingnya menyentuh kebutuhan paling riil umat manusia sebelum mengajak mereka kepada pemurnian akidah.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Hermeneutis / Teologis</th>
+                <th>Konsensus (Ijma') Mufassirin</th>
+                <th>Titik Perbedaan (Ikhtilaf) & Variasi Mazhab</th>
+                <th>Implikasi Metodologis & Doktrinal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Klausul "Bi-idznillāh"</strong></td>
+                <td>Sepakat bulat bahwa seluruh mukjizat terjadi semata-mata dengan izin, kehendak, dan penciptaan Allah SWT, bukan daya otonom Isa.</td>
+                <td>• <strong>Ulama Kalam Asy'ariyyah (Razi):</strong> Izin Allah bermakna penciptaan langsung tanpa perantara hukum alam.<br>• <strong>Mufassir Modern (Quraish Shihab, Ibnu 'Asyur):</strong> Izin Allah mencakup penundukan hukum kausalitas khusus yang belum terjangkau sains manusia.</td>
+                <td>Membatalkan dogma Trinitas dan penuhanan Al-Masih secara rasional dan teologis.</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Penciptaan Burung (Akhluqu)</strong></td>
+                <td>Sepakat bahwa kata <em>akhluqu</em> bermakna menakar rupa bentuk (<em>at-taqdīr wat-tashwīr</em>), bukan menciptakan dari ketiadaan mutlak.</td>
+                <td>• <strong>Salaf (Tabari, Mujahid):</strong> Burung tersebut nyata hidup, makan, dan terbang di depan mata mereka (sebagian menyebut kelelawar).<br>• <strong>Sebagian kecil rasionalis:</strong> Burung tersebut hidup temporer selama di hadapan mereka sebagai tanda bukti kebenaran.</td>
+                <td>Menjelaskan keselarasan bahasa bahwa atribusi <em>khalq</em> kepada selain Allah hanya sah dalam makna membentuk materi ciptaan yang sudah ada.</td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan "Wa Uḥyil-Mawtā"</strong></td>
+                <td>Sepakat bahwa Isa benar-benar menghidupkan orang yang telah mati secara fisik atas izin Allah.</td>
+                <td>• <strong>Riwayat Klasik (Ibnu Katsir, Tabari):</strong> Isa membangkitkan sahabatnya Lazarus ('Azar), anak perempuan penguasa, dan Sam bin Nuh.<br>• <strong>Pendekatan Maknawi (Zamakhsyari):</strong> Menghidupkan jasad fisik sekaligus metafora menghidupkan kalbu yang mati akibat kebodohan syariat.</td>
+                <td>Membuktikan kekuasaan Allah atas Hari Kebangkitan (<em>Al-Ba'ts</em>) di hadapan kaum materialis Saduki.</td>
+            </tr>
+            <tr>
+                <td><strong>Mekanisme Mengetahui Makanan & Simpanan</strong></td>
+                <td>Sepakat bahwa ketersingkapan informasi privat rumah tangga tersebut bersumber dari wahyu Ilahi, bukan astrologi atau perdukunan.</td>
+                <td>• <strong>Al-Qurtubi:</strong> Bentuk hukuman dan teguran moral atas tabiat Bani Israil yang suka menimbun (<em>al-iḥtikār</em>).<br>• <strong>Ibnu 'Asyur:</strong> Bukti kenabian ghaib (<em>i'jāz ghaibī</em>) yang membuktikan mata batin kenabian menembus tabir dinding rumah.</td>
+                <td>Menegaskan konsep <em>Al-Muraqabah</em>: Allah dan utusan-Nya mengetahui hipokrisi batin yang disembunyikan manusia.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur kejiwaan berikut merupakan ikhtiar tadabbur analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Sintesis Sistemik & Pergeseran Paradigma (Pola Pikir Lama vs Paradigma Qur'ani)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kesadaran</th>
+                <th>Pola Pikir Reduksionis / Ilusi Agensi Otonom</th>
+                <th>Paradigma Transenden Qur'ani (QS. 3:49)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sumber Kapasitas & Agensi</strong></td>
+                <td><em>Self-Attribution Illusion:</em> Meyakini bahwa pencapaian luar biasa (kecerdasan, keahlian medis, kekayaan) bersumber dari kehebatan otonom diri sendiri (Sindrom Qarun).</td>
+                <td><em>The Bi-idznillāh Principle:</em> Menyadari sepenuhnya bahwa manusia hanyalah wasilah instrumen; seluruh efikasi dan daya keberhasilan bergantung seratus persen pada izin dan perkenan Allah SWT.</td>
+            </tr>
+            <tr>
+                <td><strong>Cara Memandang Batasan Realitas</strong></td>
+                <td><em>Blind Determinism:</em> Terkunci dalam keputusasaan ketika kalkulasi materiil/medis buntu; menganggap vonis duniawi sebagai akhir segalanya.</td>
+                <td><em>Divine Possibility Mindset:</em> Menyadari bahwa hukum alam materiil tunduk di bawah kedaulatan Sang Maha Pencipta; mukjizat membuktikan bahwa selalu ada celah rahmat melampaui logika kebiasaan.</td>
+            </tr>
+            <tr>
+                <td><strong>Integritas Ruang Tersembunyi</strong></td>
+                <td><em>Compartmentalized Hypocrisy:</em> Berpikir bahwa apa yang disimpan dan dikonsumsi di ruang privat terlindungi dari audit moralitas; munafik antara ruang publik dan ruang sunyi.</td>
+                <td><em>Total Transparency Awareness:</em> Kesadaran bahwa tidak ada rahasia yang tersembunyi dari radar Ilahi (<em>mā taddakhirūna fī buyūtikum</em>); integritas batin tetap terjaga di balik pintu yang terkunci.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Bi-idznillāh Framework of Agency" (Klausul Perkenan Ilahi dalam Setiap Kapasitas Diri):</strong><br>
+            Akal manusia sering terjebak dalam bias kognitif <em>Egocentric Attribution Bias</em>—menganggap kesuksesan lahir dari kehebatan kompetensi pribadi, namun melemparkan kegagalan pada faktor luar. QS. 3:49 merumuskan kaidah berpikir revolusioner: seorang nabi sekaliber Isa Al-Masih yang mampu menciptakan burung dari lempung dan membangkitkan mayat secara sadar mengulang kalimat <strong>بِإِذْنِ اللَّهِ</strong> sebanyak dua kali. Kaidah ini mengajarkan profesional modern: betapapun tingginya gelar akademik, keahlian teknologi, dan otoritas yang Anda miliki, Anda hanyalah hamba yang fakir. Keberhasilan operasi bedah seorang dokter, keberhasilan algoritma seorang insinyur, atau keberhasilan investasi seorang pebisnis, hakikatnya terjadi semata-mata karena izin Allah. Menghilangkan egoisme otonom melahirkan kerendahhatian radikal dan melenyapkan arogansi intelektual.
+        </li>
+        <li><strong>Mental Model 2: "The Holistic Restoration Principle" (Prinsip Pemulihan Komprehensif Melampaui Gejala Permukaan):</strong><br>
+            Isa Al-Masih tidak hanya menyembuhkan organ fisik yang cacat (buta dan lepra), namun juga membongkar kerakusan penimbunan makanan di rumah-rumah mereka. Kaidah ini menyadarkan bahwa krisis kemanusiaan tidak dapat diselesaikan hanya dengan penanganan teknis materiil semata. Menyembuhkan penyakit masyarakat membutuhkan restorasi dua dimensi: perbaikan fisik/ekonomi lahiriah dan penyembuhan mentalitas keserakahan (<em>hoarding mindset</em>) batiniah.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi & Tazkiyatun Nafs: Dekonstruksi "God Complex" & Sindrom Penimbunan (Hoarding)</h3>
+    <p>
+        Secara psikologis, keberhasilan melakukan hal-hal luar biasa yang tidak mampu dilakukan orang lain sangat rentan memicu patologi kejiwaan yang disebut <strong>"The God Complex"</strong> (delusi bahwa diri memiliki kekuasaan mutlak, kebal terhadap kesalahan, dan berhak disembah atau ditakuti). Para tiran, saintis megalomania, dan tokoh spiritual palsu sepanjang sejarah jatuh ke dalam jurang kehancuran moral akibat sindrom ini.
+    </p>
+    <p>
+        Ayat 49 menampilkan antitesis teragung terhadap <em>God Complex</em>: Nabi Isa mempertontonkan mukjizat yang melampaui imajinasi manusia terhebat sekalipun, namun lisannya senantiasa mengikat mukjizat tersebut dengan lafaz <em>Bi-idznillāh</em>. Ini adalah terapi neuropsikologis tertinggi: menetralkan lonjakan dopamin narsistik dan membumikan ego hamba di hadirat kebesaran Allah.
+    </p>
+    <p>
+        Selain itu, frasa <em>"wa mā taddakhirūna fī buyūtikum"</em> menelanjangi patologi <strong>Compulsive Hoarding</strong> (kegelisahan neurotik untuk menimbun harta dan makanan secara berlebihan). Menimbun berakar dari <em>scarcity mindset</em> (ketakutan patologis akan masa depan dan ketidakpercayaan kepada Allah). Ketika Isa menyingkap apa yang mereka timbun, beliau sedang melakukan terapi tazkiyatun nafs: memerdekakan jiwa mereka dari perbudakan materi menuju kelapangan tawakal kepada Sang Maha Pemberi Rezeki.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Kritik Peradaban Transhumanisme & Delusi Saintisme "Homo Deus"</h3>
+    <p>
+        Peradaban abad ke-21 tengah mabuk oleh lompatan rekayasa genetika (CRISPR-Cas9), bioteknologi sintetik, dan kecerdasan buatan (Artificial General Intelligence). Gerakan filsafat transhumanisme memproklamasikan ambisi untuk merekayasa manusia menjadi "makhluk ilahi" yang mampu merekayasa kode kehidupan, menghapus penuaan, dan menaklukkan kematian biologis—sebagaimana narasi Yuval Noah Harari dalam bukunya <em>Homo Deus</em>.
+    </p>
+    <p>
+        QS. 3:49 melancarkan kritik epistemologis yang menghujam jantung peradaban saintisme sekuler ini: kemampuan menciptakan bentuk biologis dan menaklukkan kematian pernah dihadirkan ribuan tahun lalu oleh seorang manusia bernama Isa Al-Masih. Namun, Al-Qur'an mengingatkan bahwa puncak dari keajaiban tersebut bukanlah penobatan manusia menjadi "tuhan", melainkan pengakuan mutlak atas izin Allah (<em>Bi-idznillāh</em>). Sains modern yang kehilangan orientasi tauhid berisiko melahirkan tiran-tiran bioteknologi yang mempermainkan kehidupan dan berujung pada malapetaka eksistensial kemanusiaan.
+    </p>
+
+    <h3>2. Dekonstruksi Kapitalisme Medis: Dari Profetik Menjadi Komersialisasi Penyakit</h3>
+    <p>
+        Industri kesehatan global abad ke-21 kerap kali terjebak dalam jebakan kapitalisme farmasi (<em>Big Pharma</em>). Pasien sering kali diposisikan sebagai konsumen seumur hidup; biaya perawatan penyakit kronis melambung tinggi hingga memiskinkan keluarga dhu'afa; sementara kaum difabel dan penderita penyakit langka kerap dipinggirkan dari akses pengobatan yang layak karena kalkulasi profitabilitas.
+    </p>
+    <p>
+        Teladan Isa Al-Masih dalam ayat 49 adalah cetak biru moralitas <strong>Kedokteran Profetik (Prophetic Medicine)</strong>: Isa menyembuhkan orang buta sejak lahir (<em>al-akmah</em>) dan penderita kusta (<em>al-abrash</em>)—dua kelompok sosial paling terhina dan termiskin di zamannya—tanpa memungut upah finansial sepeser pun. Mukjizat penyembuhan dihadirkan sebagai instrumen cinta kasih, advokasi kaum tertindas, dan pembebasan martabat manusia, bukan komoditas eksploitasi kapitalistik.
+    </p>
+
+    <h3>3. Masyarakat Pengawas Digital (Digital Surveillance) vs Radar Transendental Ilahi</h3>
+    <p>
+        Dunia kontemporer hidup di bawah cengkeraman <em>Surveillance Capitalism</em> (kapitalisme pengawasan): algoritma media sosial, riwayat transaksi perbankan digital, dan kamera CCTV cerdas merekam secara detail apa yang kita beli, apa yang kita makan, dan apa yang kita simpan di rumah kita. Namun ironisnya, pengawasan digital raksasa ini gagal menciptakan peradaban yang berintegritas; korupsi terselubung, kejahatan kerah putih di ruang sunyi, dan kemunafikan moral publik justru kian merajalela.
+    </p>
+    <p>
+        Ayat 49 menyajikan pengawasan hakiki yang merasuk ke dalam relung kesadaran manusia: Isa membuktikan bahwa apa yang dimakan dan apa yang ditimbun di dalam kamar-kamar rumah yang terkunci rapat (<em>mā taddakhirūna fī buyūtikum</em>) senantiasa terbaca jelas dalam radar wahyu Allah. Ketika seorang manusia menyadari bahwa Allah Maha Mengetahui apa yang ada di dalam lemari dan dompetnya, ia akan hidup dengan kejujuran paripurna—sebuah integritas batin yang tidak membutuhkan kamera pengawas manusia.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit) — Inokulasi Niat & Resitasi "Bi-idznillāh":</strong><br>
+                Setiap kali hendak memulai tugas profesional yang berat (melakukan operasi medis, menyusun kode program, menandatangani kontrak bisnis, atau meminum obat saat sakit), berhentilah selama 5 detik dalam keheningan batin. Ucapkan dengan kesadaran penuh: <em>"Bismillāh, Lā ḥawla wa lā quwwata illā billāh, bi-idznillāh"</em>. Niatkan bahwa ikhtiar teknis Anda hanyalah adab syariat, sedangkan efikasi kesembuhan dan kesuksesan bergantung mutlak pada perkenan Allah Al-Qayyūm.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol) — Audit Penimbunan Berlebih (The Anti-Hoarding Declutter Rule):</strong><br>
+                Terapkan protokol audit rumah tangga setiap akhir bulan berdasarkan firman-Nya <em>"wa mā taddakhirūna fī buyūtikum"</em>. Periksalah lemari pakaian, laci dapur, dan simpanan barang Anda: setiap pakaian, bahan makanan, atau barang yang telah tersimpan lebih dari 40 hari tanpa digunakan harus segera dikeluarkan dan disedekahkan kepada kaum dhu'afa yang membutuhkan. Lawan dorongan psikologis menimbun (<em>hoarding</em>) demi menyuburkan empati sosial.
+            </li>
+            <li><strong>Komitmen Etika Relasional — Khidmah Nyata untuk Kelompok Disabilitas & Penyakit Kronis:</strong><br>
+                Teladani kepedulian Isa AS terhadap <em>al-akmah</em> dan <em>al-abrash</em> dengan mengalokasikan waktu dan dana nyata minimal satu kali setiap bulan untuk mengunjungi atau mendonasikan fasilitas kepada yayasan tuna netra, panti kusta/penyakit kronis, atau bangsal rumah sakit kelas dhu'afa. Hadirkan sentuhan empati, dengarkan curahan hati mereka, dan hapus stigma sosial terhadap penderita disabilitas di lingkungan Anda.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>Ketika aku berhasil meraih pencapaian besar dalam karier, sains, atau bisnis, apakah bisikan hatiku pertama kali memuji kecerdasan dan kehebatanku sendiri (benih <em>God Complex</em>), ataukah aku seketika bersujud mengakui bahwa semua itu semata-mata terjadi karena titipan izin Allah (<em>Bi-idznillāh</em>)?</li>
+            <li>Seberapa banyak makanan, pakaian, perhiasan, dan barang berharga yang aku timbun di sudut-sudut rumahku dengan dalih 'persiapan masa depan', padahal sejatinya lahir dari ketakutan miskin dan ketidakpercayaan hatiku pada jaminan rezeki Allah Sang Maha Pemelihara?</li>
+            <li>Seandainya Allah mengutus seorang nabi yang mampu membaca dan mengumumkan kepada publik apa saja yang aku konsumsi dan apa saja yang aku sembunyikan di kamar tidurku yang paling sunyi, apakah aku akan merasa tenang karena kesucian integritasku, ataukah aku akan tertunduk malu menyadari betapa banyaknya kebohongan dan keserakahan yang kututupi dari pandangan manusia?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Khāliqas-samāwāti wal-ardh, Yā Man bi-yadihi malakūtu kulli syai', Yā Muhyil-mawtā wa Yā Syāfiyal-asqām. Ya Allah yang telah membekali hamba dan rasul-Mu, Isa Al-Masih putra Maryam, dengan tanda-tanda mukjizat yang menakjubkan, dan telah mengikat seluruh keajaiban tersebut di bawah naungan izin dan kehendak-Mu yang mutlak (Bi-idznillāh). Kami memohon kepada-Mu: sembuhkanlah kebutaan mata hati kami dari memandang kebenaran ayat-ayat-Mu sebagaimana Engkau menyembuhkan orang buta sejak lahir. Bersihkanlah kusta kemunafikan, kedengkian, dan keserakahan yang mengotori jiwa kami sebagaimana Engkau menyucikan penderita kusta. Hidupkanlah kalbu kami yang mati oleh kelalaian dunia sebagaimana Engkau membangkitkan orang-orang mati dari kubur. Lindungilah jiwa kami dari penyakit arogansi intelektual dan sindrom keangkuhan diri, serta bersihkanlah rumah kami dari tumpukan harta haram dan ketamakan menimbun materi. Jadikanlah seluruh ikhtiar hidup kami senantiasa bersandar pada izin dan rahmat-Mu, serta wafatkanlah kami dalam golongan orang-orang yang beriman dengan sebenar-benarnya iman. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-048 - QS. Ali 'Imran Ayat 48.html">&larr; Kembali ke Ayat 48 (QS. 3:48)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 49</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-050 - QS. Ali 'Imran Ayat 50.html">Lanjut ke Ayat 50 (QS. 3:50) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

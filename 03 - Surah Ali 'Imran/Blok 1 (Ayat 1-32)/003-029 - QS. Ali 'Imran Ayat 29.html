@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-029 - QS. Ali 'Imran Ayat 29 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-028 - QS. Ali 'Imran Ayat 28.html">&larr; Ayat Sebelumnya (QS. 3:28)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-030 - QS. Ali 'Imran Ayat 30.html">Ayat Berikutnya (QS. 3:30) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu: Dialektika Muhkamat vs Mutasyabihat</span>
+        <span class="badge">Klaster 5 (Ayat 28–32): Doktrin Loyalitas Teologis (Al-Walā' wal-Barā'), Kemahatahuan Batin (Murāqabah Ilāhiyyah), Akuntabilitas Hari Pembalasan & Ujian Cinta Hakiki via Ittibā' ar-Rasūl</span>
+        <span class="badge">22 Kata | 77 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 29</h1>
+    <div class="transliteration">
+        "Qul in tukhfū mā fī shudūrikum aw tubdūhu ya'lamhullāh(u), wa ya'lamu mā fis-samāwāti wa mā fil-ardh(i), wallāhu 'alā kulli syay'in qadīr(un)."
+    </div>
+    <div class="thematic-title">
+        Kemahatahuan Absolut dan Pengawasan Ilahi (Murāqabah Ilāhiyyah): Penembusan Rahasia Bilik Dada, Kosmologi Makro Langit-Bumi, Dekonstruksi Kemunafikan Batin & Kedaulatan Kuasa Tanpa Batas
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 5: Kausalitas Penyingkapan Loyalitas Batin, Panoptikon Transenden & Penegasan Sifat Al-'Ilm wal-Qudrah)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        قُلْ إِن تُخْفُوا۟ مَا فِى صُدُورِكُمْ أَوْ تُبْدُوهُ يَعْلَمْهُ ٱللَّهُ ۗ وَيَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ ۝٢٩
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Katakanlah (wahai Muhammad kepada seluruh mukalaf): 'Jika kamu menyembunyikan apa yang ada di dalam dadamu (berupa rahasia niat, loyalitas batin, kebencian, kecintaan, atau persekongkolan) atau kamu menampakkannya (melalui lisan, tulisan, dan tindakan lahiriah), niscaya Allah mengetahuinya.' Dan Dia mengetahui apa yang ada di langit dan apa yang ada di bumi; dan Allah Maha Kuasa atas segala sesuatu."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan penegasan teologis yang berfungsi ganda: sebagai peringatan keras (<em>wa'īd syadīd</em>) sekaligus jaminan keadilan mutlak (<em>wa'd karīm</em>) pasca-peletakan garis demarkasi loyalitas pada ayat 28. Struktur bahasanya merumuskan prinsip-prinsip epistemologi ketuhanan yang sangat fundamental:
+    </p>
+    <ul>
+        <li><strong>Qul (قُلْ):</strong> Perintah langsung kepada Rasulullah ﷺ untuk menyampaikan ultimatum ontologis ini secara terbuka. Penggunaan kata amr <em>Qul</em> di awal ayat menandakan bahwa maklumat ini bersifat universal, mengikat, dan mencabut segala dalih kepura-puraan kaum munafik di hadapan masyarakat Madinah.</li>
+        <li><strong>In Tukhfū... Aw Tubdūhu (إِن تُخْفُوا أَوْ تُبْدُوهُ):</strong> Bentuk syarat yang mencakup dua kutub eksistensi tindakan manusia secara menyeluruh (<em>istighrāqul-aḥwāl</em>). Allah mendahulukan kata <em>tukhfū</em> (menyembunyikan) daripada <em>tubdūhu</em> (menampakkan) untuk menegaskan bahwa apa yang dianggap manusia paling mustahil diakses—yakni lipatan terdalam relung batin—bagi Allah adalah sama terangnya dengan demonstrasi lahiriah yang kasat mata.</li>
+        <li><strong>Fī Shudūrikum (فِي صُدُورِكُمْ):</strong> Dipilihnya kata <em>ash-shudūr</em> (dada) alih-alih <em>al-qulūb</em> (hati) memiliki kedalaman makna luhur. Dada adalah wadah terluar dari kalbu; jika pintu gerbang dan rongga dada manusia saja telah terdeteksi sempurna oleh pengawasan Allah, maka apalagi inti kalbu (*as-suwaydā'*), lintasan bisikan bawah sadar (*al-khawāṭhir*), dan desah rahasia yang bahkan belum sempat disadari oleh manusia itu sendiri.</li>
+        <li><strong>Ya'lamhullāh (يَعْلَمْهُ اللَّهُ):</strong> Kalimat jawab syarat yang lugas tanpa penundaan. Kehadiran nama agung <em>Allāh</em> (Ismul-Jalālah) sebagai fa'il memberikan getaran kewibawaan transenden: yang mengintai dan mencatat lintasan batin manusia bukanlah malaikat yang terbatas inderanya, melainkan Rabb Pemilik Alam Semesta.</li>
+        <li><strong>Wa Ya'lamu Mā Fis-Samāwāti wa Mā Fil-Ardh (وَيَعْلَمُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ):</strong> Lompatan perspektif dari mikrokosmos batin manusia ke makrokosmos semesta raya. Pengetahuan Allah atas isi dada bukanlah hal yang mengherankan, karena Dia adalah Zat yang mengawasi orbit triliunan benda langit di galaksi tak bertepi dan pergerakan partikel terkecil di kedalaman perut bumi.</li>
+        <li><strong>Wallāhu 'Alā Kulli Syay'in Qadīr (وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ):</strong> Penutup ayat yang menggabungkan kesempurnaan sifat <em>Al-'Ilm</em> (Pengetahuan Meliputi) dengan <em>Al-Qudrah</em> (Kekuasaan Eksekusi Mutlak). Mengetahui isi hati tanpa kuasa membalas adalah kelemahan; berkuasa membalas tanpa mengetahui hakikat niat adalah kezaliman; maka penyatuan ilmu dan kuasa mutlak adalah garansi keadilan hakiki.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>قُلْ</strong><br>(<em>Qul</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Keluar dari pangkal lidah menempel langit-langit lunak (<em>aqshal-lisān ma'a mā yalīhi minal-ḥanakil-a'lā</em>), memiliki sifat isti'lā', syiddah, dan jahr.<br>
+                    <strong>Huruf Lām Sukun:</strong> Dibaca idzhār fi'lī dengan sifat tawassuṭh dan inḥirāf.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dhommah pada Qāf dan sukun jazm pada Lām tanpa waqaf saktah.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>إِن تُخْفُوا۟</strong><br>(<em>In tukhfū</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Tā' disamarkan suaranya disertai ghunnah tarqīq selama 2 harakat.<br>
+                    <strong>Huruf Khā' Sukun:</strong> Keluar dari tenggorokan bagian atas (<em>adnal-ḥalq</em>), memiliki sifat hams, rakhāwah, dan isti'lā' (tafkhīm martabat ke-4).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad dipanjangkan 2 harakat. Alif fāriqah di ujungnya tidak dibaca.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca ikhfā' pada nūn sukun dan membuang nūn i'rab (ḥadzfun-nūn) sebagai tanda jazm fi'il syarat.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>مَا فِى</strong><br>(<em>Mā fī</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif mad pada <em>mā</em> dipanjangkan 2 harakat.<br>
+                    <strong>Gugurnya Mad (Ḥadzful-Mad):</strong> Yā' mad pada <em>fī</em> gugur pengucapannya saat washal karena bertemu huruf Ṣhād sukun pada kata berikutnya guna menghindari pertemuan dua sukun (<em>iltiqā'us-sākinayn</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca mad thabi'i pada <em>mā</em> dan langsung menyambungkan kasrah pada fā' ke ṣhād bertasydid (<em>mafish-shudūr</em>) saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>صُدُورِكُمْ</strong><br>(<em>Ṣhudūrikum</em>)</td>
+                <td>
+                    <strong>Huruf Ṣhād:</strong> Huruf isti'lā' dan iṭhbāq dengan desis shafīr yang tebal.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad setelah Dāl berharakat dhommah dipanjangkan 2 harakat.<br>
+                    <strong>Tarqīq Huruf Rā':</strong> Rā' berharakat kasrah dibaca tipis.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu huruf Hamzah/Alif dibaca jelas tanpa dengung.
+                </td>
+                <td>
+                    • <strong>Qālūn, Ibnu Katsīr, Abū Ja'far:</strong> Membaca dengan <strong>Shilah Mīm al-Jam'</strong> saat washal (<strong>صُدُورِكُمُو أَوْ</strong> - <em>ṣhudūrikumū aw</em>) dengan mad shilah kubrā (munfaṣhil: 2 harakat bagi Ibnu Katsir dan Abu Ja'far; pilihan 2/4 harakat bagi Qalun).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Naql</strong> harakat hamzah ke mīm sukun jam' (<em>ṣhudūrikumaw tubdūhu</em>) dengan membuang hamzah qatha'.<br>
+                    • <strong>Imam-imam Lainnya (termasuk Ḥafsh):</strong> Membaca sukun mīm jam' dengan ketegasan idzhār syafawī.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>أَوْ تُبْدُوهُ</strong><br>(<em>Aw tubdūhu</em>)</td>
+                <td>
+                    <strong>Wāwu Līn:</strong> Huruf Wāwu sukun didahului fat-ḥah dibaca lembut tanpa pemanjangan saat washal.<br>
+                    <strong>Qalqalah Ṣhughrā:</strong> Huruf Bā' sukun di tengah kata memantul ringan dan jelas dari dua bibir.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad setelah Dāl dipanjangkan 2 harakat.<br>
+                    <strong>Hā' Kināyah:</strong> Berharakat dhommah, diucapkan dengan hembusan hams dari pangkal tenggorokan.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr:</strong> Membaca dengan <strong>Shilah Hā' ad-Dhamīr</strong> (<em>aw tubdūhū ya'lamhu</em>) memanjangkannya 2 harakat (karena berada di antara huruf sukun dan huruf berharakat, sesuai qawa'id khususnya).<br>
+                    • <strong>Sembilan Imam Lainnya (termasuk Ḥafsh):</strong> Membaca dengan <strong>Qaṣhr</strong> (tanpa shilah/tanpa pemanjangan suara: <em>aw tubdūhu ya'lamhu</em>) karena huruf sebelumnya berupa sukun mad.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>يَعْلَمْهُ ٱللَّهُ</strong><br>(<em>Ya'lamhullāh</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Sukun keluar dari tengah tenggorokan (<em>wasathul-ḥalq</em>) dengan sifat tawassuṭh.<br>
+                    <strong>Sukun Jazm:</strong> Huruf Mīm sukun sebagai jawābusy-syarṭh dibaca jelas.<br>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Dua Lām pada lafaz Allāh dibaca tebal (taghlīzh) karena didahului harakat dhommah pada Hā' dhamīr.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca jazm pada mīm (<em>ya'lamh</em>), mendhommahkan hā' kināyah saat washal, dan membaca tafkhīm pada Lām Jalālah.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَيَعْلَمُ</strong><br>(<em>Wa ya'lamu</em>)</td>
+                <td>
+                    <strong>Huruf Wāwu & Yā':</strong> Huruf istifāl dan infitāḥ berharakat fat-ḥah.<br>
+                    <strong>Huruf 'Ain Sukun:</strong> Tawassuṭh di wasathul halq.<br>
+                    <strong>Harakat Dhommah Mīm:</strong> Mīm marfū'ah sebagai penanda jumlah isti'nāfiyyah.
+                </td>
+                <td>
+                    • <strong>Seluruh Sepuluh Imam Mutawatirah:</strong> Sepakat membaca rafa' dengan dhommah pada Mīm (<strong>وَيَعْلَمُ</strong> - <em>wa ya'lamu</em>) sebagai kalām musta'naf (menegaskan kemahatahuan umum yang mencakup langit dan bumi).<br>
+                    • Terdapat riwayat syādzdzah (Al-Ḥasan Al-Baṣhrī & Ibnu Abī 'Ablah) yang membaca jazm (<em>wa ya'lam</em>) di-'athaf-kan pada jawab syarat, namun mushaf Utsmani dan sanad mutawatir menetapkan harakat dhommah.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مَا فِى ٱلسَّمَـٰوَٰتِ</strong><br>(<em>Mā fis-samāwāti</em>)</td>
+                <td>
+                    <strong>Gugurnya Yā' Mad:</strong> Yā' pada <em>fī</em> gugur saat washal karena bertemu Sīn sukun.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lām ta'rīf melebur sempurna ke huruf Sīn bertasydid.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjariyyah pada Mīm dan Wāwu masing-masing 2 harakat.<br>
+                    <strong>Kasrah Tā':</strong> Tanda jarr mu'annats sālim.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca jamak mu'annats sālim majrūr bil-kasrah (<em>as-samāwāti</em>) dengan dua mad thabi'i.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَمَا فِى ٱلْأَرْضِ</strong><br>(<em>Wa mā fil-ardh</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lām ta'rīf dibaca jelas.<br>
+                    <strong>Tafkhīm Huruf Rā':</strong> Rā' sukun didahului fat-ḥah dibaca tebal.<br>
+                    <strong>Huruf Ḍhād Sukun (saat waqaf):</strong> Huruf isti'lā', iṭhbāq, rakhāwah, dan memiliki sifat <strong>Istithālah</strong> (perpanjangan suara di tepi lidah hingga gigi geraham).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Naql</strong> harakat hamzah ke lām ta'rīf (<em>wa mā fil-lardh</em>).<br>
+                    • <strong>Ḥamzah:</strong> Memiliki riwayat saktah laṭhīfah pada lām ta'rīf saat washal dan taḥqīq atau tashīl saat waqaf.<br>
+                    • <strong>Imam-imam Lainnya:</strong> Membaca taḥqīq biasa dengan idzhār qamariyyah.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>وَٱللَّهُ</strong><br>(<em>Wallāhu</em>)</td>
+                <td>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Lām dibaca tebal karena didahului huruf berharakat fat-ḥah (Wāwu).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Dipanjangkan 2 harakat pada Lām Jalālah.
+                </td>
+                <td>
+                    Konsensus sepuluh imam membaca tafkhīm murni pada Lām Jalālah.
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>عَلَىٰ كُلِّ شَىْءٍۢ</strong><br>(<em>'Alā kulli syay'in</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif layyinah pada <em>'alā</em> dipanjangkan 2 harakat.<br>
+                    <strong>Huruf Yā' Līn:</strong> Yā' sukun pada <em>syay'in</em> dibaca lembut.<br>
+                    <strong>Ikhfā' Ḥaqīqī Tafkhīm:</strong> Tanwīn kasrah bertemu Qāf disamarkan dengan dengung tebal (<em>aqrabu ilāl-makhraj</em>) selama 2 harakat.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Līn Mahmūz</strong> pada kata <em>syay'in</em> dengan pilihan Tawassuṭh (4 harakat) atau Ṭhūl (6 harakat).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca līn biasa tanpa pemanjangan saat washal, disertai ikhfā' bighunnah mufakhkhamah di hadapan Qāf.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>قَدِيرٌۭ ۝٢٩</strong><br>(<em>Qadīr</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Isti'lā' fat-ḥah martabat kedua.<br>
+                    <strong>Tarqīq Huruf Rā' (saat waqaf):</strong> Huruf Rā' sukun 'āridh yang didahului Yā' mad dibaca <strong>Tipis (Tarqīq)</strong> secara ijma'.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Yā' mad bertemu huruf yang disukunkan karena waqaf, dibaca <strong>2, 4, atau 6 harakat</strong>.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca tarqīq mutlak pada huruf Rā' saat waqaf dan memperbolehkan 3 martabat panjang mad 'āridh lis-sukūn (qaṣhr, tawassuṭh, isybā') disesuaikan dengan ritme tilawah.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Utama: Penyingkapan Konspirasi Kaum Munafik Madinah (Tafsīr At-Ṭhabarī No. 6749 & Tafsīr Ibnu Abī Ḥātim No. 3514 dari Sahabat Abdullah bin Abbas r.a.):</strong><br>
+        Diriwayatkan dari jalur Sa'id bin Jubair dan 'Ikrimah, dari Sahabat Abdullah bin Abbas r.a. Beliau menuturkan:<br>
+        <em>"Tatkala Allah Ta'ala menurunkan ayat 28 yang melarang kaum mukmin mengangkat orang-orang kafir sebagai auliya' (wali, pelindung, sekutu rahasia) dan memberikan rukhshah taqiyyah lahiriah hanya saat terancam binasa, sekelompok pembesar munafik di Madinah (seperti Abdullah bin Ubay bin Salul dan kroni-kroninya) saling berbisik di majelis rahasia mereka: 'Kita tampakkan saja ketaatan dan persahabatan di hadapan Muhammad dan para sahabatnya, tetapi di dalam hati kita tetap menjaga persekutuan dan kecintaan sejati dengan saudara-saudara kita (kaum musyrikin Quraisy dan para rabi Yahudi Madinah); toh Muhammad tidak akan pernah tahu apa yang bergolak di dalam dada kita!' Maka seketika itu pula Allah menurunkan firman-Nya: Qul in tukhfū mā fī shudūrikum aw tubdūhu ya'lamhullāh, wa ya'lamu mā fis-samāwāti wa mā fil-ardh, wallāhu 'alā kulli syay'in qadīr."</em><br>
+        <strong>Derajat Sanad:</strong> Hasan shahih sesuai kriteria riwayat eksegesis mufassirin salaf. Ayat ini berfungsi merontokkan strategi kamuflase kaum munafik hingga ke akarnya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Shahīh Riwayat Imam Al-Bukhārī (No. 4953, 7536) & Imam Muslim (No. 2775) dari Sahabat Abdullah bin Mas'ud r.a. — Keraguan Kaum Jahiliyah terhadap Pendengaran dan Pengetahuan Batin Allah:</strong><br>
+        Sahabat Abdullah bin Mas'ud r.a. meriwayatkan peristiwa yang melatarbelakangi pemahaman hakikat ilmu Allah:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        اجْتَمَعَ عِنْدَ الْبَيْتِ ثَلَاثَةُ نَفَرٍ: قُرَشِيَّانِ وَثَقَفِيٌّ، أَوْ ثَقَفِيَّانِ وَقُرَشِيٌّ، كَثِيرٌ شَحْمُ بُطُونِهِمْ، قَلِيلٌ فِقْهُ قُلُوبِهِمْ، فَقَالَ أَحَدُهُمْ: تَرَوْنَ أَنَّ اللَّهَ يَسْمَعُ مَا نَقُولُ؟ قَالَ الْآخَرُ: يَسْمَعُ إِنْ جَهَرْنَا، وَلَا يَسْمَعُ إِنْ أَخْفَيْنَا! وَقَالَ الْآخَرُ: إِنْ كَانَ يَسْمَعُ إِذَا جَهَرْنَا فَإِنَّهُ يَسْمَعُ إِذَا أَخْفَيْنَا!
+        </span>
+        <em>"Ada tiga orang berkumpul di dekat Ka'bah: dua orang Quraisy dan satu orang Tsaqafi (atau dua orang Tsaqafi dan satu Quraisy). Fisik perut mereka tambun, namun pemahaman agama di kalbu mereka sangat tipis. Salah seorang dari mereka berkata: 'Apakah menurut kalian Allah mendengar apa yang sedang kita perbincangkan ini?' Yang kedua menjawab: 'Dia mendengar jika kita mengeraskan suara, tetapi Dia tidak mendengar jika kita berbisik-bisik secara rahasia!' Maka yang ketiga berkata: 'Jika Dia mampu mendengar saat kita berbicara keras, tentulah Dia juga mendengar saat kita menyembunyikan suara kita!' Maka Allah menurunkan wahyu yang menegaskan bahwa tidak ada rahasia langit dan bumi yang tersembunyi bagi-Nya."</em><br>
+        <strong>Korelasi dengan QS. 3:29:</strong> Hadits ini membongkar kebodohan nalar materialistik yang mengira bahwa pendengaran dan penglihatan Allah terikat oleh gelombang suara fisik atau dinding materi, sebuah paradigma kufur yang didekonstruksi total oleh ayat 29.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Shahīh Riwayat Imam Muslim (No. 2564) & Musnad Aḥmad (No. 7814) dari Sahabat Abū Hurairah r.a. — Kalbu sebagai Pusat Pandangan Ilahi:</strong><br>
+        Rasulullah ﷺ menegaskan poros evaluasi ketuhanan:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ، وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ."
+        </span>
+        <em>"Sesungguhnya Allah tidak memandang kepada rupa lahiriah kalian dan tidak pula kepada harta kekayaan kalian, melainkan Dia memandang langsung ke dalam kalbu-kalbu kalian dan amal-amal perbuatan kalian."</em><br>
+        <strong>Pelajaran Hadits:</strong> Hadits ini adalah penjelas definitif bagi frasa <em>mā fī shudūrikum</em>: bahwa di hadapan Allah, seluruh kemegahan visual dan topeng status sosial gugur; yang dinilai dan ditimbang adalah isi batin dan kemurnian tauhid yang tersimpan di bilik dada.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Shahīh Riwayat Imam Al-Bukhārī (No. 6491) & Imam Muslim (No. 131) dari Sahabat Abdullah bin Abbas r.a. — Presisi Pengawasan Niat Batin (Al-Hammam wal-Khathir):</strong><br>
+        Rasulullah ﷺ meriwayatkan firman Rabb-nya dalam Hadits Qudsi:<br>
+        <em>"Sesungguhnya Allah mencatat seluruh kebaikan dan keburukan, kemudian menjelaskan mekanismenya: Barangsiapa yang berniat (hamma) melakukan suatu kebaikan lalu ia tidak sempat mengamalkannya, Allah tetap mencatatnya di sisi-Nya sebagai satu kebaikan sempurna..."</em><br>
+        <strong>Kedalaman Takhrij:</strong> Menunjukkan bahwa ilmu Allah begitu mendalam dan presisi, hingga desah getaran niat manusia sebelum termanifestasi menjadi gerakan otot sekalipun telah diarsip dan diberi ganjaran secara sempurna.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Kh-F-Y (خ-ف-ي — Tukhfū):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> mencatat bahwa akar kata ini memiliki keunikan semantik sebagai kata berlawanan arti (<em>min al-aḍhdhād</em>), yang berkisar pada dua poros: <strong>As-Satru wal-Ghaybūbah (menutup, menutupi, dan menyembunyikan)</strong> serta <strong>Al-Iẓhhār (menampakkan atau mengeluarkan sesuatu dari tempat persembunyiannya)</strong>. Dalam wazan <em>If'āl</em> (<strong>أَخْفَى – يُخْفِي – إِخْفَاءً</strong>), maknanya terkunci pada: memasukkan sesuatu ke tempat yang teramat dalam dan tertutup rapat agar luput dari jangkauan indra manusia. Diksi <em>tukhfū</em> menggambarkan usaha sadar, sengaja, dan terencana dari seseorang untuk menimbun rahasia, niat jahat, atau loyalitas palsu di balik dinding dadanya agar tidak terendus oleh publik.
+        </li>
+        <li><strong>2. Sh-D-R (ص-د-ر — Ṣhudūrikum):</strong>
+            Poros semantiknya menurut Ibnu Faris adalah: <strong>Rujū'un 'an al-wirādi, wa khilāful-wurūd, wa a'lā kulli syay'in wa muqaddamuh (kembali dari sumber air, permulaan kemunculan segala sesuatu, dan bagian terdepan dari suatu struktur)</strong>. <em>Ash-Shadr</em> (dada) dinamakan demikian karena ia merupakan bagian depan tubuh manusia yang menaungi organ-organ vital, sekaligus menjadi tempat pertama munculnya lintasan pikiran dan gejolak emosi (<em>maṣhdarul-khawāṭhir</em>). Dalam terminologi Al-Qur'an, <em>ash-shadr</em> adalah wadah terluar (benteng) bagi <em>al-qalb</em> (hati), dan di dalam qalb terdapat <em>al-fu'ād</em>, lalu di dalamnya ada <em>al-lubb</em>. Disebutkannya wadah terluar (dada) menegaskan bahwa sebelum niat itu mengendap menjadi tekad di inti hati, saat ia baru berputar-putar di rongga dada, Allah telah mengetahuinya dengan sempurna.
+        </li>
+        <li><strong>3. B-D-W (ب-د-و — Tubdūhu):</strong>
+            Ibnu Faris merumuskan porosnya pada: <strong>Ẓhuhūrus-syay'i bayyinan wāḍhiḥan (tampaknya sesuatu secara benderang, nyata, dan kasat mata tanpa penghalang)</strong>. Dari akar inilah muncul kata <em>al-bādiyah</em> (padang pasir terbuka tanpa pepohonan yang menutupi pandangan). <em>Ibdā'</em> berarti mengeluarkan apa yang tadinya tersimpan di dalam batin menjadi wujud fisik yang dapat didengar, dibaca, atau disaksikan oleh orang lain. Penjajaran <em>tukhfū</em> dan <em>tubdūhu</em> membentuk cakupan biner yang membelah seluruh gerak eksistensi manusia: tidak ada kondisi ketiga di luar menyembunyikan atau menampakkan.
+        </li>
+        <li><strong>4. '-L-M (ع-ل-م — Ya'lamhu):</strong>
+            Ibnu Faris merumuskan porosnya pada: <strong>Atsarus-syay'i alladzī yatamayyazu bihī 'an ghayrih (tanda atau jejak pembeda yang membuat sesuatu teridentifikasi secara presisi, jelas, dan pasti)</strong>. <em>Al-'Ilm</em> adalah pengenalan hakiki terhadap realitas objektif sesuai dengan keadaannya yang sebenarnya (<em>idrākul-ḥaqīqah 'alā mā hiya 'alayh</em>). Bila disandarkan kepada Allah, <em>'Ilmullāh</em> adalah sifat azali yang meliputi segala sesuatu yang wajib, ja'iz, maupun mustahil; mengetahui apa yang telah lalu, yang sedang terjadi, yang akan terjadi, serta apa yang tidak terjadi seandainya terjadi bagaimana bentuk terjadinya, steril dari permulaan kebodohan dan steril dari kepunahan lupa.
+        </li>
+        <li><strong>5. S-M-W (س-م-و — As-Samāwāt):</strong>
+            Porosnya menurut Ibnu Faris adalah: <strong>Al-'Uluww wal-irtifā' (ketinggian fisik, kemuliaan derajat, dan keterangkatan posisi)</strong>. Segala sesuatu yang menaungi dan berada di atas dinamakan langit. Penggunaan bentuk jamak <em>as-samāwāt</em> (tujuh lapis langit) menggambarkan keluasan makrokosmos yang tak bertepi dengan segala hierarki malaikat, orbit bintang, galaksi, dan hukum-hukum astrofisika yang mengaturnya.
+        </li>
+        <li><strong>6. '-R-Dh (أ-ر-ض — Al-Ardh):</strong>
+            Ibnu Faris menyebut porosnya adalah: <strong>As-Sufli wat-tawāḍhu' (bagian bawah, kerendahan, ketundukan, dan hamparan tempat berpijak)</strong>. Bumi adalah representasi dari alam materi terendah di mana manusia beraktivitas, berkonspirasi, dan menyembunyikan niatnya.
+        </li>
+        <li><strong>7. Q-D-R (ق-د-ر — Qadīr):</strong>
+            Porosnya adalah: <strong>Nihāyatu kulli syay'in wa mablaghuh, wal-istithā'ah 'alal-fi'l (ukuran batas kesempurnaan sesuatu, penentuan kadar secara presisi, dan kemampuan eksekusi tanpa ada yang mampu melemahkan)</strong>. Wazan <em>Fa'īl</em> pada nama <strong>Al-Qadīr</strong> berfungsi sebagai <em>shighah mubālaghah</em> yang menyatakan bahwa kekuasaan Allah bersifat permanen, absolut, tak terbatas, dan senantiasa efektif menembus segala kemungkinan wujud.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>قُلْ</strong></td>
+                <td>Fi'il amr tsulatsi mujarrad (<em>qāla – yaqūlu</em>) mabni 'alas-sukun. Fa'il dhamir mustatir wujuban taqdiruhu <em>Anta</em>.</td>
+                <td>Jumlah fi'liyyah amriyyah <strong>Musta'nafah</strong> lā maḥalla lahā minal-i'rāb. Berfungsi sebagai pembuka perintah dakwah universal.</td>
+            </tr>
+            <tr>
+                <td><strong>إِن</strong></td>
+                <td>Harf syarṭh jāzim tajzimu fi'layni mabni 'alas-sukun.</td>
+                <td>Alat syarat pengikat hubungan kausalitas hukum antara perbuatan batin manusia dan respons ilmu Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>تُخْفُوا۟</strong></td>
+                <td>Fi'il mudhari' bab if'āl (<em>akhfā – yukhfī</em>). Wāwu al-Jamā'ah: isim dhamir.</td>
+                <td><strong>Fi'lusy-Syarṭh</strong> majzūm bi <strong>ḥadzfin-nūn</strong> li-annahū minal-af'ālil-khamsah. Wāwu al-Jamā'ah fī maḥalli raf'in <strong>Fā'il</strong>. Alif fāriqah lā maḥalla lahā.</td>
+            </tr>
+            <tr>
+                <td><strong>مَا</strong></td>
+                <td>Isim mawṣhūl (atau <em>mā</em> nakirah mawshūfah) mabni 'alas-sukun.</td>
+                <td>Fī maḥalli nashbin <strong>Maf'ūl bih</strong> bagi fi'il <em>tukhfū</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى صُدُورِكُمْ</strong></td>
+                <td><em>Fī</em>: Harf jarr lil-wadzhiyyah wal-iḥāṭhah. <em>Ṣhudūri</em>: Isim majrur bil-kasrah. <em>Kum</em>: Dhamir muttashil mabni 'alas-sukun.</td>
+                <td><em>Kum</em> fī maḥalli jarrin <strong>Mudhaf Ilayh</strong>. Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi shilatil mawshūl al-maḥdzūfah (takdirnya: <em>istaqarra</em> atau <em>kā'inan fī shudūrikum</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>أَوْ</strong></td>
+                <td>Harf 'aṭhaf lil-tanwī' / taqsīm mabni 'alas-sukun.</td>
+                <td>Meng-'athaf-kan alternatif penampakan kepada perbuatan penyembunyian.</td>
+            </tr>
+            <tr>
+                <td><strong>تُبْدُوهُ</strong></td>
+                <td>Fi'il mudhari' bab if'āl (<em>abdā – yubdī</em>). Wāwu: fa'il. Hā': dhamir muttashil.</td>
+                <td>Fi'il mudhari' <strong>ma'ṭhūf</strong> 'alā fi'lusy-syarth (<em>tukhfū</em>) majzūm bi ḥadzfin-nūn. Wāwu: <strong>Fā'il</strong>. Hā': fī maḥalli nashbin <strong>Maf'ūl bih</strong> (merujuk pada <em>mā</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>يَعْلَمْهُ</strong></td>
+                <td>Fi'il mudhari' tsulatsi mujarrad (<em>'alima – ya'lamu</em>). Hā': dhamir muttashil.</td>
+                <td><strong>Jawābusy-Syarṭh</strong> majzūm bis-sukūn 'alāl-mīm. Hā': dhamir muttashil fī maḥalli nashbin <strong>Maf'ūl bih Muqaddam</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Ism 'alam jalālah, mufrad.</td>
+                <td><strong>Fā'il Mu'akhkhar</strong> marfū' bidh-dhommah azh-zhāhirah. Seluruh jumlah syarthiyyah (syarth wa jawab) fī maḥalli nashbin <strong>Maqūlul-Qawl</strong> bagi fi'il <em>Qul</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَيَعْلَمُ</strong></td>
+                <td>Wāwu: Harf isti'nāf. <em>Ya'lamu</em>: Fi'il mudhari' marfū'. Fa'il dhamir mustatir jawāzan taqdīruhū <em>Huwa</em>.</td>
+                <td>Fi'il mudhari' <strong>marfū' bidh-dhommah azh-zhāhirah</strong> (tajarrud 'anin-nāshib wal-jāzim). Fa'il: <em>Huwa</em> (kembali kepada Allah). Jumlah fi'liyyah <strong>Musta'nafah</strong> (atau ḥāliyyah) lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>مَا</strong></td>
+                <td>Isim mawṣhūl mabni 'alas-sukun.</td>
+                <td>Fī maḥalli nashbin <strong>Maf'ūl bih</strong> bagi fi'il <em>ya'lamu</em> kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلسَّمَـٰوَٰتِ</strong></td>
+                <td><em>Fī</em>: Harf jarr. <em>As-Samāwāti</em>: Isim majrūr bil-kasrah li-annahū jam'u mu'annats sālim.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi shilatil mawshūl al-maḥdzūfah (<em>istaqarra fis-samāwāt</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا فِى ٱلْأَرْضِ</strong></td>
+                <td>Wāwu: Harf 'athaf. <em>Mā</em>: Isim mawshul ma'thuf. <em>Fil-ardh</em>: Jārr wa majrūr.</td>
+                <td><em>Mā</em> fī maḥalli nashbin ma'ṭhūf 'alā <em>mā</em> pertama. <em>Fil-ardh</em> muta'alliq bi shilatil mawshul kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td>Wāwu: Harf isti'nāf. <em>Allāhu</em>: Ism jalālah.</td>
+                <td><strong>Mubtada'</strong> marfū' bidh-dhommah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَىٰ كُلِّ شَىْءٍۢ</strong></td>
+                <td><em>'Alā</em>: Harf jarr. <em>Kulli</em>: Isim majrur. <em>Syay'in</em>: Mudhaf ilayh majrur bil-kasrah.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi khabar <em>Qadīr</em>. Menunjukkan universalitas objek kekuasaan Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>قَدِيرٌۭ ۝٢٩</strong></td>
+                <td>Shighah mubālaghah wazan <em>Fa'īl</em> dari akar <em>Q-D-R</em>.</td>
+                <td><strong>Khabar Mubtada'</strong> marfū' bidh-dhommah azh-zhāhirah. Seluruh jumlah ismiyyah <em>Wallāhu 'alā kulli syay'in qadīr</em> adalah <strong>Jumlah Tazyīliyyah Musta'nafah</strong> penutup ayat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Taqdimut-Takhfī 'alal-Ibdā' (Prioritas Penyingkapan Tabir Batin):</strong>
+            Didahulukannya kata <em>tukhfū</em> atas <em>tubdūhu</em> adalah mukjizat balaghah struktural. Naluri manusiawi berasumsi bahwa hal yang paling mudah diketahui adalah yang tampak, sedangkan yang disembunyikan membutuhkan pembuktian rumit. Al-Qur'an membalik logika ini: bagi ilmu Allah yang azali, menembus bilik batin yang dirahasiakan manusia sama sekali tidak memiliki derajat kesulitan yang berbeda dari memantau tindakan lahiriah. Ini adalah <strong>Ta'kīd lil-Iḥāṭhatit-Tāmmah</strong> (penegasan liputan ilmu yang absolut).
+        </li>
+        <li><strong>Ilmu Ma'ani — Balāghatut-Takrār bi Raf'i "Wa Ya'lamu" (Dinamika Ilmu Tanpa Syarat):</strong>
+            Pengulangan kata kerja <em>ya'lamu</em> dalam bentuk fi'il mudhari' marfu' (<strong>وَيَعْلَمُ</strong>), bukan jazm sebagai ma'thuf atas jawab syarat, mengandung rahasia balaghah yang agung:
+            <br>• Jika dibaca jazm (<em>wa ya'lam</em>), maka ilmu Allah atas langit dan bumi seolah-olah menjadi konsekuensi bersyarat dari perbuatan menyembunyikan/menampakkan isi hati manusia.
+            <br>• Dengan dibaca <strong>rafa' isti'nāfī</strong>, Al-Qur'an memproklamasikan bahwa ilmu Allah atas seluruh isi langit dan bumi adalah hakikat teologis independen yang berdiri sendiri, abadi, dan senantiasa berkesinambungan (<em>at-tajaddud wal-istimrār</em>), sama sekali tidak bergantung pada ada atau tidaknya perbuatan manusia.
+        </li>
+        <li><strong>Ilmu Bayan — Majāz Mursal 'Alāqah Maḥalliyyah pada Diksi "Shudūrikum":</strong>
+            Al-Qur'an menyebutkan tempatnya (<em>ash-shadr</em> / dada), padahal yang dimaksud adalah isinya (<em>al-qalb</em> / hati, niat, dan lintasan rahasia). Hubungan majaz ini dinamakan <strong>al-'alāqah al-maḥalliyyah</strong>. Rahasia pemilihan kata dada adalah: dada merupakan benteng pertahanan yang menaungi hati; jika benteng luar yang paling kokoh dan dalam saja telah ditembus oleh pandangan Allah, maka tidak ada satu pun rahasia di inti kalbu yang mampu bersembunyi dari-Nya.
+        </li>
+        <li><strong>Ilmu Bayan — Kināyah 'anil-Istighrāqil-Kullī:</strong>
+            Frasa <em>in tukhfū... aw tubdūhu</em> adalah <strong>Kināyah 'anil-iḥāṭhati bi jamī'i af'ālil-mukallafīn</strong>. Melalui diktum dwitunggal ini, Al-Qur'an merangkum seluruh spektrum aktivitas manusia (baik yang bersifat internal-kejiwaan maupun eksternal-kinestetik) di bawah kendali satu hukum pengawasan Ilahi.
+        </li>
+        <li><strong>Ilmu Badi' — Ath-Ṭhibāq al-Muzdawij (Simetri Dua Pasang Kontras):</strong>
+            Ayat ini dihiasi oleh dua pasang thibaq (antitesis) yang sangat harmonis:
+            <br>1. <strong>Ṭhibāq pertama (Mikrokosmos Manusia):</strong> Antara <em>Tukhfū</em> (menyembunyikan) dan <em>Tubdūhu</em> (menampakkan).
+            <br>2. <strong>Ṭhibāq kedua (Makrokosmos Alam Semesta):</strong> Antara <em>As-Samāwāti</em> (puncak ketinggian langit) dan <em>Al-Ardh</em> (dasar kerendahan bumi).
+            Penyatuan dua thibaq ini merajut sebuah jaring semantik yang sempurna: dari rahasia batin manusia yang paling mikro hingga bentangan kosmik yang paling makro, semuanya berada dalam satu genggaman ilmu Allah.
+        </li>
+        <li><strong>Ilmu Badi' — Husnut-Tazyīl wal-I'tilāf baynal-'Ilmi wal-Qudrah:</strong>
+            Penutupan ayat dengan kalimat <em>Wallāhu 'alā kulli syay'in qadīr</em> adalah puncak keindahan badi' (<strong>ḥusnut-ta'qīb / ḥusnul-khitām</strong>). Dalam ilmu akidah dan balaghah, mengabarkan ilmu tanpa menyebutkan kuasa sering kali menyiratkan kepasifan (seperti seseorang yang tahu kejahatan tetapi tidak berdaya menindaknya). Maka penutupan dengan nama <strong>Al-Qadīr</strong> menyuntikkan rasa gentar (<em>ar-rahbah</em>): Allah mengetahui setiap detak khianat di hatimu, dan Dia memiliki kuasa mutlak detik ini juga untuk membalas, melumpuhkan, dan mengazabmu tanpa ada pembela yang sanggup menahan-Nya!
+        </li>
+        <li><strong>I'jāz Fonetik — Kadens Bunyi Huruf Qāf dan Rīma Tarqīq:</strong>
+            Ayat ini dibuka dengan hentakan vokal berat pada huruf isti'la' <em>Qul</em>, diselingi desis hams <em>tukhfū</em>, pantulan qalqalah <em>tubdūhu</em>, dan ditutup dengan rima berwibawa <em>Qadīr</em>. Huruf Rā' sukun yang dibaca <strong>tarqīq</strong> (tipis) setelah huruf mad memberikan efek suara yang tajam dan menusuk relung batin, laksana pedang kebenaran yang membelah kegelapan dada manusia.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Logis dengan Ayat 28):</strong>
+            Pada Ayat 28, Allah meletakkan doktrin politik-spiritual yang sangat tegas: larangan mutlak bagi orang-orang beriman untuk menjadikan kaum kafir sebagai <em>awliyā'</em> (wali, sekutu ideologis, pelindung rahasia) dengan mengorbankan solidaritas sesama mukmin. Namun, di ujung ayat 28, Allah memberikan klausul pengecualian bersyarat: <em>"illā an tattaqū minhum tuqāh"</em> (kecuali jika kamu hendak menjaga diri dari bahaya kezaliman mereka secara taqiyyah lahiriah).<br>
+            Pemberian rukhshah taqiyyah ini secara psikologis membuka celah manipulasi: seseorang bisa saja berdalih melakukan taqiyyah lahiriah, padahal hatinya memang benar-benar condong, mencintai, dan mengkhianati barisan mukminin. Di sinilah Ayat 29 hadir sebagai <strong>Kunci Pengaman Spiritual (Spiritual Deadlock)</strong>:
+            <br><em>"Katakanlah: Jika kamu menyembunyikan apa yang ada di dalam dadamu (berupa cinta terlarang dan persekutuan khianat) atau kamu menampakkannya, Allah pasti mengetahuinya!"</em>
+            Ayat 29 menutup rapat pintu legalisme semu: taqiyyah hanya sah jika hati tetap membenci kekufuran dan bulat loyal kepada Allah; namun jika di dalam dada tersimpan kemunafikan, rukhshah taqiyyah gugur dan murka Allah yang berlaku.
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Dinamika Infiltrasi Intelijen di Madinah Pasca-Badar jelang Uhud):</strong>
+            Konteks sosiologis Madinah pada periode turunnya ayat ini diwarnai oleh ketegangan geopolitik yang teramat tinggi:
+            <ol>
+                <li><strong>Perang Urat Saraf & Spionase Kaum Munafik:</strong> Pasca-kemenangan Badar (2 H), tokoh munafik Abdullah bin Ubay bin Salul dan pengikutnya terpaksa menyatakan keislaman secara formal. Namun di balik layar, mereka membangun jaringan intelijen gelap dengan klan-klan Yahudi Madinah (Bani Qainuqa' dan Bani Nadhir) serta mengirim kurir rahasia ke Makkah untuk membocorkan kekuatan militer Nabi Muhammad ﷺ.</li>
+                <li><strong>Retorika Diplomasi Manis vs Tikaman Belakang:</strong> Kaum munafik kerap hadir di shaf terdepan Masjid Nabawi dan memuji-muji Rasulullah ﷺ, namun saat malam tiba mereka berkumpul di bilik-bilik tersembunyi menyusun konspirasi subversif. Mereka mengira pertemuan bawah tanah tanpa saksi mata itu steril dari kebocoran informasi.</li>
+                <li><strong>Dekonstruksi Kerahasiaan Batin oleh Wahyu:</strong> Ayat 29 turun laksana kilatan petir yang menyinari ruang gelap konspirasi mereka. Allah memperingatkan mereka: dinding bilik tertutup, sandi kurir diplomatik, dan bahkan bisikan hati yang paling privat sekalipun tidak ada gunanya, karena Allah menyiarkannya secara langsung kepada Rasul-Nya melalui wahyu.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Emas Menuju Eskatologi Visual Ayat 30):</strong>
+            Setelah menegaskan bahwa seluruh isi dada diketahui oleh Allah di Ayat 29, timbul pertanyaan eksistensial: <em>"Lalu apa konsekuensi dari kemahatahuan Allah tersebut di masa depan?"</em><br>
+            Ayat 30 seketika menjawab dengan visualisasi hari kiamat yang mengerikan:
+            <br><em>"Yawma tajidu kullu nafsim mā 'amilat min khayrim muḥḍharā, wa mā 'amilat min sū'in tawaddu law anna baynahā wa baynahū amadam ba'īdā..."</em>
+            <br>(Pada hari ketika setiap jiwa mendapati seluruh kebaikan yang telah dikerjakannya dihadirkan di hadapannya secara fisik, dan begitu pula kejahatan yang pernah dilakukannya; ia berharap andai ada jarak yang teramat jauh antara dirinya dengan kejahatan tersebut!).
+            Korelasinya teramat agung: apa yang hari ini kamu sembunyikan di dalam dada (Ayat 29), pada hari kiamat kelak tidak lagi berupa data abstrak, melainkan <strong>dikonversi menjadi wujud visual konkret (muḥḍharā)</strong> di hadapan seluruh makhluk (Ayat 30).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Tafsir Bi ar-Riwāyah & Penegasan Hujah Kosmologis:</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīli Āy Al-Qur'ān</em>, At-Tabari menegaskan bahwa ayat ini adalah ultimatum langsung dari Allah kepada seluruh kaum beriman dan orang-orang munafik yang hidup sezaman dengan Rasulullah ﷺ. Menukil riwayat Qatadah dan As-Suddi, At-Tabari membedah bahwa lafaz <em>mā fī shudūrikum</em> mencakup cinta rahasia kepada orang-orang musyrik, keraguan terhadap kebenaran Islam, maupun niat tulus berjuang di jalan Allah. At-Tabari menyoroti argumentasi rasional di balik penyebutan langit dan bumi: Zat yang mampu menciptakan, memelihara, dan mengetahui setiap butir debu di tujuh lapis langit dan di kedalaman bumi, tentulah secara akal jauh lebih mampu menembus gumpalan daging kecil bernama dada manusia. Di akhir uraiannya, At-Tabari menggarisbawahi bahwa penutup <em>Wallāhu 'alā kulli syay'in qadīr</em> adalah peringatan bahwa siksa Allah bagi para pengkhianat batin tidak dapat dihalangi oleh benteng materi apa pun.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Dimensi Al-Ghayb wasy-Syahādah & Paralelisme Teks Wahyu:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir menghubungkan ayat ini dengan serangkaian ayat lain yang menegaskan kemahatahuan Allah, seperti QS. Ghafir: 19 (<em>Ya'lamu khā'inatal-a'yuni wa mā tukhfish-shudūr</em> — Dia mengetahui pandangan mata yang khianat dan apa yang disembunyikan oleh dada) serta QS. Al-Mulk: 13–14 (<em>Wa asirrū qawlakum awijharū bih, innahū 'alīmum bi-dzātish-shudūr, alā ya'lamu man khalaq wa huwal-laṭhīful-khabīr</em>). Ibnu Katsir menjelaskan bahwa Allah mengabarkan kepada para hamba-Nya bahwa rahasia dan hal yang terang benderang bagi-Nya adalah sama persis. Tidak ada yang luput dari pandangan-Nya walau seberat biji dzarrah. Penyebutan <em>Wallāhu 'alā kulli syay'in qadīr</em> mengisyaratkan bahwa ilmu Allah berkelindan erat dengan kemahakuasaan-Nya untuk membalas setiap lintasan niat tersebut pada hari pembalasan kelak.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Dimensi Hukum, Fikih Taqiyyah & Rahasia Diksi "Ash-Shudūr":</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah kaitan erat ayat 29 dengan batas-batas hukum taqiyyah pada ayat 28:
+        <ul>
+            <li><strong>Batas Pemisah Taqiyyah dan Kemunafikan:</strong> Al-Qurthubi menegaskan bahwa taqiyyah yang diizinkan syariat hanya berlaku pada gerak lisan dan perbuatan lahiriah dalam kondisi darurat terancam kematian (sebagaimana dialami Sahabat Ammar bin Yasir r.a.), sementara kalbu wajib tetap kokoh dengan keimanan. Jika seseorang menampakkan kepatuhan lahiriah kepada musuh seraya menyembunyikan rasa cinta batin kepada kekufuran, maka ayat ini memvonisnya sebagai munafik tulen yang diintai oleh kemurkaan Allah.</li>
+            <li><strong>Rahasia Diksi "Ash-Shudūr":</strong> Al-Qurthubi mencatat analisis bahasa: dada dinamakan shadr karena ia adalah tempat melintasnya bisikan pertama (<em>al-khāṭhir</em>). Jika lintasan awal yang belum termanifestasi menjadi tekad saja telah diketahui Allah, maka apalagi niat bulat yang telah mengakar di dalam kalbu.</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Epistemologi Ketuhanan & Teologi Rasional:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi memaparkan argumen filosofis tingkat tinggi untuk membantah kaum filsuf yang mengklaim bahwa Tuhan hanya mengetahui hal-hal universal (<em>al-kulliyyāt</em>) dan tidak mengetahui hal-hal partikular (<em>al-juz'iyyāt</em>):
+        <br>1. <strong>Sifat Dzatiah al-'Ilm:</strong> Pengetahuan Allah bersumber dari hakikat Zat-Nya yang menciptakan segala wujud. Sesuatu yang berada di dalam dada manusia adalah wujud <em>mumkin</em>, dan pencipta wujud mustahil tidak mengetahui esensi ciptaan-Nya.
+        <br>2. <strong>Hermeneutika "Wa Ya'lamu":</strong> Ar-Razi menguraikan mengapa ayat ini tidak menggunakan kata <em>ya'lamhā</em> (kembali ke shudūr) melainkan <em>ya'lamhullāh</em> dengan menghadirkan Ismul-Jalalah: kehadiran nama Allah adalah untuk menanamkan rasa takut dan takzim yang melumpuhkan keberanian manusia berbuat maksiat batin.
+        <br>Sementara Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menggarisbawahi bahwa formula syarat pada ayat ini adalah uslub ancaman keras (<em>al-wa'īd</em>) yang dikemas secara anggun: siapa yang mengetahui bahwa isi dadanya terpampang nyata di hadapan Allah, niscaya ia akan membersihkan hatinya lebih gigih daripada ia membersihkan pakaian luarnya di depan khalayak ramai.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Kritik atas Diplomasi Hipokrit:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur menyajikan analisis maqashidi yang sangat tajam: ayat ini meletakkan fondasi moral bagi peradaban Islam bahwa loyalitas politik dan sosial tidak boleh dibangun di atas kepalsuan dan standar ganda. Bangsa-bangsa yang hancur dalam sejarah selalu berawal dari penyakit <em>kemunafikan diplomatik</em>: para elitnya tersenyum dan menandatangani pakta perdamaian di panggung terbuka, namun di balik layar mereka merancang pengkhianatan dan konspirasi busuk. Kata <em>wa ya'lamu mā fis-samāwāti wa mā fil-ardh</em> berfungsi memutus rantai ilusi manusia: jangan pernah mengira bahwa persekutuan rahasia dan enkripsi komunikasi tercanggih dapat menyelamatkanmu dari radar pengawasan Ilahi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Kontekstualisasi Jiwa dan Integritas Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan keindahan ayat ini dengan renungan yang menggetarkan:<br>
+        <em>"Manusia adalah aktor yang pandai bersandiwara. Kita dapat memasang senyum diplomatik, berbicara manis dengan susunan retorika yang memukau ribuan orang, dan memakai jubah kesalehan di depan umum. Namun di hadapan Allah, seluruh tirai penutup dada itu tembus pandang laksana kaca bening. Allah melihat cacing hitam yang merayap di atas batu hitam di malam yang gelap gulita; apalagi melihat kedengkian, dendam, dan kemunafikan yang merayap di dalam dada seorang manusia! Maka jangan sekali-kali bermain api dengan Tuhanmu!"</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menegaskan bahwa ayat ini adalah terapi paling mujarab untuk menumbuhkan <strong>Murāqabah</strong> (kesadaran melekat bahwa diri senantiasa ditatap oleh Allah). Beliau mencatat bahwa perombakan karakter sejati bermula dari pembersihan isi dada, bukan sekadar polesan kosmetik perilaku lahiriah. Kemenag RI menegaskan bahwa ayat ini adalah kompas integritas bagi setiap pejabat, pemimpin, dan warga negara untuk menjauhi korupsi dan pengkhianatan di ruang-ruang privat.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Hermeneutika</th>
+                <th>Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Variasi Sudut Pandang Penafsiran (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hubungan Organik dengan Ayat 28 (Taqiyyah vs Nifaq)</strong></td>
+                <td>Seluruh mufassir sepakat bahwa ayat 29 adalah pengunci hukum taqiyyah: bahwa izin menjaga diri hanya berlaku di lisan/fisik luar, sedangkan hati wajib 100% loyal kepada Allah dan Rasul-Nya.</td>
+                <td>
+                    • <strong>Tafsir Salaf (At-Tabari, Ibnu Abbas):</strong> Peringatan spesifik bagi kaum munafik Madinah yang pura-pura bersahabat dengan kaum mukmin padahal hatinya condong ke musuh.<br>
+                    • <strong>Tafsir Fiqhi (Al-Qurthubi):</strong> Kaidah penetapan status hukum: vonis murtad/kufur batin tidak gugur dengan dalih taqiyyah jika hati meridhai kekufuran.<br>
+                    • <strong>Tafsir Maqashidi (Ibnu 'Asyur):</strong> Penegasan etika politik universal: larangan menerapkan standar ganda dalam hubungan internasional dan komitmen sosial.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Rahasia Pemilihan Diksi "Shudūrikum" (Dada)</strong></td>
+                <td>Sepakat bahwa penyebutan dada mencakup hati dan seluruh isi batin manusia melalui kaidah majaz mursal mahaliyyah.</td>
+                <td>
+                    • <strong>Sudut Bahasa & Psikologi Hati:</strong> Dada adalah wadah terluar; tempat melintasnya bisikan awal (<em>khawathir</em>) sebelum menjadi ketetapan di lubuk kalbu.<br>
+                    • <strong>Sudut Teologi Keimanan:</strong> Menegaskan bahwa ruang privat manusia yang paling tertutup dan tidak dapat diakses teknologi apa pun adalah sangat transparan bagi Allah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Kedudukan Sintaksis & Hikmah "Wa Ya'lamu" Marfu'</strong></td>
+                <td>Sepakat bahwa bacaan mutawatir sepuluh imam membaca <em>wa ya'lamu</em> marfū' bil-dhommah, bukan jazm.</td>
+                <td>
+                    • <strong>Madzhab Nahwu Bashrah:</strong> Berstatus sebagai <em>Jumlah Musta'nafah</em> yang menandakan sifat kemahatahuan Allah atas alam semesta adalah permanen dan tanpa syarat.<br>
+                    • <strong>Madzhab Nahwu Kufah:</strong> Menilai ada makna <em>Wāwul-Ḥāl</em> (dalam keadaan Allah senantiasa mengetahui seluruh isi langit dan bumi), mengokohkan kemutlakan ilmu-Nya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Korelasi Penggabungan Sifat Al-'Ilm dan Al-Qudrah</strong></td>
+                <td>Sepakat bahwa penutup <em>Wallāhu 'alā kulli syay'in qadīr</em> berfungsi menyempurnakan ancaman (wa'īd) dan jaminan keadilan hisab.</td>
+                <td>
+                    • <strong>Ar-Razi & Az-Zamakhsyari:</strong> Sifat ilmu membongkar kejahatan, dan sifat qudrah mengeksekusi siksa; tanpa qudrah ilmu kehilangan wibawa, tanpa ilmu qudrah menjadi zalim.<br>
+                    • <strong>Buya Hamka & Quraish Shihab:</strong> Memberikan ketenangan bagi kaum beriman yang tertindas: bahwa tipu daya musuh yang dirancang rahasia pasti akan dihancurkan oleh kekuasaan Allah.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Kompartementalisasi Jiwa vs Integritas Tauhid Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Kemunafikan / Sekuler (Compartmentalized Mind)</th>
+                <th>Pola Pikir Mukmin Qur'ani (Integrated Muraqabah Mind)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Persepsi terhadap Ruang Privat</strong></td>
+                <td><em>The Illusion of Absolute Secrecy:</em> Menganggap apa yang dipikirkan dan disembunyikan di balik dinding tertutup adalah zona bebas nilai tanpa ada yang mengawasi.</td>
+                <td><em>The Panopticon of Divine Consciousness:</em> Meyakini bilik dada adalah panggung terbuka yang tersorot benderang oleh pandangan Allah detik demi detik.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan Persona Publik & Realitas Batin</strong></td>
+                <td><em>Dual-Life & Split Personality:</em> Membangun jurang pemisah antara citra kesalehan di depan publik dengan kebusukan moral di ruang privat.</td>
+                <td><em>Radical Congruence (Aṣh-Ṣhidq):</em> Menyelaraskan secara mutlak antara detak niat di dalam dada dengan tindakan dan lisan di panggung dunia.</td>
+            </tr>
+            <tr>
+                <td><strong>Motivasi Pengendalian Diri</strong></td>
+                <td><em>External Threat Deterrence:</em> Takut berbuat jahat hanya jika ada sanksi hukum formal, polisi, CCTV, atau takut kehilangan reputasi di mata manusia.</td>
+                <td><em>Internalized Transcendent Reverence:</em> Mencegah diri dari dosa batin (dengki, khianat, riya') semata-mata karena rasa malu dan takzim kepada Allah Al-'Alīm.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Divine Panopticon & Radical Transparency" (Transparansi Radikal Pengawasan Transenden):</strong>
+            Dalam teori sosiologi Jeremy Bentham dan Michel Foucault, <em>Panopticon</em> adalah model arsitektur di mana seorang pengawas dapat melihat seluruh penghuni sel tanpa para penghuni tahu kapan mereka sedang diawasi, sehingga melahirkan disiplin diri permanen. QS. 3:29 menyajikan <strong>Transformed Divine Panopticon</strong>: Allah bukan sekadar pengawas eksternal, melainkan Maha Mengetahui hingga ke lapisan lintasan sinapsis syaraf batin terdalam manusia. Mengadopsi model mental ini melenyapkan ilusi "tempat bersembunyi": di mana pun Anda berada, Anda sedang berada di bawah tatapan Allah Yang Maha Mengetahui dan Maha Kuasa.
+        </li>
+        <li><strong>Mental Model 2: "The Upward Macro-Micro Anchoring" (Penjangkaran Makro-Mikro Kosmis):</strong>
+            Al-Qur'an menggunakan teknik penjangkaran kognitif yang memukau: ketika manusia merasa rahasia dadanya terlalu kecil untuk diperhatikan Tuhan, Al-Qur'an seketika mengaitkannya dengan <em>mā fis-samāwāti wa mā fil-ardh</em>. Jika sistem navigasi Ilahi mampu mengontrol rotasi triliunan bintang tanpa tabrakan dan mengatur metabolisme miliaran sel di bumi, maka mengawasi satu niat di bilik dadamu adalah hal yang teramat sepele bagi-Nya. Model mental ini memicu rasa kerdil diri (<em>humility</em>) dan meruntuhkan arogansi intelektual.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Beban Kognitif Kepalsuan vs Ketenangan "Aṣh-Ṣhidq"</h3>
+    <p>
+        Secara neuropsikologis, fenomena menyembunyikan kebusukan batin seraya menampakkan kepalsuan lahiriah (<em>tukhfū mā fī shudūrikum aw tubdūhu</em> dalam konteks nifaq) adalah aktivitas otak yang menguras energi mental luar biasa besar (<strong>High Cognitive Load of Deception</strong>).
+    </p>
+    <p>
+        Ketika seseorang menjalani kehidupan berkepribadian ganda (di depan kawan berbicara setia, di belakang berkomplot dengan musuh), korteks prefrontal (PFC) harus bekerja ekstra keras untuk menekan reaksi emosi asli (<em>inhibitory control</em>), memetakan kebohongan yang telah diucapkan, dan terus-menerus memproduksi alibi baru. Pada saat yang sama, amigdala mengalami hiperaktivitas akibat kecemasan konstan akan terbongkarnya rahasia tersebut. Inilah yang di dalam Al-Qur'an disebut sebagai penyakit hati yang terus bertambah parah (<em>fī qulūbihim maraḍhun fa zādahumullāhu maraḍhā</em>).
+    </p>
+    <p>
+        Sebaliknya, internalisasi QS. 3:29 melahirkan terapi <strong>Tazkiyatun Nafs</strong> tingkat tertinggi:
+    </p>
+    <ul>
+        <li><strong>Ketenangan Integritas Total (Aṣh-Ṣhidq):</strong> Ketika seseorang menyadari bahwa isi dadanya telah diketahui Allah, ia berhenti bersandiwara. Ketiadaan jurang pemisah antara batin dan lahiriah menurunkan ketegangan neurobiologis, menghasilkan homeostasis emosional, dan melahirkan kondisi <em>Thuma'nīnah</em> (ketenangan jiwa yang hakiki).</li>
+        <li><strong>Manajemen Khawāṭhir (Pembersihan Lintasan Hati):</strong> Para ulama tazkiyatun nafs (seperti Ibnu Qayyim Al-Jawziyyah) merumuskan hierarki gerak batin:
+            <br><em>Al-Hājis</em> (lintasan sekilas) &rarr; <em>Al-Khāṭhir</em> (pikiran yang mulai berputar di dada / <em>shadr</em>) &rarr; <em>Ḥadītsun-Nafs</em> (dialog batin) &rarr; <em>Al-Hamm</em> (kecenderungan niat) &rarr; <em>Al-'Azm</em> (tekad bulat).
+            <br>Kesadaran akan QS. 3:29 memampukan seorang mukmin mencegat racun kemaksiatan sejak level <em>Khāṭhir</em> di rongga dada sebelum ia mengkristal menjadi tekad dan perbuatan dosa.
+        </li>
+        <li><strong>Tarbiyah Al-Murāqabah:</strong> Membiasakan hati untuk selalu merasa "diawasi dan ditatap dengan penuh cinta dan keagungan" oleh Allah, sehingga timbul rasa malu batin (<em>al-ḥayā' minallāh</em>) untuk menyimpan kedengkian, riya', ujub, atau pengkhianatan terhadap sesama hamba.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Ilusi Privasi Digital & Fenomena "Digital Footprint" vs Database Ilahi</h3>
+    <p>
+        Masyarakat abad ke-21 hidup di tengah ilusi privasi digital yang semu. Jutaan manusia merasa aman saat berselancar di internet menggunakan <em>incognito mode</em>, aplikasi pesan berenkripsi <em>end-to-end</em>, atau menyembunyikan identitas di balik akun-akun anonim (<em>burner accounts</em>) di media sosial. Di balik layar gawai yang gelap dan pintu kamar yang terkunci rapat, manusia modern melampiaskan syahwat terlarang, menyebarkan ujaran kebencian, merancang transaksi korupsi, dan mengkhianati komitmen keluarga maupun bangsanya.
+    </p>
+    <p>
+        QS. 3:29 menampar delusi peradaban digital ini dengan sangat telak: sistem keamanan manusia dan algoritma enkripsi tercanggih mungkin dapat mengelabui aparat penegak hukum dan pasangan hidup, tetapi di hadapan server ketuhanan, tidak ada istilah <em>incognito mode</em>! Setiap ketukan jari, riwayat pencarian yang dihapus, dan getaran niat jahat di bilik dada tersimpan rapi dalam arsip Ilahi tanpa kehilangan satu byte data pun.
+    </p>
+
+    <h3>2. Krisis Integritas Publik, Politik Hipokrisi & "Dual-Life Syndrome"</h3>
+    <p>
+        Dalam lanskap politik dan kepemimpinan kontemporer, ayat ini adalah diagnosis paling akurat terhadap penyakit <strong>Politik Kemunafikan Sistemik</strong>. Betapa sering kita menyaksikan para politisi dan pejabat publik berpidato dengan retorika moral yang melangit di hadapan media massa, mengeklaim diri sebagai pembela rakyat kecil dan pejuang anti-korupsi; namun di ruang-ruang rapat tertutup hotel berbintang, mereka menyembunyikan persekongkolan jahat (<em>in tukhfū mā fī shudūrikum</em>) bersama para oligarki, memperdagangkan hukum, dan merampok sumber daya alam demi memperkaya kelompoknya.
+    </p>
+    <p>
+        Standar ganda dan kepalsuan ini telah mengikis kepercayaan publik (<em>public trust deficit</em>) dan merusak tatanan demokrasi global. QS. 3:29 mengingatkan para pemegang kekuasaan: Anda mungkin berhasil merekayasa opini publik melalui konsultan politik dan pasukan siber (buzzer), namun Anda sedang berjalan menuju mahkamah Zat Yang Mengetahui setiap bisikan di ruang gelap dan Maha Kuasa untuk mencabut kekuasaan serta mempermalukan Anda sehina-hinanya di hadapan sejarah.
+    </p>
+
+    <h3>3. Krisis Kesehatan Mental Akibat Beban Kepalsuan: "Masking Fatigue" & "Impostor Syndrome"</h3>
+    <p>
+        Di ranah psikososial modern, generasi masa kini terjangkit fenomena <strong>Masking Fatigue</strong> (kelelahan mental kronis akibat terlalu lama memakai topeng kepalsuan sosial). Di era kurasi media sosial (Instagram, TikTok, LinkedIn), manusia dipaksa untuk terus-menerus memproyeksikan kehidupan yang sempurna, bahagia, kaya, dan sukses (<em>tubdūhu</em>), sementara di dalam dada mereka tersimpan depresi akut, kehampaan spiritual, rasa iri hati yang membakar, dan kecemasan eksistensial yang disembunyikan rapat-rapat (<em>tukhfū mā fī shudūrikum</em>).
+    </p>
+    <p>
+        Kesenjangan yang menganga antara persona luar dan kenyataan batin ini memicu ledakan gangguan mental (<em>anxiety disorder</em> dan <em>impostor syndrome</em>). QS. 3:29 menawarkan terapi pembebasan: berhentilah melelahkan jiwamu demi memburu validasi manusia yang fana! Akuilah kerapuhan, kelemahan, dan dosa-dosamu di hadapan Allah Yang Maha Mengetahui. Ketika seorang hamba bersujud dengan kejujuran batin total, ia tidak perlu lagi memakai topeng apa pun, karena Allah telah menerima dan memaafkannya.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol "Audit Hening Bilik Dada (Silent Heart Scan)" Sebelum Tidur:</strong>
+                <br>• Setiap malam sebelum merebahkan kepala untuk tidur, matikan seluruh layar gawai dan duduklah dalam keheningan selama 3 menit.
+                <br>• Lakukan pemindaian batin secara jujur: <em>"Adakah rasa dengki, dendam, riya', niat khianat, atau cinta terlarang yang kusimpan di dalam dadaku hari ini?"</em>
+                <br>• Akuilah setiap lintasan kotor tersebut di hadapan Allah, lalu bacalah istighfar 7 kali dengan penyesalan mendalam seraya berdoa: <em>"Allāhumma ṭhahhir qalbī minan-nifāq, wa 'amalī minar-riyā', wa lisānī minal-kadzib"</em> (Ya Allah bersihkanlah hatiku dari kemunafikan, amalku dari riya', dan lisanku dari dusta).
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Zero-Hypocrisy Filter (Uji Transparansi Moral)":</strong>
+                Sebelum Anda menandatangani sebuah perjanjian bisnis, menyepakati persekutuan politik, atau mengambil keputusan relasional yang sensitif:
+                <br>• Ajukan pertanyaan penyaring kepada diri sendiri: <em>"Seandainya seluruh motif batin, percakapan rahasia, dan draf kesepakatan ini disiarkan secara langsung di hadapan seluruh jamaah masjid atau dipublikasikan di halaman depan media nasional, apakah aku akan merasa malu dan bersalah di hadapan Allah dan manusia?"</em>
+                <br>• Jika jawabannya YA (Anda merasa malu karena ada niat culas yang disembunyikan), maka <strong>batalkan atau tolak seketika itu juga kesepakatan tersebut</strong> tanpa kompromi, demi menjaga kesucian tauhid dan loyalitas Anda kepada Allah.
+            </li>
+            <li><strong>Etika Digital & Integritas Ruang Privat: "The Unseen Integrity Rule":</strong>
+                <br>• Buat komitmen tegas pada diri sendiri untuk tidak pernah membuka situs, mengonsumsi konten, menulis komentar anonim, atau mengirim pesan rahasia di dunia maya yang tidak berani Anda pertanggungjawabkan seandainya Rasulullah ﷺ berdiri di samping Anda.
+                <br>• Pasang pengingat visual (wallpaper bertuliskan QS. 3:29 atau kata <em>"Allāhu Syāhidī, Allāhu Nāzhirī"</em>) pada layar komputer kerja dan ponsel pintar Anda sebagai rem pencegah otomatis saat jemari terdorong untuk bermaksiat di ruang sepi.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Seandainya detik ini seluruh isi dadaku, rahasia masa laluku, dan lintasan pikiranku yang paling kotor diproyeksikan ke layar raksasa di hadapan orang tua, pasangan, anak-anak, dan sahabat-sahabatku, apakah aku masih memiliki muka untuk berdiri tegak, ataukah aku akan mati menanggung aib? Mengapa aku lebih takut aibku terbongkar di mata manusia daripada takut ditatap oleh Allah Yang Maha Mengetahui detik ini juga?</li>
+            <li>Apakah di dalam dadaku masih terselip loyalitas ganda: di lisan aku mengaku sebagai pembela Islam dan pecinta Rasulullah ﷺ, namun di dalam hati aku justru lebih mencintai kekayaan, takut kehilangan jabatan, atau bersekutu mesra dengan musuh-musuh syariat demi mengamankan kepentingan duniawiku?</li>
+            <li>Sejauh mana keselarasan antara wajah kesalehanku di tengah keramaian publik dengan perilakuku saat sendirian di balik pintu kamar yang terkunci: apakah aku seorang mukmin sejati di siang hari namun menjadi munafik di kegelapan malam?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Man Ya'lamu Sirra wal-Akhfā, Yā 'Āliman bi-kulli syay', Yā Badī'as-samāwāti wal-ardh, Yā Qadīran 'alā kulli syay'. Ya Allah Tuhan yang mengetahui rahasia yang terpendam dan yang lebih tersembunyi dari rahasia. Kami bersimpuh di hadapan keagungan takhta-Mu dengan rasa malu yang menggunung, mengakui betapa kerdilnya kami dan betapa banyaknya noktah dosa yang kami sembunyikan di dalam dada kami dari pandangan sesama manusia.
+            <br><br>
+            Allāhumma ṭhahhir shudūranā minad-daghli wal-ghilli wal-ḥasad, wa naghsil qulūbanā bi-mā'its-tsalji wal-barad. Ya Allah, bersihkanlah rongga dada kami dari penyakit dengki, dendam, riya', sum'ah, nifaq, dan pengkhianatan loyalitas batin. Jangan Engkau biarkan di dalam hati kami bersemi rasa cinta kepada apa yang Engkau murkai, dan jangan biarkan kami menampakkan kebaikan lahiriah yang bertolak belakang dengan kebusukan rahasia jiwa kami. Karuniakanlah kepada kami derajat aṣh-ṣhidq: keselarasan mutlak antara lisan, detak kalbu, dan amal perbuatan kami.
+            <br><br>
+            Allāhumma ij'al sarīratanā khayram min 'alāniyatinā, waj'al 'alāniyatanā ṣhāliḥatan. Ya Allah jadikanlah rahasia batin kami lebih mulia dan lebih bersih daripada apa yang kami tampakkan di hadapan manusia, dan jadikanlah amal lahiriah kami senantiasa saleh dan ikhlas semata-mata mengharapkan ridha-Mu. Naungilah kami dengan rasa takut dan muraqabah kepada-Mu di saat sepi maupun di tengah keramaian. Dan tatkala tiba hari di mana seluruh rahasia dada dibongkar dan dihadirkan di padang Mahsyar, jangan Engkau hinakan kami di hadapan seluruh makhluk, melainkan tutuplah aib kami dengan tirai kemurahan-Mu dan masukkanlah kami ke dalam surga-Mu dengan selamat. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-028 - QS. Ali 'Imran Ayat 28.html">&larr; Kembali ke Ayat 28 (QS. 3:28)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 29</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-030 - QS. Ali 'Imran Ayat 30.html">Lanjut ke Ayat 30 (QS. 3:30) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

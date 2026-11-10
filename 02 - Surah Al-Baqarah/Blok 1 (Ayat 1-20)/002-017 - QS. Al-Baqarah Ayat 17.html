@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-017 - QS. Al-Baqarah Ayat 17 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .footer-nav a:hover {
+        background: #bee3f8;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-016 - QS. Al-Baqarah Ayat 16.html">&larr; QS. Al-Baqarah Ayat 16</a>
+        <span>Hidup Bersama Al-Qur'an: Kerangka 7 Lensa v2.0</span>
+        <a href="002-018 - QS. Al-Baqarah Ayat 18.html">QS. Al-Baqarah Ayat 18 &rarr;</a>
+    </div>
+
+    <div class="badge-meta">
+        <span class="badge">Surah ke-2</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge badge-gold">Blok 1 Klaster 3: Patologi Kaum Munafik (Tamtsil Kosmik 1: Api)</span>
+        <span class="badge">17 Kata</span>
+        <span class="badge">73 Huruf Rasm</span>
+    </div>
+
+    <h1>QS. Al-Baqarah Ayat 17</h1>
+    <div class="transliteration">"Maṡaluhum kamaṡalil-lażistauqada nārā(n), falammā aḍā'at mā ḥaulahū żahaballāhu binūrihim wa tarakahum fī ẓulumātil lā yubṣirūn(a)"</div>
+    <div class="thematic-title">Tamtsil Kosmik 1 (Perumpamaan Api & Kegelapan Total): Cahaya Semu Api Duniawi yang Padam, Penarikan Nur Ilahi (Żahaballāhu Binūrihim), dan Teror Kegelapan Batin</div>
+    <div class="subtitle">Kajian Komprehensif Kerangka 7 Lensa v2.0: Teks, Bahasa, Konteks, Tafsir Lintas Generasi, Kognisi, Realitas Abad 21, dan Praksis Hidup</div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Hadits</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks & Maqasid</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Mufassir</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Mental Model</a>
+        <a href="#lensa-6">Lensa 6: Realitas Abad ke-21</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Doa</a>
+    </div>
+
+    <!-- LENSA 1: TEKS & HADITS -->
+    <h2 id="lensa-1">Lensa 1: Teks Kitabullah, Tajwid, Qira'at Mutawatirah & Takhrij Hadits</h2>
+
+    <div class="arabic">
+        مَثَلُهُمْ كَمَثَلِ ٱلَّذِى ٱسْتَوْقَدَ نَارًا فَلَمَّآ أَضَآءَتْ مَا حَوْلَهُۥ ذَهَبَ ٱللَّهُ بِنُورِهِمْ وَتَرَكَهُمْ فِى ظُلُمَٰتٍ لَّا يُبْصِرُونَ
+    </div>
+
+    <div class="translation">
+        "Perumpamaan mereka adalah seperti orang yang menyalakan api. Maka setelah api itu menerangi sekelilingnya, Allah melenyapkan cahaya (yang menyinari) mereka dan membiarkan mereka dalam kegelapan, tidak dapat melihat."
+    </div>
+
+    <h3>1. Analisis Fonetika, Tajwid & Makharijul Huruf Word-by-Word</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafal Rasm Utsmani</th>
+                <th>Kaidah Tajwid</th>
+                <th>Makhraj & Sifat Huruf Dominan</th>
+                <th>Catatan Fonetik & Implikasi Tartil</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>مَثَلُهُمْ</strong><br><em>Maṡaluhum</em></td>
+                <td>Hams pada Tsa (ث), Izhar Syafawi pada Mim Sakinah bertemu Kaf (ك).</td>
+                <td>Tsa dari ujung lidah bertemu pucuk gigi seri atas; Mim dari syafataian; Ha dari aqshal halq.</td>
+                <td>Huruf Tsa harus dialirkan nafasnya (hams) tanpa mendesis seperti Sin; Mim dibaca idzhar murni tanpa ghunnah memanjang.</td>
+            </tr>
+            <tr>
+                <td><strong>كَمَثَلِ</strong><br><em>Kamaṡali</em></td>
+                <td>Tarqiq pada Lam berharakat kasrah, tidak ada mad.</td>
+                <td>Kaf dari pangkal lidah belakang bertemu langit-langit lunak; Lam dari ujung lidah ke gusi atas.</td>
+                <td>Irama pendek dan lincah melukiskan pengantar analogi komparatif yang lugas dan mengikat.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِى</strong><br><em>Al-lażī</em></td>
+                <td>Hamzah washal saqithah saat washal; Idgham Syamsiyyah pada Lam; Mad Thabi'i pada Ya' sukun (2 harakat).</td>
+                <td>Dzal dari ujung lidah bertemu pucuk gigi seri atas (jahr dan rakhawah).</td>
+                <td>Pelafalan Dzal yang lembut mencegah percampuran bunyi dengan Zay.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱسْتَوْقَدَ</strong><br><em>Istauqada</em></td>
+                <td>Hamzah washal gugur; Hams dan Shafir pada Sin; Harf Lin pada Wawu sakinah setelah fathah; Tafkhim pada Qaf (Isti'la'); Tarqiq pada Dal.</td>
+                <td>Sin dari ujung lidah di atas gigi seri bawah; Qaf dari pangkal lidah paling belakang (aqshal lisan) terangkat ke langit-langit lunak.</td>
+                <td>Peralihan tajam dari desis tipis (س) ke luncuran lin (وْ) lalu hentakan isti'la tebal (قَ) melambangkan upaya memantik api di tengah dinginnya malam.</td>
+            </tr>
+            <tr>
+                <td><strong>نَارًا</strong><br><em>Nāran</em></td>
+                <td>Mad Thabi'i pada Alif (2 harakat); Tafkhim pada Ra' fathah; Ikhfa' Haqiqi pada tanwin fathah bertemu Fa' (ف).</td>
+                <td>Nun dari ujung lidah; Ra' dari punggung ujung lidah; Fa' dari bibir bawah bagian dalam bertemu gigi seri atas.</td>
+                <td>Dengung ikhfa' yang samar (<em>ghunnah muraqqaqah</em>) bersiap masuk ke huruf Fa', memberikan efek transisi dramatis sebelum kobaran api menyala.</td>
+            </tr>
+            <tr>
+                <td><strong>فَلَمَّآ</strong><br><em>Falammā</em></td>
+                <td>Ghunnah Musyaddadah sempurna pada Mim (2 harakat); Mad Ja'iz Munfashil (2, 4, atau 5 harakat) karena Alif bertemu Hamzah di lain kata.</td>
+                <td>Mim dari kedua bibir terkatup rapat dengan resonansi rongga hidung (khaisyum); Hamzah di aqshal halq.</td>
+                <td>Ketukan ghunnah yang padat menghadirkan jeda ketegangan naratif sebelum peristiwa puncak terjadi.</td>
+            </tr>
+            <tr>
+                <td><strong>أَضَآءَتْ</strong><br><em>Aḍā'at</em></td>
+                <td>Tahqiq Hamzah; Isti'la, Ithbaq, dan Istithalah pada Dhad (ض); Mad Wajib Muttashil (4-5 harakat); Hams pada Ta' ta'nits sakinah.</td>
+                <td>Dhad dari tepi lidah (hafatul lisan) bersentuhan dengan gigi geraham atas; Ta' dari ujung lidah bertemu pangkal gigi seri atas.</td>
+                <td>Penyebaran suara Dhad yang luas (istithalah) secara fonetis menggambarkan pancaran cahaya yang mendadak menyebar ke segala penjuru.</td>
+            </tr>
+            <tr>
+                <td><strong>مَا حَوْلَهُۥ</strong><br><em>Mā ḥaulahū</em></td>
+                <td>Mad Thabi'i pada Ma (2 harakat); Hams pada Ha (ح); Harf Lin pada Wawu; Mad Shilah Qashirah pada Ha dlamir (2 harakat).</td>
+                <td>Ha (ح) dari wasathal halq (tengah tenggorokan); Ha dlamir (هـ) dari aqshal halq.</td>
+                <td>Perbedaan makhraj antara dua jenis Ha (ح tebas dan هـ dada) harus dijaga dengan presisi agar tidak saling mengaburkan.</td>
+            </tr>
+            <tr>
+                <td><strong>ذَهَبَ ٱللَّهُ</strong><br><em>Żahaballāhu</em></td>
+                <td>Tarqiq pada Dzal, Ha, dan Ba; Hamzah washal saqithah; Tafkhim (tebal) pada Lam Jalalah karena didahului harakat fathah.</td>
+                <td>Ba dari bibir; Lam dari tepi ujung lidah ke gusi depan; Ha dari pangkal tenggorokan.</td>
+                <td>Hentakan agung pada Lam Jalalah (tafkhim) menegaskan intervensi kekuasaan Ilahi yang seketika meremukkan kekuatan manusia.</td>
+            </tr>
+            <tr>
+                <td><strong>بِنُورِهِمْ</strong><br><em>Binūrihim</em></td>
+                <td>Mad Thabi'i pada Wawu; Tarqiq pada Ra' kasrah; Izhar Syafawi pada Mim Sakinah bertemu Wawu (وَ).</td>
+                <td>Nun dari ujung lidah; Ra' dari punggung lidah; Mim dari dua bibir.</td>
+                <td>Peringatan keras tajwid: <em>Ahdzar an takhtafiya 'indal waw</em>. Mim harus dibaca jelas dan bibir segera terbuka untuk menyambut Wawu tanpa ghunnah berlebih.</td>
+            </tr>
+            <tr>
+                <td><strong>وَتَرَكَهُمْ</strong><br><em>Wa tarakahum</em></td>
+                <td>Tarqiq pada Ta; Tafkhim pada Ra' fathah; Hams pada Kaf; Izhar Syafawi pada Mim bertemu Fa' (ف).</td>
+                <td>Ta dan Dal satu makhraj; Kaf di pangkal lidah; Fa di bibir bawah.</td>
+                <td>Kaf sakinah/fathah mengalirkan sedikit hams, melukiskan tindakan penelantaran yang mutlak dan tak terelakkan.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ظُلُمَٰتٍ</strong><br><em>Fī ẓulumātin</em></td>
+                <td>Mad Thabi'i pada Fi; Isti'la dan Ithbaq pada Zha' (ظ); Mad Thabi'i pada Alif khanjariyah; Idgham Bilaghunnah pada tanwin kasrah bertemu Lam (ل).</td>
+                <td>Zha' dari ujung lidah bertemu pucuk gigi seri atas dengan pangkal lidah terangkat; Lam dari ujung lidah ke gusi.</td>
+                <td>Peleburan total tanwin ke dalam Lam tanpa dengung melukiskan pekatnya kegelapan yang menyergap seketika tanpa celah cahaya sedikit pun.</td>
+            </tr>
+            <tr>
+                <td><strong>لَّا يُبْصِرُونَ</strong><br><em>Lā yubṣirūn</em></td>
+                <td>Mad Thabi'i pada La; Qalqalah Sughra pada Ba' sakinah; Isti'la dan Shafir pada Shad (ص); Tarqiq pada Ra' kasrah; Mad 'Aridh Lissukun (2, 4, 6 harakat).</td>
+                <td>Ba dari syafataian rapat memantul; Shad dari ujung lidah di atas gigi seri bawah dengan rongga terangkat; Nun di ujung lidah waqafan.</td>
+                <td>Desis tajam Shad dan dengung Nun waqafan menutup ayat dengan gambaran kengerian kepanikan manusia yang buta arah di tengah belantara gulita.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Ragam Qira'at Mutawatirah 10 Imam & Implikasi Semantik</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafal / Kalimah</th>
+                <th>Ragam Qira'at Mutawatirah & Imam Perawi</th>
+                <th>Kaidah Fonologis & Riwayat</th>
+                <th>Implikasi Makna & Retorika</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فَلَمَّآ أَضَآءَتْ</strong></td>
+                <td>
+                    <strong>Ibnu Katsir & Abu Ja'far:</strong> Qashr Munfashil murni (2 harakat).<br>
+                    <strong>Qalun & Ad-Duri 'an Abi 'Amr:</strong> Boleh Qashr (2 harakat) atau Tawassuth (4 harakat).<br>
+                    <strong>Warsy & Hamzah:</strong> Isyba' (6 harakat penuh) baik munfashil maupun muttashil.<br>
+                    <strong>'Ashim, Ibnu 'Amir, Al-Kisa'i, Khalaf al-'Asyir:</strong> Tawassuth (4-5 harakat).
+                </td>
+                <td>Tingkatan panjang mad munfashil dan muttashil menurut madzhab para imam Qurra'. Warsy dan Hamzah menerapkan <em>thul</em> maksimal pada kedua hamzah.</td>
+                <td>Tempo bacaan qashr (2 harakat) menggambarkan kilatan cahaya yang menyala sangat cepat, sedangkan isyba' (6 harakat) mengulur imajinasi pendengar untuk merasakan betapa luas dan megahnya pancaran cahaya tersebut sebelum dipadamkan mendadak.</td>
+            </tr>
+            <tr>
+                <td><strong>أَضَاءَتْ (Waqafan)</strong></td>
+                <td>
+                    <strong>Jumhur 10 Imam:</strong> Tahqiq Hamzah di akhir kata dengan sukun Ta' ta'nits.<br>
+                    <strong>Imam Hamzah (Waqafan):</strong> Membaca dengan dua wajah qira'at: <em>Tashil ma'am-madd wal-qashr</em> (memudahkan hamzah antara hamzah dan alif), atau <em>Ibdal hamzah</em> menjadi alif lalu diidghamkan.
+                </td>
+                <td>Kaidah peringan hamzah ekstrem (<em>Takhfif al-Hamz</em>) milik madzhab Hamzah az-Zayyat saat waqaf.</td>
+                <td>Wajah tashil melunakkan vokal, mencerminkan transisi rapuhnya cahaya materi yang mulai bergoyang ditiup angin sebelum padam total.</td>
+            </tr>
+            <tr>
+                <td><strong>ذَهَبَ اللَّهُ (Washalan)</strong></td>
+                <td>
+                    <strong>As-Susi 'an Abi 'Amr:</strong> Dalam kaidah umumnya membaca <em>Idgham Kabir</em> jika dua huruf sama atau berdekatan bertemu. Namun di sini Ba' dan Lam bukan mutamatsilain, sehingga dibaca <em>Idzhar</em> oleh seluruh imam 'Asyrah secara konsensus.
+                </td>
+                <td>Pengecekan konsensus tajwid lintas imam: pemisahan vokal Ba' fathah dengan Lam Jalalah terjaga sempurna tanpa peredaman fonetis.</td>
+                <td>Kejelasan fonetik ketukan kata <em>Żahaba</em> yang terpisah tegas dengan <em>Allāhu</em> menonjolkan subjek pelaku pemadaman secara mutlak: Allah sendiri yang mengambil cahaya itu.</td>
+            </tr>
+            <tr>
+                <td><strong>ظُلُمَٰتٍ لَّا</strong></td>
+                <td>
+                    <strong>Jumhur (9 Imam termasuk Hafsh 'an 'Ashim):</strong> Membaca <em>Idgham Bilaghunnah</em> (meleburkan tanwin ke dalam lam tanpa dengung).<br>
+                    <strong>Khalaf 'an Hamzah (Thariq Thayyibah):</strong> Membaca idgham bilaghunnah pada Lam dan Ra' secara konsisten.
+                </td>
+                <td>Peleburan nun mati/tanwin ke dalam huruf Lam.</td>
+                <td>Ketiadaan dengung menghasilkan ketukan kering dan seketika, menegaskan keterputusan total antara kegelapan (<em>zhulumāt</em>) dan kemampuan melihat (<em>lā yubṣirūn</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Takhrij Hadits Nabawi & Atsar Shahih</h3>
+    <div class="hadith-box">
+        <p><strong>Hadits 1: Tamtsil Pemantik Api dan Kerumunan Serangga yang Binasa (Tamtsilun Nār)</strong></p>
+        <p style="direction: rtl; font-family: 'Traditional Arabic', serif; font-size: 20px; line-height: 2;">
+            عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ، أَنَّهُ سَمِعَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: «إِنَّمَا مَثَلِي وَمَثَلُ النَّاسِ كَمَثَلِ رَجُلٍ اسْتَوْقَدَ نَارًا، فَلَمَّا أَضَاءَتْ مَا حَوْلَهُ جَعَلَ الْفَرَاشُ وَهَذِهِ الدَّوَابُّ الَّتِي تَقَعُ فِي النَّارِ يَقَعْنَ فِيهَا، فَجَعَلَ يَنْزِعُهُنَّ وَيَغْلِبْنَهُ فَيَقْتَحِمْنَ فِيهَا، فَأَنَا آخُذُ بِحُجَزِكُمْ عَنِ النَّارِ، وَأَنْتُمْ تَقْتَحِمُونَ فِيهَا»
+        </p>
+        <p>
+            <strong>Terjemahan:</strong> Dari Abu Hurairah <em>radhiyallahu 'anhu</em>, ia mendengar Rasulullah ﷺ bersabda: <em>"Sesungguhnya perumpamaanku dan perumpamaan umat manusia adalah seperti seseorang yang menyalakan api. Maka setelah api itu menerangi apa yang ada di sekelilingnya, mulailah laron-laron dan hewan-hewan melata yang biasa berjatuhan ke dalam api saling berebut menjatuhkan diri ke dalamnya. Orang itu berusaha sekuat tenaga menghalau hewan-hewan tersebut, namun mereka mengalahkannya dan tetap menerobos masuk ke dalam kobaran api. Maka akulah yang memegangi ikat pinggang kalian agar tidak terperosok ke dalam api neraka, tetapi kalian justru menerobos masuk ke dalamnya!"</em>
+        </p>
+        <p>
+            <strong>Takhrij & Status Sanad:</strong> Diriwayatkan oleh Imam Al-Bukhari dalam <em>Shahih Al-Bukhari</em>, Kitab Ar-Riqaq, Bab <em>Al-Intiha' 'anil Ma'ashi</em> (No. 6483) dan Imam Muslim dalam <em>Shahih Muslim</em>, Kitab Al-Fadha'il, Bab <em>Syafaqatihi ﷺ 'ala Ummatihi</em> (No. 2284). Hadits ini berderajat <strong>Muttafaq 'Alaih</strong> dengan tingkat keshahihan tertinggi. Hadits ini memberikan konteks visual profetik tentang betapa gemerlapnya api duniawi sering kali membutakan persepsi makhluk hingga mereka melompat ke dalam kebinasaannya sendiri.
+        </p>
+    </div>
+
+    <div class="hadith-box">
+        <p><strong>Hadits 2: Pencabutan Cahaya Kaum Munafik di Padang Mahsyar & Titian Shirāṭ</strong></p>
+        <p style="direction: rtl; font-family: 'Traditional Arabic', serif; font-size: 20px; line-height: 2;">
+            عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ رَضِيَ اللَّهُ عَنْهُمَا، فِي حَدِيثِ الشَّفَاعَةِ وَالْمَحْشَرِ، قَالَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «... فَيُعْطَى كُلُّ إِنْسَانٍ مِنْهُمْ نُورًا، مُنَافِقٍ أَوْ مُؤْمِنٍ، ثُمَّ يَتَّبِعُونَهُ، فَعَلَى جِسْرِ جَهَنَّمَ كَلاَلِيبُ وَحَسَكٌ... ثُمَّ يُطْفَأُ نُورُ الْمُنَافِقِينَ، ثُمَّ يَنْجُو الْمُؤْمِنُونَ»
+        </p>
+        <p>
+            <strong>Terjemahan:</strong> Dari Jabir bin Abdillah <em>radhiyallahu 'anhuma</em>, dalam riwayat panjang tentang syafa'at dan huru-hara padang Mahsyar, Nabi ﷺ bersabda: <em>"... Lalu setiap manusia, baik mukmin maupun munafik, diberi cahaya (sesuai kadar amal lahiriahnya di dunia). Kemudian mereka berjalan mengikuti cahaya tersebut. Di atas jembatan Jahannam terdapat besi-besi pencakar dan duri-duri tajam... Kemudian cahaya kaum munafik dipadamkan seketika (hingga mereka terperosok ke dasar neraka), sedangkan orang-orang beriman diselamatkan oleh Allah."</em>
+        </p>
+        <p>
+            <strong>Takhrij & Status Sanad:</strong> Diriwayatkan oleh Imam Muslim dalam <em>Shahih Muslim</em>, Kitab Al-Iman, Bab <em>Ma'rifatu Thariq ar-Ru'yah</em> (No. 191). Hadits ini adalah penjelas eskatologis langsung bagi firman-Nya <em>"Żahaballāhu binūrihim wa tarakahum fī ẓulumātil lā yubṣirūn"</em>, yang berkelindan erat dengan firman-Nya dalam QS. Al-Hadid: 13.
+        </p>
+    </div>
+
+    <!-- LENSA 2: BAHASA & BALAGHAH -->
+    <h2 id="lensa-2">Lensa 2: Leksikografi Bahasa Arab, Morfosintaksis & Retorika Balaghah</h2>
+
+    <h3>1. Etimologi & Medan Semantik Berdasarkan Mu'jam Otoritatif</h3>
+    <p>
+        Pembedahan leksikografis dalam <em>Mu'jam Maqāyīs al-Lughah</em> karya Ibnu Faris, <em>Lisān al-'Arab</em> karya Ibnu Manzhur, dan <em>Al-Mufradāt fī Gharīb al-Qur'ān</em> karya Ar-Raghib Al-Ashfahani menyingkap rahasia ketelitian diksi Al-Qur'an pada ayat ini:
+    </p>
+    <ul>
+        <li>
+            <strong>M-Th-L (م ث ل) &rarr; Al-Matsal (الْمَثَلُ):</strong> Ibnu Faris menegaskan bahwa akar kata ini menunjukkan keserupaan, perbandingan visual, dan penampakan sesuatu yang sepadan (<em>ashlun yadullu 'ala munazharatisy-syai' lilsy-syai'</em>). Raghib Al-Ashfahani mencatat: <em>Al-Matsal</em> adalah perkataan atau gambaran yang menyerupakan kondisi yang abstrak/samar dengan fenomena konkret yang dapat disaksikan panca indera agar akal budi dapat menangkap hakikatnya secara jernih. Tamtsil dalam ayat ini memindahkan penyakit batin kemunafikan yang tersembunyi ke dalam layar bioskop kosmik: orang yang tersesat di kegelapan malam, menyalakan api unggun, lalu apinya mati tersapu badai.
+        </li>
+        <li>
+            <strong>W-Q-D (و ق د) &rarr; Istauqada (اسْتَوْقَدَ):</strong> Makna aslinya adalah menyalanya bara api. Masuknya wazan <em>Istaf'ala</em> (اسْتَفْعَلَ) di sini mengandung makna <em>ath-thalab wal-ijtihād</em> (upaya keras mencari, meminta bantuan, dan memantik api dari luar). Kata ini bukan sekadar <em>awqada</em> (menyalakan), melainkan <em>istawqada</em>: seseorang yang berada dalam kegelapan mutlak, merasa sangat kedinginan dan ketakutan, lalu berusaha dengan susah payah mengumpulkan ranting kering, menggesekkan batu api, dan meminta bantuan pihak lain demi memantik secercah cahaya. Ini melukiskan kaum munafik yang tidak memiliki cahaya iman di dalam dadanya; mereka berusaha "meminjam" cahaya Islam secara pragmatis demi kepentingan perlindungan fisik dan materi duniawi di Madinah.
+        </li>
+        <li>
+            <strong>Perbedaan Fundamental antara Adh-Dhiyā' (الضِّيَاءُ) dan An-Nūr (النُّورُ):</strong>
+            Inilah salah satu mukjizat linguistik Al-Qur'an yang paling memukau! Para pakar bahasa Arab klasik dan mufassir balaghah membedakan:
+            <br>&bull; <strong>Adh-Dhiyā' (الضِّيَاءُ):</strong> Pancaran cahaya yang bersumber dari pembakaran materi, disertai suhu panas yang membakar, bergejolak, dan tidak stabil (<em>an-nur al-ladzi yakunu min dzatihi bi-ihraq wa hararah</em>). Contohnya adalah matahari (<em>Huwalladzi ja'alasy-syamsa dhiya'an</em>, QS. Yunus: 5) dan api duniawi.
+            <br>&bull; <strong>An-Nūr (النُّورُ):</strong> Cahaya murni, sejuk, menerangi, membimbing, memberi kenyamanan visual tanpa panas yang menyiksa atau membakar (<em>an-nur ash-shafi al-bari' min al-ihraq</em>), sebagaimana bulan (<em>wal-qamara nuran</em>) dan hidayah Ilahi (<em>Allahu nurus-samawati wal-ardh</em>).
+            <br><strong>Rahasia Pemilihan Diksi: Mengapa Allah berfirman "Żahaballāhu binūrihim" dan BUKAN "bidhiyā'ihim" atau "binārihim"?</strong>
+            Jika Allah mencabut <em>dhiyā'</em> atau <em>nār</em> mereka, maka lenyaplah pula rasa panas, asap, dan bahayanya. Namun Allah secara spesifik mencabut <strong>NŪR</strong> mereka (unsur penerangan, kenyamanan, kejelasan jalan, dan keselamatan), lalu <strong>MENYISAKAN APINYA</strong> yang membakar, panasnya yang memanggang, dan asapnya yang memedihkan mata di tengah kegelapan pekat! Kaum munafik ditinggalkan dalam penderitaan ganda: tidak dapat melihat jalan keluar, namun tetap tersiksa oleh bahaya dan panasnya bara api yang mereka nyalakan sendiri.
+        </li>
+        <li>
+            <strong>Diksi "Żahaba bi-" (ذَهَبَ بِـ) vs "Adzhaba" (أَذْهَبَ):</strong>
+            Mengapa Al-Qur'an memilih kalimat <em>Żahaballāhu binūrihim</em> dan bukan <em>Adzhaballāhu nūrahum</em>? Dalam kaidah gramatika Arab tinggi, bentuk <em>Adzhaba</em> sekadar berarti melenyapkan atau memindahkan sesuatu dari tempatnya. Sedangkan <em>Dzahaba bi-syai'</em> mengimplikasikan <em>ash-shuhbah wal-istishhab wal-mubalaghah fil-izalah</em>: memegang sesuatu itu lalu membawanya pergi jauh-jauh hingga lenyap tak berbekas ke tempat yang tidak dapat dijangkau lagi. Diksi ini menegaskan bahwa hidayah yang dicabut dari kaum munafik telah dibawa pergi oleh Allah sejauh-jauhnya, sehingga mustahil bagi mereka untuk memulihkannya kembali dengan rekayasa manusiawi apa pun!
+        </li>
+        <li>
+            <strong>Zh-L-M (ظ ل م) & Bentuk Jamak Al-Katsrah "Zhulumāt" (ظُلُمَات):</strong>
+            Akar kata <em>Zhulm</em> bermakna meletakkan sesuatu bukan pada tempat semestinya, yang juga melahirkan makna gelap gulita karena hilangnya cahaya. Bentuk jamak <em>Zhulumāt</em> (kegelapan-kegelapan yang bertumpuk) digunakan dalam bentuk nakirah (indefinit) untuk menunjukkan <em>at-takhwīf wat-tahwīl</em> (kengerian dan kepelikan yang melampaui batas imajinasi): tumpukan kegelapan malam, kegelapan awan mendung, kegelapan asap api, kegelapan keraguan hati, kegelapan kemunafikan di dunia, dan kegelapan alam kubur serta neraka Jahannam.
+        </li>
+    </ul>
+
+    <h3>2. Tabel Analisis Morfosintaksis & I'rab Syamil (17 Kata)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafal</th>
+                <th>Bentuk Kata / Sharaf</th>
+                <th>Kedudukan Sintaksis (I'rab)</th>
+                <th>Ta'alluq & Penjelasan Kaidah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>مَثَلُهُمْ</strong></td>
+                <td>Isim Mufrad + Mudhaf Ilaih</td>
+                <td>Mubtada' marfu' dengan dhammah zhahirah; <em>Hum</em> dhomir muttashil fi mahalli jarr mudhaf ilaih.</td>
+                <td>Berfungsi sebagai musnad ilaih; mengawali tamtsil kosmik kaum munafik.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>كَمَثَلِ</strong></td>
+                <td>Kaf Tasybih + Isim Majrur</td>
+                <td>Kaf huruf jar lit-tasybih; <em>Matsali</em> isim majrur bil-kasrah wa huwa mudhaf.</td>
+                <td>Syibhul jumlah (jar wa majrur) berada fi mahalli raf'in sebagai <strong>Khabar</strong> dari mubtada' <em>Matsaluhum</em>.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱلَّذِى</strong></td>
+                <td>Isim Maushul Mabni</td>
+                <td>Isim maushul mabni 'alas-sukun fi mahalli jarr mudhaf ilaih.</td>
+                <td>Meskipun lafalnya mufrad (tunggal), maknanya mencakup jenis (al-jins) atau jamak (alladzina).</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱسْتَوْقَدَ</strong></td>
+                <td>Fi'il Madhi Wazan <em>Istaf'ala</em></td>
+                <td>Fi'il madhi mabni 'alal fath. Fa'il-nya dhomir mustatir jawazan taqdiruhu <em>Huwa</em> kembali ke <em>alladzi</em>.</td>
+                <td>Jumlah fi'liyyah <em>istawqada</em> berkedudukan sebagai <strong>Shilah Al-Maushul</strong>, la mahalla laha minal i'rab.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>نَارًا</strong></td>
+                <td>Isim Nakirah Mu'annats Majazi</td>
+                <td>Maf'ul bih manshub dengan fathah zhahirah (وعلامة نصبه الفتحة الظاهرة).</td>
+                <td>Bentuk nakirah menunjukkan <em>at-ta'zhim</em> atau <em>at-tanwir al-mahdud</em> (api tertentu yang dinyalakan di tengah pekatnya malam).</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>فَلَمَّآ</strong></td>
+                <td>Fa' Isti'naf/Athaf + Zharfiyyah</td>
+                <td>Fa' 'athifah li tartibil ahdats; <em>Lammā</em> isim syarat ghairu jazim berfaedah zharfiyyah zaman (makna <em>hīna</em>).</td>
+                <td>Menghubungkan tahapan menyalanya api dengan tindakan pemadaman Ilahi secara kronologis.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>أَضَآءَتْ</strong></td>
+                <td>Fi'il Madhi Ruba'i (Wazan <em>Af'ala</em>)</td>
+                <td>Fi'il madhi mabni 'alal fath; Ta' ta'nits sakinah harf la mahalla lahu. Fa'il mustatir taqdiruhu <em>Hiya</em> kembali ke <em>Nār</em>.</td>
+                <td>Jumlah fi'liyyah berada fi mahalli jarr mudhaf ilaih bagi zharf <em>lammā</em> (jumlah syarthiyyah).</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مَا</strong></td>
+                <td>Isim Maushul / Isim Mubham</td>
+                <td>Isim maushul mabni 'alas-sukun fi mahalli nashbin maf'ul bih bagi fi'il <em>adhaa'at</em>.</td>
+                <td>Bermakna "segala tempat/benda yang berada di sekelilingnya".</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>حَوْلَهُۥ</strong></td>
+                <td>Zharf Makan + Mudhaf Ilaih</td>
+                <td><em>Haula</em> zharf makan manshub bil fathah wa huwa mudhaf; Ha dhomir fi mahalli jarr mudhaf ilaih.</td>
+                <td>Syibhul jumlah muta'alliq dengan shilah maushul yang mahdzuf (taqdiruhu: <em>istaqarra haulahu</em>).</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ذَهَبَ</strong></td>
+                <td>Fi'il Madhi Lazim</td>
+                <td>Fi'il madhi mabni 'alal fath. Menjadi fi'il jawab syarat bagi <em>lammā</em>.</td>
+                <td>Menunjukkan kepastian pemadaman seketika tanpa jeda penundaan.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Lafzhul Jalalah / Isim 'Alam</td>
+                <td>Fa'il marfu' dengan dhammah zhahirah pada akhirnya (فاعل مرفوع وعلامة رفعه الضمة).</td>
+                <td>Menjadi musnad; menegaskan subjek mutlak pembalasan adalah Allah Ta'ala.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>بِنُورِهِمْ</strong></td>
+                <td>Huruf Jar (Ba) + Mudhaf + Mudhaf Ilaih</td>
+                <td>Ba ta'diyah/isti'anah; <em>Nūri</em> isim majrur bil kasrah wa huwa mudhaf; <em>Him</em> dhomir jamak fi mahalli jarr mudhaf ilaih.</td>
+                <td>Jar wa majrur muta'alliq dengan fi'il <em>dzahaba</em>. Perpindahan dhomir dari tunggal (<em>haulahu</em>) ke jamak (<em>binurihim</em>).</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>وَتَرَكَهُمْ</strong></td>
+                <td>Wawu 'Athaf + Fi'il Madhi + Maf'ul Bih</td>
+                <td>Wawu 'athifah; <em>Taraka</em> fi'il madhi mabni 'alal fath, fa'il dhomir mustatir (Huwa); <em>Hum</em> maf'ul bih fi mahalli nashb.</td>
+                <td>Jumlah ma'thufah atas jawab syarat. Makna <em>taraka</em> mengandung arti penelantaran dan pemutusan inayah.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><strong>فِى</strong></td>
+                <td>Huruf Jar lizh-Zharfiyyah</td>
+                <td>Huruf jar mabni 'alas-sukun, memberikan faedah zharfiyyah majaziyyah (lingkungan yang mengepung).</td>
+                <td>Menghubungkan kondisi penelantaran dengan ruang kegelapan.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><strong>ظُلُمَٰتٍ</strong></td>
+                <td>Isim Jamak Mu'annats Salim</td>
+                <td>Isim majrur bi 'fī' tanda jarr kasrah zhahirah dengan tanwin nakirah.</td>
+                <td>Jar wa majrur muta'alliq dengan fi'il <em>tarakahum</em>, berstatus sebagai maf'ul tsani atau hal.</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><strong>لَّا</strong></td>
+                <td>Huruf Nafi (Nāfiyah)</td>
+                <td>Huruf nafi mabni 'alas-sukun, tidak beramal merubah harakat i'rab (ghairu 'āmilah).</td>
+                <td>Menafikan kemampuan indra penglihatan secara total dan berkelanjutan.</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><strong>يُبْصِرُونَ</strong></td>
+                <td>Fi'il Mudhari' Ruba'i + Fa'il</td>
+                <td>Fi'il mudhari' marfu' bi tsubutin-nun (ثبوت النون); Wawu al-jama'ah dhomir muttashil fi mahalli raf'in fa'il.</td>
+                <td>Jumlah fi'liyyah <em>lā yubṣirūn</em> berada fi mahalli jarr sebagai <strong>Na'at</strong> bagi lafal <em>zhulumātin</em>, atau fi mahalli nashbin sebagai <strong>Hal</strong> dari dhomir <em>hum</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Kajian Retorika Balaghah: Ma'ani, Bayan, Badi' & I'jaz Fonetis</h3>
+    <ul>
+        <li>
+            <strong>Tasybīh Tamtsīlī Murakkab (Puncak Seni Analogi Estetis):</strong>
+            Ayat ini merupakan mahakarya tasybih tamtsili, di mana <em>wajhusy-syabah</em> (titik keserupaan) bukan diambil dari satu unsur tunggal, melainkan diintisarikan dari perpaduan gerak multi-elemen yang kompleks (<em>shūrah muntaza'ah min muta'addid</em>):
+            <br>&bull; <em>Sisi Musyabbah (Kondisi Kaum Munafik):</em> Sekelompok manusia yang terperangkap dalam kegelapan kufur, lalu menampakkan keislaman di Madinah sehingga memperoleh secercah cahaya pengakuan lahiriah, darah dan harta mereka aman, dapat berbaur dengan kaum muslimin. Namun karena iman mereka palsu, ketika ajal tiba atau saat ujian genting menimpa, Allah membongkar kedok mereka, mencabut seluruh manfaat perlindungan tersebut, dan menjerumuskan jiwa mereka ke dalam kepanikan serta kegelapan neraka yang abadi.
+            <br>&bull; <em>Sisi Musyabbah Bih (Kondisi Pemantik Api):</em> Musafir yang tersesat di padang belantara pada malam gulita, berusaha susah payah menyalakan api. Begitu api berkobar menerangi sekelilingnya dan menghadirkan rasa aman sesaat, tiba-tiba angin kencang memadamkan api tersebut, meninggalkannya dalam kegelapan pekat yang berlipat ganda, bingung tanpa kompas navigasi.
+        </li>
+        <li>
+            <strong>Seni Iltifāt (Perpindahan Gramatikal dari Mufrad ke Jamak):</strong>
+            Perhatikan keindahan transisi dhomir: Allah mengawali dengan bentuk mufrad (tunggal): <em>kamatsalil-ladzī</em> (seperti orang yang), <em>istawqada</em> (dia menyalakan), <em>haulahū</em> (sekelilingnya). Namun ketika azab pemadaman tiba, Allah beralih ke bentuk jamak: <em>Żahaballāhu binūrihim</em> (cahaya mereka), <em>tarakahum</em> (membiarkan mereka), <em>lā yubṣirūn</em> (mereka tidak dapat melihat).
+            <br><em>Hikmah Balaghah:</em> Pada saat menyalakan api konspirasi atau memantik kedustaan, para perancang makar munafik sering kali bergerak melalui inisiator tunggal atau elite tertentu (seperti gembong Abdullah bin Ubay bin Salul). Namun ketika azab pembalasan dan pemadaman Ilahi dijatuhkan, dampaknya menelan seluruh pengikutnya secara kolektif tanpa ampun!
+        </li>
+        <li>
+            <strong>Al-Ījāz bil-Hadzf (Keringkasan Melalui Pelesapan):</strong>
+            Al-Qur'an tidak menyatakan: <em>"Falammā adhā'at mā haulahu khabadat an-nāru fa żahaballāhu..."</em> (Maka tatkala menerangi sekelilingnya, padamlah api itu lalu Allah menghilangkan...). Kalimat "padamlah api itu" dilesapkan (<em>hadzf</em>), dan langsung dilompati kepada <em>Żahaballāhu binūrihim</em>. Gaya ini memberikan efek psikologis kecepatan luar biasa: lenyapnya cahaya bukan karena proses pembakaran yang perlahan habis, melainkan intervensi seketika yang mengejutkan sang pemantik api!
+        </li>
+        <li>
+            <strong>Balaghah al-Badi' (Ath-Thibāq al-Khafī & Al-Muqābalah):</strong>
+            Terjadi kontras artistik yang sangat tajam antara kata <em>Aḍā'at</em> (terang benderang memancar) dengan <em>Żulumāt</em> (kegelapan-kegelapan yang pekat), serta antara kata <em>Nūr</em> (cahaya penerang) dengan <em>Lā Yubṣirūn</em> (kebutaan total yang meraba-raba).
+        </li>
+    </ul>
+
+    <!-- LENSA 3: KONTEKS & MAQASID -->
+    <h2 id="lensa-3">Lensa 3: Konteks Eksegetis (2S & 1L), Sosio-Historis & Maqashid As-Surah</h2>
+
+    <h3>1. Analisis Konteks Tiga Dimensi: Sibaq, Siyaq, dan Lihaq</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Tautan Kausalitas Ayat Sebelumnya):</strong> Pada ayat 16, Allah menjatuhkan vonis kebangkrutan mutlak atas transaksi eksistensial kaum munafik: <em>"Ūlā'ikalladzīnasy-tarawuḍ-ḍalālata bil-hudā famā rabiḥat tijāratuhum"</em> (Mereka menukar petunjuk dengan kesesatan, maka tiadalah beruntung perniagaan mereka). Ayat 17 hadir untuk memvisualisasikan bagaimana proses "transaksi yang bangkrut" itu terjadi di dunia nyata melalui perumpamaan api yang padam.
+        </li>
+        <li>
+            <strong>Siyāq (Dinamika Internal Ayat):</strong> Ayat 17 memegang posisi sentral sebagai Tamtsil Kosmik Pertama (<em>Al-Matsal An-Nārī</em> / Perumpamaan Berbasis Api). Jika ayat-ayat sebelumnya membedah kemunafikan melalui dialektika psikologis dan teologis, ayat 17 menghentak kesadaran manusia melalui metafora sensorik visual: api, cahaya, panas, padam mendadak, dan teror kegelapan.
+        </li>
+        <li>
+            <strong>Liḥāq (Korelasi Ayat Sesudahnya):</strong> Pada ayat 18, Allah menegaskan akibat fatal dari pemadaman cahaya tersebut terhadap organ-organ spiritual mereka: <em>"Ṣummum bukmun 'umyun fahum lā yarji'ūn"</em> (Tuli, bisu, lagi buta, maka mereka tidak dapat kembali). Dan pada ayat 19-20, Allah akan menghadirkan Tamtsil Kosmik Kedua (<em>Al-Matsal Al-Mā'ī</em> / Perumpamaan Air Hujan Badai dan Petir) untuk melengkapi diagnosis terhadap spektrum munafik yang diliputi keraguan intelektual.
+        </li>
+    </ul>
+
+    <h3>2. Latar Sosio-Historis Madinah al-Munawwarah</h3>
+    <p>
+        Masyarakat Madinah pasca-Hijrah dihuni oleh tiga entitas besar: Kaum Mukminin Muhajirin-Anshar, Komunitas Yahudi Ahlul Kitab (Bani Qainuqa, Nadhir, Quraizhah), dan Kaum Munafik Yatsrib di bawah komando Abdullah bin Ubay bin Salul. Kaum munafik ini pada mulanya menyaksikan kilatan kekuatan Islam yang mengagumkan pasca-kemenangan Badar. Mereka menyalakan api "keislaman formalitas" (<em>istauqada nāran</em>) agar terhindar dari sanksi hukum, dapat berdagang di pasar Muslim tanpa pajak zimmi, dan mempertahankan kedudukan aristokrasi mereka.
+    </p>
+    <p>
+        Namun api yang mereka nyalakan adalah api pragmatisme duniawi, bukan cahaya wahyu yang berakar di lubuk hati. Mereka mengira cahaya semu ini akan terus melindungi manuver mereka selamanya. Melalui ayat ini, Allah mengingatkan para sahabat Nabi dan seluruh penduduk Madinah bahwa keamanan dan kejayaan semu kaum munafik itu berada di ambang kepunahan; sekali hembusan takdir Ilahi menerpa, seluruh topeng mereka akan terlempar dan mereka akan tenggelam dalam kehinaan abadi.
+    </p>
+
+    <h3>3. Korelasi dengan Maqāṣid As-Sūrah (Tujuan Agung Surah Al-Baqarah)</h3>
+    <p>
+        Surah Al-Baqarah diturunkan untuk meletakkan fondasi peradaban umat pengganti (<em>khilāfah fil-ardh</em>) pasca-kegagalan historis Bani Israil. Dalam mendirikan peradaban besar, modalitas paling berharga adalah <strong>Kejujuran Ruhani dan Kemurnian Kompas Moral</strong>. Tamtsil api di ayat 17 menggariskan prinsip aksiomatik: peradaban yang dibangun di atas kepura-puraan, pemanfaatan agama untuk keuntungan politis sesaat, dan manipulasi pencitraan lahiriah adalah peradaban rapuh laksana obor di tengah badai gurun. Allah tidak akan pernah membiarkan umat ini dipimpin oleh jiwa-jiwa pemantik api palsu; Allah sendiri yang akan mencabut nūr dari sistem munafik hingga mereka runtuh di hadapan sejarah.
+    </p>
+
+    <!-- LENSA 4: TAFSIR 6 MUFASSIR -->
+    <h2 id="lensa-4">Lensa 4: Eksegesis Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <p><strong>1. Abu Ja'far Muhammad bin Jarir At-Tabari (Wafat 310 H) &mdash; <em>Jāmi' al-Bayān 'an Ta'wīl Ayi al-Qur'ān</em></strong></p>
+        <p>
+            Imam At-Tabari memaparkan dua riwayat otoritatif dari generasi sahabat mengenai siapa sebenarnya subjek pemantik api ini:
+            <br><em>Riwayat Pertama (Ibnu Mas'ud & Sejumlah Sahabat):</em> Tamtsil ini menggambarkan orang-orang yang sempat memeluk Islam di awal dakwah Nabi di Madinah, sehingga mereka merasakan manisnya hidayah, mengenal halal-haram, dan menikmati persaudaraan iman (inilah fase <em>adhā'at mā haulahū</em>). Namun kemudian virus keraguan dan kemunafikan merasuki hati mereka, sehingga mereka murtad batin dan berkhianat; maka Allah mencabut cahaya iman tersebut dari kalbu mereka, membiarkan mereka tersesat dalam kegelapan kufur.
+            <br><em>Riwayat Kedua (Ibnu Abbas r.a.):</em> Api yang dinyalakan adalah ucapan lisan syahadat <em>"Lā ilāha illallāh"</em>. Dengan kalimat itu, darah mereka terlindungi di dunia, wanita mereka halal dinikahi, dan harta warisan mereka aman. Itulah cahaya semu duniawi. Namun ketika sakaratul maut tiba, Allah mencabut seluruh manfaat kalimat syahadat tersebut dari mereka karena ketiadaan iman di batin, meninggalkan mereka dalam kegelapan azab kubur dan neraka. At-Tabari menguatkan riwayat kedua sebagai makna yang paling komprehensif bagi karakteristik munafik sejati.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>2. Al-Hafizh 'Imaduddin Ismail bin Katsir (Wafat 774 H) &mdash; <em>Tafsīr al-Qur'ān al-'Azhīm</em></strong></p>
+        <p>
+            Ibnu Katsir menegaskan bahwa perumpamaan api pada ayat ini adalah pasangan kembar dari perumpamaan air pada ayat 19. Beliau menghubungkannya secara harmonis dengan perumpamaan cahaya dan kegelapan dalam Surah An-Nur ayat 35-40:
+            <br>Ibnu Katsir menyoroti secara tajam diksi <em>Żahaballāhu binūrihim</em>: Allah melenyapkan apa yang memberi mereka kemanfaatan (yakni sinar yang menerangi arah), dan menetapkan atas mereka apa yang membahayakan (yakni panasnya api dan kepulan asap pekat). Ini adalah pembalasan yang sempurna (<em>al-jazā' min jinsil 'amal</em>). Mereka menggunakan Islam untuk meraup keuntungan materi, maka Allah mencabut berkah dan nur Islam dari jiwa mereka, membiarkan mereka menanggung beban kehinaan di dunia dan siksa berlipat ganda di akhirat.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>3. Abu Abdillah Muhammad bin Ahmad Al-Qurthubi (Wafat 671 H) &mdash; <em>Al-Jāmi' li Ahkām al-Qur'ān</em></strong></p>
+        <p>
+            Al-Qurthubi mengkaji ayat ini dari aspek filosofi hukum dan analisis kebahasaan. Beliau mengurai mengapa lafal <em>al-ladzī</em> yang mufrad dapat disandingkan dengan dhomir jamak <em>binūrihim</em>:
+            <br>Dalam kaidah nahwu, kata <em>al-ladzī</em> sering kali diperlakukan sebagai <em>isim jins</em> yang bermakna <em>al-ladzīna</em> (sebagaimana firman-Nya dalam QS. At-Taubah: 69: <em>wa khudhtum kalladzī khādhū</em>). Dari sudut hukum syariat, Al-Qurthubi menegaskan bahwa ayat ini menjadi dalil bahwa hukum-hukum lahiriah Islam berlaku berdasarkan apa yang tampak di dunia (<em>nahnu nahkumu bizh-zhawahir</em>), sehingga orang munafik menikmati perlindungan api Islam secara lahiriah, namun hukum hakiki di sisi Allah bergantung pada ketulusan batin (<em>wallāhu yatawallās-sarā'ir</em>). Ketika ajal tiba, tabir lahiriah koyak seketika.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>4. Az-Zamakhsyari (Wafat 538 H) & Fakhruddin Ar-Razi (Wafat 606 H) &mdash; <em>Al-Kasysyāf & Mafātīḥ al-Ghaib</em></strong></p>
+        <p>
+            Az-Zamakhsyari membedah keagungan balaghah pada kata <em>istauqada</em>: api yang dinyalakan bukan api alami yang muncul dari petir atau pohon hijau, melainkan api yang dipaksakan dengan susah payah. Orang munafik harus bekerja ekstra keras menjaga sandiwara keimanannya: menghafal istilah agama, ikut shalat berjamaah dengan malas, dan berpura-pura setia, demi menjaga nyala api kepalsuan tersebut.
+            <br>Imam Fakhruddin Ar-Razi dalam <em>Mafātīḥ al-Ghaib</em> menguraikan psikologi kepanikan: seseorang yang berada di dalam kegelapan sejak awal (orang kafir asli) organ matanya telah beradaptasi dengan kegelapan. Namun seseorang yang matanya telah terpapar cahaya terang lalu mendadak cahaya itu dimatikan seketika, maka pupil matanya mengalami kejut optik hebat; kegelapan yang dirasakannya menjadi berkali-kali lipat lebih pekat dan menakutkan dibandingkan orang yang tidak pernah melihat cahaya! Itulah kondisi kaum munafik: mereka sempat mendengar Al-Qur'an dan melihat kemuliaan Rasulullah ﷺ, maka ketika hidayah itu dicabut, jiwa mereka dilanda kebingungan dan keputusasaan yang tiada tara.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>5. Prof. Dr. Muhammad Quraish Shihab &mdash; <em>Tafsir Al-Mishbah</em></strong></p>
+        <p>
+            Quraish Shihab menyoroti ayat ini dengan kacamata eksistensial modern. Beliau menekankan perbedaan antara "menyalakan api sendiri" dengan "menyambut cahaya Ilahi":
+            <br>Api yang dinyalakan manusia (<em>istauqada nāran</em>) adalah simbol dari rekayasa akal materialistik dan ambisi pribadi yang egoistis. Api tersebut membutuhkan bahan bakar yang terbatas, mudah padam oleh terpaan angin luar, dan menghasilkan asap yang menyesakkan dada. Sebaliknya, petunjuk Allah adalah <em>Nūr</em> yang memancar murni tanpa pembakaran materi kotor. Orang munafik menolak Nur Ilahi dan memilih menyalakan api pencitraan mereka sendiri. Ketika sandiwara itu terbongkar, mereka ditinggalkan dalam <em>zhulumāt</em>: kegelapan krisis identitas, hilangnya integritas, dan teror batin bahwa seluruh hidup mereka hanyalah ilusi kosong.
+        </p>
+    </div>
+
+    <div class="tafsir-quote">
+        <p><strong>6. Buya Hamka (Prof. Dr. Abdul Malik Karim Amrullah) &mdash; <em>Tafsir Al-Azhar</em></strong></p>
+        <p>
+            Buya Hamka melukiskan pemandangan ayat ini dengan kepiawaian sastra Melayu yang sangat menyentuh kalbu. Hamka menulis:
+            <br><em>"Bayangkanlah seorang pengembara di tengah rimba belantara Sumatera atau padang pasir Arabia pada malam yang sangat gelap gulita, dingin menggigit tulang. Ia ketakutan diserang binatang buas atau musuh. Lalu ia mengumpulkan ranting-ranting patah dan menyalakan api unggun. Alangkah gembiranya hatinya ketika api itu mulai menyala menjilat ke udara; pohon-pohon di sekitarnya tampak terang, bayang-bayang binatang buas menyingkir, rasa hangat mulai menjalari tubuhnya. Hatinya bersorak: 'Aku telah selamat!' Tetapi, alangkah malangnya nasib pengembara itu; belum sempat ia mengeringkan bajunya, tiba-tiba datang angin ribut disertai gerimis malam memadamkan api itu seketika! Asap hitam membubung memedihkan matanya, dan ia terhempas kembali ke dalam kegelapan yang jauh lebih pekat daripada semula. Kakinya terpaku, tangannya meraba-raba ke kiri dan kanan mencari pegangan, namun tiada yang dirabanya selain duri dan jurang. Begitulah jiwa kaum munafik yang mempermainkan agama: mereka menyangka telah selamat dengan tipu muslihatnya, padahal mereka sedang menuju kepunahan yang paling mengerikan."</em>
+        </p>
+    </div>
+
+    <h3>Matriks Komparasi: Titik Temu (Ijma') & Dinamika Penafsiran (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Penekanan Mufassir (Ikhtilaf)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Tamtsil Api (Al-Matsal An-Nārī)</strong></td>
+                <td>Sepakat bahwa ayat ini adalah metafora parabolik (tasybih tamtsili) untuk melukiskan kepalsuan iman, keuntungan sesaat yang sirna, dan kebingungan batin kaum munafik.</td>
+                <td>At-Tabari & Ibnu Abbas menekankan fase eskatologis (pemadaman cahaya di sakaratul maut dan shirath). Zamakhsyari & Hamka menitikberatkan pada psikologi kepanikan duniawi dan kebangkrutan moral di hadapan realitas.</td>
+            </tr>
+            <tr>
+                <td><strong>Penyebab Lenyapnya Cahaya</strong></td>
+                <td>Sepakat bahwa pemadaman cahaya adalah kehendak dan ketetapan langsung dari Allah (<em>Żahaballāhu</em>) sebagai hukuman atas pengkhianatan nurani.</td>
+                <td>Ar-Razi memandang dari hukum kausalitas batin: jiwa yang menolak kebenaran hakiki secara otomatis merusak reseptor spiritualnya. Ibnu Katsir memandangnya sebagai tindakan pembalasan langsung (<em>muqabalah</em>) dari Penguasa Semesta.</td>
+            </tr>
+            <tr>
+                <td><strong>Diksi "Nūr" vs "Dhiyā'" / "Nār"</strong></td>
+                <td>Konsensus bahwa pemilihan kata <em>Nūr</em> menunjukkan hikmah Ilahi: Allah mencabut manfaat penerangan dan menyisakan bahaya panas pembakaran.</td>
+                <td>Al-Qurthubi & Ibnu Katsir menelaah implikasi teologis azab neraka. Quraish Shihab mengontekstualisasikannya ke dalam krisis eksistensial manusia modern yang kehilangan kedamaian jiwa.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI & MENTAL MODEL -->
+    <h2 id="lensa-5">Lensa 5: Sintesis Kognitif, Model Mental & Neuropsikologi Tazkiyatun Nafs</h2>
+
+    <h3>1. Pergeseran Paradigma Kognitif (Old Mindset vs Quranic Mindset)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Evaluasi</th>
+                <th>Paradigma Lama (Sekuler / Oportunis Naif)</th>
+                <th>Paradigma Qur'ani (QS. Al-Baqarah: 17)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sumber Kejelasan Hidup (Light Source)</strong></td>
+                <td>Mengandalkan "api buatan sendiri" (<em>istauqada nāran</em>): popularitas media sosial, koneksi politik pragmatis, pencitraan luar, dan rekayasa narasi untuk menciptakan rasa aman semu.</td>
+                <td>Menyadari bahwa seluruh cahaya duniawi bersifat fana dan rentan padam; satu-satunya kompas abadi yang tidak pernah padam adalah <strong>Nūr Ilāhī</strong> yang bersumber dari keikhlasan tauhid dan wahyu Al-Qur'an.</td>
+            </tr>
+            <tr>
+                <td><strong>Dinamika Kenyamanan Semu</strong></td>
+                <td>Merasa telah sukses dan selamat ketika rencana manipulatif berhasil menerangi sekelilingnya (<em>aḍā'at mā ḥaulahū</em>) dan mendatangkan keuntungan duniawi.</td>
+                <td>Waspada terhadap fenomena <em>flash-in-the-pan</em>: terangnya fasilitas duniawi tanpa integritas iman adalah prolog menuju pemadaman total (<em>żahaballāhu binūrihim</em>) yang menyisakan teror batin.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Krisis Spiritual</strong></td>
+                <td>Mengira bahwa ketika kegelapan batin melanda, solusinya adalah menyalakan lebih banyak hiburan, distraksi indrawi, dan validasi eksternal.</td>
+                <td>Memahami hukum sistemik jiwa: menumpuk api materi di tengah kegelapan kalbu hanya akan menambah asap dan panas yang membakar tanpa pernah memberi penerangan hakiki.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Model Mental Sistemik: Epistemic Parasitism & Sensory Disorientation Cycle</h3>
+    <p>
+        Ayat 17 meletakkan prinsip epistemologis dan psikologis bagi dua model mental sistemik kontemporer:
+    </p>
+    <ul>
+        <li>
+            <strong>Epistemic Parasitism & The Borrowed Light Fallacy (Kesesatan Cahaya Pinjaman):</strong>
+            Kaum munafik adalah parasit epistemologis: mereka tidak menghasilkan cahaya iman dari dalam kalbunya sendiri, melainkan "menumpang hidup" pada ekosistem cahaya kaum mukminin di Madinah. Model mental ini mengajarkan bahwa <em>kejelasan hidup yang bersumber dari pinjaman sosial (sosok panutan, afiliasi kelompok, atau legitimasi eksternal) akan runtuh seketika saat individu tersebut diisolasi sendirian di hadapan krisis eksistensial</em>. Jika seseorang tidak memiliki generator nur internal berupa hubungan otentik dengan Allah, seluruh bangunan pemahamannya hanyalah ilusi optik yang rapuh.
+        </li>
+        <li>
+            <strong>The Sudden Contrast & Spatial Disorientation Cycle (Siklus Disorientasi Ekstrem):</strong>
+            Dalam teori persepsi visual dan sistem kognitif, fenomena <em>photopic to scotopic sudden transition</em> terjadi ketika seseorang yang pupil matanya menyempit karena menatap api terang mendadak dilemparkan ke dalam kegelapan mutlak. Otak mengalami <em>sensory blackout</em>: terjadi kegagalan pemetaan spasial, hilangnya persepsi kedalaman, dan kepanikan motorik. Inilah dasar kognitif dari kalimat <em>"wa tarakahum fī ẓulumātil lā yubṣirūn"</em>: pengkhianatan nurani melumpuhkan sistem navigasi batin, sehingga sang pelaku terperangkap dalam labirin kegelapan yang membuat akal budinya tidak lagi mampu membedakan mana keselamatan dan mana jurang kehancuran.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Moral & Dinamika Tazkiyatun Nafs: Habituasi Dopamin Semu vs Kedamaian Nurani</h3>
+    <p>
+        Ayat ini melukiskan dinamika neuropsikologis yang sangat relevan: dorongan menyalakan api sendiri (<em>istauqada nāran</em>) berkorelasi erat dengan <em>dopamine-driven reward seeking behavior</em>. Upaya memantik api, melihatnya menyala terang, dan menikmati pandangan kagum orang di sekitar memicu lonjakan dopamin jangka pendek di area <em>nucleus accumbens</em>. Kaum oportunis kecanduan pada sensasi kemenangan taktis ini.
+    </p>
+    <p>
+        Namun api yang membakar materi kimia otak ini tidak memiliki substrat ketenangan jangka panjang (<em>serotonin</em> dan <em>endorphin</em> spiritual) yang hanya diproduksi oleh integritas moral dan keikhlasan tawakkal. Ketika takdir Ilahi menghentikan pasokan dopamin eksternal tersebut (kebohongan terbongkar atau jabatan hilang), otak pelaku mengalami <em>dopamine crash</em> yang parah. Dalam kacamata Tazkiyatun Nafs, inilah saat ketika Allah mencabut <em>Nūr</em> (kedamaian ruhani) dan menyisakan bara api (kegelisahan neurotik, kecemasan kronis, insomnia, dan paranoia). Jiwa manusia tersebut masuk ke dalam status <em>fī ẓulumāt</em>: kegelapan kognitif di mana mata biologisnya tetap berfungsi normal, tetapi mata hatinya (<em>al-bashīrah</em>) mengalami kebutaan fungsional total.
+    </p>
+
+    <!-- LENSA 6: REALITAS ABAD KE-21 -->
+    <h2 id="lensa-6">Lensa 6: Diagnosis Realitas Kontemporer Abad ke-21 & Dekonstruksi Paradigma Sekuler</h2>
+
+    <h3>1. Krisis Disorientasi Moral di Balik Gemerlap Layar Digital (Screen Glare vs Soul Blindness)</h3>
+    <p>
+        Abad ke-21 adalah era di mana umat manusia berhasil membanjiri planet bumi dengan miliaran lumen cahaya buatan: lampu neon metropolitan, papan reklame LED raksasa, dan layar gawai (<em>smartphone</em>) yang menyala selama 24 jam nonstop di hadapan mata. Secara harafiah, manusia modern telah berhasil melakukan <em>istauqada nāran</em> dalam skala peradaban global paling kolosal sepanjang sejarah. Segala hal tampak "terang benderang" (<em>aḍā'at mā ḥaulahū</em>): informasi melimpah, transaksi keuangan terjadi dalam hitungan milidetik, dan algoritma kecerdasan buatan menyajikan analisis prediktif di ujung jari.
+    </p>
+    <p>
+        Namun di balik gemerlap cahaya teknologi materiil tersebut, manusia modern sedang mengalami krisis <strong>Żulumāt Spiritual</strong> yang belum pernah terjadi sebelumnya. Epidemi depresi global, kesepian akut (<em>loneliness epidemic</em>), krisis makna eksistensial, dan angka bunuh diri yang meroket di negara-negara paling maju membuktikan kebenaran ayat 17: kemajuan teknologi lahiriah semata-mata adalah <em>dhiyā'</em> buatan manusia yang tidak mengandung <em>Nūr</em> Ilahi. Ketika layar gawai dimatikan di tengah keheningan malam, miliaran manusia modern terhempas ke dalam jurang kekosongan jiwa yang mengerikan; mereka tidak tahu untuk apa mereka hidup, ke mana mereka akan pergi setelah mati, dan bagaimana cara menyelamatkan diri dari kehampaan batin.
+    </p>
+
+    <h3>2. Gemerlap Fana Industri Hiburan & Hedonistic Burnout</h3>
+    <p>
+        Tamtsil ayat 17 termanifestasi secara sempurna dalam fenomena dunia malam, festival hiburan hedonistik, dan gaya hidup pamer kemewahan (<em>flexing culture</em>).
+    </p>
+    <p>
+        Para pemuja kesenangan duniawi menyalakan "api pesta" mereka: musik berdentum, sorotan lampu laser warna-warni, gelak tawa buatan, dan konsumsi zat adiktif. Di bawah sorotan lampu pesta tersebut, mereka merasa dunia berada dalam genggaman dan seluruh masalah hidup lenyap (<em>aḍā'at mā ḥaulahū</em>). Namun begitu fajar menyingsing, musik berhenti, dan lampu kelab malam dipadamkan, yang tertinggal hanyalah <em>hangover</em> fisik yang menyiksa, dompet yang terkuras, kepedihan batin, dan keputusasaan yang semakin dalam. Allah mencabut rasa bahagia hakiki (<em>nūr</em>) dari kehidupan mereka, membiarkan mereka tersiksa oleh bara api kecemasan dan asap kelelahan emosional di tengah kegelapan kamar tidur mereka yang sunyi (<em>tarakahum fī ẓulumātil lā yubṣirūn</em>).
+    </p>
+
+    <h3>3. Dekonstruksi Paradigma Sekuler-Teknokratik: Ilusi Otosufisiensi Manusia</h3>
+    <p>
+        Filsafat humanisme sekuler dan teknokrasi modern mendakwahkan bahwa manusia tidak lagi membutuhkan wahyu langit atau petunjuk Tuhan. Dengan kekuatan sains, rekayasa genetika, eksplorasi antariksa, dan kecerdasan artifisial, manusia mengklaim dirinya mampu menjadi "penerang bagi dirinya sendiri" (<em>homo deus</em>).
+    </p>
+    <p>
+        Ayat 17 membongkar arogansi epistemologis ini dari akarnya. Upaya menciptakan sistem etika tanpa Tuhan laksana menyalakan obor rapuh di tengah badai kosmis. Ketika sistem sekuler menolak Nūr Ilahi, peradaban modern justru melahirkan senjata pemusnah massal nuklir, eksploitasi alam yang memicu krisis iklim global, perang genosida yang dilegitimasi secara geopolitik, dan algoritma digital yang memecah belah persaudaraan manusia. Sains materialistik yang melepaskan diri dari wahyu Ilahi telah menjadi api yang membakar peradaban manusia dari dalam; sains tersebut memberi mereka kekuatan teknis (<em>dhiyā'</em>), namun mencabut kebijaksanaan dan keselamatan (<em>nūr</em>), membiarkan para pemimpin dunia meraba-raba dalam kegelapan perang dan kehancuran ekologis tanpa mampu melihat jalan pulang menuju keselamatan sejati.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS & MUHASABAH -->
+    <h2 id="lensa-7">Lensa 7: Transformasi Praksis, Muhasabah & Doa Tadabbur</h2>
+
+    <h3>1. Tiga Tindakan Mikro-Aksi Nyata (Actionable Steps)</h3>
+    <div class="highlight-box">
+        <ol>
+            <li>
+                <strong>Audit Sumber Cahaya Jiwa (The Light-Source Audit Protocol):</strong>
+                Lakukan pemisahan tegas dalam aktivitas harian Anda antara ambisi egois yang membakar (<em>dhiyā' / nār an-nafs</em>) dengan motivasi ketulusan ibadah (<em>nūr al-īmān</em>). Setiap kali Anda hendak berbicara di depan publik, menulis status di media sosial, atau memimpin suatu proyek, tanyakan pada diri sendiri: <em>"Apakah aku sedang menyalakan api pencitraan agar orang lain memuji kehebatanku (istauqada nāran), ataukah aku murni berniat menyebarkan hidayah Allah demi keridhaan-Nya semata?"</em> Jika tercium bau riya' dan pencitraan semu, hentikan manuver tersebut seketika dan bersihkan niat sebelum api itu padam dan mempermalukan Anda di hadapan Allah.
+            </li>
+            <li>
+                <strong>Pemberlakuan Protokol "Kamar Gelap Ruhani" (Digital Darkroom & Night Vigil):</strong>
+                Tetapkan disiplin matikan seluruh layar digital (ponsel, televisi, laptop) minimal 60 menit sebelum tidur setiap malam. Gantilah cahaya biru layar (<em>screen glare</em>) yang merusak retina batin dengan keheningan sujud shalat Witir atau Qiyamullail di dalam ruangan yang temaram. Latihlah kalbu Anda untuk bernavigasi menggunakan Nur Dzikirullah (<em>Subḥānallāh, Alḥamdulillāh, Lā ilāha illallāh, Allāhu Akbar</em>) agar jiwa Anda tidak mengalami ketergantungan patologis pada stimulus eksternal duniawi.
+            </li>
+            <li>
+                <strong>Amalan Pemupuk Nur Permanen (The Inextinguishable Light Formula):</strong>
+                Bangun benteng pertahanan spiritual agar cahaya Anda tidak dicabut oleh Allah melalui dua amalan harian konsisten:
+                <br>&bull; Menjaga shalat Subuh berjamaah tepat waktu di masjid, mengamalkan hadits Nabi ﷺ: <em>"Basy-syiril masysyā'īna fizh-zhulami ilan masājidi bin-nūrit tāmmi yawmal qiyāmah"</em> (Berikanlah kabar gembira kepada orang-orang yang berjalan di tengah kegelapan malam menuju masjid-masjid dengan cahaya yang sempurna dan utuh pada Hari Kiamat, HR. Abu Dawud & At-Tirmidzi).
+                <br>&bull; Mengeluarkan sedekah secara tersembunyi (<em>shadaqatus sirr</em>) yang memadamkan murka Allah dan menjaga nyala lentera ruhani di alam barzakh kelak.
+            </li>
+        </ol>
+    </div>
+
+    <h3>2. Tiga Pertanyaan Refleksi Batin (Muhasabah Mendalam)</h3>
+    <div class="reflection-box">
+        <ol>
+            <li>
+                <em>Seandainya pada detik ini juga seluruh popularitas, pujian manusia, akun media sosial, gelar akademik, dan saldo rekening bank saya ditiup padam oleh takdir Allah: apakah masih ada secercah cahaya keimanan otentik di dalam dada saya yang sanggup menerangi jalan saya menuju kubur, ataukah saya akan mendapati diri saya berdiri menggigil dalam kegelapan pekat tanpa pegangan (fī ẓulumātil lā yubṣirūn)?</em>
+            </li>
+            <li>
+                <em>Apakah kesalehan yang saya peragakan di hadapan keluarga, komunitas pengajian, dan rekan kerja hanyalah 'api pinjaman' yang saya sulut demi menjaga rasa aman sosial dan keuntungan duniawi, sementara di saat pintu kamar terkunci rapat dan saya sendirian, jiwa saya tenggelam dalam kemaksiatan yang memadamkan nur bashirah saya?</em>
+            </li>
+            <li>
+                <em>Mengapa saya begitu sering merasa lelah, cemas, dan hampa secara eksistensial padahal hidup saya dipenuhi limpahan kemudahan materi dan gemerlap hiburan modern—mungkinkah tanpa sadar saya telah memancing murka Ilahi sehingga Allah mencabut rasa manisnya iman (żahaballāhu binūrihim) dan membiarkan saya tersiksa oleh bara api ambisi nafsu saya sendiri?</em>
+            </li>
+        </ol>
+    </div>
+
+    <h3>3. Munajat & Doa Tadabbur Ayat</h3>
+    <div class="doa-box">
+        <p style="text-align: center; font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 24px; line-height: 2; margin-bottom: 15px; direction: rtl;">
+            اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا، وَعَنْ يَمِينِي نُورًا، وَعَنْ يَسَارِي نُورًا، وَفَوْقِي نُورًا، وَتَحْتِي نُورًا، وَأَمَامِي نُورًا، وَخَلْفِي نُورًا، وَعَظِّمْ لِي نُورًا. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ نَارٍ لَا نُورَ فِيهَا، وَمِنْ ظُلْمَةٍ لَا مَخْرَجَ مِنْهَا، وَأَعُوذُ بِكَ أَنْ تَذْهَبَ بِنُورِي فَتَتْرُكَنِي فِي ظُلُمَاتِ حَيْرَتِي لَا أُبْصِرُ. اللَّهُمَّ لَا تَكِلْنِي إِلَى نَارِ نَفْسِي وَشَهَوَاتِي، وَأَتْمِمْ لَنَا نُورَنَا وَاغْفِرْ لَنَا، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.
+        </p>
+        <p style="font-style: italic; color: #78350f; margin-bottom: 0;">
+            "Ya Allah, Dzat Yang Memancarkan Cahaya Langit dan Bumi! Jadikanlah di dalam kalbuku cahaya, pada penglihatanku cahaya, pada pendengaranku cahaya, dari arah kananku cahaya, dari arah kiriku cahaya, dari atasku cahaya, dari bawahku cahaya, dari depanku cahaya, dari belakangku cahaya, dan agungkanlah bagiku cahaya-Mu. Wahai Rabb kami yang Maha Pengasih, aku berlindung kepada-Mu dari api kepalsuan yang menyala tanpa membawa cahaya petunjuk, dari kegelapan dosa dan kemunafikan yang tiada jalan keluar darinya, dan aku berlindung kepada-Mu dari murka-Mu di mana Engkau melenyapkan cahaya imanku (Żahaballāhu binūrihim) lalu membiarkan diriku terlunta-lunta dalam kegelapan keraguan tanpa daya melihat jalan kebenaran. Ya Allah, jangan pernah Engkau serahkan keselamatan hidupku kepada api hawa nafsuku yang semu dan membakar. Sempurnakanlah bagi kami cahaya petunjuk-Mu hingga kami selamat melintasi titian Shirāṭ menuju surga-Mu, dan ampunilah segala kekhilafan kami. Sesungguhnya Engkau Maha Kuasa atas segala sesuatu. Āmīn Yā Rabbal 'Ālamīn."
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-016 - QS. Al-Baqarah Ayat 16.html">&larr; Kembali: QS. Al-Baqarah Ayat 16</a>
+        <span><strong>Kajian Ensiklopedis Surah Al-Baqarah [2]: 17</strong></span>
+        <a href="002-018 - QS. Al-Baqarah Ayat 18.html">Lanjut: QS. Al-Baqarah Ayat 18 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

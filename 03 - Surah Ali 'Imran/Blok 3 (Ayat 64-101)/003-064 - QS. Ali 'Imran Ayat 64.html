@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-064 - QS. Ali 'Imran Ayat 64 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="../Blok 2 (Ayat 33-63)/003-063 - QS. Ali 'Imran Ayat 63.html">&larr; Ayat Sebelumnya (QS. 3:63)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-065 - QS. Ali 'Imran Ayat 65.html">Ayat Berikutnya (QS. 3:65) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 3 (Ayat 64–101): Dialog Universal & Debat Kritis Ahli Kitab: Kalimatun Sawā' & Millah Ibrāhīm</span>
+        <span class="badge">Klaster 1 (Ayat 64–71): Piagam Kalimatun Sawā', Dekonstruksi Sektarianisme Ibrāhīm AS & Integritas Menghadapi Syubhat</span>
+        <span class="badge">31 Kata | 125 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 64</h1>
+    <div class="transliteration">
+        "Qul yā Ahlal-Kitābi ta'ālaw ilā kalimatin sawā'im bainanā wa bainakum allā na'buda illallāha wa lā nusyrika bihī syai'aw wa lā yattakhidza ba'dhunā ba'dhan arbābam min dūnillāh(i), fa in tawallaw fa qūlusy-hadū bi-annā muslimūn(a)."
+    </div>
+    <div class="thematic-title">
+        Piagam Diplomasi Kalimatun Sawā' (Titik Temu Monoteisme Murni): Emansipasi Tauhid dari Teokrasi Feodal, Dekonstruksi Penuhanan Manusia atas Manusia, dan Proklamasi Kedaulatan Penyerahan Diri Mutlak (Muslimūn)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 3 | Klaster 1: Pembuka Dialog Universal, Diplomasi Hubungan Internasional Rasulullah ﷺ, dan Fondasi Moderasi Beragama)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        قُلْ يَٰٓأَهْلَ ٱلْكِتَٰبِ تَعَالَوْا۟ إِلَىٰ كَلِمَةٍۢ سَوَآءٍۭ بَيْنَنَا وَبَيْنَكُمْ أَلَّا نَعْبُدَ إِلَّا ٱللَّهَ وَلَا نُشْرِكَ بِهِۦ شَيْـًۭٔا وَلَا يَتَّخِذَ بَعْضُنَا بَعْضًا أَرْبَابًۭا مِّن دُونِ ٱللَّهِ ۚ فَإِن تَوَلَّوْا۟ فَقُولُوا۟ ٱشْهَدُوا۟ بِأَنَّا مُسْلِمُونَ ۝٦٤
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Katakanlah (wahai Muhammad): 'Wahai Ahli Kitab! Marilah (menuju) kepada suatu kalimat (prinsip titik temu) yang sama dan adil antara kami dan kamu: (yaitu) bahwa kita tidak menyembah kecuali hanya kepada Allah, dan kita tidak mempersekutukan Dia dengan sesuatu apa pun, dan sebagian kita tidak menjadikan sebagian yang lain sebagai tuhan-tuhan selain Allah.' Maka jika mereka berpaling, katakanlah (kepada mereka): 'Saksikanlah, bahwa sesungguhnya kami adalah orang-orang yang berserah diri (kepada Allah/Muslimun).'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan tonggak agung diplomasi peradaban Islam dan manifesto teologis universal yang mengubah peta interaksi lintas keyakinan. Setelah menutup perdebatan polemik dan mubahalah di Blok 2 (ayat 59–63), Al-Qur'an secara menakjubkan tidak menutup pintu komunikasi, melainkan membuka lembaran baru melalui tawaran rekonsiliasi berbasis <em>common platform</em> (<strong>Kalimatun Sawā'</strong>). Ayat ini bertumpu pada empat pilar doktrinal yang presisi:
+    </p>
+    <ul>
+        <li><strong>Pertama, <em>Qul yā Ahlal-Kitāb</em> (Panggilan Hormat Teologis):</strong> Al-Qur'an tidak menyapa mereka dengan sebutan peyoratif, melainkan memanggil status skriptural mereka (<em>Ahlul-Kitāb</em>: pemilik pusaka wahyu samawi Taurat dan Injil). Panggilan ini membangkitkan kesadaran historis dan tanggung jawab intelektual mereka terhadap kitab suci yang mereka pegang.</li>
+        <li><strong>Kedua, <em>Ta'ālaw ilā Kalimatin Sawā'</em> (Seruan Elevasi Menuju Kesetaraan):</strong> Lafaz <em>ta'ālaw</em> (secara harfiah: marilah meninggi/naiklah) adalah ajakan untuk meninggalkan kubangan fanatisme sektarian, klaim genealogi sempit, dan subordinasi politik, lalu mendaki menuju dataran tinggi kebenaran yang adil, setara (<em>sawā'</em>), dan tidak mendiskriminasi siapa pun.</li>
+        <li><strong>Ketiga, Tiga Klausul Emansipasi Tauhid:</strong>
+            <br>1) <em>Allā na'buda illallāh</em>: Penegasan Tauhid Uluhiyyah murni (eksklusivitas peribadatan dan pengabdian hanya untuk Allah).
+            <br>2) <em>Wa lā nusyrika bihī syai'ā</em>: Penafian totalitas syirik, baik syirik besar (penyembahan person) maupun syirik tersembunyi (materialisme dan kultus figur).
+            <br>3) <em>Wa lā yattakhidza ba'dhunā ba'dhan arbāban min dūnillāh</em>: Dekonstruksi teokrasi feodal dan perhambaan manusia atas manusia. Tidak boleh ada rohaniwan, pendeta, raja, atau cendekiawan yang memonopoli hak prerogatif ilahi dalam menentukan hukum halal dan haram secara tiranik.
+        </li>
+        <li><strong>Keempat, <em>Fa in Tawallaw fa Qūlusy-hadū bi-annā Muslimūn</em> (Kedaulatan Identitas Tanpa Paksaan):</strong> Jika tawaran titik temu ini ditolak, Islam melarang pemaksaan akidah (<em>lā ikrāha fid-dīn</em>). Sikap seorang mukmin bukanlah membalas dengan dendam atau mencairkan akidah (kompromi sinkretisme), melainkan memproklamasikan identitas kemandirian iman dengan kepala tegak: <em>"Saksikanlah bahwa kami telah berserah diri bulat kepada Allah semata!"</em></li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>قُلْ يَٰٓأَهْلَ</strong><br>(<em>Qul yā-ahla</em>)</td>
+                <td>
+                    <strong>Qāf Dhammah:</strong> Isti'la' mutlak.<br>
+                    <strong>Lām Sukūn:</strong> Sifat tawassuth (tidak membal/qalqalah).<br>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Pertemuan alif mad <em>yā</em> dengan hamzah pada kata <em>ahla</em> (ditulis bersambung dalam rasm Utsmani).
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad munfashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca dengan <strong>Qaṣhr (2 Harakat)</strong>.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Boleh Qashr atau Tawassuth.<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Melakukan <em>Naql</em> harakat hamzah ke huruf sukun sebelumnya jika disambung (namun di sini huruf sebelumnya sukun mati pada lam <em>qul</em>, Warsy membaca naql: <em>Quli-yahla</em> saat washal).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلْكِتَٰبِ تَعَالَوْا۟</strong><br>(<em>Al-Kitābi ta'ālaw</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Pada huruf Ta' berharakat fathah tegak (alif khanjarriyah).<br>
+                    <strong>Wāw Līn:</strong> Pada <em>ta'ālaw</em>, wāw sukun didahului fathah diartikulasikan lembut tanpa tasydid.
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat membaca kasrah pada ba' <em>Al-Kitābi</em> dan fathah pada lam <em>ta'ālaw</em> (wazan <em>tafā'alū</em> dari akar 'ulūw). Membaca dhamir jamak wāw līn secara mutawatir.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>إِلَىٰ كَلِمَةٍۢ سَوَآءٍۭ</strong><br>(<em>Ilā kalimatin sawā'in</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin kasrah pada <em>kalimatin</em> bertemu huruf Sīn dengan ghunnah muraqqaqah.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf mad Alif bertemu hamzah dalam satu kata <em>sawā'</em>.<br>
+                    <strong>Iqlāb pada <em>sawā'im-bainanā</em>:</strong> Tanwin kasrah pada <em>sawā'in</em> bertemu huruf Ba' pada <em>bainanā</em> berubah menjadi bunyi Mim disertai ghunnah 2 harakat.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca Mad Wajib Muttashil dengan <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca Mad Wajib Muttashil dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Ḥamzah & Hisyām saat Waqaf:</strong> Memiliki ragam wajah tashīl ma'al-madd wal-qashr, serta ibdāl alif dengan isybā' pada hamzah akhir <em>sawā'</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>بَيْنَنَا وَبَيْنَكُمْ</strong><br>(<em>Bainanā wa bainakum</em>)</td>
+                <td>
+                    <strong>Yā' Līn:</strong> Dua kali pengulangan huruf Yā' sukun didahului fathah.<br>
+                    <strong>Mīm Sukūn:</strong> Menghadapi Hamzah qatha' pada <em>allā</em> (<strong>Idzhār Syafawī</strong>).
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr & Qālūn (wajh shilah):</strong> Membaca Shilah Mīm al-Jam' (<em>wa bainakumū allā</em>) dengan panjang mad munfashil.<br>
+                    • <strong>Warsy:</strong> Membaca Shilah Mim Jamak jika bertemu hamzah qatha' dengan panjang 6 harakat.<br>
+                    • <strong>Jumhur Imam (termasuk Hafsh):</strong> Membaca sukun murni dengan Idzhar Syafawi pada Mim Jamak.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>أَلَّا نَعْبُدَ إِلَّا ٱللَّهَ</strong><br>(<em>Allā na'buda illallāh</em>)</td>
+                <td>
+                    <strong>Idghām Bilāghunnah:</strong> Nūn sukun melebur ke dalam Lām (<em>An lā</em> &rarr; <em>Allā</em>).<br>
+                    <strong>'Ain Sukūn:</strong> Diartikulasikan dari wasathul halq dengan sifat tawassuth.<br>
+                    <strong>Lam Jalālah:</strong> Dibaca <strong>Taghlīzh / Tafkhīm (Tebal)</strong> karena didahului fathah pada huruf Lām <em>illā</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca nashab fathah pada dal <em>na'buda</em> karena didahului harfat-tahshish wa mashdariyyah <em>An</em>, serta membaca tafkhim pada Lam Jalalah <em>Allāh</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَلَا نُشْرِكَ بِهِۦ شَيْـًۭٔا</strong><br>(<em>Wa lā nusyrika bihī syai'ā</em>)</td>
+                <td>
+                    <strong>Syīn Sukūn:</strong> Memiliki sifat tafasysyī (penyebaran angin di mulut) dan hams.<br>
+                    <strong>Rā' Kasrah:</strong> Tarqiq (tipis).<br>
+                    <strong>Mad Shilah Qashīrah:</strong> Pada <em>bihī</em> 2 harakat saat washal.<br>
+                    <strong>Mad 'Iwadh saat Waqaf:</strong> Tanwin fathah pada <em>syai'an</em> diganti alif mad 2 harakat.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca <strong>Mad Līn Mahmūz</strong> pada lafaz <em>syai'ā</em> dengan pilihan <strong>Tawassuṭh (4 Harakat)</strong> atau <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>Ḥamzah (khalaf & khallād):</strong> Melakukan <em>Saktah</em> ringan pada huruf Ya' līn <em>syai-an</em> saat washal.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca tanpa saktah dan tanpa perpanjangan mad līn mahmuz saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَلَا يَتَّخِذَ بَعْضُنَا بَعْضًا</strong><br>(<em>Wa lā yattakhidza ba'dhunā ba'dhā</em>)</td>
+                <td>
+                    <strong>Tā' Musyaddadah:</strong> Nabr dan sifat syiddah tertahan sejenak lalu terlepas.<br>
+                    <strong>Khā' Kasrah:</strong> Tarqiq derajat kelima isti'la'.<br>
+                    <strong>Huruf Dhād:</strong> Keluar dari tepi lidah bertemu gigi geraham atas dengan sifat isti'la', ithbaq, dan <strong>Isthithālah</strong> (pemanjangan suara makhraj).
+                </td>
+                <td>
+                    • Seluruh sepuluh imam mutawatirah membaca <strong>Nashab (Fathah)</strong> pada huruf Dzal <em>yattakhidza</em> karena ma'thuf kepada fi'il <em>na'buda</em>.<br>
+                    • (Catatan Qira'at Syadzah: Terdapat qira'at syadzah dengan huruf Ta' <em>wa lā tattakhidzū</em>, namun konsensus mutawatir sepuluh imam menetapkan bacaan dengan huruf Yā' ghaibah <em>yattakhidza</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>أَرْبَابًۭا مِّن دُونِ ٱللَّهِ</strong><br>(<em>Arbābam-min dūnillāh</em>)</td>
+                <td>
+                    <strong>Rā' Sukūn:</strong> Didahului hamzah fathah dibaca <strong>Tafkhīm (Tebal)</strong>.<br>
+                    <strong>Idghām Bighunnah:</strong> Tanwin fathah pada <em>arbāban</em> melebur ke huruf Mīm pada <em>min</em>.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Dāl pada <em>min dūni</em> dengan ghunnah muraqqaqah.<br>
+                    <strong>Lam Jalālah:</strong> Dibaca <strong>Tarqīq (Tipis)</strong> karena didahului kasrah pada huruf Nūn <em>dūni</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat atas kaidah tarqiq pada Lam Jalalah <em>Allāh</em> setelah kasrah, serta menyempurnakan ghunnah idgham dan ikhfa'.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>فَإِن تَوَلَّوْا۟ فَقُولُوا۟</strong><br>(<em>Fa in tawallaw fa qūlū</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Tā' pada <em>fa-in tawallaw</em>.<br>
+                    <strong>Lām Musyaddadah & Wāw Līn:</strong> Nabr pada Lam bertasydid fathah, wāw dibaca lembut.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> 2 harakat pada wāw <em>qūlū</em>.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca fi'il madhi <em>tawallaw</em> dengan wāw jama'ah līn, dan fi'il amr <em>fa-qūlū</em> dalam bentuk jamak (perintah kepada seluruh kaum mukminin untuk mendeklarasikan kesaksian iman).
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ٱشْهَدُوا۟ بِأَنَّا مُسْلِمُونَ ۝٦٤</strong><br>(<em>Isyhadū bi-annā muslimūn</em>)</td>
+                <td>
+                    <strong>Hamzah Washal Kasrah:</strong> Dibaca <em>isyhadū</em> saat ibtida'.<br>
+                    <strong>Syīn Sukūn:</strong> Sifat tafasysyī sempurna.<br>
+                    <strong>Nūn Musyaddadah:</strong> Ghunnah akmal mā takūn 2 harakat.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf di ujung ayat, Wāw mad bertemu Nūn sukun dibaca 2, 4, atau 6 harakat disertai sifat tawassuth pada Nūn.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca kasrah pada hamzah washal <em>isyhadū</em> saat memulai bacaan, menyempurnakan ghunnah musyaddadah pada <em>bi-annā</em>, serta mewaqafkan pada <em>muslimūn</em> dengan mad 'aridh lis-sukun.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 7, 2941, 4553) & Imam Muslim (No. 1773) dari Sahabat 'Abdullāh bin 'Abbās r.a. — Piagam Hubungan Internasional Rasulullah ﷺ kepada Kaisar Heraklius (Hirqil):</strong><br>
+        Ketika Abu Sufyan bin Harb (sebelum masuk Islam) dipanggil oleh Kaisar Romawi Heraklius di Yerusalem/Ilya' untuk ditanyai mengenai profil kepribadian dan dakwah Nabi Muhammad ﷺ, Heraklius kemudian meminta dibacakan surat resmi yang dikirimkan oleh Rasulullah ﷺ melalui sahabat Dihyah Al-Kalbi r.a. Di dalam surat diplomatik tersebut tertulis:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ، مِنْ مُحَمَّدٍ عَبْدِ اللَّهِ وَرَسُولِهِ إِلَى هِرَقْلَ عَظِيمِ الرُّومِ: سَلَامٌ عَلَى مَنِ اتَّبَعَ الهُدَى، أَمَّا بَعْدُ، فَإِنِّي أَدْعُوكَ بِدِعَايَةِ الإِسْلَامِ، أَسْلِمْ تَسْلَمْ، يُؤْتِكَ اللَّهُ أَجْرَكَ مَرَّتَيْنِ، فَإِنْ تَوَلَّيْتَ فَإِنَّ عَلَيْكَ إِثْمَ الأَرِيسِيِّينَ، وَ{يَا أَهْلَ الْكِتَابِ تَعَالَوْا إِلَى كَلِمَةٍ سَوَاءٍ بَيْنَنَا وَبَيْنَكُمْ أَلَّا نَعْبُدَ إِلَّا اللَّهَ وَلَا نُشْرِكَ بِهِ شَيْئًا وَلَا يَتَّخِذَ بَعْضُنَا بَعْضًا أَرْبَابًا مِنْ دُونِ اللَّهِ فَإِنْ تَوَلَّوْا فَقُولُوا اشْهَدُوا بِأَنَّا مُسْلِمُونَ}»</span>
+        <em>"Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Dari Muhammad, hamba Allah dan utusan-Nya, kepada Heraklius Kaisar Penguasa Romawi: Keselamatan bagi siapa yang mengikuti petunjuk. Amma ba'du: Sesungguhnya aku menyerumu dengan seruan Islam. Masuk Islamlah, niscaya engkau selamat, dan Allah akan memberikan pahalamu dua kali lipat. Namun jika engkau berpaling, maka sesungguhnya engkau memikul dosa rakyat jelatamu (kaum Arisiyyin). Dan: {Wahai Ahli Kitab! Marilah menuju kepada suatu kalimat yang sama antara kami dan kamu: bahwa kita tidak menyembah kecuali hanya kepada Allah, dan kita tidak mempersekutukan Dia dengan sesuatu pun, dan sebagian kita tidak menjadikan sebagian yang lain sebagai tuhan-tuhan selain Allah. Jika mereka berpaling, katakanlah: Saksikanlah bahwa kami adalah orang-orang yang berserah diri}."</em><br>
+        <strong>Derajat Hadits:</strong> Muttafaq 'Alaih (Tingkat Keshahihan Tertinggi). Hadits ini menjadi bukti historis terkuat bahwa Rasulullah ﷺ menjadikan QS. 3:64 sebagai dasar traktat universal diplomasi lintas negara dan agama.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Sunan At-Tirmidzī (No. 3095), Ibnu Abī Ḥātim (No. 10057), dan Al-Bayhaqī dalam <em>As-Sunan al-Kubrā</em> (No. 20137) dari Sahabat 'Adī bin Ḥātim r.a. — Tafsir Otentik "Menjadikan Rahib sebagai Tuhan":</strong><br>
+        Sahabat 'Adi bin Hatim r.a. menuturkan: Aku mendatangi Nabi ﷺ dengan mengenakan salib perak di leherku (karena sebelumnya ia beragama Nasrani). Maka Nabi ﷺ bersabda: <em>"Wahai 'Adi, lemparkan berhala itu dari lehermu!"</em> Lalu kudengar beliau membacakan firman Allah dalam QS. At-Taubah: 31: <em>{Ittakhadzū aḥbārahum wa ruhbānahum arbābam min dūnillāh...}</em> (Mereka menjadikan para pendeta dan rahib-rahib mereka sebagai tuhan-tuhan selain Allah). Aku menyanggah perkataan beliau:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 18px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«قُلْتُ: يَا رَسُولَ اللَّهِ، إِنَّهُمْ لَمْ يَكُونُوا يَعْبُدُونَهُمْ! قَالَ: «بَلَى، إِنَّهُمْ حَرَّمُوا عَلَيْهِمُ الحَلَالَ، وَأَحَلُّوا لَهُمُ الحَرَامَ، فَاتَّبَعُوهُمْ، فَذَلِكَ عِبَادَتُهُمْ إِيَّاهُمْ»»</span>
+        <em>"Aku berkata: 'Wahai Rasulullah, sesungguhnya orang-orang Nasrani tidak pernah bersujud atau menyembah para rahib itu!' Rasulullah ﷺ menjawab tegas: 'Bukan begitu! Sesungguhnya para rahib itu telah mengharamkan atas mereka apa yang dihalalkan Allah, dan menghalalkan bagi mereka apa yang diharamkan Allah, lalu kaum itu mematuhi dan mengikutinya secara buta. <strong>Itulah bentuk penyembahan mereka kepada para rahib tersebut!</strong>'"</em><br>
+        <strong>Derajat Hadits:</strong> Hasan menurut Imam At-Tirmidzi, Ibnu Hajar Al-'Asqalani, dan Syaikh Al-Albani. Hadits ini adalah penjelas definitif bagi klausul <em>wa lā yattakhidza ba'dhunā ba'dhan arbābā</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Riwayat Asbabun Nuzul dari Imam Ibnu Jarīr At-Ṭabarī (Juz 3, hlm. 300) & Ibnu Is-ḥāq dalam <em>As-Sīrah</em>:</strong><br>
+        Diriwayatkan dari Muhammad bin Ja'far bin Az-Zubair r.a.: Setelah hujah rasional mengenai kenabian 'Isa AS dipaparkan dan delegasi Kristen Najran menolak tantangan Mubahalah karena takut binasa, Rasulullah ﷺ tidak mengusir mereka, melainkan menawarkan piagam perdamaian ini. Beliau mengajak mereka dan kaum Yahudi Madinah untuk bersatu di atas kesepakatan fitrah tauhid yang menjadi inti seluruh kitab samawi. Allah menurunkan ayat ini sebagai landasan hidup berdampingan secara damai dan bermartabat tanpa mereduksi keteguhan iman.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar Q-W-L (ق-و-ل — Qul):</strong><br>
+            Ahmad bin Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ق-و-ل) menjelaskan bahwa akar kata ini berporos pada <em>al-ithlāq bi-shawtin mufīd</em> (melepaskan artikulasi suara yang bermakna dan membawa pesan terarah). Perintah <em>Qul</em> (Katakanlah!) menempatkan Nabi Muhammad ﷺ sebagai penyampai amanah wahyu verbatim (kata demi kata) dari Allah SWT, menegaskan bahwa seruan diplomasi ini bukan manuver politik pribadi sang nabi, melainkan titah konstitusi Ilahi.
+        </li>
+        <li>
+            <strong>2. Akar A-H-L (أ-ه-ل — Ahl) & K-T-B (ك-ت-ب — Al-Kitāb):</strong><br>
+            Akar <em>A-H-L</em> bermakna <em>al-uns wal-ikhtishāsh</em> (keakraban, kepemilikan, dan kelayakan menyandang suatu tanggung jawab). Sedangkan akar <em>K-T-B</em> bermakna <em>adh-dhammu wal-jam'</em> (menghimpun lembaran huruf dan menyatukannya menjadi kesatuan hukum yang tertulis). Frase <em>Ahlal-Kitāb</em> secara semantik membedakan mereka dari kaum musyrikin penyembah berhala yang buta aksara (<em>ummiyyīn</em>). Mereka adalah komunitas terpelajar yang memiliki tradisi literasi profetik.
+        </li>
+        <li>
+            <strong>3. Akar '-L-W (ع-ل-و — Ta'ālaw):</strong><br>
+            Ibnu Faris menetapkan poros makna akar ini pada <em>asy-syaraf wal-irtifā'</em> (ketinggian fisik, martabat, dan keluhuran derajat). Fi'il amr <em>Ta'ālaw</em> (wazan <em>Tafā'alū</em>) secara etimologis asalnya diucapkan oleh seseorang yang berada di tempat tinggi memanggil orang yang berada di lembah rendah: "Naiklah kemari!". Dalam konteks ayat, ini adalah <strong>Isti'ārah Balaghiyyah</strong>: ajakan bagi Ahli Kitab untuk mengangkat nalar dan jiwa mereka dari jurang kerendahan fanatisme golongan menuju puncak keluhuran tauhid yang memerdekakan.
+        </li>
+        <li>
+            <strong>4. Akar K-L-M (ك-ل-م — Kalimah):</strong><br>
+            Makna asali akar ini menurut <em>Lisān al-'Arab</em> berakar pada dua hal: memberi bekas luka/pengaruh nyata (<em>al-jarḥ wat-ta'tsīr</em>) dan susunan ujaran yang memiliki ketetapan hukum (<em>al-lafzh al-jāmi'</em>). Dinamai <em>kalimah</em> karena kebenaran prinsipil yang diikrarkan akan membekas tajam dan mengikat jiwa penuturnya. Dalam tradisi bahasa Arab, kata <em>kalimah</em> sering digunakan untuk menyebut suatu proposisi doktrinal atau kalimat proklamasi agung (sebagaimana kalimat syahadat disebut <em>Kalimatut-Tawhīd</em>).
+        </li>
+        <li>
+            <strong>5. Akar S-W-Y (س-و-ي — Sawā'):</strong><br>
+            Ibnu Faris menjelaskan bahwa akar ini berporos pada <em>al-istiwā' wal-inṣhāf wal-'adl</em> (kesetaraan tanpa ketimpangan, keadilan proporsional, dan titik tengah yang lurus). <em>Sawā'un bainanā wa bainakum</em> berarti prinsip yang setara, tidak ada pihak yang ditindas atau ditinggikan secara zalim, melainkan kedua belah pihak tunduk setara di bawah kedaulatan Allah.
+        </li>
+        <li>
+            <strong>6. Akar R-B-B (ر-ب-ب — Arbāb):</strong><br>
+            Bentuk jamak dari <em>Rabb</em>. Berporos pada makna <em>al-mālik, as-sayyid, al-mudabbir, wal-murabbī</em> (pemilik mutlak, tuan penguasa, pemelihara, dan pembuat regulasi hukum). Menjadikan sesama manusia sebagai <em>arbāb</em> bermakna menyejajarkan otoritas manusia dengan otoritas Tuhan dalam menetapkan kebenaran moral dan syariat absolut.
+        </li>
+        <li>
+            <strong>7. Akar S-L-M (س-ل-م — Muslimūn):</strong><br>
+            Berporos pada <em>ash-shihhah was-salāmah wal-istislām</em> (keterbebasan dari cacat syirik, keselamatan hakiki, dan kepasrahan total tanpa syarat). Menjadi <em>Muslim</em> bukan sekadar label identitas sosiologis, melainkan sikap ontologis penyerahan diri secara utuh hanya kepada kehendak Sang Pencipta semesta.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>قُلْ</strong></td>
+                <td>Fi'il amr wazan <em>fa'ala - yaf'ulu</em> (akar <em>q-w-l</em>).</td>
+                <td>Fi'il amr mabni 'alas-sukūn; fā'il dhamīr mustatir wujūban taqdīruhū <em>Anta</em>. Seluruh kalimat setelahnya adalah <strong>Maqwūl al-Qawl</strong> fī mahalli nashbin.</td>
+            </tr>
+            <tr>
+                <td><strong>يَٰٓأَهْلَ</strong></td>
+                <td><em>Yā</em> harf nidā'; <em>ahla</em> ism mufrad mudhaf.</td>
+                <td><em>Yā</em> harf nidā' mabni 'alas-sukūn; <em>ahla</em> <strong>Munādā Mudhāf</strong> manṣhūb bil-fathah azh-zhāhirah; wa huwa mudhāf.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْكِتَٰبِ</strong></td>
+                <td>Isim mashdar / isim jins bil-alif wal-lam.</td>
+                <td><strong>Mudhāfun Ilayh</strong> majrūr bil-kasrah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>تَعَالَوْا۟</strong></td>
+                <td>Fi'il amr wazan <em>tafā'ala</em> (akar <em>'-l-w</em>).</td>
+                <td>Fi'il amr mabni 'alā hadzfin-nūn; <em>Wāwul-jamā'ah</em> dhamir muttashil mabni 'alas-sukun fī mahalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah ini adalah <strong>Jumlah Nidā'iyyah Jawāb an-Nidā'</strong> musta'nafah.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَىٰ</strong></td>
+                <td>Harf jarr mabni 'alas-sukūn.</td>
+                <td>Harf jarr li-intiha'il-ghayah; muta'alliq kepada fi'il <em>ta'ālaw</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>كَلِمَةٍۢ</strong></td>
+                <td>Isim mufrad mu'annats majazi nakirah.</td>
+                <td>Ism majrūr bi-ilā bil-kasrah azh-zhāhirah; jar wa majrūr <strong>Muta'alliq</strong> bi-ta'ālaw.</td>
+            </tr>
+            <tr>
+                <td><strong>سَوَآءٍۭ</strong></td>
+                <td>Mashdar yang difungsikan sebagai isim sifat.</td>
+                <td><strong>Na'at / Shifat</strong> bagi <em>kalimatin</em> majrūr bil-kasrah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>بَيْنَنَا</strong></td>
+                <td>Zharaf makān manṣhūb bil-fathah; <em>nā</em> mudhāfun ilayh.</td>
+                <td>Zharaf makān manṣhūb <strong>Muta'alliq</strong> bi-mahdzūf sifat kedua bagi <em>kalimatin</em> atau muta'alliq bi-shifat <em>sawā'in</em>; <em>Nā</em> fī mahalli jarrin mudhāfun ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>وَبَيْنَكُمْ</strong></td>
+                <td><em>Wawu</em> harf 'athaf; <em>baina</em> zharaf; <em>kum</em> dhamīr majrūr.</td>
+                <td>Ma'thūf kepada <em>bainanā</em> manṣhūb bil-fathah; <em>Kum</em> fī mahalli jarrin mudhāfun ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>أَلَّا</strong></td>
+                <td>Tersusun dari <em>An</em> + <em>Lā</em>.</td>
+                <td><em>An</em> adalah <strong>An Mufassirah</strong> (penafsir rincian kalimat sawā') atau <strong>An Mashdariyyah</strong>; <em>Lā</em> harf nafyi mabni 'alas-sukūn.</td>
+            </tr>
+            <tr>
+                <td><strong>نَعْبُدَ</strong></td>
+                <td>Fi'il mudhāri' tsulatsi mujarrad wazan <em>yaf'ulu</em>.</td>
+                <td>Fi'il mudhāri' manṣhūb bi-an mashdariyyah bil-fathah azh-zhāhirah; fā'il dhamīr mustatir wujūban taqdīruhū <em>Naḥnu</em>. Jumlah mashdariyyah fī mahalli jarrin <strong>Badal</strong> dari <em>kalimatin</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَّا</strong></td>
+                <td>Harf hashr / istitsnā' mulghāh.</td>
+                <td>Adāt hashr mabni 'alas-sukūn (karena didahului nafy).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Ism 'alam jalālah.</td>
+                <td><strong>Maf'ūl Bih</strong> manṣhūb bil-fathah azh-zhāhirah bagi fi'il <em>na'buda</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا نُشْرِكَ</strong></td>
+                <td><em>Wawu</em> 'athaf; <em>lā</em> nafiyah; <em>nusyrika</em> fi'il mudhāri' tsulatsi mazid wazan <em>af'ala</em>.</td>
+                <td>Fi'il mudhāri' <strong>Ma'thūf</strong> kepada <em>na'buda</em> manṣhūb bil-fathah; fā'il dhamīr mustatir taqdīruhū <em>Naḥnu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِهِۦ</strong></td>
+                <td><em>Ba'</em> harf jarr; <em>Hā'</em> dhamir muttashil.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> kepada fi'il <em>nusyrika</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>شَيْـًۭٔا</strong></td>
+                <td>Ism nakirah mubhamah.</td>
+                <td><strong>Maf'ūl Bih</strong> atau <strong>Maf'ūl Muthlaq</strong> (taqdīruhū: <em>isyrākan syai'an</em> / kemusyrikan sekecil apa pun) manṣhūb bil-fathah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا يَتَّخِذَ</strong></td>
+                <td><em>Wawu</em> 'athaf; <em>lā</em> nafiyah; <em>yattakhidza</em> fi'il mudhāri' wazan <em>ifta'ala</em>.</td>
+                <td>Fi'il mudhāri' <strong>Ma'thūf</strong> kepada <em>na'buda</em> manṣhūb bil-fathah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>بَعْضُنَا</strong></td>
+                <td>Isim mufrad marfū'; <em>nā</em> dhamīr muttashil.</td>
+                <td><strong>Fā'il</strong> marfū' bil-dhammah azh-zhāhirah; <em>Nā</em> fī mahalli jarrin mudhāfun ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>بَعْضًا</strong></td>
+                <td>Isim mufrad manṣhūb.</td>
+                <td><strong>Maf'ūl Bih Awwal</strong> manṣhūb bil-fathah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>أَرْبَابًۭا</strong></td>
+                <td>Jamak taksīr dari <em>rabb</em>.</td>
+                <td><strong>Maf'ūl Bih Tsānī</strong> manṣhūb bil-fathah azh-zhāhirah bagi fi'il <em>yattakhidza</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّن دُونِ</strong></td>
+                <td><em>Min</em> harf jarr; <em>dūni</em> ism majrūr.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> bi-mahdzūf sifat bagi <em>arbāban</em> (taqdīruhū: <em>kā'inatan min dūnillāh</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهِ ۚ</strong></td>
+                <td>Ism 'alam jalālah.</td>
+                <td><strong>Mudhāfun Ilayh</strong> majrūr bil-kasrah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِن</strong></td>
+                <td><em>Fa'</em> ist'ināfiyyah / rābithah; <em>In</em> harf syarth jāzim.</td>
+                <td>Harf syarth jazim mabni 'alas-sukun yang menjazamkan dua fi'il.</td>
+            </tr>
+            <tr>
+                <td><strong>تَوَلَّوْا۟</strong></td>
+                <td>Fi'il mādhi wazan <em>tafa''ala</em>; <em>wāw</em> fā'il.</td>
+                <td>Fi'il mādhi mabni 'aladh-dhammil-muqaddar fī mahalli jazmin <strong>Fi'lusy-Syarth</strong>; <em>Wāw</em> fī mahalli raf'in fā'il.</td>
+            </tr>
+            <tr>
+                <td><strong>فَقُولُوا۟</strong></td>
+                <td><em>Fa'</em> rābithah li-jawābis-syarth; <em>qūlū</em> fi'il amr.</td>
+                <td>Fi'il amr mabni 'alā hadzfin-nūn; <em>Wāw</em> fā'il; seluruh jumlah fi'liyyah fī mahalli jazmin <strong>Jawābusy-Syarth</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱشْهَدُوا۟</strong></td>
+                <td>Fi'il amr wazan <em>fa'ala - yaf'alu</em>; <em>wāw</em> fā'il.</td>
+                <td>Fi'il amr mabni 'alā hadzfin-nūn; <em>Wāw</em> fā'il; jumlah fi'liyyah ini adalah <strong>Maqwūl al-Qawl</strong> fī mahalli nashbin bagi fi'il <em>qūlū</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِأَنَّا</strong></td>
+                <td><em>Ba'</em> harf jarr; <em>Anna</em> harf tawkīd wa nashab; <em>nā</em> ismu anna.</td>
+                <td><em>Anna</em> dan isim serta khabarnya ditakwilkan menjadi mashdar majrur bi-ba' (taqdīruhū: <em>bi-islāminā</em>); jar wa majrur muta'alliq bi-isyhadū.</td>
+            </tr>
+            <tr>
+                <td><strong>مُسْلِمُونَ ۝٦٤</strong></td>
+                <td>Ism fā'il jamak mudzakkar sālim dari fi'il <em>aslama</em>.</td>
+                <td><strong>Khabar Anna</strong> marfū' bil-wāw li-annahū jam'u mudzakkarin sālim.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Formulasi Strategi Negosiasi & Inshāf (Diplomasi Beradab):</strong><br>
+            Penggunaan redaksi <em>"Ta'ālaw ilā kalimatin sawā'im bainanā wa bainakum"</em> adalah mahakarya retorika dialog. Kata <em>sawā'</em> (titik temu yang adil) diletakkan di antara dua kata ganti inklusif: <em>bainanā</em> (antara kami) dan <em>bainakum</em> (antara kamu). Al-Qur'an tidak mendiktekan: "Tunduklah pada aturan kami!", melainkan: "Marilah kita bersama-sama tunduk pada prinsip yang mengikat kita berdua secara setara!". Ini adalah kaidah emas negosiasi peradaban modern (<em>win-win diplomatic framework</em>) yang dirumuskan Al-Qur'an 14 abad silam.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Retorika Gradasi Tauhid (At-Taraqqī fī Nasyrisy-Syarī'ah):</strong><br>
+            Tiga klausul pokok tauhid disusun dengan urutan logis yang sangat tajam:<br>
+            • <em>Tingkat 1 (Pondasi Positif): Allā na'buda illallāh</em> &rarr; Mengokohkan objek ibadah tunggal.<br>
+            • <em>Tingkat 2 (Purifikasi Total): Wa lā nusyrika bihī syai'ā</em> &rarr; Membersihkan ibadah dari segala infiltrasi sekutu halus maupun nyata (nakirah <em>syai'an</em> dalam konteks penafian memberikan faedah keumuman mutlak/<em>'umūm syumūlī</em>).<br>
+            • <em>Tingkat 3 (Emansipasi Sosial): Wa lā yattakhidza ba'dhunā ba'dhan arbābā</em> &rarr; Menghancurkan eksploitasi manusia atas manusia berkedok agama. Tauhid bukan hanya ritual mistik vertikal, melainkan pembebasan tatanan sosial horizontal.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Isti'ārah Tashrīḥiyyah pada Lafaz "Arbābā":</strong><br>
+            Al-Qur'an meminjam kata <em>Arbāb</em> (tuhan-tuhan pengatur alam) untuk disematkan kepada para pendeta, rahib, atau penguasa yang membuat syariat tandingan. Ini adalah <em>Isti'arah Tashrihiyyah</em> yang mengandung sindiran hiperbolis tajam: ketika rakyat mematuhi fatwa manusia yang terang-terangan melanggar titah Allah, mereka secara de facto telah memperlakukan manusia tersebut laksana tuhan yang berdaulat!
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-I'tilāf wal-Muqābalah Antara "Tawallaw" dan "Isyhadū bi-annā Muslimūn":</strong><br>
+            Terdapat keindahan seni kontras (<em>Thibāq/Muqābalah</em>) antara sikap berpaling (<em>tawallaw</em>) dari pihak lawan dengan deklarasi keteguhan sikap kaum beriman (<em>isyhadū bi-annā muslimūn</em>). Kata <em>Isyhadū</em> (saksikanlah!) menuntut pihak penolak untuk menjadi saksi atas integritas iman umat Islam. Sekalipun mereka menolak bergabung, mereka dipaksa oleh sejarah untuk mengakui eksistensi kaum yang konsisten memegang kemurnian tauhid.
+        </li>
+        <li>
+            <strong>I'jāz Fonetik — Irama Vokal "Ūn" Penutup Ayat:</strong><br>
+            Penutupan ayat dengan fonem vokal panjang dan sengau tawassuth <em>Muslimūn</em> memberikan efek resonansi akustik yang megah, mantap, dan berwibawa. Rima ini menghadirkan ketenangan psikologis yang tak tergoyahkan di dada kaum mukminin tatkala menghadapi penolakan dan pengingkaran pihak lawan.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual dengan Penutup Blok 2):</strong><br>
+            Blok 2 diakhiri pada ayat 61–63 dengan klimaks ketegangan teologis: tantangan sumpah laknat bersama (<em>Mubāhalah</em> di ayat 61) dan vonis terhadap mereka yang berpaling sebagai perusak tatanan moral (<em>fa-innallāha 'alīmum bil-mufsidīn</em> di ayat 63). Secara psikologis, pasca-kebuntuan debat dan pembatalan mubahalah, hubungan diplomatik berada di ujung tanduk. Ayat 64 hadir sebagai <strong>masterpiece de-eskalasi konflik</strong>. Al-Qur'an membuktikan keluhuran etikanya: Islam tidak memanfaatkan mundurnya delegasi Najran untuk mempermalukan atau memusnahkan mereka, melainkan segera mengulurkan tangan perdamaian: <em>"Jika kalian menolak mubahalah, marilah kita melangkah ke meja perundingan; mari kita cari titik temu yang adil di antara kita!"</em>
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis & Piagam Hubungan Internasional Madinah):</strong><br>
+            Konteks sosiologis Madinah pasca-Perang Badar dan Perjanjian Hudaibiyah (tahun ke-6 hingga ke-9 Hijriyah) adalah fase ekspansi diplomatik global. Madinah telah menjelma dari kota suaka menjadi entitas negara berdaulat yang disegani. Rasulullah ﷺ mengutus para duta diplomatik membawa surat ke imperium-imperium adidaya dunia (Kaisar Bizantium Heraklius, Kisra Persia Khosrow II, Penguasa Mesir Al-Muqawqis, dan Raja Abisinia An-Najasyi). Dalam setiap surat kepada para pemimpin Kristen, Rasulullah ﷺ mengutip QS. 3:64 sebagai substansi traktat hubungan internasional. Ayat ini membuktikan bahwa dakwah Islam sejak awal didesain bukan sebagai imperialisme militer yang memaksa konversi agama, melainkan sebagai traktat intelektual yang membebaskan akal manusia dari tirani teokrasi.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 65–71 & Dekonstruksi Sektarianisme Ibrahim AS):</strong><br>
+            Tawaran <em>Kalimatun Sawā'</em> di ayat 64 langsung ditindaklanjuti oleh ayat 65–68 dengan membongkar akar historis fanatisme sektarian Ahli Kitab. Orang-orang Yahudi mengklaim Nabi Ibrahim AS adalah penganut agama Yahudi, sementara orang-orang Nasrani mengklaim Nabi Ibrahim adalah penganut Kristen. Ayat 65 menyengat kerancuan logika kronologis mereka: <em>"Wahai Ahli Kitab, mengapa kamu membantah tentang Ibrahim, padahal Taurat dan Injil tidak diturunkan melainkan sesudah dia?!"</em>. Puncaknya pada ayat 67 ditegaskan identitas Ibrahim sejati: <em>"Ibrāhīm bukanlah seorang Yahudi dan bukan pula seorang Nasrani, melainkan seorang yang hanif lagi muslim (berserah diri kepada Allah) dan sekali-kali bukanlah dia termasuk orang-orang musyrik!"</em>.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam At-Tabari menegaskan bahwa kata <em>sawā'</em> bermakna <em>'adl wa inṣhāf</em> (keadilan yang seimbang). Maknanya adalah kalimat adil yang tidak ada perselisihan di antara kitab-kitab suci para nabi terdahulu:
+        <br><em>"Taurat, Injil, dan Al-Qur'an semuanya bersepakat bahwa ibadah murni hanya milik Allah semata. Ketika Al-Qur'an mengajak mereka kepada kalimat ini, Al-Qur'an tidak menuntut mereka mempercayai sesuatu yang asing dari ajaran nabi-nabi mereka sendiri, melainkan memanggil mereka untuk kembali kepada substansi asli kitab suci mereka sebelum terdistorsi oleh penambahan manusiawi. Adapun makna 'sebagian kita tidak menjadikan sebagian yang lain sebagai tuhan', At-Tabari menafsirkan: tidak boleh ada manusia yang ditaati dalam kemaksiatan kepada Allah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menyoroti keabsahan penggunaan ayat ini dalam korespondensi diplomatik global Rasulullah ﷺ:
+        <br><em>"Ayat ini mencakup seluruh Ahli Kitab, baik kaum Yahudi maupun Nasrani, serta siapa pun yang menisbatkan diri pada kitab samawi. Surat Rasulullah ﷺ kepada Heraklius yang mencantumkan ayat ini adalah hujah qath'i bahwa seruan tauhid ini bersifat trans-nasional. Perhatikan firman-Nya: 'Fa in tawallaw' (jika mereka berpaling), Allah tidak memerintahkan kita untuk memerangi mereka seketika itu hanya karena mereka menolak masuk Islam, melainkan memerintahkan: 'fa qūlusy-hadū bi-annā muslimūn'—tegaskanlah keistiqamahan kalian dalam berserah diri kepada Allah semata."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Imam Al-Qurthubi membedah aspek sosiologi hukum dan bahaya kultus otoritas keagamaan (<em>khatar taqdīs ar-rijāl</em>):
+        <br><em>"Ayat ini adalah fondasi hukum pembatalan taqlid buta dalam agama. Menjadikan manusia sebagai tuhan bukan berarti bersujud kepada patung mereka, melainkan menerima fatwa mereka yang mengubah hukum Allah: menghalalkan apa yang Allah haramkan dan mengharamkan apa yang Allah halalkan tanpa dalil syar'i. Siapa pun yang menaati seorang ulama, pemimpin, atau raja dalam perkara yang nyata-nyata bertentangan dengan nas Kitabullah dan Sunnah Rasul-Nya seraya meyakini hal itu sebagai kebenaran mutlak, maka ia telah terjerumus ke dalam dosa menjadikan sekutu bagi Allah sebagaimana dicela dalam ayat ini."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (544–606 H) & Az-Zamakhsyari (467–538 H):</strong><br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Menganalisis dialektika rasional ayat ini:<br>
+        <em>"Susunan ayat ini adalah puncak metode debat ilmiah (adab al-munāzharah). Ketika seseorang ingin mendamaikan dua kubu yang berselisih, ia wajib memulai dari titik temu yang disepakati bersama (al-qadhr al-musytarak). Tauhid adalah fitrah akal universal yang diakui oleh seluruh penganut monoteisme. Larangan menjadikan manusia sebagai sesembahan adalah pembebasan martabat manusia: karena manusia semuanya setara dalam hakikat kemakhlukan, maka akal sehat menolak jika ada satu manusia menghambakan diri kepada manusia lain yang sama-sama fana dan lemah."</em><br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menyoroti keindahan rahasia kata <em>ta'ālaw</em>:<br>
+        <em>"Lafaz ta'ālaw menyiratkan bahwa siapa saja yang terbelenggu oleh taklid buta kepada para tokoh agamanya sejatinya sedang terpuruk dalam jurang kerendahan martabat berpikir. Al-Qur'an memanggil mereka untuk naik, membebaskan akal mereka dari penindasan dogma rohaniwan."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur membedah dimensi Maqasid Syariah dan filsafat peradaban:<br>
+        <em>"Ayat ini adalah 'Piagam Kemerdekaan Kemanusiaan' (Watsīqah al-Ḥurriyyah al-Insāniyyah). Selama berabad-abad sebelum Islam, bangsa-bangsa dunia diperbudak oleh dua lapis tirani: tirani politik para kaisar dan tirani teokratis para pemuka agama yang mengklaim diri memegang kunci surga dan neraka. QS. 3:64 meruntuhkan kedua tirani tersebut sekaligus! Dengan menyatakan 'wa lā yattakhidza ba'dhunā ba'dhan arbābā', Al-Qur'an memproklamasikan kesetaraan egaliter seluruh umat manusia di hadapan hukum Tuhan. Tidak ada kasta suci yang kebal hukum, dan tidak ada perantara manusia antara hamba dengan Penciptanya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan getaran perjuangan kemerdekaan:<br>
+        <em>"Perhatikanlah kata-kata yang dipilih Allah: 'Janganlah sebagian kita menjadikan sebagian yang lain sebagai tuhan-tuhan selain Allah.' Inilah dasar demokrasi sejati dan kemerdekaan jiwa manusia. Jangan ada manusia yang menuhankan diri, dan jangan ada manusia yang mau dituhankan! Betapa banyak dalam sejarah para pendeta, paus, raja-raja, atau diktator menuntut kepatuhan mutlak laksana Tuhan. Islam datang memotong leher segala bentuk feodalisme itu. Kita semua adalah sesama hamba Allah; yang membedakan kita hanyalah takwa. Jika seruan pembebasan ini mereka tolak, kita tidak perlu berkecil hati: 'Saksikanlah, bahwa kami adalah kaum yang merdeka karena kami hanya berserah diri kepada Allah (Muslimun)!'"</em><br>
+        • <strong>Prof. Dr. M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menggarisbawahi prinsip etika dialog antaragama:<br>
+        <em>"Kata sawā' mengajarkan kepada kita metodologi berdialog: carilah titik temu, jangan terus-menerus mengorek titik sengketa! Dialog antariman bukan bertujuan untuk menukar akidah atau menciptakan agama gado-gado (sinkretisme), melainkan membangun platform kesepakatan moral: menjunjung tinggi keadilan, menolak penindasan manusia, dan menyembah Tuhan Yang Maha Esa. Jika dialog mencapai jalan buntu, akhiri dengan penuh keanggunan: masing-masing memegang identitasnya secara terhormat tanpa permusuhan."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI menempatkan QS. Ali 'Imran: 64 sebagai dasar normatif <strong>Moderasi Beragama (Wasathiyyah) dan Kerukunan Umat Beragama</strong>. Ayat ini menjadi payung teologis bagi konsep <em>Kalimatun Sawa'</em> dalam kehidupan berbangsa yang majemuk: menemukan konsensus bersama demi kemaslahatan publik (seperti Pancasila dan konstitusi hukum yang adil), seraya tetap memelihara kemurnian keyakinan teologis masing-masing tanpa kompromi akidah.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Ijma' / Konsensus Mufassirin)</th>
+                <th>Dinamika Penekanan (Ikhtilaf Tanawwu' / Ijtihad)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna Hakiki "Kalimatun Sawā'"</strong></td>
+                <td>Sepakat mutlak (ijma') bahwa kalimat ini merujuk pada prinsip Tauhid murni dan penolakan syirik yang menjadi konsensus seluruh nabi.</td>
+                <td>• Klasik (At-Tabari, Ibnu Katsir): Kalimat syahadat <em>Lā ilāha illallāh</em> dan pemurnian ibadah ritual.<br>• Kontemporer (Ibnu 'Asyur, Quraish Shihab): Diperluas mencakup <em>common platform</em> etika peradaban dan kesetaraan hak asasi di hadapan hukum Tuhan.</td>
+            </tr>
+            <tr>
+                <td><strong>Maksud "Menjadikan Sebagian Manusia Sebagai Tuhan"</strong></td>
+                <td>Sepakat bahwa penyembahan ini mencakup kepatuhan mutlak dalam menghalalkan yang haram dan mengharamkan yang halal tanpa izin Allah.</td>
+                <td>• Al-Qurthubi: Peringatan keras terhadap bahaya fanatisme mazhab dan taqlid buta pada rohaniwan.<br>• Buya Hamka: Menyoroti tirani feodalisme politik dan kultus individu para pemimpin otoriter di zaman modern.</td>
+            </tr>
+            <tr>
+                <td><strong>Konsekuensi Perintah "Fa Qūlusy-hadū bi-annā Muslimūn"</strong></td>
+                <td>Sepakat bahwa penolakan pihak lawan tidak membatalkan keharusan berakhlak mulia dan menegaskan identitas tauhid secara transparan.</td>
+                <td>• Sebagian Ahli Fiqih Kuno: Mendiskusikan status hukum jihad jika penolakan disertai agresi militer.<br>• Jumhur Mufassir & Modernis: Menegaskan bahwa ayat ini adalah dasar toleransi aktif, kebebasan beragama, dan pengakuan eksistensial tanpa paksaan.</td>
+            </tr>
+            <tr>
+                <td><strong>Penggunaan Ayat dalam Diplomasi Internasional</strong></td>
+                <td>Sepakat bahwa tindakan Rasulullah ﷺ mengirimkan ayat ini kepada Heraklius membuktikan keabsahan berdialog dan berdiplomasi dengan penguasa non-muslim.</td>
+                <td>• Salaf: Menekankan aspek dakwah amar ma'ruf nahi munkar kepada raja-raja kafir.<br>• Kontemporer: Menjadikan ayat ini sebagai preseden hukum internasional (<em>as-siyar</em>) untuk membangun traktat perdamaian global.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan neuropsikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Sektarian-Feodal vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Sektarian-Feodal (Jahiliyah / Eksploitatif)</th>
+                <th>Pola Pikir Qur'ani (Rabbani & Emansipatoris)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Basis Interaksi dengan Pihak Luar</strong></td>
+                <td><strong>Tribalisme & Zero-Sum Conflict:</strong> Memandang pihak di luar kelompoknya sebagai musuh mutlak yang harus dihancurkan atau ditundukkan; berfokus pada jurang perbedaan teknis demi memicu konflik.</td>
+                <td><strong>Pencarian Titik Temu Beradab (Sawā'):</strong> Mengawali komunikasi dengan mencari fondasi moral bersama (<em>common ground</em>) yang adil seraya mengelola perbedaan dengan martabat dan kejelasan batas akidah.</td>
+            </tr>
+            <tr>
+                <td><strong>Sikap Terhadap Otoritas Figur</strong></td>
+                <td><strong>Submisi Kognitif Pasif (Authority Bias):</strong> Menyerahkan otoritas berpikir sepenuhnya kepada para tokoh kelompok (rohaniwan, figur politik, atau idola); menelan dogma tanpa uji kritis terhadap kebenaran objektif.</td>
+                <td><strong>Integritas Kritis Berbasis Wahyu:</strong> Menghormati kepakaran dan keteladanan para ulama, namun menolak kultus individu; menjadikan firman Allah dan Sunnah Rasul sebagai tolok ukur kebenaran mutlak tertinggi.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons Terhadap Penolakan Dialog</strong></td>
+                <td><strong>Reaktivitas Agresif atau Kompromi Rapuh:</strong> Bereaksi dengan kemarahan ekstrem, dendam personal, atau sebaliknya mencairkan prinsip iman demi menyenangkan pihak lawan (sinkretisme).</td>
+                <td><strong>Kedaulatan Sikap Tanpa Rendah Diri:</strong> Menghormati kebebasan memilih pihak lawan seraya mendeklarasikan jati diri iman secara tenang, teguh, dan berwibawa: <em>"Isyhadū bi-annā muslimūn"</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Common Ground Axiom (Aksioma Titik Temu Kalimatun Sawā'):</strong><br>
+            <em>Premis Logis:</em> Dalam setiap negosiasi, mediasi konflik, atau relasi sosial yang rumit, jangan pernah mengawali interaksi dari titik sengketa yang paling tajam. Mulailah dari aksioma kesepakatan fundamental yang diakui oleh kedua belah pihak sebagai kebenaran adil (<em>sawā'</em>). Bangun kepercayaan di atas fondasi tersebut sebelum membedah wilayah perbedaan.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Dalam menyelesaikan sengketa rumah tangga, konflik kemitraan bisnis, atau polarisasi sosial di tempat kerja, identifikasi 1–2 nilai inti yang disepakati bersama (misalnya: kejujuran, kepentingan bersama anak, atau keberlanjutan perusahaan). Jadikan nilai bersama tersebut sebagai jangkar resolusi.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Anti-Arbāb Heuristic (Heuristik Dekonstruksi Feodalisme Spiritual):</strong><br>
+            <em>Premis Logis:</em> Tidak ada manusia fana yang memiliki hak kekebalan dari kesalahan (infallibility) selain para nabi yang diwahyukan. Menjadikan seseorang sebagai tempat bergantung mutlak atau pemberi legitimasi moral tanpa dalil adalah pelanggaran tauhid dan bunuh diri intelektual.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Ketika Anda berada di bawah tekanan bos, mentor, atau tokoh panutan yang memerintahkan tindakan curang, korupsi, atau pelanggaran syariat, gunakan heuristik ini: <em>"Lā thā'ata li-makhlūqin fī ma'shiyatil-Khāliq"</em> (Tidak ada ketaatan kepada makhluk dalam bermaksiat kepada Sang Pencipta). Tolak tirani tersebut dengan santun namun tegas.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengikis Bias Otoritas & Tribalism</h3>
+    <p>
+        Secara neurobiologis, evolusi otak manusia mewariskan sirkuit <strong>In-Group Favoritism</strong> di amigdala yang memicu kecurigaan otomatis terhadap kelompok luar (<em>the out-group</em>), serta kecenderungan <strong>Authority Bias</strong> di mana otak menghemat energi kognitif dengan cara patuh membabi buta pada figur otoritas (sebagaimana terbukti dalam eksperimen psikologi sosial Milgram). Ketika figur otoritas tersebut menyimpang, pengikutnya mengalami disonansi kognitif parah dan memilih membela figur pujaan daripada membela kebenaran objektif.
+    </p>
+    <p>
+        QS. 3:64 menyajikan terapi tazkiyatun nafs yang membersihkan kalbu dari dua penyakit perusak jiwa:
+    </p>
+    <ul>
+        <li><strong>Mengikis Syirik Khafi (Ketergantungan Ruhani pada Makhluk):</strong> Hati manusia sering kali secara halus "menuhankan" manusia lain: takut dimiskinkan oleh bos, berharap dipuji oleh atasan, atau takut dicela oleh kelompok. Klausul <em>wa lā yattakhidza ba'dhunā ba'dhan arbābā</em> memotong tali belenggu perbudakan batin ini. Jiwa yang bertauhid sadar bahwa manusia yang dipertuhankan itu sama-sama buang air kecil, lapar, menua, dan akan membusuk di liang kubur. Rasa takut dan harap hanya berhak diserahkan kepada Allah.</li>
+        <li><strong>Integritas Batin yang Tenang (Isyhadū bi-annā Muslimūn):</strong> Pernyataan ini memancarkan kematangan neuro-emosional. Seseorang yang memiliki keyakinan kokoh tidak membutuhkan validasi atau tepuk tangan dari orang yang menolaknya. Ia tidak agresif dan tidak defensif; ia cukup bersaksi bahwa seluruh hidup dan matinya telah diserahkan secara bulat kepada Sang Maha Kuasa.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Polarisasi Global, "Echo Chambers" & Krisis Dialog Antar-Peradaban</h3>
+    <p>
+        Abad ke-21 menyaksikan fragmentasi sosial paling akut dalam sejarah peradaban modern. Kehadiran algoritma media sosial telah mengurung miliaran manusia ke dalam ruang gema (<em>echo chambers</em>) yang menyuburkan radikalisme identitas, polarisasi politik ekstrem (kiri vs kanan), dan wabah Islamofobia serta kebencian sektarian. Setiap kelompok mengklaim diri sebagai pemegang monopoli moralitas seraya mengibliskan kelompok lain (<em>othering process</em>).
+    </p>
+    <p>
+        Dalam lanskap global yang terbelah ini, <strong>Piagam Kalimatun Sawā' (QS. 3:64)</strong> menawarkan satu-satunya peta jalan penyelamat peradaban. Islam mengajarkan bahwa dialog antar-peradaban bukanlah kompromi murahan yang mengorbankan identitas akidah, melainkan ikhtiar mulia membangun konsensus global (<em>global consensus for humanity</em>): bersama-sama memerangi ketidakadilan, membela kaum tertindas di Palestina dan belahan dunia lain, melestarikan lingkungan dari krisis iklim, dan menegakkan hukum yang adil bagi seluruh umat manusia tanpa memandang ras atau agamanya.
+    </p>
+
+    <h3>2. Neofeodalisme Korporat, Teknokrasi Otoriter & Algoritma Sebagai "Arbāb Modern"</h3>
+    <p>
+        Bentuk kontemporer paling berbahaya dari klausul <em>"menjadikan sebagian manusia sebagai tuhan selain Allah"</em> tidak lagi berwujud jubah rahib abad pertengahan, melainkan berwujud <strong>Neofeodalisme Korporat dan Teknokrasi Algoritmik</strong>. Segelintir elit pemilik raksasa teknologi global (<em>tech oligarchs</em>) kini bertindak laksana "tuhan-tuhan baru" yang mendikte moralitas miliaran populasi bumi: mereka menentukan informasi apa yang boleh dibaca publik melalui sensor algoritma, merekayasa persepsi politik melalui data prediktif (<em>surveillance capitalism</em>), dan mendefinisikan ulang nilai-nilai etika keluarga dan seksualitas sesuai agenda sekuler liberal.
+    </p>
+    <p>
+        Ketika masyarakat global tunduk begitu saja pada regulasi sepihak para taipan teknologi ini—bahkan ketika regulasi tersebut menghancurkan institusi moral dan fitrah penciptaan manusia—sejatinya peradaban abad ke-21 telah kembali mempraktikkan penyembahan <em>arbābam min dūnillāh</em>! QS. 3:64 adalah seruan revolusi spiritual yang membangunkan kemandirian berpikir umat manusia: kembalikan kedaulatan moral tertinggi kepada Sang Pencipta semesta, dan bebaskan martabat manusia dari perbudakan oligarki teknologi sekuler.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Protokol Deklarasi "Tajdīd al-Islām" Setiap Pagi Hari:</strong><br>
+                Setiap kali Anda selesai melaksanakan shalat Shubuh dan membaca zikir pagi, berdirilah sejenak menghadap kiblat dengan penuh kesadaran eksistensial. Ucapkan dengan suara tenang dan khusyuk ikrar penyerahan diri yang terinspirasi dari penutup ayat ini: <em>"Radhītu billāhi Rabban, wa bil-Islāmi dīnan, wa bi-Muḥammadin ﷺ Nabiyyan wa Rasūlā. Allāhummasy-had bi-annā muslimūn, khāliṣhūna laka lā nusyriku bika syai'ā"</em> (Aku ridha Allah sebagai Tuhanku, Islam sebagai agamaku, dan Muhammad ﷺ sebagai Nabi dan Rasul-ku. Ya Allah, saksikanlah bahwa kami adalah orang-orang yang berserah diri secara bulat kepada-Mu tanpa mempersekutukan-Mu dengan sesuatu pun). Latihan harian ini menanamkan imunitas batin dari kultus figur sepanjang hari.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Filter Integritas Anti-Arbāb di Lingkungan Kerja & Organisasi:</strong><br>
+                Ketika atasan di kantor, mitra bisnis, atau tokoh ormas Anda menginstruksikan kebijakan yang melanggar syariat atau manipulasi hukum (seperti memalsukan laporan keuangan, memotong hak kaum dhuafa, atau menzalimi rekan kerja), terapkan protokol tiga langkah:<br>
+                1) <em>Uji Dalil:</em> Apakah instruksi ini melanggar batasan halal-haram Allah SWT?<br>
+                2) <em>Penolakan Beradab:</em> Tolak keterlibatan dalam pelanggaran tersebut dengan santun seraya menawarkan alternatif solusi profesional yang legal dan bermartabat.<br>
+                3) <em>Pemutusan Ketergantungan:</em> Yakini secara bulat bahwa rezeki dan karier Anda berada di tangan Allah, bukan di tangan atasan atau pemilik modal. Jangan pernah menjual akidah tauhid demi secuil jabatan fana.
+            </li>
+            <li>
+                <strong>Komitmen Relasional Terukur — Menerapkan Diplomasi "Kalimatun Sawā'" dalam Manajemen Konflik Keluarga dan Sosial:</strong><br>
+                Ketika Anda menghadapi perselisihan tajam dalam rumah tangga (dengan pasangan atau mertua) atau ketegangan relasi di komunitas, buatlah kesepakatan tertulis yang dimulai dari <strong>titik kesepakatan bersama (common ground)</strong>. Tuliskan 3 hal yang sama-sama disepakati sebelum mendiskusikan area yang disengketakan. Dengarkan pihak lawan secara aktif tanpa menyela, gunakan bahasa yang adil dan seimbang (<em>inshāf</em>), dan hindari penggunaan otoritas emosional untuk menindas martabat orang lain.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Berhala Manusia dalam Jiwa (The Subtle Lordship Test):</strong> Adakah dalam kehidupanku saat ini—baik atasan di tempat kerja, tokoh spiritual pujaan, politisi yang kubela, atau bahkan pasanganku—sosok yang perkataan dan keridhaannya lebih kutakuti dan kutaati melebihi perintah dan larangan Allah SWT, sehingga tanpa sadar aku telah menjadikannya laksana <em>rabb</em> kecil di hatiku?
+            </li>
+            <li>
+                <strong>Uji Kejujuran Nalar dalam Berdebat (The Ego vs Truth Test):</strong> Ketika aku berdiskusi mengenai perbedaan agama, mazhab fiqih, atau pandangan politik, apakah niat terdalamku adalah mencari titik temu kebenaran yang adil (<em>kalimatin sawā'</em>), ataukah aku sekadar terdorong oleh nafsu kesombongan untuk mempermalukan lawan dan memenangkan egoku?
+            </li>
+            <li>
+                <strong>Uji Keberanian Deklarasi Identitas Iman (The "Muslimūn" Resilience Test):</strong> Ketika berada di lingkungan yang sekuler, liberal, atau minoritas yang memandang sinis nilai-nilai Islam, apakah aku merasa rendah diri (<em>inferior</em>) lalu mencairkan identitas agamaku, ataukah aku berani menampilkan kepribadian muslim yang berakhlak luhur, berprestasi, dan dengan penuh martabat bersaksi: <em>"Isyhadū bi-annā muslimūn"</em>?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Rabbanā wa Rabba kulli syay', Yā Wāḥidan bilā syarīk, Yā Man tawāḍha'a kullu syay'in li-'azhamatih, wa dzalla kullu mukabbirin li-sulṭhānih. Ya Allah Tuhan kami dan Tuhan seluruh semesta, Yang Maha Esa tanpa sekutu, Yang kepada keagungan-Mu seluruh ciptaan tunduk bersimpuh! Kami memohon kepada-Mu dengan kemuliaan Kalimat-Mu yang lurus, bersihkanlah kalbu kami dari noda syirik yang nyata maupun yang tersembunyi. Lindungilah jiwa kami dari penyakit menuhankan makhluk atau tunduk pada perhambaan manusia atas manusia. Anugerahkanlah kepada kami kejernihan hikmah untuk senantiasa mencari titik temu keadilan di tengah perselisihan duniawi, kuatkanlah lisan kami untuk menyuarakan kebenaran dengan adab dan akhlak mulia, dan kokohkanlah kaki kami di atas jalan penyerahan diri yang bulat kepada-Mu. Dan tatkala badai penolakan zaman menerpa kehidupan kami, karuniakanlah ketenangan batin kepada kami untuk bersaksi di hadapan semesta dengan penuh kemuliaan: 'Asyhadu an lā ilāha illallāh, wa asyhadu anna Muḥammadan Rasūlullāh, wa bi-annā muslimūn'. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="../Blok 2 (Ayat 33-63)/003-063 - QS. Ali 'Imran Ayat 63.html">&larr; Kembali ke Ayat 63 (QS. 3:63)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 64</strong> (Blok 3: Dialog Universal & Kalimatun Sawā')</span>
+        <a href="003-065 - QS. Ali 'Imran Ayat 65.html">Lanjut ke Ayat 65 (QS. 3:65) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

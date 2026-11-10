@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-005 - QS. Al-Baqarah Ayat 5 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-004 - QS. Al-Baqarah Ayat 4.html">&larr; Ayat Sebelumnya (QS. 2:4)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-006 - QS. Al-Baqarah Ayat 6.html">Ayat Berikutnya (QS. 2:6) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Sanām al-Qur'ān)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 1 Klaster 1: Kaum Muttaqin [Puncak & Konklusi Klaster] (Ayat 1-5)</span>
+        <span class="badge">7 Kata | 34 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 5</h1>
+    <div class="transliteration">
+        "Ulā'ika 'alā hudam mir-rabbihim wa ulā'ika humul-mufliḥūn(a)"
+    </div>
+    <div class="thematic-title">
+        Klimaks Resonansi Hidayah & Arsitektur Kejayaan Sejati: Metafora Ketinggian Isti'la' ('Alā Hudan), Pengulangan Isyarat Kemuliaan (Ulā'ika), dan Filosofi Al-Falāḥ sebagai Keberuntungan Total Abadi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Ayat 1–5 | Blok 1 Klaster 1: Karakteristik, Epistemologi & Kejayaan Insan Bertakwa)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        أُوْلَـٰٓئِكَ عَلَىٰ هُدًۭى مِّن رَّبِّهِمْ ۖ وَأُوْلَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ ۝٥
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Mereka itulah yang senantiasa berada di atas puncak bimbingan petunjuk yang kokoh dari Tuhan Pemelihara mereka; dan mereka itulah orang-orang yang benar-benar meraih keberuntungan dan kejayaan hakiki yang abadi."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Penerjemahan kata <em>'alā</em> (عَلَىٰ) dengan frasa <em>"di atas puncak bimbingan petunjuk"</em> mencerminkan kaidah gramatika <em>isti'lā' majāzī</em>—di mana orang-orang yang bertakwa digambarkan bukan sekadar pasif berjalan di dalam petunjuk, melainkan bagaikan penunggang mahir yang duduk kokoh di atas kendaraan hidayah yang tinggi martabatnya dan terkendali sempurna. Frasa <em>al-mufliḥūn</em> (ٱلْمُفْلِحُونَ) yang didahului <em>dhamīr al-faṣl</em> (هُمُ) dan <em>al-ta'rīf</em> menunjukkan pembatasan esklusif (<em>al-qaṣr wal-ḥashr</em>): yakni hanya merekalah pemilik sejati kemenangan total di dunia dan keselamatan kekal di akhirat.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>أُوْلَـٰٓئِكَ</strong><br>(<em>Ulā'ika</em>)</td>
+                <td>
+                    <strong>Rasm Utsmani:</strong> Tertulis dengan huruf <em>Wāw</em> tambahan (<em>wāw zā'idah</em>: أُولَـٰئِكَ) yang berfungsi sebagai pembeda ortografis kuno dari kata <em>ilāika</em> (إِلَيْكَ), namun huruf <em>Wāw</em> tersebut tidak dilafalkan (<em>ishthilāḥ dhabth</em>: bulatan sukun bundar di atas wawu).<br>
+                    <strong>Mad Wajib Muttashil:</strong> Huruf mad bertemu hamzah dalam satu kata, dibaca panjang 4-5 harakat (atau 6 harakat menurut jalur tertentu).<br>
+                    <strong>Makharij Huruf:</strong> Hamzah dari <em>aqshal halq</em> (tenggorokan terdalam), Lam dari ujung tepi lidah (<em>tarful lisan</em>), dan Kāf dari pangkal lidah (<em>aqshal lisan</em>) di bawah makhraj Qāf dengan sifat <em>hams</em>.
+                </td>
+                <td>
+                    <strong>Kaidah Mad Muttashil:</strong><br>
+                    • <strong>Warsy 'an Nafi' & Hamzah:</strong> Membaca dengan <em>Thūl / Isyba'</em> (6 harakat penuh).<br>
+                    • <strong>'Ashim, Ibnu 'Amir, Al-Kisa'i, Khalaf al-'Asyir:</strong> Membaca dengan <em>Tawassuth</em> (4 atau 5 harakat).<br>
+                    • <strong>Qalun, Ad-Duri 'an Abi 'Amr, Ibnu Katsir, Abu Ja'far, Ya'qub:</strong> Membaca dengan 4 harakat.<br>
+                    <strong>Tashil Hamzah saat Waqaf:</strong> Imam Hamzah saat waqaf pada kata <em>ulā'ika</em> memiliki wajah <em>tashīl ma'al-madd wal-qashr</em> (meringankan bunyi hamzah disertai panjang atau pendek).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>عَلَىٰ</strong><br>(<em>'Alā</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasthul halq</em>) dengan sifat <em>jahr</em>, <em>tawassuth</em>, dan <em>istifal</em>.<br>
+                    <strong>Mad Thabi'i:</strong> Panjang 2 harakat pada alif maqshurah. Saat disambung (<em>washal</em>) dengan kata berikutnya, harakat fathah pada alif maqshurah bertemu huruf <em>Hā'</em> berharakat dhommah pada <em>hudan</em> secara langsung.
+                </td>
+                <td>
+                    <strong>Imalah / Taqlil pada Alif Maqshurah:</strong><br>
+                    • <strong>Jumhur Imam (Nafi', Ibnu Katsir, Abu 'Amr, 'Ashim, Ibnu 'Amir, Abu Ja'far, Ya'qub):</strong> Membaca dengan <em>Fath</em> murni (tanpa condong ke bunyi 'e').<br>
+                    • <strong>Hamzah, Al-Kisa'i, Khalaf al-'Asyir:</strong> Membaca dengan <em>Imālah kubrā</em> saat waqaf.<br>
+                    • <strong>Warsy:</strong> Membaca dengan <em>Taqīl / Bain-Bain</em> saat waqaf.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>هُدًۭى مِّن</strong><br>(<em>Hudam-min</em>)</td>
+                <td>
+                    <strong>Idgham Bighunnah:</strong> Tanwin fathah pada huruf <em>Dāl</em> bertemu huruf <em>Mīm</em> berharakat kasrah, melebur sempurna disertai dengungan (<em>ghunnah</em>) sepanjang 2 harakat sempurna (<em>akmalu mā takūn</em>).<br>
+                    <strong>Rasm Utsmani:</strong> Alif maqshurah diberi tanwin fathah yang diletakkan di atas dāl (atau di atas alif menurut madzhab dhabth Maghribi). Huruf <em>Dāl</em> memiliki sifat <em>jahr</em> dan <em>syiddah</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca <strong>Idgham Bighunnah</strong> pada pertemuan tanwin dengan <em>Mīm</em> (<em>hudam-min</em>). Mengenai waqaf pada kata <em>hudan</em> (secara ikhtibari/idhthirari): para imam yang memiliki kaidah imalah (Hamzah, Al-Kisa'i, Khalaf) membacanya dengan imalah huruf dāl karena asalnya dari <em>Yā'</em> (<em>hudayun</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>مِّن رَّبِّهِمْ</strong><br>(<em>Mir-rabbihim</em>)</td>
+                <td>
+                    <strong>Idgham Bila Ghunnah:</strong> Nun sukun bertemu huruf <em>Rā'</em> berharakat fathah, melebur sempurna tanpa dengungan menurut riwayat Hafsh 'an 'Ashim.<br>
+                    <strong>Tafkhim Huruf Rā':</strong> Dibaca tebal karena berharakat fathah dan bertasydid.<br>
+                    <strong>Kasrah Mim Jamak:</strong> Huruf <em>Mīm</em> di akhir kata berharakat sukun diakhiri sifat <em>idzhar syafawi</em> sebelum huruf <em>Wāw</em>.
+                </td>
+                <td>
+                    <strong>Ghunnah pada Huruf Rā':</strong><br>
+                    • <strong>Khalaf 'an Hamzah:</strong> Membaca <strong>Idgham Bighunnah</strong> pada Nun sukun bertemu <em>Rā'</em> dan <em>Lām</em> (<em>mir-rabbihim</em> dengan dengung).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca <strong>Idgham Bila Ghunnah</strong> (tanpa dengung).<br>
+                    <strong>Shilah Mim Jamak:</strong><br>
+                    • <strong>Ibnu Katsir & Abu Ja'far:</strong> Membaca dengan <em>Shilah Mīm Jamak</em> (<em>mir-rabbihimū wa-ulā'ika</em>) dengan panjang 2 harakat.<br>
+                    • <strong>Qalun:</strong> Memiliki dua wajah (sukun mim atau shilah).<br>
+                    • <strong>Jumhur (termasuk Hafsh):</strong> Membaca dengan sukun mim disertai idzhar syafawi yang jelas agar tidak tersamarkan oleh wau.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَأُوْلَـٰٓئِكَ</strong><br>(<em>Wa-ulā'ika</em>)</td>
+                <td>
+                    <strong>Wawu 'Athaf:</strong> Dibaca fathah murni, membuka klausa kedua kalimat.<br>
+                    <strong>Mad Wajib Muttashil:</strong> Sama dengan lafaz pertama, panjang 4-5 harakat (atau 6 harakat menurut Hamzah dan Warsy).<br>
+                    <strong>Idzhar Syafawi Muakkad:</strong> Jika dibaca washal dari <em>mir-rabbihim</em>, mim sukun bertemu wau wajib dibaca idzhar terang (waspada terhadap bahaya <em>ikhfa'</em> karena kedekatan makhraj bibir).
+                </td>
+                <td>
+                    Kaidah qira'at persis sama dengan kata <em>ulā'ika</em> pada fashal pertama (perbedaan tingkat panjang mad muttashil serta tashil hamzah saat waqaf bagi Hamzah).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>هُمُ</strong><br>(<em>Humu</em>)</td>
+                <td>
+                    <strong>Dhamir Sya'n / Fashl:</strong> Huruf <em>Hā'</em> dhommah dari tenggorokan terdalam, <em>Mīm</em> berharakat dhommah 'aridhah (harakat bantu) untuk menghindari bertemunya dua sukun (<em>iltiqā'us-sākinain</em>) saat disambung dengan alif lam qamariyyah pada <em>al-muflihūn</em>.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca dhommah pada <em>Mīm</em> (<em>humul-mufliḥūn</em>) saat washal untuk menghindari pertemuan dua sukun. Riwayat Abu 'Amr dan Ya'qub tetap mengkasrahkan huruf <em>Hā'</em> jika didahului kasrah/ya', namun pada lafaz ini huruf sebelumnya adalah alif muttashil berharakat fathah sehingga seluruh imam sepakat membaca dhommah pada <em>Hā'</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلْمُفْلِحُونَ</strong><br>(<em>Al-mufliḥūn</em>)</td>
+                <td>
+                    <strong>Alif Lam Qamariyyah:</strong> Lam dibaca idzhar sukun yang jelas.<br>
+                    <strong>Huruf Fā':</strong> Berharakat sukun dari tepi gigi seri atas dengan bagian dalam bibir bawah, memiliki sifat <em>hams</em> dan <em>rikhwah</em>.<br>
+                    <strong>Huruf Ḥā':</strong> Kasrah murni dari tengah tenggorokan.<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Saat waqaf di akhir ayat, wau mad bertemu nūn sukun dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuth</em> pada nūn.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca rafa' dengan tanda wau jamak mudzakkar salim (<em>al-mufliḥūn</em>), serta memperbolehkan tiga wajah panjang mad 'aridh lissukun (2, 4, atau 6 harakat) saat berhenti di akhir ayat 5.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul, Sejarah Pewahyuan & Hadits Sahih Penjelas</h3>
+    <p>
+        Ayat 5 dari Surah Al-Baqarah merupakan puncak simpul (<em>khatimatul-maqtha'</em>) bagi lima ayat pertama yang diturunkan di awal periode Madinah, segera setelah peristiwa Hijrah Rasulullah ﷺ. Lima ayat ini berfungsi sebagai undang-undang pembuka bagi pembentukan peradaban baru umat Islam di Madinah, memproklamasikan profil manusia paripurna yang dijamin mendapatkan kemenangan eksistensial.
+    </p>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Ad-Darimi (No. 3376) & Al-Baihaqi dalam <em>Syu'abul Iman</em> (No. 2413) dari Abdullah bin Mas'ud r.a. — Fadhilah Lima Ayat Pembuka Al-Baqarah:</strong><br>
+        Abdullah bin Mas'ud r.a. menyatakan:<br>
+        <em>"Man qara'a 'asyra āyātin min sūratil-Baqarati fī lailatin lam yadkhul dzālikal-baita syaiṭānun tilkal-lailata ḥattā yushbiḥ: arba'un min awwalihā, wa āyatul-Kursiyyi wa āyatāni ba'dahā, wa tsalātsu āyātin min ākhirihā awwaluhā: Lillāhi mā fis-samāwāti wa mā fil-ardh..."</em><br>
+        (Barangsiapa membaca sepuluh ayat dari Surah Al-Baqarah pada suatu malam, maka setan tidak akan sanggup memasuki rumah itu pada malam tersebut hingga waktu pagi: empat ayat pertama darinya [Ayat 1–4], lalu Ayat Kursi dan dua ayat setelahnya [Ayat 255–257], serta tiga ayat penutupnya [Ayat 284–286]). Riwayat ini memiliki sanad yang sahih (<em>mauquf lahu hukmur-raf'</em>) dan menunjukkan bahwa lima ayat pembuka merupakan satu benteng proteksi spiritual dan intelektual yang utuh.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Atsar Riwayat Imam At-Tabari dalam <em>Jami' al-Bayan</em> (1/257) & Ibnu Katsir (1/170) dari Abdullah bin Abbas r.a. — Penjelasan Hakikat Al-Muflihun:</strong><br>
+        Sahabat Ibnu Abbas r.a. menafsirkan firman Allah <em>"Wa ulā'ika humul-mufliḥūn"</em>:<br>
+        <em>"Alladzīna adrakū mā thalabū, wa najaw min syarri mā minhu harabū."</em><br>
+        (Yaitu orang-orang yang berhasil meraih secara sempurna segala kebaikan yang mereka cari dan rindukan di dunia dan akhirat, serta selamat dari segala marabahaya dan keburukan yang mereka takuti dan hindari). Inilah definisi keberuntungan komprehensif yang melampaui metrik duniawi.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Muslim (No. 1054) dari Abdullah bin 'Amr bin Al-'Ash r.a. — Ciri Hakikat Al-Falah Nabawi:</strong><br>
+        Rasulullah ﷺ bersabda mendefinisikan siapa sosok yang berhasil memetik <em>al-falah</em> dalam kehidupan nyata:<br>
+        <em>"Qad aflaha man aslama, wa ruziqa kafāfan, wa qanna'ahullāhu bimā ātāh."</em><br>
+        (Sungguh telah sangat beruntung [meraih <em>al-falāḥ</em>] orang yang berserah diri kepada Allah [berislam], dianugerahi rezeki yang mencukupi kebutuhan pokoknya, dan Allah menjadikannya ridha serta bersyukur menerima apa yang telah Dia anugerahkan kepadanya). Hadits ini memverifikasi bahwa <em>al-falah</em> adalah kedamaian eksistensial dan ketercukupan batin, bukan akumulasi materi yang rakus tanpa batas.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Akar Kata F-L-Ḥ (ف - ل - ح — Poros Pembebasan, Pembelahan Rintangan & Panen Kejayaan):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (Jilid 4, entri: ف-ل-ح) menetapkan sebuah prinsip leksikografi bahwa akar kata ini berporos pada satu makna tunggal yang kokoh: <em>"Al-Fā' wal-Lām wal-Ḥā' aṣlun wāḥidun yadullu 'alā syaqqin wa qath'in"</em> (Akar kata ini berporos pada <strong>pemotongan, pembelahan, dan pembukaan jalan menembus rintangan yang keras</strong>).<br>
+            Dari makna dasar pembelahan inilah bangsa Arab menyebut petani dengan istilah <strong>Al-Fallāḥ</strong> (ٱلْفَلَّاحُ), karena ia berjuang membelah tanah bumi yang padat membatu dengan mata bajaknya, membuang bebatuan dan gulma perusak, menanam benih di kedalaman tanah, lalu merawatnya dengan peluh hingga merekah menjadi tunas hijau yang membuahkan panen raya kemakmuran.<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> meluaskan dimensi semantik ini: <em>"Al-Falāḥ: Al-Fawzu wan-Najāh wal-Baqā'u fil-Khayr"</em> (Al-Falah adalah kemenangan, keberhasilan, dan kekekalan dalam kenikmatan yang abadi). Orang Arab pra-Islam terbiasa melantunkan syair: <em>"Aflaha fulān"</em> (Si Fulan berhasil membelah kemiskinan dan meraih kemuliaan yang lestari). Ketika syariat Islam mengadopsi kata ini—bahkan menjadikannya gema panggilan shalat lima waktu <em>"Ḥayya 'alal-Falāḥ"</em>—maknanya ditransformasikan menjadi: <strong>kejayaan paripurna di mana seorang hamba berhasil membelah kabut syahwat, meruntuhkan keangkuhan nafsu materialistik, lalu memanen keselamatan abadi di surga Allah</strong>.
+        </li>
+        <li>
+            <strong>Preposisi 'Alā (عَلَىٰ — Isti'lā' Majāzī & Supremasi Posisi Mental):</strong><br>
+            Al-Qur'an secara spektakuler memilih huruf jarr <strong>'Alā</strong> (عَلَىٰ) dan bukan huruf <strong>Fī</strong> (فِي / di dalam). Secara semantik, huruf <em>'Alā</em> berfaedah untuk <em>al-isti'lā'</em> (berada di atas puncak ketinggian). Sebagaimana dijelaskan Az-Zamakhsyari dan Fakhruddin Ar-Razi, jika Al-Qur'an menggunakan kata <em>fī hudan</em> (di dalam petunjuk), maka gambarannya adalah seseorang yang sekadar dilingkupi petunjuk. Namun dengan memilih <em>'alā hudan</em>, Al-Qur'an menggambarkan kaum bertakwa sebagai sosok yang <strong>menunggangi hidayah bagaikan menunggangi kuda tunggangan yang sangat tangguh, terlatih, dan mulia</strong>. Mereka memegang kendali hidayah tersebut di tempat yang tinggi; hidayah itu mengangkat mereka dari lumpur keraguan duniawi, membawa mereka melaju dengan stabil melintasi badai syubhat, dan tak satu pun gelombang fitnah mampu menjatuhkan mereka karena posisi mereka berada di atas (<em>mutamakkin</em>).
+        </li>
+        <li>
+            <strong>Isim Isyarah Ulā'ika (أُوْلَـٰٓئِكَ — Jarak Kejauhan Kemuliaan / Bu'dul-Manzilah):</strong><br>
+            Lafaz <em>ulā'ika</em> adalah isim isyarah jamak untuk objek yang berjarak jauh (<em>lil-bu'di</em>). Mengapa orang-orang bertakwa yang baru saja dibicarakan di ayat sebelumnya ditunjuk dengan isyarat jauh dan bukan dengan <em>hā'ulā'i</em> (orang-orang ini / jarak dekat)? Para pakar balaghah menjelaskan bahwa ini adalah <strong>Al-Bu'du ar-Rutbī wat-Ta'ẓīmī</strong> (jarak kejauhan martabat, keluhuran derajat, dan kemuliaan posisi). Seolah-olah derajat mereka begitu tinggi menjulang di ufuk spiritualitas, sehingga pandangan manusia biasa harus mendongak jauh ke atas untuk menyaksikan keagungan kedudukan mereka di sisi Allah.
+        </li>
+        <li>
+            <strong>Tankir pada Lafaz Hudan (هُدًۭى — Ketakterbatasan & Keagungan Kualitas):</strong><br>
+            Kata <em>hudan</em> dihadirkan dalam bentuk <em>nakirah</em> (indefinite) ber-tanwin: <em>hudan</em>. Dalam kaidah balaghah, ini dinamakan <strong>at-tankīr lit-ta'ẓīm</strong> (penyebutan tanpa alif-lam untuk menunjukkan keagungan yang tak terhingga dan tak terbayangkan oleh akal). Hidayah yang mereka nikmati bukan sekadar petunjuk jalan biasa, melainkan cahaya raksasa yang mahaluas, kokoh, murni, dan langsung bersumber dari <em>Rabbihim</em>.
+        </li>
+        <li>
+            <strong>Idhafah Rabb kepada Dhomir Mereka (رَبِّهِمْ — Personalisasi Kasih Sayang Tarbiyah):</strong><br>
+            Penyandaran nama <em>Rabb</em> kepada mereka (<em>Rabbihim</em> / Tuhan Pemelihara mereka) mengandung nilai <em>at-tasyrīf wal-in'ām</em> (pemuliaan khusus). Allah tidak menyebut <em>"min Allāh"</em>, melainkan <em>"mir-Rabbihim"</em>, untuk menegaskan bahwa petunjuk tersebut dianugerahkan melalui proses pendidikan jiwa yang penuh kelembutan, pemeliharaan berkelanjutan, dan kasih sayang yang mendalam dari Dzat yang mengasuh fitrah mereka sejak ketiadaan hingga mencapai kesempurnaan takwa.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Rasm</th>
+                <th>Tinjauan Morfologis (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Peran Struktur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>أُوْلَـٰٓئِكَ</strong></td>
+                <td>Isim Isyarah jamak mudzakkar/mu'annats, tersusun dari: <em>ulā</em> (akar isyarah) + <em>kāf al-khithāb</em> (huruf penunjuk lawan bicara).</td>
+                <td>Mabni 'alal-fath dalam kedudukan <strong>Mubtada' Awwal</strong> (subjek pertama kalimat), menempati <em>mahall rafa'</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَىٰ</strong></td>
+                <td>Huruf Jarr (Preposisi) asli mabni 'alas-sukun, berfaedah <em>isti'lā' majāzī</em>.</td>
+                <td>Huruf jarr tidak memiliki mahall i'rab tersendiri.</td>
+            </tr>
+            <tr>
+                <td><strong>هُدًۭى</strong></td>
+                <td>Isim Maqshur, masdar dari <em>hadā - yahdī - hudan</em> (akar ه-د-ي), wazan <em>fu'al</em>.</td>
+                <td><strong>Isim Majrur</strong> oleh <em>'alā</em> dengan tanda kasrah muqaddarah di atas alif maqshurah karena <em>ta'adzdzur</em> (mustahil menampakkan harakat).<br>
+                <strong>Ta'alluq:</strong> <em>Jār wa majrūr</em> (<em>'alā hudan</em>) berkaitan (<em>muta'alliq</em>) dengan khabar mahdzuf yang ditakdirkan: <em>kā'inūna / mustaqirrūna</em>, menempati kedudukan <strong>Khabar Mubtada'</strong> bagi <em>ulā'ika</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّن</strong></td>
+                <td>Huruf Jarr asli mabni 'alas-sukun, berfaedah <em>ibtidā'ul-ghāyah</em> (awal permulaan sumber pancaran hidayah).</td>
+                <td>Huruf jarr tidak memiliki mahall i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>رَّبِّهِمْ</strong></td>
+                <td><em>Rabb</em>: Isim jins berakar dari <em>Rabbā - Yarubbū</em> (pendidikan, pemeliharaan, kepemilikan).<br>
+                <em>-him</em>: Dhamir jamak mudzakkar gha'ib.</td>
+                <td><em>Rabbi</em>: Isim majrur oleh <em>min</em> dengan tanda kasrah zhahirah, berkedudukan sebagai <em>mudhāf</em>.<br>
+                <em>-him</em>: Dhamir muttashil mabni 'alas-sukun menempati <em>mahall jarr mudhāfun ilayh</em>.<br>
+                <strong>Ta'alluq:</strong> <em>Jār wa majrūr</em> (<em>min rabbihim</em>) bertaut (<em>muta'alliq</em>) dengan sifat (<em>na'at</em>) bagi kata <em>hudan</em> (maknanya: petunjuk agung yang bersumber khusus dari Tuhan mereka).</td>
+            </tr>
+            <tr>
+                <td><strong>وَأُوْلَـٰٓئِكَ</strong></td>
+                <td><em>Wawu</em>: Harf 'Athaf muthlaqul-jam'i.<br>
+                <em>Ulā'ika</em>: Isim Isyarah lil-bu'di.</td>
+                <td><em>Wawu</em> huruf 'athaf. <em>Ulā'ika</em> adalah <strong>Mubtada' Tsani</strong> (subjek tersendiri pada klausa kedua) mabni 'alal-fath menempati <em>mahall rafa'</em>. Kalimat ini diathafkan kepada jumlah ismiyyah pertama.</td>
+            </tr>
+            <tr>
+                <td><strong>هُمُ</strong></td>
+                <td>Dhamir Munfashil untuk orang ketiga jamak (<em>gha'ibin</em>).</td>
+                <td>Memiliki dua wajah analisis gramatika otoritatif para pakar Nahwu Kufah & Bashrah:<br>
+                1) <strong>Dhamīr Faṣl / 'Imād:</strong> Tidak memiliki mahall i'rab, berfungsi mempertegas khabar dan memberikan faedah <em>al-qashr</em> (eksklusivitas).<br>
+                2) <strong>Mubtada' Kedua:</strong> Menempati <em>mahall rafa'</em>, dan <em>al-muflihūn</em> adalah khabarnya, kemudian jumlah (<em>humul-muflihūn</em>) menjadi khabar bagi <em>ulā'ika</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُفْلِحُونَ</strong></td>
+                <td>Isim Fā'il jamak mudzakkar salim dari fi'il tsulatsi mazid <em>aflaḥa – yufliḥu – mufliḥun</em> (wazan <em>muf'il</em>, akar ف-ل-ح).</td>
+                <td><strong>Khabar</strong> bagi mubtada' (baik bagi <em>ulā'ika</em> jika <em>hum</em> dianggap dhamir fashl, atau bagi <em>hum</em>), marfu' dengan tanda <strong>Wawu</strong> karena merupakan Jamak Mudzakkar Salim.<br>
+                <strong>Kedudukan Kalimat (Maḥallul-Jumlah):</strong><br>
+                • Jumlah pertama (<em>Ulā'ika 'alā hudan mir-rabbihim</em>) adalah <em>Isti'nāfiyyah</em> atau penutup sifat muttaqin yang <em>lā maḥalla lahā</em>.<br>
+                • Jumlah kedua (<em>wa ulā'ika humul-mufliḥūn</em>) adalah <em>ma'thūfah</em> yang dihubungkan untuk melipatgandakan pujian dan kepastian keselamatan.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah Tingkat Tinggi (Ma'ani, Bayan, & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia Tikrār Isim Isyārah (Pengulangan "Ulā'ika"):</strong><br>
+            Mengapa Al-Qur'an tidak sekadar berfirman secara ekonomis: <em>"Ulā'ika 'alā hudam mir-rabbihim wal-mufliḥūn"</em> (Mereka berada di atas petunjuk Tuhan dan beruntung)? Para pakar balaghah agung (Az-Zamakhsyari dalam <em>Al-Kasysyāf</em>, Abdul Qahir Al-Jurjani dalam <em>Dalā'il al-I'jāz</em>, dan Ibnu 'Asyur) mengupas keajaiban pengulangan ini:<br>
+            • <strong>Pemberian Dua Mahkota Independen:</strong> Isim isyarah pertama (<em>Ulā'ika 'alā hudan...</em>) menunjuk mereka sebagai pemegang mahkota kemuliaan di dunia berupa stabilitas hidayah. Isim isyarah kedua (<em>wa ulā'ika humul-mufliḥūn</em>) menobatkan mereka sebagai pemegang mahkota kemenangan mutlak di akhirat berupa surga dan ridha Allah. Pengulangan ini menegaskan bahwa masing-masing sifat tersebut sudah cukup mandiri untuk menjadikan mereka figur teladan peradaban.<br>
+            • <strong>Pemisahan Dua Kenikmatan (Farqu bainal-Manzilatain):</strong> Berada di atas hidayah adalah kesuksesan proses di alam dunia (<em>fawz al-manhaj</em>), sedangkan menjadi <em>al-muflihūn</em> adalah kesuksesan hasil akhir di alam akhirat (<em>fawz al-ghāyah</em>).
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Struktur Hashr & Qashr Melalui Tiga Lapis Instrumen:</strong><br>
+            Kalimat <em>"wa ulā'ika humul-mufliḥūn"</em> dirancang dengan arsitektur pembatasan mutlak (<em>Al-Qaṣr al-Idhāfī wal-Haqīqī</em>) yang menggunakan tiga penguat sekaligus:<br>
+            1) Penyebutan kembali subjek dengan isim isyarah keluhuran (<em>ulā'ika</em>).<br>
+            2) Penggunaan <strong>Dhamīr al-Faṣl</strong> (هُمُ / merekalah, bukan yang lain).<br>
+            3) Penggunaan <strong>Al-Ta'rīf bil-Lām</strong> pada predikat (ٱلْمُفْلِحُونَ), yang merujuk pada hakikat kesempurnaan genus keberuntungan (<em>al-kamāl fil-jins</em>).<br>
+            Implikasi balaghahnya: Seakan-akan seluruh keberuntungan di jagat raya telah disedot dan dimonopoli oleh kaum muttaqin; sedangkan mereka yang menolak petunjuk Al-Qur'an—meskipun memiliki triliunan aset materi, popularitas global, dan kekuasaan tertinggi di muka bumi—sama sekali tidak berhak menyandang gelar orang beruntung!
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Isti'ārah Tashrīḥiyyah Ashliyyah pada Huruf 'Alā:</strong><br>
+            Penggunaan preposisi <em>'alā</em> menghadirkan gambar visual metaforis yang memukau: hidayah Allah dimisalkan bagaikan hewan tunggangan paling mulia, kencang, dan tangguh yang membawa tuannya mendaki bukit terjal kehidupan dengan mudah tanpa tergelincir sedikit pun. Sang penunggang berada di atas puncak (<em>musta'lī</em>), melihat segala ilusi duniawi dari sudut pandang ketinggian yang jernih (<em>bird-eye view</em>), tidak tertipu oleh fatamorgana lembah kefanaan.
+        </li>
+        <li>
+            <strong>Ilmu Badi' & Fawashil — I'jaz Shauti dan Resonansi Akhir Ritmis:</strong><br>
+            Ayat ini ditutup dengan rima huruf Wāw dan Nūn (<em>-ūn</em>) pada kata <em>Al-Mufliḥūn</em>, menyatu harmonis dengan rima penutup ayat-ayat sebelumnya: <em>Yu'minūn, Yunfiqūn, Yūqinūn</em>. Ritme fonetik nasal yang bergaung panjang ini menciptakan efek kemantapan psikologis (<em>ats-tsabāt</em>) di dalam dada pembaca, menutup klaster pertama kaum muttaqin dengan nada kemenangan yang agung dan menenangkan jiwa.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Kausalitas Teks Sebelumnya: Benih yang Membuahkan Hasil):</strong><br>
+            Ayat 5 tidak dapat dipahami secara terisolasi; ia adalah <strong>konsekuensi logis matematis (natijah hatmiyyah)</strong> dari empat ayat sebelumnya. Pada Ayat 2, Al-Qur'an memproklamasikan dirinya sebagai petunjuk bagi kaum muttaqin (<em>hudan lil-muttaqīn</em>). Pada Ayat 3 dan 4, Allah merinci lima benih pilar karakter muttaqin: keimanan pada yang ghaib, pendirian shalat, infaq harta, keyakinan pada wahyu masa lalu dan wahyu Nabi Muhammad ﷺ, serta keyakinan kokoh pada hari akhirat. Ayat 5 hadir dengan kata <em>ulā'ika</em> untuk merangkum seluruh karakter tersebut: barangsiapa yang menanam kelima benih spiritual tersebut, niscaya ia akan memanen buah kejayaan (<em>al-muflihūn</em>) di atas puncak kendaraan petunjuk (<em>'alā hudan</em>).
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik & Sintesis Akbar dengan Surah Al-Fatihah):</strong><br>
+            Dalam arsitektur makro Al-Qur'an, Ayat 5 Surah Al-Baqarah adalah <strong>jawaban langsung dan tuntas atas permohonan terbesar umat manusia di Surah Al-Fatihah [1]: 6</strong>: <em>"Ihdinaṣ-ṣirāṭal-mustaqīm"</em> (Tunjukilah kami jalan yang lurus!).<br>
+            Ketika seorang hamba memohon hidayah di akhir Al-Fatihah, Allah langsung menjawab di lembar berikutnya: Hidayah itu ada di dalam Kitab ini (Al-Baqarah: 2), karakternya ada pada orang-orang bertakwa (Ayat 3-4), dan hasil akhir bagi mereka yang meniti jalan lurus tersebut adalah: <em>"Ulā'ika 'alā hudam mir-rabbihim wa ulā'ika humul-mufliḥūn"</em> (Ayat 5). Terjadilah keindahan resonansi kosmik antara doa seorang hamba dengan ketetapan Rabbnya.
+        </li>
+        <li>
+            <strong>Liḥāq (Kontras Tajam Menuju Klaster Kaum Kafir di Ayat 6–7):</strong><br>
+            Tepat setelah menutup potret kaum beriman dengan kejayaan cahaya (<em>al-muflihūn</em>), Al-Qur'an di Ayat 6–7 langsung mengontraskannya dengan kelompok manusia kedua: kaum kafir yang keras kepala (<em>Innal-ladzīna kafarū sawā'un 'alaihim...</em>). Teknik penyandingan kontras ini (<em>al-muqābalah wal-istithrād</em>) mempertegas pembeda peradaban: di satu sisi ada manusia yang menjulang di puncak hidayah dan memetik falah, sementara di sisi lain ada manusia yang terkunci mata hatinya, tuli pendengarannya, dan tertutup oleh tirai gelap kehinaan.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Format Umat Baru di Madinah Abad ke-7</h3>
+    <p>
+        Ketika lima ayat pertama Al-Baqarah ini berkumandang di Madinah pada tahun ke-1 Hijriah, audiens pertama Nabi ﷺ menghadapi turbulensi sosial-ekonomi yang luar biasa dahsyat. Kaum Muhajirin baru saja meninggalkan rumah, tanah, modal usaha, dan keluarga mereka di Makkah demi mempertahankan iman; secara materialistik, mereka jatuh miskin dan menjadi pengungsi di negeri asing. Di sisi lain, kaum Anshar membuka pintu rumah dan membagi separuh harta mereka demi persaudaraan iman. Sementara itu, kaum Yahudi Madinah yang mapan secara ekonomi dan literasi kitab memandang kaum muslimin dengan pandangan meremehkan, meyakini bahwa kejayaan dan keterpilihan ilahi hanya monopoli ras keturunan Israil.<br>
+        Dalam konteks sosiologis yang penuh ketegangan ini, turunnya kalimat <em>"Ulā'ika humul-mufliḥūn"</em> meledak bagaikan deklarasi kemerdekaan mental yang membalikkan seluruh standar peradaban dunia:
+    </p>
+    <ul>
+        <li><strong>Meruntuhkan Metrik Kesuksesan Bangsa Jahiliyah & Elit Madinah:</strong> Sukses (<em>falah</em>) sejati dideklarasikan bukan diukur dari silsilah darah, hegemoni bisnis pasar Madinah, atau banyaknya unta, melainkan diukur dari ketundukan pada hidayah wahyu dan kesiapan berinfaq di jalan Allah.</li>
+        <li><strong>Injeksi Optimisme Spiritual Tingkat Tertinggi bagi Kaum Tertindas:</strong> Para sahabat miskin seperti Bilal bin Rabah, Ammar bin Yasir, dan para pengungsi Suffah ditegaskan oleh langit sebagai "orang-orang yang paling jaya di muka bumi", melahirkan ketahanan psikologis (<em>resilience</em>) yang luar biasa untuk bertahan menghadapi boikot ekonomi dan ancaman militer kaum musyrikin Quraisy.</li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Puncak Tafsir bil-Ma'tsur):</strong><br>
+        At-Tabari mengupas tuntas perdebatan salaf mengenai rujukan isim isyarah <em>ulā'ika</em>. Beliau menukil dua riwayat besar: pertama, bahwa <em>ulā'ika</em> pertama merujuk kepada kaum mukminin dari kalangan bangsa Arab yang beriman kepada yang ghaib (Ayat 3), sedangkan <em>ulā'ika</em> kedua merujuk kepada orang-orang beriman dari kalangan Ahli Kitab yang mengimani Al-Qur'an dan kitab-kitab terdahulu (Ayat 4). Namun, At-Tabari dengan kepiawaian metodologisnya <strong>mentarjīh pendapat kedua</strong>: bahwa kedua kata <em>ulā'ika</em> tersebut merujuk kepada <strong>satu golongan yang sama</strong>, yaitu seluruh insan bertakwa yang menghimpun keenam sifat di Ayat 3 dan 4 secara integratif. Terkait makna <em>al-muflihūn</em>, At-Tabari menegaskan: <em>"Humul-fā'izūn alladzīna thalabū mā 'indallāhi bi-a'mālihim fahadāhum Allāhu li-thalabatihā fa-anjaha thalabatahum"</em> (Merekalah orang-orang yang sukses, yang mencari keridhaan di sisi Allah dengan amal perbuatan mereka, lalu Allah membimbing mereka dan mengabulkan segala permohonan mereka hingga selamat dari neraka dan abadi di surga).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat Sahih & Sunnah):</strong><br>
+        Ibnu Katsir memperkuat tarjih gurunya bahwa predikat kejayaan pada Ayat 5 adalah pahala (<em>jazā'</em>) dan gelar kehormatan bagi siapa saja yang memiliki karakteristik yang telah dijabarkan sebelumnya. Beliau menyoroti keterikatan erat antara permulaan ayat dengan kata <em>mir-rabbihim</em>: bahwa keberadaan mereka di atas petunjuk bukanlah buah dari kehebatan logika atau kecerdasan pribadi mereka semata, melainkan merupakan murni taufiq, karunia, dan bimbingan langsung dari Allah Sang Pemelihara (<em>nūrun minallāhi wa bayānun wa bashīrah</em>). Terkait kata <em>al-muflihūn</em>, Ibnu Katsir mengutip atsar bahwa mereka adalah orang-orang yang memperoleh apa yang mereka idamkan (surga) dan selamat dari apa yang mereka takuti (azab).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih & Bahasa Klasik):</strong><br>
+        Al-Qurthubi membedah dimensi filologi kata <em>al-falāḥ</em> secara sangat luas dengan mengutip bait-bait syair Arab pra-Islam karya penyair Labid bin Rabi'ah dan Al-A'sya. Beliau menjelaskan bahwa kata <em>falah</em> terbagi dua: <strong>Falah Duniawi</strong> (memperoleh kemenangan hidup, ketercukupan rezeki, dan kehormatan) serta <strong>Falah Ukhrawi</strong> yang menghimpun empat kenikmatan abadi: <em>al-baqā' bilā fanā'</em> (kehidupan kekal tanpa kebinasaan), <em>al-ghinā bilā faqr</em> (kekayaan mutlak tanpa kemiskinan), <em>al-'izzu bilā dzull</em> (kemuliaan agung tanpa kehinaan), dan <em>al-'ilmu bilā jahl</em> (pengetahuan sejati tanpa kebodohan). Al-Qurthubi juga menegaskan korelasi akidah mengapa kalimat <em>"Ḥayya 'alal-Falāḥ"</em> diserukan di telinga orang beriman setiap kali adzan: shalat adalah bajak spiritual yang menumbuhkan tanaman falah tersebut di dalam jiwa.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Balaghah & Rasionalitas Teologis):</strong><br>
+        Az-Zamakhsyari mengeksplorasi keagungan majas <em>isti'lā'</em>: kata <em>'alā</em> melukiskan keteguhan luar biasa orang-orang bertakwa. Mereka bagaikan ksatria yang berkuda di atas puncak bukit kebenaran; tidak ada yang dapat memperbudak mereka, karena hidayah Allah telah menjadi kendaraan yang memuliakan martabat mereka. Fakhruddin Ar-Razi menambahkan analisis teologis rasional: mengapa Allah mendahulukan penyebutan <em>'alā hudan</em> sebelum <em>al-muflihūn</em>? Karena <strong>hidayah adalah sebab ('illah), sedangkan keberuntungan (falah) adalah akibat (ma'lul)</strong>. Tanpa hidayah yang benar di dunia, konsep keberuntungan apa pun hanyalah delusi fana. Ar-Razi juga membedah rahasia huruf wau 'athaf pada <em>wa ulā'ika</em>: untuk menegaskan bahwa perolehan falah bukanlah hal sepele, melainkan prestasi agung yang layak mendapatkan kalimat proklamasi tersendiri.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Corak Adabi Ijtima'i & Kontekstual Modern):</strong><br>
+        Quraish Shihab menggarisbawahi keindahan penggunaan kata <em>Rabbihim</em>: kata <em>Rabb</em> menyiratkan kasih sayang, bimbingan setahap demi setahap, dan pemenuhan kebutuhan makhluk. Petunjuk Allah bukanlah beban perintah yang mengekang kebebasan manusia, melainkan buku manual (<em>guidance book</em>) kehidupan dari Sang Pencipta agar manusia tidak celaka. Quraish Shihab merefleksikan makna <em>al-muflihūn</em> di era modern: petani (<em>fallah</em>) baru bisa menikmati hasil panen setelah ia rela berkeringat membajak tanah, memilih bibit terbaik, dan bersabar menghadapi hama. Maka mustahil ada kesuksesan hidup islami tanpa proses perjuangan menundukkan hawa nafsu dan kesabaran menunaikan amal saleh.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka — <em>Tafsir Al-Azhar</em> (Ketahanan Jiwa & Tasawuf Pergerakan):</strong><br>
+        Buya Hamka melukiskan ayat ini dengan getaran jiwa yang mengharukan: <em>"Merekalah orang yang beruntung! Beruntung di dunia karena hidup mereka mempunyai pedoman yang terang benderang. Jiwa mereka tenang, tidak terombang-ambing oleh gelombang keraguan zaman. Jika kaya, mereka tidak takabur; jika miskin, mereka tidak mencuri dan tidak putus asa. Dan beruntung di akhirat karena pintu surga dibukakan untuk mereka."</em> Hamka menegaskan bahwa kepuasan batin (<em>qanā'ah</em>) dan kemerdekaan rohani dari perbudakan materi adalah hakikat <em>falah</em> tertinggi yang tidak bisa dibeli dengan kekayaan para konglomerat duniawi.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu Kesepakatan (Ijma')</th>
+                <th>Nuansa & Ragaman Pandangan Mufassirin (Ikhtilaf / Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Rujukan Isim Isyarah "Ulā'ika"</strong></td>
+                <td>Sepakat menunjuk kepada orang-orang bertakwa yang telah dijelaskan profilnya pada Ayat 2, 3, dan 4.</td>
+                <td>• <strong>At-Tabari & Ibnu Katsir:</strong> Men-tarjih bahwa ia merujuk pada satu kelompok tunggal yang menghimpun seluruh kriteria keimanan.<br>• <strong>Sebagian Salaf (Mujahid & As-Suddi):</strong> Membagi dua: <em>ulā'ika</em> pertama untuk mukmin Arab, <em>ulā'ika</em> kedua untuk mukmin Ahli Kitab.</td>
+            </tr>
+            <tr>
+                <td><strong>Fungsi Majas " 'Alā Hudan "</strong></td>
+                <td>Sepakat menunjukkan posisi kokoh dan stabilitas keterikatan orang bertakwa dengan petunjuk Allah.</td>
+                <td>• <strong>Az-Zamakhsyari & Ar-Razi:</strong> Menekankan majas <em>isti'lā'</em> (berada di atas puncak kendali kendaraan hidayah yang tangguh).<br>• <strong>Quraish Shihab:</strong> Menekankan bahwa petunjuk tersebut bertindak sebagai penopang kehidupan yang mengangkat derajat manusia dari kejatuhan moral.</td>
+            </tr>
+            <tr>
+                <td><strong>Cakupan Makna "Al-Falāḥ"</strong></td>
+                <td>Sepakat bahwa <em>al-falāḥ</em> mencakup keberuntungan komprehensif di dunia dan di akhirat.</td>
+                <td>• <strong>Al-Qurthubi:</strong> Merinci 4 elemen ukhrawi (kekal, kaya, mulia, berilmu mutlak).<br>• <strong>Hamka & Hadits Muslim:</strong> Menekankan dimensi kedamaian jiwa (<em>peace of mind</em>), ketercukupan rezeki, dan kemerdekaan batin dari tirani materi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Perombakan Paradigma Berpikir: Old Mindset vs Quranic Mindset</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Lama / Sekuler (Hedonic Paradigm)</th>
+                <th>Pola Pikir Qur'ani Ayat 5 (Eudaimonic Falah Paradigm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Definisi Sukses</strong></td>
+                <td>Sukses diukur dari akumulasi metrik eksternal yang terlihat: saldo rekening, jabatan struktural, jumlah pengikut media sosial, dan kepemilikan aset material.</td>
+                <td>Sukses adalah <strong>Al-Falāḥ</strong>: keterpaduan integritas moral, kedamaian batin, bimbingan hidayah dalam setiap langkah, serta keselamatan kekal di akhirat.</td>
+            </tr>
+            <tr>
+                <td><strong>Stabilitas Emosi</strong></td>
+                <td>Rapuh dan mudah cemas (<em>Status Anxiety</em>); kebahagiaan selalu digantungkan pada pencapaian masa depan yang tak berujung (<em>Hedonic Treadmill</em>).</td>
+                <td>Kokoh dan tak tergoyahkan (<strong>'Alā Hudan</strong>); jiwa berada di atas puncak bimbingan Tuhan, memiliki <em>secure existential attachment</em> kepada Allah Sang Pemelihara.</td>
+            </tr>
+            <tr>
+                <td><strong>Pemberi Legitimasi Diri</strong></td>
+                <td>Persetujuan manusia (<em>social validation</em>), algoritma popularitas, dan opini publik yang berubah-ubah.</td>
+                <td>Penilaian langsung dari <strong>Rabbihim</strong>: cukup Allah sebagai saksi dan penjamin keberuntungan langkah hidupnya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Sistemik Mental Model: Arsitektur "Pertanian Jiwa" (The Spiritual Farming Framework)</h3>
+    <p>
+        Berdasarkan akar kata <em>Al-Falāḥ</em> (membajak dan menabur benih), pikiran manusia harus dioperasikan bagaikan ekosistem pertanian yang disiplin:
+    </p>
+    <ul>
+        <li><strong>Fase 1: Membajak Tanah Hati (Takhallī):</strong> Menghancurkan gumpalan kesombongan ego, membersihkan batu-batu keraguan syubhat, dan mencabut gulma syahwat melalui taubat dan dzikir. Hati yang keras membatu tidak akan pernah dapat menumbuhkan hidayah.</li>
+        <li><strong>Fase 2: Menanam Benih Kebajikan (Taḥallī):</strong> Menabur lima pilar karakter Ayat 3–4 (iman ghaib, shalat khusyuk, infaq konsisten, komitmen wahyu, dan visi akhirat) ke dalam rutinitas harian.</li>
+        <li><strong>Fase 3: Mengairi & Menjaga Tanaman (Murāqabah):</strong> Menyirami amal dengan keikhlasan dan menjaganya dari hama riya' serta sum'ah.</li>
+        <li><strong>Fase 4: Panen Raya Keberuntungan (Tajallī / Al-Falāḥ):</strong> Memetik ketenteraman jiwa di dunia dan surga di akhirat sebagai buah panen yang dijamin oleh Allah Ta'ala.</li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa: Mengatasi "Arrival Fallacy" & Menemukan "Eudaimonia"</h3>
+    <p>
+        Psikologi kognitif modern mengenal fenomena <strong>Arrival Fallacy</strong>—sebuah ilusi kognitif di mana seseorang meyakini bahwa begitu ia mencapai target tertentu (lulus universitas terbaik, membeli rumah mewah, atau menjadi CEO), ia akan bahagia selamanya. Namun setelah target tersebut tercapai, otak manusia hanya mengalami lonjakan dopamin sesaat, kemudian kembali pada titik jenuh kekosongan (<em>hedonic treadmill</em>).<br>
+        Ayat 5 memberikan solusi neuropsikologis yang revolusioner:
+    </p>
+    <ul>
+        <li><strong>Hidayah sebagai 'Locus of Control' Internal:</strong> Frasa <em>'alā hudan</em> menggeser sumber kebahagiaan dari hasil eksternal yang berada di luar kendali manusia menuju <strong>keselarasan proses hidup dengan nilai-nilai ketuhanan</strong>. Ketika seseorang hidup di atas hidayah, setiap detik kehidupannya dipenuhi makna (<em>eudaimonia</em>), sehingga ia tidak pernah mengalami kehampaan eksistensial.</li>
+        <li><strong>Cognitive Stability & Reduksi Amigdala:</strong> Kesadaran bahwa dirinya dibimbing oleh <em>Rabbihim</em> (Tuhan yang mengasuh dengan kasih sayang) menurunkan kortisol dan menstabilkan amigdala. Orang bertakwa tidak panik saat bisnisnya jatuh atau kariernya diuji, karena ia tahu bahwa "kendaraan hidayah" yang ia tunggangi jauh lebih berharga daripada seluruh dunia beserta isinya.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Diagnosis Problematika Abad ke-21: Epidemi Burnout & Toxic Productivity</h3>
+    <p>
+        Peradaban modern abad ke-21 tengah terjangkit epidemi kelelahan massal (<em>The Burnout Society</em>). Di era kapitalisme digital dan <em>hustle culture</em>, manusia dipaksa bekerja tanpa henti, memuja produktivitas buta, dan mengorbankan kesehatan mental, waktu keluarga, serta spiritualitas demi mengejar status sosial. Ironisnya, semakin keras manusia bekerja di bawah ilusi ini, semakin tinggi angka depresi, kecemasan akut, dan kasus bunuh diri di kalangan generasi muda dan para eksekutif mapan.<br>
+        Al-Qur'an Ayat 5 mendiagnosis akar krisis ini: <strong>manusia modern telah salah mendefinisikan kesuksesan!</strong> Mereka mengejar ilusi kesuksesan yang diproduksi oleh korporasi dan algoritma media sosial, bukan <em>al-falāḥ</em> yang ditawarkan oleh Pencipta manusia. Tanpa <em>hudan mir-rabbihim</em>, seluruh produktivitas manusia hanyalah gerak lingkar kelelahan yang tidak membawa jiwa ke mana-mana selain ke jurang kehampaan.
+    </p>
+
+    <h3>2. Dekonstruksi Paradigma Sekuler: Kritik atas Metrik Kesejahteraan Materialistik</h3>
+    <p>
+        Sistem ekonomi global mengukur kemajuan peradaban semata-mata dari Produk Domestik Bruto (PDB/GDP), pendapatan per kapita, dan volume konsumsi. Namun fakta empiris sosiologis membuktikan adanya <strong>Paradoks Easterlin</strong>: peningkatan pendapatan materi suatu bangsa setelah melewati ambang batas dasar tidak berbanding lurus dengan peningkatan kebahagiaan warganya. Justru di negara-negara dengan indeks materialisme tertinggi, angka isolasi sosial (<em>loneliness epidemic</em>) dan ketergantungan obat penenang meningkat drastis.<br>
+        Ayat 5 hadir sebagai kritik peradaban fundamental:
+    </p>
+    <ul>
+        <li><strong>Kemajuan Tanpa Hidayah adalah Regresi Moral:</strong> Teknologi kecerdasan buatan (AI) yang canggih, senjata mutakhir, dan gedung-gedung pencakar langit yang megah tidak membuktikan suatu peradaban itu beruntung jika di saat yang sama manusia kehilangan empati, mengeksploitasi sesama, dan menghancurkan ekosistem bumi.</li>
+        <li><strong>Pembebasan Manusia dari Tirani Komodifikasi:</strong> Ayat ini mendeklarasikan bahwa manusia paling sukses di muka bumi adalah mereka yang merdeka dari penyembahan harta dan reputasi, serta memilih menunggangi hidayah Allah menuju keabadian.</li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Protokol Aksi Operasional Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Audit Definisi Sukses Harian (Falah-Based Daily Review - 5 Menit):</strong> Setiap malam sebelum tidur, luangkan waktu 5 menit untuk mengevaluasi hari Anda bukan hanya dari daftar tugas (<em>to-do list</em>) yang selesai, melainkan dengan tiga indikator <em>Al-Falah</em>: <em>1) Apakah shalatku hari ini terjaga dengan khusyuk? 2) Apakah rezeki yang kuperoleh dan kunikmati hari ini 100% halal dan bersih? 3) Apakah ada infaq atau kebaikan yang kupancarkan untuk meringankan beban hamba Allah lainnya?</em>
+            </li>
+            <li>
+                <strong>Penyelarasan Diri saat Panggilan "Hayya 'alal-Falah" (Mindful Adhan Alignment):</strong> Setiap kali mendengar muadzin mengumandangkan lafaz <em>"Ḥayya 'alal-Falāḥ"</em> (Mari menuju kemenangan sejati), hentikan seluruh ketikan laptop atau percakapan gawai Anda sejenak. Jawablah di dalam batin dengan penuh penghayatan: <em>"Lā ḥawla wa lā quwwata illā billāh"</em>, lalu hadirkan kesadaran bahwa kemenangan sejati Anda saat ini adalah menyambut panggilan Allah, bukan membalas email atau menyelesaikan proyek bisnis.
+            </li>
+            <li>
+                <strong>Protokol Menunggangi Hidayah ('Alā Hudan) di Tengah Badai Masalah:</strong> Ketika menghadapi turbulensi hidup yang berat (krisis keuangan, konflik keluarga, atau fitnah di tempat kerja), terapkan kaidah <em>Isti'la'</em>: dudukkan posisi mental Anda di atas puncak hidayah. Katakan pada jiwa Anda: <em>"Masalah ini adalah urusan duniawi yang fana dan kecil. Nilai sejatiku di mata Allah terletak pada integritas dan ketakwaanku. Selama aku berada di atas petunjuk Tuhanku, aku tidak akan pernah kalah!"</em>
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Jujurkah aku pada diriku sendiri: Selama puluhan tahun hidup di dunia ini, kesuksesan siapakah yang sebenarnya sedang kukejar dengan bermandi peluh—kesuksesan fana menurut pandangan manusia dan algoritma media sosial, ataukah <em>Al-Falāḥ</em> abadi yang diproklamasikan oleh Allah di dalam ayat ini?
+            </li>
+            <li>
+                Ketika badai cobaan atau kekecewaan hidup menghantam rencanaku, apakah jiwaku masih kokoh bertengger di atas puncak bimbingan Tuhan (<em>'Alā Hudan</em>), ataukah aku langsung terjatuh ke dalam jurang histeria, kemarahan, dan keputusasaan karena menganggap dunia ini adalah segala-galanya?
+            </li>
+            <li>
+                Apakah benih-benih takwa yang telah dirinci Allah di ayat-ayat sebelumnya—keimanan ghaib, shalat, infaq, cinta wahyu, dan keyakinan akhirat—sudah benar-benar kubajak dan kutanam secara sungguh-sungguh di ladang hatiku, ataukah aku hanya mengharapkan panen raya surga tanpa pernah mau berkeringat menanam kebajikan?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Rabba samāwāti wal-ardh, Dzat Yang Mengasuh dan Mendidik jiwa kami dengan limpahan kasih sayang! Jadikanlah kami termasuk hamba-hamba-Mu yang senantiasa menunggangi hidayah-Mu dengan kokoh ('Alā Hudan), tidak goyah oleh badai syubhat dan tidak tergelincir oleh pesona syahwat. Kokohkanlah kaki kami di atas jalan ketakwaan, karuniakanlah kepada kami manisnya iman, dan himpunlah kami beserta keluarga kami ke dalam golongan orang-orang yang meraih keberuntungan hakiki (Al-Mufliḥūn) di dunia dan di akhirat. Allāhumma inna nas'alukal-falāḥa wal-jannah, wa na'ūdzubika minad-dhalālati wan-nār. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-004 - QS. Al-Baqarah Ayat 4.html">&larr; Kembali ke Ayat 4</a>
+        <span><strong>QS. Al-Baqarah [2]: 5</strong> (Penutup Blok 1 Klaster 1: Kaum Muttaqin)</span>
+        <a href="002-006 - QS. Al-Baqarah Ayat 6.html">Lanjut ke Ayat 6 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

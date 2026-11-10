@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-012 - QS. Ali 'Imran Ayat 12 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 33px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.2;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-011 - QS. Ali 'Imran Ayat 11.html">&larr; Ayat Sebelumnya (QS. 3:11)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-013 - QS. Ali 'Imran Ayat 13.html">Ayat Berikutnya (QS. 3:13) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 2 (Ayat 10–18): Kepalsuan Materialisme Kafir, Nubuat Kekalahan & Pelajaran Badar</span>
+        <span class="badge">9 Kata | 43 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 12</h1>
+    <div class="transliteration">
+        "Qul lil-ladzīna kafarū satughlabūna wa tuḥsyarūna ilā jahannama wa bi'sal-mihād(u)."
+    </div>
+    <div class="thematic-title">
+        Dekonstruksi Arogansi Militeristik & Kepastian Hukum Sejarah: Nubuat Futurologis Kehancuran Tirani di Dunia dan Kehinaan Mutlak Tergiring ke Jahannam
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 2: Ilusi Kekuatan Material, Nubuat Kekalahan Musuh & Hakikat Kemenangan Badar)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        قُل لِّلَّذِينَ كَفَرُوا۟ سَتُغْلَبُونَ وَتُحْشَرُونَ إِلَىٰ جَهَنَّمَ ۗ وَبِئْسَ ٱلْمِهَادُ ۝١٢
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Katakanlah (wahai Muhammad) kepada orang-orang yang kafir: 'Kalian pasti akan dikalahkan (di dunia ini) dan akan digiring (secara paksa dan beramai-ramai dalam kehinaan) ke dalam neraka Jahannam; dan itulah seburuk-buruk tempat peristirahatan (hamparan).' "
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ke-12 ini memancarkan kemukjizatan nubuat futuristik (<em>I'jāz Ghaybī Mustaqbalī</em>) Al-Qur'an yang sangat dahsyat. Di tengah situasi geopolitik Yatsrib (Madinah) pasca-kemenangan Badar yang masih rapuh dan dikepung oleh kekuatan adidaya regional serta arogansi oligarki bersenjata Yahudi (Banu Qainuqa'), Al-Qur'an memerintahkan Nabi Muhammad ﷺ untuk mendeklarasikan vonis kejatuhan total mereka secara terbuka tanpa gentar. Penggunaan huruf <em>Sin</em> (سَـ) pada kata <em>satughlabūna</em> menandakan kepastian waktu dekat (<em>at-tanfīs wad-dalālah 'ala qurbi wuqū'il-wa'īd</em>). Ayat ini menegaskan doktrin "Kekalahan Kuadrat" (<em>Al-Khasārah al-Muzdawijah</em>): kaum yang membangun hegemoni di atas kezaliman dan penolakan terhadap kebenaran hakiki niscaya akan mengalami kejatuhan di pentas sejarah duniawi, disusul kejatuhan eskatologis yang kekal di akhirat. Penjajaran kata <em>satughlabūna</em> (ranah dunia) dan <em>tuḥsyarūna ilā jahannama</em> (ranah akhirat) membuktikan bahwa kepongahan militeristik dan akumulasi modal materiil tidak akan pernah mampu menunda ketetapan hukum sejarah Allah (<em>Sunnatullāh fil-Khalq</em>).
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Potongan Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>قُل لِّلَّذِينَ</strong><br>(<em>Qul lil-ladzīna</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Isti'lā' mutlak, infitāḥ, syiddah, dan jahr dari pangkal lidah (aqshal-lisān).<br>
+                    <strong>Idghām Mutamātsilayn Shaghīr:</strong> Pertemuan Lām sukun pada fi'il amr <em>qul</em> dengan Lām berharakat kasrah pada <em>lil-ladzīna</em> melebur sempurna (<em>idghām kāmil</em>) tanpa dengung ghunnah.<br>
+                    <strong>Huruf Dzāl:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas, bersifat rikhwah dan jahr.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' sukun didahului kasrah dipanjangkan 2 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idgham mutamatsilayn shaghīr pada dua lam (<em>qul-lilladzīna</em>) tanpa jeda saktah, melambangkan transmisi perintah titah Ilahi yang mengalir tegas, mutlak, dan bersambung langsung kepada audiens target.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>كَفَرُوا۟</strong><br>(<em>Kafarū</em>)</td>
+                <td>
+                    <strong>Huruf Kāf & Fā':</strong> Bersifat hams (aliran nafas tajam) dan istifāl.<br>
+                    <strong>Rā' Dhommah:</strong> Dibaca <strong>Tafkhīm</strong> (tebal) karena berharakat dhommah.<br>
+                    <strong>Mad Ṭhabī'ī & Alif Fāriqah:</strong> Wāwu mad dipanjangkan 2 harakat, diiringi alif fariqah penanda jamak mudzakkar yang tertulis dalam rasm mushaf namun gugur dalam pengucapan (ziyādah fil-khaṭṭ).
+                </td>
+                <td>
+                    Sepakat seluruh sepuluh imam membaca tafkhim pada huruf Ra' dan menyempurnakan mad thabi'i pada Wawu jamak. Sifat kafir diungkapkan dalam bentuk fi'il madhi (lampau), menunjukkan bahwa vonis ini dijatuhkan atas kekafiran yang telah mengakar dan termanifestasi dalam tindakan nyata permusuhan.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>سَتُغْلَبُونَ</strong><br>(<em>Satughlabūna</em>)</td>
+                <td>
+                    <strong>Huruf Sīn:</strong> Makhraj dari ujung lidah di atas gigi seri bawah, memiliki sifat shafīr (desis tajam), hams, dan rikhwah.<br>
+                    <strong>Ghayn Sukūn:</strong> Makhraj di tenggorokan terdekat (adnāl-ḥalq), bersifat isti'lā', rikhwah, dan jahr. Wajib dialirkan suaranya tanpa boleh bergetar atau memantul (bukan qalqalah).<br>
+                    <strong>Shīghah Majhūl:</strong> Huruf mudhara'ah dibaca dhommah (<em>tu-</em>) dan huruf sebelum akhir dibaca fathah (<em>-la-</em>).
+                </td>
+                <td>
+                    Terdapat variasi qira'at mutawatirah yang sangat masyhur:<br>
+                    • <strong>Ḥamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir (Tiga Imam Kūfah selain 'Āṣhim):</strong> Membaca dengan <strong>Yā'il-Ghaybah</strong> (ياء الغيبة): **{سَيُغْلَبُونَ}** (<em>sayughlabūna</em> - "Mereka akan dikalahkan"). Berlandaskan riwayat dari Matn Asy-Syāṭhibiyyah: <em>"Wa fī tughlabūnal-ghaybu ma' tuhsyarūna fī ridhā..."</em>.<br>
+                    • <strong>Jumhur Imam (Nāfi', Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Abū Ja'far, Ya'qūb):</strong> Membaca dengan <strong>Tā'il-Khiṭhāb</strong> (تاء الخطاب): **{سَتُغْلَبُونَ}** (<em>satughlabūna</em> - "Kalian pasti akan dikalahkan").<br>
+                    <strong>Implikasi Teologis:</strong> Qira'at khiṭhāb adalah tamparan konfrontasi langsung (muwājahah) di hadapan musuh untuk melucuti kesombongan mereka. Sedangkan qira'at ghaybah adalah proklamasi objektif Ilahi kepada Rasulullah ﷺ dan kaum mukminin mengenai takdir kehancuran kubu musuh.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَتُحْشَرُونَ</strong><br>(<em>Wa tuḥsyarūna</em>)</td>
+                <td>
+                    <strong>Wāwu 'Aṭhaf:</strong> Tarqīq dan istifāl.<br>
+                    <strong>Huruf Ḥā' Sukūn:</strong> Makhraj dari tengah tenggorokan (wasaṭhul-ḥalq), memiliki sifat hams yang sangat jelas, rikhwah, dan bersih tanpa serak.<br>
+                    <strong>Huruf Syīn Fathah:</strong> Memiliki sifat <strong>Tafasysyī</strong> (penyebaran angin di dalam rongga mulut), hams, dan rikhwah.<br>
+                    <strong>Rā' Dhommah:</strong> Tafkhīm (tebal).
+                </td>
+                <td>
+                    Sejalan dengan lafaz sebelumnya:<br>
+                    • <strong>Ḥamzah, Al-Kisā'ī, dan Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Yā'il-Ghaybah</strong>: **{وَيُحْشَرُونَ}** (<em>wa yuḥsyarūna</em> - "Dan mereka akan digiring").<br>
+                    • <strong>Tujuh Imam Lainnya:</strong> Membaca dengan <strong>Tā'il-Khiṭhāb</strong>: **{وَتُحْشَرُونَ}** (<em>wa tuḥsyarūna</em> - "Dan kalian akan digiring").<br>
+                    Seluruh imam sepakat membaca dalam bentuk pasif (mabnī lil-majhūl), melambangkan ketidakberdayaan mutlak mereka saat diseret paksa laksana tawanan yang tak berkutik menuju kehancuran.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>إِلَىٰ جَهَنَّمَ ۗ</strong><br>(<em>Ilā jahannama</em>)</td>
+                <td>
+                    <strong>Alif Maqshūrah:</strong> Mad thabī'ī 2 harakat saat washal.<br>
+                    <strong>Huruf Jīm:</strong> Syiddah dan jahr mutlak (tertahan nafas dan suara) dari tengah lidah.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid pada kata <em>Jahannam</em> ditahan dengan dengung sempurna (akmalu mā takūn) sepanjang 2 harakat.<br>
+                    <strong>Mamnū' minash-Sharf:</strong> Kata <em>Jahannam</em> berharakat fathah saat majrur tanpa tanwin karena 'alamiyyah dan ta'nīts.<br>
+                    <strong>Tanda Waqaf Qilā (ۗ):</strong> <em>Al-Waqfu Awlā</em> (berhenti lebih utama untuk memisahkan ancaman dari celaan akhir).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <em>Taqīl / Imālah Sughrā</em> (bayna bayna) pada alif maqshurah kata <em>ilā</em> bila memenuhi kaidah jalurnya, atau fathah murni.<br>
+                    • <strong>Seluruh Imam Sepakat:</strong> Membaca fathah tanpa tanwin pada <em>Jahannama</em> sebagai isim ghoiru munsharif.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَبِئْسَ</strong><br>(<em>Wa bi'sa</em>)</td>
+                <td>
+                    <strong>Wāwu Isti'nāfiyyah / Ḥāliyyah:</strong> Fathah tarqīq.<br>
+                    <strong>Hamzah Sukūn:</strong> Makhraj dari pangkal tenggorokan (aqshal-ḥalq), memiliki sifat syiddah dan jahr mutlak (suara dan nafas tertahan rapat seketika).<br>
+                    <strong>Huruf Sīn:</strong> Shafir dan hams.
+                </td>
+                <td>
+                    Terdapat variasi kaidah fonetika mutawatirah:<br>
+                    • <strong>Warsy 'an Nāfi', Abū Ja'far, dan Abū 'Amr (dalam riwayat As-Sūsī secara mutlak, serta Ad-Dūrī dari jalur tertentu):</strong> Membaca dengan <strong>Ibdāl Hamzah</strong> menjadi huruf Yā' mad sukun: **{وَبِيسَ}** (<em>wa bīsa</em>). Kaidah ibdal hamzah sukun yang menempati posisi 'ainul-fi'il atau fa'ul-fi'il.<br>
+                    • <strong>Ḥamzah:</strong> Membaca tahqiq hamzah saat washal, namun membaca dengan ibdal (<em>wa bīsa</em>) saat waqaf darurat/ikhtibari.<br>
+                    • <strong>Jumhur Imam ('Āṣhim, Ibnu Katsīr, Ibnu 'Āmir, Khalaf al-'Āsyir, Ya'qūb, Qālūn):</strong> Membaca konsisten dengan <strong>Taḥqīq Hamzah</strong>: **{وَبِئْسَ}** (<em>wa bi'sa</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلْمِهَادُ ۝١٢</strong><br>(<em>Al-mihād</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas sebelum huruf Mim kasrah.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di ujung ayat, huruf Alif mad bertemu Dal yang disukunkan dibaca dengan pilihan panjang 2, 4, atau 6 harakat.<br>
+                    <strong>Qalqalah Kubrā:</strong> Huruf Dāl sukun 'aridhan di akhir ayat dipantulkan secara tebal, jelas, dan memantul mantap (disertai sifat jahr dan syiddah).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idzhar qamariyyah dan menyempurnakan qalqalah kubra pada huruf Dal di akhir ayat saat waqaf.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Sunan Abī Dāwūd (No. 3001), Al-Mustadrak Al-Ḥākim (No. 3224), As-Sunan Al-Kubrā Al-Bayhaqī (No. 12836), dan At-Ṭabarī dalam Jāmi' al-Bayān (No. 6586) dari Sahabat Abdullah bin 'Abbas r.a. — Konfrontasi di Pasar Banu Qainuqa':</strong><br>
+        Diriwayatkan dari Musharrif bin 'Amr al-Yami, dari Yunus bin Bukayr, dari Muhammad bin Ishaq, dari Muhammad bin Abi Muhammad mawla Zaid bin Tsabit, dari Sa'id bin Jubayr dan 'Ikrimah, dari Abdullah bin 'Abbas radhiyallahu 'anhuma menceritakan latar historis spesifik turunnya ayat ini:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "لَمَّا أَصَابَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قُرَيْشًا يَوْمَ بَدْرٍ وَقَدِمَ الْمَدِينَةَ، جَمَعَ الْيَهُودَ فِي سُوقِ بَنِي قَيْنُقَاعَ، فَقَالَ: يَا مَعْشَرَ يَهُودَ، أَسْلِمُوا قَبْلَ أَنْ يُصِيبَكُمْ مِثْلُ مَا أَصَابَ قُرَيْشًا. قَالُوا: يَا مُحَمَّدُ، لَا يَغُرَّنَّكَ مِنْ نَفْسِكَ أَنَّكَ قَتَلْتَ نَفَرًا مِنْ قُرَيْشٍ كَانُوا أَغْمَارًا لَا يَعْرِفُونَ الْقِتَالَ، إِنَّكَ لَوْ قَاتَلْتَنَا لَعَرَفْتَ أَنَّا نَحْنُ النَّاسُ وَأَنَّكَ لَمْ تَلْقَ مِثْلَنَا! فَأَنْزَلَ اللَّهُ عَزَّ وَجَلَّ فِي ذَلِكَ: {قُلْ لِلَّذِينَ كَفَرُوا سَتُغْلَبُونَ وَتُحْشَرُونَ إِلَى جَهَنَّمَ وَبِئْسَ الْمِهَادُ * قَدْ كَانَ لَكُمْ آيَةٌ فِي فِئَتَيْنِ الْتَقَتَا...}"
+        </span>
+        <em>"Tatkala Rasulullah ﷺ berhasil menimpakan kekalahan telak kepada kaum Quraisy pada Perang Badar dan beliau kembali ke Madinah, beliau mengumpulkan orang-orang Yahudi di Pasar Banu Qainuqa'. Beliau bersabda: 'Wahai sekalian kaum Yahudi, masuklah Islam sebelum kalian ditimpa azab seperti apa yang telah menimpa kaum Quraisy!' Kaum Yahudi itu dengan angkuh menjawab: 'Wahai Muhammad, janganlah engkau tertipu oleh dirimu sendiri hanya karena engkau berhasil membunuh beberapa orang Quraisy yang dungu dan tidak berpengalaman dalam perang! Demi Allah, sekiranya engkau berperang melawan kami, niscaya engkau akan tahu bahwa kamilah pejuang sejati (manusia petarung sesungguhnya) dan engkau belum pernah bertemu orang-orang yang sepadan seperti kami!' Maka Allah 'Azza wa Jalla seketika menurunkan firman-Nya: 'Qul lilladzīna kafarū satughlabūna wa tuḥsyarūna ilā jahannama wa bi'sal-mihād...'"</em><br>
+        <strong>Derajat Sanad:</strong> Hadits ini berkualitas <strong>Hasan / Sahih</strong>. Disahihkan oleh Imam Al-Hakim dalam <em>Al-Mustadrak</em> (disepakati oleh Imam Adz-Dzahabi), dihasankan oleh Al-Hafizh Ibnu Hajar Al-'Asqalani dalam <em>Fatḥul-Bārī</em> (7/332), dan dinilai sahih/hasan oleh Syaikh Al-Albani dalam <em>Shaḥīḥ Sunan Abī Dāwūd</em> (No. 3001).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Riwayat Sahih Bukhari (No. 4028) & Sahih Muslim (No. 1763) — Bukti Empiris Realisasi Nubuat Penundukan Banu Qainuqa':</strong><br>
+        Nubuat kata <em>"satughlabūn"</em> (kalian pasti akan dikalahkan) terbukti menjadi kenyataan sejarah hanya berselang beberapa pekan pasca-dialog di atas. Ketika kaum Yahudi Banu Qainuqa' melecehkan seorang muslimah di pasarnya dan membunuh seorang muslim yang membelanya, Rasulullah ﷺ memobilisasi pasukan mukminin dan mengepung benteng-benteng pertahanan mereka selama 15 malam berturut-turut. Benteng baja dan persenjataan lengkap yang mereka banggakan sama sekali tidak berdaya; Allah mencampakkan rasa takut (<em>ar-ru'b</em>) ke dalam dada mereka hingga mereka menyerah tanpa syarat pada bulan Syawwal tahun ke-2 Hijriah, diusir secara hina dari Madinah, dan seluruh kekuatan industri perangnya dilucuti.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Riwayat As-Suddī & Muqātil bin Sulaimān dari Ibnu Abbas r.a. — Konteks Kaum Musyrikin Quraisy Pasca-Badar:</strong><br>
+        Diriwayatkan pula bahwa ketika sisa-sisa pasukan Quraisy melarikan diri kembali ke Makkah setelah para pembesar mereka tewas di sumur Badar, Abu Sufyan dan para elite musyrikin bersumpah mengumpulkan dana dagang kafilah untuk membalas dendam: <em>"Wahai bangsa Quraisy, kumpulkan harta kalian untuk memerangi Muhammad!"</em> Maka Allah menurunkan ayat ini untuk menenangkan hati orang-orang beriman: bahwa betapapun kaum musyrikin mengerahkan kekuatan finansial dan militernya (seperti yang terjadi di Uhud dan Khandaq), hasil akhir sejarah telah diputuskan: mereka pasti akan ditaklukkan (<em>satughlabūn</em>), yang terbukti secara paripurna pada peristiwa Fathu Makkah (8 H).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Q-W-L (ق-و-ل — Qul):</strong>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan bahwa akar kata Qaf-Wawu-Lam berporos tunggal pada makna: <strong>Al-Ibrāz wad-Dilālah 'alal-Ma'nā bin-Nuthq (إبراز المعنى بالنطق - menampakkan isi pikiran dan menetapkan makna melalui pelafalan yang tegas dan jelas)</strong>. Bentuk fi'il amr <em>Qul</em> di awal ayat menegaskan posisi Rasulullah ﷺ semata-mata sebagai penyampai titah wahyu (<em>Rasūl Muballigh</em>). Nabi tidak berbicara dari dorongan ego atau sentimen pribadi; ancaman ini datang langsung dari Mahkamah Tertinggi Pemilik Semesta, sehingga kepastiannya tidak bisa digagalkan oleh konstelasi geopolitik mana pun.
+        </li>
+        <li><strong>2. K-F-R (ك-ف-ر — Kafarū):</strong>
+            Menurut <em>Lisān al-'Arab</em> karya Ibnu Manzhur dan <em>Maqāyīs al-Lughah</em>, makna leksikal dasar dari Ka-Fa-Ra adalah <strong>As-Satru wal-Ghiṭhā' (الستر والتغطية - menutup, menutupi, dan menyembunyikan sesuatu)</strong>. Petani dalam bahasa Arab kuno disebut <em>kāfir</em> karena ia menutupi benih tanaman dengan lapisan tanah hitam (sebagaimana dalam QS. Al-Hadid: 20). Secara semantik teologis, <em>al-kāfir</em> adalah orang yang telah menyaksikan kebenaran wahyu dan bukti-bukti kenabian yang terang benderang di dalam kitab mereka sendiri, namun mereka sengaja "menutupi" fitrahnya dan menyembunyikan kebenaran tersebut di balik selubung kedengkian, arogansi sosial, dan keterikatan status duniawi.
+        </li>
+        <li><strong>3. Gh-L-B (غ-ل-ب — Satughlabūn / Sayughlabūn):</strong>
+            Ibnu Faris mencatat poros maknanya adalah <strong>Al-Qahr wal-Isti'lā' wal-Quwwah (القهر والاستعلاء - menundukkan dengan kekuatan, menaklukkan, dan mengambil alih posisi unggul)</strong>. Dikatakan <em>ghalaba fulānun fulānan</em> apabila seseorang mematahkan perlawanan lawannya hingga tak berdaya. Bentuk pasif (<em>shīghah mabnī lil-majhūl</em>): <em>tughlabūna</em> menyiratkan kehinaan psikologis: kalian yang membanggakan diri sebagai pakar perang tak terkalahkan akan diposisikan sebagai pihak yang ditundukkan secara telak, di mana kemandirian dan keangkuhan kalian dilucuti tanpa sisa.
+        </li>
+        <li><strong>4. Ḥ-Sy-R (ح-ش-ر — Tuḥsyarūn / Yuḥsyarūn):</strong>
+            Dalam <em>Lisān al-'Arab</em>, <em>Al-Ḥasyr</em> didefinisikan secara spesifik sebagai <strong>Jam'ul-qawmi min kulli jānib wa sawquhum bil-qahri wal-ijbār ilā mawdhi'in wāḥid (جمع القوم وسوقهم بالقهر - mengumpulkan orang-orang dari berbagai penjuru lalu menggiring mereka secara paksa dan koersif menuju suatu tempat)</strong>. Kata ini tidak pernah digunakan untuk arak-arakan kehormatan yang sukarela, melainkan identik dengan penggiringan kawanan ternak, rombongan narapidana ke tiang gantungan, atau serbuan tawanan perang yang diikat rantai. Ini menggambarkan betapa hilangnya kedaulatan orang-orang kafir di hari kiamat.
+        </li>
+        <li><strong>5. J-H-N-M (ج-ه-ن-م — Jahannam):</strong>
+            Pakar leksikografi bahasa Arab (Al-Khalil bin Ahmad al-Farahidi dan Abu 'Ubaidah) memaparkan dua akar: (a) Dari kata Arab asli <em>Al-Juhūmah</em> (الجُهومة) yang bermakna <em>Ghilazhul-wajh wa karahtuhu</em> (kekasaran raut muka yang bengis, muram, dan menakutkan), atau <em>Bi'run Jahannām</em> (sumur yang sangat dalam, gelap gulita, dan tak berdasar); (b) Merupakan kata <em>Mu'arrab</em> (diserap ke dalam perbendaharaan bahasa Arab Al-Qur'an dari akar Ibrani/Aram <em>Ge-Hinnom</em> / Lembah Hinnom) yang telah dibersihkan maknanya untuk merujuk pada jurang penyiksaan ilahiah abadi tempat dibakarnya para pendosa dan penentang kebenaran.
+        </li>
+        <li><strong>6. B-A-S (ب-ئ-س — Bi'sa):</strong>
+            Merupakan fi'il jamid (kata kerja statis tanpa konjugasi masa depan) yang diciptakan khusus dalam tata bahasa Arab untuk <strong>Adz-Dzamm al-Mubālagh (الذمّ المطلق - instrumen celaan, penghinaan, dan devaluasi nilai secara mutlak)</strong>, merupakan antonim langsung dari kata <em>Ni'ma</em> (pujian sempurna).
+        </li>
+        <li><strong>7. M-H-D (م-ه-د — Al-Mihād):</strong>
+            Ibnu Faris menjelaskan porosnya adalah <strong>Basṭhusy-syay' wa taswiyatuh wa tashiyluh li-yastawiyalis-sākinu 'alayh (بسط الشيء وتوطئته - menghamparkan, meratakan, dan menyiapkan landasan yang empuk agar nyaman didiami)</strong>. Dari akar inilah lahir kata <em>Al-Mahd</em> (buaian atau ranjang bayi yang disiapkan ibu dengan penuh kelembutan). Pemilihan kata <em>Al-Mihād</em> untuk mendeskripsikan gejolak neraka Jahannam adalah puncak majaz ironi (sarkasme ilahiah) yang meremukkan martabat para penentang Allah.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq / Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>قُلْ</strong></td>
+                <td>Fi'il amr mujarrad, tsulātsī mu'tall 'ain (ajwaf wawi: <em>qawala &rarr; qāla</em>), mabni 'alas-sukūn.</td>
+                <td>Fi'il amr. Fā'il berupa dhamīr mustatir wujūban taqdīruhū <em>Anta</em> (kembali kepada Rasulullah ﷺ). Menjadi pemicu berdirinya jumlah kalam wa'id.</td>
+            </tr>
+            <tr>
+                <td><strong>لِلَّذِينَ</strong></td>
+                <td>Lām harf jarr. <em>Alladzīna</em>: Ism maushūl jamak mudzakkar mabni 'alal-fath.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>Qul</em> (sebagai objek sasaran perintah penyampaian dakwah/tahdzir).</td>
+            </tr>
+            <tr>
+                <td><strong>كَفَرُوا۟</strong></td>
+                <td>Fi'il mādhi shahīh tsulātsī mujarrad (bāb fa'ala), mabni 'alad-dhammi li-ittiṣhālihī bi wāwil-jamā'ah. Wāwu: dhamir muttashil fi mahalli raf'in fa'il. Alif fāriqah.</td>
+                <td>Jumlah fi'liyyah <em>kafarū</em> berkedudukan sebagai <strong>Shilatul-Maushūl</strong> (لَا مَحَلَّ لَهَا مِنَ الْإِعْرَابِ). Hubungan shilah menjelaskan kriteria hakiki sasaran ancaman.</td>
+            </tr>
+            <tr>
+                <td><strong>سَتُغْلَبُونَ</strong></td>
+                <td><em>Sīn</em>: Harf istiqbāl wa tanfīs (tahqīqul-wa'īd). <em>Tughlabūna</em>: Fi'il mudhāri' mabnī lil-majhūl (mughāyir shighat) marfū' bi tsubūtin-nūn (af'ālul-khamsah). Wāwu jamak: dhamīr muttashil.</td>
+                <td>Wāwu jamak fi mahalli raf'in <strong>Nā'ibul-Fā'il</strong> (bagi qira'at khithab). Jumlah fi'liyyah <em>satughlabūna</em> fi mahalli nashbin <strong>Maqūlul-Qawl</strong> bagi fi'il <em>Qul</em>.<br>*(Menurut qira'at <em>sayughlabūna</em>: jumlah berstatus musta'nafah bayāniyyah atau maqul qawl dari kalam mahdzuf yang menerangkan nasib mereka).*</td>
+            </tr>
+            <tr>
+                <td><strong>وَتُحْشَرُونَ</strong></td>
+                <td>Wāwu: Harf 'aṭhaf. <em>Tuḥsyarūna</em>: Fi'il mudhāri' mabnī lil-majhūl marfū' bi tsubūtin-nūn. Wāwu jamak: dhamīr muttashil.</td>
+                <td>Wāwu jamak fi mahalli raf'in <strong>Nā'ibul-Fā'il</strong>. Jumlah fi'liyyah <em>wa tuḥsyarūna</em> berstatus <strong>Ma'ṭhūf</strong> 'alā jumlah <em>satughlabūna</em>, menempati tempat nashab.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَىٰ جَهَنَّمَ ۗ</strong></td>
+                <td><em>Ilā</em>: Harf jarr li-intihā'il-ghāyah az-zamāniyyah wal-makāniyyah. <em>Jahannama</em>: Ism majrūr bil-fathah niyābatan 'anil-kasrah liannahū mamnū' minash-sharf.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tuḥsyarūn</em> (titik akhir penggiringan paksa para penentang).</td>
+            </tr>
+            <tr>
+                <td><strong>وَبِئْسَ</strong></td>
+                <td>Wāwu: Isti'nāfiyyah tazyīliyyah / Ḥāliyyah. <em>Bi'sa</em>: Fi'il mādhi jāmīd li-insyā'idz-dzamm mabnī 'alal-fath.</td>
+                <td>Fi'il li-adz-dzamm. Menciptakan konstruksi perendahan status secara absolut terhadap objek neraka.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمِهَادُ ۝١٢</strong></td>
+                <td>Ism mu'raf bi al-ta'rīf (al-jinsiyyah), marfū' bil-dhammah azh-zhāhirah.</td>
+                <td>Berstatus sebagai <strong>Fā'il</strong> bagi fi'il <em>bi'sa</em>. Adapun <em>Al-Makhshūsh bidz-Dzamm</em> dibuang (mahdzūf) ditakdirkan: <em>hiya</em> (yakni Jahannam) atau <em>mihāduhum</em>. Seluruh jumlah <em>wa bi'sal-mihād</em> berkedudukan sebagai <strong>Jumlah Musta'nafah</strong> untuk mengunci kalam (tazyīl wa ta'qīb).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Bayan — Majaz Isti'ārah Tahakkumiyyah (Puncak Sarkasme Ilahiah pada Diksi "Al-Mihād"):</strong>
+            Penggunaan kata <em>Al-Mihād</em> adalah salah satu contoh terindah dari <em>Al-Isti'ārah at-Tahakkumiyyah wal-Istihzā'iyyah</em> (metafora sindiran pedas/ironi maut) dalam sastra Al-Qur'an. Kata <em>mihād</em> hakikatnya adalah hamparan kasur empuk nan sejuk yang disiapkan bagi seorang bayi atau tamu terhormat agar dapat beristirahat dengan damai dan pulas. Namun Al-Qur'an menggunakan kata ini untuk mendeskripsikan gejolak dasar neraka Jahannam! Pesan balaghahnya menghunjam tajam: <em>"Inilah ranjang peristirahatan yang kalian tenun sendiri dengan benang-benang kesombongan dan kekafiran kalian di dunia; silakan berbaring di atas hamparan bara api yang membakar hangus seluruh sendi tubuh kalian!"</em> Gaya bahasa ini meremukkan ego para tiran jauh lebih menyakitkan daripada ancaman fisik secara telanjang.
+        </li>
+        <li><strong>Ilmu Ma'ani — Dialektika Uslūb Al-Khiṭhâb vs Al-Ghaybah (Kekuatan Iltifāt & Dinamika Qira'at):</strong>
+            Dalam bacaan mayoritas ulama (<em>satughlabūna wa tuḥsyarūn</em>), Al-Qur'an menggunakan <em>Uslūbul-Muwājahah wal-Khiṭhāb</em> (konfrontasi tatap muka langsung). Secara retorika ma'ani, khithab berfungsi menghadirkan efek kejut psikologis (<em>at-tawbīkh wat-taqrī'</em>), melontarkan vonis kehancuran langsung ke wajah musuh tanpa perantara diplomasi basa-basi. Sementara dalam qira'at Hamzah dan Al-Kisa'i (<em>sayughlabūna wa yuḥsyarūn</em>), uslub bergeser ke bentuk orang ketiga (ghaybah), yang berfungsi sebagai <em>Al-Ikhbār al-Yaqīnī</em> (maklumat kepastian mutlak Ilahi kepada kaum mukminin bahwa musuh-musuh peradaban itu berstatus sebagai entitas terkutuk yang pasti binasa).
+        </li>
+        <li><strong>Ilmu Ma'ani — Signifikansi Semantik "Harf As-Sīn" (Kepastian Tanpa Keraguan):</strong>
+            Al-Qur'an memilih huruf <em>As-Sīn</em> (سَـ) dan bukan <em>Sawfa</em> (سَوْفَ). Dalam kaidah ma'ani, huruf Sin menunjukkan <em>qurbul-wuqū'</em> (waktu terjadinya sangat dekat dan tak terelakkan), sekaligus memancarkan determinasi janji Ilahi yang mematahkan ilusi keabadian kekuasaan kaum kafir. Bagi Allah, masa depan adalah keniscayaan yang telah tertulis.
+        </li>
+        <li><strong>Ilmu Ma'ani — Bina' lil-Majhul (Penghilangan Subjek demi Fokus Efek Objektif):</strong>
+            Dua kata kerja diungkapkan dalam bentuk pasif: <em>tughlabūn</em> (kalian dikalahkan) dan <em>tuḥsyarūn</em> (kalian digiring). Penghilangan fa'il (subjek pelaku) bertujuan menancapkan fokus mutlak pada esensi kehancuran itu sendiri. Siapa pun instrumen yang mengalahkan mereka di dunia (pasukan Badar, ekspedisi pembebasan Makkah) dan siapa pun yang menggiring mereka ke akhirat (malaikat Zabaniyah yang bengis), nasib kekalahan itu adalah keniscayaan hukum alam yang pasti menimpa mereka.
+        </li>
+        <li><strong>Ilmu Badi' — Ath-Thibāq al-Ma'nawī & Simetri Antitesis:</strong>
+            Terjadi kontras psikologis yang luar biasa antara arogansi masa kini kaum kafir ("kamilah pejuang sejati tak terkalahkan") melawan masa depan mereka yang terhina (digiring tanpa daya laksana ternak ke jurang Jahannam). Kontras antara "puncak klaim kejayaan" dengan "lembah kenistaan <em>bi'sal-mihād</em>" adalah mahakarya seni bahasa Ilahi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Runtut dengan Ayat 10–11):</strong>
+            Pada <strong>Ayat 10</strong>, Allah menegaskan aksioma teologis bahwa kekayaan materiil dan kekuatan demografis kaum kafir tidak akan mampu membendung azab Allah sedikit pun (<em>lan tughniya 'anhum amwāluhum wa lā awlāduhum minallāhi syay'ā</em>). Pada <strong>Ayat 11</strong>, Allah menyajikan preseden sejarah imperium masa lalu: dinasti Fir'aun dan bangsa-bangsa tiran kuno yang memiliki keunggulan piramida kekuasaan, namun dihancurkan seketika oleh dosa-dosa mereka. 
+            Maka secara runut (<em>sibāq</em>), <strong>Ayat 12</strong> hadir sebagai vonis eksekusi kontemporer: Al-Qur'an melangkah dari masa lalu (Fir'aun) ke masa kini (kaum kafir musyrikin Quraisy dan Yahudi Madinah). Seolah Allah berfirman: <em>"Wahai Muhammad, jika Fir'aun saja runtuh oleh kecongkakannya, maka katakanlah secara lantang kepada para tiran zamanmu: kalian pasti akan mengalami nasib kehancuran yang persis sama di dunia ini, dan azab Jahannam menanti kalian di akhirat!"</em>
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Pasca-Badar, Arogansi Banu Qainuqa' & Aliansi Najran):</strong>
+            Peristiwa Badar pada Ramadhan tahun ke-2 Hijriah adalah gempa geopolitik yang merombak peta kekuatan Jazirah Arab. Kaum muslimin yang berjumlah 313 orang dengan perlengkapan seadanya berhasil melumat 1.000 pasukan elite Quraisy beserta para jenderal utamanya. Kemenangan ini menyengat rasa dengki dan kecemasan aliansi kekuatan anti-Islam:
+            <ol>
+                <li><strong>Arogansi Militeristik Yahudi Banu Qainuqa':</strong> Di Madinah, Banu Qainuqa' memegang monopoli pasar emas, peleburan logam, dan industri persenjataan. Mereka merasa benteng mereka tidak tertembus dan kekuatan tempur mereka jauh di atas kaum Quraisy pedagang. Ketika Rasulullah ﷺ mengajak mereka berdamai di pasar mereka, respons mereka adalah ejekan militeristik: <em>"Jangan bangga telah mengalahkan orang Quraisy yang tidak paham seni perang! Lawanlah kami, engkau akan tahu siapa sejatinya petarung sejati!"</em> Ayat 12 turun menelanjangi kesombongan palsu (<em>hubris</em>) ini. Dalam hitungan bulan, benteng mereka dikepung dan seluruh mitos keperkasaan mereka rontok total.</li>
+                <li><strong>Kecemasan Delegasi Kristen Najran & Oligarki Quraisy:</strong> Siyāq ayat ini juga menjadi peringatan terbuka bagi kaum musyrikin Makkah yang menggalang dana dendam untuk Perang Uhud, serta sinyal kepada delegasi Najran: bahwa keselamatan peradaban tidak bertumpu pada aliansi militer dan kekayaan materi, melainkan pada ketundukan kepada Sang Maha Hidup dan Maha Menegakkan (<em>Al-Hayyul-Qayyum</em>).</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Hermeneutis Menuju Ayat 13):</strong>
+            Ayat 12 meletakkan proklamasi nubuat: <em>"Satughlabūn"</em> (kalian pasti akan dikalahkan). Bagaimana cara membuktikannya kepada nalar manusia yang serba ragu? Al-Qur'an tidak membiarkan klaim itu menggantung di awang-awang. Pada <strong>Ayat 13</strong>, Allah langsung menyodorkan bukti empiris yang baru saja terjadi di depan mata mereka: <em>"Qad kāna lakum āyatun fī fi'ataynil-taqatā..."</em> (Sungguh telah ada bukti nyata bagi kalian pada dua pasukan yang saling berhadapan di Badar). Ayat 12 adalah tesis nubuat teologis, dan Ayat 13 adalah verifikasi data sejarahnya.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān:</strong><br>
+        At-Tabari menegaskan bahwa ayat ini turun spesifik merespons arogansi orang-orang Yahudi Madinah (Banu Qainuqa') setelah kemenangan Badar, meskipun redaksinya mencakup keumuman seluruh orang kafir hingga akhir zaman. At-Tabari membedah dialektika dua qira'at mutawatirah: beliau menjelaskan bahwa qira'at khiṭhāb (<em>satughlabūna</em>) merupakan perintah konfrontasi dakwah secara langsung dari Rasulullah ﷺ kepada para penentang di hadapannya, sedangkan qira'at ghaybah (<em>sayughlabūna</em>) adalah pemberitahuan ghaib dari Allah kepada Nabi dan umat Islam tentang takdir masa depan kaum kafir. Mengenai <em>wa bi'sal-mihād</em>, At-Tabari menafsirkan: seburuk-buruk hamparan dan tempat tinggal yang dipersiapkan bagi hamba adalah gejolak api neraka Jahannam.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Tafsīr Al-Qur'ān al-'Aẓhīm:</strong><br>
+        Ibnu Katsir menggarisbawahi ayat ini sebagai salah satu bukti otentisitas tanda-tanda kenabian (<em>A'lām an-Nubuwwah</em>) dan mukjizat ghaib Al-Qur'an. Tatkala ayat ini dideklarasikan, posisi kaum muslimin di Madinah masih rentan dan terancam pembantaian dari berbagai penjuru kabilah Arab. Namun Allah dengan tegas menyatakan kepastian kekalahan kaum kafir. Dan sejarah mencatat dengan tinta emas: Yahudi Banu Qainuqa' ditaklukkan dan diusir, Banu Nadhir dan Banu Quraizhah dihancurkan saat mengkhianati perjanjian, Makkah dibebaskan, imperium Persia dan Romawi ditundukkan, dan kalimat tauhid menjulang tinggi. Ini membuktikan bahwa Al-Qur'an bersumber dari Zat Yang Menguasai seluruh takdir masa depan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Al-Jāmi' li Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi membedah dimensi teologis dan fiqih jihad dari ayat ini. Beliau menekankan bahwa ayat ini meletakkan pondasi perang urat saraf (<em>psychological warfare</em>) dalam Islam: seorang mukmin dilarang merasa minder (inferior) di hadapan kecanggihan militer kaum tiran. Mengapa? Karena status mereka di sisi Allah telah divonis sebagai kubu yang pasti kalah (<em>satughlabūn</em>). Al-Qurthubi juga menelaah kata <em>al-mihād</em> secara leksikal: neraka dinamai <em>mihād</em> karena para penghuninya dikepung oleh api dari bawah mereka sebagai alas tidur dan dari atas mereka sebagai selimut (sebagaimana firman-Nya dalam QS. Al-A'raf: 41: <em>"Lahum min jahannama mihādun wa min fawqihim ghawāsy"</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Dialektika Teologis & Balaghah:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi merumuskan problem filsafat ketatanegaraan: mengapa kelompok yang memiliki kekayaan modal, benteng kokoh, dan persenjataan lengkap seperti Banu Qainuqa' pasti mengalami kekalahan melawan kelompok yang serba kekurangan seperti kaum muslimin awal? Ar-Razi menjawab: <em>"Kekuatan fisik dan militer tanpa topangan integritas moral dan kebenaran hakiki adalah bangunan di atas pasir rapuh. Orang kafir berperang demi membela ilusi materi dan ego fana; ketika nyawa mereka terancam, mereka lari terbirit-birit karena ketakutan akan kematian. Sedangkan orang beriman berperang demi kebenaran abadi dan merindukan syahid; tekad spiritual inilah yang melahirkan kemenangan yang tak mampu dibendung oleh rasio materiil."</em><br>
+        Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> secara khusus memuji uslub <em>tahakkum</em> pada frasa <em>wa bi'sal-mihād</em>, di mana bahasa meminjam kenyamanan ranjang pengantin untuk menampar kepongahan kaum yang tersiksa di neraka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur menganalisis ayat ini melalui kacamata sosiologi peradaban (<em>'Ilmul-Ijtimā' al-'Umrānī</em>). Beliau menyatakan bahwa kata <em>satughlabūn</em> menetapkan sebuah "Hukum Besi Sejarah": bahwa arogansi kekuasaan (<em>hybris</em>) yang ditunjukkan oleh Banu Qainuqa' adalah gejala psikologis paling universal yang mendahului kejatuhan setiap imperium. Ketika suatu bangsa merasa dirinya adalah "manusia super" yang tak tertandingi (<em>"nahnun-nās"</em>), mereka kehilangan kepekaan introspeksi diri, meremehkan musuh, dan abai terhadap perubahan zaman. Sikap inilah yang mempercepat kebinasaan mereka sendiri.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) & Prof. Dr. M. Quraish Shihab — Kontekstualisasi Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> menghubungkan ayat ini dengan perjuangan kemerdekaan bangsa-bangsa tertindas melawan kolonialisme Barat: <em>"Berapa banyak penjajah yang memandang rendah pejuang kemerdekaan dengan berkata: 'Kalian hanyalah rakyat jelata bersenjata bambu runcing yang tidak mengerti taktik perang modern!' Persis seperti perkataan Banu Qainuqa' kepada Nabi. Namun pada akhirnya, keteguhan akidah dan keikhlasan berkorban mengusir seluruh imperialis itu kembali ke negerinya dalam kehinaan."</em><br>
+        Sementara Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menggarisbawahi bahwa kekalahan di dunia (<em>satughlabun</em>) tidak otomatis menghapus dosa mereka di akhirat. Dunia ini terlalu sempit untuk membalas seluruh kejahatan para penentang kebenaran; maka balasan puncaknya diletakkan di akhirat saat mereka digiring tanpa daya menuju Jahannam.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Tafsir Tematik Kementerian Agama RI (Kemenag RI):</strong><br>
+        Kemenag RI menyoroti relevansi ayat ini bagi pembangunan mental bangsa: peringatan agar kekayaan sumber daya dan kepemilikan persenjataan tidak melahirkan kesombongan geopolitik dan kezaliman sosial. Bangsa yang kuat adalah bangsa yang menopang kekuatannya dengan keadilan dan ketakwaan, bukan arogansi militeristik yang memicu disintegrasi kemanusiaan.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Analisis Tafsir</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Identitas Objek Sasaran "Alladzīna Kafarū"</strong></td>
+                <td>Sepakat bahwa ayat ini mencakup seluruh orang kafir yang memusuhi kebenaran risalah Islam sepanjang sejarah kemanusiaan.</td>
+                <td>
+                    • <strong>Mayoritas Salaf (Ibnu Abbas, Said bin Jubair, Ikrimah, At-Tabari):</strong> Sabab nuzul spesifiknya adalah kaum Yahudi Madinah (Banu Qainuqa') pasca-Badar.<br>
+                    • <strong>As-Suddi, Muqatil, Qatadah:</strong> Ditujukan pula kepada musyrikin Makkah (kaum Quraisy) yang bersumpah menuntut balas pasca-kekalahan Badar.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Dimensi Waktu & Realisasi "Satughlabūn"</strong></td>
+                <td>Sepakat bahwa kekalahan (<em>al-ghalabah</em>) yang dijanjikan Allah pasti terealisasi di alam dunia sebelum terjadinya hari kiamat.</td>
+                <td>
+                    • Sebagian membatasi pada peristiwa pengusiran Banu Qainuqa' dan penaklukan Makkah.<br>
+                    • Ulama muhaqqiqin (Ibnu Katsir, Ibnu 'Asyur): Bersifat abadi, mencakup runtuhnya imperium penindas di setiap zaman ketika berhadapan dengan kebangkitan umat beriman.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Makna Hakiki vs Majaz pada "Al-Mihād"</strong></td>
+                <td>Sepakat bahwa frasa <em>wa bi'sal-mihād</em> merupakan bentuk celaan paling dahsyat terhadap tempat kembali orang-orang kafir.</td>
+                <td>
+                    • <strong>Al-Hasan & Al-Qurthubi:</strong> Memaknai secara hakiki-fisik: api neraka menjadi alas tidur bawah dan selimut atas mereka.<br>
+                    • <strong>Az-Zamakhsyari & Ar-Razi:</strong> Menilai sebagai <em>Isti'ārah Tahakkumiyyah</em> (sarkasme ilahiah tingkat tinggi) untuk meruntuhkan keangkuhan jiwa mereka.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Implikasi Perbedaan Qira'at (Khiṭhāb vs Ghaybah)</strong></td>
+                <td>Sepakat bahwa kedua qira'at mutawatirah tersebut saling melengkapi dan sama-sama bersumber dari wahyu autentik Nabi ﷺ.</td>
+                <td>
+                    • <strong>Qira'at Tā' (Khiṭhāb):</strong> Menunjukkan ketegasan sikap psikologis dalam berhadapan dengan musuh secara langsung.<br>
+                    • <strong>Qira'at Yā' (Ghaybah):</strong> Menunjukkan kepastian hukum kosmik Allah yang diberitakan kepada barisan mukminin sebagai doktrin kemenangan iman.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Arogansi Materialistik vs Pola Pikir Tauhid Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Arogansi Materialistik (Banu Qainuqa' & Tiran)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Ar-Rāsikhūna fil-Īmān)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Tolok Ukur Kekuatan & Superioritas</strong></td>
+                <td><em>Physical & Quantitative Bias:</em> Mengukur kejayaan semata-mata dari kecanggihan teknologi perang, persenjataan, modal finansial, dan reputasi masa lalu.</td>
+                <td><em>Systemic & Moral Alignment:</em> Menyadari bahwa kekuatan materiil hanyalah sarana fana; kemenangan sejati ditentukan oleh integritas moral, keadilan, dan pertolongan Ilahi.</td>
+            </tr>
+            <tr>
+                <td><strong>Respon terhadap Kemenangan Pihak Lain</strong></td>
+                <td><em>Denial & Derogation (Pelecehan Defensif):</em> Menganggap kemenangan lawan sebagai kebetulan atau karena lawan mereka lemah (<em>"qawman aghmārā"</em>) demi melindungi ego yang rapuh.</td>
+                <td><em>Objective Reflection & 'Ibrah:</em> Membaca tanda-tanda sejarah (<em>āyāt</em>) secara objektif sebagai hukum sebab-akibat yang adil untuk melakukan evaluasi diri.</td>
+            </tr>
+            <tr>
+                <td><strong>Persepsi Rentang Waktu (Time Horizon)</strong></td>
+                <td><em>Temporal Myopia (Rabun Dekat Duniawi):</em> Terjebak dalam persepsi jangka pendek; merasa kekuasaan dan kenyamanan hari ini akan berlangsung selamanya.</td>
+                <td><em>Eschatological Dual-Horizon:</em> Menghubungkan setiap tindakan duniawi dengan konsekuensi eskatologis akhirat yang abadi (dunia: <em>tughlabūn</em>, akhirat: <em>tuḥsyarūn</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Model Mental 1: "The Hubris-Nemesis Feedback Loop" (Siklus Kehancuran Akibat Kesombongan):</strong>
+            Dalam analisis dinamika peradaban dan strategi kehidupan, kesombongan yang meluap-luap (<em>hubris</em>) selalu menciptakan titik buta kognitif (<em>cognitive blind spot</em>). Ketika Banu Qainuqa' membanggakan keahlian perangnya (<em>"innaka lam talqa mitslanā"</em>), mereka menutup mata dari evaluasi risiko, meremehkan musuh, dan memprovokasi konflik terbuka. Al-Qur'an merumuskan bahwa setiap kali <em>hubris</em> mencapai puncaknya, sistem semesta Allah akan menghadirkan <em>nemesis</em> (kehancuran telak: <em>satughlabūn</em>) untuk mengembalikan keseimbangan kosmik.
+        </li>
+        <li><strong>Model Mental 2: "The Double Defeat Principle" (Hukum Kekalahan Kuadrat):</strong>
+            Kejahatan yang menentang kebenaran niscaya mengalami dua babak kejatuhan: (1) <em>Kejatuhan Struktural Duniawi</em> (hilangnya legitimasi, runtuhnya reputasi, dan kehancuran kekuasaan fisik); serta (2) <em>Kejatuhan Eksistensial Abadi</em> (penyeretan paksa ke jurang penderitaan eskatologis). Menyandarkan rasa aman pada kekuatan materi yang fana adalah ilusi kognitif paling berbahaya dalam hidup manusia.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Bahaya Sindrom Narsisisme Kekuasaan</h3>
+    <p>
+        Secara neuropsikologis, kepemilikan modal yang melimpah dan hegemoni persenjataan (seperti yang dinikmati kaum oligarki Banu Qainuqa') secara sistematis membajak sistem penghargaan otak (<em>dopaminergic reward pathway</em>). Akumulasi kekuasaan yang berlangsung lama tanpa kontrol spiritual menumpulkan kerja <em>ventromedial prefrontal cortex</em> (area otak yang memproses empati, rasa bersalah, dan keadilan moral) serta memicu <strong>Hubris Syndrome</strong> (penyakit kejiwaan yang ditandai rasa superioritas ekstrem, penolakan kritik, dan penghinaan terhadap entitas lain).
+    </p>
+    <p>
+        Ketika sindrom ini menguasai jiwa, akal tidak lagi berfungsi sebagai pencari kebenaran, melainkan bermutasi menjadi mesin pembenaran nafsu dan arogansi. Kata penutup <em>wa bi'sal-mihād</em> adalah instrumen kejut (<em>shock-therapy</em>) spiritual dari Al-Qur'an untuk membakar kerak narsisisme tersebut. Tazkiyatun nafs mengajarkan bahwa satu-satunya penawar racun <em>kibr</em> (kesombongan) adalah kesadaran batin bahwa tubuh yang gagah dan senjata yang canggih suatu saat akan terbaring tanpa daya di liang kubur, dan jika durhaka kepada Allah, ranjang yang menantinya di akhirat adalah hamparan bara neraka Jahannam.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Dekonstruksi Arogansi Militeristik & Ilusi Hegemoni Superpower Modern</h3>
+    <p>
+        Di abad ke-21, kita menyaksikan repetisi fenomena Banu Qainuqa' dalam skala geopolitik global. Negara-negara adidaya dan rezim kolonial modern membelanjakan triliunan dolar untuk teknologi perang siluman, persenjataan nuklir, dan sistem drone nirawak berkecerdasan buatan (AI). Dengan persenjataan mutakhir tersebut, para elite militeristik memandang remeh bangsa-bangsa tertindas, menganggap rakyat yang mempertahankan tanah airnya sebagai bangsa terbelakang yang tidak paham strategi perang modern.
+    </p>
+    <p>
+        Namun sejarah kontemporer berulang kali mempermalukan arogansi ini: imperium adidaya dipaksa hengkang secara memalukan dari Vietnam, Afghanistan, dan berbagai palagan perlawanan asimetris. Senjata tercanggih tidak pernah mampu menaklukkan bangsa yang berakar pada keteguhan iman dan keberanian syahid. Ayat 12 adalah hukum sejarah abadi: setiap imperialisme yang menindas nilai-nilai kemanusiaan pada akhirnya akan ditundukkan (<em>satughlabūn</em>) oleh kebusukan internalnya sendiri dan perlawanan rakyat yang mencari keadilan.
+    </p>
+
+    <h3>2. Fenomena "Too Big to Fail" & Kebangkrutan Etika Oligarki Global</h3>
+    <p>
+        Dalam ranah ekonomi, ayat ini membongkar mitos korporasi raksasa dan oligarki predator yang merasa diri mereka <em>"Too Big to Fail"</em> (terlalu besar untuk runtuh). Mereka memonopoli pasar, mendikte regulasi negara, mengeksploitasi sumber daya alam, dan menindas usaha kecil dengan kecongkakan: <em>"Kamilah pemilik modal sejati, kalian tidak akan pernah bisa bertahan tanpa sistem keuangan kami!"</em>
+    </p>
+    <p>
+        Krisis finansial global 2008, kolapsnya raksasa energi Enron, hingga kejatuhan imperium perbankan Silicon Valley Bank dan Credit Suisse adalah bukti kontemporer terwujudnya <em>satughlabūn</em> di sektor ekonomi. Keangkuhan yang dibangun di atas manipulasi dan kezaliman selalu berakhir pada kebangkrutan yang memalukan.
+    </p>
+
+    <h3>3. Kritik Peradaban: Jebakan Hedonisme "False Mihād" (Ranjang Palsu Modernitas)</h3>
+    <p>
+        Peradaban sekuler modern membius manusia dalam "ranjang empuk" (<em>false mihād</em>) ilusi kenyamanan: apartemen mewah, kasur pintar ergonomis, algoritma hiburan media sosial tanpa henti, dan jaminan polis asuransi. Manusia modern merasa bahwa kemewahan material telah menjamin keselamatan eksistensial mereka dari segala ancaman.
+    </p>
+    <p>
+        Al-Qur'an merobek tabir ilusi ini: kenikmatan materi yang steril dari nilai tauhid dan keadilan sesungguhnya hanyalah pembungkus luar dari kehampaan spiritual, wabah depresi massal, kepunahan ekologis, dan di puncaknya adalah jurang siksa Jahannam (<em>wa bi'sal-mihād</em>). Modernitas telah menipu jutaan jiwa untuk menenun ranjang kehancurannya sendiri atas nama kemajuan.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (< 5 Menit): Melazimkan Isti'ādzah Anti-Kibr & Doa Penyelamat Neraka Setiap Shubuh dan Maghrib:</strong>
+                <br>• Dawamkan membaca 7 kali doa permohonan perlindungan dari neraka Jahannam seusai shalat Shubuh dan Maghrib sebelum merubah posisi duduk: <em>"Allāhumma ajirnī minan-nār"</em> (Ya Allah, selamatkanlah aku dari siksa neraka Jahannam) sebagaimana diwasiatkan dalam hadits sahih riwayat Imam Abu Dawud (No. 5079).
+                <br>• Lakukan jeda kontemplasi 1 menit saat hendak berbaring di atas tempat tidur malam hari: ingatkan diri bahwa kasur empuk dunia ini suatu saat akan berganti dengan himpitan tanah kubur, seraya merendahkan hati memohon agar Allah tidak menjadikan neraka sebagai tempat peristirahatan terakhir kita.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Anti-Hubris Validation Check":</strong>
+                Setiap kali Anda meraih kemenangan besar (meraih omzet bisnis tertinggi, memenangkan tender, mendapat promosi jabatan, atau memenangkan perdebatan publik), terapkan protokol 3 langkah berikut sebelum mengambil keputusan baru:
+                <br>• <em>Langkah 1:</em> Segera lafazkan secara tulus: <em>"Hādzā min fadhli Rabbī li-yabluwanī a-asykuru am akfur"</em> untuk memotong bibit rasa superioritas diri.
+                <br>• <em>Langkah 2:</em> Audit tutur kata dan sikap Anda: pastikan tidak ada pernyataan atau postingan media sosial yang meremehkan kompetitor, menyinggung pihak yang kalah, atau mengklaim diri paling hebat (hindari watak <em>"nahnun-nās"</em>).
+                <br>• <em>Langkah 3:</em> Keluarkan sedekah syukur secara rahasia kepada kaum dhuafa sebagai penawar racun arogansi kekuasaan.
+            </li>
+            <li><strong>Komitmen Etika Relasional: Menjunjung Tinggi Integritas Perjanjian & Zero-Arrogance:</strong>
+                Jangan pernah melanggar kesepakatan bisnis atau meremehkan mitra kerja hanya karena merasa posisi hukum atau finansial Anda berada di atas angin. Teladanilah etika kenabian: tetap teguh menawarkan perdamaian dan keadilan, serta jangan pernah terprovokasi oleh kesombongan pihak lawan dengan membalasnya menggunakan kesombongan serupa.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Ketika aku melihat orang lain meraih kesuksesan yang sah di jalan Allah, apakah respons pertamaku adalah mendoakan keberkahan untuknya, ataukah dalam batinku timbul rasa dengki terselubung seraya meremehkannya sebagaimana arogansi Banu Qainuqa' ("mereka hanya beruntung mengalahkan orang lemah")?</li>
+            <li>Kepada apakah rasa amanku dalam hidup ini sesungguhnya bersandar: apakah kepada saldo tabungan, koneksi politik, dan kecerdasan pribadiku yang fana, ataukah semata-mata kepada pertolongan dan perlindungan Allah Yang Maha Menundukkan semesta?</li>
+            <li>Jika malam ini adalah malam terakhirku bernafas dan ruhku dicabut seketika, ranjang peristirahatan macam apakah yang telah kupersiapkan dengan amal perbuatanku: hamparan taman surga yang sejuk penuh rahmat, ataukah kepedihan neraka Jahannam (<em>wa bi'sal-mihād</em>) akibat kesombongan yang kurawat di dalam hati?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Mālikal-Mulk, Yā Qahhār, Yā 'Azīzu Yā Jabbār. Wahai Allah Yang Menguasai seluruh kedaulatan langit dan bumi, Yang Maha Menundukkan segala keangkuhan tiran, dan Yang Maha Perkasa mematahkan kesombongan para penentang kebenaran. Kami bersujud mengakui kehinaan, kelemahan, dan kefakiran jiwa kami di hadapan keagungan takhta-Mu.
+            <br><br>
+            Allāhumma innā na'ūdzu bika minal-kibri wal-ghurūr, wa na'ūdzu bika min buṭhril-ḥaqqi wa ghamṭhin-nās. Ya Allah, bersihkanlah kalbu kami dari segala benih kesombongan, kecongkakan intelektual, dan rasa bangga diri atas harta dan pencapaian fana kami. Jangan pernah Engkau biarkan kami meremehkan kebenaran-Mu atau memandang rendah sesama hamba-Mu. Tanamkanlah ke dalam jiwa kami ketawadhu'an para nabi dan keteguhan iman para syuhada.
+            <br><br>
+            Allāhumma ajirnā minan-nār, Allāhumma ajirnā minan-nār, Allāhumma ajirnā minan-nār! Ya Allah, selamatkanlah kami, kedua orang tua kami, anak keturunan kami, dan segenap kaum mukminin dari siksa neraka Jahannam; dan jangan pernah Engkau jadikan Jahannam sebagai tempat peristirahatan kami, karena sungguh ia adalah seburuk-buruk hamparan dan seburuk-buruk tempat kembali. Karuniakanlah kemenangan kepada kebenaran di atas segala kebatilan, kokohkanlah langkah kaki kami di atas jalan-Mu yang lurus, dan wafatkanlah kami dalam naungan husnul khatimah dan keridhaan-Mu. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-011 - QS. Ali 'Imran Ayat 11.html">&larr; Kembali ke Ayat 11 (QS. 3:11)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 12</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-013 - QS. Ali 'Imran Ayat 13.html">Lanjut ke Ayat 13 (QS. 3:13) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

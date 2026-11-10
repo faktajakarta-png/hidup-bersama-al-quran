@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-105 - QS. Al-Baqarah Ayat 105 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 33px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-104 - QS. Al-Baqarah Ayat 104.html">&larr; Ayat Sebelumnya (QS. 2:104)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-106 - QS. Al-Baqarah Ayat 106.html">Ayat Berikutnya (QS. 2:106) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 3 (Ayat 40–141) | Klaster 20: Perang Linguistik, Hasad Spiritual &amp; Kedaulatan Wahyu (Ayat 104–110)</span>
+        <span class="badge">23 Kata | 99 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 105</h1>
+    <div class="transliteration">
+        "Mā yawaddulladżīna kafarū min ahlil-kitābi wa lal-musyrikīna ay yunazzala ‘alaikum min khairim mir rabbikum, wallāhu yakhtaṣṣu biraḥmatihī may yasyā'(u), wallāhu dżul-faḍlil-‘aẓīm(i)"
+    </div>
+    <div class="thematic-title">
+        Anatomi Hasad Spiritual Ahlul Kitab &amp; Musyrikin vs Kedaulatan Mutlak Rahmat Ilahi: Pembongkaran Motif Kebencian Sistemik, Dekonstruksi Ilusi "Gatekeeping" Kebaikan, dan Kemandirian Transenden Kaum Beriman
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa v2.0 (Surah Al-Baqarah: Ayat 40–141 | Blok 3: Sejarah, Kritik, &amp; Dialektika Epistemik Bani Israil Menuju Peralihan Kiblat Ibrahimiyah)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks &amp; Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa &amp; Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S &amp; 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 8 Mufasir</a>
+        <a href="#lensa-5">Lensa 5: Kognisi &amp; Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis &amp; Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah &amp; Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        مَّا يَوَدُّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَلَا ٱلْمُشْرِكِينَ أَن يُنَزَّلَ عَلَيْكُم مِّنْ خَيْرٍ مِّن رَّبِّكُمْ ۗ وَٱللَّهُ يَخْتَصُّ بِرَحْمَتِهِۦ مَن يَشَآءُ ۚ وَٱللَّهُ ذُو ٱلْفَضْلِ ٱلْعَظِيمِ ۝١٠٥
+    </div>
+
+    <h3>Terjemahan Presisi &amp; Nuansa Makna</h3>
+    <div class="translation">
+        "Orang-orang yang kafir dari kalangan Ahlul Kitab (Yahudi dan Nasrani) dan orang-orang musyrik sama sekali tidak menginginkan (bahkan membenci sampai ke lubuk hati terdalam) diturunkannya kepadamu sekecil apa pun kebaikan (berupa wahyu, kenabian, syariat, kehormatan, dan pertolongan) dari Tuhan Pemeliharamu. Padahal Allah secara berdaulat mengkhususkan rahmat-Nya (karunia kenabian dan hidayah) kepada siapa saja yang Dia kehendaki. Dan Allah adalah Pemilik karunia yang mahabesar (yang tidak bertepi dan tak dapat dibendung oleh konspirasi siapa pun)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Penggunaan partikel penafian <em>mā</em> yang disusul oleh fi'il mudhari' <em>yawaddu</em> (berasal dari <em>al-wudd</em>: cinta/keinginan batin yang tertanam kokoh) menunjukkan penafian berkesinambungan atas segala bentuk iktikad baik dari kelompok penentang. Frasa <em>min khairin</em> diperkuat oleh fungsi gramatikal <em>min za'idah li-ta'kīd al-istighrāq</em> di hadapan isim nakirah, yang secara semantik menafikan "sekecil apa pun jenis kebaikan"—bukan sekadar wahyu kenabian secara makro, melainkan hingga serpihan kemaslahatan terkecil sekalipun. Kalimat penutup mempertemukan dua nama agung: <em>Ar-Rahmah</em> (anugerah penyelamat yang terarah) dan <em>Al-Fadhl Al-'Azhim</em> (kelimpahan karunia ontologis yang melampaui segala perhitungan jasa makhluk).
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Makharij/Sifat Huruf &amp; Variasi Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz &amp; Rasm</th>
+                <th>Kaidah Tajwid, Makharij &amp; Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) &amp; Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>مَّا يَوَدُّ</strong><br>(<em>Mā yawaddu</em>)</td>
+                <td>
+                    <strong>Huruf Mīm:</strong> Keluar dari pertemuan dua bibir (<em>asy-syafatan</em>) dengan sifat <em>tawassuth</em> dan <em>infitāh</em>.<br>
+                    <strong>Mad Ashli/Thabi'i:</strong> Dibaca 2 harakat pada alif setelah mim penafian.<br>
+                    <strong>Huruf Dāl Bertasydid:</strong> Terjadi proses <em>idghām mitslain shaghir</em> internal; huruf dal memiliki sifat <em>syiddah</em> (suara tertahan kuat) dan <em>jahr</em> (napas tertahan), dihentakkan dengan mantap tanpa kalkalah saat bertasydid.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca rafa' dengan harakat dhammah pada huruf dal yang bertasydid (<em>yawaddu</em>) sebagai fi'il mudhari' marfu' yang didahului huruf nafy <em>mā</em>. Tidak ada ikhtilaf lafadz, menegaskan kepastian deskripsi watak psikologis penentang.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلَّذِينَ كَفَرُوا۟</strong><br>(<em>Alladżīna kafarū</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Terbaca fathah saat <em>ibtidā'</em> dan gugur saat washal.<br>
+                    <strong>Lām Bertasydid:</strong> Idgham Syamsiyyah mutlak pada isim maushul.<br>
+                    <strong>Huruf Żāl:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas (<em>litsawiyyah</em>) dengan sifat <em>rikhwah</em>.<br>
+                    <strong>Kāf &amp; Fā':</strong> Huruf kaf memiliki sifat <em>syiddah</em> lalu <em>hams</em>; fa' keluar dari bibir bawah bertemu gigi seri atas dengan sifat <em>hams</em>.<br>
+                    <strong>Rā' Tafkhīm:</strong> Dibaca tebal karena berharakat dhammah, diikuti wawu mad 2 harakat dengan alif fariqah rasm.
+                </td>
+                <td>
+                    Seluruh imam qira'at membaca dengan redaksi rasm yang sama persis tanpa perbedaan riwayat.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>مِنْ أَهْلِ</strong><br>(<em>Min ahli</em>)</td>
+                <td>
+                    <strong>Nun Sukun Bertemu Hamzah:</strong> Hukum asal tajwid adalah <strong>Idzhār Halqī</strong> (nun dibaca jelas tanpa ghunnah tambahan) karena hamzah adalah huruf tenggorokan terdalam (<em>aqshal halq</em>).<br>
+                    <strong>Huruf Hā':</strong> Keluar dari pangkal tenggorokan dengan sifat <em>hams</em> dan <em>rikhwah</em> (aliran napas dan suara yang halus).
+                </td>
+                <td>
+                    • <strong>Imam Warsy 'an Nāfi':</strong> Membaca dengan kaidah <strong>Naql</strong> (memindahkan harakat fathah hamzah ke huruf nun sukun sebelumnya, serta menggugurkan hamzah): dibaca <em>Mina-hli</em>.<br>
+                    • <strong>Imam Hamzah (dalam thariq Khalaf &amp; Khallad saat waqaf):</strong> Memiliki wajah <em>As-Sakt</em> (berhenti sejenak tanpa napas antara nun dan hamzah) atau <em>At-Tahqīq</em>.<br>
+                    • <strong>Delapan Imam Lainnya (termasuk Hafsh 'an 'Āshim):</strong> Membaca dengan <em>Tahqīq</em> murni dan <em>Idzhar Halqi</em> sempurna tanpa saktah: <em>Min ahli</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلْكِتَـٰبِ</strong><br>(<em>Al-Kitābi</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam sukun terbaca jelas saat bertemu huruf kaf.<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif tegak zahir (الكِتَـٰبِ), diisyaratkan dengan alif khanjaraniyyah (mad ashli 2 harakat).<br>
+                    <strong>Huruf Bā':</strong> Berharakat kasrah; jika terpaksa waqaf menjadi Qalqalah Kubra.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca lafaz ini secara konsisten dengan kasrah pada ba' sebagai mudhaf ilaih.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَلَا ٱلْمُشْرِكِينَ</strong><br>(<em>Wa lal-musyrikīn</em>)</td>
+                <td>
+                    <strong>Huruf Syīn:</strong> Memiliki sifat khas <strong>At-Tafasysyī</strong> (penyebaran angin di dalam rongga mulut), <em>hams</em>, dan <em>rikhwah</em>.<br>
+                    <strong>Huruf Rā' Tarqīq:</strong> Dibaca tipis (tarqiq) karena berbaris kasrah.<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Pada kondisi waqaf, ya' sukun sebelum nun dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuth</em> pada huruf nun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca dengan huruf wawu 'athaf dan lafaz <em>al-musyrikīna</em> dengan ya' jamak mudzakkar salim. Penambahan partikel <em>lā</em> berfungsi mengukuhkan penafian menyeluruh bagi kaum penyembah berhala.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>أَن يُنَزَّلَ</strong><br>(<em>Ay yunazzala</em>)</td>
+                <td>
+                    <strong>Idghām Bighunnah:</strong> Pertemuan nun sukun dengan huruf ya' menghasilkan peleburan suara nun ke dalam ya' disertai dengung sempurna (<em>ghunnah</em>) selama 2 harakat.<br>
+                    <strong>Huruf Zāy Bertasydid:</strong> Huruf zay memiliki sifat <em>ash-shafīr</em> (desis tajam), <em>jahr</em>, dan <em>rikhwah</em>.
+                </td>
+                <td>
+                    • <strong>Khalaf 'an Hamzah:</strong> Membaca <strong>Idghām Bilā Ghunnah</strong> (meleburkan nun sukun ke ya' secara murni tanpa dengung sengau sama sekali): <em>Ay-yunazzala</em>.<br>
+                    • <strong>Sembilan Imam Lainnya (Jumhur):</strong> Membaca dengan <em>Idgham Bighunnah</em> sempurna.<br>
+                    • <strong>Variasi Sharaf/Qira'at:</strong> Seluruh qurra' 'asyarah pada ayat ini membaca dengan wazan <em>Taf'īl</em> (tasydid pada zay: <em>yunazzala</em>), mengindikasikan penurunan wahyu yang bertahap, agung, dan berulang kali. (Adapun variasi takhfif <em>yunzala</em> hanya ada dalam qira'at syadzah non-mushaf Utsmani).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>عَلَيْكُمْ مِّن</strong><br>(<em>‘Alaikum min</em>)</td>
+                <td>
+                    <strong>Harf Līn:</strong> Ya' sukun setelah fathah pada kata <em>'alai-</em>.<br>
+                    <strong>Idghām Mitslain Shaghīr (Mīmī):</strong> Mim sukun jamak bertemu mim berharakat kasrah pada <em>min</em> melebur sempurna disertai ghunnah 2 harakat.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsir Al-Makki &amp; Abu Ja'far (serta Qalun dalam salah satu wajahnya):</strong> Membaca dengan <strong>Shilah Mīm al-Jam'</strong> ketika washal ke huruf hidup berharakat: <em>'alaykumū min</em> (dengan mad 2 harakat pada wawu shilah).<br>
+                    • <strong>Warsy, Hamzah, 'Ashim, Abu 'Amr, Ibnu 'Amir, Al-Kisa'i, Khalaf, Ya'qub:</strong> Membaca <strong>Sukūn Mīm al-Jam'</strong> murni: <em>'alaykum min</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مِّن خَيْرٍ مِّن رَّبِّكُمْ</strong><br>(<em>Min khairim mir rabbikum</em>)</td>
+                <td>
+                    <strong>Rangkaian Hukum Bertingkat:</strong><br>
+                    1. <em>Min khairin:</em> Nun sukun bertemu Kha' = <strong>Idzhār Halqī</strong> (Kha' adalah huruf isti'la' dengan sifat hams dan rikhwah).<br>
+                    2. <em>Khairin min:</em> Tanwin kasrah bertemu Mim = <strong>Idghām Bighunnah</strong>.<br>
+                    3. <em>Min rabbikum:</em> Nun sukun bertemu Ra' = <strong>Idghām Bilā Ghunnah Kāmil</strong> (lebur total tanpa sisa dengung; huruf Ra' berharakat fathah dibaca <strong>Tafkhīm</strong> tebal).
+                </td>
+                <td>
+                    • <strong>Imam Warsy 'an Nāfi':</strong> Membaca huruf Ra' pada kata <em>khairin</em> dengan kaidah khusus <strong>Tarqīq ar-Rā'</strong> (menipiskan bacaan ra' kasrah atau ra' yang didahului ya' sukun lin).<br>
+                    • <strong>Seluruh Imam Lainnya:</strong> Membaca tarqiq saat washal karena harakat kasratain, dan tafkhim pada huruf ra' lafaz <em>rabbikum</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَٱللَّهُ يَخْتَصُّ</strong><br>(<em>Wallāhu yakhtaṣṣu</em>)</td>
+                <td>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Huruf lam pada nama Allah dibaca tebal membahana karena didahului harakat fathah.<br>
+                    <strong>Huruf Khā' Sukun:</strong> Sifat <em>isti'lā'</em>, <em>hams</em>, dan <em>rikhwah</em>.<br>
+                    <strong>Huruf Shād Bertasydid:</strong> Memiliki empat sifat kuat sekaligus: <em>isti'lā'</em>, <em>ithbāq</em> (lidah menempel kuat di langit-langit), <em>shafīr</em> (desis kuat), dan <em>rakhāwah</em> dengan harakat dhammah tebal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat atas rasm, harakat, dan tasydid lafaz ini tanpa ikhtilaf.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>بِرَحْمَتِهِۦ مَن يَشَآءُ</strong><br>(<em>Biraḥmatihī may yasyā'</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā' Wasathul Halq:</strong> Keluar dari tengah tenggorokan dengan sifat <em>hams</em> dan <em>rikhwah</em> yang bersih.<br>
+                    <strong>Shilah Qashīrah:</strong> Ha' kinayah berharakat kasrah diapit dua huruf hidup dibaca panjang 2 harakat saat washal (diisyaratkan dengan ya' kecil terbalik ۦ).<br>
+                    <strong>Idghām Bighunnah:</strong> Nun sukun bertemu ya' pada <em>may yasyā'</em> (Khalaf membaca bila ghunnah).<br>
+                    <strong>Mad Wājib Muttashil:</strong> Huruf mad alif bertemu hamzah dalam satu kata pada <em>yasyā'</em>.
+                </td>
+                <td>
+                    • <strong>Mad Wajib Muttashil:</strong><br>
+                    - Warsy &amp; Hamzah: <strong>Isybā'</strong> (panjang maksimal 6 harakat).<br>
+                    - 'Ashim: Membaca 4 atau 5 harakat.<br>
+                    - Ibnu Katsir &amp; As-Susi: Membaca <em>tawassuth</em> (3–4 harakat).<br>
+                    • <strong>Waqaf Hamzah &amp; Hisyam:</strong> Jika pembaca berhenti pada kata <em>yasyā'</em>, Imam Hamzah dan Hisyam memiliki kaidah perubahan hamzah ekstrem (<em>Tashīl ma'ar-Raum</em> dan <em>Ibdāl</em> menjadi alif 6 harakat sukun murni).
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>وَٱللَّهُ ذُو ٱلْفَضْلِ ٱلْعَظِيمِ</strong><br>(<em>Wallāhu dżul-faḍlil-‘aẓīm</em>)</td>
+                <td>
+                    <strong>Huruf Żāl:</strong> Litsawiyyah dengan sifat <em>jahr</em> dan <em>rikhwah</em>.<br>
+                    <strong>Huruf Dād Sukun:</strong> Keluar dari tepi lidah (<em>hāfatul lisān</em>) bertemu geraham atas, memiliki sifat terberat dalam fonetika Arab: <em>ithbāq</em>, <em>isti'lā'</em>, <em>jahr</em>, <em>rikhwah</em>, dan <strong>Al-Istithālah</strong> (pemanjangan makhraj). Dilarang membacanya seperti zha' atau mengkalkalahkannya.<br>
+                    <strong>Huruf Zha' pada Al-'Aẓīm:</strong> Litsawiyyah dengan sifat <em>ithbāq</em> dan <em>isti'lā'</em>.<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Di ujung ayat waqaf dibaca 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    Konsensus qira'at mutawatirah sepakat membaca tanda rafa' pada <em>dzū</em> (dengan wawu asma'ul khamsah), kasrah pada <em>al-fadhli</em>, dan kasrah pada na'at <em>al-'azhīm</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul &amp; Hadits Sahih Penjelas</h3>
+    <p>
+        Secara kronologis sosio-historis, ayat ini diturunkan pada fase awal konsolidasi Madaniyah. Di Madinah, terjadi interaksi intensif antara kaum Muslimin yang baru hijrah dan kaum Anshar (suku Aus dan Khazraj) dengan komunitas Yahudi terpelajar yang telah lama bermukim di oasis Yatsrib (Bani Qainuqa', Bani Nadhir, dan Bani Quraizhah), serta jejaring kabilah musyrikin Arab di sekeliling Madinah.
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbabun Nuzul Riwayat Ibnu Abi Hatim (No. 963) &amp; Ibnu Jarir At-Tabari (No. 1792) — Konteks Dialogis Awal di Madinah:</strong><br>
+        Diriwayatkan melalui sanad Muhammad bin Ishaq dan Adh-Dhahhak: Pada masa pra-Islam, kaum Anshar memiliki perjanjian persekutuan damai, relasi dagang, dan ikatan persahabatan erat (<em>hilf</em>) dengan kaum Yahudi Madinah. Ketika kaum Anshar memeluk Islam dan berbai'at kepada Rasulullah ﷺ, sebagian dari mereka dengan hati bersih mendatangi bekas sekutu-sekutu Yahudi tersebut dan mengajak mereka: <em>"Wahai fulan, masuklah ke dalam agama ini dan sambutlah nabi ini, sesungguhnya ini adalah kebaikan besar bagi kita semua."</em><br>
+        Akan tetapi, para pemuka Yahudi justru menunjukkan rasa muak dan mencemooh dengan ketus: <em>"Apa yang kalian bawa ini bukanlah kebaikan sama sekali! Seandainya ada kebaikan atau kenabian sejati, pastilah Tuhan menurunkannya kepada kami, bangsa terpilih pewaris Taurat, bukan kepada kalian bangsa Arab yang buta huruf!"</em> Kaum Musyrikin Quraisy di Makkah pun mengejek kaum beriman Madinah dengan sentimen serupa. Maka Allah menurunkan ayat ini untuk menyingkap tabir psikologis musuh: bahwa penolakan mereka bukan didasarkan atas ketidakjelasan bukti, melainkan berakar pada kepedihan hasad (dengki) melihat rahmat wahyu jatuh ke tangan orang beriman.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jami' At-Tirmidzi (No. 2510) &amp; Musnad Ahmad (No. 1430) dari Az-Zubair bin Al-'Awwam r.a. — Anatomi Hasad sebagai Penyakit Kanker Peradaban:</strong><br>
+        Rasulullah ﷺ meletakkan diagnosis profetik mengenai racun dengki:<br>
+        <div style="direction: rtl; font-family: 'Amiri', serif; font-size: 20px; line-height: 2; margin: 8px 0; text-align: right;">
+            «دَبَّ إِلَيْكُمْ دَاءُ الأُمَمِ قَبْلَكُمُ: الحَسَدُ وَالبَغْضَاءُ، وَهِيَ الحَالِقَةُ، لَا أَقُولُ تَحْلِقُ الشَّعْرَ وَلَكِنْ تَحْلِقُ الدِّينَ...»
+        </div>
+        <em>"Telah menjalar ke dalam diri kalian penyakit umat-umat sebelum kalian: yaitu rasa dengki (hasad) dan kebencian (al-baghdhā'). Kebencian itu adalah sang pencukur; aku tidak mengatakan ia mencukur rambut, melainkan ia mencukur (melenyapkan) komitmen agama..."</em> (Derajat: <strong>Hadits Hasan</strong>; dihasankan oleh Imam At-Tirmidzi dan Syaikh Al-Albani dalam <em>Shahīh At-Targhīb wat-Tarhīb</em> No. 2888). Hadits ini membedah korelasi langsung dengan QS. 2:105: hasad adalah virus jiwa warisan bangsa-bangsa terdahulu yang membakar habis objektivitas nurani dan menghancurkan integritas spiritual.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhari (No. 844, 6330) &amp; Sahih Muslim (No. 593) dari Al-Mughirah bin Syu'bah r.a. — Doktrin Kedaulatan Mutlak Rahmat Ilahi:</strong><br>
+        Rasulullah ﷺ mengajarkan wirid rutin seusai mendirikan shalat fardhu yang menjadi ejawantah akidah ayat ini:<br>
+        <div style="direction: rtl; font-family: 'Amiri', serif; font-size: 20px; line-height: 2; margin: 8px 0; text-align: right;">
+            «اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ»
+        </div>
+        <em>"Ya Allah, tidak ada seorang pun yang dapat menghalangi apa yang telah Engkau berikan, dan tidak ada seorang pun yang sanggup memberi apa yang telah Engkau tahan/halangi, dan tidak berguna kekayaan serta kemuliaan orang yang memiliki harta dari kehendak siksa-Mu."</em> Hadits ini mengunci penafsiran <em>Wallāhu yakhtaṣṣu biraḥmatihī may yasyā'</em>: penolakan seluruh kekuatan bumi tidak akan mampu menyumbat aliran nikmat wahyu yang telah diputuskan oleh Sang Pemilik Karunia Yang Mahabesar.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Sunan Ibnu Majah (No. 856) &amp; Al-Adab Al-Mufrad Al-Bukhari (No. 988) dari 'Aisyah r.a. — Spektrum Hasad Ahlul Kitab terhadap Syiar Hidayah:</strong><br>
+        Rasulullah ﷺ bersabda menyingkap rasa iri kelompok penentang terhadap nikmat-nikmat khusus umat Islam:<br>
+        <div style="direction: rtl; font-family: 'Amiri', serif; font-size: 20px; line-height: 2; margin: 8px 0; text-align: right;">
+            «مَا حَسَدَتْكُمُ الْيَهُودُ عَلَى شَيْءٍ مَا حَسَدَتْكُمْ عَلَى السَّلَامِ وَالتَّأْمِينِ»
+        </div>
+        <em>"Tidaklah orang-orang Yahudi merasa dengki kepada kalian atas sesuatu sebagaimana kedengkian mereka kepada kalian atas ucapan salam dan ucapan aamiin (di belakang imam saat shalat)."</em> (Derajat: <strong>Sahih</strong>; dishahihkan oleh Al-Bushiri dan Al-Albani). Hadits ini membuktikan kaidah <em>min khairin</em> pada ayat 105: hasad mereka merasuk hingga ke syiar-syiar ibadah harian terkecil yang memancarkan persaudaraan dan ketenangan batin.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis &amp; Balaghah)</h2>
+
+    <h3>Analisis Etimologi &amp; Medan Semantik (Mu'jam Maqāyīs al-Lughah &amp; Lisān al-'Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. W-D-D (و-د-د — Al-Wudd / Al-Mawaddah):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> merumuskan bahwa akar kata <em>Wāw-Dāl-Dāl</em> berpusat pada dua poros semantik fundamental: <em>al-mahabbah</em> (cinta dan hasrat batin yang sangat mendalam) dan <em>al-watad</em> (pasak kayu yang dipancangkan menghunjam kokoh ke dalam tanah). Dari akar ini tercipta kata <em>al-wudd</em>, yaitu cinta yang telah terpatri, diam, dan menetap di dasar kalbu, melampaui sekadar simpati lahiriah. Ketika didahului instrumen penafian mutlak <strong>Mā (مَّا يَوَدُّ)</strong>, kalimat ini mengunci realitas afektif penentang: di dalam bilik batin terdalam mereka, tidak ada ruang sedikit pun bagi kehendak baik, kerelaan, atau simpati terhadap kebahagiaan kaum Mukminin. Penolakan mereka bukanlah kesalahpahaman spontan, melainkan kebencian yang terpancang kokoh (<em>watad</em>) di struktur jiwa mereka.
+        </li>
+        <li>
+            <strong>2. Kh-Y-R (خ-ي-ر — Al-Khayr):</strong><br>
+            Ibnu Faris menetapkan poros makna <em>Khā'-Yā'-Rā'</em> pada <em>al-'athf war-raghbah</em> (kecondongan jiwa pada sesuatu yang bernilai luhur), lawan dari kata <em>asy-syarr</em> (keburukan), serta berakar sama dengan <em>al-khiyār</em> (pilihan terbaik). Dalam <em>Lisān al-'Arab</em>, <em>Al-Khayr</em> adalah segala perkara yang mendatangkan kemaslahatan hakiki, kehormatan eksistensial, dan kemuliaan peradaban di dunia maupun akhirat. Kehadiran partikel <em>Min</em> yang berfungsi sebagai <em>Min Zā'idah li-Ta'kīd al-Istighrāq</em> di hadapan bentuk nakirah (<strong>مِّن خَيْرٍ</strong>) memperluas cakupan kata ini secara dramatis: bukan hanya wahyu kenabian agung yang mereka tolak, melainkan serpihan kebaikan material, kedamaian sosial, dan kemajuan ekonomi umat beriman pun membuat dada mereka terbakar rasa sakit.
+        </li>
+        <li>
+            <strong>3. Kh-Sh-Sh (خ-ص-ص — Al-Ikhtishāsh &amp; Al-Khāshshah):</strong><br>
+            Akar kata <em>Khā'-Shād-Shād</em> menurut Ibnu Faris berporos pada <em>tafarrudusy-syay' bi-amrin dūna ghayrih</em> (menyendirinya suatu entitas dengan suatu perkara khusus tanpa melibatkan pihak lain). Dari akar ini lahir kata <em>al-khashshah</em> (lingkaran khusus/elite, antonim dari <em>al-'ammah</em>) dan <em>al-khashashah</em> (kebutuhan ruang kosong yang spesifik). Transformasi ke wazan <em>Ifta'ala</em> (<strong>يَخْتَصُّ — Yakhtaṣṣu</strong>) mengandung arti kedaulatan mutlak dalam memilah, menentukan, dan menempatkan karunia pada lokus yang dipilih tanpa campur tangan, tekanan, ataupun konsensus pihak ketiga. Rahmat Ilahi adalah wilayah prerogatif Ilahiah murni.
+        </li>
+        <li>
+            <strong>4. R-Ḥ-M (ر-ح-م — Ar-Raḥmah):</strong><br>
+            Ibnu Faris menjelaskan bahwa akar <em>Rā'-Ḥā'-Mīm</em> berporos pada <em>ar-riqqah wal-'athfu war-ra'fah</em> (kelembutan hati, kasih sayang protektif, dan keterikatan yang melindungi, sebagaimana rahim seorang ibu melindungi janinnya). Dalam konteks ayat ini, para ulama bahasa dan tafsir sepakat bahwa kata <em>Ar-Rahmah</em> yang disandarkan kepada dhamir Allah (<em>biraḥmatihī</em>) merupakan <em>majāz mursal bi-'alāqatil-musabbabiyyah</em> yang merujuk pada: <strong>Risalah Kenabian Pamungkas (An-Nubuwwah), Al-Qur'an Al-Karim, dan Syariat Islam</strong>. Penurunan Al-Qur'an disebut sebagai "rahmat" karena ia adalah rahim spiritual yang memelihara kehidupan jiwa manusia dari kebinasaan jahiliyah.
+        </li>
+        <li>
+            <strong>5. F-Dh-L (ف-ض-ل — Al-Faḍl):</strong><br>
+            Akar kata <em>Fā'-Dād-Lām</em> merujuk pada <em>az-ziyādah fin-na'mā'</em> (kelebihan, kelimpahan, dan anugerah ekstra yang melampaui tuntutan hak dan kewajiban). <em>Al-Fadhl</em> adalah pemberian murni yang didasarkan semata-mata atas kemurahan Sang Pemberi, bukan karena penerima memiliki jasa yang setimpal. Kata ini disifati dengan <strong>Al-‘Aẓīm</strong> (Maha Agung, Luas, dan Tak Bertepi), mendobrak batasan pikir manusia: bahwa perbendaharaan karunia Allah begitu melimpah ruah, sehingga penganugerahan kenabian kepada bangsa Arab sama sekali tidak merugikan perbendaharaan Allah bagi alam semesta.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf &amp; I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq &amp; Mahallul Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>مَّا</strong></td>
+                <td><em>Harf Nafyin</em> (huruf penafi), mabni 'alas-sukun.</td>
+                <td>Tidak memiliki kedudukan i'rab tersendiri; berfungsi meniadakan hukum kalimat setelahnya secara berkesinambungan (<em>nafyul-istimrār</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>يَوَدُّ</strong></td>
+                <td>Fi'il mudhari' tsulatsi mujarrad dari wazan <em>fa'ila – yaf'alu</em> (<em>wadda – yawaddu</em>), bina' mudha'af (dua huruf dal melebur menjadi tasydid).</td>
+                <td><strong>Fi'il Mudhari' Marfū'</strong>, tanda rafa'-nya adalah dhammah zhahirah di atas huruf dal akhir. Membutuhkan fa'il dan maf'ul bih.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong></td>
+                <td>Isim maushul jamak mudzakkar, mabni 'alal-fath.</td>
+                <td>Berada <strong>Fī Maḥalli Raf'in sebagai Fā'il</strong> (subjek pelaku) bagi kata kerja <em>yawaddu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>كَفَرُوا۟</strong></td>
+                <td>Fi'il madhi bersambung dengan <em>wawu al-jamā'ah</em>, mabni 'aladh-dhamm. Huruf alif adalah <em>alif al-fāriqah</em>.</td>
+                <td>Wawu jama'ah adalah dhamir muttashil mabni fi mahalli raf'in fa'il. Seluruh rangkaian jumlah fi'liyyah <em>kafarū</em> adalah <strong>Shilat al-Maushūl</strong>, lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنْ</strong></td>
+                <td><em>Harf Jarr</em>, mabni 'alas-sukun.</td>
+                <td>Berfungsi untuk <strong>At-Tabyīn</strong> (menjelaskan jenis kelompok yang kafir) atau <em>at-tab'īdh</em> (sebagian, karena sebagian Ahlul Kitab ada yang beriman jujur seperti Abdullah bin Salam).</td>
+            </tr>
+            <tr>
+                <td><strong>أَهْلِ</strong></td>
+                <td>Isim jamid mudhaf, majrur dengan kasrah zhahirah.</td>
+                <td>Majrur dengan <em>min</em>. Syibhul jumlah (<em>jār wa majrūr</em>) berkaitan (<em>muta'alliq</em>) dengan hal mahdzuf dari fa'il pada kata <em>kafarū</em> (keadaan mereka adalah bagian dari Ahlul Kitab).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْكِتَـٰبِ</strong></td>
+                <td>Isim jins ber-alif lam ma'rifah, bentuk mashdar bermakna maf'ul (<em>al-maktūb</em>).</td>
+                <td><strong>Mudhāfun Ilayh</strong>, majrur dengan kasrah zhahirah pada huruf ba'.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا</strong></td>
+                <td><em>Wāw</em>: Harf 'athaf. <em>Lā</em>: Harf nafyin za'idah li-ta'kīdin-nafy.</td>
+                <td>Huruf wawu mengaitkan hukum penafian, sedangkan huruf <em>lā</em> berfungsi mengukuhkan penafian agar tidak timbul keraguan sintaksis.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمُشْرِكِينَ</strong></td>
+                <td>Isim fa'il jamak mudzakkar salim dari fi'il ruba'i <em>asyraka – yusyriku</em> (akar <em>sy-r-k</em>).</td>
+                <td><strong>Ma'thūf</strong> kepada lafaz <em>alladzīna</em> (fi mahalli raf'in secara makna subjek), atau ma'thuf kepada lafaz <em>ahli</em> secara lafzhiyah; tanda i'rab-nya adalah <strong>Yā'</strong> karena jamak mudzakkar salim.</td>
+            </tr>
+            <tr>
+                <td><strong>أَن</strong></td>
+                <td><em>Harf Mashdariyyah wa Nashab wa Istiqbāl</em>, mabni 'alas-sukun.</td>
+                <td>Menashabkan fi'il mudhari' setelahnya dan mentakwil rangkaian kalimat menjadi kata benda (<em>mashdar mu'awwal</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>يُنَزَّلَ</strong></td>
+                <td>Fi'il mudhari' mabni lima lam yusamma fa'iluh (pasif), wazan <em>taf'īl</em> (<em>nazzala – yunazzilu</em>).</td>
+                <td><strong>Fi'il Manshūb</strong> karena didahului <em>an</em>, tanda nashab-nya adalah fathah zhahirah. Rangkaian mashdar mu'awwal (<em>an yunazzala</em> = <em>tanzīla</em>) berkedudukan <strong>Fī Maḥalli Nashbin Maf'ūl Bih</strong> dari <em>yawaddu</em> (taksiran: <em>Mā yawaddūna tanzīla khairin 'alaikum</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَيْكُم</strong></td>
+                <td><em>'Alā</em>: Harf jarr. <em>Kāf</em>: Dhamir mukhatab jamak. <em>Mīm</em>: Penanda jamak.</td>
+                <td>Syibhul jumlah (<em>jār wa majrūr</em>) berkaitan erat (<em>muta'alliq</em>) dengan fi'il <em>yunazzala</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّن</strong></td>
+                <td><em>Harf Jarr Zā'idah</em> (huruf jarr tambahan penguat makna), mabni 'alas-sukun.</td>
+                <td>Secara fungsional hadir untuk mengokohkan <strong>Tanshis 'alal-Umum wal-Istighraq</strong> (penafian total tanpa kecuali).</td>
+            </tr>
+            <tr>
+                <td><strong>خَيْرٍ</strong></td>
+                <td>Isim nakirah, bentuk shifat musyabbahah atau isim jins.</td>
+                <td><strong>Nā'ibul Fā'il</strong> bagi fi'il pasif <em>yunazzala</em>; majrur secara lafadz karena huruf jarr za'idah, namun <strong>Fī Maḥalli Raf'in</strong> secara kedudukan fungsional sintaksis.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّن رَّبِّكُمْ</strong></td>
+                <td><em>Min</em>: Harf jarr ibtidā'il-ghāyah. <em>Rabb</em>: Majrur dan mudhaf. <em>Kum</em>: Mudhaf ilaih.</td>
+                <td>Syibhul jumlah (<em>jār wa majrūr</em>) berkaitan (<em>muta'alliq</em>) sebagai <strong>Na'at Mahdzūf</strong> (sifat yang tersirat) bagi kata <em>khairin</em> (taksiran: <em>khairin nāzilin mir rabbikum</em> = kebaikan yang diturunkan dari Tuhanmu).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td><em>Wāw</em>: Harf Isti'nāfiyah (permulaan deklarasi baru) atau Wawu Hāl. <em>Allāh</em>: Lafzhul Jalalah.</td>
+                <td>Lafzhul Jalālah berkedudukan sebagai <strong>Mubtada'</strong> (subjek awal kalimat independen), marfu' dengan dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>يَخْتَصُّ</strong></td>
+                <td>Fi'il mudhari' wazan <em>ifta'ala</em> (akar <em>kh-sh-sh</em>), fa'il-nya dhamir mustatir taqdirnya <em>Huwa</em>.</td>
+                <td>Jumlah fi'liyyah (<em>yakhtaṣṣu...</em>) berkedudukan <strong>Fī Maḥalli Raf'in sebagai Khabar</strong> dari mubtada' Lafzhul Jalalah.</td>
+            </tr>
+            <tr>
+                <td><strong>بِرَحْمَتِهِۦ</strong></td>
+                <td><em>Bā'</em>: Harf jarr lil-ilshāq. <em>Rahmah</em>: Majrur &amp; mudhaf. <em>Hā'</em>: Mudhaf ilaih.</td>
+                <td>Syibhul jumlah (<em>jār wa majrūr</em>) berkaitan (<em>muta'alliq</em>) dengan fi'il <em>yakhtaṣṣu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن</strong></td>
+                <td>Isim maushul bermakna umum untuk entitas berakal, mabni 'alas-sukun.</td>
+                <td>Berada <strong>Fī Maḥalli Nashbin sebagai Maf'ūl Bih</strong> (objek penderita) dari kata kerja <em>yakhtaṣṣu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>يَشَآءُ</strong></td>
+                <td>Fi'il mudhari' marfu' bi-dhammah, fa'il-nya dhamir mustatir <em>Huwa</em>.</td>
+                <td>Jumlah fi'liyyah <em>yasyā'u</em> adalah <strong>Shilat al-Maushūl</strong> bagi <em>man</em>, lā maḥalla lahā minal-i'rāb. 'Ā'id maushul-nya mahdzuf (taksiran: <em>may yasyā'u ikhtishāshahū</em> = siapa yang Dia kehendaki kekhususannya).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td><em>Wāw</em>: Harf 'athaf jumlī / Isti'nafiyah. <em>Allāh</em>: Lafzhul Jalalah.</td>
+                <td>Lafzhul Jalālah berkedudukan sebagai <strong>Mubtada'</strong>, marfu' dengan dhammah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ذُو</strong></td>
+                <td>Isim dari golongan <em>Asmā'ul Khamsah</em>, mudhaf.</td>
+                <td><strong>Khabar Mubtada'</strong>, marfu' dengan tanda <strong>Wāw</strong> karena termasuk Asma'ul Khamsah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْفَضْلِ</strong></td>
+                <td>Isim jins makrifat.</td>
+                <td><strong>Mudhāfun Ilayh</strong>, majrur dengan tanda kasrah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَظِيمِ</strong></td>
+                <td>Isim sifat musyabbahah wazan <em>fa'īl</em>.</td>
+                <td><strong>Na'at</strong> (kata sifat) bagi <em>al-fadhli</em>, majrur dengan kasrah zhahirah pada huruf mim.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' &amp; I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Tanshis 'alal-Umum via Dua Instrumen Penegas (<em>Mā</em> Nafy &amp; <em>Min Zā'idah</em>):</strong><br>
+            Secara kaidah semantik Arab standar, kalimat penafian <em>Mā yawaddūna an yunazzala 'alaikum khairun</em> sudah cukup untuk meniadakan kehendak mereka. Namun Al-Qur'an memilih struktur: <em>Mā yawaddu... min khairin</em>. Penyisipan huruf <em>min za'idah</em> di hadapan isim nakirah mentransformasikan derajat makna dari penafian umum biasa (<em>nafyun 'āmm</em>) menjadi <strong>penafian mutlak sampai ke akar partikel terkecil (nashshun qath'iyyun fil-istighrāq)</strong>. Mereka tidak hanya membenci turunnya mushaf Al-Qur'an secara makro, melainkan mendidih hatinya bahkan jika seorang Mukmin mendapatkan satu dinar keuntungan dagang, kesembuhan dari penyakit, atau pujian sosial di ruang publik.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Kināyah 'an Syiddatil-Ḥasad (Menyingkap Hakikat Dengki Tanpa Menyebut Katanya):</strong><br>
+            Mengapa Allah tidak menyatakan secara langsung: <em>"Yahsudūnakum"</em> (mereka mendengki kalian), melainkan menggunakan ungkapan perantara <em>"Mā yawaddūna ay yunazzala 'alaikum min khair"</em>? Para pakar balaghah (Az-Zamakhsyari dan As-Sakkaki) menjelaskan bahwa ini adalah <strong>Kināyah Mufassirah</strong> yang membedah definisi operasional terdalam dari <em>hasad</em>. Esensi hasad bukanlah sekadar rasa benci, melainkan <em>tamannī zawālin-ni'mah</em> (keinginan obsesif agar nikmat yang ada pada orang lain lenyap, bahkan sebelum nikmat itu sempat terwujud). Melalui gaya kinayah ini, Al-Qur'an menelanjangi borok psikologis musuh secara jauh lebih tajam dan telak daripada sekadar mencap mereka sebagai pendengki.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-Muqābalah wal-I'tijāb (Kontras Arsitektural antara Kepicikan Makhluk vs Kedaulatan Khalik):</strong><br>
+            Ayat ini menyajikan struktur kontras simetris yang mencengangkan:
+            paruh pertama menggambarkan kepicikan jiwa manusia yang sempit, bersekutu dalam kedengkian, dan berupaya memblokir kebaikan (<em>mā yawaddulladzīna kafarū...</em>), lalu secara dramatis dialihkan pada paruh kedua ke ufuk kedaulatan Ilahi yang mahaluas dan tak tertandingi (<em>wallāhu yakhtaṣṣu biraḥmatihī man yasyā'...</em>). Kebencian makhluk yang berusaha menutup keran rahmat dihempaskan oleh fakta bahwa Allah-lah Pemilik tunggal seluruh perbendaharaan karunia.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Jam'u al-Aḍdād fil-'Adāwah (Unifikasi Elemen Kontradiktif dalam Kebencian):</strong><br>
+            Penyebutan <em>Ahlul Kitāb</em> (kaum teistik terpelajar yang mengklaim bertauhid) berdampingan dengan <em>Al-Musyrikīn</em> (kaum penyembah berhala yang pagan dan buta huruf) adalah bentuk <em>jam'ul-adhdād</em>. Secara teologis dan sosio-kultural, kedua kelompok ini saling membenci dan saling mengafirkan. Namun di hadapan risalah Islam, keduanya melebur dalam satu poros kebencian yang identik. Ini menyingkap kaidah sosiologi balaghah: <strong>kedengkian terhadap kebenaran mampu menyatukan dua kutub musuh bebuyutan dalam satu aliansi destruktif</strong>.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — At-Tazyīl wal-Iṭnāb dalam Fashilah "Wallāhu Dżul-Faḍlil-‘Aẓīm":</strong><br>
+            Penutup ayat berupa kalimat nominal independen (<em>jumlah ismiyyah</em>) yang berfungsi sebagai <em>at-tazyīl</em> (pengunci kalimat dengan kaidah universal). Pemilihan kata <strong>Żū</strong> (Pemilik Otoritas Mutlak) yang disandarkan pada <strong>Al-Faḍl</strong> (kelebihan anugerah) dan disifati dengan <strong>Al-‘Aẓīm</strong> (Maha Agung) menegaskan bahwa rahmat kenabian bukanlah barang jualan, bukan kuota terbatas, dan bukan hak monopoli warisan darah kelompok mana pun.
+        </li>
+        <li>
+            <strong>I'jaz Fonetik &amp; Ritme Suara (Asy-Syiddah Berpindah ke Ar-Rakhāwah):</strong><br>
+            Secara fonetika, ayat dibuka dengan hentakan konsonan yang berat, tertahan, dan rapat: <em>mā yawaddu</em> (tasydid dal yang berbunyi tajam mencerminkan kekakuan hati pendengki), disusul huruf kaf dan ta' yang berdesis (<em>kafarū, ahlil-kitābi</em>), lalu suasana vokal beralih secara anggun ketika menyebut nama Allah dan rahmat-Nya: <em>wallāhu yakhtaṣṣu biraḥmatihī</em> (perpaduan aliran ha' dan ra' yang basah dan lapang), diakhiri dengungan resonansi agung yang stabil pada makhraj bibir huruf mim di fashilah <em>al-'aẓīm</em>.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S &amp; 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S &amp; 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Hubungan Kausalitas dengan Ayat 104 — Perang Bahasa Menyingkap Motif Batin):</strong><br>
+            Pada ayat 104, Allah SWT secara tegas melarang orang-orang beriman menggunakan kata <em>"Rā‘inā"</em> (ungkapan santun kaum Mukminin yang dipelintir maknanya oleh kaum Yahudi Madinah menjadi kata umpatan pelecehan <em>ru'ūnah</em> / kebodohan) dan memerintahkan beralih ke kata <em>"Unẓurnā"</em> serta taat mendengar (<em>wasma'ū</em>). Muncul pertanyaan di benak para sahabat: <em>"Mengapa kaum Yahudi itu begitu gigih melancarkan perang psikologis, pelecehan linguistik, dan tipu muslihat kata terhadap Rasulullah ﷺ?"</em><br>
+            Ayat 105 hadir sebagai <strong>jawaban epistemik kausalitas</strong>: Allah menyingkap motif bawah sadar mereka yang paling kelam. Sikap melecehkan itu bukan lahir dari debat intelektual yang jujur, melainkan dipicu oleh <strong>hasad spiritual akut</strong>. Mereka mendidih karena wahyu kenabian diturunkan kepada Nabi Muhammad ﷺ dan kaum beriman, bukan kepada trah Bani Israil.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 3 &amp; Klaster 20: Ayat 104–110):</strong><br>
+            Ayat 105 menempati posisi sentral dalam <strong>Klaster 20 (Ayat 104–110)</strong> di dalam arsitektur <strong>Blok 3 (Ayat 40–141)</strong> yang mengkaji sejarah panjang, kritik watak, dan dialektika teologis Bani Israil sebelum peresmian Kiblat Ka'bah Ibrahimiyah. Siyāq klaster ini berfungsi sebagai <strong>proses de-hegemoni epistemologis</strong>:<br>
+            • <em>Ayat 104:</em> Pembersihan adab komunikasi dan imunitas dari sabotase linguistik.<br>
+            • <em>Ayat 105:</em> Dekonstruksi motif permusuhan (hasad) dan penegasan kemandirian spiritual kaum beriman dari restu kaum penentang.<br>
+            • <em>Ayat 106–107:</em> Penjelasan doktrin <em>Naskh</em> (pergantian hukum) sebagai manifestasi kedaulatan karunia Allah yang lebih baik.<br>
+            • <em>Ayat 108–110:</em> Peringatan agar kaum Mukminin tidak terjangkit penyakit menuntut mukjizat empiris sebagaimana kaum Musa, seraya memerintahkan untuk memaafkan mereka sampai ketetapan Allah tiba.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas Menuju Ayat 106 — Landasan Teologis Doktrin Naskh):</strong><br>
+            Pada Ayat 106, Allah berfirman: <em>"Mā nansakh min āyatin aw nunsihā na'ti bi-khairin minhā aw mitslihā..."</em> (Ayat apa pun yang Kami nasakh atau Kami jadikan lupa, Kami datangkan yang lebih baik darinya atau yang sebanding). Di Madinah, kaum Yahudi gencar melancarkan provokasi skeptisisme: <em>"Jika Al-Qur'an benar dari Tuhan, mengapa kiblat dialihkan dari Baitul Maqdis ke Ka'bah? Mengapa ada hukum syariat yang diganti? Apakah Tuhan kalian ragu-ragu?"</em><br>
+            Ayat 105 telah mematahkan racun keraguan itu terlebih dahulu sebelum Ayat 106 turun: penetapan, penggantian, dan penyempurnaan syariat adalah hak prerogatif mutlak Allah yang mengkhususkan rahmat-Nya (<em>yakhtaṣṣu biraḥmatihī</em>) dan melimpahkan karunia yang lebih besar (<em>dzul-faḍlil-'aẓīm</em>). Pergantian hukum adalah bukti keluasan rahmat, bukan inkonsistensi Ilahi.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Keruntuhan Hegemoni Spiritual di Kota Yatsrib</h3>
+    <p>
+        Secara sosio-historis, perjumpaan di Yatsrib pasca-Hijrah adalah perjumpaan dua struktur peradaban yang sangat timpang secara kultural. Selama ratusan tahun sebelum kedatangan Nabi Muhammad ﷺ, komunitas Yahudi (Bani Qainuqa', Bani Nadhir, dan Bani Quraizhah) menikmati supremasi mutlak di Yatsrib:
+    </p>
+    <ul>
+        <li>
+            <strong>Monopoli Epistemologis &amp; Simbolik:</strong> Kaum Yahudi adalah kelompok terpelajar (<em>Ahlul Kitab</em>) yang memiliki literasi kitab suci Taurat, memegang catatan silsilah para nabi, dan menguasai tradisi teologis. Di hadapan mereka, bangsa Arab Yatsrib (Aus dan Khazraj) adalah kaum buta huruf (<em>ummiyyūn</em>) penyembah berhala yang terbelakang secara religius. Kaum Yahudi kerap mengeksploitasi superioritas simbolik ini untuk mengintimidasi penduduk Arab seraya mengancam: <em>"Sebentar lagi nabi akhir zaman dari kalangan kami akan diutus, dan kami akan memimpin kalian menuju kebinasaan!"</em>
+        </li>
+        <li>
+            <strong>Luka Narsistik Teologis (Theological Narcissistic Injury):</strong> Ketika Nabi Muhammad ﷺ hijrah ke Madinah dan suku Aus serta Khazraj bersatu di bawah panji Islam menjadi kaum Anshar, peta hegemoni terbalik 180 derajat. Nabi yang ditunggu-tunggu ternyata bukan dari dinasti darah Bani Israil, melainkan dari garis keturunan Ismail a.s. Bangsa yang selama ini mereka pandang remeh mendadak bertransformasi menjadi komunitas beradab dengan etika sosial dan peradaban yang mengagumkan.
+        </li>
+        <li>
+            <strong>Lahirnya Aliansi Hipokrit yang Absurd:</strong> Fakta sejarah paling ironis yang dibongkar oleh ayat ini adalah: kaum Yahudi yang mengklaim sebagai pembawa panji tauhid monoteisme Ibrahim justru rela menjalin komunikasi rahasia dan berkoalisi dengan kaum musyrikin penyembah berhala Quraisy. Di kemudian hari, tokoh Yahudi Huyay bin Akhthab bahkan bersaksi di hadapan kaum kafir Quraisy bahwa penyembahan berhala mereka lebih lurus jalannya daripada tauhid yang dibawa Nabi Muhammad ﷺ (sebagaimana dicatat dalam QS. An-Nisā': 51). Ayat 105 membongkar akar kepalsuan koalisi ini: keduanya disatukan oleh satu perekat emosional yang sama, yaitu <strong>hasad eksistensial</strong> terhadap kaum Mukminin.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi &amp; Mazhab (8 Mufasir Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur &amp; Analisis Filologi):</strong><br>
+        At-Tabari menjelaskan dengan sanadnya bahwa kata <em>khair</em> dalam ayat ini bersifat komprehensif, mencakup: kenabian, hidayah wahyu, hukum-hukum syariat yang membawa keselamatan, serta pertolongan militer dan kemenangan sosial bagi kaum beriman. At-Tabari menggarisbawahi: Allah menegaskan kepada kaum Mukminin hakikat permusuhan batin yang dipendam oleh orang-orang kafir dari kalangan Yahudi dan penyembah berhala, agar orang-orang beriman tidak bersikap lugu, tidak tertipu oleh basa-basi diplomatik persekutuan lama (<em>hilf</em>), dan tidak menjadikan mereka sebagai pemegang rahasia (<em>bithānah</em>). Terkait frasa <em>wallāhu yakhtaṣṣu biraḥmatihī</em>, At-Tabari menegaskan bahwa rahmat kenabian tidak dapat dibeli dengan nasab kabilah mana pun; Allah-lah yang berhak memilih bejana manusia yang paling suci untuk memikul risalah-Nya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat &amp; Teologi Salaf):</strong><br>
+        Ibnu Katsir menghubungkan ayat ini secara tematis dengan firman Allah di QS. An-Nisā' [4]: 54: <em>"Ataukah mereka mendengki kepada manusia (Muhammad) atas karunia yang telah Allah berikan kepada mereka? Sungguh, Kami telah memberikan kitab dan hikmah kepada keluarga Ibrahim..."</em> Ibnu Katsir menukil bahwa <em>ar-rahmah</em> dalam ayat 105 adalah anugerah kenabian pamungkas dan Al-Qur'an, sedangkan <em>al-fadhlul 'azhim</em> adalah surga di akhirat dan kemuliaan di dunia. Ibnu Katsir menekankan fungsi protektif doktrinal: seorang Mukmin sejati dilarang memiliki ketergantungan mental untuk mencari legitimasi atau 'kehendak baik' dari kaum yang hakikat hatinya menginginkan tercabutnya nikmat iman dari dada kaum Muslimin.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih &amp; Etika Sosial):</strong><br>
+        Al-Qurthubi membedah dimensi hukum dan penyakit qalbu. Beliau menegaskan bahwa kedengkian (<em>al-hasad</em>) adalah dosa maksiat pertama yang melahirkan kebinasaan di alam malakut langit (ketika Iblis mendengki kemuliaan Adam a.s.) dan dosa penumpahan darah pertama di muka bumi (ketika Qabil mendengki Habil). Al-Qurthubi merumuskan kaidah fiqih siyasah dari ayat ini: haram hukumnya bagi penguasa Muslim menyerahkan pos-pos rahasia kenegaraan, perbendaharaan militer, dan urusan kedaulatan kaum Mukminin kepada orang kafir yang memendam permusuhan agama, karena sifat dasar yang diungkap oleh ayat ini adalah ketiadaan kehendak baik (<em>mā yawaddu</em>) bagi kebaikan umat Islam.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) &amp; Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> &amp; <em>Mafātīḥul-Ghayb</em> (Balaghah &amp; Filsafat Teologis):</strong><br>
+        Az-Zamakhsyari menyoroti keindahan bentuk pasif (<em>mabni majhul</em>) pada <em>ay yunazzala</em>: penghilangan fa'il secara gramatikal justru mempertegas bahwa kaum pendengki sangat menyadari bahwa yang menurunkan adalah Allah, namun kebencian mereka terarah pada proses 'turunnya' karunia itu kepada orang beriman.<br>
+        Fakhruddin Ar-Razi membedah problem filsafat moral hasad: <strong>Hasad pada hakikatnya adalah pembangkangan teologis terhadap keadilan Allah</strong>. Pendengki merasa bahwa pembagian takdir Allah itu "keliru" karena menempatkan nikmat pada orang yang tidak ia sukai. Oleh karena itu, kalimat <em>wallāhu yakhtaṣṣu biraḥmatihī man yasyā'</em> adalah tamparan intelektual keras dari Allah: <em>"Kalian siapa gerangan berani mengatur bagaimana Aku mendistribusikan rahmat-Ku?!"</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em> (Maqashid Syariah &amp; Sosiologi Peradaban):</strong><br>
+        Ibnu 'Asyur menguraikan bahwa digandengkannya Ahlul Kitab dan kaum Musyrikin merupakan fenomena sosiologi politik kekuasaan. Suatu tatanan lama yang sudah mapan (<em>status quo</em>), meskipun secara internal terpecah belah, akan selalu otomatis bersatu menghadapi kemunculan suatu kekuatan baru yang mengancam privilese kultural mereka. Ibnu 'Asyur menjelaskan bahwa penolakan mereka berakar pada rasa sakit melihat hilangnya privilese kepemimpinan (<em>ri'āsah</em>). Ayat ini diturunkan untuk memutus tali ketergantungan psikologis kaum Anshar agar mereka tidak lagi meratapi hilangnya persahabatan pra-Islam dengan kaum Yahudi, melainkan fokus membangun peradaban baru berdaulat di Madinah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Corak Adabi Ijtima'i &amp; Kontekstual Nusantara):</strong><br>
+        Quraish Shihab membedah diksi <em>yawaddu</em> sebagai hasrat batin terdalam yang memandu sikap seseorang. Beliau mengingatkan bahwa ayat ini tidak boleh dipahami sebagai ajakan untuk memusuhi atau bertindak tidak adil kepada non-Muslim dalam interaksi sosial kemanusiaan (sebagaimana kaidah QS. Al-Mumtahanah: 8). Namun ayat ini memberikan peringatan realistis: dalam perkara keyakinan, akidah, dan kemandirian institusional, umat Islam tidak boleh mengidap <em>inferiority complex</em> (rasa rendah diri) atau terus-menerus mencari pengakuan (<em>approval-seeking</em>) dari pihak luar. Sikap mental orang beriman harus bersandar pada <em>Dhul-Fadhlil-'Azhim</em>.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Buya Hamka (w. 1981 M) — <em>Tafsir Al-Azhar</em> (Spiritualitas Perjuangan &amp; Kritik Kolonialisme):</strong><br>
+        Buya Hamka membaca ayat ini dengan kacamata sejarah perjuangan kemerdekaan bangsa Indonesia. Hamka melukiskan bagaimana mental imperialis kolonial Barat persis mencerminkan ayat ini: penjajah tidak pernah menginginkan bangsa pribumi Muslim cerdas, maju ekonominya, atau mandiri teknologinya (<em>mā yawaddu... ay yunazzala 'alaikum min khair</em>). Politik <em>devide et impera</em> dijalankan semata-mata agar berkah kemerdekaan itu tidak pernah turun. Hamka menyerukan: <em>"Hai kaum beriman, bangunlah dari tidurmu! Berhentilah mengharapkan belas kasihan dari orang yang memendam hasad kepadamu. Bekerjalah, bangun kekuatanmu sendiri, dan mintalah karunia langsung kepada Pemilik Karunia Yang Maha Agung!"</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>8. Kementerian Agama RI — <em>Tafsir Lengkap &amp; Tematik Kemenag RI</em> (Kontekstualisasi Kebangsaan):</strong><br>
+        Tafsir Kemenag RI menempatkan ayat ini sebagai pedoman kewaspadaan ideologis nasional. Di tengah dinamika masyarakat plural, umat Islam harus cerdas membedakan antara toleransi muamalah dan ketahanan iman. Sikap dengki atas kemajuan pihak lain adalah racun yang merusak kerukunan beragama. Ayat ini mendidik umat Islam agar berjiwa besar, tidak membalas kedengkian dengan kedengkian baru, melainkan menjawabnya dengan meningkatkan kualitas hidup, integritas takwa, dan kontribusi nyata bagi peradaban bangsa.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') &amp; Dinamika Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Analisis &amp; Sudut Pandang Khusus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna &amp; Ruang Lingkup "Min Khairin"</strong></td>
+                <td>Mencakup risalah kenabian Muhammad ﷺ, Al-Qur'an, syariat Islam, dan hidayah keselamatan akhirat.</td>
+                <td>At-Tabari &amp; Al-Qurthubi: Meliputi pula kemaslahatan duniawi, kemenangan politik, dan stabilitas ekonomi.<br>Hamka: Berkah kemandirian bangsa dan pembebasan dari belenggu hegemoni kolonial.</td>
+            </tr>
+            <tr>
+                <td><strong>Motif Penolakan Ahlul Kitab &amp; Musyrikin</strong></td>
+                <td>Penolakan mereka berakar pada rasa dengki (<em>hasad</em>) dan arogansi kelompok, bukan karena ketidaktahuan logis.</td>
+                <td>Ar-Razi: Menyoroti pembangkangan teologis terhadap keadilan takdir Allah.<br>Ibnu 'Asyur: Menyoroti motif sosiologi kekuasaan dan ketakutan kehilangan hegemoni kultural (<em>hubbur-ri'āsah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Korelasi "Yakhtaṣṣu" dengan Kedaulatan Wahyu</strong></td>
+                <td>Kenabian dan hidayah adalah hak prerogatif mutlak Allah yang tidak dapat diintervensi oleh klaim kasta rasial.</td>
+                <td>Ibnu Katsir: Terpilihnya Nabi dari bangsa Arab adalah penegasan janji doa Nabi Ibrahim a.s.<br>Az-Zamakhsyari: Pemilihan didasarkan atas hikmah kesucian bejana jiwa Nabi yang paling agung di alam semesta.</td>
+            </tr>
+            <tr>
+                <td><strong>Implikasi Fiqih &amp; Relasi Sosial</strong></td>
+                <td>Dilarang menjadikan kaum penentang akidah sebagai penasihat kepercayaan dalam rahasia kedaulatan umat.</td>
+                <td>Al-Qurthubi: Larangan keras meletakkan pos pertahanan dan perbendaharaan negara pada non-Muslim penentang.<br>Quraish Shihab &amp; Kemenag: Pembatasan berlaku pada urusan privasi kedaulatan iman; hubungan muamalah sosial tetap wajib berlandaskan keadilan dan kebajikan.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi &amp; Arsitektur Jiwa)</h2>
+    <p>
+        <em>[Catatan Metodologis: Analisis berikut merupakan pembacaan sistemik, neuropsikologi kognitif, dan refleksi tazkiyatun nafs kontemporer untuk membantu perombakan cara berpikir, bukan wahyu mutlak dan tidak dimaksudkan sebagai pembenaran cocoklogi sains liar].</em>
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Jahiliyah (Scarcity &amp; Zero-Sum) vs Pola Pikir Qur'ani (Abundance &amp; Divine Sovereignty)</h3>
+    <p>
+        Ayat 105 melakukan dekonstruksi mendalam terhadap dua arsitektur kognitif yang saling bertolak belakang dalam memandang rezeki, kemuliaan, dan keberuntungan sesama manusia:
+    </p>
+    <ul>
+        <li>
+            <strong>Pola Pikir Hasad (The Scarcity &amp; Zero-Sum Trap):</strong><br>
+            Ahlul Kitab dan kaum Musyrikin terjebak dalam bias kognitif <em>Zero-Sum Game</em>. Mereka memandang anugerah kemuliaan Ilahi bagaikan sepotong kue pai yang volumenya tetap dan terbatas. Dalam persepsi mental yang terdistorsi ini, apabila orang lain (kaum Muslimin) mendapatkan sepotong kue kenabian dan kehormatan, maka secara otomatis jatah kemuliaan kelompok mereka berkurang atau terancam musnah. Pola pikir kelangkaan (<em>scarcity mindset</em>) ini memicu kecemasan eksistensial, kepahitan batin, dan ledakan agresi untuk menjegal pihak lain. Mereka lebih memilih melihat pihak lain hancur daripada melihat mereka maju, sekalipun kehancuran orang lain tidak menambah keuntungan apa pun bagi diri mereka.
+        </li>
+        <li>
+            <strong>Pola Pikir Qur'ani (The Divine Abundance Mindset):</strong><br>
+            Al-Qur'an menghancurkan ilusi kelangkaan tersebut pada fashilah penutup: <strong>Wallāhu Dżul-Faḍlil-‘Aẓīm</strong>. Di mata orang beriman, perbendaharaan Allah adalah samudera tak bertepi. Keberhasilan, nikmat wahyu, kenaikan pangkat, atau rezeki yang diraih oleh orang lain sama sekali tidak mengurangi satu tetes pun jatah karunia yang disediakan Allah untuk diri kita. Sikap mental orang beriman tidak pernah terancam oleh pencapaian sesama makhluk, karena mereka memandang langsung kepada Sumber Karunia yang Mahaluas.
+        </li>
+    </ul>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Asymmetric Sovereignty Principle" (Prinsip Kedaulatan Asimetris Rahmat):</strong><br>
+            <em>Premis Dasar:</em> Makhluk ciptaan dapat bersepakat 100% untuk membenci, memboikot, mendengki, atau membuat konspirasi penjegalan terhadap kita (<em>mā yawaddu... ay yunazzala 'alaikum min khair</em>), namun efektivitas kuasa mereka secara ontologis adalah 0% di hadapan hak prerogatif Allah (<em>wallāhu yakhtaṣṣu biraḥmatihī may yasyā'</em>).<br>
+            <em>Dampak Pengambilan Keputusan:</em> Kaidah ini membebaskan energi mental dari ketakutan sosial. Seorang profesional atau juru dakwah tidak akan menghabiskan energinya untuk meratapi boikot musuh, melobi para penentang yang berhati dengki, atau cemas akan masa depannya. Ia memisahkan secara tegas antara opini manusia dan takdir Ilahi.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Gatekeeper Fallacy" (Kekeliruan Ilusi Pemegang Pintu):</strong><br>
+            <em>Premis Dasar:</em> Manusia kerap mengalami penderitaan psikologis dan disonansi kognitif parah karena mengira bahwa pintu hidayah, rezeki, promosi, dan kehormatan dipegang oleh suatu institusi, senior, atau kelompok hegemoni tertentu.<br>
+            <em>Dampak Pengambilan Keputusan:</em> Ayat ini meruntuhkan ilusi pemegang pintu: <strong>Tidak ada makhluk yang memiliki lisensi menjadi penjaga pintu gerbang rahmat Allah</strong>. Kedaulatan ada di tangan Allah. Jika satu pintu ditutup oleh kebencian makhluk, Allah Yang Maha Mengkhususkan Rahmat akan membukakan seribu pintu alternatif yang tak terduga.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Hasad &amp; Pemulihan Homeostasis Jiwa (Tazkiyatun Nafs)</h3>
+    <p>
+        Dalam studi neurobiologi modern, ketika seseorang mengidap rasa dengki destruktif (<em>malicious envy / hasad</em>), terjadi aktivasi abnormal pada area <strong>Dorsal Anterior Cingulate Cortex (dACC)</strong>—pusat otak yang bertanggung jawab memproses rasa sakit fisik dan penderitaan sosial (<em>social pain</em>). Bagi seorang pendengki, melihat keberhasilan orang lain direspons oleh otaknya persis seperti luka tusukan fisik di tubuhnya. Ironisnya, ketika orang yang didengki tertimpa kemalangan, area <strong>Ventral Striatum</strong> (pusat penghargaan dan pelepasan hormon dopamin) pada otak pendengki menyala, menimbulkan rasa puas semu yang destruktif (<em>Schadenfreude</em>).
+    </p>
+    <p>
+        Inilah mengapa Al-Qur'an mendefinisikan hasad sebagai racun batin yang membakar diri sendiri. Terapi Al-Qur'an memotong lingkaran setan neurobiologis ini melalui:
+    </p>
+    <ul>
+        <li><strong>Dekonstruksi Ego Sentrisme:</strong> Mengakui secara jujur bahwa rahmat Allah adalah hak prerogatif-Nya (<em>yakhtaṣṣu</em>), bukan piagam pesanan ego kita.</li>
+        <li><strong>Metode Tabrīk &amp; Doa Ghibthah:</strong> Melatih otak secara sadar untuk mendoakan keberkahan bagi orang yang berprestasi, seketika menenangkan amigdala yang hiperaktif dan memulihkan regulasi emosi di <em>Ventromedial Prefrontal Cortex (vmPFC)</em> menuju kedamaian batin (<em>thuma'nīnah</em>).</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer &amp; Kritik Peradaban)</h2>
+
+    <h3>1. Geopolitik Hegemoni: "Containment Policy" &amp; Proteksionisme Teknologi</h3>
+    <p>
+        Ayat 105 memberikan instrumen analisis geopolitik yang sangat tajam untuk membedah relasi internasional kontemporer. Di panggung global, negara-negara adidaya dan kekuatan hegemoni mapan secara sistemik menjalankan doktrin pembendungan (<em>containment policy</em>) terhadap potensi kebangkitan negeri-negeri Muslim dan negara berkembang:
+    </p>
+    <ul>
+        <li><strong>Proteksionisme Epistemologis &amp; Embargo Teknologi:</strong> Kemandirian riset sains terdepan, teknologi kecerdasan buatan, bio-teknologi, dan energi nuklir damai sering kali dibatasi secara ketat melalui sanksi sepihak, perang paten, dan regulasi internasional yang asimetris. Sikap enggan melihat peradaban lain mandiri dan sejahtera mencerminkan manifesto ayat: <em>mā yawaddulladżīna kafarū... ay yunazzala ‘alaikum min khair</em>.</li>
+        <li><strong>Standar Ganda Hak Asasi &amp; Keadilan:</strong> Retorika kebebasan dan demokrasi yang digaungkan kekuatan global kerap mendadak senyap ketika dihadapkan pada penderitaan kaum Muslimin di Palestina atau penindasan etnis tertindas. Aliansi politik modern membuktikan kaidah <em>jam'ul-adhdād</em>: kepentingan hegemoni ekonomi dan militer mampu menyatukan elemen-elemen sekuler dan ultra-nasionalis untuk menekan kemunculan kepemimpinan dunia Islam yang berdaulat.</li>
+    </ul>
+
+    <h3>2. Ekosistem Digital: Algoritma "Rage-Baiting", Hasad Korporat &amp; Toksisitas Medsos</h3>
+    <p>
+        Di tingkat personal dan interaksi sosial mikro, ayat ini membedah patologi dunia modern yang diperparah oleh arsitektur internet:
+    </p>
+    <ul>
+        <li><strong>Epidemi "Digital Envy" di Media Sosial:</strong> Platform media sosial (Instagram, X, LinkedIn, TikTok) secara sistemik dirancang memamerkan serpihan-serpihan nikmat (<em>khair</em>)—mulai dari promosi jabatan, kemewahan materi, hingga keharmonisan keluarga. Algoritma memicu perbandingan sosial tiada henti (<em>chronic social comparison</em>), menyuburkan rasa pedih melihat kebahagiaan orang lain. Banyak netizen yang mengekspresikan ketidaksukaan ini dalam bentuk nyinyiran terstruktur, perundungan siber (<em>cyberbullying</em>), dan fenomena <em>cancel culture</em> destruktif berkedok kritik moral objektif.</li>
+        <li><strong>Budaya "Gatekeeping" di Lingkungan Kerja &amp; Akademik:</strong> Fenomena penahanan akses (<em>gatekeeping</em>) di dunia korporat dan menara gading akademik: para senior atau pemegang otoritas yang merasa posisinya terancam sering kali menahan informasi vital, mempersulit promosi junior berbakat, atau mengubur ide-ide brilian bawahan semata-mata karena enggan melihat orang lain bersinar melampaui mereka.</li>
+    </ul>
+
+    <h3>3. Emansipasi Mental: "Decolonizing the Muslim Mind"</h3>
+    <p>
+        Kritik peradaban paling mendesak yang dituntut oleh ayat ini bagi umat Islam abad ke-21 adalah pembebasan dari <strong>Mentalitas Inferior Inlander (Mental Budak)</strong>. Selama ratusan tahun masa pascakolonial, sebagian intelektual dan elite dunia Islam terus mengidap dahaga validasi: merasa ideologi, sistem ekonomi, budaya, dan keberagamaannya belum 'sah' jika belum dipuji, disetujui, atau diberi akreditasi oleh lembaga-lembaga riset Barat sekuler.
+    </p>
+    <p>
+        Ayat 105 menegaskan dekolonisasi mental: umat Islam harus memutus ketergantungan psikologis pada 'kehendak baik' peradaban penentang. Masa depan, kemuliaan, dan kemajuan umat tidak ditentukan oleh persetujuan hegemoni global, melainkan dibangun melalui etos kerja keras sains, keluhuran moral wahyu, dan tawakal penuh kepada Allah Yang Memiliki Karunia Yang Mahabesar.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret &amp; Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Protokol Mikro-Habit (&lt; 5 Menit) — "The Instant Blessing Reflex" (Refleks Menghancurkan Hasad):</strong><br>
+                Setiap kali mata melihat rekan kerja meraih promosi, kawan mengumumkan prestasi, atau linimasa media sosial menampilkan kelimpahan nikmat orang lain yang memicu sedikit saja desakan iri di dada: seketika tahan diri selama 3 detik, jangan berkomentar sinis, lalu secara lisan dan batin ucapkan doa tulus: <em>"Bārakallāhu laka wa bāraka 'alayk, Allāhumma inni as'aluka min faḍlikal-'aẓīm"</em> (Semoga Allah memberkahimu atas nikmat ini, dan ya Allah karuniakanlah kepadaku dari karunia-Mu yang agung). Lakukan ini sebagai rem spiritual otomatis untuk menetralkan racun hasad sebelum mengendap di hati.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Rule) — "Anti-Gatekeeper Operating System":</strong><br>
+                Ketika menghadapi penolakan sepihak, penjegalan karier, boikot proyek, atau kebencian politik kantor dari pihak yang tidak menyukai kita: terapkan aturan <em>24-Hour Pivot Rule</em>. Berhenti meratapi penolakan mereka, jangan membuang energi untuk mengemis restu orang yang memendam hasad, dan jangan membalas dengan dendam. Alihkan fokus 100% untuk mengetuk pintu rahmat Allah: tingkatkan kualitas karya nyata (<em>ihsān</em>), audit integritas diri, dan carilah jalur ikhtiar alternatif dengan keyakinan penuh bahwa pintu karunia Allah tidak pernah dapat digembok oleh manusia.
+            </li>
+            <li>
+                <strong>Komitmen Etika Relasional — "Open-Door Knowledge Sharing" (Melawan Budaya Menahan Kebaikan):</strong><br>
+                Sebagai bukti bahwa kita terbebas dari watak Ahlul Kitab yang suka menahan kebaikan (<em>mā yawaddu</em>), jadwalkan minimal 1 sesi per pekan di tempat kerja, kampus, atau komunitas untuk membagikan ilmu, referensi berharga, membuka jejaring relasi, atau mementori junior secara cuma-cuma tanpa rasa takut tersaingi atau kehilangan privilese jabatan. Jadilah saluran karunia Allah bagi sesama.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika seseorang yang pernah meremehkanku, mengkritikku, atau tidak kusukai tiba-tiba mendapatkan nikmat besar, keberhasilan karier, atau pujian khalayak: apakah di sudut batinku yang terdalam terselip rasa sesak, tidak rela, atau keinginan halus agar nikmat tersebut segera lenyap dari tangannya?
+            </li>
+            <li>
+                Apakah keputusan-keputusan penting dalam hidupku, caraku bekerja, gaya hidupku, dan caraku beribadah masih digerakkan oleh dahaga mencari validasi, persetujuan, dan tepuk tangan dari manusia yang sejatinya memendam ketidaksukaan pada prinsip keimananku?
+            </li>
+            <li>
+                Seberapa kokoh penghayatanku terhadap nama Allah <strong>Dhul-Faḍlil-‘Aẓīm</strong> dalam realitas sehari-hari: apakah aku masih sering didera kecemasan rezeki yang berlebihan, merasa jatah masa depanku telah "diserobot" oleh orang lain, seolah-olah perbendaharaan Tuhanku begitu sempit dan terbatas?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat &amp; Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Rabbanā, Yā Żal-Faḍlil-‘Aẓīm. Ya Allah Yang Maha Mengkhususkan rahmat kepada siapa saja yang Engkau kehendaki, Pemilik perbendaharaan karunia yang mahaluas dan tak bertepi. Bersihkanlah hati kami dari segala benih hasad, kedengkian, kepicikan batin, dan kepedihan melihat nikmat sesama hamba-Mu. Karuniakanlah kepada kami kelapangan dada orang-orang yang beriman, yang selalu bergembira atas kebaikan orang lain dan bersandar penuh pada kelimpahan rahmat-Mu. Lindungilah diri kami, keluarga kami, dan umat ini dari makar, kedengkian, dan konspirasi orang-orang yang tidak menginginkan turunnya kebaikan kepada kami. Cukupkanlah kami dengan karunia-Mu yang agung, tegakkanlah kemandirian iman kami di atas muka bumi, dan jangan biarkan kami menggantungkan harapan kami kepada selain-Mu. Āmīn Yā Rabbal-‘Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-104 - QS. Al-Baqarah Ayat 104.html">&larr; Kembali ke Ayat 104 (QS. 2:104)</a>
+        <span><strong>QS. Al-Baqarah [2]: 105</strong></span>
+        <a href="002-106 - QS. Al-Baqarah Ayat 106.html">Lanjut ke Ayat 106 (QS. 2:106) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

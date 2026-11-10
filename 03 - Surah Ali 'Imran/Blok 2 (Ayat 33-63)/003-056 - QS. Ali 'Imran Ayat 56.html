@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-056 - QS. Ali 'Imran Ayat 56 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-055 - QS. Ali 'Imran Ayat 55.html">&larr; Ayat Sebelumnya (QS. 3:55)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-057 - QS. Ali 'Imran Ayat 57.html">Ayat Berikutnya (QS. 3:57) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imrān & Mubahalah</span>
+        <span class="badge">Klaster 4 (Ayat 52–58): Resistensi Kafir Bani Israil, Penyelamatan Al-Masīḥ & Dekret Pembalasan Ilahi</span>
+        <span class="badge">13 Kata | 60 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 56</h1>
+    <div class="transliteration">
+        "Fa-ammallażīna kafarū fa-u‘ażżibuhum ‘ażāban syadīdan fid-dunyā wal-ākhirati wa mā lahum min nāṣirīn(a)."
+    </div>
+    <div class="thematic-title">
+        Dekret Pengadilan Ilahi & Keniscayaan Azab Ganda (Dunia-Akhirat) bagi Penentang Kebenaran: Dekonstruksi Ilusi Impunitas dan Nihilitas Penolong Mutlak
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 4: Polarisasi Eksistensial Pasca-Pengangkatan Al-Masih & Eksekusi Keadilan Transendental)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        فَأَمَّا ٱلَّذِينَ كَفَرُوا۟ فَأُعَذِّبُهُمْ عَذَابًۭا شَدِيدًۭا فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ وَمَا لَهُم مِّن نَّـٰصِرِينَ ۝٥٦
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Adapun orang-orang yang kafir (mengingkari kebenaran kenabian, merancang makar pembunuhan, dan menolak petunjuk Ilahi), maka Aku akan mengazab mereka dengan azab yang sangat keras di dunia dan di akhirat; dan sekali-kali tidak ada bagi mereka seorang penolong pun."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Doktrinal:</strong> Ayat ini merupakan ketetapan hukum putusan (<em>tafṣhīl al-ḥukm</em>) dari pernyataan global yang diproklamasikan Allah pada pengujung ayat 55: <em>"tsumma ilayya marji‘ukum fa-aḥkumu baynakum fīmā kuntum fīhi takhtalifūn"</em> (Kemudian kepada-Kulah kepulanganmu, lalu Aku putuskan di antara kamu tentang apa yang kamu perselisihkan). Huruf <em>Fā'</em> pada awal kata <strong>Fa-ammā</strong> adalah <em>fā' tafshīliyyah</em> yang merinci eksekusi vonis keadilan transendental bagi golongan pertama: para penentang kebenaran yang sengaja menutup fitrah nurani mereka (<em>alladzīna kafarū</em>).
+    </p>
+    <p>
+        Penyebutan fi'il mudhari' dengan dhamir mutakallim wahdah <strong>fa-u‘ażżibuhum</strong> (maka Aku sendiri yang akan mengazab mereka) menegaskan penisbatan langsung siksaan tersebut kepada keagungan dan kekuasaan mutlak Allah tanpa perantara. Diperkuat dengan maf'ul muthlaq <strong>‘ażāban syadīdan</strong> (dengan siksaan yang teramat dahsyat), ayat ini menuntaskan dua fase pembalasan: <strong>fid-dunyā</strong> (melalui kehancuran fisik, keterhinaan sosiologis, kekalahan militer, kecemasan batin, dan musnahnya peradaban mereka) serta <strong>wal-ākhirah</strong> (azab neraka yang kekal abadi). Penutup ayat, <strong>wa mā lahum min nāṣirīn</strong>, menghancurkan fondasi psikologis kaum kafir yang kerap mengandalkan jejaring kekuasaan, aliansi militer, maupun klaim keselamatan semu (seperti dogma penebusan dosa atau syafaat berhala). Huruf <em>min</em> za'idah berfungsi menetapkan penafian mutlak (<em>tanshis 'alal-'umum</em>): tidak ada pelindung, perisai, ataupun pembela sekecil apa pun di hadapan pengadilan Allah.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>فَأَمَّا</strong><br>(<em>Fa-ammā</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah:</strong> Hamzah qatha' keluar dari aqshal-halq dengan sifat jahr dan syiddah.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Mim bertasydid ditahan dengan ghunnah terpanjang (<em>akmal mā takūn</em>) 2 harakat.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif setelah Mim dibaca 2 harakat saat waqaf. Saat washal, alif gugur karena bertemu sukun pada lam al-maushul (<em>iltiqā'us-sākinain</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tahqiq pada hamzah dan menyempurnakan ghunnah pada mim bertasydid. Partikel <em>ammā</em> berfungsi memadukan fungsi syarat, taukid, dan perincian (<em>harfu syarthin wa tafshīlin wa tawkīd</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلَّذِينَ</strong><br>(<em>Allażīna</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal; jika ibtida' dibaca fathah.<br>
+                    <strong>Idghām Syamsiyyah Lāzim:</strong> Lam ta'rif di-idghamkan ke dalam lam isim maushul.<br>
+                    <strong>Huruf Żāl:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas dengan sifat rikhwah dan jahr.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Ya' sukun jatuh setelah kasrah dibaca 2 harakat.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca dengan mad thabi'i pada ya'. Isim maushul jamak ini mencakup seluruh kafir historis (penentang Nabi Isa AS dari kalangan Bani Israil) maupun setiap entitas kufur lintas zaman hingga akhir zaman.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>كَفَرُوا۟</strong><br>(<em>Kafarū</em>)</td>
+                <td>
+                    <strong>Huruf Kāf:</strong> Keluar dari pangkal lidah di bawah makhraj Qaf dengan sifat hams dan syiddah.<br>
+                    <strong>Huruf Rā' Tafkhīm:</strong> Berharakat dhammah dibaca tebal.<br>
+                    <strong>Mad Ṭhabī'ī & Alif Fāriqah:</strong> Wawu mad dibaca 2 harakat; alif di ujungnya tidak dilafalkan (hanya penanda grafis rasm).
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (termasuk Hafsh):</strong> Membaca tafkhim pada ra' dhammah.<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Tetap mentafkhimkan ra' pada kata ini karena harakat dhammah (kaidah tarqiq Warsy hanya berlaku pada ra' berharakat fathah/dhammah yang didahului ya' sukun atau kasrah lazimah).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>فَأُعَذِّبُهُمْ</strong><br>(<em>Fa-u‘ażżibuhum</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah Qatha':</strong> Berharakat dhammah.<br>
+                    <strong>Huruf ‘Ain:</strong> Keluar dari wasathul-halq dengan sifat tawassuth.<br>
+                    <strong>Żāl Musyaddadah:</strong> Tasydid dengan sifat rikhwah.<br>
+                    <strong>Iẓhār Syafawī:</strong> Mīm jamak sukun bertemu ‘Ain pada lafaz berikutnya dibaca jelas tanpa ghunnah tambahan.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr & Qālūn (wajh shilah):</strong> Membaca shilah mīm jamak dengan wawu lafazh: <em>fa-u‘ażżibuhumū ‘ażāban</em> sepanjang 2 harakat.<br>
+                    • <strong>Abū Ja'far:</strong> Membaca konsisten shilah mīm jamak.<br>
+                    • <strong>Hafsh, Syu'bah, Warsy, Ibnu 'Āmir, Ḥamzah, Al-Kisā'ī, Khalaf, Abū 'Amr, Ya'qūb:</strong> Membaca sukun pada mīm jamak (<em>fa-u‘ażżibuhum</em>) dengan idzhar syafawi mutlak.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>عَذَابًۭا شَدِيدًۭا</strong><br>(<em>‘Ażāban syadīdā</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin fathah pada <em>‘ażāban</em> bertemu huruf Syīn. Suara nun mati disamarkan di makhraj Syīn dengan ghunnah tarqiq berkadar sedang.<br>
+                    <strong>Huruf Syīn:</strong> Memiliki sifat tafasysyī (penyebaran angin di rongga mulut).<br>
+                    <strong>Mad ‘Iwaḍh:</strong> Jika waqaf pada <em>syadīdā</em>, tanwin fathah diganti alif mad 2 harakat. Jika washal ke <em>fī</em>, berlaku ikhfā' haqīqī.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca ikhfa' haqiqi antara tanwin dan Syin. Struktur mashdar maf'ul muthlaq ini menegaskan keagungan intensitas azab yang melampaui batas toleransi fisik maupun mental manusia.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>فِى ٱلدُّنْيَا</strong><br>(<em>Fid-dunyā</em>)</td>
+                <td>
+                    <strong>Isqāṭh Mad:</strong> Ya' mad pada <em>fī</em> gugur saat washal karena iltiqā'us-sākinain.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif lebur ke dalam Dal.<br>
+                    <strong>Iẓhār Muṭhlaq:</strong> Nun sukun bertemu Yā' dalam satu kata (<em>Dun-yā</em>). Wajib dibaca jelas tanpa idgham demi menjaga keaslian struktur kata dari kerancuan mudha'af.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī & Khalaf al-'Āsyir:</strong> Membaca <strong>Imālah Kubrā</strong> pada alif ta'nits maqshurah <em>ad-Dunyē</em>.<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqlīl (Imālah Shughrā)</strong> di antara fathah dan imalah.<br>
+                    • <strong>Abū ‘Amr:</strong> Membaca taqlīl pada salah satu riwayat masyhurnya.<br>
+                    • <strong>‘Āṣhim (Hafsh & Syu'bah), Ibnu Katsīr, Ibnu ‘Āmir, Abū Ja'far & Ya'qūb:</strong> Membaca dengan <strong>Fatḥ murni</strong> (<em>ad-Dunyā</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَٱلْـَٔاخِرَةِ</strong><br>(<em>Wal-ākhirah</em>)</td>
+                <td>
+                    <strong>Iẓhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Mad Badal:</strong> Hamzah mendahului huruf mad.<br>
+                    <strong>Huruf Khā':</strong> Isti'lā' derajat rendah karena kasrah.<br>
+                    <strong>Rā' Muraqqaqah:</strong> Kasrah dibaca tipis saat washal. Jika waqaf, Ha' ta' marbuthah sukun dengan hams.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca 3 wajh pada mad badal (<strong>Qaṣhr 2, Tawassuṭh 4, Ṭhūl 6 harakat</strong>) serta membaca <strong>Tarqīq Rā'</strong> karena didahului kasrah lazimah.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca Qashr 2 harakat konsisten pada mad badal dan mentafkhimkan ra' saat waqaf atau mentarqiqkannya karena kasrah saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَمَا لَهُم مِّن</strong><br>(<em>Wa mā lahum min</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Pada <em>mā</em> nafiyah sepanjang 2 harakat.<br>
+                    <strong>Idghām Mīmī / Mitslain Shaghīr:</strong> Mīm sukun pada <em>lahum</em> melebur sempurna ke dalam Mīm pada <em>min</em> disertai ghunnah kamilah 2 harakat.
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam menerapkan idgham mitslain shaghir dengan ghunnah sempurna pada pertemuan dua mim tersebut.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>نَّـٰصِرِينَ ۝٥٦</strong><br>(<em>Nāṣirīn</em>)</td>
+                <td>
+                    <strong>Idghām Bighunnah:</strong> Nun sukun pada <em>min</em> lebur ke dalam Nun <em>nāṣirīn</em>.<br>
+                    <strong>Huruf Shād:</strong> Memiliki sifat isti'lā', iṭhbāq, dan ṣhafīr.<br>
+                    <strong>Rā' Muraqqaqah:</strong> Kasrah dibaca tipis.<br>
+                    <strong>Mad ‘Āriḍh lis-Sukūn:</strong> Pada waqaf akhir ayat dibaca 2, 4, atau 6 harakat dengan tawassuth pada huruf Nun sukun.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca idgham bighunnah kamilah dan mad 'aridh lis-sukun. Penegasan bentuk jamak <em>nāṣirīn</em> berposisi menolak segala bentuk entitas pembela, baik skala personal maupun kolektif.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul: Makar Kaum Yahudi atas Al-Masih & Konfrontasi Delegasi Nasrani Najran:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (No. 7150) dan Ibnu Abi Hatim dari jalur Al-Hasan Al-Bashri dan Qatadah mengenai konteks penurunan rangkaian ayat ini:<br>
+        <em>"Ketika orang-orang kafir dari kalangan Bani Israil bersepakat merancang makar pembunuhan terhadap Isa putra Maryam AS dan memfitnah kesucian ibundanya, lalu Allah mengangkat Isa ke hadirat-Nya, Allah menurunkan dekret ancaman ini kepada mereka yang telah kafir dan mendustakan rasul-Nya. Ayat ini sekaligus dibacakan oleh Rasulullah ﷺ di hadapan para pembesar delegasi Kristen Najran (Al-'Aqib dan As-Sayyid) di Madinah sebagai penegasan bahwa siapa pun yang menolak kebenaran tauhid murni dan memusuhi para utusan Allah, tidak akan pernah memiliki pembela dari siksa Allah baik di dunia maupun di akhirat."</em><br>
+        <strong>Status Atsar:</strong> Diterima (Hasan Lighairihi) sebagai penjelasan konteks historis Madaniyah.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi' Al-Bukhārī (No. 2447) & Ṣhaḥīḥ Muslim (No. 2578) dari Abu Musa Al-Asy'ari r.a. — Hakikat Azab Dunia bagi Kezaliman dan Kekufuran:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>«Inna Allāha layum-lī lizh-zhālimi, ḥattā iżā akhażahū lam yuf-lit-hu!»</em><br>
+        (Sesungguhnya Allah benar-benar menangguhkan orang yang zalim; hingga apabila Dia telah menjatuhkan siksa kepadanya, Dia tidak akan pernah melepaskannya lagi!).<br>
+        Kemudian Rasulullah ﷺ membaca firman Allah Ta'ala:<br>
+        <em>«Wa każālika akhżu Rabbika iżā akhażal-qurā wa hiya zhālimatun, inna akhżahū alīmun syadīd»</em> (Dan begitulah siksaan Tuhanmu apabila Dia menyiksa penduduk suatu negeri yang berbuat zalim. Sungguh, siksaan-Nya sangat pedih lagi sangat keras — QS. Hūd: 102).<br>
+        <strong>Faidah Hadits:</strong> Menjelaskan frasa <em>fa-u‘ażżibuhum ‘ażāban syadīdan fid-dunyā</em>, bahwa penundaan siksa bukanlah pembiaran, melainkan perangkap istidraj sebelum kejatuhan total yang tak terhindarkan.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Muslim (No. 2807) dari Sahabat Anas bin Malik r.a. — Relativitas Nikmat Dunia di Hadapan Azab Syadīd:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>«Yu’tā bi-an‘ami ahli ad-dunyā min ahli an-nāri yawmal-qiyāmati fayuṣbaghu fī an-nāri ṣabghatan, tsumma yuqālu: Yā bna Ādama, hal ra’ayta khayran qaṭṭu? Hal marra bika na‘īmun qaṭṭu? Fayaqūlu: Lā wallāhi yā Rabb!»</em><br>
+        (Akan didatangkan pada hari kiamat seorang penghuni neraka yang paling banyak merasakan kemewahan hidup di dunia, lalu ia dicelupkan satu kali celupan ke dalam api neraka. Kemudian ditanyakan kepadanya: "Wahai anak Adam, pernahkah engkau melihat kebaikan barang sedikit pun? Pernahkah engkau merasakan kenikmatan barang sedikit pun?" Maka ia menjawab: "Demi Allah, tidak pernah sama sekali, wahai Tuhanku!").<br>
+        <strong>Derajat Hadits:</strong> Sahih Muttafaq 'Alaih dalam standar literatur hadits sahih, memberikan ilustrasi visual tak terperi mengenai kedahsyatan kata <em>‘ażāban syadīdan</em> yang seketika menghapus seluruh memori kenikmatan duniawi.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. K-F-R (ك-ف-ر — Kafarū):</strong> Menurut Ibnu Faris dalam <em>Mu‘jam Maqāyīs al-Lughah</em>, akar kata ini bermakna tunggal yang kokoh: <em>as-satru wat-taghṭhiyah</em> (menutupi, menyelubungi, dan menyembunyikan). Petani disebut <em>kāfir</em> karena ia menutupi benih dengan tanah. Orang kafir dinamai demikian karena mereka secara sadar menutupi cahaya fitrah ketauhidan yang inheren dalam kalbu mereka dan menyembunyikan kebenaran bukti-bukti nyata kenabian. Di ayat ini, kekafiran mereka mewujud dalam penolakan risalah Nabi Isa AS, perancangan konspirasi pembunuhan, dan keengganan tunduk pada hukum wahyu.
+        </li>
+        <li>
+            <strong>2. ‘-Ż-B (ع-ذ-ب — ‘Ażāb / Fa-u‘ażżibuhum):</strong> Dalam <em>Lisān al-‘Arab</em> dan <em>Maqāyīs al-Lughah</em>, akar kata ini memiliki dimensi semantik yang sangat unik: berkisar pada makna <em>al-man‘u wal-ḥabs</em> (mencegah, menahan, dan memutus). Siksaan disebut <em>‘ażāb</em> karena ia memutus manusia dari kenikmatan hidup, atau karena siksaan tersebut bertujuan mencegah pelakunya dan orang lain dari mengulangi kejahatan serupa. Menariknya, kata <em>mā’un ‘ażbun</em> berarti air tawar yang segar karena ia memutus rasa haus yang membakar. Azab Ilahi adalah pemutusan total dari seluruh rasa aman, kenyamanan, dan rahmat.
+        </li>
+        <li>
+            <strong>3. Sy-D-D (ش-د-د — Syadīdā):</strong> Berakar dari <em>quwwatu al-‘aqd wal-ittihām</em> (kekuatan ikatan, keteguhan, dan kekerasan tekanan yang tak menyisakan celah kelonggaran). Lawan katanya adalah <em>ar-rakhāwah</em> (kelunakan). <em>Syadīd</em> menandakan bahwa siksa tersebut mencapai kulminasi intensitas tertinggi; ikatan penderitaannya tidak dapat diurai, tekanannya melumatkan seluruh daya tahan psikis dan raga.
+        </li>
+        <li>
+            <strong>4. D-N-W (د-ن-و — Ad-Dunyā):</strong> Bentuk mu'annats dari <em>adnā</em>, berakar dari kedekatan waktu (temporalitas) dan kerendahan derajat (peyoratif/hina). Dinamakan dunia karena ia adalah alam yang paling dekat dengan eksistensi awal manusia sebelum akhirat, sekaligus tempat yang serba fana dan rendah nilainya dibandingkan kemuliaan alam ukhrawi.
+        </li>
+        <li>
+            <strong>5. A-Kh-R (أ-خ-ر — Al-Ākhirah):</strong> Kebalikan dari <em>al-awwal</em>, menunjukkan fase kepulangan terakhir di mana tirai ujian telah ditutup, hisab dibuka, dan seluruh konsekuensi amal dieksekusi secara permanen tanpa ada lagi peluang pertobatan.
+        </li>
+        <li>
+            <strong>6. N-Ṣh-R (ن-ص-ر — Nāṣirīn):</strong> Bermakna pertolongan, pembelaan, dan penyelamatan dari kezaliman atau kebinasaan (<em>al-‘awn wal-inqāż</em>). Penggunaan bentuk jamak isim fa'il (<em>nāṣirīn</em>) yang didahului partikel penafian menegaskan kemusnahan total segala bentuk entitas penolong: tidak ada satu pun individu, sekutu geopolitik, klan kekerabatan, dewa sesembahan, maupun perisai materi yang sanggup mengintervensi vonis Allah.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>فَأَمَّا</strong><br>(<em>Fa-ammā</em>)</td>
+                <td>
+                    <em>Fā'</em>: Harf istitsmār / rābiṭhah.<br>
+                    <em>Ammā</em>: Harf syarthin wa tafshīlin wa tawkīd.
+                </td>
+                <td>
+                    <em>Fā'</em> istisnāfiyyah pengait rincian hukum dari ayat 55. <em>Ammā</em> mengandung makna syarat: <em>mahmā yakun min syai'in</em> (apa pun yang terjadi). Tidak memiliki mahall i'rab.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong><br>(<em>Allażīna</em>)</td>
+                <td>
+                    Ism maushul lil-jam'il-mudzakkar.
+                </td>
+                <td>
+                    Mabni 'alal-fath fi mahalli raf'in <strong>Mubtada'</strong> (diletakkan setelah <em>ammā</em>).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>كَفَرُوا۟</strong><br>(<em>Kafarū</em>)</td>
+                <td>
+                    Fi'il madhi tsulatsi mujarrad, bersambung dengan wawu al-jama'ah.
+                </td>
+                <td>
+                    Fi'il madhi mabni 'aladh-dhammi. Wawu al-jama'ah dhamir muttashil mabni 'alas-sukun fi mahalli raf'in <strong>Fā'il</strong>. Alif fariqah. Seluruh jumlah fi'liyyah <strong>Shilat al-Maushūl</strong>, <em>lā maḥalla lahā minal-i‘rāb</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>فَأُعَذِّبُهُمْ</strong><br>(<em>Fa-u‘ażżibuhum</em>)</td>
+                <td>
+                    <em>Fā'</em>: Jawāb ammā.<br>
+                    <em>U‘ażżibu</em>: Fi'il mudhari' bab taf'īl (rubā'ī mujarrad maziid biharfin).<br>
+                    <em>Hum</em>: Dhamir jam'il-mudzakkar.
+                </td>
+                <td>
+                    <em>Fā'</em> rābiṭhah li-jawābi ammā. <em>U‘ażżibu</em> fi'il mudhari' marfu' bidh-dhammah azh-zhahirah, fa'il dhamir mustatir wujuban taqdiruhu <em>Anā</em> (Allah). <em>Hum</em> dhamir muttashil mabni 'alas-sukun fi mahalli nashbin <strong>Maf‘ūl Bih Awwal</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>عَذَابًۭا</strong><br>(<em>‘Ażāban</em>)</td>
+                <td>
+                    Ism mashdar dari fi'il <em>‘ażżaba</em> (seharusnya <em>ta‘żīban</em>, dipakai isim mashdar untuk keluasan semantik).
+                </td>
+                <td>
+                    Manshub bil-fathah azh-zhahirah sebagai <strong>Maf‘ūl Muṭhlaq</strong> yang berfungsi <em>mubayyin lin-nau'</em> (menjelaskan jenis dan intensitas siksaan karena disifati).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>شَدِيدًۭا</strong><br>(<em>Syadīdā</em>)</td>
+                <td>
+                    Shifah musyabbahah bi-ismil-fa'il wazan <em>fa'īl</em>.
+                </td>
+                <td>
+                    Manshub bil-fathah azh-zhahirah sebagai <strong>Na‘at / Sifat</strong> bagi <em>‘ażāban</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلدُّنْيَا</strong><br>(<em>Fid-dunyā</em>)</td>
+                <td>
+                    <em>Fī</em>: Harfu jarrin.<br>
+                    <em>Ad-Dunyā</em>: Ism mu'annats maqshur wazan <em>fu'lā</em>.
+                </td>
+                <td>
+                    <em>Fī</em> harf jar bermakna zharafiyyah zamaniyyah wa makaniyyah. <em>Ad-Dunyā</em> ism majrur bi-fī, tanda jarnya kasrah muqaddarah 'alal-alif lin-ta'adz-dzur. Jar wa majrur muta'alliq (terkait sintaksis) dengan fi'il <strong>u‘ażżibuhum</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْـَٔاخِرَةِ</strong><br>(<em>Wal-ākhirah</em>)</td>
+                <td>
+                    <em>Wāw</em>: Harfu 'athf.<br>
+                    <em>Al-Ākhirah</em>: Ism mu'annats wazan <em>fā'ilah</em>.
+                </td>
+                <td>
+                    <em>Wawu</em> 'athaf. <em>Al-Ākhirah</em> ma'thuf 'ala <em>ad-Dunya</em>, majrur bil-kasrah azh-zhahirah fi akhirihi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا</strong><br>(<em>Wa mā</em>)</td>
+                <td>
+                    <em>Wāw</em>: Harf 'athf / haliyyah.<br>
+                    <em>Mā</em>: Harf nafyi muhmalah (nafy mutlaq).
+                </td>
+                <td>
+                    <em>Wāw</em> 'athaf mengaitkan jumlah kepada khabar atau wawu haliyyah. <em>Mā</em> nafy yang membatalkan fungsi amil. Tidak memiliki mahall i'rab.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>لَهُم</strong><br>(<em>Lahum</em>)</td>
+                <td>
+                    <em>Lām</em>: Harf jarr.<br>
+                    <em>Hum</em>: Dhamir jam'il-mudzakkar.
+                </td>
+                <td>
+                    Jar wa majrur muta'alliq bi-maḥżūf <strong>Khabar Muqaddam</strong> fi mahalli raf'in.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>مِّن</strong><br>(<em>Min</em>)</td>
+                <td>
+                    Harfu jarrin zā'id (ziyādah li-ta'kīdin-nafy).
+                </td>
+                <td>
+                    Huruf jar tambahan yang berfungsi menetapkan penafian total (<em>li-tanshisil-istighraq</em>). Masuk ke dalam mubtada' nakirah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>نَّـٰصِرِينَ ۝٥٦</strong><br>(<em>Nāṣirīn</em>)</td>
+                <td>
+                    Jamak mudzakkar salim dari isim fa'il <em>nāṣir</em> (akar <em>n-ṣh-r</em>).
+                </td>
+                <td>
+                    Majrur lafzhan bi-min az-za'idah, marfu' mahallan sebagai <strong>Mubtada' Mu'akhkhar</strong>. Tanda jarnya ya' karena jamak mudzakkar salim.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Analisis Mahāllul-Jumlah:</strong></td>
+                <td>
+                    1. Jumlah <em>fa-u‘ażżibuhum...</em> fi mahalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>alladzīna</em>.<br>
+                    2. Seluruh jumlah syarat dan jawab (<em>ammallażīna kafarū fa-u‘ażżibuhum...</em>) adalah <strong>Jumlah Isti'nāfiyyah Tafṣhīliyyah</strong> yang <em>lā maḥalla lahā minal-i‘rāb</em>.<br>
+                    3. Jumlah <em>wa mā lahum min nāṣirīn</em> adalah jumlah ismiyyah ma'thufah atau fi mahalli nashbin <strong>Hāl</strong> dari dhamir <em>hum</em> (menjelaskan kondisi mutlak mereka saat menerima siksa: dalam keadaan tak berdaya dan tanpa pembela).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb at-Tafṣhīl ba‘da al-Ijmāl (Perincian Pasca Proklamasi Global):</strong> Formula <em>Ammā</em> membuka fungsi <em>tafshil ba'dal ijmal</em>. Setelah ayat 55 mengumumkan pengadilan umum di mana seluruh perselisihan teologis diputuskan, ayat 56 mengkhususkan nasib tragis kubu kufur. Ini menimbulkan efek psikologis gentar (<em>tahwīl wa tarhīb</em>) karena pendengar langsung dihadapkan pada vonis final tanpa jeda diplomasi.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Iltifāt wal-Isnād al-Mubāsyir (Penisbatan Langsung Siksaan):</strong> Firman <em>fa-u‘ażżibuhum</em> menggunakan fi'il mutakallim wahdah (Aku sendiri yang menyiksa). Penggunaan bentuk pertama tunggal dari Rabb semesta alam menunjukkan murka yang teramat besar dan kepastian eksekusi. Siksaan bukan diserahkan semata-mata pada hukum kausalitas alam, melainkan digerakkan oleh kehendak qudrah Allah yang menuntut keadilan hakiki.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — At-Tawkīd bil-Mashdar & Wasfuhu (Penguatan Ganda Melalui Sifat):</strong> Penggunaan isim mashdar <em>‘ażāban</em> sebagai maf'ul muthlaq telah berfungsi mengokohkan realitas siksaan (menafikan kiasan). Lalu disusul na'at <em>syadīdan</em> untuk mempertegas kedalaman, kekerasan, dan intensitas penderitaan tersebut hingga ke titik puncak.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Tanṣhīṣh al-Istighrāq bi-Ḥarfil-Jarri az-Zā'id:</strong> Kalimat <em>wa mā lahum min nāṣirīn</em> menggunakan huruf <em>min</em> za'idah di depan isim nakirah dalam konteks nafy. Kaidah balaghah menetapkan: <em>An-nakirah fī siyāqin-nafyi tufīdul-‘umūm, fa-iżā dakhala ‘alayhā ‘min’ kānat naṣṣan fīl-istighrāq</em> (Isim nakirah dalam konteks penafian bermakna umum; apabila dimasuki 'min', ia menjadi dalil definitif yang mencakup seluruh jenis tanpa terkecuali). Ini membabat habis ilusi syafaat teologis, persekutuan politik, atau bantuan tebusan harta.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah ‘an at-Tajrīd al-Muṭhlaq (Keterasingan Eksistensial):</strong> Frasa <em>wa mā lahum min nāṣirīn</em> adalah <em>kināyah ‘an at-takhallī at-tāmm</em> (ungkapan simbolik tentang pembiaran total dan keterasingan absolut). Mereka ditinggalkan sendirian di jurang kehancuran tanpa ada pihak yang menaruh belas kasihan atau sanggup mengulurkan tangan pertolongan.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Aṭh-Ṭhibāq al-Ījābī & Al-Muqābalah:</strong> Terdapat <em>ṭhibāq</em> antara dua dimensi masa: <strong>ad-Dunyā</strong> (dunia fana) dan <strong>al-Ākhirah</strong> (akhirat abadi). Selain itu, ayat 56 ini secara utuh membentuk keselarasan <strong>muqābalah</strong> yang simetris sempurna dengan ayat 57 berikutnya:
+            <br><em>Kafarū &rarr; Āmanū wa ‘amiluṣ-ṣāliḥāt</em>;
+            <br><em>Fa-u‘ażżibuhum ‘ażāban syadīdā &rarr; Fa-yuwaffīhim ujūrahum</em>;
+            <br><em>Mā lahum min nāṣirīn &rarr; Wallāhu lā yuḥibbuẓh-zhālimīn</em>.
+        </li>
+        <li>
+            <strong>I'jaz Fonetik:</strong> Ritme bunyi huruf bergetar berat (<em>Żāl</em> musyaddadah pada <em>u'ażżibuhum</em>) dipadu dengan desis penyebaran (<em>Syīn</em> pada <em>syadīdā</em>) dan ketukan tegas huruf ithbaq (<em>Ṣhād</em> pada <em>nāṣirīn</em>) membangun atmosfer akustik pengadilan yang megah, berat, dan mencekam bagi siapa pun yang mendengarkannya dengan seksama.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Sibāq (Korelasi Organik dengan Ayat-Ayat Sebelumnya: QS. 3:54–55)</h3>
+    <p>
+        Pada ayat 54, Allah memaparkan pertarungan asimetris antara makar manusia versus makar Ilahi: <em>"Wa makarū wa makarallāh, wallāhu khayrul-mākirīn"</em> (Mereka merancang tipu daya pembunuhan terhadap Isa AS, dan Allah membalas tipu daya mereka; dan Allah sebaik-baik pembalas tipu daya). Kemudian di ayat 55, Allah mengumumkan keselamatan ontologis Nabi Isa AS: dimatikan secara sempurna setelah batas usianya di bumi usai, diangkat ke hadirat-Nya, dan disucikan dari tuduhan keji kaum kafir. Ayat 55 dipungkasi dengan penegasan bahwa hari kiamat adalah hari pengadilan tertinggi bagi perselisihan doktrinal manusia.
+    </p>
+    <p>
+        Secara <em>sibāq</em>, Ayat 56 adalah kelanjutan logis yang tak terpisahkan: vonis eksekusi langsung bagi mereka yang merancang makar tersebut. Al-Qur'an menegaskan bahwa kegagalan makar mereka untuk menyalib Isa AS bukan akhir dari cerita; mereka justru mengundang azab ganda yang mengerikan: siksaan kehinaan di dunia dan siksaan abadi di akhirat.
+    </p>
+
+    <h3>2. Siyāq (Alur Tematik Blok 2 & Dialog Teologis dengan Delegasi Najran)</h3>
+    <p>
+        Ayat ini berada di tengah-tengah Klaster 4 (Ayat 52–58) dari Blok 2 Surah Ali 'Imran. Tema sentral blok ini adalah <em>Genealogi Kesucian & Teologi Kenabian</em>. Konteks historis penurunan ayat berkaitan erat dengan kedatangan delegasi Kristen Najran (terdiri dari 60 tokoh terkemuka, dipimpin oleh Al-'Aqib Abdul Masih dan Uskup Abu Haritsah bin 'Alqamah) ke Masjid Nabawi sekitar tahun 9 Hijriyah.
+    </p>
+    <p>
+        Delegasi Najran membela keyakinan bahwa Isa AS adalah anak Tuhan atau oknum ketuhanan dengan dalil kelahirannya tanpa ayah dan mukjizat-mukjizatnya. Di sisi lain, kaum Yahudi Madinah menuduh Isa sebagai anak haram dan mengklaim dengan bangga bahwa para leluhur mereka telah berhasil membunuh dan menyalibnya. Siyāq ayat 56 menghantam kedua belah pihak sekaligus: membantah klaim kemenangan konspirasi Yahudi dengan menegaskan bahwa merekalah yang justru tertimpa laknat dan azab dunia-akhirat, serta memperingatkan kaum Nasrani Najran bahwa penolakan terhadap risalah Nabi Muhammad ﷺ adalah kekufuran nyata yang meniadakan perisai keselamatan mereka.
+    </p>
+
+    <h3>3. Liḥāq (Jembatan Estetik Menuju QS. 3:57–58)</h3>
+    <p>
+        Karakteristik khas pedagogi Al-Qur'an adalah menyeimbangkan ancaman (<em>tarhīb</em>) dengan kabar gembira (<em>targhīb</em>). Setelah menetapkan siksa pedih bagi kaum kafir di ayat 56, secara <em>liḥāq</em> narasi seketika bertransisi ke ayat 57: <em>"Wa ammallażīna āmanū wa ‘amiluṣ-ṣāliḥāti fa-yuwaffīhim ujūrahum..."</em> (Adapun orang-orang yang beriman dan mengerjakan kebajikan, Allah akan menyempurnakan pahala mereka). Transisi ini mengunci perbandingan kontras: antara azab pedih tanpa penolong vs pahala sempurna yang dilindungi cinta Ilahi. Rangkaian ini kemudian ditutup di ayat 58 sebagai wahyu yang sarat hikmah (<em>Dzikrul-Hakīm</em>).
+    </p>
+
+    <h3>4. Rekonstruksi Sosio-Historis: Madaniyah, Yahudi Madinah, dan Dinamika Pasca-Badar</h3>
+    <p>
+        Pada fase Madaniyah, komunitas muslim menghadapi dua spektrum resistensi kekufuran:
+    </p>
+    <ul>
+        <li>
+            <strong>Resistensi Domestik (Kaum Yahudi Madinah):</strong> Suku Bani Qainuqa', Bani Nadhir, dan Bani Quraizhah memiliki catatan historis permusuhan terhadap para nabi sebelumnya. Ayat 56 mengingatkan mereka akan catatan sejarah leluhur mereka yang diazab di dunia: penghancuran Baitul Maqdis oleh tentara Babilonia (Nebukadnezar) dan tentara Romawi (Titus pada 70 M), pengusiran dari tanah air, dan kehinaan diaspora. Di Madinah sendiri, ketika mereka melanggar piagam dan berkhianat, azab dunia menimpa mereka dalam bentuk pengusiran dan eksekusi militer.
+        </li>
+        <li>
+            <strong>Resistensi Eksternal (Musyrikin Makkah & Imperium Sekitar):</strong> Kemenangan telak kaum muslimin di Perang Badar dan penaklukan Makkah membuktikan bahwa arogansi militer kaum kafir dapat dihancurkan di pentas duniawi tanpa ada sekutu yang sanggup menolong mereka. Ayat ini menggembleng psikologi kaum mukminin agar tidak gentar melihat hegemoni material musuh, karena kebinasaan kaum kafir telah diputuskan di dua alam.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi‘ al-Bayān fī Ta’wīl al-Qur’ān</em>:</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>"Aku azab mereka dengan azab yang keras di dunia"</em> bagi kaum yang kafir terhadap Nabi Isa AS adalah penumpasan melalui pedang kaum mukminin, penawanan anak-cucu mereka, perampasan harta benda mereka sebagai ghanimah, pemaksaan pembayaran jizyah dalam keadaan terhina dan tunduk, serta pencabutan kedaulatan politik mereka di muka bumi. Sedangkan azab di akhirat adalah siksaan api neraka yang tak berkesudahan. At-Tabari menggarisbawahi frasa <em>wa mā lahum min nāṣirīn</em>: tidak ada seorang pembela pun yang dapat menolak ketentuan azab Allah dari diri mereka ketika malaikat azab datang menyergap.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur’ān al-‘Azhīm</em>:</strong><br>
+        Ibnu Katsir menyoroti dimensi sejarah penggenapan nubuat ayat ini terhadap orang-orang Yahudi yang mendustakan dan merancang pembunuhan Isa AS. Allah menimpakan atas mereka azab dunia berupa penaklukan oleh bangsa Romawi pagan di bawah pimpinan Kaisar Titus yang menghancurkan Haikal Sulaiman, membantai ratusan ribu orang di Yerusalem, dan menjadikan sisa-sisa mereka budak belian yang tercerai-berai di seluruh penjuru bumi dalam kehinaan. Kemudian setelah kaum Nasrani berkuasa di Romawi, orang-orang Yahudi terus-menerus hidup dalam persekusi dan diskriminasi. Ibnu Katsir menegaskan bahwa di akhirat, siksaan mereka jauh lebih mengerikan, di mana tidak ada tebusan dan tidak ada seorang pun yang sanggup memberi syafaat atau pembelaan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi‘ li-Aḥkām al-Qur’ān</em>:</strong><br>
+        Al-Qurthubi membedah aspek teologis dan hukum syariat. Beliau menyatakan bahwa lafaz <em>‘ażāban syadīdan fid-dunyā</em> mencakup kehancuran tatanan hidup, pembunuhan, dan kehinaan membayar jizyah (bagi Ahli Kitab yang menolak Islam). Al-Qurthubi menepis keyakinan sebagian sekte sesat bahwa siksa dunia dapat menggugurkan siksa akhirat bagi orang kafir; ayat ini dengan tegas menggabungkan keduanya (<em>fid-dunyā wal-ākhirah</em>). Makna <em>min nāṣirīn</em> menurut beliau adalah bantahan telak terhadap harapan batil orang-orang musyrik dan kafir bahwa berhala-berhala mereka, para pendeta, atau leluhur mereka yang suci dapat menjadi pelindung di hadapan murka Ilahi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Imam Fakhruddin Ar-Razi (w. 606 H):</strong><br>
+        Dalam <em>Al-Kasysyāf</em>, Az-Zamakhsyari memuji keindahan balaghah pemisahan kelompok via <em>ammā</em>. Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> menambahkan analisis filosofis-rasional: Mengapa azab dunia disebut terlebih dahulu sebelum azab akhirat? Karena azab dunia adalah realitas empiris yang disaksikan langsung oleh panca indra manusia, sehingga berfungsi sebagai bukti kasat mata (<em>istidlāl bisy-syāhid ‘alal-ghā’ib</em>) bahwa Zat yang berkuasa melumatkan para penentang di dunia pasti Mahakuasa mengeksekusi janji siksa-Nya yang abadi di akhirat. Ar-Razi juga menjelaskan bahwa ketiadaan penolong (<em>wa mā lahum min nāṣirīn</em>) mengindikasikan keputusasaan psikologis ontologis (<em>al-ya’su al-muṭhlaq</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu ‘Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur memandang ayat ini dari kacamata sosiologi peradaban (<em>sunanul-ijtima'</em>). Azab dunia bagi orang-orang kafir tidak selalu berupa petir menyambar dari langit, melainkan proses pembusukan internal peradaban mereka: lenyapnya kedamaian batin, paranoia kolektif, krisis kepercayaan, disintegrasi sosial, dan kekalahan geopolitik di hadapan kebenaran. Ketiadaan penolong (<em>min nāṣirīn</em>) adalah konsekuensi alamiah dari kebatilan: sekutu-sekutu duniawi dibangun di atas asas oportunisme materialistis, sehingga ketika kebangkrutan menimpa, para sekutu tersebut akan lari menyelamatkan diri masing-masing dan menelantarkan mereka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Hamka mengaitkan ayat ini dengan dinamika psikologis kaum kafir penentang dakwah Rasulullah ﷺ dan kaum tiran sepanjang zaman. Beliau menulis: <em>"Boleh jadi orang-orang yang ingkar dan menzalimi kebenaran itu tampak kaya-raya, memiliki benteng kekuasaan, dan bersenjata lengkap. Tetapi tanyalah lubuk hati mereka! Hati mereka diazab oleh Allah dengan ketakutan, kecurigaan tiada henti, dan kekosongan jiwa. Itulah azab dunia yang paling pedih sebelum azab akhirat. Tatkala kekuasaan mereka runtuh, tak ada seorang pun kawan koalisi yang sudi membela mereka. Mereka roboh dalam kehinaan."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> & Kemenag RI:</strong><br>
+        Quraish Shihab menggarisbawahi bahwa kata <em>syadīd</em> mencerminkan siksaan yang melampaui batas kemampuan pikul manusia. Menurut beliau, azab dunia bagi penentang kebenaran adalah kegelisahan eksistensial, keterputusan dari berkah hidup, dan kehinaan di hadapan sejarah. Tafsir Kemenag RI menambahkan bahwa ayat ini menjadi peringatan keras bagi umat manusia modern: kezaliman dan pengingkaran terhadap nilai-nilai ketuhanan pasti melahirkan destabilisasi sosial, peperangan berdarah, dan kehancuran ekologis di dunia ini sebelum mereka dihadapkan pada api neraka di akhirat.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu Konsensus (Ijma')</th>
+                <th>Ragam Sudut Pandang Mufassir (Ikhtilaf)</th>
+                <th>Sintesis Konvergensi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Hakikat Azab Dunia (Fid-Dunyā)</strong></td>
+                <td>Sepakat bahwa azab dunia benar-benar terjadi secara faktual dalam sejarah manusia dan menimpa kaum kafir penentang rasul.</td>
+                <td>
+                    • <strong>At-Tabari & Ibnu Katsir:</strong> Menitikberatkan pada aspek fisik, militer (pembunuhan, penawanan), dan politik (kehancuran Yerusalem, jizyah).<br>
+                    • <strong>Ibnu 'Asyur & Hamka:</strong> Menitikberatkan pada degradasi peradaban, pembusukan moral, paranoia kekuasaan, dan kegelisahan eksistensial batiniah.
+                </td>
+                <td>Azab dunia bersifat multidimensional: mencakup kehancuran geopolitik eksternal sekaligus siksaan psikologis internal yang mematikan rasa damai.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Hubungan Azab Dunia & Azab Akhirat</strong></td>
+                <td>Sepakat bahwa siksa dunia tidak menghapuskan siksa akhirat bagi orang kafir; kedua siksaan tersebut terakumulasi.</td>
+                <td>
+                    • <strong>Ar-Razi:</strong> Azab dunia adalah premis logis pembuktian empiris untuk meyakinkan keniscayaan azab akhirat.<br>
+                    • <strong>Al-Qurthubi:</strong> Penggabungan keduanya menegaskan prinsip keadilan mutlak Allah terhadap dosa penentangan syariat.
+                </td>
+                <td>Dunia dan akhirat adalah satu garis kontinum hisab Ilahi; apa yang ditabur di dunia dituai secara instan sebagiannya dan disempurnakan di akhirat.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Makna Penafian Penolong (Wa mā lahum min nāṣirīn)</strong></td>
+                <td>Sepakat bahwa tidak ada satu pun entitas ciptaan yang sanggup menghalangi kehendak Allah untuk menyiksa mereka.</td>
+                <td>
+                    • <strong>Konteks Polemik Najran:</strong> Membatalkan dogma penebusan dosa dan penuhanan Nabi Isa AS.<br>
+                    • <strong>Konteks Sosiologis (Ibnu 'Asyur):</strong> Menelanjangi kerapuhan persekutuan kaum oportunis dan penindas yang pasti tercerai-berai saat krisis.
+                </td>
+                <td>Penafian penolong meruntuhkan proteksi vertikal (syafaat semu teologis) maupun proteksi horizontal (aliansi politik/militer manusiawi).</td>
+            </tr>
+            <tr>
+                <td><strong>4. Relevansi Konteks Isa AS vs Keumuman Lafaz</strong></td>
+                <td>Sepakat bahwa khithab ayat pertama-tama ditujukan kepada kaum kafir penentang Nabi Isa AS, namun kaidah ushul menetapkan keumuman lafaz.</td>
+                <td>
+                    • <strong>Mufassir Klasik:</strong> Fokus pada pembuktian historis nasib bangsa Yahudi dan penolakan terhadap delegasi Najran.<br>
+                    • <strong>Mufassir Kontemporer:</strong> Menerapkan kaidah <em>al-'ibrah bi-'umūmil-lafzhi lā bi-khuṣhūṣis-sabab</em> pada seluruh rezim tiran modern.
+                </td>
+                <td>Ayat ini adalah hukum universal sejarah (<em>sunnatullāh fil-kawn</em>) yang berlaku bagi siapa pun penentang kebenaran di setiap kurun zaman.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Dekonstruksi Pola Pikir: Delusional Impunity vs Akuntabilitas Dua Alam</h3>
+    <p>
+        Secara kognitif, kejahatan dan penindasan berskala besar selalu dipicu oleh bias kognitif yang disebut <strong>Delusional Impunity</strong> (ilusi kebal hukum/bebas dari hukuman). Pelaku kezaliman memproyeksikan kekuatan material, hegemoni teknologi, atau posisi kekuasaannya sebagai benteng abadi yang mustahil ditembus. Mereka meyakini bahwa mereka berada "di atas hukum" dan bahwa narasi moralitas hanyalah konstruksi kaum lemah.
+    </p>
+    <p>
+        Ayat 56 menyajikan disrupsi kognitif radikal terhadap mental model tersebut melalui introduksi konsep <strong>Akuntabilitas Dua Alam (Dual-Realm Accountability: Ad-Dunyā wal-Ākhirah)</strong>. Al-Qur'an memprogram ulang struktur kesadaran manusia: tidak ada ruang kosong dalam semesta ciptaan Allah di mana kezaliman dapat bersembunyi tanpa konsekuensi. Jika pelaku kejahatan berhasil memanipulasi hukum formal duniawi atau lolos dari jerat peradilan manusia, hukum alam dan kehendak Ilahi akan mengeksekusi mereka melalui degradasi psikologis di dunia dan peradilan eskatologis mutlak di akhirat.
+    </p>
+
+    <h3>2. Mental Model: "The Fallacy of Proxy Protection" (Kesesatan Sandaran Perisai)</h3>
+    <p>
+        Pola pikir kekufuran senantiasa mencari <em>proxy protection</em> (perisai perantara) untuk meredam kegelisahan batin mereka:
+    </p>
+    <ul>
+        <li><strong>Proxy Teologis:</strong> Klaim bangsa pilihan, dogma penebusan otomatis tanpa amal, atau jaminan syafaat berhala.</li>
+        <li><strong>Proxy Sosiopolitik:</strong> Konglomerasi modal, hegemoni media massa, aparat represif, atau aliansi diplomatik.</li>
+    </ul>
+    <p>
+        Prinsip <strong>wa mā lahum min nāṣirīn</strong> membedah kelemahan inheren dari sistem proteksi proksi ini. Dalam teori sistem, aliansi yang dibangun di atas kepentingan egoistis-oportunistik memiliki tingkat kerapuhan struktural (<em>structural fragility</em>) yang ekstrem. Ketika beban tekanan eksistensial memuncak, ikatan antar-elemen proksi tersebut pasti terputus (<em>systemic collapse</em>). Setiap individu akhirnya terlempar ke dalam kesendirian ontologis di hadapan pengadilan Ilahi.
+    </p>
+
+    <h3>3. Neuropsikologi Rasa Bersalah & Tazkiyatun Nafs: Hakikat Azab Duniawi</h3>
+    <p>
+        Kajian tazkiyatun nafs selaras dengan pemahaman psikologi modern mengenai <em>cognitive dissonance</em> (disonansi kognitif) dan beban neuropsikologis dari kejahatan. Ketika seseorang secara sadar menolak kebenaran nurani (<em>kufr</em>) dan menzalimi sesama, terjadi perpecahan internal di dalam jiwanya:
+    </p>
+    <ul>
+        <li>
+            <strong>Erosi Ketenangan Kalbu:</strong> Fitrah ruhani manusia dirancang untuk selaras dengan kebenaran (<em>al-ḥaqq</em>). Melawan kebenaran memaksa amigdala dan sistem limbik bekerja di bawah status siaga tinggi (<em>hyperarousal</em>) secara konstan: ketakutan akan terbongkarnya kejahatan, kecurigaan patologis terhadap sekutu sendiri (paranoia kekuasaan), dan ketiadaan makna hidup (<em>existential vacuum</em>).
+        </li>
+        <li>
+            <strong>Siksaan Dunia Sebelum Kematian:</strong> Inilah manifestasi batiniah dari <em>fa-u‘ażżibuhum ‘ażāban syadīdan fid-dunyā</em>. Orang kafir dan zalim mungkin tidur di atas kasur sutra di dalam istana berbenteng, namun jiwa mereka terkurung di dalam penjara kecemasan, ketergantungan pada zat penenang, dan teror batin yang mengerikan.
+        </li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Impunitas Geopolitik & Kejahatan Kemanusiaan Modern</h3>
+    <p>
+        Memasuki abad ke-21, umat manusia menyaksikan panggung kezaliman global yang dipertontonkan secara vulgar. Negara-negara imperialis modern, rezim penjajah apartheid, dan oligarki global melakukan genosida, pencaplokan tanah, pembantaian warga sipil, dan penjarahan sumber daya alam dengan penuh kesombongan. Mereka mengandalkan hak veto internasional, aliansi militer superior, dan hegemoni propaganda media untuk menciptakan ilusi bahwa mereka tidak tersentuh hukum (<em>untouchable</em>).
+    </p>
+    <p>
+        QS. 3:56 membongkar ilusi ini dengan ketajaman profetik. Sebagaimana imperium Firaun, Babilonia, Romawi, dan penjajah masa lalu hancur lebur di puncak keangkuhannya, peradaban modern yang tegak di atas kezaliman dan kekufuran sistemik sedang meluncur menuju azab duniawinya sendiri: polarisasi sosial yang meremukkan bangsa dari dalam, krisis kesehatan mental massal, keruntuhan ekologi global, dan delegitimasi moral di mata dunia internasional.
+    </p>
+
+    <h3>2. Kerapuhan Benteng Oligarki & Kehampaan "Nāṣirīn" Finansial</h3>
+    <p>
+        Di era materialisme kapitalistik, uang dan kekayaan finansial dianggap sebagai tuhan penyelamat modern. Para koruptor, perusak lingkungan, dan penindas masyarakat merasa aman selama rekening luar negeri mereka penuh dan para penegak hukum dapat disuap. Namun kenyataan kontemporer membuktikan: ketika krisis peradaban menghantam, bank-bank raksasa kolaps, rezim politik berganti, dan para penindas dibuang seperti sampah oleh bekas majikan atau sekutu koalisinya sendiri. Tidak ada "penolong" sejati dalam sistem yang tidak bermoral; kepalsuan proteksi materi di dunia adalah miniatur dari ketiadaan penolong mutlak di pengadilan akhirat.
+    </p>
+
+    <h3>3. Kritik Peradaban Sekuler & Rekonstruksi Keadilan Transendental</h3>
+    <p>
+        Dunia modern mengalami kekeringan spiritual karena mengabaikan dimensi ukhrawi dalam kalkulasi kehidupannya. Sekularisme radikal menciptakan manusia yang hanya takut pada pengawasan kamera pengintai atau sanksi kepolisian, tetapi berani berbuat curang di ruang privat. Tanpa keyakinan akan <em>al-ākhirah</em>, hukum menjadi alat permainan mereka yang berkuasa.
+    </p>
+    <p>
+        Al-Qur'an hadir menyuarakan pesan pembebasan bagi kaum tertindas (<em>al-mustadh‘afīn</em>): keadilan sejati tidak pernah mati. Jika lembaga hukum dunia gagal mengadili penjahat kemanusiaan, dekret QS. 3:56 menjamin bahwa para pelaku kezaliman sedang diarak menuju jurang pembalasan yang tidak akan pernah mampu dibendung oleh siapa pun.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li>
+                <strong>Audit Integritas dan Pemutusan Sandaran Palsu (Zero Tolerance terhadap Kezaliman Praktis):</strong><br>
+                Lakukan inventarisasi menyeluruh terhadap sumber mata pencaharian, relasi bisnis, dan gaya hidup Anda dalam tempo 7 hari ke depan. Pastikan tidak ada sepeser pun harta yang diperoleh melalui penindasan hak orang lain, manipulasi hukum, atau kemitraan dengan pihak zalim. Lepaskan ketergantungan psikologis pada "koneksi orang dalam" yang melanggar syariat, dan kembalikan seluruh sandaran rasa aman mutlak hanya kepada Allah.
+            </li>
+            <li>
+                <strong>Membangun Sikap Berpihak kepada Kebenaran & Pembelaan Kaum Lemah:</strong><br>
+                Jangan pernah menjadi bagian dari "penolong kebatilan" (<em>anṣhārul-bāṭhil</em>). Alokasikan sumber daya riil Anda—baik berupa donasi kemanusiaan rutin setiap bulan, advokasi vokal di ruang publik/media sosial, maupun bantuan profesional cuma-cuma—untuk membela kaum yang dizalimi, seperti rakyat Palestina yang menghadapi genosida global atau masyarakat tertindas di lingkungan terdekat Anda.
+            </li>
+            <li>
+                <strong>Disiplin Muhasabah "Dua Dimensi" dalam Setiap Pengambilan Keputusan:</strong><br>
+                Terapkan protokol pengambilan keputusan hidup berbasis rumus <em>Fid-Dunyā wal-Ākhirah</em>. Sebelum menandatangani kontrak, mengambil jabatan publik, atau melangkah dalam urusan besar, ajukan uji verifikasi: <em>"Apakah keputusan ini hanya mendatangkan keuntungan semu jangka pendek di dunia, ataukah ia sanggup menyelamatkan saya dari siksaan pedih di hari kiamat ketika seluruh pembela duniawi sirna?"</em> Jika keputusan tersebut berpotensi mengorbankan keselamatan akhirat, batalkan seketika tanpa kompromi.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #805ad5;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>
+                Apakah di dalam sudut tergelap kalbuku masih bersemayam rasa aman semu bahwa dosa, kecurangan, atau kezaliman kecil yang kulakukan tidak akan menuai konsekuensi pahit di dunia ini dan akan luput dari pengawasan Allah?
+            </li>
+            <li>
+                Kepada siapakah hatiku sesungguhnya bersandar ketika badai hidup dan ancaman manusia menerpa: apakah kepada saldo rekening, jabatan, relasi kekuasaan para pembesar yang rapuh, ataukah murni kepada pertolongan Allah Yang Maha Menghancurkan kaum tiran?
+            </li>
+            <li>
+                Jika hari ini nyawaku dicabut dan aku berdiri telanjang di hadapan pengadilan Ilahi tanpa ada satu pun pengacara, kawan koalisi, atau keluarga yang sanggup membela (<em>wa mā liyā min nāṣirīn</em>), perisai ketakwaan apa yang telah kusiapkan untuk menghadapi kedahsyatan azab-Nya?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 12px; font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 20px; direction: rtl; line-height: 2;">
+            اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَنَعُوذُ بِكَ مِنْ عَذَابِ الدُّنْيَا وَخِزْيِهَا، وَنَعُوذُ بِكَ مِنَ الْكُفْرِ وَالظُّلْمِ وَالْفُسُوقِ وَالْعِصْيَانِ. اللَّهُمَّ لَا تَجْعَلْنَا مِنَ الظَّالِمِينَ وَلَا مِنْ أَعْوَانِهِمْ، وَلَا تَكِلْنَا إِلَى أَنْفُسِنَا وَلَا إِلَى أَحَدٍ مِنْ خَلْقِكَ طَرْفَةَ عَيْنٍ. اللَّهُمَّ يَا نَاصِرَ الْمَظْلُومِينَ وَيَا قَاصِمَ الْجَبَّارِينَ، ثَبِّتْ قُلُوبَنَا عَلَى دِينِكَ، وَاجْعَلْنَا مِنَ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ، وَتَوَفَّنَا مُسْلِمِينَ وَأَلْحِقْنَا بِالصَّالِحِينَ.
+        </p>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, Tuhan Yang Maha Adil lagi Maha Menegakkan kebenaran. Kami berlindung kepada-Mu dari dahsyatnya siksa neraka Jahannam, kami berlindung kepada-Mu dari azab dan kehinaan di dunia, dan kami berlindung kepada-Mu dari kekafiran, kezaliman, kefasikan, serta pembangkangan terhadap wahyu-Mu. Ya Allah, jangan Engkau jadikan kami termasuk golongan orang-orang yang berbuat zalim, dan jangan pula Engkau jadikan kami pembela atau perpanjangan tangan bagi orang-orang zalim. Jangan pernah Engkau serahkan urusan hidup kami kepada diri kami sendiri atau kepada seorang pun dari makhluk-Mu walau hanya sekejap mata. Wahai Penolong kaum yang tertindas dan Wahai Penghancur kaum yang tiran, teguhkanlah kalbu kami di atas jalan ketauhidan yang lurus, jadikanlah kami hamba-hamba yang beriman dan beramal saleh, wafatkanlah kami dalam keadaan berserah diri (muslimin), dan kumpulkanlah kami bersama para kekasih-Mu yang saleh. Āmīn Yā Rabbal-‘Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-055 - QS. Ali 'Imran Ayat 55.html">&larr; Kembali ke Ayat 55 (QS. 3:55)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 56</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-057 - QS. Ali 'Imran Ayat 57.html">Lanjut ke Ayat 57 (QS. 3:57) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

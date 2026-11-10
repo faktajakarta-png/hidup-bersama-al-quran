@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-054 - QS. Ali 'Imran Ayat 54 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-053 - QS. Ali 'Imran Ayat 53.html">&larr; Ayat Sebelumnya (QS. 3:53)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-055 - QS. Ali 'Imran Ayat 55.html">Ayat Berikutnya (QS. 3:55) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 4 (Ayat 52–58): Komitmen Al-Hawāriyyūn, Konspirasi Makar Musuh Nabi 'Īsā AS & Kedaulatan Rencana Sempurna Allah</span>
+        <span class="badge">6 Kata | 29 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 54</h1>
+    <div class="transliteration">
+        "Wa makarū wa makarallāh(u), wallāhu khayrul-mākirīn(a)."
+    </div>
+    <div class="thematic-title">
+        Konspirasi Gelap Kaum Pembangkang vs Siasat Sempurna Ilahi: Dekonstruksi Makar Pembunuhan Al-Masih, Teologi Pertolongan Asimetris, dan Kedaulatan Mutlak Takdir Allah
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 4: Baiat Al-Hawāriyyūn, Makar Kaum Penentang Al-Masih, Penyelamatan Ilahi & Kedaulatan Mutlak Takdir Ilahi)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَمَكَرُوا۟ وَمَكَرَ ٱللَّهُ ۖ وَٱللَّهُ خَيْرُ ٱلْمَـٰكِرِينَ ۝٥٤
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Dan mereka (orang-orang kafir pembangkang dari kalangan Bani Israil) membuat tipu daya (makar rahasia untuk menangkap, memfitnah, dan membunuh Nabi 'Isa AS), dan Allah membalas tipu daya mereka (dengan perancangan siasat takdir yang menggagalkan konspirasi mereka tanpa mereka sadari); dan Allah adalah sebaik-baik pembalas tipu daya (Maha Memiliki siasat, keadilan, dan ketetapan takdir yang paling sempurna)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merekam titik benturan dramatis dalam sejarah kenabian antara kekuatan hegemoni konspiratif manusia dengan kedaulatan takdir Ilahi. Kata <em>makr</em> (مَكْر) dalam semantik Arab klasik bermakna perancangan rahasia yang cermat untuk memalingkan lawan dari maksudnya tanpa disadari oleh sasaran. Ketika disandarkan kepada orang-orang kafir (<em>wa makarū</em>), makr tersebut adalah kejahatan, pengkhianatan, dan rekayasa fitnah politis-religius yang keji. Namun, ketika disandarkan kepada Allah SWT (<em>wa makarallāh</em>), makr tersebut bermakna <strong>Al-Mujāzāt 'alal-makr</strong> (pembalasan yang adil dan sempurna atas kejahatan makar makhluk) serta pembelaan asimetris terhadap kekasih-Nya. Allah menggagalkan konspirasi penangkapan dan penyaliban Nabi 'Isa AS dengan cara yang melampaui seluruh nalar konspirator: menyelamatkan Nabi 'Isa AS dengan mengangkatnya ke langit (<em>raf'</em>) dan menimpakan keserupaan (<em>tasybīh</em>) wajah kepada salah seorang musuh/pengkhianat, sehingga mereka membunuh orang yang mereka sangka Al-Masih. Dengan demikian, status Allah sebagai <em>Khayrul-Mākirīn</em> menegaskan bahwa tidak ada satu pun konspirasi di jagat raya yang mampu lepas dari kendali dan perhitungan ilmu-Nya yang maha meliputi.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَمَكَرُوا۟</strong><br>(<em>Wa makarū</em>)</td>
+                <td>
+                    <strong>Wāwu:</strong> Huruf istifal, infitah, makhraj dari dua bibir (as-syafatain).<br>
+                    <strong>Mīm & Kāf:</strong> Fathah, memiliki sifat hams pada huruf Kaf (lepasnya sedikit hembusan nafas yang terkontrol).<br>
+                    <strong>Rā' Bertanda Dhammah:</strong> Dibaca <strong>Tafkhīm (Tebal)</strong>.<br>
+                    <strong>Wāwu Mad Ṭhabī'ī:</strong> Dibaca panjang 2 harakat.<br>
+                    <strong>Alif Fāriqah:</strong> Bertanda bulatan sukun bundar (<em>shifr mustadīr</em>), tertulis secara rasm namun tidak dilafalkan baik washal maupun waqaf.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca fi'il madhi jamak mabni 'alal-dhammi ini dengan tarqiq pada mim dan kaf, tafkhim pada ra', serta memanjangkan mad thabi'i pada wawu al-jama'ah. Bentuk jamak ini merujuk kepada para konspirator elite Bani Israil yang bersekongkol membunuh Nabi 'Isa AS.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>وَمَكَرَ</strong><br>(<em>Wa makara</em>)</td>
+                <td>
+                    <strong>Wāwu 'Aṭhaf:</strong> Penghubung kalimat yang mengindikasikan simultanitas balasan takdir.<br>
+                    <strong>Mīm & Kāf:</strong> Fathah berurutan dengan sifat tarqiq.<br>
+                    <strong>Rā' Fathah:</strong> Dibaca <strong>Tafkhīm (Tebal)</strong>, tebalnya getaran ra' mempersiapkan telinga menyambut keagungan lafazh jalalah berikutnya.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah bersepakat membaca fi'il madhi tsulatsi mujarrad mabni 'alal-fathi dengan bentuk bina' ma'lum (bukan majhul). Ini menegaskan bahwa Allah sendiri yang secara aktif menetapkan balasan siasat tandingan terhadap makar musuh.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱللَّهُ</strong><br>(<em>Allāhu</em>)</td>
+                <td>
+                    <strong>Hamzah Waṣhal:</strong> Gugur saat dibaca washal dari huruf Ra' (<em>wa makarallāhu</em>).<br>
+                    <strong>Lām Jalālah:</strong> Didahului oleh harakat fathah (pada huruf Ra' <em>makara</em>), sehingga wajib dibaca <strong>Taghlīẓ / Tafkhīm (Tebal dan Agung)</strong>.<br>
+                    <strong>Hā' Marfū':</strong> Memiliki sifat hams dan rikhwah dari pangkal tenggorokan (aqshal-halq).
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca tafkhim pada Lam Jalalah dan merafa'kannya sebagai <em>Fā'il</em> (subjek pelaku). Penempatan lafaz Jalalah sebagai fa'il langsung setelah kata <em>makara</em> menegaskan kedaulatan mutlak Allah dalam mematahkan makar jahat hamba-Nya.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَٱللَّهُ</strong><br>(<em>Wallāhu</em>)</td>
+                <td>
+                    <strong>Wāwu Isti'nāfiyyah / Ḥāliyyah:</strong> Pembuka klausa deklaratif agung.<br>
+                    <strong>Hamzah Waṣhal:</strong> Gugur dalam pelafalan.<br>
+                    <strong>Lām Jalālah:</strong> Didahului fathah pada wawu, wajib dibaca <strong>Tafkhīm (Tebal)</strong>.<br>
+                    <strong>Hā' Dhammah:</strong> Marfu' sebagai mubtada'.
+                </td>
+                <td>
+                    Konsensus qira'at 'asyarah membaca tafkhim pada Lam Jalalah. Struktur kalimat beralih dari jumlah fi'liyyah (<em>wa makarallāh</em>) ke jumlah ismiyyah (<em>wallāhu khayrul-mākirīn</em>), yang secara balaghah mengukuhkan sifat kemahasempurnaan Allah yang kekal dan tak terbatas waktu.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>خَيْرُ</strong><br>(<em>Khayru</em>)</td>
+                <td>
+                    <strong>Khā':</strong> Huruf isti'la' mutlak dari ujung tenggorokan (adnal-halq), dibaca tebal tanpa memonyongkan bibir.<br>
+                    <strong>Yā' Layyin:</strong> Huruf lin yang dibaca lembut dan mengalir tanpa tersentak.<br>
+                    <strong>Rā' Dhammah:</strong> Dibaca <strong>Tafkhīm (Tebal)</strong>.
+                </td>
+                <td>
+                    Seluruh imam membaca marfu' dengan dhammah (<em>khayru</em>) sebagai <em>Khabar</em> mubtada' yang berstatus mudhaf. Menggunakan bentuk isim tafdhil yang bermakna "paling baik, paling unggul, dan paling berkuasa".
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>ٱلْمَـٰكِرِينَ ۝٥٤</strong><br>(<em>Al-Mākirīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas saat bertemu huruf Mim.<br>
+                    <strong>Alif Khanjariyyah:</strong> Tanda mad pada huruf Mim (<em>Mā</em>) dibaca panjang 2 harakat saat washal.<br>
+                    <strong>Kāf Kasrah:</strong> Tarqiq, disempurnakan pelafalan kasrahnya.<br>
+                    <strong>Rā' Kasrah:</strong> Wajib dibaca <strong>Tarqīq (Tipis)</strong>.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di ujung ayat, huruf Yā' mad bertemu Nūn sukun dibaca dengan pilihan panjang 2, 4, atau 6 harakat (diutamakan 4 atau 6 harakat untuk keindahan tartil), diiringi sifat tawassuth dan ghunnah ashliyyah pada huruf Nun.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah membaca dengan wazan isim fa'il jamak mudzakkar salim majrur bil-ya' sebagai mudhaf ilaih: <em>Al-Mākirīn</em>. Tidak ada perselisihan qira'at pada lafaz ini, menegaskan ketetapan qath'i bahwa seluruh perancang tipu daya di alam semesta berada di bawah keperkasaan siasat Ilahi.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbābun Nuzūl & Riwayat Makar Pembunuhan Nabi 'Īsā AS:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (Jilid 5, hal. 446–450), Ibnu Abi Hatim dalam tafsirnya, dan Ibnu Katsir dari jalur 'Ali bin Abi Thalhah dari Sahabat 'Abdullah bin 'Abbas r.a., serta riwayat dari Qatadah dan Wahb bin Munabbih:<br>
+        <em>"Ketika Nabi 'Isa AS mendakwahkan ajaran tauhid murni, membongkar distorsi legalisme para rahib dan pendeta Yahudi, serta membersihkan kemunafikan mereka, para pembesar dan pemuka agama Bani Israil merasa hegemoni religius dan finansial mereka terancam punah. Mereka berkumpul menyusun makar rahasia (konspirasi) untuk melenyapkan Nabi 'Isa AS. Mereka mendatangi penguasa Romawi (raja Damaskus/gubernur wilayah Yerusalem yang musyrik saat itu) seraya menebarkan fitnah politis bahwa 'Isa adalah pemberontak yang berambisi meruntuhkan kedaulatan Romawi dan menghasut rakyat agar tidak membayar upeti. Penguasa Romawi pun termakan fitnah tersebut lalu mengirim pasukan bersenjata untuk mengepung rumah persembunyian Nabi 'Isa AS guna menangkap dan menyalibnya. Pada saat itulah Allah melaksanakan makar tandingan-Nya: Allah mengangkat Nabi 'Isa AS ke langit melalui celah atap rumah, dan Allah menimpakan keserupaan (tasybīh) wajah Nabi 'Isa kepada seorang pria yang berada di rumah tersebut (sebagian riwayat menyebut sahabat muda yang sukarela menggantikan, dan riwayat lain menyebut seorang pengkhianat yang hendak menunjuk lokasi Nabi 'Isa). Pasukan Romawi mendobrak masuk, menangkap orang yang diserupakan itu, lalu menyalibnya di tiang salib seraya mengira bahwa mereka telah berhasil membunuh Isa Al-Masih."</em><br>
+        <strong>Derajat Riwayat:</strong> Riwayat tafsir bil-ma'tsur yang sahih asal-usul maknanya dan diperkuat secara qath'i oleh nash Al-Qur'an dalam QS. An-Nisā': 157–158: <em>"Wa mā qatalūhu wa mā shalabhū wa lākin syubbiha lahum..."</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jāmi' At-Tirmidzī (No. 3551), Sunan Abī Dāwūd (No. 1510), Sunan Ibni Mājah (No. 3830), dan Musnad Aḥmad (No. 1997) dari Sahabat 'Abdullah bin 'Abbās r.a. — Doa Makar Perlindungan Nabawiyyah:</strong><br>
+        Rasulullah ﷺ senantiasa memanjatkan doa agung ini dalam munajatnya:<br>
+        <em>"Rabbi a'innī wa lā tu'in 'alayya, wanshurnī wa lā tanshur 'alayya, <strong>wamkur lī wa lā tamkur 'alayya</strong>, wahdinī wa yassiril-hudā ilayya, wanshurnī 'alā man baghā 'alayya. Rabbij'alnī laka syakkāran, laka dzakkāran, laka rahhāban, laka mithwā'an, ilayka mukhbitan awwāhan munībā..."</em><br>
+        (Wahai Tuhanku, tolonglah aku dan jangan tolong musuh atasku, menangkanlah aku dan jangan menangkan musuh atasku, <strong>buatlah makar (siasat perlindungan dan pembalasan yang agung) untuk membela diriku dan jangan buat makar yang menimpaku</strong>, tunjukilah aku dan mudahkanlah petunjuk bagiku, dan tolonglah aku menghadapi orang yang berbuat aniaya atasku...).<br>
+        <strong>Derajat Hadits:</strong> <strong>Sahih</strong>. Imam At-Tirmidzi menyatakan: <em>"Hadits Hasan Shahih"</em>. Dishahihkan pula oleh Imam Ibnu Hibban (No. 947), Al-Hakim dalam <em>Al-Mustadrak</em> (1/519), dan disetujui oleh Imam Adz-Dzahabi.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Shahīh Al-Bukhārī (No. 4886) & Shahīh Muslim (No. 1775) — Paralelitas Makar Musuh terhadap Para Nabi:</strong><br>
+        Diriwayatkan dari Ibnu Abbas r.a. mengenai peristiwa konspirasi kafir Quraisy di Darun Nadwah yang hendak memenjarakan, membunuh, atau mengusir Rasulullah ﷺ (sebagaimana diabadikan dalam QS. Al-Anfāl: 30: <em>"Wa idz yamkuru bikal-ladzīna kafarū... wa yamkurūna wa yamkurullāhu, wallāhu khayrul-mākirīn"</em>). Rasulullah ﷺ bersabda bahwa para penentang kebenaran di setiap era selalu memakai instrumen makar rahasia, namun Allah menurunkan pertolongan-Nya dari arah yang tak pernah masuk dalam kalkulasi intelijen mereka, sehingga para nabi senantiasa keluar sebagai pemenang hakiki di hadapan makar manusia.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. M-K-R (م - ك - ر — Al-Makr):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (Jilid 5, hal. 348) memaparkan bahwa akar kata ini berporos pada satu prinsip makna dasar: <em>al-iḥtiyāl fī khafā'</em> (penggunaan strategi, rekayasa, atau muslihat secara sangat tersembunyi guna memalingkan pihak lain dari tujuannya tanpa disadari oleh sasaran). Bangsa Arab klasik menyebut pohon yang ranting-ranting dan dedaunannya saling melilit lebat sehingga menutupi apa yang ada di dalamnya dengan sebutan <em>syajaratun makrā'</em> (شَجَرَةٌ مَكْرَاءُ).<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> (Jilid 5, hal. 182) memperinci distingsi semantiknya: makr pada dasarnya netral; nilainya ditentukan oleh niat, tujuan, dan instrumen yang digunakan. Jika dilakukan oleh makhluk untuk menzalimi orang yang tidak bersalah dan menolak kebenaran, maka makr itu adalah <em>qabīḥ wa madzmūm</em> (tercela, curang, dan khianat). Namun jika dilakukan untuk membela kebenaran, menggagalkan tipu daya orang zalim, dan membalas konspirasi jahat dengan cara yang tidak mereka sangka-sangka, maka makr itu adalah <em>maḥmūd wa 'adl</em> (sangat terpuji, adil, dan puncak kecerdasan strategis). Oleh karena itu, ketika kata <em>makr</em> dinisbatkan kepada Allah SWT, maknanya adalah <strong>Al-Mujāzāt 'alal-makr</strong> (pembalasan yang setimpal atas makar manusia), <em>Istidrāj</em> (pembiaran berangsur yang menjerat musuh dalam jebakan mereka sendiri), dan <em>Tadbīr bil-haqq</em> (perancangan skenario Ilahi yang membela para wali-Nya).
+        </li>
+        <li>
+            <strong>2. KH-Y-R (خ - ي - ر — Al-Khayr):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> (Jilid 2, hal. 232) menjelaskan bahwa poros maknanya adalah condong kepada sesuatu yang paling utama, sempurna, bermanfaat, dan mulia (lawan dari <em>syarr</em> / keburukan). Dari akar ini terbentuk kata <em>ikhtiyār</em> (memilih yang terbaik) dan <em>khiyārah</em>. Dalam ayat ini, lafaz <em>Khayr</em> berkedudukan sebagai <em>Ism Tafḍhīl</em> (bentuk superlatif komparatif: "sebaik-baik / paling unggul"). Penyebutan Allah sebagai <em>Khayrul-Mākirīn</em> mengukuhkan bahwa siasat Allah adalah sebaik-baik siasat karena ditegakkan di atas ilmu mutlak, keadilan tak terbatas, bebas dari kecurangan atau kezaliman sedikit pun, serta membawa konsekuensi perlindungan abadi bagi kebenaran.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَمَكَرُوا۟</strong></td>
+                <td>
+                    <em>Wāwu</em>: Harf 'athaf atau isti'nafiyah.<br>
+                    <em>Makara</em>: Fi'il madhi tsulatsi mujarrad, bab fa'ala - yaf'ulu (مَكَرَ - يَمْكُرُ).<br>
+                    <em>Wāwul-jamā'ah</em>: Isim dhamir muttashil.<br>
+                    <em>Alif fāriqah</em>: Huruf pembeda tanda jamak.
+                </td>
+                <td>
+                    Fi'il madhi mabni 'alad-dhammi li-ittishalihi bi-wawil-jama'ah. <em>Wāwul-jamā'ah</em> mabni 'alas-sukun fi mahalli raf'in <strong>Fā'il</strong>. Seluruh jumlah fi'liyyah <em>wa makarū</em> berstatus ma'thufah pada narasi kekufuran kaum penentang di ayat sebelumnya (QS. 3:52), atau jumlah isti'nafiyah la mahalla laha minal-i'rab.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَمَكَرَ</strong></td>
+                <td>
+                    <em>Wāwu</em>: Harf 'athaf.<br>
+                    <em>Makara</em>: Fi'il madhi tsulatsi mujarrad bina' ma'lum wazan fa'ala.
+                </td>
+                <td>
+                    Fi'il madhi mabni 'alal-fathi azh-zhahir 'ala akhirihi. Seluruh jumlah fi'liyyah berkedudukan ma'thufah 'ala jumlah fi'liyyah sebelumnya, berfungsi menghubungkan tindakan kejahatan dengan aksi pembalasan Ilahi seketika.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>
+                    Ism 'alam jalālah, isim mufrad mudzakkar.
+                </td>
+                <td>
+                    <strong>Fā'il</strong> bagi fi'il <em>makara</em>, marfu' bil-dhammah azh-zhahirah 'ala akhirihi. Penegasan subjek Ilahi secara terang (ism zhahir) tanpa menggunakan dhamir melahirkan rasa takzim dan haibah (keagungan) yang meruntuhkan kesombongan musuh.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td>
+                    <em>Wāwu</em>: Harf isti'nafiyah atau wawul-hal.<br>
+                    <em>Allāhu</em>: Ism 'alam jalālah.
+                </td>
+                <td>
+                    <strong>Mubtada'</strong> marfu' bil-dhammah azh-zhahirah 'ala akhirihi. Menandai peralihan struktur dari jumlah fi'liyyah ke jumlah ismiyyah guna menetapkan sifat permanen dan abadi bagi Allah SWT.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>خَيْرُ</strong></td>
+                <td>
+                    Ism tafdhil wazan <em>fa'l</em> (bermakna <em>af'alut-tafdhīl</em>), berstatus mudhaf.
+                </td>
+                <td>
+                    <strong>Khabar Mubtada'</strong> marfu' bil-dhammah azh-zhahirah 'ala akhirihi, wa huwa mudhaf. Menjadi poros penjelas predikat bagi lafaz jalalah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمَـٰكِرِينَ ۝٥٤</strong></td>
+                <td>
+                    Ism fa'il dari fi'il <em>makara</em>, berbentuk jamak mudzakkar salim.
+                </td>
+                <td>
+                    <strong>Mudhaf Ilayhi</strong> majrur bil-ya' liannahu jam'u mudzakkar salim, wan-nūn 'iwadhun 'anit-tanwin fil-ismil-mufrad. Seluruh jumlah ismiyyah <em>wallāhu khayrul-mākirīn</em> berstatus fi mahalli nashbin Ḥāl (kondisi ketetapan permanen) atau jumlah isti'nafiyah ta'liliyyah la mahalla laha minal-i'rab.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Badī' — Al-Musyākalah al-Lafẓiyyah (المشاكلة اللفظية):</strong><br>
+            Puncak keindahan retorika ayat ini terletak pada uslub <em>musyākalah</em>, yakni penyebutan suatu perbuatan dengan lafaz perbuatan lain yang menyertainya atau mendahuluinya untuk menciptakan keselarasan redaksional yang kontras dan tajam. Kata <em>makara</em> digunakan dua kali: pertama untuk manusia (<em>wa makarū</em>) yang hakikatnya adalah persekongkolan keji, fitnah, dan pengkhianatan; kedua untuk Allah (<em>wa makarallāh</em>) yang hakikatnya adalah balasan adil, pembongkaran tipu daya, dan penyelamatan suci. Dalam balaghah Al-Qur'an, uslub ini memberikan efek psikologis menohok: seolah-olah Allah berfirman kepada para tiran, <em>"Kalian mengira memiliki siasat rahasia yang tak tertembus? Ketahuilah bahwa kalian sedang berhadapan dengan Pemilik siasat tertinggi yang menjadikan siasat kalian sendiri sebagai jerat kebinasaan kalian!"</em> (sebagaimana firman-Nya dalam QS. 42:40: <em>Wa jazā'u sayyi'atin sayyi'atun mitsluhā</em>).
+        </li>
+        <li>
+            <strong>Ilmu Ma'ānī — Pergeseran dari Jumlah Fi'liyyah ke Jumlah Ismiyyah (Al-Intiqāl ilal-Jumlatil-Ismiyyah):</strong><br>
+            Klausa pertama menggunakan dua jumlah fi'liyyah berturut-turut (<em>wa makarū wa makarallāh</em>) untuk menggambarkan peristiwa dinamis, temporer, dan kontekstual yang terjadi di panggung sejarah saat konspirasi pembunuhan Nabi 'Isa AS berlangsung. Namun, klausa penutup segera dialihkan menjadi jumlah ismiyyah yang kokoh: <em>wallāhu khayrul-mākirīn</em>. Dalam kaidah ilmu ma'ani, jumlah ismiyyah berfungsi menunjukkan <strong>Ats-Tsubūt wal-Istimrār</strong> (kemutlakan, ketetapan permanen, dan keabadian). Makar manusia bersifat fana, temporal, dan rapuh; sementara status Allah sebagai sebaik-baik pembalas makar adalah ketetapan absolut yang berlaku bagi seluruh umat manusia hingga hari kiamat.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ānī — Uslūb al-Qaṣhr wal-Ḥashr bil-Iḍhāfah (Eksklusivitas Kebaikan Siasat):</strong><br>
+            Frasa <em>Khayrul-Mākirīn</em> menyandarkan kata <em>khayr</em> kepada <em>al-mākirīn</em>. Secara tersirat, ayat ini membatasi kebaikan hakiki dalam perancangan strategi hanya kepada Allah semata. Siasat seluruh makhluk selalu tercemar oleh bias hawa nafsu, keterbatasan informasi intelijen, dan kezaliman. Sebaliknya, siasat Allah steril dari kezaliman, tegak di atas ilmu gaib yang maha sempurna, dan selalu berorientasi pada kemenangan keadilan peradaban.
+        </li>
+        <li>
+            <strong>Ilmu Bayān — Al-Majāz al-'Aqlī & Al-Isti'ārah:</strong><br>
+            Pemberian nama tindakan Allah dengan istilah <em>makr</em> mengandung unsur <em>isti'ārah tamtsīliyyah</em> atau <em>majāz 'aqlī</em>: menyerupakan perlakuan Allah yang menghukum musuh-musuh-Nya secara bertahap, mengejutkan, dan dari arah yang sama sekali tidak mereka perhitungkan dengan seseorang yang terjebak dalam perangkap rahasia yang dirancang dengan sangat presisi.
+        </li>
+        <li>
+            <strong>I'jāz Fonetik & Kepadatan Diksi (Al-Ījāz al-Balāghī):</strong><br>
+            Hanya dengan 6 kata ringkas, ayat ini berhasil merangkum benturan kosmik antara seluruh konspirasi jahat imperium duniawi melawan keperkasaan Takdir Ilahi. Fonem huruf <em>Kāf</em> (dengan sifat syiddah dan hams) pada kata <em>makarū, makara, mākirīn</em> menciptakan resonansi auditori yang tegas, menghujam, dan memantulkan benturan kekuatan yang diakhiri dengan ketukan tenang huruf <em>Rā'</em> dan <em>Mīm-Nūn</em>, melambangkan kepastian penutupan skenario sejarah di bawah kekuasaan Allah.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>1. Sibāq (Korelasi Tekstual dengan Ayat Sebelumnya — QS. 3:52–53):</strong><br>
+            Pada ayat 52, narasi Al-Qur'an menggambarkan deteksi tajam Nabi 'Isa AS terhadap pengerasan hati dan kekufuran elite Bani Israil: <em>"Falammā aḥassa 'Īsā minhumul-kufra qāla man anṣhārī ilallāh..."</em> (Maka tatkala 'Isa merasakan kekafiran mereka, ia berkata: Siapakah yang akan menjadi penolong-penolongku menuju Allah?). Pertanyaan ini disambut dengan deklarasi loyalitas mutlak kaum Hawariyyun: <em>"Naḥnu anṣhārullāh..."</em>. Kemudian di ayat 53, kaum Hawariyyun memanjatkan doa kepasrahan dan permohonan agar dicatat bersama para saksi kebenaran (<em>fak-tubnā ma'asy-syāhidīn</em>). Ayat 54 hadir sebagai jawaban logis atas pembentukan kubu iman tersebut: ketika gerakan dakwah Nabi 'Isa AS dan kaum Hawariyyun semakin solid dan mendapat simpati rakyat tertindas, para pemuka agama yang korup merasa terancam kehilangan status quo. Karena kalah dalam debat teologis dan hujah moral, mereka beralih ke jalan pintas: menyusun konspirasi kotor (<em>wa makarū</em>) untuk membunuh Al-Masih.
+        </li>
+        <li>
+            <strong>2. Siyāq (Alur Narasi Makro Blok 2 & Dialog Teologis Delegasi Najran):</strong><br>
+            Ayat ini terletak di jantung Blok 2 (Ayat 33–63) yang bertema dekonstruksi penyimpangan teologis mengenai sosok Nabi 'Isa AS dalam rangka menyanggah doktrin delegasi Kristen Najran yang berkunjung ke Madinah. Salah satu poros klaim doktrinal Kristen adalah kematian Al-Masih di tiang salib sebagai penebusan dosa manusia, sementara poros klaim Yahudi adalah kebanggaan bahwa mereka telah berhasil mempermalukan dan membunuh Nabi 'Isa di tiang kayu terkutuk. Ayat 54 membongkar ilusi kedua belah pihak secara radikal: penyaliban itu bukan kemenangan Yahudi dan bukan pula skenario penebusan dosa, melainkan sebuah makar pembunuhan yang <strong>digagalkan secara spektakuler oleh makar Allah SWT</strong>! Kematian fiktif di tiang salib didekonstruksi menjadi peristiwa penyelamatan suci.
+        </li>
+        <li>
+            <strong>3. Liḥāq (Jembatan Menuju Ayat Setelahnya — QS. 3:55):</strong><br>
+            Kata <em>wa makarallāh</em> (dan Allah membalas makar mereka) di ayat 54 merupakan pernyataan global (<em>mujmal</em>) yang langsung dirinci secara operasional pada ayat 55: <em>"Idz qālallāhu yā 'Īsā innī mutawaffīka wa rāfi'uka ilayya wa muṭhahhiruka minal-ladzīna kafarū..."</em> (Ingatlah ketika Allah berfirman: Wahai 'Isa, sesungguhnya Aku mewafatkanmu/mengambilmu secara sempurna, mengangkatmu kepada-Ku, dan menyucikanmu dari orang-orang kafir...). Rincian makar Allah adalah: menyelamatkan fisik dan martabat Nabi 'Isa AS, mengangkatnya ke haribaan-Nya, serta membalikkan fitnah musuh menjadi bumerang sejarah yang menghinakan mereka sendiri.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis & Paralelitas Peradaban (Yerusalem Abad ke-1 M vs Madinah Abad ke-7 M)</h3>
+    <p>
+        <strong>1. Konstelasi Politik Yerusalem Abad ke-1 M:</strong><br>
+        Pada masa dakwah Nabi 'Isa AS, Yudea berada di bawah cengkeraman penjajahan Kekaisaran Romawi yang dipimpin oleh Gubernur Pontius Pilatus. Di ranah lokal, lembaga keagamaan Yahudi (Sanhedrin) yang didominasi oleh sekte Saduki (kaum elite imamat yang kolaboratif dengan penjajah) dan kaum Farisi (kaum legalis formalis) memonopoli peribadatan di Baitul Maqdis. Ketika Nabi 'Isa AS datang membawa Injil, beliau mengecam keras komersialisasi agama, riba, dan hipokrisi para rabi. Sadar bahwa mereka tidak mampu memadamkan hujah Nabi 'Isa AS secara terbuka di depan rakyat, para elite ini memilih jalur makar konspiratif: mereka memanfaatkan paranoia penguasa kolonial Romawi terhadap gerakan mesianik politik dengan merekayasa tuduhan palsu bahwa Nabi 'Isa AS adalah provokator separatis yang mengancam kaisar. Skenario kotor ini dirancang serapi mungkin di ruang-ruang gelap, namun runtuh total di hadapan kedaulatan skenario langit.
+    </p>
+    <p>
+        <strong>2. Paralelitas Sosio-Historis dengan Madinah Pasca-Badar & Menjelang Uhud:</strong><br>
+        Pewahyuan ayat ini kepada Nabi Muhammad ﷺ di Madinah memiliki resonansi psikologis yang sangat mendalam. Pasca-kemenangan gemilang kaum muslimin di Perang Badar, peta politik Madinah bergolak hebat. Tiga poros konspirasi mulai merajut makar bersama: kaum musyrikin Quraisy Makkah yang menyimpan dendam kesumat, faksi Yahudi Madinah (Bani Qainuqa', Bani Nadzir, dan Bani Quraizhah) yang mengkhianati Piagam Madinah, serta kaum munafik pimpinan 'Abdullah bin Ubay bin Salul yang menyusup di dalam barisan. Mereka menyusun makar pembunuhan terhadap Rasulullah ﷺ (seperti upaya melempar batu penggilingan gandum oleh Bani Nadzir). Penuturan kisah makar terhadap Nabi 'Isa AS di ayat ini menjadi terapi mental ilahiah bagi Rasulullah ﷺ dan para sahabat: bahwa makar yang dihadapi kaum beriman bukanlah fenomena baru, melainkan siklus klasik peradaban di mana makar kebatilan selalu digulung oleh keagungan strategi Allah SWT.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭ-Ṭabarī (w. 310 H) — Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān:</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>wa makarū</em> adalah kesepakatan rahasia para pemuka Yahudi yang kufur untuk membunuh Nabi 'Isa AS dengan cara mendadak dan licik melalui tangan penguasa musyrik. Adapun <em>wa makarallāh</em> adalah pengacauan rencana musuh oleh Allah melalui penyerupaan (<em>tasybīh</em>) rupa Nabi 'Isa kepada orang lain serta pengangkatan Nabi 'Isa ke langit dalam keadaan hidup dan terjaga. At-Tabari menegaskan kaidah penting: penamaan perbuatan Allah dengan kata <em>makr</em> adalah bentuk penamaan atas dasar pembalasan yang setimpal (<em>jaza'un 'alā fi'lihim</em>), sebagaimana firman Allah <em>"yukhādi'ūnallāha wa huwa khādi'uhum"</em>. Beliau menolak anggapan bahwa makr Allah bermakna tipu muslihat yang zalim; makr Allah adalah keadilan tertinggi yang menimpakan balasan buruk kepada pembuat makar dari arah yang mereka sangka merupakan jalan kemenangan mereka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Tafsīr Al-Qur'ān al-'Aẓhīm:</strong><br>
+        Ibnu Katsir mengaitkan erat ayat ini dengan QS. An-Nisa': 157–158. Beliau merinci bahwa ketika para pendengki dari kalangan Yahudi melihat mukjizat Nabi 'Isa AS yang memukau rakyat banyak, kedengkian mereka meluap. Mereka menghasut raja yang berkuasa di Damaskus dengan tuduhan bahwa ada seorang lelaki di Baitul Maqdis yang menyesatkan rakyat dan memicu pemberontakan. Raja memerintahkan gubernurnya di Al-Quds untuk menangkap dan menyalib pemuda tersebut. Pasukan mengepung rumah di mana Nabi 'Isa dan para sahabatnya berkumpul. Allah lalu menyelamatkan Nabi 'Isa dengan mengangkatnya ke langit dari atap rumah, dan mengubah wajah salah seorang di antara mereka menjadi persis seperti rupa Nabi 'Isa. Pasukan Romawi menangkap lelaki tersebut lalu menyalibnya di atas kayu salib seraya mengira bahwa mereka telah berhasil melenyapkan Al-Masih. Ibnu Katsir menggarisbawahi: <em>"Inilah hakikat wallāhu khayrul-mākirīn; Allah membiarkan mereka berada dalam kebodohan dan persangkaan sesat, sementara kekasih-Nya telah aman di sisi-Nya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Al-Jāmi' li Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi memfokuskan kajian pada tinjauan teologis asma wa sifat dan implikasi hukum akidah: <strong>Bolehkah menyebut Allah dengan sifat 'Al-Mākir' (Sang Pembuat Makar) secara mutlak?</strong> Al-Qurthubi secara tegas menjawab: <strong>TIDAK BOLEH</strong>. Nama atau sifat makar tidak boleh dinisbatkan kepada Allah secara mutlak tanpa keterikatan (<em>ithlāq</em>), karena kata makar dalam bahasa Arab memiliki potensi konotasi celaan dan pengkhianatan jika dilepaskan dari konteksnya. Makar hanya boleh dinisbatkan kepada Allah dalam bentuk terikat (<em>muqayyad</em>), yaitu sebagai pembalasan terhadap makar musuh (<em>wa makarallāh</em>) atau dalam susunan idhafah yang membatasi kesempurnaan seperti <em>Khayrul-Mākirīn</em>. Al-Qurthubi menegaskan bahwa sebaik-baik makar adalah makar yang menolong orang dizalimi, menegakkan keadilan mutlak, dan membongkar kepalsuan tanpa menyisakan celah kezaliman sedikit pun.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Mafātīḥ al-Ghayb & Al-Kasysyāf:</strong><br>
+        Ar-Razi membedah ayat ini dari sudut pandang epistemologi filsafat ketuhanan. Beliau menjelaskan bahwa makar makhluk lahir dari <strong>ketidaktahuan (jahl) dan kelemahan ('ajz)</strong>: makhluk terpaksa merancang tipu daya secara sembunyi-sembunyi karena mereka tidak memiliki kekuasaan mutlak untuk mewujudkan kehendak mereka secara terbuka dan takut pada kekuatan lawan. Sebaliknya, "makar" Allah bersumber dari <strong>kemahatahuan mutlak ('ilm tāmm) dan kemahaperkasaan mutlak (qudrah muthlaqah)</strong>. Allah tidak membutuhkan muslihat untuk menang, namun Allah menetapkan hukum <em>istidrāj</em> (membiarkan para tiran menikmati rencananya sampai puncak kesombongan, lalu menghancurkannya dalam sekejap). Az-Zamakhsyari menambahkan dalam <em>Al-Kasysyāf</em> bahwa uslub balaghah ayat ini melucuti martabat para konspirator: mereka menyangka bahwa taktik mereka tersembunyi, padahal mereka bergerak di dalam genggaman pengawasan Allah yang telah menyiapkan skenario pembalasan sebelum mereka memulai konspirasi tersebut.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur menganalisis dimensi sosiologis dan psikologi politik dari kekuasaan tiran. Makar adalah senjata khas kelompok elite yang bangkrut secara argumen. Ketika kebenaran risalah 'Isa AS tidak terbantahkan lagi secara rasional dan mukjizat, elite Bani Israil tidak memiliki opsi intelektual selain melakukan konspirasi politik dan represi aparat. Ibnu 'Asyur mencatat bahwa frasa <em>wallāhu khayrul-mākirīn</em> dihadirkan untuk menanamkan <em>sakīnah</em> (ketenangan eksistensial) ke dalam jiwa setiap pejuang kebenaran: jangan pernah gentar menghadapi jaringan konspirasi, kartel oligarki, atau operasi rahasia musuh, karena kalkulasi Allah senantiasa melampaui seluruh variabel duniawi dan pasti akan mengembalikan tipu daya tersebut ke batang leher para perancangnya sendiri.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Perspektif Nusantara: Buya Hamka (Tafsir Al-Azhar), Prof. Dr. M. Quraish Shihab (Tafsir Al-Mishbah) & Kemenag RI:</strong><br>
+        • <strong>Buya Hamka:</strong> Menulis dengan nada menggugah bahwa sejarah kemanusiaan selalu diwarnai oleh pertarungan antara para pembawa risalah dengan kaum pembuat makar. Di zaman Nabi 'Isa, musuh menyangka telah berhasil membunuh dan menyalib Al-Masih, padahal yang mereka salib hanyalah bayang-bayang kebodohan mereka sendiri. Jiwa dan risalah Al-Masih tetap hidup dan menang. Demikian pula di era modern: konspirasi penjajah atau kaum sekuler untuk memadamkan cahaya Islam selalu berujung pada kebangkitan umat.<br>
+        • <strong>M. Quraish Shihab:</strong> Menggarisbawahi bahwa kata <em>khayr</em> dalam <em>khayrul-mākirīn</em> menunjukkan bahwa siasat Allah menghasilkan kebaikan universal bagi tatanan alam semesta dan perlindungan nilai-nilai keadilan. Manusia pembuat makar merusak tatanan sosial demi kepentingan egoistis segelintir orang, sementara Allah menata kembali keseimbangan moral peradaban.<br>
+        • <strong>Kemenag RI:</strong> Menegaskan bahwa ayat ini mengajarkan optimisme spiritual bagi bangsa dan umat yang sedang menghadapi tantangan disintegrasi atau konspirasi adu domba: kebenaran yang diperjuangkan dengan ikhlas dan sabar pasti akan diselamatkan oleh skenario terbaik Allah SWT.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Pembahasan</th>
+                <th>Titik Konsensus (Ijma' Ulama)</th>
+                <th>Titik Dinamika Penafsiran (Ikhtilaf Tanawwu')</th>
+                <th>Sintesis & Implikasi Aplikatif</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Sandaran Makr kepada Allah</strong></td>
+                <td>Sepakat bahwa Allah mustahil bersifat curang, khianat, atau zalim. Sandaran makr adalah majaz/musyakalah yang bermakna balasan adil setimpal (<em>al-mujāzāt</em>).</td>
+                <td>Sebagian ulama menekankan aspek <em>istidrāj</em> (pembiaran berangsur), sebagian menekankan aspek pembatalan rencana musuh secara tak terduga (<em>ibthālul-makr</em>).</td>
+                <td>Menetapkan keagungan sifat Allah yang Maha Adil dan Menolak segala bentuk penyamaan sifat Tuhan dengan kelemahan muslihat makhluk.</td>
+            </tr>
+            <tr>
+                <td><strong>Identitas Sosok yang Diserupakan (Al-Musyabbah bih)</strong></td>
+                <td>Sepakat bahwa Nabi 'Isa AS TIDAK disalib dan TIDAK dibunuh, melainkan diselamatkan oleh Allah SWT (QS. 4:157).</td>
+                <td>Perbedaan riwayat mengenai sosok yang disalib: apakah sahabat muda setia yang mengajukan diri secara sukarela demi surga, ataukah murid pengkhianat (Yudas Iskariot) yang wajahnya diubah Allah sebagai azab seketika.</td>
+                <td>Fokus teologis Al-Qur'an bukan pada nama individu yang disalib, melainkan pada kemutlakan keselamatan Nabi 'Isa AS dan kegagalan total konspirasi Yahudi-Romawi.</td>
+            </tr>
+            <tr>
+                <td><strong>Penggunaan Lafaz 'Al-Mākir' sebagai Sifat/Asma</strong></td>
+                <td>Sepakat bahwa tidak boleh berdoa atau memanggil Allah dengan lafaz <em>"Yā Mākir"</em> secara tunggal tanpa sandaran kemuliaan.</td>
+                <td>Boleh menyebut dalam bentuk idhafah terbatas (<em>Khayrul-Mākirīn</em>) sebagaimana termaktub dalam Al-Qur'an, atau dalam konteks doa muqayyad (<em>wamkur lī wa lā tamkur 'alayya</em>).</td>
+                <td>Disiplin ketat adab teologis (<em>adab ma'allāh</em>) dalam melafalkan asmaul husna dan sifat-sifat keagungan Ilahi.</td>
+            </tr>
+            <tr>
+                <td><strong>Fungsi Ayat bagi Psikologi Pejuang Kebenaran</strong></td>
+                <td>Sepakat bahwa ayat ini berfungsi sebagai <em>tasliyah</em> (penghibur lara) dan pengokoh mental dakwah Nabi Muhammad ﷺ serta orang-orang beriman.</td>
+                <td>Sebagian mengaitkannya dengan perlindungan fisik dari pembunuhan, sebagian memperluasnya hingga perlindungan ideologis dari perang pemikiran (<em>ghazwul fikri</em>).</td>
+                <td>Orang beriman diwajibkan memiliki ketahanan mental prima menghadapi fitnah politik, konspirasi media, dan propaganda kebatilan.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Machiavellian/Paranoid vs Pola Pikir Kedaulatan Takdir Ilahi</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Machiavellian / Paranoid</th>
+                <th>Pola Pikir Qur'ani (Rabbani Berbasis QS. 3:54)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Locus of Control (Pusat Kendali Hidup)</strong></td>
+                <td>Meyakini bahwa konspirasi manusia, kekuatan uang, aparat intelijen, dan lobi politik rahasia adalah penentu mutlak nasib sejarah dunia. Terjebak dalam ilusi kendali (<em>illusion of control</em>) atau ketakutan tak berujung.</td>
+                <td>Meyakini secara radikal bahwa <strong>Locus of Control tertinggi berada di tangan Allah SWT</strong>. Konspirasi manusia hanyalah riak kecil di permukaan samudera takdir yang dikendalikan oleh <em>Khayrul-Mākirīn</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Respons Emosional terhadap Ancaman</strong></td>
+                <td>Kepanikan akut, obsesi berlebih terhadap teori konspirasi (<em>conspiracy confirmation bias</em>), keputusasaan psikologis (<em>learned helplessness</em>), atau membalas dengan kecurangan yang sama kotornya.</td>
+                <td>Ketenangan batin yang mendalam (<em>sakīnah</em>), kewaspadaan rasional tanpa paranoid, istiqamah menjaga integritas moral syariat, dan tawakal aktif yang kokoh.</td>
+            </tr>
+            <tr>
+                <td><strong>Etika Operasional dalam Konflik</strong></td>
+                <td>Menghalalkan segala cara: manipulasi data, fitnah terselubung, sikut-menyikut di belakang layar, dan menusuk dari belakang demi mengamankan kepentingan pribadi/kelompok.</td>
+                <td>Menjaga kebersihan cara dan tujuan: kemenangan hakiki hanya bisa diraih dengan integritas, transparansi kebajikan, dan memohon pertolongan Allah tanpa kelicikan.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Asymmetric Sovereign Counter-Strategy" (Prinsip Siasat Tandingan Asimetris Ilahi)</strong><br>
+            <em>Premis Dasar:</em> Manusia pembuat makar selalu beroperasi dalam dimensi linier dan materialistis (uang suap, pasal hukum manipulatif, senjata fisik, dan jaringan rahasia). Namun, Allah SWT membalas makar mereka secara asimetris dari dimensi yang tidak pernah mampu dijangkau oleh radar nalar mereka (membolak-balikkan persepsi visual mereka, mengubah hati para algojo, menciptakan anomali cuaca, atau mengangkat hamba-Nya melintasi dimensi materi).<br>
+            <em>Dampaknya pada Pengambilan Keputusan:</em> Ketika seorang mukmin ditekan oleh kekuatan korup yang secara hitungan kalkulasi duniawi mustahil dikalahkan, ia tidak perlu putus asa atau mengorbankan prinsip aqidahnya. Cukup baginya memaksimalkan ikhtiar yang sah secara syariat, lalu menyerahkan penyelesaian asimetris kepada Allah Sang Pemilik skenario semesta.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Boomerang Law of Malice" (Sunnatullāh Bumerang Kejahatan)</strong><br>
+            <em>Premis Dasar:</em> Berakar dari prinsip Al-Qur'an dalam QS. Fāṭhir: 43 (<em>Wa lā yaḥīqul-makrus-sayyi'u illā bi-ahlih</em> — dan tipu daya yang jahat itu tidak akan menimpa selain pelakunya sendiri). Setiap rekayasa kotor yang dirancang untuk menjatuhkan orang lain hakikatnya adalah penggalian kuburan bagi reputasi, jiwa, dan eksistensi arsitek konspirasi itu sendiri.<br>
+            <em>Dampaknya pada Pengambilan Keputusan:</em> Menjadi rem moral otomatis yang mencegah seorang muslim dari bermain licik di tempat kerja, politik, maupun keluarga. Seseorang yang menyadari hukum bumerang ini akan merasa ngeri merancang tipu muslihat, karena ia tahu bahwa jerat tersebut pada akhirnya akan mencekik lehernya sendiri.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Mengobati Kanker Makar di Dalam Qalbu</h3>
+    <p>
+        Secara neurobiologis, individu yang hidup dalam kebiasaan merancang tipu daya (makar) mengalami aktivasi kronis pada amigdala dan sistem saraf simpatik: mereka hidup dalam ketakutan konstan bahwa kebohongan mereka akan terbongkar, memicu lonjakan kortisol yang merusak kesehatan fisik dan mental. Jiwa pembuat makar adalah jiwa yang sakit oleh penyakit <em>ghurūr</em> (delusi kemahakuasaan) dan <em>hasad</em> (kedengkian melihat kebaikan orang lain).
+    </p>
+    <p>
+        Ayat 54 menghadirkan terapi tazkiyatun nafs ganda:
+    </p>
+    <ol>
+        <li><strong>Penyembuhan ke Arah Luar (Menghilangkan Paranoia):</strong> Membakar habis rasa takut yang melumpuhkan terhadap konspirasi makhluk. Jiwa yang yakin pada <em>Khayrul-Mākirīn</em> terbebas dari sindrom keputusasaan peradaban.</li>
+        <li><strong>Penyembuhan ke Arah Dalam (Pembersihan Batin dari Niat Manipulatif):</strong> Mengikis habis bibit-bibit makar halus dalam diri kita sendiri: berpura-pura baik padahal menikam dari belakang, memuji di depan namun menjatuhkan di belakang atasan, atau memainkan politik kantor yang manipulatif. Ingatlah bahwa Allah mengawasi detak terdalam sanubari, dan Allah mampu mempermalukan orang yang bermakar tepat di panggung yang paling ia banggakan.</li>
+    </ol>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Disinformasi Digital, Spionase Algoritma & Perang Asimetris Modern</h3>
+    <p>
+        Di abad ke-21, wujud <em>makr</em> telah berevolusi menjadi instrumen teknologi yang luar biasa canggih. Jika kaum elite Sanhedrin menggunakan fitnah lisan di hadapan penguasa Romawi, maka para aktor hegemonik modern menggunakan:
+    </p>
+    <ul>
+        <li><strong>Pabrik Disinformasi & Deepfake (Cognitive Warfare):</strong> Memanipulasi persepsi publik global melalui operasi psikologis terencana (<em>psy-ops</em>), pasukan siber (<em>buzzer</em> bayaran), algoritma pemecah belah, dan rekayasa video berbasis kecerdasan buatan (AI) untuk menghancurkan integritas para tokoh pembela kebenaran (<em>character assassination</em>).</li>
+        <li><strong>Surveillance Capitalism & Penindasan Berbasis Data:</strong> Eksploitasi data pribadi warga negara untuk memantau, mendikte pilihan politik, membungkam aktivis hak asasi manusia, dan mengondisikan masyarakat agar tunduk pada hegemoni korporasi oligarki internasional.</li>
+        <li><strong>Rekayasa Kebijakan & Lawfare (Hukum sebagai Senjata):</strong> Penggunaan pasal-pasal hukum karet dan manipulasi regulasi untuk mengkriminalisasi kaum yang kritis terhadap kezaliman, persis sebagaimana para pendeta Baitul Maqdis meminjam tangan hukum Romawi untuk mengeksekusi Nabi 'Isa AS.</li>
+    </ul>
+
+    <h3>2. Dekonstruksi Arogansi Oligarki: Ilusi "The Grand Chessboard"</h3>
+    <p>
+        Para pemikir sekuler dan teknokrat global sering kali terjebak dalam delusi bahwa mereka mampu mendesain arah peradaban dunia secara tertutup melalui pertemuan-pertemuan rahasia, lobi kartel farmasi/senjata, dan manipulasi pasar keuangan global. Namun sejarah kontemporer berulang kali membuktikan runtuhnya arogansi ini: peristiwa-peristiwa tak terduga (<em>the black swan events</em>)—mulai dari keruntuhan finansial mendadak, pandemi global yang membongkar kerapuhan sistem kesehatan, hingga kebangkitan gerakan perlawanan rakyat tertindas dari celah yang paling diremehkan—selalu hadir memporak-porandakan kalkulasi mereka.
+    </p>
+    <p>
+        QS. 3:54 menelanjangi kepalsuan para perancang konspirasi modern: sehebat apa pun kecerdasan buatan, superkomputer analitis, dan dana triliunan dolar yang mereka gelontorkan, ada variabel Tuhan yang tidak pernah bisa mereka masukkan ke dalam baris kode program mereka. Ketika Allah memutuskan untuk menggagalkan sebuah makar, kepongahan teknologi mereka justru akan berbalik menjadi instrumen kehancuran mereka sendiri.
+    </p>
+
+    <h3>3. Solusi Peradaban: Membangun Komunitas Integritas Berkarakter Hawariyyun</h3>
+    <p>
+        Umat Islam tidak boleh merespons makar modern dengan menjadi penyebar paranoid atau konsumen histeris teori konspirasi di media sosial. Solusi Qur'ani yang diajarkan surah ini adalah:
+    </p>
+    <ol>
+        <li><strong>Membangun Barisan Ansharullah yang Solid:</strong> Sebagaimana Nabi 'Isa AS menghimpun kaum Hawariyyun, umat harus fokus memperkuat jaringan komunitas yang tegak di atas ilmu, integritas moral, dan kemandirian ekonomi.</li>
+        <li><strong>Melawan dengan Transparansi Kebajikan (The Power of Truth):</strong> Kebatilan hanya bisa bertahan di ruang gelap manipulasi. Ketika orang beriman secara konsisten menghadirkan karya nyata, pelayanan sosial, dan argumen ilmiah yang terang benderang, makar gelap kebatilan akan kehilangan daya tariknya di hadapan nurani publik.</li>
+    </ol>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Operational Protocols)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit Harian (&lt; 5 Menit) — Melazimkan Doa Benteng Strategis Nabawiyyah:</strong><br>
+                Jadikan doa riwayat Shahih At-Tirmidzi (No. 3551) sebagai wirid harian setiap usai shalat Shubuh dan Maghrib serta sebelum melangkah ke rapat atau perundingan krusial: <em>"Rabbi a'innī wa lā tu'in 'alayya, wanshurnī wa lā tanshur 'alayya, <strong>wamkur lī wa lā tamkur 'alayya</strong>, wahdinī wa yassiril-hudā ilayya..."</em>. Bacalah dengan menghadirkan kesadaran penuh bahwa perlindungan Allah jauh melampaui seluruh muslihat manusia.
+            </li>
+            <li>
+                <strong>Protokol Integritas Muamalah (Decision Rule) — Zero Manipulation Policy:</strong><br>
+                Terapkan audit etika ketat dalam seluruh urusan karier, bisnis, dan organisasi: haramkan strategi manipulatif, penyebaran fitnah terselubung terhadap rekan kerja, pemalsuan klausul kontrak kerja, dan praktik menjatuhkan pesaing melalui cara-cara kotor di belakang layar. Tanamkan komitmen baja: <em>"Aku hanya akan meraih rezeki dan posisi melalui jalan yang diridhai Allah SWT; jika kezaliman mengharuskan kelicikan, aku memilih keluar dengan kemuliaan iman."</em>
+            </li>
+            <li>
+                <strong>Protokol Ketahanan Mental Relasional — Detoks Paranoia Konspiratif:</strong><br>
+                Hentikan kebiasaan mengonsumsi dan menyebarkan konten histeris teori konspirasi yang tidak terverifikasi di grup-grup komunikasi digital yang memicu kecemasan kolektif dan keputusasaan. Alihkan 100% fokus mental dari meratapi makar musuh menuju kerja-kerja nyata kebajikan peradaban: perbaiki salat, tunaikan zakat/infak, bangun kapasitas profesional, dan perkuat hubungan persaudaraan dalam komunitas.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Audit Motif Keikhlasan:</strong> Apakah di dalam relasi sosial, bisnis, atau organisasi, aku masih sering menggunakan trik manipulatif dan kepura-puraan halus untuk memuluskan ambisi pribadiku, seraya lupa bahwa Allah Maha Mengawasi apa yang kusembunyikan di balik senyumanku?
+            </li>
+            <li>
+                <strong>Audit Sandaran Keberanian:</strong> Ketika aku menghadapi tekanan, ancaman, atau manuver politik dari orang-orang yang berkuasa di sekitarku, apakah hatiku lebih gentar kepada makar manusia yang lemah ataukah bersandar penuh pada keadilan mutlak Allah Sang Sebaik-baik Perancang Skenario (<em>Khayrul-Mākirīn</em>)?
+            </li>
+            <li>
+                <strong>Pemeriksaan Tanda Istidrāj:</strong> Jika selama ini aku sering melanggar batasan syariat namun urusan duniawiku terasa mulus dan rezekiku lancar, apakah aku menyadari dengan rasa ngeri bahwa ini mungkin merupakan bentuk pembiaran Ilahi (<em>istidrāj</em>) yang sedang mengujiku sebelum azab tiba jika aku tidak segera bertaubat nasuha?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Khayral-Mākirīn, Yā Allāh Yā Hayyu Yā Qayyūm, Yā Man bi-yadihī malakūtu kulli syay'. Wahai Allah Yang Maha Mengetahui segala yang tersembunyi di langit dan di bumi, Zat yang tidak satu pun konspirasi makhluk mampu lolos dari pengawasan dan keadilan takdir-Mu. Kami bersujud mengakui kelemahan, kefakiran, dan keterbatasan nalar kami di hadapan keagungan rencana-Mu. Lindungilah diri kami, keluarga kami, dan umat ini dari makar-makar gelap orang-orang zalim, dari tipu daya kaum pendusta, dan dari perangkap musuh-musuh agama-Mu. Jadikanlah rencana jahat mereka berbalik menghancurkan kebatilan mereka sendiri, sebagaimana Engkau telah menyelamatkan Nabi-Mu 'Isa Al-Masih dari makar pembunuhan kaum pembangkang. Bersihkanlah pula qalbu kami dari segala benih kelicikan, iri dengki, fitnah, dan niat manipulatif terhadap sesama hamba-Mu. Karuniakanlah kepada kami keteguhan iman kaum Hawariyyun, keberanian para syuhada, dan ketenangan jiwa yang senantiasa yakin bahwa takdir-Mu selalu merupakan skenario terbaik bagi para kekasih-Mu. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-053 - QS. Ali 'Imran Ayat 53.html">&larr; Kembali ke Ayat 53 (QS. 3:53)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 54</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-055 - QS. Ali 'Imran Ayat 55.html">Lanjut ke Ayat 55 (QS. 3:55) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-043 - QS. Ali 'Imran Ayat 43 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-042 - QS. Ali 'Imran Ayat 42.html">&larr; Ayat Sebelumnya (QS. 3:42)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-044 - QS. Ali 'Imran Ayat 44.html">Ayat Berikutnya (QS. 3:44) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian</span>
+        <span class="badge">Klaster 3 Blok 2 (Ayat 42–51): Kesucian Maryam, Panggilan Ibadah, & Kelahiran Isa AS</span>
+        <span class="badge">7 Kata | 35 Huruf Rasm</span>
+        <span class="badge">Juz 3 (Rub' 2 Hizb 5)</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 43</h1>
+    <div class="transliteration">
+        "Yā Maryamu-qnutī li-Rabbiki wasjudī warka'ī ma'ar-rāki'īn(a)."
+    </div>
+    <div class="thematic-title">
+        Respons Syukur atas Pilihan Ilahi: Mandat Qunut Khusyuk, Disiplin Sujud Intim, dan Integrasi Ruku' Komunal sebagai Puncak Sublimasi Spiritual Maryam 'Alaihas-Salam
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Ayat 43: Transformasi Kehormatan Menjadi Penghambaan Total, Arsitektur Ibadah Fisik-Batin, dan Rekonsiliasi Ibadah Privat Menuju Solidaritas Jamaah)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        يَـٰمَرْيَمُ ٱقْنُتِى لِرَبِّكِ وَٱسْجُدِى وَٱرْكَعِى مَعَ ٱلرَّٰكِعِينَ ۝٤٣
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Wahai Maryam! Taatlah dengan khusyuk dan tunduklah secara berkelanjutan kepada Tuhanmu, sujudlah (dalam kerendahan diri yang mutlak di hadapan keagungan-Nya), dan rukuklah bersama orang-orang yang rukuk (dalam solidaritas ibadah jamaah)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan titah lanjutan para malaikat yang menyambung langsung deklarasi pemilihan agung pada ayat 42 (<em>"Innallāhaṣh-ṭhafāki wa thahharaki wash-thafāki 'alā nisā'il-'ālamīn"</em>). Dalam epistemologi Al-Qur'an, anugerah derajat kemuliaan (<em>al-ishthifā'</em>) dan pensucian batin (<em>at-tath-hīr</em>) bukanlah tiket kehormatan untuk berleha-leha atau merasa berhak atas privilese (<em>entitlement</em>), melainkan sebuah pembebanan amanah spiritual (<em>taklīf</em>) yang menuntut pelipatgandaan ibadah dan kepasrahan mutlak.
+    </p>
+    <p>
+        Panggilan <em>"Yā Maryamu-qnutī..."</em> mengajarkan kaidah fundamental teologi Islam: <strong>semakin tinggi anugerah Ilahi yang disematkan kepada seorang hamba, semakin dalam ia dituntut untuk menyungkurkan dahinya dalam sujud kehambaan.</strong> Ayat ini memadukan tiga dimensi ibadah paripurna: (1) <em>Al-Qunūt</em> sebagai representasi ketaatan batin yang konsisten, hening, dan berpanjang-panjang; (2) <em>As-Sujūd</em> sebagai puncak penafian ego dan kerendahan diri di hadapan Zat Yang Maha Tinggi; dan (3) <em>Ar-Rukū' ma'ar-rāki'īn</em> sebagai integrasi kesalehan personal ke dalam gelanggang solidaritas sosial-komunal bersama hamba-hamba Allah yang saleh.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Makharij & Sifat Huruf, serta Variasi Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm Utsmani</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Lughawi-Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>يَـٰمَرْيَمُ</strong><br>(<em>Yā Maryam(u)</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil Ḥukmī:</strong> Alif mad pada huruf nida' <em>Yā</em> melekat secara rasm dengan isim setelahnya. Saat washal ke hamzah washal <em>uqnutī</em>, mad gugur demi mencegah bertemunya dua sukun.<br>
+                    <strong>Huruf Rā' Mufakhkhamah:</strong> Rā' sukun didahului fathah wajib dibaca tebal (tafkhim).<br>
+                    <strong>Makharij & Sifat:</strong> Mim keluar dari asy-syafatan (dua bibir rapat), sifat tawassuth dan jahr. Mīm di ujung kata berharakat tunggal dhammah tanpa tanwin (<em>mabnī 'alad-dhamm</em>).
+                </td>
+                <td>
+                    Seluruh Sepuluh Imam Mutawatirah sepakat membaca <em>Maryamu</em> dengan mabni dhammah tanpa tanwin karena statusnya sebagai <em>munādā mufrad 'alam</em> yang berstatus <em>mamnū' minash-sharf</em> ('alamiyyah dan ta'nits). Konsensus ini menegaskan seruan langsung malaikat kepada Maryam sebagai entitas personal yang dimuliakan.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱقْنُتِى</strong><br>(<em>Uqnutī / -qnutī</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Jika ibtida' (memulai bacaan), dibaca dhammah (<em>Uqnutī</em>) karena huruf ketiga fi'il amr berharakat dhammah asli (<em>uq-nu-tī</em>). Jika washal dari kata sebelumnya, hamzah washal gugur dan Mim dhammah langsung menyambung ke Qaf sukun (<em>Yā Maryamu-qnutī</em>).<br>
+                    <strong>Qalqalah Sughrā pada Qāf:</strong> Huruf Qaf sukun berada di tengah kata, keluar dari aqshal lisan (pangkal lidah belakang), memiliki sifat isti'la' mutlak, syiddah, dan memantul kuat.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada huruf Ya' mukhathabah di akhir kata.
+                </td>
+                <td>
+                    • <strong>Sepuluh Imam Mutawatirah:</strong> Sepakat membaca dengan fi'il amr <em>Uqnutī</em> berharakat dhammah Nun dan kasrah Ta' diikuti Ya' mukhathabah.<br>
+                    • <em>Catatan Riwayat Syadzah:</em> Diriwayatkan dari Ibnu Mas'ud membaca <em>qūmī</em>, namun bacaan mutawatir yang qath'i adalah <em>uqnutī</em> yang mengandung makna ketaatan khusyuk, hening, dan kontemplatif yang jauh lebih mendalam daripada sekadar berdiri biasa.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>لِرَبِّكِ</strong><br>(<em>Li-Rabbik(i)</em>)</td>
+                <td>
+                    <strong>Lām Jar Muraqqaqah:</strong> Kasrah dibaca tipis.<br>
+                    <strong>Huruf Rā' Mufakhkhamah:</strong> Rā' fathah dibaca tebal.<br>
+                    <strong>Bā' Bertasydid Kasrah:</strong> Memiliki sifat syiddah dan jahr, suara tertahan sesaat dalam tasydid tanpa memantul.<br>
+                    <strong>Kāf Khithāb Mu'annatsah:</strong> Kasrah tipis disertai sifat hams (hembusan nafas lembut saat makhraj dilepaskan).
+                </td>
+                <td>
+                    Seluruh Sepuluh Imam Mutawatirah bersepakat membaca kasrah pada Kaf khithab mu'annatsah (<em>li-Rabbiki</em>). Penggunaan kata <em>Rabb</em> yang disandarkan kepada Maryam (<em>Rabbiki</em>) menghadirkan nuansa teologis tentang pemeliharaan, cinta kasih, dan bimbingan langsung Allah atas dirinya sejak masa kanak-kanak di dalam mihrab.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَٱسْجُدِى</strong><br>(<em>Wasjudī</em>)</td>
+                <td>
+                    <strong>Hamzah Washal Gugur:</strong> Wawu fathah langsung menyambung ke huruf Sīn sukun (<em>was-</em>).<br>
+                    <strong>Sīn Sakīnah:</strong> Keluar dari ujung lidah dekat celah gigi seri, memiliki sifat hams, rikhwah, istifal, infitah, dan <strong>Ṣhafīr</strong> (desis tajam yang mengalir).<br>
+                    <strong>Jīm Dhammah:</strong> Makhraj di tengah lidah (wasathul lisan), memiliki sifat syiddah dan jahr murni tanpa desis udara.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada huruf Ya' mukhathabah.
+                </td>
+                <td>
+                    • <strong>Sepuluh Imam Mutawatirah:</strong> Seluruhnya sepakat membaca dengan urutan teks Utsmani: <em>wasjudī</em> didahulukan sebelum <em>warka'ī</em>.<br>
+                    • <em>Catatan Riwayat Sahabat:</em> Diriwayatkan bahwa Mushaf Ibnu Mas'ud dan Ubay bin Ka'b meriwayatkan <em>warka'ī wasjudī</em> sesuai urutan teknis shalat. Namun, mushaf imam Utsmani menetapkan qira'at mutawatirah sepuluh imam pada teks <strong>وَاسْجُدِي وَارْكَعِي</strong> yang menyimpan rahasia balaghah puncak ketundukan jiwa (sujud diutamakan).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَٱرْكَعِى</strong><br>(<em>Warka'ī</em>)</td>
+                <td>
+                    <strong>Hamzah Washal Gugur:</strong> Wawu fathah langsung menyambung ke Rā' sukun (<em>war-</em>).<br>
+                    <strong>Rā' Mufakhkhamah:</strong> Rā' sukun didahului fathah wajib dibaca tebal.<br>
+                    <strong>Huruf 'Ain Kasrah:</strong> Keluar dari wasathul halq (tengah tenggorokan) dengan sifat tawassuth dan jahr.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada huruf Ya' mukhathabah di akhir kata.
+                </td>
+                <td>
+                    Seluruh Sepuluh Imam Mutawatirah membaca <em>warka'ī</em> dengan wazan fi'il amr bagi mufrad mu'annatsah (disertai Ya' mukhathabah). Konsensus ini menegaskan perintah pembungkukan fisik sebagai bentuk takzim kepada Allah.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>مَعَ</strong><br>(<em>Ma'a</em>)</td>
+                <td>
+                    <strong>Mim & 'Ain Fathah:</strong> Muraqqaqah (tipis), makhraj 'Ain di tengah tenggorokan dibaca jelas tanpa sengau.<br>
+                    <strong>Karakteristik Fonetik:</strong> Dua huruf berharakat fathah berturut-turut menciptakan aliran suara artikulasi yang ringan dan menyambung secara organik menuju isim ma'rifah setelahnya.
+                </td>
+                <td>
+                    Seluruh Sepuluh Imam Mutawatirah membaca dengan fathah pada huruf 'Ain (<em>Ma'a</em>) sebagai zharaf kebersamaan (<em>mushāḥabah</em>). Meskipun sebagian dialek kabilah Arab kuno mensukunkan 'Ain (<em>Ma'</em>), mushaf qira'at mutawatirah konsisten dengan fathah murni.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلرَّٰكِعِينَ ۝٤٣</strong><br>(<em>Ar-Rāki'īn(a)</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur sepenuhnya ke dalam huruf Rā' yang bertasydid fathah.<br>
+                    <strong>Rā' Mufakhkhamah bil-Alif:</strong> Puncak ketebalan tafkhim karena Rā' fathah diikuti Alif khanjariyah.<br>
+                    <strong>Huruf Kāf Kasrah:</strong> Dibaca tipis (tarqiq) dengan sifat hams lembut.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf akhir ayat di lafaz <em>Al-Rāki'īn</em>, huruf Ya' mad bertemu Nun sukun 'aridh dibaca dengan pilihan 2 harakat (qashr), 4 harakat (tawassuth), atau 6 harakat (thul), disertai penyempurnaan sifat tawassuth pada huruf Nun sukun tanpa qalqalah.
+                </td>
+                <td>
+                    Seluruh Sepuluh Imam Mutawatirah sepakat membaca lafaz ini dalam bentuk jamak mudzakkar salim majrur bil-ya' (<em>Ar-Rāki'īn</em>). Bentuk mudzakkar di sini mengandung kaidah <em>at-taghlīb</em> yang memasukkan Maryam ke dalam barisan kolektif orang-orang saleh, atau perintah untuk bergabung bersama jamaah para nabi dan ahli ibadah Baitul Maqdis.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Korelasi Pemilihan Maryam (QS. 3:42) dan Panggilan Ibadah (QS. 3:43) — Kedudukan Maryam sebagai Pemimpin Wanita Ahli Surga:</strong><br>
+        Diriwayatkan dalam <em>Shahīh al-Bukhārī</em> (No. 3432, 3815) dan <em>Shahīh Muslim</em> (No. 2430) dari Sahabat 'Ali bin Abi Thalib r.a., Rasulullah ﷺ bersabda:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«خَيْرُ نِسَائِهَا مَرْيَمُ ابْنَةُ عِمْرَانَ، وَخَيْرُ نِسَائِهَا خَدِيجَةُ بِنْتُ خُوَيْلِدٍ»</div>
+        <em>"Sebaik-baik wanita di zamannya adalah Maryam putri 'Imran, dan sebaik-baik wanita di zamannya adalah Khadijah binti Khuwailid."</em><br>
+        Dan ditegaskan dalam riwayat Imam Ahmad dalam <em>Al-Musnad</em> (No. 2668, 2901) dan Al-Hakim dalam <em>Al-Mustadrak</em> (Jilid 2, hlm. 594) dari Ibnu 'Abbas r.a. dengan sanad Shahih:<br>
+        <em>"Pemimpin wanita ahli surga yang paling utama adalah Maryam binti 'Imran, Khadijah binti Khuwailid, Fathimah binti Muhammad, dan Asiyah binti Muzahim (istri Fir'aun)."</em><br>
+        <strong>Korelasi Teologis:</strong> Maqam kemuliaan tertinggi yang diraih Maryam di hadapan semesta alam bukanlah karunia pasif tanpa perjuangan, melainkan buah dari ketaatan totalnya dalam melaksanakan titah ayat 43: qunut yang panjang, sujud yang khusyuk, dan ruku' bersama orang-orang saleh.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 756) dari Jabir bin 'Abdillah r.a. — Hakikat "Al-Qunūt" sebagai Berdiri Khusyuk yang Panjang:</strong><br>
+        Rasulullah ﷺ ditanya mengenai shalat manakah yang paling utama, maka beliau menjawab:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«أَفْضَلُ الصَّلَاةِ طُولُ الْقُنُوتِ»</div>
+        <em>"Shalat yang paling utama adalah yang panjang qunutnya (yakni panjang berdirinya dalam kekhusyukan membaca ayat-ayat Allah)."</em><br>
+        <strong>Atsar Salaf:</strong> Imam At-Tabari meriwayatkan dalam tafsirnya dari Mujahid dan Al-Hasan Al-Bashri: <em>"Tatkala malaikat menyerukan 'Yā Maryamu-qnutī li-Rabbiki', Maryam berdiri tegak dalam shalatnya di mihrab hingga kedua telapak dan mata kakinya membengkak berdarah karena panjangnya qunut menghadap Allah SWT."</em>
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Shahīh al-Bukhārī (No. 1130, 4836) & Muslim (No. 2819) — Melipatgandakan Ibadah sebagai Manifestasi Syukur:</strong><br>
+        Dari Sayyidah 'Aisyah r.a. dan Al-Mughirah bin Syu'bah r.a., bahwasanya Nabi Muhammad ﷺ senantiasa mendirikan shalat malam hingga kedua telapak kakinya merekah pecah-pecah. Maka 'Aisyah berkata: <em>"Mengapa engkau melakukan ini wahai Rasulullah, padahal Allah telah mengampuni dosa-dosamu yang telah lalu dan yang akan datang?"</em> Rasulullah ﷺ menjawab:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«أَفَلَا أُحِبُّ أَنْ أَكُونَ عَبْدًا شَكُورًا؟»</div>
+        <em>"Tidakkah patut aku menyukai untuk menjadi seorang hamba yang banyak bersyukur?"</em><br>
+        <strong>Korelasi Hermeneutis:</strong> Hadits ini adalah manifestasi praktis paling sempurna dari kaidah QS. 3:43: ketika seorang hamba dianugerahi maqam pilihan suci, respons spiritualnya yang paling fitrah bukanlah bermegah-megah di hadapan manusia, melainkan membasahi sajadah dengan air mata sujud dan ruku' sebagai bukti syukur konkret kepada Allah Ta'ala.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Muslim (No. 482) dari Abu Hurairah r.a. — Kedekatan Puncak dalam Sujud:</strong><br>
+        Rasulullah ﷺ bersabda mengenai rahasia kedudukan sujud:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«أَقْرَبُ مَا يَكُونُ الْعَبْدُ مِنْ رَبِّهِ وَهُوَ سَاجِدٌ، فَأَكْثِرُوا الدُّعَاءَ»</div>
+        <em>"Keadaan yang paling dekat antara seorang hamba dengan Tuhannya adalah ketika ia sedang bersujud, maka perbanyaklah berdoa di dalamnya."</em>
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Q-N-T (ق-ن-ت — Al-Qunūt):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ق-ن-ت) menegaskan bahwa akar kata ini berporos pada satu prinsip makna dasar: <em>ath-thā'ah wal-luzūm</em> (ketaatan yang melekat secara konsisten dan keheningan dari segala perkataan yang melalaikan). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> memaparkan spektrum makna qunut dalam bahasa Al-Qur'an: (a) <em>Ad-Du'ā'</em> (doa yang dipanjatkan dengan khusyuk); (b) <em>Ath-Thā'ah</em> (kepatuhan mutlak); (c) <em>As-Sukūt</em> (keheningan lisan saat menghadap Allah); (d) <em>Thūlul-Qiyām</em> (panjangnya waktu berdiri dalam shalat); dan (e) <em>Al-Khusyū'</em> (ketundukan batin yang merontokkan keangkuhan diri). Perintah <em>uqnutī</em> kepada Maryam menuntut sebuah keadaan batiniah yang mengkristal: keheningan total dari distraksi duniawi seraya mendedikasikan seluruh kesadaran pikiran hanya kepada Allah SWT.
+        </li>
+        <li>
+            <strong>2. S-J-D (س-ج-د — As-Sujūd):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> menjelaskan bahwa akar Sin-Jim-Dal bermakna dasar: <em>at-tadhallul wal-inhinā'</em> (merendahkan diri serendah-rendahnya dan menunduk dengan rasa takzim penuh). Segala sesuatu yang condong merendah ke arah bumi dinamakan bersujud. Dalam laras bahasa syariat, sujud adalah tindakan menempelkan dahi dan wajah—anggota tubuh manusia yang paling mulia dan paling terhormat—langsung ke atas tanah atau debu di hadapan keagungan Allah. Sujud adalah simbol visual dan kinestetik dari kehancuran total keangkuhan ego (<em>fana'ul-ināniyyah</em>).
+        </li>
+        <li>
+            <strong>3. R-K-' (ر-ك-ع — Ar-Rukū'):</strong><br>
+            Akar kata Ra'-Kaf-'Ain secara leksikografis berporos pada <em>al-inhinā'</em> (pembungkukan tubuh secara teratur). Orang Arab kuno berkata: <em>"Raka'asy-syaikh"</em> apabila seseorang telah membungkuk punggungnya akibat usia renta. Dalam ibadah samawi, ruku' adalah pembungkukan tulang punggung setengah lingkaran yang menyejajarkan kepala dengan pinggang sebagai postur pengagungan langsung terhadap kekuasaan Tuhan semesta alam (<em>ta'zhīm li-Jalālillāh</em>).
+        </li>
+        <li>
+            <strong>4. R-B-B (ر-ب-ب — Rabb):</strong><br>
+            Lafaz <em>Rabb</em> berakar dari tarbiyah, kepemilikan mutlak, perbaikan, dan pemeliharaan berkesinambungan. Penggunaan frasa <em>li-Rabbiki</em> (kepada Tuhanmu) dengan penyandaran dhamir Kaf mu'annatsah menghadirkan medan semantik yang sangat intim: Maryam tidak diseru dengan nama zat yang menakutkan, melainkan diseru untuk tunduk kepada Zat Yang telah mengasuhnya dengan penuh kelembutan sejak dalam buaian ibunya, menumbuhkannya menjadi wanita suci di dalam mihrab, dan memberinya rezeki buah-buahan di luar musim (QS. 3:37).
+        </li>
+        <li>
+            <strong>5. M-'-Y (م-ع-ي — Ma'a):</strong><br>
+            Merupakan isim zharaf yang menunjukkan makna <em>al-muṣhāḥabah wal-ijtimā'</em> (kebersamaan, integrasi, dan persekutuan harmonis). Penggunaan kata <em>ma'a</em> mengisyaratkan bahwa Maryam tidak dibiarkan menjadi sosok asketis yang terasing selamanya dalam menara gading kesendirian, melainkan diperintahkan untuk meleburkan frekuensi spiritualnya bersama kaum yang rukuk.
+        </li>
+        <li>
+            <strong>6. M-R-Y-M (م-ر-ي-م — Maryam):</strong><br>
+            Berasal dari tradisi bahasa Semit kuno (Ibrani/Aramaik: <em>Miryam</em>). Dalam etimologi keagamaan klasik, nama ini bermakna <em>Al-'Ābidah</em> (wanita ahli ibadah yang tekun), <em>Al-Qānitah</em> (yang taat), atau <em>Khādimatur-Rabb</em> (pelayan rumah suci Allah). Makna nama ini terbukti terwujud secara sempurna dalam seluruh jalan hidupnya yang steril dari kepentingan profan duniawi.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>يَـٰمَرْيَمُ</strong></td>
+                <td><em>Yā</em>: Harf nida' mabni 'alas-sukun.<br><em>Maryamu</em>: Isim 'alam mufrad mu'annats mamnu' minash-sharf.</td>
+                <td><em>Yā</em> harf nida'. <em>Maryamu</em> <strong>Munādā Mufrad 'Alam</strong> mabni 'alad-dhamm fi mahalli nashbin. Seluruh jumlah nida'iyyah berada fi mahalli nashbin sebagai maqbūl al-qaul / hikayat seruan malaikat yang dimulai dari ayat 42.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱقْنُتِى</strong></td>
+                <td>Fi'il amr tsulatsi mujarrad wazan <em>fa'ala-yaf'ulu</em> (<em>qanata-yaqnutu</em>), bersambung dengan Yā' al-mukhāṭhabah.</td>
+                <td>Fi'il amr <strong>mabnī 'alā hadzfin-nūn</strong> li-ittishālihī bi-yā'il-mukhāṭhabah. Huruf Yā' dhamir muttashil mabni 'alas-sukun fi mahalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah <em>uqnutī</em> adalah <em>jawāb an-nidā'</em> la mahalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>لِرَبِّكِ</strong></td>
+                <td><em>Lām</em>: Harf jarr lil-ikhtishāsh wal-istihqāq.<br><em>Rabbi</em>: Isim majrur bil-kasrah, mudhāf.<br><em>Kāf</em>: Dhamir muttashil mu'annatsah.</td>
+                <td>Jar wa majrur <em>li-Rabbiki</em> <strong>muta'alliq</strong> dengan fi'il amr <em>uqnutī</em> (menjelaskan orientasi ketundukan mutlak hanya kepada Tuhannya). Dhamir <em>-ki</em> mabni 'alal-kasr fi mahalli jarrin <strong>Mudhāfun Ilayh</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱسْجُدِى</strong></td>
+                <td><em>Wawu</em>: Harf 'athaf muthlaqul jam'.<br><em>Usjudī</em>: Fi'il amr tsulatsi mujarrad wazan <em>fa'ala-yaf'ulu</em> (<em>sajada-yasjudu</em>) bersambung dengan Yā' mukhāṭhabah.</td>
+                <td>Fi'il amr <strong>mabnī 'alā hadzfin-nūn</strong>, Yā' mukhāṭhabah fi mahalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah <em>wasjudī</em> <strong>ma'ṭhūfah</strong> atas jumlah <em>uqnutī</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱرْكَعِى</strong></td>
+                <td><em>Wawu</em>: Harf 'athaf.<br><em>Irka'ī</em>: Fi'il amr tsulatsi mujarrad wazan <em>fa'ala-yaf'alu</em> (<em>raka'a-yarka'u</em>) bersambung dengan Yā' mukhāṭhabah.</td>
+                <td>Fi'il amr <strong>mabnī 'alā hadzfin-nūn</strong>, Yā' mukhāṭhabah fi mahalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah <em>warka'ī</em> <strong>ma'ṭhūfah</strong> atas jumlah sebelumnya.</td>
+            </tr>
+            <tr>
+                <td><strong>مَعَ</strong></td>
+                <td>Isim zharaf makān / mushāḥabah, mabni 'alal-fath fi mahalli nashbin, mudhāf.</td>
+                <td>Zharaf mushāḥabah manshub bil-fathah. Syibhul jumlah (zharaf wa mudhaf ilayh) <strong>muta'alliq bi-hāl mahdzūfah</strong> dari Fā'il pada <em>warka'ī</em> (ditakdirkan: <em>warka'ī kā'inatan ma'ar-rāki'īn</em> / rukuklah kamu dalam kondisi bersama orang-orang yang rukuk).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلرَّٰكِعِينَ ۝٤٣</strong></td>
+                <td>Isim fa'il jamak mudzakkar salim wazan <em>fā'ilūn</em> dari <em>raka'a</em>, ma'rifah bil-alif wal-lam.</td>
+                <td><strong>Mudhāfun Ilayh</strong> majrur bil-yā' liannāhu jam'u mudzakkar sālim. Nun sukun 'aridhah pada akhir ayat menjadi lokus mad 'aridh lis-sukun.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & Estetika Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb al-Insyā' ath-Thalabī bi-Shīghatil-Amr (Gradasi Tanggung Jawab atas Anugerah):</strong><br>
+            Ayat ini memuat rentetan tiga kalimat perintah (<em>shīghat al-amr</em>): <strong>ٱقْنُتِى (uqnutī)</strong>, <strong>وَٱسْجُدِى (wasjudī)</strong>, dan <strong>وَٱرْكَعِى (warka'ī)</strong>. Dalam balaghah, rentetan amar ini bukan sekadar perintah yuridis biasa, melainkan berfungsi sebagai <em>al-hastsu 'alat-tasyakkur</em> (dorongan keras untuk mensyukuri nikmat pilihan di ayat 42) serta penegasan bahwa kemuliaan derajat kenabian/kewalian menuntut beban kepatuhan yang berlipat ganda.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia Balaghah Taqdīm as-Sujūd 'alar-Rukū' (Mendahulukan Sujud atas Ruku'):</strong><br>
+            Dalam tertib shalat Islam yang lazim, ruku' selalu mendahului sujud. Mengapa dalam ayat ini Allah mendahulukan <em>wasjudī</em> sebelum <em>warka'ī</em>? Para pakar balaghah Al-Qur'an (seperti Az-Zamakhsyari dan Ar-Razi) menguraikan hikmah memukau:
+            <br>• <strong>Klimaks Penafian Diri (At-Tadhallul al-A'zham):</strong> Sujud adalah rukun shalat yang paling mulia dan paling dekat dengan Allah. Setelah Maryam dimuliakan pada ayat 42 dengan kalimat <em>wash-thafāki 'alā nisā'il-'ālamīn</em>, sikap mental yang paling mendesak dihadirkan seketika adalah menyungkurkan dahi ke tanah untuk mengikis habis potensi bisikan riya' atau takabur batin.
+            <br>• <strong>Perjalanan dari Keintiman Privat Menuju Solidaritas Sosial:</strong> Qunut dan sujud adalah ibadah yang sangat privat dan personal di dalam bilik mihrab yang sunyi. Sedangkan ruku' dirangkaikan dengan <em>ma'ar-rāki'īn</em> (kebersamaan jamaah). Ayat ini menata urutan dari penyucian batin personal menuju kepedulian komunal.
+            <br>• <strong>Karakteristik Syariat Bani Israil:</strong> Dalam syariat sebagian nabi terdahulu, sujud memiliki momentum tersendiri sebagai pembuka ibadah munajat terpisah.
+            <br>• <strong>Kaidah Wāwul-'Athaf Lil-Muthlaqil-Jam':</strong> Huruf wawu dalam gramatika Arab tidak memfaedahkan urutan waktu (<em>lā taqtadhīt-tartīb</em>), melainkan merangkum keseluruhan kesatuan ibadah shalat tanpa membatasi kronologinya.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Majāz al-Mursal bi-Tasmiyatil-Kulli bi-Ismil-Juz' (Penyebutan Rukun untuk Shalat Sempurna):</strong><br>
+            Penyebutan <em>qunūt</em>, <em>sujūd</em>, dan <em>rukū'</em> merupakan majaz mursal tingkat tinggi. Ketiga unsur ini adalah rukun-rukun teragung dalam shalat. Disebutkannya tiga rukun ini secara terperinci bertujuan untuk memerintahkan pendirian shalat seutuhnya dengan menghadirkan ruh dari setiap gerakannya: berdirinya dipenuhi qunut, rebahnya dipenuhi sujud, dan tunduknya dipenuhi takzim ruku'.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Kaidah At-Taghlīb pada Lafaz "Ar-Rāki'īn":</strong><br>
+            Al-Qur'an tidak menggunakan bentuk mu'annats <em>ar-rāki'āt</em> (wanita-wanita yang rukuk), melainkan menggunakan jamak mudzakkar salim <strong>ٱلرَّٰكِعِينَ (Ar-Rāki'īn)</strong>. Ini mengandung dua rahasia keindahan: (a) <em>Uslūb at-Taghlīb</em>, menyatukan seluruh hamba beriman baik pria maupun wanita di bawah sebutan mudzakkar yang agung; (b) Mengangkat derajat Maryam sejajar dengan barisan para nabi, imam, dan orang-orang saleh terdahulu yang memimpin peribadatan di Baitul Maqdis.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-I'tilāf wa Ḥusnut-Tawāzun ash-Shawtī (Simetri Rima Musikalitas Sakral):</strong><br>
+            Tiga fi'il amr ditutup dengan vokal panjang Ya' mukhathabah yang lembut namun tegas: <em>uqnutī &mdash; wasjudī &mdash; warka'ī</em>. Susunan fonetik ini menghasilkan ritme akustik yang menenangkan kalbu pendengarnya, mencerminkan ketenangan seorang hamba yang melarutkan seluruh kegelisahan hidupnya di atas hamparan sujud kepada Sang Khalik.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Metodologi Integratif 2S & 1L</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Organik dengan Ayat 42):</strong><br>
+            Pada ayat 42, para malaikat menyampaikan proklamasi pemilihan Maryam: <em>"Wahai Maryam, sesungguhnya Allah telah memilihmu, menyucikanmu, dan memilihmu di atas seluruh perempuan di semesta alam."</em> Ayat 43 hadir sebagai kelanjutan hukum kausalitas spiritual: <strong>Anugerah pemilihan menuntut kewajiban syukur yang sepadan.</strong> Allah tidak membiarkan Maryam terbuai oleh gelar kemuliaan tersebut; sebaliknya, malaikat langsung membimbingnya: jika engkau telah dipilih oleh Allah, maka tersungkurlah beribadah, taatlah, sujudlah, dan rukuklah! Hubungan antara ayat 42 dan 43 adalah hubungan antara <em>In'ām</em> (pemberian nikmat) dan <em>Taklīf</em> (pembebanan syukur).
+        </li>
+        <li>
+            <strong>Siyāq (Arsitektur Narasi Keluarga 'Imran & Dialog Teologis Kristen Najran):</strong><br>
+            Dalam konteks makro Surah Ali 'Imran yang didebatkan di hadapan 60 delegasi elite Kristen Najran di Madinah, ayat ini merupakan hujah dekonstruksi trinitas yang sangat mematikan:
+            <br>• <strong>Maryology & Penolakan Gelar "Bunda Allah" (Theotokos):</strong> Teologi Gereja Konsili Efesus (431 M) menobatkan Maryam sebagai <em>Theotokos</em> (Bunda Allah / Mother of God) yang disembah dan dimintai syafaat ilahiah. Al-Qur'an dalam QS. 3:43 meruntuhkan mitos penuhanan ini: Maryam adalah seorang hamba sahaya perempuan (<em>'abīdullāh</em>) yang secara eksplisit diperintahkan untuk tunduk, menyembah, bersujud, dan berlutut di hadapan Tuhannya bersama kaum beriman lainnya! Entitas yang bersujud dan rukuk menyembah Allah mustahil berstatus sebagai Tuhan atau perantara ketuhanan!
+            <br>• <strong>Persiapan Psiko-Spiritual Kelahiran Al-Masih:</strong> Di ayat-ayat berikutnya (ayat 45–47), Maryam akan menerima kabar spektakuler mengenai kehamilan suci tanpa sentuhan laki-laki. Perintah qunut dan sujud di ayat 43 ini adalah laboratorium penempaan jiwa (<em>spiritual quarantine</em>) agar Maryam memiliki ketahanan mental yang kokoh menghadapi badai tuduhan perzinaan dan fitnah keji dari kaumnya kelak.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 44):</strong><br>
+            Setelah memaparkan fragmen kehidupan spiritual Maryam yang sangat intim di dalam mihrab, ayat 44 langsung menyela dengan pernyataan epistemologis wahyu: <em>"Dzālika min ambā'il-ghaybi nūḥīhi ilayk..."</em> (Itulah sebagian dari berita-berita gaib yang Kami wahyukan kepadamu wahai Muhammad, padahal engkau tidak hadir di sisi mereka ketika mereka melemparkan pena-pena undian untuk menentukan siapa yang berhak mengasuh Maryam). Ini membuktikan autentisitas kerasulan Nabi Muhammad ﷺ yang memaparkan detail sejarah kamar suci Maryam secara akurat tanpa pernah membaca kitab-kitab apokrifa kuno.
+        </li>
+    </ul>
+
+    <h3>2. Rekonstruksi Sosio-Historis & Realitas Baitul Maqdis Abad ke-1 SM</h3>
+    <p>
+        Secara sosio-historis, struktur keagamaan Yudaisme di Baitul Maqdis (Haikal Kedua) pada abad ke-1 Sebelum Masehi didominasi oleh sistem kasta imamat patriarki yang sangat ketat (para rabi Saduki dan Farisi). Kaum perempuan ditempatkan pada posisi subordinat: mereka dilarang melangkah melampaui "Pelataran Wanita" (<em>Court of Women</em>), diharamkan mendekati Ruang Kudus (<em>Holy of Holies</em>), dan tidak diperkenankan memimpin maupun terlibat dalam ritual imamat resmi.
+    </p>
+    <p>
+        Dalam lanskap sosial yang diskriminatif tersebut, kehadiran Maryam binti 'Imran merupakan anomali revolusioner yang dirancang langsung oleh Allah SWT. Ibundanya telah menazarkannya menjadi pelayan murni rumah suci (<em>muḥarraran</em> di QS. 3:35), diasuh oleh Nabi Zakariya AS di bilik mihrab tertinggi, dan pada ayat 43 ini Allah secara langsung menitahkan: <strong>warka'ī ma'ar-rāki'īn</strong> (rukuklah bersama orang-orang yang rukuk).
+    </p>
+    <p>
+        Titah ini meruntuhkan dinding patriarki buatan para rabi: Allah mengangkat seorang perempuan muda untuk beribadah sejajar dalam barisan orang-orang saleh, membuktikan bahwa dalam timbangan ketakwaan dan derajat spiritual di hadapan Allah, sekat-sekat gender lebur sepenuhnya di bawah kedaulatan iman dan kesucian budi pekerti.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>:</strong><br>
+        At-Tabari membedah makna <em>al-qunūt</em> melalui riwayat sanad dari Mujahid, Qatadah, dan As-Suddi: Qunut adalah kepatuhan yang tiada henti, keikhlasan yang murni, dan berpanjang-panjang dalam shalat. At-Tabari meriwayatkan bahwa setelah turunnya ayat ini, Maryam mendirikan shalat malam di mihrab dengan berdiri sangat lama hingga tumit dan kedua kakinya membengkak berdarah. Terkait frasa <em>ma'ar-rāki'īn</em>, At-Tabari menegaskan bahwa Maryam diperintahkan untuk menjadi bagian dari jamaah kaum mukminin yang tunduk kepada Allah, membuktikan bahwa kesalehan sejati menuntut pengakuan terhadap syariat komunal.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menggarisbawahi korelasi kausalitas antara ayat 42 dan ayat 43: <em>"Tatkala malaikat mengabarkan kepada Maryam bahwa Allah telah memilih dan menyucikannya di atas seluruh wanita di alam semesta, malaikat segera menyusulkan perintah ibadah ini agar Maryam menjadi hamba yang paling banyak bersyukur atas karunia tersebut."</em> Beliau mengaitkan ayat ini dengan hadits Nabi ﷺ yang shalat hingga kakinya bengkak seraya bersabda <em>"Afalā akūnu 'abdan syakūrā"</em>. Terkait urutan sujud mendahului ruku', Ibnu Katsir menegaskan bahwa sujud adalah puncak kepasrahan seorang hamba, sehingga didahulukan penyebutannya untuk menunjukkan urgensi kekhusyukan batin sebelum gerakan ruku'.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi fikih ibadah: Apakah ayat ini mewajibkan shalat berjamaah bagi kaum wanita? Beliau menjelaskan bahwa frasa <em>warka'ī ma'ar-rāki'īn</em> mengandung makna metaforis (menggabungkan diri dalam barisan kepatuhan orang-orang saleh) dan makna hakiki (menghadiri shalat jamaah di rumah ibadah). Al-Qurthubi mencatat bahwa Maryam memiliki kekhususan karena ia telah diwakafkan untuk menetap di Baitul Maqdis, sehingga keikutsertaannya dalam shalat para ahli ibadah diatur dengan hijab pembatas khusus. Beliau juga menegaskan kaidah nahwu bahwa huruf wawu adalah <em>lil-muthlaqil-jam'</em> tanpa mengharuskan tertib kronologis, sehingga susunan ayat ini tidak menafikan tata cara shalat yang lazim di mana ruku' mendahului sujud.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (544–606 H) & Az-Zamakhsyari (467–538 H):</strong><br>
+        Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> membedah trilogi perintah ini secara filosofis dan eskatologis:
+        <br>• <strong>Tahap Pertama (Uqnutī):</strong> Pembersihan kalbu dan pemusatan niat tauhid dalam keheningan total (<em>'Amālul-Qalb</em>).
+        <br>• <strong>Tahap Kedua (Wasjudī):</strong> Puncak ketundukan fisik mikrokosmik di mana manusia menempelkan anggota tubuh termulianya ke bumi di hadapan Sang Khalik (<em>Nihāyatut-Tadhallul</em>).
+        <br>• <strong>Tahap Ketiga (Warka'ī ma'ar-rāki'īn):</strong> Pelibatan diri dalam tatanan makrokosmik sosial, menyatukan frekuensi ketundukan bersama hamba-hamba Allah lainnya (<em>Al-Indimāj fil-Jamā'ah</em>).
+        Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan bahwa penyandaran kata <em>Rabbiki</em> berfungsi sebagai rangsangan cinta (<em>istifzāz bi-dā'iyyil-maḥabbah</em>): seorang kekasih yang diseru oleh Pemeliharanya niscaya akan menikmati kepatuhan qunut dan sujud tanpa merasa lelah sedikit pun.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Muhammad At-Tahir Ibnu 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur menyoroti fungsi psikologis ayat ini sebagai <em>Al-I'dād an-Nafsī</em> (rekayasa ketahanan mental): Allah mengetahui bahwa Maryam akan segera menghadapi ujian terberat sepanjang sejarah kemanusiaan, yakni mengandung tanpa suami dan dicaci maki oleh masyarakatnya sebagai pezina. Tidak ada kekuatan mental di dunia ini yang sanggup menahan badai fitnah tersebut melainkan jiwa yang telah terbiasa menyatu dengan Allah melalui qunut yang hening dan sujud yang panjang. Sujud di hadapan Allah membebaskan jiwa dari ketakutan terhadap caci maki seluruh manusia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) — <em>Tafsir Al-Azhar</em> & Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Buya Hamka menulis dengan kelembutan sastra spiritual: <em>"Kemuliaan Maryam bukan terletak pada kecantikan paras atau pakaian sutra, melainkan pada tumitnya yang merekah karena shalat di dalam mihrab. Ketika malaikat datang mengabarkan kemuliaannya, ia tidak menari kegirangan, melainkan menundukkan kepala seraya bersujud признать kemahabesaran Allah."</em><br>
+        Quraish Shihab menggarisbawahi urgensi frasa <em>ma'ar-rāki'īn</em>: kesalehan individual yang terkurung di dalam mihrab harus bermuara pada kesalehan sosial. Seorang hamba tidak boleh merasa suci sendirian; ia harus rukuk dan berjuang bersama barisan umat untuk menegakkan kebenaran di muka bumi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Konseptual Kementerian Agama RI (Tafsir Tematik Kemenag):</strong><br>
+        Kemenag RI menegaskan bahwa ayat ini meletakkan model peradaban unggul: integrasi antara ritual individual yang mendalam (qunut dan sujud) dengan tanggung jawab sosial kemasyarakatan (ruku' bersama jamaah). Ayat ini juga menjadi legitimasi kesetaraan derajat spiritual antara laki-laki dan perempuan dalam meraih maqam kedekatan tertinggi dengan Tuhan.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu / Konsensus Ulama (Ittifāq)</th>
+                <th>Dinamika Perbedaan Pendapat (Ikhtilāf) Mufassirin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Korelasi Ayat 42 dan Ayat 43</strong></td>
+                <td>Seluruh mufassir sepakat bahwa perintah ibadah pada ayat 43 merupakan manifestasi rasa syukur mutlak atas anugerah pemilihan suci pada ayat 42.</td>
+                <td>
+                    • <strong>Jumhur Mufassir (Asy-Syafi'i, At-Tabari, Ibnu Katsir):</strong> Pemilihan Maryam berstatus sebagai <em>Shiddīqah</em> (wali agung wanita), bukan kenabian (<em>an-nubuwwah</em>).<br>
+                    • <strong>Mazhab Zhahiri (Ibnu Hazm):</strong> Berargumen bahwa seruan langsung malaikat membawa perintah ibadah menunjukkan nubuwah pada kaum wanita (pendapat minoritas yang ditolak jumhur).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Rahasia Urutan Sujud Mendahului Ruku'</strong></td>
+                <td>Sepakat bahwa rasm mushaf Utsmani secara mutawatir menetapkan lafaz <em>wasjudī</em> sebelum <em>warka'ī</em>.</td>
+                <td>
+                    • <strong>Pendekatan Balaghah & Tasawuf (Ar-Razi, Az-Zamakhsyari):</strong> Sujud didahulukan karena merupakan puncak ketundukan batin yang paling efektif meruntuhkan bibit kesombongan atas anugerah pilihan.<br>
+                    • <strong>Pendekatan Fikih Sejarah (Al-Qurthubi, As-Suddi):</strong> Merupakan cerminan syariat ibadah terdahulu di mana sujud dilakukan terpisah sebelum ruku', atau kaidah huruf Wawu yang tidak mewajibkan tertib kronologis.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat "Ma'ar-Rāki'īn" bagi Perempuan</strong></td>
+                <td>Sepakat bahwa perintah ini menuntut peleburan diri ke dalam barisan orang-orang yang saleh dan taat kepada Allah.</td>
+                <td>
+                    • <strong>Ulama Fikih:</strong> Perintah shalat berjamaah secara fisik di Baitul Maqdis karena kekhususan Maryam sebagai nadzar kuil, dengan pembatas satir dari kaum pria.<br>
+                    • <strong>Ulama Tafsir Maqashidi (Ibnu 'Asyur, Quraish Shihab):</strong> Bermakna majazi (spiritual solidarity): masuklah ke dalam kelompok orang-orang yang senantiasa rukuk menegakkan nilai-nilai kebenaran di tengah masyarakat.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur mental model berikut merupakan ikhtiar tadabbur, perenungan sistemik, dan sintesis psikologis manusiawi; bukan klaim penafsiran wahyu yang mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Manusiawi Biasa vs Pola Pikir Qur'ani Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kesadaran</th>
+                <th>Pola Pikir Manusiawi Biasa (Hedonis / Sekuler)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Model Maryam AS)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Menyikapi Privilese & Pencapaian</strong></td>
+                <td><strong>Entitlement Mentality:</strong> Merasa berhak menikmati kenyamanan, memamerkan keistimewaan (<em>flexing</em>), menuntut perlakuan khusus, dan memandang rendah orang lain.</td>
+                <td><strong>Noblesse Oblige Rabbani:</strong> Menyadari bahwa setiap anugerah pilihan adalah amanah berat yang menuntut pelipatgandaan sujud, kepasrahan, dan kerendahan diri di hadapan Sang Pemberi Nikmat.</td>
+            </tr>
+            <tr>
+                <td><strong>Ruang Sunyi (Solitude)</strong></td>
+                <td><strong>Horror Vacui (Takut Kesunyian):</strong> Merasa cemas saat sendirian, panik mencari pelarian distraksi digital, media sosial, dan stimulasi dopamin instan.</td>
+                <td><strong>The Sacred Sanctuary (Mihrab Qunut):</strong> Menikmati kesendirian bersama Allah, memanfaatkan keheningan malam untuk kontemplasi mendalam (<em>qunut</em>), dan mengalirkan air mata taubat.</td>
+            </tr>
+            <tr>
+                <td><strong>Relasi Privat vs Sosial</strong></td>
+                <td><strong>Terpolarisasi / Pincang:</strong> Terjebak dalam spiritualitas egois yang acuh terhadap penderitaan sosial, atau aktivisme sosial yang bising namun kosong dari akar ketenangan batin.</td>
+                <td><strong>Integrasi Harmonis (Qunut ke Ruku'):</strong> Mengakar kuat dalam keintiman sujud privat (<em>uqnutī wasjudī</em>), lalu memancarkan energi kesucian tersebut dalam solidaritas komunal (<em>warka'ī ma'ar-rāki'īn</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Menghadapi Fitnah & Caci Maki</strong></td>
+                <td><strong>Fragile Ego:</strong> Mental runtuh saat dicela manusia, terjebak dalam perang validasi opini publik, dan mencari pembenaran diri dengan kepalsuan.</td>
+                <td><strong>Spiritual Resilience:</strong> Memiliki jangkar psikologis yang kokoh; jiwa yang telah biasa tersungkur di hadapan Allah tidak akan gentar menghadapi caci maki seluruh penghuni bumi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Maryam Protocol: Privilege Demands Prostration" (Hak Istimewa Menuntut Kerendahan Diri)</strong><br>
+            <em>Premis Sistemik:</em> Dalam dinamika psikologi manusia, peningkatan status sosial, kekayaan, atau pujian publik secara otomatis memicu pembengkakan ego (<em>inflated ego</em>). Maryam Protocol membalikkan vektor psikologis ini secara radikal: <strong>Semakin tinggi posisi Anda diangkat oleh takdir, semakin rendah dahi Anda harus diletakkan di atas tanah dalam sujud penghambaan.</strong> Kehormatan sejati di hadapan semesta alam tidak dipertahankan dengan membangun menara kesombongan, melainkan dengan memperdalam jurang ketundukan di hadapan Sang Khalik.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Intimacy-to-Community Continuum" (Kontinum dari Kesunyian Privat Menuju Solidaritas Jamaah)</strong><br>
+            <em>Premis Sistemik:</em> Jiwa manusia membutuhkan dua kutub pernapasan spiritual yang seimbang: <em>Intimacy with the Divine</em> (Keintiman bersama Allah) dan <em>Solidarity with Humanity</em> (Solidaritas bersama manusia). Ayat 43 menyajikan cetak biru arsitektur jiwa: dimulai dari <em>uqnutī</em> (kontemplasi batin), memuncak pada <em>wasjudī</em> (penyerahan total privat), dan berbuah pada <em>warka'ī ma'ar-rāki'īn</em> (rukuk bersama barisan orang saleh). Siapa yang memotong kontinum ini hanya akan melahirkan kesalehan yang cacat: pertapa yang dingin sosial, atau aktivis yang mengalami kelelahan mental (<em>burnout</em>) karena kehilangan sumber mata air batin.
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <p>
+        Secara neurofisiologis dan psikologi kognitif, postur <strong>Sujud</strong> yang dilakukan secara tenang dan berkesinambungan mengalirkan perfusi darah kaya oksigen ke bagian <em>prefrontal cortex</em>—pusat regulasi emosi, pengambilan keputusan etis, dan pemikiran tingkat tinggi di otak. Pada saat yang sama, sujud menekan hiperaktivitas amigdala (pusat kecemasan dan respons <em>fight-or-flight</em>) serta merangsang sistem saraf parasimpatis, menghasilkan pelepasan neurotransmiter ketenangan seperti GABA dan endorfin.
+    </p>
+    <p>
+        Sementara itu, konsep <strong>Al-Qunūt</strong> (panjangnya berdiri dalam keheningan yang khusyuk) merupakan latihan neuroplastisitas terbaik untuk membangun <em>sustained attention</em> (rentang atensi fokus) dan meredam kekacauan sirkuit <em>Default Mode Network</em> (DMN) yang kerap memicu kecemasan neurotik (<em>rumination</em>). Dalam tinjauan tazkiyatun nafs, qunut dan sujud membedah penyakit laten <em>al-'ujub</em> (bangga diri) dan <em>al-kibr</em> (kesombongan). Dengan melazimkan sujud, jiwa yang semula diperbudak oleh impuls rendah (<em>an-nafs al-ammārah</em>) diangkat menuju derajat ketenangan paripurna (<em>an-nafs al-muthma'innah</em>).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Diagnosis Problematika Abad ke-21: "The Entitlement Epidemic" & Narsisisme Digital</h3>
+    <p>
+        Masyarakat abad ke-21 sedang dicengkeram oleh epidemi psikologis yang sangat destruktif: <em>The Entitlement Epidemic</em> (penyakit merasa berhak) yang dipacu oleh budaya narsisisme digital. Generasi modern menuntut pengakuan instan, fasilitas mewah, dan pemujaan publik tanpa mau menempuh disiplin penempaan moral, kerja keras, maupun ketundukan etis.
+    </p>
+    <p>
+        Platform media sosial telah mereduksi makna eksistensi menjadi sekadar etalase pencitraan (<em>hyper-reality</em>). Ketika seseorang memperoleh anugerah nikmat—berupa kecantikan fisik, kekayaan materi, atau promosi karier—respons otomatisnya adalah memamerkannya (<em>flexing</em>) demi meraup <em>likes</em>, validasi komunal semu, dan rasa iri dari orang lain. Fenomena ini melahirkan kekosongan spiritual yang akut: manusia modern tampak gemerlap di etalase maya, namun hampa, rapuh, dan depresi di ruang-ruang privat mereka.
+    </p>
+
+    <h3>2. Kritik Peradaban: Matinya Ruang Kontemplasi (The Death of Contemplation) & Kesalehan Kosmetik</h3>
+    <p>
+        Peradaban kontemporer adalah peradaban yang bising, tergesa-gesa, dan hiper-terdistraksi (<em>hyper-distracted society</em>). Manusia kehilangan kapasitas untuk melakukan <strong>qunūt</strong>—keheningan kontemplatif di hadapan Tuhannya. Ketakutan terbesar manusia modern adalah menghadapi kesunyian diri sendiri; ketika gawai terlepas dari genggaman, mereka disergap oleh kehampaan eksistensial yang mengerikan.
+    </p>
+    <p>
+        Di sisi lain, terjadi degradasi makna ibadah menjadi sekadar komoditas performatif atau kesalehan kosmetik: orang beribadah di tempat-tempat suci demi swafoto (<em>selfie</em>) dan konten siaran langsung, membunuh keikhlasan sujud di dalam bilik mihrab. QS. 3:43 hadir sebagai kritik radikal atas kebobrokan peradaban ini:
+    </p>
+    <div class="tafsir-quote">
+        <strong>Pesan Pembebasan QS. 3:43:</strong><br>
+        Kemuliaan sejati seorang manusia di hadapan semesta alam bukan ditentukan oleh seberapa banyak pengikut yang mengagumi pencitraan Anda di media sosial, melainkan seberapa dalam Anda sanggup menyembunyikan diri dalam sujud malam yang hening kepada Allah (<em>uqnutī wasjudī</em>), dan seberapa tulus Anda melangkah keluar dari bilik penyendirian untuk rukuk bersama penderitaan rakyat kecil di sekitar Anda (<em>warka'ī ma'ar-rāki'īn</em>)!
+    </div>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Perilaku)</h3>
+        <ol>
+            <li>
+                <strong>Protokol "Qunut Hening" Harian (Latihan Berdiri Khusyuk Tanpa Distraksi &lt; 15 Menit):</strong><br>
+                Bangunlah 15 menit sebelum waktu fajar atau luangkan waktu sejenak setelah shalat Isya. Dirikan shalat sunnah dua rakaat di tempat yang sunyi. Pada rakaat pertama dan kedua, perpanjang waktu berdiri (<em>qunūt</em>) dengan membaca ayat-ayat Al-Qur'an secara perlahan, hayati setiap makna yang terbaca, heningkan pikiran dari seluruh ambisi duniawi, dan rasakan ketundukan jiwa Anda di hadapan Allah SWT.
+            </li>
+            <li>
+                <strong>Penerapan "The Maryam Protocol" (Sujud Syukur Tertutup Pasca-Pencapaian Hidup):</strong><br>
+                Setiap kali Anda menerima kabar gembira, promosi jabatan, kelulusan ujian, keuntungan finansial, atau pujian publik, tetapkan aturan keputusan tegas (<em>decision rule</em>): jangan segera membuka media sosial untuk membuat status atau pamer. Masuklah ke dalam ruangan privat, bentangkan sajadah, dan lakukan <strong>Sujud Syukur</strong> yang panjang seraya menumpahkan air mata pengakuan bahwa seluruh pencapaian tersebut adalah anugerah Allah yang menuntut peningkatan tanggung jawab moral.
+            </li>
+            <li>
+                <strong>Integrasi Solidaritas Jamaah (Praksis "Warka'ī Ma'ar-Rāki'īn"):</strong><br>
+                Kikis kecenderungan menjadi muslim individualis yang merasa suci sendiri. Bagi laki-laki, disiplinkan diri menjaga shalat fardhu berjamaah di masjid terdekat; bagi perempuan, rawat kehadiran dalam majelis ilmu, kegiatan sosial pemberdayaan dhuafa, dan solidaritas komunal. Pastikan kesalehan batin Anda berbuah pada kepekaan terhadap penderitaan sesama hamba Allah.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Ketika Allah menganugerahkan kelebihan, ilmu, harta, atau pengaruh yang tidak dimiliki orang lain, apakah hatiku cenderung merasa lebih mulia dan menuntut perlakuan istimewa, ataukah anugerah itu segera membuatku tersungkur menyadari kehinaan diriku di hadapan-Nya?
+            </li>
+            <li>
+                Seberapa sering aku merasakan kenikmatan <em>qunūt</em>—berdiri lama dalam keheningan shalat malam saat tidak ada satu pun kamera atau mata manusia yang menyaksikanku? Ataukah ibadahku selama ini hanya bersemangat ketika disaksikan oleh orang banyak?
+            </li>
+            <li>
+                Apakah kesalehan yang kurawat selama ini telah melahirkan empati dan kebersamaan dengan orang-orang yang rukuk di sekitarku, ataukah aku telah terjebak dalam menara gading arogansi spiritual yang memandang rendah manusia lain yang sedang bergelut dengan dosa?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Rabbanā wa Rabba Kulli Syay', Yā Dzal-Jalāli wal-Ikrām. Ya Allah, Tuhan Yang Memelihara hamba-hamba-Nya dengan kasih sayang abadi. Sebagaimana Engkau telah memilih Maryam binti 'Imran, menyucikannya dari noda dosa, dan membimbingnya untuk senantiasa tunduk, bersujud, dan rukuk di hadapan-Mu, maka limpahkanlah taufik dan hidayah-Mu kepada kami agar kami mampu meneladani jejak kesuciannya. Ya Allah, selamatkanlah jiwa kami dari penyakit takabur, riya', dan merasa berhak atas kenikmatan-Mu. Anugerahkanlah kepada kami kekhusyukan qunut yang hening di tengah malam, luruhkanlah keangkuhan ego kami dalam sujud-sujud panjang kami kepada-Mu, dan karuniakanlah kepada kami keikhlasan untuk rukuk bersama barisan orang-orang saleh dalam membela agama-Mu. Jadikanlah setiap nikmat yang Engkau anugerahkan kepada kami sebagai sarana untuk semakin mendekat kepada-Mu, bukan pemicu kelalaian kami dari mengingat-Mu. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-042 - QS. Ali 'Imran Ayat 42.html">&larr; Kembali ke Ayat 42 (QS. 3:42)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 43</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-044 - QS. Ali 'Imran Ayat 44.html">Lanjut ke Ayat 44 (QS. 3:44) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

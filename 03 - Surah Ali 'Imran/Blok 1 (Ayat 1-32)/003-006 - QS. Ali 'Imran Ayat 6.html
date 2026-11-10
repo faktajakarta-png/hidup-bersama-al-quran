@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-006 - QS. Ali 'Imran Ayat 6 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-005 - QS. Ali 'Imran Ayat 5.html">&larr; Ayat Sebelumnya (QS. 3:5)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-007 - QS. Ali 'Imran Ayat 7.html">Ayat Berikutnya (QS. 3:7) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 1 (Ayat 1–9): Proklamasi Tauhid & Dialektika Muhkamat-Mutasyabihat</span>
+        <span class="badge">13 Kata | 50 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 6</h1>
+    <div class="transliteration">
+        "Huwal-ladzī yuṣhawwirukum fīl-arḥāmi kayfa yasyā'(u), lā ilāha illā Huwal-'Azīzul-Ḥakīm(u)."
+    </div>
+    <div class="thematic-title">
+        Kedaulatan Mutlak Sang Arsitek Kehidupan di Balik Tabir Rahim: Pembentukan Rupa dan Takdir Eksistensial sebagai Dekonstruksi Total Teologi Inkarnasi Menuju Ketauhidan Al-'Azīz Al-Ḥakīm
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 1: Fondasi Ketauhidan & Hermeneutika Al-Qur'an)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        هُوَ ٱلَّذِى يُصَوِّرُكُمْ فِى ٱلْأَرْحَامِ كَيْفَ يَشَآءُ ۚ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ ۝٦
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Dialah yang membentuk rupa kamu dalam rahim menurut apa yang Dia kehendaki. Tidak ada tuhan (yang berhak disembah dengan sebenarnya) melainkan Dia, Yang Mahaperkasa (tiada yang mampu menghalangi kehendak-Nya), Mahabijaksana (dalam segala desain ciptaan dan penetapan syariat-Nya)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini melangkah dari penetapan kemahatahuan Allah atas segala sesuatu yang tersembunyi di langit dan bumi (pada ayat 5) menuju penegasan tindakan cipta-Nya yang paling intim dan tertutup: pembentukan janin manusia di dalam rahim ibu. Penggunaan kata kerja kontinu <em>yuṣhawwirukum</em> (bentuk <em>mudhāri'</em>) menegaskan bahwa pembentukan rupa bukanlah peristiwa mekanis purba yang selesai sekali jalan, melainkan operasi ketuhanan yang senantiasa aktif, dinamis, dan diperbarui setiap detik pada miliaran rahim makhluk hidup. Penegasan ini menjadi pukulan telak (<em>hujjah qāṭhi'ah</em>) terhadap teologi delegasi Kristen Najran yang mempertuhankan Nabi Isa Al-Masih: sosok yang pernah dikandung dalam rahim Maryam, melewati fase embriogenesis biologis, dan dibentuk oleh Allah menurut kehendak-Nya, secara ontologis adalah makhluk yang sepenuhnya bergantung pada Sang Pencipta, sehingga mustahil berstatus sebagai Tuhan Yang Mahaperkasa (<em>Al-'Azīz</em>) lagi Mahabijaksana (<em>Al-Ḥakīm</em>).
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Variasi Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>هُوَ</strong><br>(<em>Huwa</em>)</td>
+                <td>
+                    <strong>Huruf Hā':</strong> Keluar dari pangkal tenggorokan (<em>aqṣhal-ḥalq</em>) dengan sifat <em>hams</em> (hembusan nafas) dan <em>rikhwah</em>.<br>
+                    <strong>Wawu Fathah:</strong> Vokalisasi terbuka murni dari dua bibir (<em>asy-syafatan</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dengan fathah pada Wawu saat berdiri sendiri (<em>Huwa</em>). Konsensus ini menegaskan posisi <em>dhamīr sya'n</em> atau pemusatan subjek ketuhanan tunggal.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلَّذِى</strong><br>(<em>Al-ladzī</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal dari <em>Huwa</em> (terbaca <em>Huwal-ladzī</em>).<br>
+                    <strong>Lām Bertasydid:</strong> Memiliki sifat <em>tawassuṭh</em> (antara syiddah dan rikhwah).<br>
+                    <strong>Huruf Dzāl:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas dengan sifat <em>jahr</em> dan <em>rikhwah</em>.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada Yā' sukun jika berhenti.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah membaca seragam dengan idgham lisan dan memanjangkan ya mad thabi'i saat waqaf. Saat washal dengan kata sesudahnya, mad 2 harakat tetap dipertahankan.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>يُصَوِّرُكُمْ</strong><br>(<em>Yuṣhawwirukum</em>)</td>
+                <td>
+                    <strong>Huruf Shād:</strong> Sifat <em>isti'lā'</em> (pangkal lidah terangkat), <em>iṭhbāq</em> (lidah menempel ke langit-langit), dan <em>ṣhafīr</em> (desis tajam).<br>
+                    <strong>Wāwu Bertasydid Kasrah:</strong> Wajib disertai <strong>Nabr</strong> (aksentuasi penekanan suara) agar suara tasydid terdengar kokoh tanpa terputus.<br>
+                    <strong>Rā' Tarqīq:</strong> Dibaca tipis karena menyandang harakat kasrah.<br>
+                    <strong>Mīm Sukun bertemu Fā':</strong> Hukum <strong>Idzhār Syafawī Asyadd</strong>. Pembaca wajib menjaga makhraj Mim agar tidak terserap atau samar (<em>ikhfa'</em>) ke dalam makhraj Fa' karena kedekatan titik artikulasi kedua huruf bibir tersebut.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il ini dengan wazan <em>Taf'īl</em> (<em>yuṣhawwiru</em>) dengan tasydid pada wawu berharakat kasrah, dan idzhar syafawi yang tegas pada mim jamak sukun bertemu fa'.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>فِى ٱلْأَرْحَامِ</strong><br>(<em>Fīl-arḥām</em>)</td>
+                <td>
+                    <strong>Iltiqā'us-Sākinayn:</strong> Ya' mad pada <em>fī</em> digugurkan bunyinya secara fonetik karena bertemu lam sukun takrif (terbaca langsung <em>fil-</em>).<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam takrif terbaca jelas.<br>
+                    <strong>Hamzah Qathha':</strong> Huruf Alif berharakat fathah.<br>
+                    <strong>Rā' Tafkhīm:</strong> Dibaca tebal karena berharakat sukun yang didahului huruf berharakat fathah.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari tengah tenggorokan (<em>wasaṭhul-ḥalq</em>) dengan sifat <em>hams</em> dan <em>rikhwah</em>.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (termasuk Ḥafsh 'an 'Āṣhim):</strong> Membaca dengan <em>taḥqīq</em> hamzah qatha' (<em>fīl-arḥām</em>).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan kaidah <strong>Naql</strong> (memindahkan harakat fathah hamzah ke lam sukun sebelumnya, serta menggugurkan hamzah): dibaca <em>fī-lar-ḥām</em>.<br>
+                    • <strong>Ḥamzah (khalaf & khallad):</strong> Memiliki wajah <em>Sakt</em> (berhenti sejenak tanpa nafas) pada lam takrif sebelum hamzah (<em>fīl - arḥām</em>) saat washal, serta <em>taḥqīq</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>كَيْفَ يَشَآءُ ۚ</strong><br>(<em>Kayfa yasyā'</em>)</td>
+                <td>
+                    <strong>Ḥarf Līn:</strong> Yā' sukun didahului fathah pada <em>kayfa</em> dibaca lunak tanpa sentakan.<br>
+                    <strong>Huruf Syīn:</strong> Sifat <em>tafasysyī</em> (hamburan angin menyebar di rongga mulut).<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf mad Alif bertemu Hamzah dalam satu kata (*yasyā'*). Wajib dibaca panjang.<br>
+                    <strong>Tanda Waqaf Jā'iz (ج):</strong> Boleh waqaf (berhenti) dan boleh washal (terus). Jika waqaf pada Hamzah, wajib dilakukan <strong>Nabr</strong> untuk menegaskan artikulasi hamzah sukun di pangkal tenggorokan.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad wajib muttashil dengan <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh / Fuwayqis-Sakt (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn, Abū 'Amr, Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca dengan 4 harakat.<br>
+                    • <strong>Imam Ḥamzah (saat waqaf):</strong> Memiliki ragam wajah pembacaan waqaf pada hamzah ekstremitas: <em>tashīl</em> ma'al-madd wal-qashr, serta <em>ibdāl</em> alif dengan panjang 6 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>لَآ إِلَـٰهَ</strong><br>(<em>Lā ilāha</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Huruf mad Alif pada <em>lā</em> bertemu hamzah qatha' pada awal kata berikutnya.<br>
+                    <strong>Lām-Alif:</strong> Dibaca panjang sesuai martabat mad masing-masing thariqah.<br>
+                    <strong>Lā an-Nāfiyah lil-Jins:</strong> Huruf penafian mutlak jenis sesembahan.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Panjang 6 harakat (<em>Ṭhūl</em>).<br>
+                    • <strong>'Āṣhim & Ibnu 'Āmir:</strong> Panjang 4–5 harakat (<em>Tawassuṭh</em>).<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca dengan <strong>Qaṣhr (2 Harakat)</strong>.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Memiliki dua wajah (<em>Qashr</em> 2 harakat atau <em>Tawassuth</em> 4 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>إِلَّا هُوَ</strong><br>(<em>Illā Huwa</em>)</td>
+                <td>
+                    <strong>Lām Bertasydid:</strong> Memiliki sifat tawasuth.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada alif <em>illā</em>.<br>
+                    <strong>Dhamīr Munfaṣhil:</strong> Lafaz <em>Huwa</em> dibaca tahqiq fathah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca mad thabi'i pada <em>illā</em> dan tahqiq fathah pada wawu <em>Huwa</em>. Penyatuan penafian total (<em>nafy</em>) dan pengecualian tunggal (<em>itsbāt</em>) membentuk kalimat tauhid tertinggi.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>ٱلْعَزِيزُ</strong><br>(<em>Al-'Azīz</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam takrif terbaca jelas.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasaṭhul-ḥalq</em>).<br>
+                    <strong>Dua Huruf Zāy:</strong> Sifat <em>ṣhafīr</em> tajam menyerupai dengung lebah, menyandang sifat <em>jahr</em> dan <em>rikhwah</em>.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Panjang 2 harakat pada huruf Ya' sukun sebelum Zay dhommah saat washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dengan idzhar qamariyyah dan tahqiq dhommah pada Zay akhir saat washal ke kata berikutnya.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>ٱلْحَكِيمُ ۝٦</strong><br>(<em>Al-Ḥakīm</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam takrif dibaca terang.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari wasathul halq dengan desah nafas halus (<em>hams</em>).<br>
+                    <strong>Huruf Kāf:</strong> Menyandang sifat <em>syiddah</em> (tertahannya suara sejenak) disusul <em>hams</em> (hembusan angin tipis).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Karena waqaf pada akhir ayat, huruf Ya' mad dibaca 2, 4, atau 6 harakat disusul Mim sukun berkarakteristik <em>tawassuṭh</em>.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca dengan ragam panjang <em>Mad 'Āriḍh lis-Sukūn</em> (2, 4, atau 6 harakat) dengan sukun murni (<em>iskān maḥdh</em>), atau disertai <em>raum</em> (sepertiga suara harakat dhommah) jika dibaca 2 harakat pada akhir ayat.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahihain — Tahapan Pembentukan Rupa dan Penulisan Takdir Eksistensial di Alam Rahim:</strong><br>
+        Diriwayatkan dari sahabat Abdullah bin Mas'ud <em>radhiyallahu 'anhu</em>, ia berkata: Rasulullah ﷺ—sang penyampai kebenaran yang terpercaya (<em>ash-Shādiqul-Mashdūq</em>)—menceritakan kepada kami:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 19px; direction: rtl; text-align: right; line-height: 1.8; margin: 10px 0; color: #0c4a6e;">
+            «إِنَّ أَحَدَكُمْ يُجْمَعُ خَلْقُهُ فِي بَطْنِ أُمِّهِ أَرْبَعِينَ يَوْمًا، ثُمَّ يَكُونُ عَلَقَةً مِثْلَ ذَلِكَ، ثُمَّ يَكُونُ مُضْغَةً مِثْلَ ذَلِكَ، ثُمَّ يَبْعَثُ اللَّهُ إِلَيْهِ مَلَكًا فَيُؤْمَرُ بِأَرْبَعِ كَلِمَاتٍ: بِكَتْبِ رِزْقِهِ، وَأَجَلِهِ، وَعَمَلِهِ، وَشَقِيٌّ أَوْ سَعِيدٌ، ثُمَّ يُنْفَخُ فِيهِ الرُّوحُ...»
+        </div>
+        <em>"Sesungguhnya salah seorang di antara kalian dihimpunkan penciptaannya di dalam perut ibunya selama empat puluh hari (sebagai nuthfah), kemudian menjadi segumpal darah ('alaqah) selama masa yang sama, kemudian menjadi segumpal daging (mudhghah) selama masa yang sama. Kemudian Allah mengutus malaikat kepadanya, lalu diperintahkan untuk menetapkan empat perkara: menuliskan rezekinya, ajalnya, amalnya, serta apakah ia sengsara atau bahagia. Kemudian ditiupkan ruh ke dalamnya..."</em><br>
+        <strong>Takhrij:</strong> HR. Al-Bukhari (Kitab Bad'il-Khalq, No. 3208 & Kitab Qadar, No. 6594) dan Muslim (Kitab Al-Qadar, No. 2643). Hadits ini adalah penjelas otoritatif paling presisi atas operasionalisasi firman Allah: <em>"yuṣhawwirukum fīl-arḥāmi kayfa yasyā'"</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim — Waktu Pembentukan Morfologi Fisik (Tashwir) pada Hari ke-42:</strong><br>
+        Diriwayatkan dari sahabat Hudzaifah bin Usaid <em>radhiyallahu 'anhu</em>, Rasulullah ﷺ bersabda:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 19px; direction: rtl; text-align: right; line-height: 1.8; margin: 10px 0; color: #0c4a6e;">
+            «إِذَا مَرَّ بِالنُّطْفَةِ ثِنْتَانِ وَأَرْبَعُونَ لَيْلَةً، بَعَثَ اللَّهُ إِلَيْهَا مَلَكًا، فَصَوَّرَهَا وَخَلَقَ سَمْعَهَا وَبَصَرَهَا وَجِلْدَهَا وَلَحْمَهَا وَعِظَامَهَا، ثُمَّ قَالَ: يَا رَبِّ، أَذَكَرٌ أَمْ أُنْثَى؟ فَيَقْضِي رَبُّكَ مَا شَاءَ، وَيَكْتُبُ الْمَلَكُ...»
+        </div>
+        <em>"Apabila nutfah telah melampaui empat puluh dua malam, Allah mengutus malaikat kepadanya, lalu malaikat itu membentuk rupanya (fa-ṣhawwarahā), menciptakan pendengarannya, penglihatannya, kulitnya, dagingnya, dan tulangnya. Kemudian malaikat itu bertanya: 'Wahai Tuhanku, apakah laki-laki atau perempuan?' Maka Tuhanmu memutuskan apa yang Dia kehendaki (fa-yaqdhī Rabbuka mā syā'), dan malaikat pun mencatatnya..."</em><br>
+        <strong>Takhrij:</strong> HR. Muslim (Kitab Al-Qadar, No. 2645). Redaksi <em>fa-ṣhawwarahā</em> dan <em>mā syā'</em> memiliki korelasi lafadz dan makna mutlak dengan QS. Ali 'Imran ayat 6.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Asbabun Nuzul Shahih — Dialog Logika Teologis Rasulullah ﷺ dengan Delegasi Kristen Najran:</strong><br>
+        Imam Ibnu Jarir At-Tabari meriwayatkan dari Muhammad bin Ishaq (dengan sanad yang dinilai hasan oleh Ibnu Hajar dan para pentahqiq): Ketika delegasi Kristen Najran (terdiri dari para uskup dan pembesar mereka seperti Abu Haritsah dan Al-'Aqib Abdul Masih) mendatangi Nabi Muhammad ﷺ di Masjid Nabawi untuk berdebat mengenai ketuhanan Al-Masih Isa bin Maryam, Rasulullah ﷺ melontarkan pertanyaan retoris beruntun yang meruntuhkan dasar teologi mereka:<br>
+        <em>"Tidakkah kalian mengetahui bahwa Tuhan kita Maha Hidup dan tidak pernah mati, sedangkan Isa bin Maryam mengalami kematian (dalam doktrin salib kalian)?"</em> Mereka menjawab: "Ya, kami tahu."<br>
+        <em>"Tidakkah kalian mengetahui bahwa Tuhan kita Maha Mengurus segala sesuatu, menjaga, memelihara, dan memberi rezeki kepada mereka?"</em> Mereka menjawab: "Ya, kami tahu."<br>
+        <em>"Tidakkah kalian mengetahui bahwa Isa tidak memiliki sedikit pun kuasa atas semua itu?"</em> Mereka menjawab: "Ya, kami tahu."<br>
+        <em>"Tidakkah kalian mengetahui bahwa Isa dikandung oleh ibunya di dalam rahimnya sebagaimana para wanita mengandung anak-anak mereka, lalu dilahirkan sebagaimana para wanita melahirkan, kemudian disuapi makanan sebagaimana bayi disuapi makanan, serta ia makan dan minum dan buang hajat?"</em> Mereka menjawab: "Ya, kami tahu."<br>
+        Nabi ﷺ bersabda: <em>"Lantas bagaimana mungkin Isa berstatus sebagai Tuhan sebagaimana sangkaan kalian?!"</em><br>
+        Maka seketika para pemuka delegasi Najran itu terbungkam tanpa sanggup membantah. Lalu Allah ﷻ menurunkan ayat-ayat pembuka Surah Ali 'Imran, termasuk firman-Nya: <strong>"Huwal-ladzī yuṣhawwirukum fīl-arḥāmi kayfa yasyā'..."</strong> (Tafsir At-Tabari, jilid 6, hlm. 154; Tafsir Ibnu Katsir, jilid 2, hlm. 8; Asbabun Nuzul oleh Al-Wahidi, hlm. 92).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Sh-W-R (ص - و - ر — Yuṣhawwiru / Al-Muṣhawwir):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ص-و-ر) menjelaskan bahwa akar kata ini berporos pada dua makna fundamental: <em>pertama</em>, kecondongan atau pemalingan sesuatu (<em>al-amālah</em>); dan <em>kedua</em>, penampakan bentuk terencana yang memisahkan satu entitas dari entitas lainnya (<em>at-takhtīth wat-tamyīz</em>). Dari akar inilah lahir kata <em>ash-shūrah</em> (rupa, profil geometris, proporsi, wujud visual lahiriah maupun batiniah). Dalam <em>Lisān al-'Arab</em>, Ibnu Manzhur menegaskan: <em>"At-Taṣhwīr adalah tindakan membentuk dan mengukir sesuatu menjadi rupa yang memiliki distingsi khas, sehingga ia tidak serupa secara absolut dengan rupa yang lain."</em> Sifat Allah <em>Al-Muṣhawwir</em> menandai Sang Mahadesainer yang merancang anatomi fisik, warna kulit, simetri organ, garis wajah, hingga pola sidik jari mikroskopis pada janin tanpa contoh cetakan sebelumnya.
+        </li>
+        <li>
+            <strong>2. R-H-M (ر - ح - م — Al-Arḥām):</strong><br>
+            Bentuk jamak dari <em>ar-raḥim</em> (rahim). Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> menegaskan bahwa poros tunggal akar kata ini adalah <strong>ar-riqqah wal-'aṭhf wal-ra'fah</strong> (kelembutan, belas kasih, perlindungan yang intim, dan kehangatan). Rahim dinamakan demikian karena ia adalah organ biologis suci yang didesain Allah secara khusus untuk membungkus janin yang ringkih dengan cairan ketuban protektif dan nutrisi tanpa syarat. Rasulullah ﷺ mengabarkan dalam hadits qudsi sahih bahwa Allah berfirman: <em>"Aku adalah Ar-Rahmān, dan ini adalah ar-raḥim; Aku membelah untuknya nama dari Nama-Ku."</em> Penyebutan <em>fīl-arḥām</em> menghadirkan atmosfer ruang gelap yang paling aman, steril dari jangkauan intervensi manusia luar, di mana hanya kekuasaan Allah semata yang bekerja di dalamnya.
+        </li>
+        <li>
+            <strong>3. Sy-Y-' (ش - ي - ء — Yasyā'):</strong><br>
+            Akar kata kehendak (<em>al-masyī'ah</em>). Berporos pada kepastian terwujudnya sesuatu yang dikehendaki. Makna <em>kayfa yasyā'</em> (menurut apa yang Dia kehendaki) menunjukkan kebebasan kedaulatan prerogatif Allah yang mutlak: Dia membentuk jenis kelamin (laki-laki atau perempuan), rupa (rupawan atau sederhana), warna (putih, hitam, cokelat), proporsi (tinggi atau pendek), kelengkapan fisik, potensi genetik, hingga takdir biologis tanpa campur tangan dan tanpa dapat digugat oleh siapa pun.
+        </li>
+        <li>
+            <strong>4. '-Z-Z (ع - ز - ز — Al-'Azīz):</strong><br>
+            Ibnu Faris merumuskan porosnya pada <em>as-syiddah wal-ghalabah wal-imtina'</em> (kekuatan tak tertandingi, keperkasaan yang selalu mengalahkan, dan benteng yang mustahil ditembus atau dipengaruhi). Nama <em>Al-'Azīz</em> di akhir ayat menegaskan bahwa dalam proses pembentukan rupa manusia di alam rahim, tidak ada satu kekuatan genetik, intervensi medis, atau kehendak orang tua mana pun yang mampu memaksa atau membatalkan ketetapan bentuk yang telah diputuskan oleh Allah.
+        </li>
+        <li>
+            <strong>5. H-K-M (ح - ك - م — Al-Ḥakīm):</strong><br>
+            Berporos pada makna <em>al-man'u min al-fasād</em> (mencegah dari kerusakan) dan <em>waḍh'u syay'in fī maḥallih</em> (meletakkan segala sesuatu secara presisi pada tempat yang semestinya). <em>Al-Ḥakīm</em> adalah Dzat yang Maha Memiliki Kebijaksanaan Tinggi: tidak ada satu pun organ, syaraf, pigmen kulit, atau bentuk fisik manusia yang diciptakan sia-sia atau sembarangan; semuanya dirancang dengan perhitungan tujuan eksistensial dan proporsi kosmis yang sempurna.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>هُوَ</strong></td>
+                <td>Isim dhamīr munfashil gha'ib mudzakkar mufrad mabni 'alal-fath.</td>
+                <td>Fi mahalli raf'in <strong>Mubtada'</strong> (subjek pemula kalimat).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِى</strong></td>
+                <td>Isim maushūl mufrad mudzakkar mabni 'alas-sukūn.</td>
+                <td>Fi mahalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>Huwa</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>يُصَوِّرُكُمْ</strong></td>
+                <td>Fi'il mudhāri' ma'lum wazan <em>Taf'īl</em> (صَوَّرَ - يُصَوِّرُ). Huruf kaf adalah dhamīr muttashil jamak mukhathab mabni 'alad-dhamm, huruf mim tanda jamak.</td>
+                <td><em>Yuṣhawwiru</em> fi'il mudhari' marfu' bil-dhammah azh-zhahirah. Fa'il-nya dhamir mustatir jawazan takdirnya (هُوَ). <em>Kum</em> fi mahalli nashbin <strong>Maf'ūl Bih</strong> (objek penderita). Seluruh jumlah fi'liyyah <em>yuṣhawwirukum</em> adalah <strong>Shilat al-Maushūl</strong> la mahalla laha minal-i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى ٱلْأَرْحَامِ</strong></td>
+                <td><em>Fī</em>: Huruf jar zharafiyah makaniah. <em>Al-Arḥām</em>: Isim jamak taksir majrur bil-kasrah azh-zhahirah.</td>
+                <td>Jārr wa Majrūr <strong>Muta'alliq</strong> (terikat maknanya) secara langsung kepada fi'il <em>yuṣhawwirukum</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>كَيْفَ</strong></td>
+                <td>Isim istifham mutadhammin ma'nas-syarth mabni 'alal-fath.</td>
+                <td>Fi mahalli nashbin <strong>Ḥāl</strong> (penjelas keadaan) bagi maf'ul bih (<em>kum</em>) atau maf'ul muthlaq bagi mashdar mahdzuf (<em>ayyu tashwīrin syā'a</em> / bagaimanapun bentuk yang Dia kehendaki).</td>
+            </tr>
+            <tr>
+                <td><strong>يَشَآءُ ۚ</strong></td>
+                <td>Fi'il mudhāri' wazan <em>Fa'ala - Yaf'alu</em> (شَاءَ - يَشَاءُ).</td>
+                <td>Fi'il mudhari' marfu' bil-dhammah azh-zhahirah. Fa'il-nya dhamir mustatir jawazan takdirnya (هُوَ). Maf'ul bih fi'il ini mahdzuf takdirnya: <em>mā yasyā'u an yuṣhawwirakum</em>. Seluruh jumlah fi mahalli jarr bi-idhafah bagi <em>kayfa</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَآ إِلَـٰهَ</strong></td>
+                <td><em>Lā</em>: Nāfiyah lil-jins mabni 'alas-sukun. <em>Ilāha</em>: Isim mufrad mabni 'alal-fath fi mahalli nashb.</td>
+                <td><em>Lā</em> menafikan seluruh jenis ketuhanan. Khabar <em>Lā</em> mahdzūf bi-ijma' takdirnya: <strong>bi-ḥaqqin</strong> (tidak ada tuhan yang berhak disembah dengan haq).</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَّا هُوَ</strong></td>
+                <td><em>Illā</em>: Adāt hashr / istitsnā' mulghāh. <em>Huwa</em>: Dhamir munfashil mabni 'alal-fath.</td>
+                <td><em>Huwa</em> berkedudukan sebagai <strong>Badal</strong> dari tempat lafaz isim <em>Lā</em> (sebelum kemasukan <em>la</em> berstatus marfu' sebagai mubtada') atau badal dari khabar <em>Lā</em> yang mahdzuf. Seluruh jumlah nafyu-itsbat berstatus <strong>Jumlah Musta'nafah Ta'kīdiyyah</strong> (kalimat penguat penjelas) la mahalla laha minal-i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَزِيزُ</strong></td>
+                <td>Sifat musyabbahah / isim sifat wazan <em>Fa'īl</em>. Ber-alif lam ma'rifah.</td>
+                <td><strong>Khabar Mubtada' Mahdzūf</strong> (takdirnya: <em>Huwal-'Azīz</em>), atau berkedudukan sebagai <strong>Na'at / Badal</strong> kedua marfu' bagi dhamir <em>Huwa</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْحَكِيمُ ۝٦</strong></td>
+                <td>Sifat musyabbahah wazan <em>Fa'īl</em> dari akar <em>ḥikmah</em>.</td>
+                <td><strong>Khabar Tsānī</strong> (khabar kedua) marfu' bil-dhammah azh-zhahirah, atau Na'at kedua bagi <em>Al-'Azīz</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ilmu Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ānī — Estetika Fi'il Mudhāri' (Istihdhār ash-Shūrah & Tajaddud):</strong><br>
+            Al-Qur'an memilih redaksi <em>yuṣhawwirukum</em> (fi'il mudhāri' / present-continuous) bukan <em>ṣhawwarakum</em> (fi'il mādhī / lampau). Menurut pakar balaghah, ini berfungsi untuk <em>istihḍhār ash-ṣhūrah fīdzh-dzhikri</em> (menghadirkan gambaran prosesi pembentukan yang luar biasa rumit tersebut di depan mata batin pembaca). Setiap saat, di ribuan rumah sakit dan pelosok bumi, jutaan sel sedang dirajut, wajah-wajah baru sedang dibentuk, dan keunikan tanpa batas sedang diproduksi oleh Allah secara berkesinambungan (<em>tajaddud wa istimrār</em>).
+        </li>
+        <li>
+            <strong>Ilmu Bayān — Majāz Kināyah dalam Diksi "Fīl-Arḥām":</strong><br>
+            Penyebutan <em>fīl-arḥām</em> (di dalam rahim-rahim) adalah <em>kināyah 'an syiddatil-khafā'</em> (ungkapan kiasan untuk menggambarkan kedalaman ruang yang paling rahasia, terlindung, dan gelap gulita). Tidak ada mata manusia, tidak ada teknologi mikroskopik zaman kuno, dan tidak ada tangan kekuasaan siapa pun yang mampu masuk memahat sel-sel janin di sana. Ini menjadi pembuktian empiris-rasional atas kemahatahuan Allah pada ayat 5 sebelumnya: Dzat yang memahat di kedalaman rahim tentulah mustahil luput dari mengetahui apa pun di langit dan di bumi.
+        </li>
+        <li>
+            <strong>Ilmu Badī' — Al-Izdawāj wal-I'tilāf (Harmoni Pasangan Nama Al-'Azīz Al-Ḥakīm):</strong><br>
+            Penggabungan nama <em>Al-'Azīz</em> (Maha Perkasa) dan <em>Al-Ḥakīm</em> (Maha Bijaksana) di akhir ayat merupakan puncak keserasian makna (<em>munāsabah badī'iyyah</em>). Membentuk rupa dalam rahim membutuhkan dua sifat mutlak: Keperkasaan tak tertandingi (<em>Al-'Izzah</em>) agar kehendak pembentukan rupa tidak bisa dihalangi atau digagalkan oleh cacat materi biologis; dan Kebijaksanaan sempurna (<em>Al-Ḥikmah</em>) agar setiap lekuk tubuh, panca indra, warna kulit, dan potensi genetik tertata secara harmonis sesuai takaran fungsi kehidupan. Keperkasaan tanpa hikmah akan menjadi tirani yang sewenang-wenang, sementara hikmah tanpa keperkasaan akan lumpuh tak mampu mengeksekusi desain. Allah menghimpun keduanya secara absolut.
+        </li>
+        <li>
+            <strong>I'jāz Fonetik & Tanāsub al-Fawāṣhil (Keserasian Rima Penutup):</strong><br>
+            Pemberhentian ayat pada rima konsonan Mim sukun (<em>Al-Ḥakīm</em>) memiliki resonansi ritmis yang selaras dengan ayat 2 (<em>Al-Qayyūm</em>) dan ayat-ayat pembuka surah lainnya. Efek fonetik vokal panjang <em>Kāsrah</em> yang diakhiri dengungan lembut Mim menghasilkan getaran ketenangan dan kepasrahan batin (<em>sakīnah</em>) di telinga orang-orang yang merenungkan asal-usul penciptaan dirinya.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Teks ke Belakang — Integrasi Ayat 5):</strong><br>
+            Pada ayat 5, Allah meletakkan prinsip epistemologis: <em>"Inna Allāha lā yakhfā 'alayhi syay'un fīl-ardhi wa lā fīs-samā'"</em> (Sesungguhnya bagi Allah tidak ada sesuatu pun yang tersembunyi di bumi dan tidak pula di langit). Ayat 6 hadir sebagai argumen pembuktian kongkret (<em>al-istidlāl bil-wāqi'</em>). Jika Anda ingin bukti bahwa tidak ada yang tersembunyi bagi Allah, perhatikanlah diri Anda sendiri: siapakah yang mengetahui dan mendesain wajah, jenis kelamin, garis tangan, dan detak jantung Anda ketika Anda masih berupa gumpalan daging mikroskopis di dalam rahim ibu yang tertutup tiga lapis kegelapan? Kemahatahuan Allah terbukti secara tak terbantahkan melalui tindakan penciptaan-Nya di alam rahim.
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis & Debat Teologis Delegasi Najran):</strong><br>
+            Surah Ali 'Imran diturunkan pada fase Madaniyah, di mana kaum muslimin berhadapan langsung dengan dua entitas Ahli Kitab: Yahudi Madinah dan delegasi Nasrani Najran (Yaman). Delegasi Najran yang beranggotakan 60 bangsawan dan teolog Kristen datang ke Madinah dengan pakaian kebesaran sutra dan salib emas, mengajukan klaim inkarnasionisme: bahwa Nabi Isa adalah anak Allah atau penjelmaan Allah di bumi karena ia lahir tanpa ayah biologis dan memiliki mukjizat menghidupkan orang mati. Ayat 6 membongkar ilusi ini dari akarnya secara biologis dan teologis:
+            <br>
+            1. Isa bin Maryam pernah mendekam di dalam rahim Maryam selama berbulan-bulan.<br>
+            2. Isa dibentuk oleh Allah setahap demi setahap menurut kehendak Allah (<em>kayfa yasyā'</em>).<br>
+            3. Entitas yang dikelilingi dinding rahim, menyerap darah kotor ibu untuk hidup, lalu keluar melalui jalan lahir bayi adalah entitas yang mutlak lemah, fana, dan berhajat kepada tempat. Bagaimana mungkin sosok yang dibentuk di dalam rahim dipertuhankan dan disembah sejajar dengan Sang Pembentuk Rahim itu sendiri?!
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Teks ke Depan — Transisi Menuju Ayat 7):</strong><br>
+            Setelah ayat 6 mengunci perdebatan tentang penciptaan fisik manusia (<em>at-takhliq al-jasadī</em>) di bawah kedaulatan mutlak kehendak Allah (<em>kayfa yasyā'</em>), ayat 7 langsung menyambung dengan penurunan wahyu Kitabullah (<em>at-tanzīl at-tasyrī'ī</em>): <em>"Huwal-ladzī anzala 'alaykal-kitāba minhu āyātun muḥkamāt..."</em>. Korelasi filosofisnya sangat memukau: Dzat yang memiliki hak prerogatif membentuk tubuh manusia beraneka ragam di alam rahim, adalah Dzat yang sama yang menurunkan Al-Qur'an dengan struktur ayat-ayat <em>muḥkamāt</em> (fondasi hukum yang terang benderang) dan <em>mutasyābihāt</em> (ayat-ayat multitafsir yang menguji ketundukan akal). Orang yang beriman tunduk menerima takdir fisiknya di ayat 6, sebagaimana ia tunduk menerima aturan hermeneutika wahyu di ayat 7 tanpa mengikuti dorongan hawa nafsu fitnah.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — Riwayat Klasik Otoritatif (Jāmi' al-Bayān):</strong><br>
+        At-Tabari memaparkan dengan sanad bersambung bahwa ayat ini merupakan vonis ontologis yang membatalkan klaim delegasi Kristen Najran terhadap ketuhanan Isa. At-Tabari menegaskan: <em>"Makna ayat ini adalah: Allah-lah yang membentuk rupa kalian semua—wahai delegasi Najran, dan wahai Isa Al-Masih putra Maryam yang kalian pertuhankan—di dalam rahim ibu-ibu kalian menurut kehendak-Nya: menjadi laki-laki atau perempuan, hitam atau putih, rupawan atau cacat. Maka jika Isa sendiri termasuk dalam kategori sosok yang dibentuk oleh Allah di dalam rahim ibunya (Maryam), bagaimana mungkin ia menjadi tuhan yang disembah? Sebab yang dibentuk pastilah makhluk ciptaan, dan Sang Pembentuk (Al-Mushawwir) pastilah Tuhan Yang Maha Esa lagi Perkasa."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — Eksegesis Atsar & Tauhid Rububiyah (Tafsīr Al-Qur'ān al-'Azhīm):</strong><br>
+        Ibnu Katsir menegaskan bahwa <em>at-tashwīr</em> adalah hak eksklusif ilahiah yang tidak bersekutu dengan siapa pun: <em>"Dialah yang menciptakan kalian di dalam rahim sebagaimana yang Dia kehendaki: apakah Dia menghendakinya berjenis kelamin lelaki atau perempuan, bernasib bahagia atau sengsara, berparas indah atau buruk rupa. Tiada tuhan selain Dia, yakni Dialah Sang Pencipta, Sang Pengatur, yang tiada sekutu bagi-Nya. Maka penegasan ini menjadi bukti pasti bahwa Isa bin Maryam adalah hamba Allah dan makhluk ciptaan-Nya yang dibentuk di dalam rahim ibunya, sebagaimana Allah membentuk manusia lainnya. Allah menciptakan Isa dengan kalimat-Nya 'Kun' (Jadilah), maka jadilah ia tanpa perantaraan ayah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — Fiqih Kehidupan & Perlindungan Janin (Al-Jāmi' li Aḥkām al-Qur'ān):</strong><br>
+        Al-Qurthubi membedah implikasi etika dan fiqih dari ayat ini:
+        <br>
+        1. <strong>Larangan Merendahkan Ciptaan Fisik:</strong> Siapa pun yang mencela atau menghina bentuk tubuh seseorang pada hakikatnya sedang mencela Sang Pembentuknya (<em>Al-Mushawwir</em>), karena rupa tersebut dibentuk langsung oleh kehendak Allah, bukan pesanan individu yang bersangkutan.
+        <br>
+        2. <strong>Hukum Pengguguran Janin (Aborsi):</strong> Al-Qurthubi menggarisbawahi kesucian fase rahim. Karena Allah-lah yang secara langsung membentuk rupa janin tersebut di balik tabir rahim, maka merusak atau menggugurkan janin yang telah bersemayam dan ditiupkan ruh adalah kejahatan besar perusakan ciptaan Allah dan pelanggaran berat terhadap amanah Ilahi.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (w. 606 H) & Az-Zamakhsyari (w. 538 H) — Rasional Filosofis & Balaghah:</strong><br>
+        Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> menyajikan argumen teleologis yang sangat brilian: <em>"Sperma pria dan ovum wanita berasal dari sari pati makanan yang serupa unsurnya. Namun tatkala keduanya bertemu di dalam rahim, terciptalah miliaran wajah manusia yang tidak pernah identik secara mutlak: ada yang bermata lebar, berkulit gelap, cerdas, berumur panjang, dan berwatak tenang. Jika pembentukan rupa manusia ini sekadar hukum alam mekanis yang buta (ath-thabī'ah), niscaya seluruh manusia akan keluar dengan satu rupa dan sifat yang sama persis karena materi pembentuknya sama. Fakta bahwa miliaran rupa berbeda muncul dari materi asal yang sama membuktikan secara pasti adanya Dzat Yang Berkehendak Bebas (Fā'il Mukhtār), Mahaperkasa (Al-'Azīz) dan Maha Memiliki Rencana Hikmah (Al-Ḥakīm)."</em> Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan bahwa penyebutan <em>kayfa yasyā'</em> memangkas seluruh klaim astrologi atau ramalan nasib berbasis bintang kelahiran, karena takdir rupa dan jalan hidup ditentukan mutlak oleh kehendak Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H) — Analisis Maqashidi (At-Taḥrīr wat-Tanwīr):</strong><br>
+        Ibnu 'Asyur menjelaskan bahwa penempatan ayat 6 persis sebelum ayat 7 memiliki tujuan maqashidi yang sangat dalam: <em>"Al-Qur'an membedah rahim sebagai simbol kerapuhan dan ketergantungan mutlak biologis manusia. Penegasan bahwa Allah membentuk rupa manusia di dalam rahim adalah pembebasan akal budi umat manusia dari mitologi dewa-dewa inkarnasi kuno. Melalui ayat ini, Al-Qur'an membangun peradaban tauhid berbasis observasi hukum alam: setiap yang pernah dikandung rahim adalah makhluk berhajat yang tunduk pada hukum ketergantungan biologis, dan Tuhan semesta alam steril dari sifat rahim tersebut."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka, Prof. Dr. M. Quraish Shihab & Kemenag RI — Konteks Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> menulis dengan bahasa menyentuh: <em>"Di dalam rahim ibu, kita tidak pernah dimusyawarahkan: apakah kita ingin lahir berkulit sawo matang, berkulit hitam, atau berkulit putih; apakah mancung atau pesek hidung kita. Semuanya dibentuk oleh Allah menurut kehendak-Nya. Maka alangkah bodohnya manusia yang menyombongkan ketampanan atau kebangsawanannya, dan alangkah celakanya orang yang menghina sesamanya karena rupa fisik. Ayat ini meruntuhkan diskriminasi rasial sampai ke akar-akarnya."</em> Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menegaskan bahwa ayat ini mengajarkan penerimaan diri yang damai (<em>self-acceptance</em>) di bawah naungan nama <em>Al-Hakim</em>: bentuk fisik kita saat ini adalah wadah terbaik yang dirancang Allah untuk menjalankan misi kekhalifahan kita di bumi. Kemenag RI menambahkan catatan bahwa keberagaman bentuk fisik manusia adalah bukti kekayaan tanda-tanda kebesaran Allah bagi orang-orang yang berfikir.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin atas QS. Ali 'Imran: 6</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Pilar Mazhab / Tokoh</th>
+                <th>Fokus Sorotan Utama</th>
+                <th>Titik Temu Konsensus (Ijma')</th>
+                <th>Nuansa Distingtif Analisis (Ikhtilaf)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Riwayat Klasik</strong><br>(At-Tabari & Ibnu Katsir)</td>
+                <td>Tafsir bil-Ma'tsur, asbabun nuzul debat Najran, dan penegasan status kenabian Isa AS.</td>
+                <td>Sepakat bulat bahwa ayat ini diturunkan untuk mendebat kaum Nasrani dan menegaskan bahwa Isa adalah makhluk yang dibentuk di rahim Maryam.</td>
+                <td>Menitikberatkan pada transmisi riwayat dialog Rasulullah ﷺ dengan para uskup Najran serta atsar sahabat tentang penulisan takdir di alam rahim.</td>
+            </tr>
+            <tr>
+                <td><strong>Hukum & Fiqih</strong><br>(Al-Qurthubi)</td>
+                <td>Status kesucian janin, hak hidup biologis, dan keharaman mencela fisik ciptaan Allah.</td>
+                <td>Sepakat bahwa pembentukan rupa di rahim adalah prerogatif mutlak Allah yang wajib diimani.</td>
+                <td>Mengeluarkan istinbath hukum fiqih mengenai keharaman aborsi tanpa kedaruratan syar'i dan konsekuensi dosa bagi pelaku penghinaan fisik (<em>body-shaming</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Rasional & Balaghah</strong><br>(Ar-Razi & Az-Zamakhsyari)</td>
+                <td>Bukti teleologis penciptaan, kosmologi embrio, dan dekonstruksi kebetulan materi acak.</td>
+                <td>Sepakat bahwa keteraturan desain janin membuktikan adanya Sang Pencipta Yang Esa (Wājibul-Wujūd).</td>
+                <td>Menjelaskan secara filosofis bahwa keberagaman rupa yang lahir dari satu substansi sperma-ovum membuktikan kehendak bebas Allah (<em>Fā'il Mukhtār</em>), bukan proses alamiah buta.</td>
+            </tr>
+            <tr>
+                <td><strong>Maqashidi Modern</strong><br>(Ibnu 'Asyur)</td>
+                <td>Demistifikasi teologi inkarnasi dan pembangunan nalar sains peradaban monoteistik.</td>
+                <td>Sepakat bahwa ayat ini membebaskan manusia dari penyembahan terhadap figur-figur makhluk fana.</td>
+                <td>Menganalisis keterkaitan struktural ayat ini dengan ayat 7 (pembentukan fisik di rahim vs pembentukan nalar melalui wahyu muhkam-mutasyabih).</td>
+            </tr>
+            <tr>
+                <td><strong>Konteks Nusantara</strong><br>(Buya Hamka & Quraish Shihab)</td>
+                <td>Kesetaraan rasial, dekonstruksi standar kecantikan semu, dan terapi psikologis penerimaan diri.</td>
+                <td>Sepakat bahwa ayat ini menegakkan persamaan derajat seluruh ras manusia di hadapan Allah.</td>
+                <td>Mengaitkan hikmah ayat dengan penyakit diskriminasi sosial, rasa rendah diri (insecurity) terhadap rupa, dan syukur eksistensial atas desain Ilahi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi pseudosains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Jahiliyah / Materialistik vs Pola Pikir Qur'ani</h3>
+    <ul>
+        <li>
+            <strong>Pola Pikir Jahiliyah / Sekuler Materialistik:</strong><br>
+            Memandang rupa fisik semata-mata sebagai produk acak dari lotre genetik biologis (<em>genetic lottery</em>) tanpa makna spiritual. Fisik direduksi menjadi komoditas estetika visual, modal sosial (<em>beauty privilege</em>), dan tolak ukur martabat manusia. Pola pikir ini melahirkan dua penyakit jiwa kronis: kesombongan narsistik (<em>superiority complex</em>) jika memiliki fisik yang dipuja masyarakat, atau keputusasaan dan rasa benci diri mendalam (<em>inferiority complex / self-loathing</em>) jika merasa fisiknya tidak sesuai dengan standar kecantikan budaya pasar.
+        </li>
+        <li>
+            <strong>Pola Pikir Qur'ani (Rabbani):</strong><br>
+            Memandang rupa fisik sebagai <strong>The Sacred Divine Artcraft</strong> (karya seni suci Sang Musyawwir). Bentuk fisik disadari sebagai wadah amanah yang dirancang secara personal oleh Allah Yang Maha Perkasa lagi Maha Bijaksana untuk mengemban tugas kehidupan tertentu. Manusia Qur'ani memahami bahwa rupa lahiriah adalah panggung ujian fana, sedangkan hakikat kemuliaan sejati (<em>core self-worth</em>) berada pada integritas kalbu dan amal perbuatan.
+        </li>
+    </ul>
+
+    <h3>2. Arsitektur Mental Model: Dua Kaidah Berpikir Rabbani</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Divine Blueprint Principle" (Prinsip Cetak Biru Rabbani):</strong><br>
+            <em>Premis:</em> Tidak ada kecacatan desain dalam ciptaan Allah. Setiap lekuk anatomi, warna kulit, keterbatasan fisik, dan keunikan biologis yang Anda bawa sejak lahir adalah bagian dari cetak biru ilahiah yang presisi untuk kurikulum ujian hidup Anda. Apa yang Anda anggap "kekurangan" di cermin sering kali adalah benteng proteksi ruhaniah Anda dari jurang kesombongan, atau motor pendorong lahirnya ketangguhan karakter dan empati kemanusiaan yang luar biasa.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Packaging vs Essence Law" (Hukum Pemisahan Wadah dan Hakikat):</strong><br>
+            <em>Premis:</em> Fisik adalah wadah pembungkus sementara (<em>packaging</em>) yang niscaya menua, keriput, dan membusuk di liang lahad; sedangkan ruh dan amal adalah esensi abadi yang akan menghadap Allah. Mengalokasikan 90% waktu dan biaya hidup untuk mempermak wadah lahiriah seraya menelantarkan kesehatan kalbu adalah kebodohan kognitif paling tragis dari peradaban manusia modern.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Penyembuhan "Insecurity" Eksistensial</h3>
+    <p>
+        Secara neuropsikologis, kecemasan manusia terhadap citra tubuh (<em>body image anxiety</em>) dipicu oleh komparasi sosial hiperaktif di sirkuit amigdala dan korteks prefrontal saat terpapar standar ideal palsu. Jiwa manusia modern terjebak dalam delusi kendali: mereka merasa harus memiliki hak veto atas bentuk wajah, hidung, dan postur tubuh mereka.
+    </p>
+    <p>
+        QS. Ali 'Imran ayat 6 melakukan dekonstruksi radikal terhadap delusi kendali tersebut dengan menghadirkan kesadaran <em>"fīl-arḥāmi kayfa yasyā'"</em>. Penerimaan radikal (<em>radical acceptance</em>) bahwa bentuk diri kita adalah kehendak Allah Yang Maha Bijaksana seketika melucuti beban kecemasan eksistensial. Melalui tazkiyatun nafs, jiwa dibersihkan dari dua racun utama: <strong>Al-Kibr</strong> (sombong karena merasa rupawan, padahal rupa itu adalah anugerah murni tanpa modal pribadi) dan <strong>Al-Ḥasad / Al-Jaza'</strong> (dengki dan mengutuk takdir fisik diri sendiri, yang hakikatnya merupakan bentuk protes terselubung kepada Sang Pencipta).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Epidemi Body Dysmorphic Disorder (BDD) & Tirani Algoritma Media Sosial</h3>
+    <p>
+        Abad ke-21 menyaksikan lonjakan luar biasa gangguan dismorfia tubuh (<em>Body Dysmorphic Disorder</em>). Jutaan generasi muda di platform digital (Instagram, TikTok, Snapchat) mengalami fenomena yang oleh para psikiater disebut sebagai <em>"Snapchat Dysmorphia"</em>: ketidakmampuan menerima wajah aslinya di dunia nyata akibat terbiasa melihat wajahnya sendiri yang telah dihaluskan dan diubah proporsinya oleh filter algoritma kecerdasan buatan. Hal ini melahirkan epidemi rasa benci pada diri sendiri, depresi, isolasi sosial, hingga keinginan bunuh diri di kalangan remaja.
+    </p>
+
+    <h3>2. Eksploitasi Industri Kecantikan & Bedah Kosmetik Komersial</h3>
+    <p>
+        Kapitalisme global telah mengkomodifikasi tubuh manusia. Industri bedah kosmetik dan kosmetik farmasi bernilai ratusan miliar dolar sengaja memproduksi kecemasan kolektif (<em>engineered insecurity</em>) agar manusia merasa cacat, jelek, dan tidak cukup baik jika belum membeli produk pemutih atau melakukan operasi hidung, bibir, dan rahang. QS. 3:6 hadir sebagai kritik peradaban yang membebaskan: Allah telah membentuk manusia dalam rahim dengan seindah-indah takaran (<em>Al-Ḥakīm</em>), dan merombak ciptaan Allah demi mengejar validasi tren pasar yang fana adalah jebakan tipu daya setan (sebagaimana diingatkan dalam QS. An-Nisā': 119).
+    </p>
+
+    <h3>3. Bahaya Transhumanisme, Rekayasa Genetika ("Designer Babies") & Eugenika Baru</h3>
+    <p>
+        Di era bioteknologi maju saat ini (seperti CRISPR-Cas9), manusia mulai melangkah pada batas berbahaya: ambisi menciptakan "bayi pesanan" (<em>designer babies</em>). Manusia berupaya mengambil alih peran <em>Al-Muṣhawwir</em> di laboratorium embriologi untuk memilih warna mata, warna kulit, tingkat tinggi badan, hingga kecerdasan anak berdasarkan selera elitis. Jika tidak dipandu oleh etika wahyu, peradaban masa depan berisiko terbelah ke dalam kasta genetik baru (<em>genetic apartheid</em>) dan membangkitkan kembali hantu eugenika fasis yang memusnahkan janin-janin yang dianggap "tidak sempurna". Ayat ini menjadi jangkar etika ilmiah: kedaulatan kehidupan dan desain manusia di dalam rahim adalah domain sakral milik Allah <em>Al-'Azīzul-Ḥakīm</em> yang tidak boleh dirusak oleh kesombongan sains tanpa adab.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit Harian: Doa Cermin dengan Rekalibrasi Kesadaran Al-Mushawwir (&lt; 3 Menit):</strong><br>
+                Setiap kali berdiri di depan cermin sebelum memulai aktivitas, heningkan batin selama 5 detik, tatap pantulan diri Anda tanpa menghakimi atau mengeluh, lalu lafalkan doa sunnah nabawiyyah dengan penuh penghayatan jiwa:<br>
+                <em>"Allāhumma kamā aḥsanta khalqī, fa-aḥsin khuluqī"</em> (Ya Allah, sebagaimana Engkau telah memperindah bentuk fisik penciptaanku di alam rahim, maka indahkan dan muliakanlah akhlak budi pekertiku). Jadikan cermin sebagai sarana mengingat Sang Seniman Agung, bukan sarana memupuk narsisme atau meratapi kekurangan fisik.
+            </li>
+            <li>
+                <strong>Protokol Keputusan: Moratorium Total terhadap "Body-Shaming" & Detoks Komparasi Digital:</strong><br>
+                Terapkan aturan keputusan tanpa kompromi (<em>zero-tolerance decision rule</em>): bersumpah secara sadar untuk tidak akan pernah melontarkan komentar fisik yang merendahkan (seperti: "kok kurusan?", "kok jerawatan?", "kok kulitnya hitaman?") kepada siapa pun, baik secara langsung di dunia nyata maupun di kolom komentar media sosial. Jika muncul godaan untuk membandingkan fisik dengan figur pesohor media sosial yang memicu rasa minder, segera lakukan <em>unfollow</em> atau tutup aplikasi tersebut selama minimal 24 jam demi menjaga kesehatan kalbu.
+            </li>
+            <li>
+                <strong>Komitmen Etika Relasional: Membongkar Bias "Pretty Privilege" dalam Berinteraksi:</strong><br>
+                Dalam lingkungan kerja, pergaulan kampus, organisasi dakwah, maupun rumah tangga, bersikaplah adil secara radikal: perlakukan, hargai, dan dengarkan setiap orang berdasarkan integritas moral dan kapasitas karyanya, bukan berdasarkan daya tarik visual atau standar estetika fisiknya. Bela dan lindungi rekan atau bawahan yang menjadi korban perundungan atau marginalisasi sosial hanya karena penampilan fisik mereka.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Ketika memandang tubuh dan wajahku di depan cermin, apakah aku lebih sering mengeluhkan hal-hal yang kuanggap "kurang" dan tidak sesuai selera hawa nafsuku, daripada bersujud mensyukuri triliunan sel, saraf optik, dan detak jantung yang dirajut sempurna oleh Allah di dalam rahim ibu tanpa sepeser pun biaya dariku?
+            </li>
+            <li>
+                Sejauh mana rasa percaya diri dan keberhargaan diriku (<em>self-worth</em>) masih digantungkan pada pujian, validasi 'like' manusia, dan standar kosmetik semu yang fana, dibandingkan pada kerinduan mencari ridha Allah Yang Maha Mengetahui rahasia sanubari terdalamku?
+            </li>
+            <li>
+                Apakah lisanku atau tatapan mataku pernah tanpa sadar mencemooh, mentertawakan, atau meremehkan rupa fisik seorang hamba Allah, tanpa menyadari bahwa menghina rupa manusia sejatinya adalah bentuk penghinaan lancang kepada Sang Arsitek yang membentuknya di alam rahim?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Bāri', Yā Khāliq, Yā Muṣhawwir, Yā 'Azīzu Yā Ḥakīm. Ya Allah, Dzat yang telah memahat rupa kami di dalam kegelapan rahim ibu kami tatkala kami masih berupa segumpal cairan yang tiada berdaya dan tiada bernilai. Kami bersujud mengakui kesempurnaan ciptaan-Mu dan kerendahan hakikat eksistensi kami di hadapan keagungan kehendak-Mu. Bersihkanlah kalbu kami dari penyakit kesombongan tatkala memandang kelebihan rupa, dan sembuhkanlah jiwa kami dari racun keluh kesah dan rasa rendah diri tatkala menghadapi keterbatasan fisik kami di hadapan manusia. Tanamkanlah dalam batin kami keindahan akhlak para nabi, terangilah wajah kami dengan cahaya ketaatan dan keikhlasan, serta jangan biarkan kami tertipu oleh kemilau lahiriah dunia yang menipu. Jadikanlah seluruh anggota badan yang telah Engkau bentuk ini sebagai alat untuk bersujud dan berkhidmat menegakkan kebenaran-Mu di muka bumi, hingga saatnya kami kembali menghadap-Mu dengan kalbu yang selamat (qalbun salīm). Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-005 - QS. Ali 'Imran Ayat 5.html">&larr; Kembali ke Ayat 5 (QS. 3:5)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 6</strong> (Blok 1: Keteguhan Akidah)</span>
+        <a href="003-007 - QS. Ali 'Imran Ayat 7.html">Lanjut ke Ayat 7 (QS. 3:7) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

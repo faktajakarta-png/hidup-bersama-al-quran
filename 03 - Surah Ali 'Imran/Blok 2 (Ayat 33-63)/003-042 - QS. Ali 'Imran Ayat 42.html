@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-042 - QS. Ali 'Imran Ayat 42 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-041 - QS. Ali 'Imran Ayat 41.html">&larr; Ayat Sebelumnya (QS. 3:41)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-043 - QS. Ali 'Imran Ayat 43.html">Ayat Berikutnya (QS. 3:43) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 2 (Ayat 38–44): Dialog Mihrab, Mukjizat Yahya & Kanonisasi Kemuliaan Maryam</span>
+        <span class="badge">12 Kata | 57 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 42</h1>
+    <div class="transliteration">
+        "Wa idz qālatil-malā'ikatu yā-maryamu innallāhaṣh-ṭhafāki wa thahharaki waṣh-ṭhafāki 'alā nisā'il-'ālamīn(a)."
+    </div>
+    <div class="thematic-title">
+        Kanonisasi Kesucian Maryam & Dialektika Dua Isthafa': Penobatan Perempuan Suci Melintasi Sekat Zaman, Katarsis Fitnah Kaum Yahudi, dan Runtuhnya Dogma Dosa Waris
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 2: Pengabdian Mihrab, Sakralitas Gender & Titik Temu Mukjizat Isa Al-Masih)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَإِذْ قَالَتِ ٱلْمَلَـٰٓئِكَةُ يَـٰمَرْيَمُ إِنَّ ٱللَّهَ ٱصْطَفَىٰكِ وَطَهَّرَكِ وَٱصْطَفَىٰكِ عَلَىٰ نِسَآءِ ٱلْعَـٰلَمِينَ ۝٤٢
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Dan (ingatlah wahai Muhammad) ketika para malaikat (Jibril 'alaihissalam dan para malaikat bersamanya) berkata: 'Wahai Maryam! Sesungguhnya Allah telah memilihmu (untuk beribadah tulus, menerima pemeliharaan mihrab, dan mengabdikan diri di Baitul Maqdis), menyucikanmu (dari segala noda kekafiran, was-was batiniah, hadas biologis, serta dari tuduhan fitnah keji kaum durhaka), dan memilihmu (kembali) di atas seluruh perempuan semesta alam (pada masamu dan sepanjang masa sebagai wadah mukjizat agung melahirkan Nabi Isa tanpa sentuhan manusia)'."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini memproklamasikan kanonisasi ilahiah atas kemuliaan Sayyidah Maryam binti 'Imran melalui formula dwitunggal pemilihan: <em>al-iṣhṭhafā'ān</em> (dua kali penyebutan kata <em>iṣhṭhafāki</em> yang diantarai oleh kata <em>wa thahharaki</em>). Pilihan redaksional repetitif ini bukan sekadar penegasan stilistika retoris (<em>ta'kīd</em>), melainkan peralihan martabat eksistensial: pemilihan pertama menandai penerimaan nazar ibundanya (Hannah) sehingga Maryam berhak menginap dan beribadah di mihrab Baitul Maqdis (sebuah privilese yang sebelumnya tertutup rapat bagi kaum perempuan dalam tradisi imamat Yahudi); penyucian (<em>tathhīr</em>) membersihkan integritas batin dan moralitas jasmaninya dari segala kekeruhan syirik, dosa, dan tuduhan zina; sedangkan pemilihan kedua menobatkan Maryam sebagai perempuan paling unggul di atas seluruh perempuan semesta alam (<em>nisā'il-'ālamīn</em>) karena terpilih mengandung kalimat Allah (Nabi Isa AS) tanpa campur tangan sperma laki-laki. Penegasan ayat ini membongkar dua penyimpangan teologis peradaban sekaligus: fitnah keji kaum Yahudi yang menuduh Maryam berzina (QS. An-Nisa': 156), serta kultus berlebihan kaum Kristen yang mengangkat Maryam ke derajat Bunda Tuhan (<em>Theotokos</em>) atau mitra peribadahan trinitas. Al-Qur'an mendudukkannya pada derajat tertinggi kemanusiaan: hamba perempuan pilihan yang suci dan tunduk mutlak kepada Rabb semesta alam.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَإِذْ</strong><br>(<em>Wa idz</em>)</td>
+                <td>
+                    <strong>Huruf Żāl (ذ):</strong> Keluar dari ujung lidah bertemu dengan ujung dua gigi seri atas. Memiliki sifat <em>rakhāwah</em> (suara mengalir), <em>jahr</em> (nafas tertahan), dan <em>isti'fāl</em>.<br>
+                    <strong>Qalqalah Prevention:</strong> Dilarang menggetarkan dzal sukun agar tidak menyerupai qalqalah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca sukun pada dzal secara <em>tahqīq</em>. Berfungsi sebagai <em>zharaf zamān māḍhī</em> yang terikat pada kata kerja tersirat (<em>muta'alliq bi-mahdzūf</em>) yaitu: <em>"Udzkur"</em> (Ingatlah).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>قَالَتِ</strong><br>(<em>Qālati</em>)</td>
+                <td>
+                    <strong>Huruf Qāf (ق):</strong> Sifat <em>isti'lā'</em> martabat tertinggi (fathah diiringi alif).<br>
+                    <strong>Kasrah 'Āriḍhah:</strong> Ta' ta'nits aslinya sukun (<em>qālat</em>), namun dipecah dengan harakat kasrah (<em>qālati</em>) demi menghindari bertemunya dua sukun (<em>iltiqā'us-sākinayn</em>) saat menyambung ke alif-lam <em>al-malā'ikah</em>.
+                </td>
+                <td>
+                    Konsensus sepuluh imam membaca kasrah pada huruf Ta' ta'nits ketika washal. Ta' ta'nits menegaskan sifat lafaz jamak taksir pada kata <em>al-malā'ikah</em> yang dihukumi feminin gramatikal (<em>majāzī at-ta'nīts</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱلْمَلَـٰٓئِكَةُ</strong><br>(<em>Al-Malā'ikatu</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam sukun dibaca terang dan jelas.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf mad Alif bertemu hamzah dalam satu kata utuh. Wajib dipanjangkan melebihi mad ashli.<br>
+                    <strong>Makhraj Hamzah:</strong> Dari pangkal tenggorokan (<em>aqshal-halq</em>) dengan sifat <em>syiddah</em> dan <em>jahr</em>.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi' & Ḥamzah:</strong> Membaca mad wajib muttashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn, Ibnu Katsīr, Abū 'Amr, Abū Ja'far, Ya'qūb:</strong> Membaca dengan 4 harakat.<br>
+                    • <em>Hamzah</em> saat waqaf membaca tashil hamzah ma'ar-raum atau ibdal, namun saat washal seluruh imam membaca tahqiq hamzah dengan dhammah pada Ta' marbuthah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>يَـٰمَرْيَمُ</strong><br>(<em>Yā-Maryamu</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil Ḥukmī:</strong> Huruf nida' <em>Yā</em> bersambung secara penulisan rasm dengan <em>Maryamu</em>.<br>
+                    <strong>Tafkhīm Huruf Rā':</strong> Ra' sukun didahului fathah wajib dibaca tebal (tebal pangkal lidah terangkat).<br>
+                    <strong>Mamnu' minash-Sharf:</strong> <em>Maryamu</em> diakhiri tanda dhammah tunggal tanpa tanwin karena memenuhi illat 'alamiyyah dan ta'nits hakiki.
+                </td>
+                <td>
+                    Tingkat panjang mad nida' mengikuti kaidah mad munfashil masing-masing imam (Warsy & Hamzah 6 harakat; Ashim & Ibnu 'Amir & Kisa'i 4-5 harakat; Qalun & Abu 'Amr qashr 2 harakat atau tawassuth 4 harakat; Ibnu Katsir, Abu Ja'far, Ya'qub qashr 2 harakat). Mabni 'aladh-dhamm fi mahalli nashbin munada.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>إِنَّ ٱللَّهَ</strong><br>(<em>Innallāha</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Huruf Nun bertasydid ditahan 2 harakat dengan dengungan sempurna pada rongga hidung (<em>khaisyūm</em>).<br>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Dua lam pada asma Allah ditebalkan karena harakat sebelumnya berupa fathah pada Nun <em>Inna</em>.
+                </td>
+                <td>
+                    Seluruh imam sepakat menyempurnakan ghunnah pada Nun dan menebalkan lafaz Jalalah. Menandakan penegasan mutlak (<em>harf tawkīd</em>) yang membatalkan segala spekulasi batil manusia.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>ٱصْطَفَىٰكِ</strong><br>(<em>Iṣhṭhafāki</em> - pertama)</td>
+                <td>
+                    <strong>Hamzah Washal Saqithah:</strong> Gugur saat dibaca sambung dari <em>Innallāha-ṣhṭhafāki</em>.<br>
+                    <strong>Ibdāl Tā' Ifti'āl menjadi Ṭhā' (ط):</strong> Huruf asal wazan <em>ifta'ala</em> (<em>is-ta-fa</em>) diganti menjadi Tha' tebal karena terpengaruh sifat <em>ithbāq</em> dan <em>isti'lā'</em> pada huruf Shad sukun (صْ).<br>
+                    <strong>Alif Maqshūrah (Dzawātul-Yā'):</strong> Alif layyinah di atas huruf Fa'.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> (mencondongkan suara fathah ke arah kasrah: <em>is-tha-fē-ki</em>) pada alif yang terletak sebelum kaf dhamir.<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqlīl (Bayna-Bayna)</strong> secara konsensus mad dzawatul ya.<br>
+                    • <strong>Jumhur (termasuk Ḥafṣh, Qālūn, Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, Abū Ja'far, Ya'qūb):</strong> Membaca dengan <strong>Fatḥah Murni</strong> (<em>iṣhṭhafāki</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَطَهَّرَكِ</strong><br>(<em>Wa thahharaki</em>)</td>
+                <td>
+                    <strong>Isti'lā' & Iṭhbāq:</strong> Huruf Tha' (ط) tebal mutlak.<br>
+                    <strong>Huruf Ḥā' (هـ):</strong> Keluar dari pangkal tenggorokan dengan hembusan nafas <em>hams</em> lembut.<br>
+                    <strong>Tafkhīm Rā' Musyaddadah:</strong> Ra' bertasydid berharakat fathah dibaca tebal disertai penguncian sifat takrir agar tidak bergetar berlebihan (<em>ikhfā'ut-takrīr</em>).<br>
+                    <strong>Kasrah pada Kāf Khithāb:</strong> Menunjukkan dhamir mukhatabah mu'annatsah (kamu seorang perempuan).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tasydid pada Ha' bab <em>taf'īl</em> (<em>thahhara</em>) dan memfathahkan Ra' serta mengkasrahkan Kaf khithab.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَٱصْطَفَىٰكِ</strong><br>(<em>Wash-ṭhafāki</em> - kedua)</td>
+                <td>
+                    <strong>Washal Wawu ke Shad:</strong> Hamzah washal gugur, Wawu fathah langsung menyambar ke Shad sukun bersuara desis <em>shafīr</em> tajam.<br>
+                    <strong>Kaidah Ibdāl & Imālah:</strong> Kaidah tajwid dan qira'atnya sama persis dengan kata <em>iṣhṭhafāki</em> pertama (Hamzah, Kisa'i, Khalaf membaca imalah kubra; Warsy taqlil; jumhur fathah murni).
+                </td>
+                <td>
+                    Variasi qira'at paralel mutlak dengan lafaz pertama. Repetisi kata kerja bentuk madhi dengan dhamir fa'il ilahi menegaskan kepastian penobatan yang telah ditakdirkan di Lauhul Mahfuzh.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>عَلَىٰ نِسَآءِ</strong><br>(<em>'Alā nisā'i</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Alif layyinah pada <em>'Alā</em> bertemu Hamzah qatha' kasrah pada kata <em>nisā'i</em>.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Alif bertemu hamzah pada kata <em>nisā'i</em>.<br>
+                    <strong>Isti'fāl & Tarqīq:</strong> Huruf Nun dan Sin dibaca tipis dan mengalir lembut.
+                </td>
+                <td>
+                    Tingkat panjang mad munfashil mengikuti martabat qira'at masing-masing (Warsy & Hamzah thul 6 harakat; Ashim, Kisa'i, Ibnu 'Amir, Khalaf 4-5 harakat; Ibnu Katsir, Abu Ja'far, Ya'qub 2 harakat; Qalun & Abu 'Amr jawazul wajhayn 2/4 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ٱلْعَـٰلَمِينَ ۝٤٢</strong><br>(<em>Al-'Ālamīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Huruf Lam sukun dibaca jelas.<br>
+                    <strong>Huruf 'Ain (ع):</strong> Makhraj di tengah tenggorokan (<em>wasaṭhul-ḥalq</em>) dengan sifat <em>tawassuṭh</em> (antara mengalir dan tertahan).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Ya' sukun sebelum huruf Nun waqaf di ujung ayat, dibaca 2, 4, atau 6 harakat secara konsisten dengan hukum mad aridh penutup ayat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca rafa'/nashab jamak mudzakkar salim dengan ya' kasrah dan nun fathah saat washal, serta sukun pada nun dengan mad 'aridh lis-sukun saat waqaf.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 3432 & 3815) dan Imam Muslim (No. 2430) dari Sahabat 'Ali bin Abī Ṭhālib r.a. — Proklamasi Dua Sayyidah Teragung Sepanjang Sejarah:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "خَيْرُ نِسَائِهَا مَرْيَمُ ابْنَةُ عِمْرَانَ، وَخَيْرُ نِسَائِهَا خَدِيجَةُ بِنْتُ خُوَيْلِدٍ"
+        </span>
+        <em>"Sebaik-baik wanita di alam semesta (pada masanya) adalah Maryam binti 'Imran, dan sebaik-baik wanita di alam semesta (pada masanya/umat ini) adalah Khadijah binti Khuwailid."</em><br>
+        <strong>Syarah Hadits:</strong> Al-Hafizh Ibnu Hajar Al-'Asqalani dalam <em>Fath al-Bārī</em> menegaskan bahwa dhamir <em>hā</em> pada <em>khayru nisā'ihā</em> merujuk pada langit dan bumi atau seluruh wanita alam semesta, yang mengukuhkan kemuliaan Maryam binti 'Imran dan Khadijah binti Khuwailid sebagai puncak kesempurnaan martabat perempuan.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 3411 & 3769) dan Imam Muslim (No. 2431) dari Sahabat Abū Mūsā Al-Asy'arī r.a. — Derajat Kesempurnaan Ruhani Wanita:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "كَمَلَ مِنَ الرِّجَالِ كَثِيرٌ، وَلَمْ يَكْمُلْ مِنَ النِّسَاءِ إِلَّا آسِيَةُ امْرَأَةُ فِرْعَوْنَ، وَمَرْيَمُ ابْنَةُ عِمْرَانَ، وَإِنَّ فَضْلَ عَائِشَةَ عَلَى النِّسَاءِ كَفَضْلِ الثَّرِيدِ عَلَى سَائِرِ الطَّعَامِ"
+        </span>
+        <em>"Telah mencapai tingkat kesempurnaan (kamil) dari kalangan laki-laki sangat banyak, dan tidak mencapai derajat kesempurnaan dari kalangan perempuan kecuali Asiyah istri Fir'aun dan Maryam binti 'Imran. Dan sesungguhnya keutamaan 'Aisyah atas seluruh wanita adalah seperti keutamaan hidangan tsarid atas seluruh jenis makanan."</em><br>
+        <strong>Derajat Hadits:</strong> Muttafaqun 'Alaih. Hadits ini menjadi poros perdebatan klasik mengenai apakah derajat kesempurnaan (<em>kamāl</em>) Maryam mencapai tingkatan kenabian (<em>nubuwwah</em>) ataukah puncak derajat <em>shiddīqiyyah</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Riwayat Imam At-Tirmidzī (No. 3878), Imam Aḥmad dalam Musnad (No. 12413), dan Ibnu Ḥibbān (No. 7004) dari Sahabat Anas bin Mālik r.a. — Empat Pilar Teladan Kaum Perempuan:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+            "حَسْبُكَ مِنْ نِسَاءِ الْعَالَمِينَ: مَرْيَمُ ابْنَةُ عِمْرَانَ، وَخَدِيجَةُ بِنْتُ خُوَيْلِدٍ، وَفَاطِمَةُ بِنْتُ مُحَمَّدٍ، وَآسِيَةُ امْرَأَةُ فِرْعَوْنَ"
+        </span>
+        <em>"Cukuplah bagimu (sebagai panutan kemuliaan puncak) dari perempuan seluruh semesta alam: Maryam binti 'Imran, Khadijah binti Khuwailid, Fathimah binti Muhammad, dan Asiyah istri Fir'aun."</em><br>
+        <strong>Derajat Hadits:</strong> Sahih menurut Imam At-Tirmidzi dan disahkan oleh Syaikh Al-Albani.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Sh-F-W (ص-ف-و — Al-Iṣhṭhafā'):</strong> Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan prinsip dasar akar ini pada satu poros semantik agung: <em>"al-khulūṣh minasy-syawā'ib"</em> (kemurnian murni yang terbebas dari segala campuran, kekeruhan, debu, atau cacat kotoran). Dari akar ini lahir kata <em>aṣ-ṣhafā</em> (batu padas yang licin mengkilap tanpa noda tanah) dan <em>shafwah</em> (bagian terbaik dan paling murni dari intisari suatu zat). Bentuk kata kerja <em>iṣhṭhafā</em> mengikuti wazan <em>ifta'ala</em> yang mengandung makna kesengajaan mendalam, penyeleksian ketat, dan penetapan eksklusif (<em>al-ikhtiyār wal-ijtibā'</em>). Penggunaan kata <em>iṣhṭhafāki</em> menunjukkan bahwa Allah memilih Maryam bukan karena faktor kebetulan sosiologis, melainkan penyeleksian zat, jiwa, dan nasab secara istimewa dari jutaan keturunan Adam AS.</li>
+        <li><strong>2. Th-H-R (ط-ه-ر — At-Tath-hīr):</strong> Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menjelaskan bahwa <em>aṭh-ṭhuhru</em> adalah lawan mutlak dari <em>an-najasah</em> (kotoran/najis) dan <em>ad-danas</em> (noda kehinaan). Kata <em>thahharaki</em> menggunakan wazan <em>fa''ala</em> (<em>at-taf'īl</em>) yang berfaedah <em>lit-taktsīr wal-mubālaghah</em> (penyucian yang intensif, komprehensif, berkesinambungan, dan tuntas). Penyucian ini mencakup dimensi fisik-biologis (disucikan dari hadas yang menghalangi ibadah mihrab menurut sebagian mufassir), dimensi etika-spiritual (disucikan dari penyakit hati, riya', keraguan tauhid, dan bisikan setan), serta dimensi yuridis-sosial (dibersihkan namanya oleh Allah dari tuduhan zina yang dilemparkan oleh kaum Yahudi).</li>
+        <li><strong>3. M-L-K (م-ل-ك — Al-Malā'ikah):</strong> Akar kata yang merujuk pada <em>al-alūkah</em> atau <em>al-ma'lakah</em> yang berarti risalah atau pesan suci yang dibawa oleh utusan langit. Jamak taksir <em>al-malā'ikatu</em> di sini memperlihatkan kemegahan peristiwa khithab langit kepada seorang perempuan di mihrab.</li>
+        <li><strong>4. '-L-M (ع-ل-م — Al-'Ālamīn):</strong> Jamak mudzakkar salim dari kata <em>'ālam</em>, yang seakar dengan <em>al-'alāmah</em> (tanda pengenal). Disebut alam semesta karena keberadaan ciptaan merupakan tanda nyata yang membuktikan wujud dan kesempurnaan Sang Maha Pencipta. Kata <em>nisā'il-'ālamīn</em> merangkum seluruh populasi perempuan, baik ditinjau secara zamani (perempuan di zamannya) maupun secara ontologis-mukjizat (keutamaan melahirkan nabi tanpa ayah sepanjang sejarah penciptaan manusia).</li>
+    </ul>
+
+    <h3>Tabel Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَإِذْ</strong></td>
+                <td><em>Wawu</em>: Harf isti'nāf/isti'nāfiyyah.<br><em>Idz</em>: Ism zharaf lil-māḍhī mabni 'alas-sukūn.</td>
+                <td><em>Wawu</em> isti'nafiyyah. <em>Idz</em> fi mahalli nashbin maf'ul bih bagi fi'il amr yang mahdzuf takdirnya: <strong>اُذْكُرْ</strong> (<em>Udzkur</em>: Ingatlah wahai Muhammad).</td>
+            </tr>
+            <tr>
+                <td><strong>قَالَتِ</strong></td>
+                <td>Fi'il madhi mabni 'alal fathi.<br>Ta' ta'nits sakinah dipecah kasrah 'aridhah li-iltiqa'is-sakinayn.</td>
+                <td>Fi'il madhi, tidak memiliki fa'il dhamir karena fa'il isim zhahir muncul sesudahnya.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمَلَـٰٓئِكَةُ</strong></td>
+                <td>Ism jam' taksīr, mufradnya <em>malak</em> (akar m-l-k / l-'-k).</td>
+                <td><strong>Fā'il</strong> marfu' bil-dhammah azh-zhahirah di akhirnya. Jumlah fi'liyyah <em>(qālatil-malā'ikatu)</em> fi mahalli jarri <strong>Mudhaf Ilayh</strong> bagi zharaf <em>idz</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>يَـٰمَرْيَمُ</strong></td>
+                <td><em>Yā</em>: Harf nida' mabni 'alas sukun.<br><em>Maryamu</em>: Ism 'alam mu'annats 'ajamiy mamnu' minash-sharf.</td>
+                <td><strong>Munādā Mufrad 'Alam</strong> mabni 'aladh-dhammi fi mahalli nashbin. Jumlah nida'iyyah menjadi pembuka dari <em>maqūlul-qawl</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّ ٱللَّهَ</strong></td>
+                <td><em>Inna</em>: Harf tawkīd wa nashb.<br><em>Allāha</em>: Ism 'alam jalalah.</td>
+                <td><em>Inna</em> menasabkan isim dan merafakkan khabar. <em>Allāha</em> <strong>Ismu Inna</strong> manshub bil-fathah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱصْطَفَىٰكِ</strong></td>
+                <td>Fi'il madhi wazan <em>ifta'ala</em>, fa'il dhamir mustatir <em>Huwa</em>.<br>Kaf: Dhamir muttashil mukhatabah mu'annatsah.</td>
+                <td>Fi'il madhi mabni 'alal fathi al-muqaddar 'alal alif. Fa'il dhamir mustatir jawazan taqdiruhu <em>Huwa</em>. Kaf mabni 'alal kasri fi mahalli nashb <strong>Maf'ūl bih</strong>. Seluruh jumlah fi'liyyah <em>(iṣhṭhafāki)</em> fi mahalli raf'in <strong>Khabar Inna Awwal</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَطَهَّرَكِ</strong></td>
+                <td><em>Wawu</em>: Harf 'athaf.<br><em>Thahhara</em>: Fi'il madhi bab <em>taf'īl</em>.<br>Kaf: Dhamir muttashil mukhatabah.</td>
+                <td><em>Wawu</em> athaf. Fi'il madhi mabni 'alal fath, fa'il dhamir mustatir <em>Huwa</em>, Kaf maf'ul bih. Jumlah fi'liyyah ma'thufah kepada khabar inna yang pertama (fi mahalli raf'in).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱصْطَفَىٰكِ</strong></td>
+                <td><em>Wawu</em>: Harf 'athaf.<br><em>Iṣhṭhafā</em>: Fi'il madhi + Fa'il mustatir + Kaf maf'ul bih.</td>
+                <td>Ma'thuf kepada jumlah sebelumnya. Menjadi khabar inna yang ketiga secara gramatikal makna, mempertegas penobatan kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَىٰ نِسَآءِ</strong></td>
+                <td><em>'Alā</em>: Harf jarr.<br><em>Nisā'i</em>: Ism jam' taksir (mufradnya <em>imra'ah</em> min ghayri lafzhih).</td>
+                <td><em>'Alā</em> harf jarr mabni 'alas sukun. <em>Nisā'i</em> isim majrur bil-kasrah, وهو مضاف. Jar wa majrur muta'alliq (terikat secara makna sintaksis) dengan fi'il <strong>ٱصْطَفَىٰكِ</strong> yang kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَـٰلَمِينَ ۝٤٢</strong></td>
+                <td>Ism mulhaq bi-jam'il-mudzakkari as-sālim.</td>
+                <td><strong>Mudhāf Ilayh</strong> majrur bil-yā' liannahu mulhaq bi-jam'il mudzakkar as-salim. Jumlah <em>(innallāhaṣh-ṭhafāki...)</em> secara keseluruhan fi mahalli nashbin <strong>Maqūlul-Qawl</strong> bagi fi'il <em>qālat</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Shauti)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ānī — Rahasia Retoris Tikrār al-Iṣhṭhafā' (Dua Pemilihan Tanpa Redundansi):</strong> Dalam kaidah balaghah tingkat tinggi, repetisi lafaz yang sama dalam satu kalimat mustahil bersifat hampa makna (<em>tamadhmuz / mubtadzal</em>). Syaikh Abdul Qahir Al-Jurjani dan Al-Qazwini menegaskan kaidah: <em>"At-Ta'sīs awlā minat-Ta'kīd"</em> (menetapkan faedah makna baru jauh lebih utama daripada sekadar menegaskan makna lama). Kata <em>iṣhṭhafāki</em> pertama berdiri tanpa ikatan jar-majrur (<em>muthlaq</em>), sedangkan kata <em>iṣhṭhafāki</em> kedua diikat secara sintaksis dengan <em>'alā nisā'il-'ālamīn</em> (<em>muqayyad</em>). Pemilihan pertama adalah penyeleksian personal-substantif: Maryam diterima nazarnya oleh Allah di mihrab, dianugerahi hidangan surga, dan dijaga fitrahnya; sedangkan pemilihan kedua adalah penyeleksian fungsional-historis yang komparatif: Maryam diunggulkan atas seluruh wanita dunia untuk melahirkan Al-Masih tanpa ayah, menjadi tanda kekuasaan semesta (<em>āyatan lil-'ālamīn</em>).</li>
+        <li><strong>Ilmu Bayān — Majāz Mursal / Iṭhlāq al-Jam'i 'alal-Wāḥid:</strong> Penggunaan bentuk jamak <em>al-malā'ikatu</em> (para malaikat) dikaji mufassirin dengan dua sudut pandang bayani: pertama, malaikat yang berbicara sejatinya adalah Malaikat Jibril 'alaihissalam saja (sebagaimana dalam Maryam: 19), namun diungkapkan dengan lafaz jamak sebagai <em>majāz mursal</em> dengan relasi <em>ithlāqul-kulli wa irādatul-juz'</em> demi memuliakan sang pembawa risalah dan mengagungkan isi pesannya (<em>tafkhīm al-khitāb</em>); kedua, bermakna hakiki bahwa serombongan malaikat memang turun mendampingi Jibril menyaksikan penobatan kesucian Maryam di hadapan para penghuni langit.</li>
+        <li><strong>Ilmu Badī' — Ḥusnut-Tartīb & Al-I'tilāf (Kerapian Urutan Takhliah dan Tahlliah):</strong> Susunan kronologis redaksi ayat memperlihatkan mukjizat badi' yang memesona: <em>iṣhṭhafāki</em> (pilihan benih kebajikan) &rarr; <em>wa thahharaki</em> (proses <em>takhliyah</em> atau pembersihan total wadah jiwa dan raga dari polusi) &rarr; <em>waṣh-ṭhafāki 'alā nisā'il-'ālamīn</em> (proses <em>tahliyah</em> dan penobatan ke takhta kemuliaan tertinggi). Wadah jiwa tidak mungkin menerima amanah mukjizat kosmik sebelum disucikan secara tuntas oleh Allah SWT.</li>
+        <li><strong>I'jāz Shawtī & Fonetika Mihrab:</strong> Rangkaian kata yang didominasi huruf-huruf <em>ithbāq</em> dan <em>isti'lā'</em> yang agung (Shad dan Tha' pada <em>iṣhṭhafāki</em> dan <em>thahharaki</em>) berpadu harmonis dengan desis lembut <em>hams</em> (Kaf khithab feminin dan Sin pada <em>nisā'</em>) serta diakhiri nada tenang berwibawa <em>'ālamīn</em>. Menghadirkan atmosfer sakralitas mihrab yang hening, khidmat, sekaligus menggetarkan kesadaran batin pendengarnya.</li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Sibāq (Korelasi Teks Mendahului: Ayat 37–41)</h3>
+    <p>
+        Ayat 42 ini berakar langsung dari narasi pemeliharaan Maryam di mihrab pada ayat 37 (<em>fa-taqabbalahā Rabbuhā bi-qabūlin ḥasan</em>). Ketika Nabi Zakariya AS takjub melihat buah-buahan luar musim terhidang di samping Maryam, fenomena karamah tersebut memantik Zakariya untuk melantunkan doa tulus memohon keturunan suci di usia senja (ayat 38). Setelah Al-Qur'an memaparkan ijabah spektakuler atas doa Zakariya berupa kabar gembira kelahiran Nabi Yahya AS beserta mukjizat tanda bisu tiga hari (ayat 39–41), sorotan wahyu kembali dipusatkan secara dramatis kepada sang tokoh poros: Sayyidah Maryam. Transisi ini mendidik akal manusia bahwa mukjizat kelahiran Yahya dari rahim wanita tua mandul adalah jembatan persiapan psikologis (<em>tamhīd</em>) sebelum akal manusia dihadapkan pada mukjizat yang jauh lebih mustahil dalam nalar biologis materiil: kelahiran Isa Al-Masih tanpa perantara bapa sama sekali!
+    </p>
+
+    <h3>2. Siyāq (Arsitektur Blok 2 & Rekonstruksi Dialog Najran serta Polemik Yahudi)</h3>
+    <p>
+        Dalam struktur makro Surah Āli 'Imrān Blok 2 (Ayat 33–63), ayat 42 menempati posisi sentral sebagai kanonisasi kesucian silsilah (<em>genealogi kesucian</em>). Konteks historis penurunan ayat ini berkelindan erat dengan kedatangan 60 tokoh delegasi Kristen Najran yang dipimpin oleh Abdul Masih (Al-'Aqib) dan Uskup Abu Haritsah bin 'Alqamah ke Masjid Nabawi di Madinah pada tahun ke-9 atau ke-10 Hijriah:
+    </p>
+    <ul>
+        <li><strong>Dekonstruksi Teologi Trinitas & Maria Kultus (Theotokos):</strong> Delegasi Kristen Najran membenarkan doktrin ketuhanan Isa Al-Masih dengan argumen kelahirannya yang tanpa ayah, dan sebagian sekte kuno memosisikan Maryam sebagai salah satu oknum yang dikultuskan (sebagaimana disinggung dalam QS. Al-Ma'idah: 116). Ayat 42 membongkar penuhanan ini: Maryam menerima firman dari para malaikat bukan sebagai tuhan perempuan, melainkan sebagai hamba yang <em>dipilih</em> dan <em>disucikan</em> oleh Allah (<em>innallāhaṣh-ṭhafāki</em>). Subjek mutlak yang memilih adalah Allah; Maryam adalah objek pemuliaan, bukan sumber kemuliaan itu sendiri.</li>
+        <li><strong>Katarsis Total atas Fitnah Brutal Kaum Yahudi:</strong> Kaum Yahudi generasi pertama hingga masa Talmudik menuduh Maryam berzina dengan seorang prajurit Romawi bernama Pantera (Yeshu ben Pandera) demi membatalkan klaim kenabian Isa AS (ditegaskan dalam QS. An-Nisa': 156: <em>wa bi-kufrihim wa qawlihim 'alā Maryama buhtānan 'azhīmā</em>). Ayat 42 ini adalah proklamasi resmi Pengadilan Langit yang membebaskan dan membersihkan (<em>thahharaki</em>) nama Maryam dari noda fitnah keji tersebut, sekaligus melaknat fitnah kaum pendurhaka tersebut untuk selama-lamanya.</li>
+    </ul>
+
+    <h3>3. Liḥāq (Jembatan Menuju Teks Mengikuti: Ayat 43–44)</h3>
+    <p>
+        Ayat 42 tidak membiarkan kemuliaan Maryam berhenti pada privilese status sosial. Penobatan agung ini langsung diiringi oleh tuntutan kewajiban ibadah yang berlipat ganda pada ayat 43: <em>"Yā Maryamuqnutī li-Rabbiki wasjudī warka'ī ma'ar-rāki'īn"</em> (Wahai Maryam! Taatlah dengan khusyuk kepada Tuhanmu, sujudlah dan rukuklah bersama orang-orang yang rukuk). Kaidah Qur'ani menegaskan: semakin tinggi derajat keterpilihan seorang hamba di sisi Allah, semakin bertambah pula kerendahan hatinya dalam bersujud dan beribadah. Selanjutnya, pada ayat 44, Allah menegaskan bahwa perdebatan para rabi Bani Israil saat melemparkan pena undian (<em>aqlāmahum</em>) untuk memperebutkan hak asuh Maryam adalah berita gaib murni yang diwahyukan kepada Nabi Muhammad ﷺ, membuktikan kenabian beliau yang tidak pernah menyaksikan peristiwa masa lampau tersebut.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭh-Ṭhabarī (w. 310 H) — Jāmi' al-Bayān fī Ta'wīl al-Qur'ān:</strong><br>
+        Aṭh-Ṭhabarī menegaskan riwayat dari Qatadah dan Al-Hasan Al-Bashri mengenai makna dua <em>isthafā</em>: <em>"Allah memilih Maryam pertama kali untuk menerima pengabdian ibadahnya dan menempatkannya di tempat suci, kemudian menyucikannya dari noda kekafiran, dosa, serta hadas biologis kewanitaan (haid dan nifas), lalu memilihnya untuk kedua kalinya di atas seluruh perempuan semesta alam pada zamannya (zamānihā) untuk melahirkan nabi tanpa suami."</em> Ath-Thabari cenderung membatasi keutamaan <em>'alā nisā'il-'ālamīn</em> pada perempuan seera (kurun waktu Bani Israil kala itu), sebagaimana firman-Nya kepada Bani Israil: <em>"wa annī fadh-dhaltukum 'alal-'ālamīn"</em> (QS. 2:47), bukan keunggulan mutlak atas seluruh wanita dari awal penciptaan hingga kiamat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Tafsīr al-Qur'ān al-'Azhīm:</strong><br>
+        Ibnu Katsir membedah hadits-hadits sahih mengenai keutamaan empat wanita agung semesta alam. Terkait lafaz <em>'alā nisā'il-'ālamīn</em>, Ibnu Katsir mengemukakan dua alternatif penafsiran: pertama, unggul atas wanita sezamannya seperti pendapat sebagian salaf; kedua, unggul secara mutlak atas seluruh wanita sepanjang sejarah (<em>sayyidatu nisā'i ahlil-jannah</em>). Beliau menggarisbawahi bahwa Maryam memiliki keistimewaan unik yang tidak pernah dan tidak akan pernah dirasakan oleh wanita mana pun di muka bumi: menjadi ibu dari seorang rasul agung (Ulul Azmi) tanpa perantaraan sperma laki-laki.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — Al-Jāmi' li Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi menjadikan ayat ini sebagai episentrum pembahasan kontroversial dalam ilmu kalam: <strong>Nubuwwatun-Nisā' (Apakah Ada Nabi dari Kalangan Perempuan?)</strong>. Al-Qurthubi mengutip pendapat Al-Hasan Al-Bashri, Ibnu Hazm Azh-Zhahiri, dan Abu Al-Hasan Al-Asy'ari yang menyatakan bahwa Maryam adalah seorang <em>Nabiyyah</em> (nabi perempuan), karena beliau diajak bicara langsung oleh malaikat pembawa wahyu secara terjaga (<em>yaqazhatan</em>). Namun Al-Qurthubi kemudian mengoreksi pandangan tersebut dan menyepakati konsensus Jumhur Ahlussunnah: Maryam bukan seorang nabi rasul, melainkan menempati maqam tertinggi di bawah kenabian yaitu <strong>Ash-Shiddīqiyyah al-Kubrā</strong> (sebagaimana firman Allah dalam QS. Al-Ma'idah: 75: <em>wa ummuhū shiddīqah</em>). Kenabian dan kerasulan secara syar'i dikhususkan Allah hanya bagi kaum laki-laki berdasarkan QS. Yusuf: 109.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyarī (w. 538 H) dalam Al-Kasysyāf & Fakhruddīn Ar-Rāzī (w. 606 H) dalam Mafātīḥ al-Ghayb:</strong><br>
+        Az-Zamakhsyari mengupas kedalaman balaghah: penyucian (<em>tath-hīr</em>) Maryam adalah prasyarat ontologis sebelum ia dikaruniai kalimatullah Isa AS. Ar-Razi merinci aspek penyucian ini ke dalam tiga dimensi rasional: (1) <em>At-Thahārah 'an al-Adnās al-Jismiyyah</em> (disucikan dari halangan ibadah sehingga mampu mengabdi penuh di mihrab); (2) <em>At-Thahārah 'an Ma'āshī al-Af'āl</em> (disucikan dari perbuatan dosa, maksiat, dan syahwat menyimpang); dan (3) <em>At-Thahārah 'an Akhlāq ar-Radzīlah wa Syubuhāt al-I'tiqād</em> (disucikan hati dan pikirannya dari keraguan terhadap janji dan kebesaran Allah).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur menganalisis bahwa kalimat malaikat kepada Maryam berfungsi sebagai <em>at-tatsbīt wat-tahyī'ah</em> (pengokohan mental dan prakondisi psikologis). Allah mengetahui bahwa takdir yang akan dipikul Maryam—mengandung anak tanpa bersuami—akan mengguncang eksistensi sosial dan psikologisnya hingga ke dasar paling dalam (hingga Maryam kelak berucap: <em>"Aduhai, seandainya aku mati sebelum ini dan menjadi sesuatu yang tidak berarti!"</em> [QS. Maryam: 23]). Penegasan malaikat bahwa Allah telah memilih dan menyucikannya adalah bekal perisai jiwa (<em>inokulasi psikologis</em>) agar Maryam memiliki keteguhan tak tergoyahkan saat menghadapi badai cibiran dan fitnah keji dari kaumnya kelak.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab — Tafsir Al-Mishbah:</strong><br>
+        Quraish Shihab menyoroti aspek emansipasi spiritual perempuan dalam Islam. Ayat ini merupakan deklarasi revolusioner Al-Qur'an: kemuliaan spiritual manusia tidak ditentukan oleh kromosom biologis atau jenis kelamin (gender), melainkan oleh kesucian batin, ketaatan, dan ketakwaan. Maryam diproklamasikan sebagai teladan bukan hanya bagi kaum wanita, melainkan bagi seluruh umat manusia (laki-laki dan perempuan), sebagaimana ditegaskan dalam QS. At-Tahrim: 11–12 di mana Maryam dan Asiyah dijadikan perumpamaan puncak bagi orang-orang yang beriman (<em>matsalan lilladzīna āmanū</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Buya Hamka (w. 1981 M) — Tafsir Al-Azhar:</strong><br>
+        Hamka melukiskan dengan sangat puitis suasana mihrab Maryam yang penuh kedamaian: <em>"Dalam keheningan rumah suci, jauh dari hiruk-pikuk keduniawian, terdengar suara malaikat yang membawakan sejuknya ridha ilahi. Maryam disucikan dari tuduhan dusta kaumnya. Orang Yahudi mendakwanya perempuan penipu, sedang kaum Nasrani memujanya hingga menjadikannya 'Ibu Tuhan'. Al-Qur'an datang membebaskan Maryam dari kedua jurang ekstrem itu: ia adalah perempuan suci, manusia biasa yang mencapai puncak ketinggian budi dan keikhlasan ibadah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>8. Kementerian Agama RI (Tafsir Tahlili & Tematik):</strong><br>
+        Kemenag RI menegaskan bahwa ayat ini mengajarkan nilai integritas moral dan penjagaan kehormatan diri ('iffah). Di tengah dinamika peradaban yang kerap mendiskriminasi perempuan, Al-Qur'an menunjukkan bahwa penghormatan tertinggi diberikan kepada perempuan yang menjaga kesucian akhlaknya serta mendedikasikan hidupnya untuk ketaatan kepada Allah.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Teologis / Hermeneutis</th>
+                <th>Konsensus (Ijma') Mufassirin</th>
+                <th>Titik Perbedaan (Ikhtilaf) & Variasi Mazhab</th>
+                <th>Implikasi Metodologis & Doktrinal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna Repetisi Kata "Iṣhṭhafāki" (Dua Kali)</strong></td>
+                <td>Sepakat bahwa pengulangan ini bukan redundansi kata tanpa makna, melainkan mengandung pemilahan dimensi keutamaan.</td>
+                <td>• <strong>Jumhur (Tabari, Razi, Zamakhsyari):</strong> Pilihan pertama = penerimaan ibadah mihrab; Pilihan kedua = kelahiran Isa tanpa ayah.<br>• <strong>Sebagian Mufassir:</strong> Pilihan pertama = nasab suci keturunan Imran; Pilihan kedua = derajat di surga.</td>
+                <td>Menegaskan kaidah balaghah bahwa pengulangan lafaz dalam wahyu selalu membawa fondasi makna baru (<em>at-ta'sīs</em>) yang memperkaya wawasan teologis.</td>
+            </tr>
+            <tr>
+                <td><strong>Status Kenabian Maryam (Nubuwwatun-Nisā')</strong></td>
+                <td>Sepakat bahwa Maryam menerima khithab ucapan malaikat secara nyata dan memiliki derajat kewalian tertinggi.</td>
+                <td>• <strong>Jumhur Ulama (Asy'ariyyah, Maturidiyyah, 4 Mazhab Fiqih):</strong> Bukan nabi, melainkan <em>Shiddīqah Kubrā</em>. Kenabian hanya pada laki-laki.<br>• <strong>Ibnu Hazm & Al-Qurthubi (sebagian riwayat):</strong> Menganggap Maryam nabi wanita karena adanya wahyu langsung melalui malaikat.</td>
+                <td>Mempertegas batas distingsi antara wahyu syariat kenabian (<em>wahyut-tasyri'</em>) dengan ilham/karamah peneguhan (<em>wahyul-ilhām wat-tatsbīt</em>) bagi para auliya'.</td>
+            </tr>
+            <tr>
+                <td><strong>Jangkauan Redaksi "Alā Nisā'il-'Ālamīn"</strong></td>
+                <td>Sepakat bahwa Maryam termasuk dalam jajaran empat perempuan paling mulia dalam peradaban manusia.</td>
+                <td>• <strong>Mazhab Relatif (Tabari, Qatadah):</strong> Keutamaan atas wanita di zamannya (seperti frasa Bani Israil pada QS. 2:47).<br>• <strong>Mazhab Mutlak (Ibnu Katsir, Al-Alusi):</strong> Unggul secara mutlak atas seluruh wanita sepanjang zaman karena mukjizat melahirkan nabi tanpa bapa.</td>
+                <td>Membuka dialektika komparasi derajat antara Maryam binti 'Imran dengan Khadijah binti Khuwailid dan Fathimah az-Zahra' dalam tradisi sunni-syi'i.</td>
+            </tr>
+            <tr>
+                <td><strong>Hakekat Penyucian (Tath-hīr)</strong></td>
+                <td>Sepakat mencakup pembersihan dari noda syirik, kekafiran, fitnah tuduhan zina, dan kemaksiatan moral.</td>
+                <td>• <strong>Sebagian Salaf:</strong> Termasuk penyucian fisik jasmani (tidak mengalami haid/darah kotor selama di mihrab).<br>• <strong>Mufassir Modern (Hamka, Quraish):</strong> Penyucian moral, integritas mental, kehormatan diri ('iffah), dan kebersihan tauhid.</td>
+                <td>Mengharmonisasikan pemuliaan fisik mukjizati dengan integritas karakter etik yang dapat diteladani oleh manusia biasa.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur kejiwaan berikut merupakan ikhtiar tadabbur analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Sintesis Sistemik & Pergeseran Paradigma (Pola Pikir Lama vs Paradigma Qur'ani)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Nilai</th>
+                <th>Pola Pikir Jahiliyah / Reduksionis Sekuler</th>
+                <th>Paradigma Transenden Qur'ani (QS. 3:42)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Standar Kehormatan Perempuan</strong></td>
+                <td>Ditentukan oleh relasi kepemilikan patriarki, subordinasi laki-laki, daya tarik erotisme fisik, atau popularitas sosial.</td>
+                <td>Ditegakkan di atas otonomi spiritualitas vertikal, integritas batin (<em>thaharah</em>), dan hubungan langsung dengan Sang Pencipta.</td>
+            </tr>
+            <tr>
+                <td><strong>Hak Istimewa (Privilese) & Pengabdian</strong></td>
+                <td>Keterpilihan dianggap sebagai lisensi untuk menuntut kemewahan, status hegemoni, dan penghormatan manusia.</td>
+                <td>Keterpilihan (<em>isthafa</em>) menuntut penyucian diri (<em>tathhir</em>) dan bermuara pada kerendahan hati dalam sujud dan ibadah (<em>qunut</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Menghadapi Fitnah Publik (Gaslighting)</strong></td>
+                <td>Runtuhnya identitas diri akibat mencari validasi opini massa; depresi ketika reputasi sosial dihancurkan oleh fitnah.</td>
+                <td>Ketahanan psikologis berbasis jangkar kepastian ilahi; validasi hakiki hanya bersumber dari persaksian dan penyucian Allah SWT.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Mental Model: "The Sanctified Vessel" (Algoritma Bejana Kesucian)</h3>
+    <p>
+        Secara kognitif, QS. 3:42 menyajikan prinsip universal penerimaan amanah besar peradaban melalui algoritma tiga fase:
+    </p>
+    <ul>
+        <li><strong>Fase 1: Panggilan Awal Keterpilihan (The Seed Selection):</strong> Potensi kebaikan dianugerahkan Tuhan kepada setiap jiwa yang mengikhlaskan niat untuk beribadah dan mengabdi (<em>iṣhṭhafāki</em> awal).</li>
+        <li><strong>Fase 2: Katarsis & Pembersihan Radikal (The Rigorous Purification / Tath-hīr):</strong> Bejana jiwa tidak akan pernah siap menampung cahaya wahyu atau karya monumental peradaban selama masih dipenuhi kotoran narsisme, kecintaan pada pujian duniawi, dan penyakit hati. Pembersihan ini menyakitkan karena menuntut isolasi dari polusi lingkungan (mihrab hening) dan ketahanan menahan syahwat.</li>
+        <li><strong>Fase 3: Pengangkatan Derajat & Manifestasi Karya (The Cosmic Elevation):</strong> Setelah bejana jiwa suci murni, barulah Allah meniupkan amanah agung yang mengubah jalannya sejarah semesta (<em>waṣhṭhafāki 'alā nisā'il-'ālamīn</em>). Tanpa fase pembersihan (<em>tathhīr</em>), keterpilihan hanya akan melahirkan kesombongan spiritual (<em>spiritual narcissism</em>).</li>
+    </ul>
+
+    <h3>3. Neuropsikologi & Tazkiyatun Nafs: Inokulasi Emosional Melawan "Social Assassination"</h3>
+    <p>
+        Secara neuropsikologis, penolakan sosial dan fitnah massal memicu aktivasi pada area <em>anterior cingulate cortex</em> (wilayah otak yang memproses rasa sakit fisik yang intens). Manusia yang hidupnya bergantung pada penerimaan kelompok (<em>tribal approval</em>) akan mengalami trauma psikologis yang melumpuhkan ketika difitnah.
+    </p>
+    <p>
+        Melalui khithab malaikat dalam QS. 3:42, Allah memberikan <strong>inokulasi psikologis preventif</strong> kepada Maryam. Sebelum Maryam menghadapi badai fitnah keji dari kaumnya yang menuduhnya berzina saat pulang menggendong bayi Isa, sistem kognitif dan emosional Maryam telah dikunci oleh afirmasi absolut dari Langit: <em>"Innallāhaṣh-ṭhafāki wa thahharaki"</em>. Kepastian bahwa dirinya telah dipilih dan disucikan oleh Allah mereduksi seluruh kebisingan tuduhan manusia menjadi sekadar ilusi fana yang tidak memiliki bobot ontologis. Inilah puncak kemerdekaan jiwa: jiwa yang tenang (<em>an-nafs al-muthma'innah</em>) yang imun dari manipulasi sosial karena telah selesai dengan penilaian manusia.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Komodifikasi Tubuh Perempuan & Hiper-Seksualisasi di Era Digital</h3>
+    <p>
+        Peradaban digital abad ke-21 menyaksikan degradasi martabat perempuan yang terbungkus dalam retorika semu kebebasan. Melalui algoritma platform media sosial (seperti Instagram, TikTok, dan industri hiburan global), tubuh perempuan direduksi menjadi komoditas visual (<em>visual currency</em>) yang dieksploitasi demi meraup <em>engagement</em>, klik, dan keuntungan kapitalistik. Budaya <em>the male gaze</em> yang terdigitalisasi telah menjerat jutaan remaja putri ke dalam krisis dismorfia tubuh (<em>body dysmorphia</em>), depresi akibat perbandingan sosial, dan ilusi bahwa nilai keberhargaan diri (<em>self-worth</em>) berbanding lurus dengan eksposur sensualitas jasmani.
+    </p>
+
+    <h3>2. Kritik Peradaban: Dialektika Biner Misogini Toksik vs Feminisme Sekuler Ekstrem</h3>
+    <p>
+        Dunia modern terjepit di antara dua pendulum ekstrem yang sama-sama merusak:
+    </p>
+    <ul>
+        <li><strong>Kutub Patriarki Kolot & Misogini Sistemik:</strong> Budaya warisan feodal yang masih memandang perempuan sebagai warga kelas dua, membatasi potensi intelektual-spiritual mereka, serta menjustifikasi kekerasan berbasis gender atas nama tradisi atau tafsir agama yang bias kepentingan kuasa.</li>
+        <li><strong>Kutub Feminisme Sekuler Ekstrem:</strong> Reaksi balik yang mendekonstruksi seluruh batas moralitas dan kodrat penciptaan ilahiah atas nama otonomi tubuh tanpa batas (<em>"my body, my choice"</em>). Kebebasan sering kali disalahartikan sebagai penanggalan nilai kesucian (<em>promiscuity</em>), penghancuran institusi keluarga, dan penafian dimensi spiritualitas fitrah manusia.</li>
+    </ul>
+
+    <h3>3. Solusi Paradigma Qur'ani: Jalan Ketiga (The Third Way of Sacred Dignity)</h3>
+    <p>
+        QS. 3:42 menghadirkan antitesis peradaban: <strong>Kedaulatan Kesucian (Sacred Sovereignty)</strong>. Maryam binti 'Imran membuktikan bahwa perempuan tidak perlu menanggalkan kesucian moralnya untuk menjadi tokoh nomor satu dalam sejarah dunia. Kesucian (<em>thahārah</em>) bukanlah bentuk opresi atau kurungan patriarkal, melainkan perisai kemerdekaan tertinggi yang melindungi perempuan dari eksploitasi hawa nafsu manusia. Maryam berdiri tegak bukan di bawah bayang-bayang laki-laki mana pun, melainkan langsung berhadapan dengan Tuhannya di mihrab kemuliaan, memimpin barisan orang-orang beriman melintasi batas zaman.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Digital & Moral Hygiene Protocol (Detoksifikasi Mata dan Batin Harian):</strong> Lakukan audit ketat terhadap konsumsi visual di media sosial Anda. Berhentilah mengikuti (<em>unfollow</em>) akun-akun yang mengomodifikasi aurat, menyebarkan ghibah, fitnah, dan sensualitas murahan. Alokasikan waktu puasa layar (<em>screen fasting</em>) minimal 1 jam sebelum tidur untuk menyucikan benak (<em>tath-hīr al-khawāṭhir</em>) melalui dzikir dan istighfar.</li>
+            <li><strong>Membangun "Mihrab Personal" (Penyendirian Ibadah Berkala):</strong> Teladanilah khidmah Sayyidah Maryam dengan menetapkan sudut khusus di rumah Anda yang terbebas dari kebisingan gawai dan interaksi duniawi. Gunakan ruang tersebut setiap hari selama minimal 20 menit pada waktu fajar atau sepertiga malam untuk tilawah, tadabbur, dan bersujud panjang memohon perlindungan batin bagi keluarga.</li>
+            <li><strong>Advokasi & Proteksi Kehormatan Perempuan (Zero Character Assassination):</strong> Tegakkan sikap tegas menolak segala bentuk pembunuhan karakter, perundungan siber (<em>cyberbullying</em>), pelecehan verbal, dan tuduhan dusta terhadap kehormatan kaum wanita di tempat kerja, kampus, komunitas, maupun ranah digital. Jika mendengar kabar burung tentang aib seseorang, hentikan penyebarannya di tangan Anda sebagai wujud memuliakan kesucian martabat manusia.</li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin</h3>
+        <ol>
+            <li>Sejauh mana aku telah berikhtiar membersihkan bejana jiwaku dari penyakit narsisme, riya', dan dengki, sebelum aku menuntut Allah memilih diriku untuk memikul amanah besar bagi keluarga dan umat-Nya?</li>
+            <li>Ketika lingkungan sekitarku mencibir, meremehkan, atau memfitnah niat baikku, apakah batinku goyah karena kecanduan validasi manusia, ataukah aku tetap damai bersandar pada kesaksian Allah Yang Maha Mengetahui kesucian niatku?</li>
+            <li>Apakah standar kemuliaan yang kuajarkan kepada anak-anak perempuanku hari ini diukur dari kecantikan polesan fisik dan gelar materiil duniawi, ataukah dari keagungan akhlak, keteguhan 'iffah (penjagaan kehormatan), dan kedekatan sujudnya kepada Allah SWT?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Man iṣh-ṭhafā Ādama wa Nūḥan wa Āla Ibrāhīma wa Āla 'Imrāna 'alal-'ālamīn. Yā Quddūs, Yā Salām, Yā Ṭhāhir, Yā Muṭhahhir! Ya Allah yang telah memilih Sayyidah Maryam, menyucikan jiwanya dari segala noda, dan menobatkannya di atas seluruh perempuan semesta alam. Kami memohon kepada-Mu dengan wasilah keagungan asma-Mu yang suci: sucikanlah kalbu kami dari segala kotoran syirik, riya', ujub, hasad, dan kemunafikan. Bersihkanlah lisan kami dari dusta dan ghibah, jagalah pandangan mata dan anggota tubuh kami dari noda maksiat syahwat, serta peliharalah kehormatan anak-istri dan generasi perempuan kami dari fitnah peradaban yang merusak. Jadikanlah jiwa kami bejana yang bersih dan pantas menerima curahan rahmat serta hidayah-Mu. Karuniakanlah kepada kami keteguhan iman dan keikhlasan ubudiyah sebagaimana keteguhan Maryam di dalam mihrab-Mu, serta kumpulkanlah kami di akhirat kelak bersama para hamba-Mu yang shiddiqin dan syuhada. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-041 - QS. Ali 'Imran Ayat 41.html">&larr; Kembali ke Ayat 41 (QS. 3:41)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 42</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-043 - QS. Ali 'Imran Ayat 43.html">Lanjut ke Ayat 43 (QS. 3:43) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

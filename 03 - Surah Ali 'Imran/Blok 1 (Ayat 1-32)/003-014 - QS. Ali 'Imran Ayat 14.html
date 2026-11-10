@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-014 - QS. Ali 'Imran Ayat 14 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-013 - QS. Ali 'Imran Ayat 13.html">&larr; Ayat Sebelumnya (QS. 3:13)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-015 - QS. Ali 'Imran Ayat 15.html">Ayat Berikutnya (QS. 3:15) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 2 (Ayat 10–20): Ilusi Kekuatan Materialis, Kehancuran Tirani & Hakikat Kesaksian Tauhid</span>
+        <span class="badge">24 Kata | 114 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 14</h1>
+    <div class="transliteration">
+        "Zuyyina lin-nāsi ḥubbusy-syahawāti minan-nisā'i wal-banīna wal-qanāṭhīril-muqanṭharati minadz-dzahabi wal-fidhdhati wal-khaylil-musawwamati wal-an'āmi wal-ḥarts(i), dzālika matā'ul-ḥayātid-dunyā, wallāhu 'indahū ḥusnul-ma'āb(i)."
+    </div>
+    <div class="thematic-title">
+        Anatomi Hasrat Psiko-Spiritual & Tipologi 6 Syahwat Duniawi: Dekonstruksi Fetisisme Materialis Menuju Orientasi Transendental Ḥusnul Ma'āb
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 2: Ilusi Kekuatan Material, Sunnatullah Kehancuran Tirani & Hakikat Tauhid)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        زُيِّنَ لِلنَّاسِ حُبُّ ٱلشَّهَوَٰتِ مِنَ ٱلنِّسَآءِ وَٱلْبَنِينَ وَٱلْقَنَـٰطِيرِ ٱلْمُقَنطَرَةِ مِنَ ٱلذَّهَبِ وَٱلْفِضَّةِ وَٱلْخَيْلِ ٱلْمُسَوَّمَةِ وَٱلْأَنْعَـٰمِ وَٱلْحَرْثِ ۗ ذَٰلِكَ مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَٱللَّهُ عِندَهُۥ حُسْنُ ٱلْمَـَٔابِ ۝١٤
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Telah dijadikan indah (memikat) dalam pandangan manusia kecintaan terhadap apa-apa yang diingini (syahwat), yaitu: perempuan-perempuan, anak-anak (laki-laki kebanggaan), harta berlimpah ruah dari jenis emas dan perak, kuda-kuda pilihan (kendaraan berkelas), hewan-hewan ternak, dan sawah ladang (aset perkebunan dan properti). Itulah kesenangan hidup di dunia (yang fana dan berbatas waktu); dan di sisi Allah-lah tempat kembali yang sebaik-baiknya (surga kenikmatan abadi)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini membedah arsitektur batiniah manusia yang menjadi akar penggerak seluruh aktivitas peradaban: <em>syahwat</em>. Al-Qur'an menggunakan bentuk pasif <em>zuyyina</em> (telah dijadikan indah/dihiasi) untuk menandai bahwa kecenderungan ini merupakan konstruksi instingtif yang tertanam dalam biologis dan psikologis manusia (<em>lin-nās</em>). Namun, perhatikan ketelitian redaksinya: yang dijadikan indah bukanlah benda-benda materi itu semata, melainkan <strong>ḥubbus-syahawāt</strong> (rasa cinta, keterikatan emosional, dan pemujaan batin manusia terhadap objek-objek tersebut). Al-Qur'an kemudian memetakan enam pilar materi yang menjadi puncak hasrat manusia: relasi asmara/biologis (<em>an-nisā'</em>), dinasti dan penerus kekuasaan (<em>al-banīn</em>), kapital finansial dan likuiditas moneter berlimpah (<em>al-qanāṭhīril-muqanṭharah minadz-dzahabi wal-fidhdhah</em>), simbol prestise dan mobilitas (<em>al-khaylil-musawwamah</em>), ketahanan pangan biologis (<em>al-an'ām</em>), serta kepemilikan aset riil lahan produksi (<em>al-ḥarts</em>). Seluruh akumulasi megah tersebut dirangkum dalam satu vonis ontologis yang mereduksi kesombongan manusia: <strong>matā'ul-ḥayātid-dunyā</strong>—sekadar bekal musafir sementara yang lekas usang. Ayat ditutup dengan orientasi transendental mutlak: <strong>wallāhu 'indahū ḥusnul-ma'āb</strong>, menegaskan bahwa tempat kembali sejati yang steril dari kebinasaan hanyalah di sisi Allah.
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>زُيِّنَ</strong><br>(<em>Zuyyina</em>)</td>
+                <td>
+                    <strong>Huruf Zāy:</strong> Keluar dari ujung lidah bersama gigi seri bawah, bersifat jahar, rakhāwah, dan memiliki sifat <strong>Shafīr</strong> (desis tajam).<br>
+                    <strong>Yā' Musyaddadah:</strong> Memiliki sifat <strong>Nabr</strong> (penekanan suara terukur pada tasydid) dengan harakat kasrah tajam.<br>
+                    <strong>Mabnī lil-Maf'ūl:</strong> Pola pasif <em>fu''ila</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dengan shighah mabnī lil-majhūl / maf'ūl (<em>zuyyina</em>) dengan dhammah pada Zāy dan kasrah bertasydid pada Yā'. Terdapat bacaan syādzah dari Mujahid yang membaca mabni lil-fa'il (<em>zayyana</em>), namun qira'at mutawatir menetapkan bentuk pasif guna menghimpun hakikat fitrah takwiniyyah dari Allah dan hiasan tipu daya dari setan.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>لِلنَّاسِ</strong><br>(<em>Lin-nāsi</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur sempurna ke dalam huruf Nūn.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid ditahan dengungnya secara akmal mā yakūn (2 harakat) melalui rongga hidung (khaisyūm).<br>
+                    <strong>Huruf Sīn:</strong> Memiliki sifat hams, rakhāwah, dan shafīr saat washal berharakat kasrah.
+                </td>
+                <td>
+                    • <strong>Ad-Dūrī 'an Abī 'Amr:</strong> Membaca dengan <strong>Taqīl / Imālah Shughrā</strong> pada huruf Alif lafaz <em>an-nās</em> khusus pada kondisi majrūr (<em>lin-nāsi</em>), yakni suara condong antara fathah dan kasrah.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca dengan fathah murni (<em>fat-ḥah muḥaqqaqah</em>) tanpa imālah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>حُبُّ ٱلشَّهَوَٰتِ</strong><br>(<em>Ḥubbusy-syahawāt</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā':</strong> Dari wasathul halq dengan sifat hams dan rikhwah murni.<br>
+                    <strong>Bā' Musyaddadah:</strong> Nabr dan syiddah berharakat dhammah sebagai na'ibul fa'il.<br>
+                    <strong>Idghām Syamsiyyah & Tafasysyī:</strong> Melebur ke huruf Syīn yang memiliki sifat <strong>Tafasysyī</strong> (hamburan angin luas di rongga mulut).<br>
+                    <strong>Alif Khanjariyyah:</strong> Mad thabi'i 2 harakat setelah Wawu.
+                </td>
+                <td>
+                    Konsensus mutawatir membaca rafa' pada <em>ḥubbu</em> sebagai nā'ibul fā'il bagi fi'il <em>zuyyina</em>. Penyandaran hiasan kepada <em>ḥubb</em> (cinta hasrat) alih-alih zat bendanya menegaskan bahwa ujian terbesar manusia terletak pada orientasi afeksi internalnya.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>مِنَ ٱلنِّسَآءِ</strong><br>(<em>Minan-nisā'i</em>)</td>
+                <td>
+                    <strong>Fat-ḥah 'Āridhah:</strong> Nūn pada <em>min</em> difathahkan untuk mencegah bertemunya dua sukun.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid ditahan 2 harakat.<br>
+                    <strong>Mad Wājib Muttaṣhil:</strong> Huruf mad bertemu Hamzah dalam satu kata wajib dipanjangkan.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad muttashil dengan <strong>Ṭhūl (6 Harakat Penuh)</strong>.<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Ḥamzah saat Waqaf:</strong> Memiliki jalan tashīl ma'al-madd wal-qashr atau ibdal alif ma'as-sukun.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَٱلْبَنِينَ</strong><br>(<em>Wal-banīna</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas dan bersih.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' sukun jatuh setelah kasrah dibaca 2 harakat saat washal.<br>
+                    <strong>I'rab Mulhaq:</strong> Berkedudukan majrur bil-yā' karena mulhaq bi jam'il-mudzakkaris-sālim.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca idzhar qamariyyah dan menetapkan bentuk jamak mudzakkar salim (<em>al-banīn</em>), mengkhususkan anak-anak laki-laki yang menjadi kebanggaan kekuatan klan peradaban tribal.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَٱلْقَنَـٰطِيرِ ٱلْمُقَنطَرَةِ</strong><br>(<em>Wal-qanāṭhīril-muqanṭharah</em>)</td>
+                <td>
+                    <strong>Isti'lā' Qāf & Ṭhā':</strong> Pangkal lidah terangkat tinggi. Huruf Ṭhā' memiliki sifat tambahan <strong>Iṭhbāq</strong> (lidah melekat ke langit-langit).<br>
+                    <strong>Tarqīq Rā':</strong> Huruf Rā' dibaca tipis (tarqīq) saat washal karena berharakat kasrah.<br>
+                    <strong>Ikhfā' Ḥaqīqī Mufakhkham:</strong> Nūn sukun bertemu Ṭhā' pada <em>al-muqanṭharah</em> disamarkan dengan dengung <strong>tebal (tafkhīm)</strong> menyesuaikan makhraj ithbaq Ṭhā'.<br>
+                    <strong>Tā' Marbūṭhah:</strong> Menjadi Hā' sukun berkarakter hams saat waqaf.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca wazan jamak taksir <em>qanāṭhīr</em> dan isim maf'ul <em>al-muqanṭharah</em> dengan fathah pada Ṭhā'. Keselarasan akar kata ini menghasilkan keindahan stilistika balaghah <em>jinās isytiqāq</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>مِنَ ٱلذَّهَبِ وَٱلْفِضَّةِ</strong><br>(<em>Minadz-dzahabi wal-fidhdhah</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam melebur ke Dzal (rakhāwah dan jahar dari ujung lidah).<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas pada <em>al-fidhdhah</em>.<br>
+                    <strong>Huruf Dād Musyaddadah:</strong> Menuntut sifat <strong>Iṭhbāq, Isti'lā', dan Istiṭhālah</strong> (pemanjangan suara di tepi lidah hingga menyentuh makhraj lam).
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca kasrah pada kedua isim majrur ini sebagai penjelas (<em>bayān</em>) dari substansi moneter perbendaharaan <em>al-qanāṭhīr</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَٱلْخَيْلِ ٱلْمُسَوَّمَةِ</strong><br>(<em>Wal-khaylil-musawwamah</em>)</td>
+                <td>
+                    <strong>Huruf Khā':</strong> Isti'la' dan rakhawah di adnal halq.<br>
+                    <strong>Yā' Līn:</strong> Ya' sukun didahului fathah diucapkan lembut.<br>
+                    <strong>Wāwu Musyaddadah Maftūḥah:</strong> Penekanan vokal nabr pada Wawu bertasydid.<br>
+                    <strong>Waqaf Hā':</strong> Ta' marbuthah berganti Hā' sukun bersuara hams.
+                </td>
+                <td>
+                    • <strong>Sepuluh Imam Mutawatirah:</strong> Sepakat membaca <strong>al-musawwamah</strong> dengan fat-ḥah pada Wawu bertasydid (shīghah Isim Maf'ūl: kuda yang diberi tanda kehormatan atau digembalakan di padang rumput terpilih).<br>
+                    • Terdapat riwayat syādzah membaca kasrah (<em>al-musawwimah</em>: isim fa'il), namun mushaf Utsmani menetapkan bentuk maf'ul secara mutawatir.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَٱلْأَنْعَـٰمِ وَٱلْحَرْثِ ۗ</strong><br>(<em>Wal-an'āmi wal-ḥarts</em>)</td>
+                <td>
+                    <strong>Idzhār Ḥalqī:</strong> Nūn sukun bertemu 'Ain dari wasathul halq dibaca jelas.<br>
+                    <strong>Alif Khanjariyyah:</strong> Mad thabi'i 2 harakat.<br>
+                    <strong>Huruf Ḥā' & Rā' Mufakhkhamah:</strong> Rā' sukun didahului fathah dibaca tebal.<br>
+                    <strong>Huruf Tsā':</strong> Keluar dari ujung lidah dengan sifat hams dan rakhāwah saat waqaf.<br>
+                    <strong>Tanda Waqaf Qilā (ۗ):</strong> Waqaf terpilih (al-waqfu awlā).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Naql</strong> (memindahkan harakat hamzah ke Lam sukun sebelumnya: <em>wa-lan'āmi</em> tanpa hamzah).<br>
+                    • <strong>Ḥamzah:</strong> Memiliki riwayat <strong>Saktah Lathīfah</strong> pada Lam ta'rif sebelum hamzah saat washal (<em>wal - an'āmi</em>).<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca tahqīq hamzah dengan idzhār qamariyyah standar.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>ذَٰلِكَ مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ</strong><br>(<em>Dzālika matā'ul-ḥayātid-dunyā</em>)</td>
+                <td>
+                    <strong>Alif Khanjariyyah:</strong> Mad thabi'i pada <em>dzālika</em> dan <em>matā'</em>.<br>
+                    <strong>Rasm Wāwu:</strong> Tertulis dengan wāwu berharakat alif khanjariyyah (<em>al-ḥayāh</em>).<br>
+                    <strong>Idzhār Muṭhlaq pada "Ad-Dunyā":</strong> Nūn sukun bertemu Yā' dalam <strong>satu kata</strong> wajib dibaca jelas (idzhār) tanpa dengung untuk memelihara struktur leksikal kata.<br>
+                    <strong>Tanda Waqaf Shalā (ۖ):</strong> Menyambung bacaan lebih utama (al-washlu awlā).
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> pada Alif maqshūrah kata <em>ad-dunyā</em> (bunyi vokal condong penuh ke arah kasrah/huruf 'e' tebal).<br>
+                    • <strong>Warsy & Abū 'Amr:</strong> Membaca dengan <strong>Taqīl / Imālah Shughrā</strong> (di antara fathah murni dan imalah kubra).<br>
+                    • <strong>Lima Imam Lainnya (termasuk Ḥafsh 'an 'Āṣhim):</strong> Membaca dengan <strong>Fat-ḥah Muḥaqqaqah</strong> murni.
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>وَٱللَّهُ عِندَهُۥ</strong><br>(<em>Wallāhu 'indahū</em>)</td>
+                <td>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Dibaca tebal agung karena didahului harakat fathah.<br>
+                    <strong>Ikhfā' Ḥaqīqī Muraqqaq:</strong> Nūn sukun bertemu Dāl disamarkan dengan ghunnah tipis.<br>
+                    <strong>Mad Shilah Ṣhughrā:</strong> Hā' kinayah bertemu huruf bertanda (ḥurūf mutaharrikah) dipanjangkan 2 harakat (tertulis simbol wāwu kecil).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tafkhīm pada Lam Jalālah dan memanjangkan mad shilah shughra sepanjang 2 harakat saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>حُسْنُ ٱلْمَـَٔابِ ۝١٤</strong><br>(<em>Ḥusnul-ma'āb</em>)</td>
+                <td>
+                    <strong>Huruf Sīn:</strong> Memiliki sifat hams, rakhāwah, dan shafīr pada kata <em>ḥusnu</em>.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca bersih.<br>
+                    <strong>Mad Badal & Mad 'Āriḍh lis-Sukūn:</strong> Hamzah mendahului Alif mad. Saat waqaf di akhir ayat, dibaca dengan panjang 2, 4, atau 6 harakat.<br>
+                    <strong>Qalqalah Kubrā:</strong> Huruf Bā' sukun karena waqaf di ujung ayat memantul secara kuat dan jelas.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca <strong>Mad Badal</strong> pada kata <em>al-ma'āb</em> dengan tiga wajah yang sah: <strong>Qaṣhr (2 harakat), Tawassuṭh (4 harakat), dan Ṭhūl (6 harakat)</strong>.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca mad badal 2 harakat saat washal, dan memilih 2, 4, atau 6 harakat saat waqaf ('aridh lis-sukun) diiringi qalqalah kubra pada Bā'.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 6437) & Muslim (No. 1048) dari Sahabat Anas bin Mālik r.a. — Karakteristik Ketamakan Akumulasi Syahwat Finansial:</strong><br>
+        Rasulullah ﷺ bersabda melukiskan watak dasar psikologis manusia yang tak pernah terpuaskan oleh materi:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "لَوْ كَانَ لِابْنِ آدَمَ وَادِيَانِ مِنْ ذَهَبٍ لَابْتَغَى ثَالِثًا، وَلَا يَمْلَأُ جَوْفَ ابْنِ آدَمَ إِلَّا التُّرَابُ، وَيَتُوبُ اللَّهُ عَلَى مَنْ تَابَ"
+        </span>
+        <em>"Seandainya anak Adam memiliki dua lembah yang penuh berisikan emas, niscaya ia akan berambisi mencari lembah emas yang ketiga. Dan tidak ada yang mampu memenuhi rongga perut (ketamakan hasrat) anak Adam melainkan tanah (kematian di liang kubur), dan Allah menerima taubat orang yang bertaubat."</em><br>
+        <strong>Status Hadits:</strong> Sahih Muttafaqun 'Alaih. Hadits ini menjadi eksegesis nabawiyyah terhadap lafaz <em>wal-qanāṭhīril-muqanṭharati minadz-dzahabi wal-fidhdhah</em>: tabiat syahwat harta tidak akan pernah berhenti pada angka nominal tertentu; ia hanya bisa diredam oleh kesadaran kematian dan taubat.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Muslim (No. 2742) & Al-Bukhārī (No. 5096) dari Sahabat Usāmah bin Zayd r.a. — Posisi Puncak Syahwat Wanita:</strong><br>
+        Rasulullah ﷺ bersabda mengonfirmasi urutan pertama yang disebutkan dalam ayat ini:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "مَا تَرَكْتُ بَعْدِي فِتْنَةً هِيَ أَضَرُّ عَلَى الرِّجَالِ مِنَ النِّسَاءِ"
+        </span>
+        <em>"Tidaklah aku tinggalkan setelah wafatku suatu fitnah (ujian godaan) yang jauh lebih berbahaya dan merusak bagi kaum lelaki melebihi godaan wanita."</em><br>
+        <strong>Status Hadits:</strong> Sahih. Menjelaskan hikmah balaghah mengapa lafaz <em>minan-nisā'</em> diletakkan pada urutan pembuka dalam katalog syahwat duniawi.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Riwayat Imam Muslim (No. 1467) dari Sahabat 'Abdullah bin 'Amr bin Al-'Āṣh r.a. — Sublimasi Syahwat Menjadi Aset Akhirat:</strong><br>
+        Rasulullah ﷺ meluruskan bahwa kenikmatan duniawi tidaklah dihukumi haram secara intrinsik, melainkan memiliki nilai instrumen kebajikan jika disublimasikan dalam ketaatan:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "الدُّنْيَا مَتَاعٌ، وَخَيْرُ مَتَاعِ الدُّنْيَا الْمَرْأَةُ الصَّالِحَةُ"
+        </span>
+        <em>"Dunia ini seluruhnya adalah kesenangan sementara (matā'), dan sebaik-baik kesenangan dunia adalah wanita (istri) yang shalihah."</em><br>
+        <strong>Status Hadits:</strong> Sahih. Menjadi pembeda tajam antara pandangan asketisme ekstrem (yang membenci wanita dan harta) dengan pandangan syariat Islam yang memposisikan materi sebagai sarana ibadah menuju <em>ḥusnul-ma'āb</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Asbabun Nuzul & Dialog Reflektif Umar bin Al-Khaththāb r.a. (Tafsir At-Thabarī, Ibnu Katsīr, & Al-Baghawī):</strong><br>
+        Diriwayatkan oleh As-Suddī, Muqātil, dan Ibnu Juraij: Ayat ini turun tatkala kaum munafik dan para tokoh Yahudi Madinah mempergunjingkan Rasulullah ﷺ. Mereka mencemooh dengan berkata sinis: <em>"Lihatlah Muhammad ini! Dia mengaku tidak memiliki obsesi pada kemegahan dunia, namun mengapa ia menikahi banyak wanita dan menyukai keindahan?"</em> Maka Allah menurunkan ayat ini untuk menyatakan bahwa kecintaan kepada wanita, anak, dan harta adalah sunnatullah instingtif yang telah dihiasi ke dalam fitrah seluruh manusia (<em>zuyyina lin-nās</em>). Nabi bukanlah malaikat tanpa nafsu, melainkan teladan manusiawi sempurna yang mengendalikan nafsu tersebut dalam rel kesucian syariat.<br>
+        Dalam atsar sahih yang diriwayatkan oleh Imam Ibnu Jarir At-Tabari, ketika ayat ini turun dan dibacakan kepada Sahabat Umar bin Al-Khaththab r.a., beliau spontan menengadahkan tangan seraya berdoa jujur:<br>
+        <em>"Allāhummal-āna idz zayyan-tahā lanā, fa-lā naṣh-biru 'alayhā! Allāhumma innī as'aluka an unfiqahā fī ḥaqqihā!"</em><br>
+        (Ya Allah, sekarang tatkala Engkau sendiri yang telah menghiasinya indah dalam jiwa kami, tentu kami tidak sanggup menolak rasa suka itu! Ya Allah, aku memohon kepada-Mu bimbingan agar aku mampu menafkahkannya pada hak-hak ketaatan kepada-Mu!). Maka Allah seketika menurunkan ayat berikutnya (Ayat 15): <em>"Qul a'unabbi'ukum bi-khayrim min dzālikum..."</em> untuk memandu hati hamba-Nya menuju kenikmatan surga yang melampaui seluruh perhiasan fana tersebut.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Z-Y-N (ز-ي-ن — Zuyyina / Az-Zīnah):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros maknanya pada: <strong>Tahqīqu at-Tahsīn wal-Bahjah fī Zhāhiril-Amr (التَّحْسِينُ - memperindah dan memoles tampak luar suatu entitas agar memikat pandangan)</strong>. Bentuk pasif <em>zuyyina</em> mengindikasikan adanya pesona ilusif yang menutupi hakikat kefanaan materi. Sesuatu yang dihias (<em>muzayyan</em>) belum tentu memiliki keindahan intrinsik; keindahannya sering kali sekadar persepsi dekoratif yang diproyeksikan ke dalam indra manusia.
+        </li>
+        <li><strong>2. Sy-H-W (ش-ه-و — Asy-Syahawāt):</strong>
+            Ibnu Manzhūr dalam <em>Lisān al-'Arab</em> menjelaskan bahwa <em>asy-syahwah</em> adalah <strong>Nuzu'un-nafsi ilal-amri wat-tisāquhā ilayhi bi-dāfi'il-ladzzah (نزوع النفس - kecondongan berahi dan dorongan nafsu hewani yang mendesak untuk meraup kenikmatan indrawi)</strong>. Kata ini dialihkan dari bentuk masdar menjadi isim jamak <em>asy-syahawāt</em> untuk menyebut objek-objek material yang menjadi sasaran hasrat tersebut.
+        </li>
+        <li><strong>3. N-S-W / N-S-Y (ن-س-و — An-Nisā'):</strong>
+            Bentuk jamak dari <em>al-mar'ah</em> yang tidak memiliki bentuk tunggal dari lafaz asalnya. Berakar dari kata <em>an-nasw</em> atau <em>al-uns</em> (keintiman, kelembutan, dan tempat berlabuhnya ketenangan jiwa). Wanita ditempatkan di puncak syahwat karena relasi seksual dan romantisme merupakan dorongan biologis paling purba dan paling dominan dalam membentuk dinamika sejarah manusia.
+        </li>
+        <li><strong>4. B-N-Y (ب-ن-ي — Al-Banīn):</strong>
+            Porosnya adalah <strong>Al-Binā' wal-I'timād (البناء - fondasi yang menopang konstruksi)</strong>. Kata <em>al-banīn</em> (anak-anak laki-laki) dipilih secara spesifik, bukan sekadar <em>al-awlād</em> (anak secara umum), karena dalam kultur tribal dan peradaban patriarki kuno, anak laki-laki adalah benteng pertahanan militer, tenaga kerja produktif, dan penerus garis dinasti klan yang melahirkan rasa aman dan kebanggaan sosial (<em>al-'izzah</em>).
+        </li>
+        <li><strong>5. Q-N-Th-R (ق-ن-ط-ر — Al-Qanāṭhīr al-Muqanṭharah):</strong>
+            Ibnu Faris mencatat porosnya pada <strong>Al-Iḥkām wal-Irtifā' wal-Katsrah (الإحكام والارتفاع - sesuatu yang dibangun kokoh tinggi, melimpah, dan bertumpuk-tumpuk)</strong>. <em>Al-Qinṭhār</em> adalah takaran timbangan emas/perak dalam jumlah masif tak terhingga. Penggabungan kata benda <em>al-qanāṭhīr</em> dengan bentuk maf'ul-nya <em>al-muqanṭharah</em> melahirkan penegasan superlatif: "tumpukan harta kekayaan yang ditumpuk secara berulang-ulang hingga menggunung tinggi".
+        </li>
+        <li><strong>6. Dz-H-B & F-Dh-Dh (ذ-ه-ب / ف-ض-ض — Adz-Dzahab wal-Fidhdhah):</strong>
+            Akar kata <em>adz-dzahab</em> (emas) berporos pada <strong>Adz-Dzahāb wal-Inqirādh (الذهاب - berlalu dan lekas sirna)</strong>; para ahli bahasa mencatat bahwa emas dinamakan <em>dzahab</em> sebagai isyarat linguistik bahwa kilaunya lekas pergi dan cepat berpindah tangan. Sedangkan <em>al-fidhdhah</em> (perak) berporos pada <strong>Al-Kasru wat-Tafarrūq (التفرق - terpecah dan bertebaran)</strong>, mengindikasikan sifat uang pecahan yang cepat terurai dan habis.
+        </li>
+        <li><strong>7. Kh-Y-L & S-W-M (خ-ي-ل / س-و-م — Al-Khayl al-Musawwamah):</strong>
+            Kuda dinamai <em>al-khayl</em> karena penunggangnya dihinggapi rasa <strong>Al-Khuyalā' (الخيلاء - rasa bangga diri, percaya diri elitis, dan megah)</strong> saat menungganginya. Sedangkan <em>al-musawwamah</em> berakar dari <em>as-sīmā</em> (tanda pengenal atau stempel trah ras unggul) atau <em>as-sawm</em> (dilepas di padang rumput terbaik untuk digembalakan secara eksklusif). Kuda musawwamah adalah representasi armada kavaleri militer, mobilitas prestise, dan kendaraan mewah pada masanya.
+        </li>
+        <li><strong>8. M-T-' & A-W-B (م-ت-ع / أ-و-ب — Matā' & Al-Ma'āb):</strong>
+            <em>Al-Matā'</em> adalah perlengkapan atau barang pakai yang dimanfaatkan manusia dalam waktu singkat lalu usang, rusak, dan dibuang (seperti lap pembersih atau bekal musafir: <em>mā yatamatta'u bihī tsumma yazūl</em>). Kontras dengan <em>Al-Ma'āb</em> yang berakar dari <em>Āba – Ya'ūbu</em> (kembali pulang ke kampung asal yang sejati). Dunia hanyalah terminal transit yang menyewakan perbekalan usang (<em>matā'</em>), sedangkan akhirat adalah kepulangan abadi menuju rumah kemuliaan di sisi Allah (<em>ḥusnul-ma'āb</em>).
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>زُيِّنَ</strong></td>
+                <td>Fi'il madhi tsulatsi mazid bi tadhi'if (wazan <em>fa''ala</em>), shighah mabnī lil-maf'ūl / majhūl, mabni 'alal-fath.</td>
+                <td>Fi'il pasif yang membutuhkan Nā'ibul Fā'il. Menjadi amil pembuka jumlah fi'liyyah isti'nāfiyyah.</td>
+            </tr>
+            <tr>
+                <td><strong>لِلنَّاسِ</strong></td>
+                <td>Harf jarr <em>lām</em> mabni 'alal-kasr. <em>An-Nās</em>: Isim jamak majrur bil-kasrah zhahirah.</td>
+                <td>Jārr wa majrūr muta'alliq bi fi'il <em>zuyyina</em> (menunjukkan subjek yang mengalami impresi keindahan).</td>
+            </tr>
+            <tr>
+                <td><strong>حُبُّ ٱلشَّهَوَٰتِ</strong></td>
+                <td><em>Ḥubbu</em>: Masdar wazan <em>fu'l</em> mudhaf. <em>Asy-Syahawāt</em>: Jamak mu'annats salim majrur bil-kasrah.</td>
+                <td><em>Ḥubbu</em>: <strong>Nā'ibul Fā'il</strong> bagi fi'il <em>zuyyina</em> marfu' bil-dhammah zhahirah, wa huwa mudhaf. <em>Asy-Syahawāt</em>: Mudhaf ilayh majrur.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ ٱلنِّسَآءِ</strong></td>
+                <td>Harf jarr <em>min</em> lil-bayān. <em>An-Nisā'</em>: Isim jamak taksir majrur bil-kasrah.</td>
+                <td>Jārr wa majrūr muta'alliq bi hal mahdzūfah dari lafaz <em>asy-syahawāt</em> (penjelas rincian syahwat pertama).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْبَنِينَ</strong></td>
+                <td>Wawu 'athaf. <em>Al-Banīn</em>: Mulhaq bi jam'il-mudzakkaris-salim.</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>an-nisā'</em> majrur bil-yā' ni'ābatan 'anil-kasrah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْقَنَـٰطِيرِ ٱلْمُقَنطَرَةِ</strong></td>
+                <td><em>Al-Qanāṭhīr</em>: Jamak muntahal-jumū' wazan <em>fa'ālīl</em>. <em>Al-Muqanṭharah</em>: Isim maf'ul mu'annats.</td>
+                <td><em>Al-Qanāṭhīr</em>: Ma'ṭhūf majrur bil-kasrah. <em>Al-Muqanṭharah</em>: <strong>Na'at</strong> / sifat bagi <em>al-qanāṭhīr</em> majrur bil-kasrah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ ٱلذَّهَبِ وَٱلْفِضَّةِ</strong></td>
+                <td><em>Min</em> bayaniyyah. <em>Adz-Dzahabi</em> isim jins majrur. Wawu 'athaf. <em>Al-Fidhdhati</em> isim majrur.</td>
+                <td>Jārr wa majrūr muta'alliq bi hal mahdzūfah dari <em>al-qanāṭhīril-muqanṭharah</em>. <em>Al-Fidhdhah</em> ma'thuf majrur.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْخَيْلِ ٱلْمُسَوَّمَةِ</strong></td>
+                <td><em>Al-Khayl</em>: Isim jins jam'i. <em>Al-Musawwamah</em>: Isim maf'ul wazan <em>mufa''alah</em>.</td>
+                <td><em>Al-Khayl</em>: Ma'ṭhūf majrur bil-kasrah. <em>Al-Musawwamah</em>: Na'at majrur bil-kasrah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْأَنْعَـٰمِ وَٱلْحَرْثِ</strong></td>
+                <td>Wawu 'athaf. <em>Al-An'ām</em> jamak taksir min <em>na'am</em>. <em>Al-Ḥarts</em> masdar wazan <em>fa'l</em>.</td>
+                <td>Keduanya <strong>Ma'ṭhūf</strong> berturut-turut ke isim majrur sebelumnya, tanda jarr kasrah zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ذَٰلِكَ مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا</strong></td>
+                <td><em>Dzā</em> isim isyarah. Lam bu'di. Kaf khithab. <em>Matā'u</em> isim mudhaf. <em>Al-Ḥayāh</em> mudhaf ilayh. <em>Ad-Dunyā</em> isim maqshur.</td>
+                <td><em>Dzālika</em>: <strong>Mubtada'</strong> fī maḥalli raf'in. <em>Matā'u</em>: <strong>Khabar Mubtada'</strong> marfu' bil-dhammah. <em>Al-Ḥayāh</em> mudhaf ilayh majrur. <em>Ad-Dunyā</em>: Na'at bagi <em>al-ḥayāh</em> majrur bil-kasrah al-muqaddarah. Jumlah ismiyyah isti'nafiyyah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ عِندَهُۥ</strong></td>
+                <td>Wawu isti'nafiyyah / haliyyah. <em>Allāhu</em> isim jalalah. <em>'Inda</em> zharf makan mudhaf ilā dhamir <em>hu</em>.</td>
+                <td><em>Allāhu</em>: <strong>Mubtada' Awwal</strong> marfu' bil-dhammah. <em>'Indahu</em>: Syibhul jumlah muta'alliq bi khabar muqaddam mahdzuf.</td>
+            </tr>
+            <tr>
+                <td><strong>حُسْنُ ٱلْمَـَٔابِ ۝١٤</strong></td>
+                <td><em>Ḥusnu</em>: Masdar mudhaf marfu'. <em>Al-Ma'āb</em>: Isim makan wazan <em>maf'al</em> mudhaf ilayh majrur bil-kasrah.</td>
+                <td><em>Ḥusnu</em>: <strong>Mubtada' Mu'akhkhar</strong> marfu'. Jumlah ismiyyah <em>'indahū ḥusnul-ma'āb</em> fī maḥalli raf'in <strong>Khabar Mubtada'</strong> bagi lafaz Jalālah <em>Allāhu</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Peniadaan Subjek Pelaku (Binā' al-Fi'l lil-Majhūl pada "Zuyyina"):</strong>
+            Al-Qur'an tidak menyatakan <em>"zayyanallāhu"</em> dan tidak pula <em>"zayyanasy-syaithānu"</em>, melainkan menggunakan bentuk pasif <em>zuyyina</em>. Dalam kaidah ilmu ma'ani, peniadaan fa'il ini berfungsi mencakup dua hakikat sekaligus (<em>al-jam'u baynal-amrayn</em>):
+            <ul>
+                <li><strong>Dari Sudut Taqdir Takwini (Sunnatullah Fitrah):</strong> Allah adalah Sang Pencipta yang menanamkan insting syahwat tersebut ke dalam DNA biologis manusia sebagai ujian kelayakan khalifah dan sarana melestarikan populasi bumi.</li>
+                <li><strong>Dari Sudut Pembiasan Moral (Was-was Syaithani):</strong> Setan mengeksploitasi potensi instingtif tersebut, memolesnya melampaui batas kewajaran syariat, dan menipu manusia agar menjadikannya tujuan akhir hidup (<em>ghāyah</em>) alih-alih sarana ibadah (<em>wasīlah</em>).</li>
+            </ul>
+        </li>
+        <li><strong>Ilmu Ma'ani — Diksi Penyelamat: "Ḥubbus-Syahawāt" Bukan Sekadar "Asy-Syahawāt":</strong>
+            Al-Qur'an tidak memvonis bahwa benda-benda duniawi (wanita, anak, emas, kendaraan) itu sendiri bernilai jahat atau kotor. Yang dijadikan indah dan menjadi poros ujian adalah <strong>ḥubbuha</strong> (rasa cinta, keterikatan berahi, dan kemelekatan emosional batin manusia kepadanya). Benda materi berstatus netral; namun manakala "cinta" telah menguasai kalbu, ia bertransformasi menjadi berhala yang membelenggu kesadaran spiritual.
+        </li>
+        <li><strong>Ilmu Bayan — Tertib Hirarkis Sosiologis (At-Tartīb at-Tanazzulī wal-Irtiqā'ī):</strong>
+            Penataan enam objek syahwat tersusun dengan tingkat presisi psikologis yang mengagumkan:
+            <ol>
+                <li><em>An-Nisā':</em> Diletakkan pertama karena syahwat seksual dan romantisme adalah fitnah paling universal, paling kuat mengguncang akal, dan menyasar seluruh lapisan usia dewasa.</li>
+                <li><em>Al-Banīn:</em> Urutan kedua, karena pasca-pernikahan, obsesi manusia beralih pada keturunan laki-laki sebagai pilar reputasi klan, proteksi hari tua, dan pewaris kekuasaan.</li>
+                <li><em>Al-Qanāṭhīr al-Muqanṭharah:</em> Finansial moneter (emas dan perak) menyusul sebagai likuiditas yang dibutuhkan untuk menafkahi keluarga dan memperluas dominasi sosial.</li>
+                <li><em>Al-Khayl al-Musawwamah:</em> Kuda unggul melambangkan mobilitas, prestise, hobi berkelas, dan armada kavaleri pertahanan.</li>
+                <li><em>Al-An'ām wal-Ḥarts:</em> Hewan ternak dan sawah ladang melambangkan basis ekonomi riil agraris, pasokan pangan, dan kepemilikan aset properti jangka panjang.</li>
+            </ol>
+        </li>
+        <li><strong>Ilmu Badi' — Jinās Isytiqāq pada "Al-Qanāṭhīril-Muqanṭharah":</strong>
+            Pengulangan akar fonetik Q-N-Th-R dalam bentuk jamak dan isim maf'ul melahirkan resonansi bunyi berima yang mengekspresikan akumulasi kapital dalam volume masif yang bertumpuk-tumpuk secara spektakuler.
+        </li>
+        <li><strong>Ilmu Badi' — Al-Muqābalah at-Tarkībiyyah (Kontras Ekstrem: Matā' vs Ḥusnul-Ma'āb):</strong>
+            Ayat ini ditutup dengan kontras tajam antara dua kutub nilai: kata <em>matā'ud-dunyā</em> (kesenangan fana yang cepat basi, murah, dan lekas dibuang) dihadapkan secara vis-a-vis dengan <em>wallāhu 'indahū ḥusnul-ma'āb</em> (kesempurnaan keindahan tempat kembali di sisi Allah). Penggunaan zharf <em>'indahū</em> (di sisi-Nya) memberikan faidah <em>al-ikhtishāṣh</em>: kenikmatan abadi yang hakiki termonopoli secara eksklusif hanya di haribaan Ilahi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 10–13):</strong>
+            Pada Ayat 10, Al-Qur'an telah membongkar ilusi materialisme bahwa harta (<em>amwāl</em>) dan anak (<em>awlād</em>) tidak akan mampu menyelamatkan orang kafir dari azab Allah. Kemudian pada Ayat 11–13, Allah memperlihatkan bukti empiris sejarah berupa tenggelamnya dinasti Fir'aun dan kekalahan telak armada elit Quraisy di Perang Badar.
+            Setelah memaparkan kehancuran benteng material tersebut, timbul pertanyaan psikologis mendasar: <em>"Jika harta dan pasukan terbukti fana dan tak berdaya menangkis ketetapan Allah, mengapa manusia sepanjang zaman tetap saja bernafsu mengejar dan memujanya hingga mengorbankan akidah?"</em> Ayat 14 hadir menjawab akar pertanyaan tersebut: karena di dalam struktur jiwa manusia telah terpasang pesona dekorasi nafsu (<em>zuyyina lin-nāsi ḥubbus-syahawāt</em>) yang membuat fatamorgana materi tampak begitu memukau!
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Dekonstruksi Oligarki Tiga Front):</strong>
+            Konteks Madaniyah awal mempertemukan kaum muslimin dengan tiga peradaban yang bangga atas enam pilar syahwat ini:
+            <ol>
+                <li><strong>Aristokrasi Delegasi Kristen Najran:</strong> Membanggakan jubah sutra, salib-salib bertahtakan emas permata (<em>adz-dzahabi wal-fidhdhah</em>), dan aliansi perlindungan militer Romawi. Ayat ini memperingatkan mereka bahwa kemewahan visual gereja Bizantium hanyalah <em>matā'</em> sesaat.</li>
+                <li><strong>Oligarki Finansial Yahudi Madinah (Bani Qainuqa' & An-Nadhir):</strong> Menguasai pasar perhiasan emas (<em>al-qanāṭhīr</em>), sistem pinjaman ribawi, peternakan (<em>al-an'ām</em>), serta perkebunan kurma terbaik di lembah Madinah (<em>al-ḥarts</em>). Mereka merasa aman di balik benteng-benteng agraris mereka. Ayat 14 menegaskan seluruh aset tersebut tak bernilai tanpa tauhid.</li>
+                <li><strong>Feodalisme Tribal Quraisy Makkah:</strong> Membanggakan klan petarung (<em>al-banīn</em>) dan kavaleri kuda perang (<em>al-khaylil-musawwamah</em>) yang mereka kerahkan dalam Perang Badar dan Uhud.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Transendental Menuju Ayat 15):</strong>
+            Pemaparan katalog syahwat pada Ayat 14 tidak dibiarkan menggantung dalam kekosongan, melainkan menjadi batu loncatan menuju Ayat 15:
+            <br><em>"Qul a'unabbi'ukum bi-khayrim min dzālikum? Lilladzīnat-taqaw 'inda rabbihim jannātun tajrī min taḥtihal-anhāru khālidīna fīhā wa azwājun muṭhahharatun wa riḍhwānum minallāh..."</em>
+            <br>Al-Qur'an langsung menawarkan komparasi substitutif yang jauh lebih unggul: jika di dunia mereka mengejar wanita fana, di surga ada pasangan yang disucikan (<em>azwājun muthahharah</em>); jika di dunia mereka mengejar perkebunan (<em>al-ḥarts</em>), di surga ada taman-taman abadi yang mengalir sungai-sungai di bawahnya; dan yang melampaui seluruh materi tersebut adalah puncak rida Allah (<em>riḍhwānum minallāh</em>).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Riwayat Salaf & Dialektika Subjek "Zuyyina":</strong><br>
+        Dalam <em>Jāmi' al-Bayān</em>, At-Tabari menegaskan bahwa yang menghiasi syahwat tersebut pada asalnya adalah Allah SWT sebagai ketetapan takdir untuk menguji ketaatan hamba-Nya: siapakah yang mempergunakan kenikmatan tersebut untuk mencari rida-Nya, dan siapakah yang justru tenggelam dalam kemaksiatan. Namun pada saat yang sama, setan ikut memperindah kemaksiatan dan angan-angan palsu di dalamnya. Mengomentari kata <em>al-qanāṭhīr al-muqanṭharah</em>, At-Tabari memaparkan riwayat atsar bahwa satu <em>qinṭhār</em> bernilai seribu dua ratus uqiyah emas, atau harta melimpah yang tak dapat dihitung nominalnya. Beliau menyimpulkan bahwa hakikat <em>matā'</em> adalah seperti perbekalan musafir: jika perjalanan telah selesai, perbekalan itu lenyap tak berbekas.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Al-Qurthubī (w. 671 H) — Perspektif Fiqih Sosial & Hukum Kepemilikan Kuda Serta Harta:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah status hukum syariat dari keenam perkara ini:
+        <ul>
+            <li><strong>Syahwat Wanita:</strong> Menjadi ibadah mulia yang berpahala manakala disalurkan melalui pernikahan yang sah untuk memelihara kehormatan diri dan melahirkan generasi bertakwa.</li>
+            <li><strong>Kepemilikan Kuda (Al-Khayl):</strong> Al-Qurthubi mengutip hadits Nabi ﷺ bahwa kuda terbagi tiga: ada yang menjadi pahala (kuda yang dipersiapkan untuk jihad menegakkan keadilan), ada yang menjadi pelindung kebutuhan hidup (dipelihara untuk mencari nafkah tanpa kesombongan), dan ada yang menjadi dosa pembakar neraka (dipamerkan untuk kemegahan, judi, dan menindas manusia).</li>
+            <li><strong>Akumulasi Emas & Perak:</strong> Menimbun harta (<em>kanzul-māl</em>) diharamkan secara mutlak jika tidak ditunaikan zakatnya; namun jika hak zakat dan infaknya telah ditunaikan, harta tersebut menjadi modal kebaikan yang sah dalam syariat.</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Rasional Teologis & Psikologi Keinginan:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi membedah secara filosofis: Kenapa dorongan syahwat ini diciptakan sedemikian kuat? Ar-Razi menjawab bahwa jika manusia tidak dibekali rasa nikmat pada makanan dan hubungan intim, niscaya spesies manusia akan punah karena ketiadaan motivasi biologis. Oleh karena itu, syahwat pada hakikatnya adalah instrumen preservasi kehidupan (<em>sababu baqā'in-nau' wal-syakhsh</em>). Bencana terjadi manakala manusia mereduksi eksistensinya menjadi setara dengan binatang ternak: menjadikan alat pemelihara hidup sebagai tujuan tertinggi kehidupan. Sementara Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti balaghah lafaz <em>al-ma'āb</em>: tempat kembali dinamai <em>al-ma'āb</em> untuk mengingatkan manusia bahwa dunia adalah negeri perantauan, dan kepulangan sejati adalah kembali ke sisi Sang Pencipta.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Ibnu Katsīr (w. 774 H) — Harmonisasi Riwayat Nabawiyyah & Teladan Salaf:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir mengaitkan ayat ini dengan sabda Rasulullah ﷺ: <em>"Hubbiba ilayya min dunyaakum an-nisā'u wath-thīb, wa ju'ilat qurratu 'aynī fish-shalāh"</em> (Dijadikan aku mencintai dari duniamu: wanita dan wewangian, dan dijadikan puncak penyejuk mataku berada di dalam shalat). Ibnu Katsir menegaskan bahwa kecintaan Nabi kepada wanita adalah kecintaan yang dilandasi tanggung jawab kenabian untuk mengangkat derajat kaum perempuan, memelihara keturunan yang shalih, dan menyebarkan risalah dakwah hingga ke ranah domestik rumah tangga, bukan kecintaan syahwati yang membutakan sebagaimana kaum hedonis.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Sosiologi Pembentukan Peradaban:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur memaparkan teori pembentukan peradaban manusia: Keenam komponen syahwat ini merupakan pilar-pilar peradaban universal. Peradaban tidak akan pernah terbangun tanpa adanya ikatan keluarga (<em>nisā' & banīn</em>), stabilitas sistem moneter (<em>dzahab & fidhdhah</em>), infrastruktur mobilitas logistik militer (<em>khayl musawwamah</em>), ketahanan protein/gizi (<em>an'ām</em>), dan kedaulatan pangan agraris (<em>ḥarts</em>). Al-Qur'an tidak melarang pembangunan peradaban material ini, melainkan menata orientasi etikanya: jangan biarkan peradaban terjebak dalam <em>materialist idolatry</em> (fetisisme materi), melainkan bimbinglah seluruh kemajuan fisik tersebut menjadi sarana mengabdi menuju <em>ḥusnul-ma'āb</em>.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Kearifan Nusantara & Etos Hidup Bersahaja:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan dengan bahasa puitis yang menusuk kalbu: <em>"Al-Qur'an tidak mematikan syahwat, karena mematikan syahwat berarti mematikan kemanusiaan. Al-Qur'an hanya memagari syahwat dengan adab ketakwaan. Janganlah engkau menolak dunia, tetapi peganglah dunia itu di tapak tanganmu, jangan simpan di dalam hatimu! Jika dunia berada di tangan, engkau mudah melepaskannya untuk berinfak; namun jika dunia telah bertakhta di hatimu, engkau akan menangis darah tatkala ia terlepas darimu!"</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menggarisbawahi bahwa penyebutan <em>zuyyina</em> menunjukkan betapa licinnya tipu daya duniawi. Sering kali manusia mengorbankan integritas, menjual hukum, dan merusak persaudaraan semata-mata demi memperebutkan 'pembungkus' (hiasan), padahal isinya hampa. Kemenag RI menekankan bahwa ayat ini mengajarkan pola konsumsi berkeadilan dan memperingatkan bahaya gaya hidup hedonis (<em>isrāf</em> dan <em>tabdzīr</em>) yang memicu jurang kesenjangan sosial di tengah masyarakat.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Identitas Sang Penghias (Al-Muzayyin)</strong></td>
+                <td>Sepakat bahwa potensi dasar menyukai kenikmatan tersebut adalah fitrah ciptaan Allah SWT sebagai media ujian moral.</td>
+                <td>
+                    • <strong>Mayoritas Salaf (Al-Hasan, Qatadah):</strong> Allah SWT yang menghiasinya secara takwini sebagai instrumen ujian (<em>ibtilā'</em>).<br>
+                    • <strong>Mu'tazilah & Sebagian Mufasir:</strong> Setan yang menghiasinya manakala syahwat tersebut diarahkan pada keharaman dan kelalaian akhirat.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Status Moralitas 6 Objek Syahwat</strong></td>
+                <td>Sepakat bahwa zat dari keenam objek tersebut (wanita, anak, emas, kendaraan, ternak, ladang) adalah mubah dan netral secara syariat.</td>
+                <td>
+                    • <strong>Pendekatan Zuhud/Asketik:</strong> Memandang keenam hal ini sebagai potensi fitnah berbahaya yang seyogianya diminimalisasi kepemilikannya.<br>
+                    • <strong>Pendekatan Maqashidi/Tamaddun:</strong> Memandangnya sebagai amanah peradaban dan modal ibadah agung jika dikelola dengan syariat.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Kuantifikasi "Al-Qinṭhār"</strong></td>
+                <td>Sepakat bahwa lafaz <em>al-qanāṭhīr al-muqanṭharah</em> menunjukkan akumulasi kekayaan likuid dalam jumlah yang amat berlimpah.</td>
+                <td>
+                    • <strong>Pendapat Teknis Klasik:</strong> Sebagian ulama menakar 1.200 uqiyah emas, 80.000 dirham, atau kulit sapi yang dipenuhi koin dinar.<br>
+                    • <strong>Pendapat Tahqiq Modern:</strong> Idiom bahasa Arab untuk menggambarkan modal kapital yang tak terhingga jumlahnya.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Konsumeristik vs Pola Pikir Qur'ani Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Jahiliyah / Konsumeris Sekuler</th>
+                <th>Pola Pikir Qur'ani Rabbani (Tazkiyatun Nafs)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Materi</strong></td>
+                <td><em>Terminal Goal (Tujuan Akhir):</em> Harta, status, dan kenikmatan biologis dipandang sebagai tolok ukur kesuksesan mutlak eksistensi manusia.</td>
+                <td><em>Instrumental Transit (Matā'):</em> Materi dipandang sebagai fasilitas sewa sementara di ruang tunggu stasiun kehidupan demi meraih kampung akhirat.</td>
+            </tr>
+            <tr>
+                <td><strong>Pengendalian Hasrat (Desire Architecture)</strong></td>
+                <td><em>Unbounded Consumption:</em> Mengikuti bisikan dopaminergik tanpa batas; merasa berhak menikmati apa saja selama memiliki daya beli finansial.</td>
+                <td><em>Ethical Sublimation:</em> Menundukkan dorongan syahwat di bawah panduan wahyu; mengalirkan energi biologis ke jalan yang diridhai Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>Orientasi Kepulangan (Home Orientation)</strong></td>
+                <td><em>Existential Dread of Death:</em> Kematian dipandang sebagai kiamat pemusnah kenikmatan materi yang harus dihindari dan ditakuti secara histeris.</td>
+                <td><em>Transcendental Anchor (Ḥusnul Ma'āb):</em> Kematian adalah gerbang kepulangan yang dirindukan menuju keindahan hakiki di haribaan Sang Maha Pengasih.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Decorative Illusion & Hedonic Treadmill" (Ilusi Dekorasi dan Jebakan Adaptasi Hedonik):</strong>
+            Secara psikologis, manusia terperangkap dalam fenomena <em>hedonic treadmill</em>: betapapun besarnya lonjakan materi yang diraih (membeli mobil baru, menumpuk tabungan miliaran, membeli properti megah), otak manusia akan mengalami adaptasi sensorik dengan sangat cepat. Keindahan yang tadinya terasa spektakuler berubah menjadi biasa dan membosankan, mendorong manusia mengejar dosis materi berikutnya yang lebih ekstrem. QS. 3:14 mendiagnosis fenomena ini dengan kata <strong>zuyyina</strong> (dijadikan indah/didekorasi): keindahan materi itu adalah ilusi proyeksi, bukan keindahan substansial abadi. Mengharapkan kepuasan batin dari objek yang sekadar <em>muzayyan</em> (didekorasi) adalah kekeliruan epistemologis yang memicu keletihan jiwa tanpa ujung.
+        </li>
+        <li><strong>Mental Model 2: "The Transit Paradigm: Matā' vs Ma'āb" (Paradigma Hotel Transit vs Rumah Abadi):</strong>
+            Al-Qur'an merumuskan pembedaan kategoris yang sangat tajam: <em>Matā'</em> (perlengkapan sewa yang ditinggalkan) dan <em>Ma'āb</em> (tempat pulang yang kekal). Bayangkan seorang musafir yang menginap semalam di kamar hotel transit: betapapun mewahnya perabotan hotel tersebut, musafir yang berakal sehat tidak akan menghabiskan tabungannya untuk merenovasi marmer kamar hotel itu, karena ia sadar besok pagi ia harus <em>check-out</em> pulang ke rumah aslinya. Orang yang terlena oleh enam syahwat duniawi adalah orang dungu yang merenovasi kamar transitnya seraya menelantarkan istana kepulangannya yang abadi di hadapan Allah.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Anatomi Sirkuit Ganjaran (Reward Pathway)</h3>
+    <p>
+        Secara neurobiologis, keenam objek syahwat yang disebutkan dalam ayat ini memiliki korelasi presisi dengan pemicu utama pelepasan neurotransmiter <strong>dopamin</strong> pada sistem limbik otak (<em>mesolimbic dopaminergic pathway</em>). Ketika manusia melihat lawan jenis yang memikat (<em>an-nisā'</em>), membayangkan reputasi anak-anaknya (<em>al-banīn</em>), melihat saldo rekening bertambah (<em>al-qanāṭhīr</em>), atau mengendarai kendaraan mewah berkecepatan tinggi (<em>al-khayl</em>), nukleus akumbens membanjiri otak dengan sensasi antisipasi kenikmatan.
+    </p>
+    <p>
+        Al-Qur'an mengajarkan metode <strong>Tazkiyatun Nafs</strong> bukan dengan cara membunuh sirkuit dopamin ini secara ekstrem (asketisme radikal/kebirabian yang dilarang Islam), melainkan dengan melakukan <em>cognitive reframing</em> dan <em>sublimasi spiritual</em>. Korteks prefrontal (akal yang dibimbing wahyu) mengambil alih kendali sistem limbik, menyalurkan energi syahwat ke dalam pernikahan yang berkah, infak produktif di jalan Allah, dan perjuangan peradaban, seraya menambatkan jangkar emosional terdalam pada janji <strong>ḥusnul-ma'āb</strong>. Jiwa pun mencapai derajat <em>Nafs al-Muṭhma'innah</em> yang tenang dan merdeka dari perbudakan materi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Komodifikasi Seksualitas & Epidemi Pornografi Digital (Evolusi "An-Nisā'")</h3>
+    <p>
+        Di abad ke-21, distorsi syahwat pertama (<em>an-nisā'</em>) mengalami eskalasi mengerikan melalui digitalisasi pornografi, industri OnlyFans, eksploitasi sensualitas di media sosial, dan algoritma platform video pendek yang memanen dopamin seksualitas secara instan. Tubuh manusia didegradasi dari martabat sakral ciptaan Allah menjadi komoditas komersial penambang <em>views</em> dan klik digital. Dampaknya sangat sistemik: krisis maskulinitas, epidemi kecanduan pornografi di kalangan pemuda, runtuhnya institusi pernikahan keluarga sakinah, serta meledaknya kasus kekerasan seksual dan perceraian.
+    </p>
+
+    <h3>2. Fetisisme Portofolio Kripto, Saham & Budaya Flexing Hedonis (Evolusi "Al-Qanāṭhīr")</h3>
+    <p>
+        Representasi <em>al-qanāṭhīril-muqanṭharah minadz-dzahabi wal-fidhdhah</em> termanifestasi dalam bentuk baru: saldo dompet kripto, portofolio trading saham, saldo rekening digital, dan tumpukan aset kartel keuangan global. Kegilaan ini melahirkan subkultur <em>flexing</em> (pamer kemewahan) di media sosial, di mana manusia dinilai martabatnya semata-mata dari harga jam tangan, merek tas mewah, dan nominal saldo perbankan. Ketamakan ini mendorong maraknya judi online, skema ponzi investasi bodong, korupsi anggaran publik, dan pembajakan regulasi negara demi mengamankan pundi-pundi oligarki.
+    </p>
+
+    <h3>3. Supercar, Gadget Flagship & Oligarki Properti Real Estat (Evolusi "Al-Khayl & Al-Ḥarts")</h3>
+    <p>
+        Simbol prestise <em>al-khaylil-musawwamah</em> hari ini bertransformasi menjadi kepemilikan armada <em>supercar</em>, motor gede, jet pribadi, hingga gadget <em>flagship</em> seri teranyar yang diganti setiap tahun demi memuaskan haus gengsi sosial. Sementara <em>al-an'ām wal-ḥarts</em> menjelma menjadi spekulasi tanah mega-proyek real estat, pembabatan hutan lindung demi perkebunan sawit monokultur kartel, dan gentrifikasi perkotaan yang menggusur pemukiman rakyat kecil. Lahan produksi pangan dialihfungsikan menjadi kawasan industri konsumtif. Kritik QS. 3:14 menelanjangi wajah peradaban modern: manusia telah menjadi raksasa secara teknologi dan material, namun kerdil secara spiritual, memperbudak diri sendiri pada fatamorgana <em>matā'ud-dunyā</em> seraya lupa bahwa mereka sedang berlari kencang menuju kematian.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol "Jeda 10 Detik: Audit Matā' vs Ma'āb Sebelum Belanja Impulsif":</strong>
+                <br>• Setiap kali jemari Anda hendak menekan tombol <em>'Check Out'</em> di aplikasi e-commerce atau mengeluarkan kartu pembayaran untuk barang tersier, terapkan jeda napas 10 detik.
+                <br>• Tanyakan pada nurani Anda secara jujur: <em>"Apakah barang ini kubeli karena fungsi kebutuhan riil penopang ibadahku, ataukah semata-mata memuaskan haus dopamin ego dan gengsi di mata manusia?"</em>
+                <br>• Jika barang tersebut sekadar dorongan impulsif <em>syahwat</em>, batalkan transaksi tersebut dan alihkan seketika minimal 10% dari nominal harga barang itu ke kotak infak dhuafa sebagai wujud penaklukan ego batiniah.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The 1/3 Liquidity Purifying Rule on Wealth":</strong>
+                Saat Anda menerima bonus keuntungan usaha, dividen investasi, atau kenaikan gaji finansial:
+                <br>• Jangan biarkan kenaikan penghasilan otomatis mendikte kenaikan gaya hidup konsumtif Anda (<em>lifestyle inflation trap</em>).
+                <br>• Tetapkan aturan mutlak: minimal sepertiga (33%) dari laba bersih surplus tersebut langsung dialokasikan secara permanen ke aset akhirat non-likuid: wakaf produktif, pembiayaan beasiswa santri dhuafa, atau modal usaha fakir miskin.
+                <br>• Langkah ini secara efektif mengonversi <em>matā'ud-dunyā</em> (kesenangan fana) menjadi investasi abadi yang menanti Anda di gerbang <em>ḥusnul-ma'āb</em>.
+            </li>
+            <li><strong>Komitmen Etika Relasional & Domestik: "Sublimasi Syahwat ke Gerbang Sakinah & Anti-Pamer Privilese":</strong>
+                <br>• Hentikan total kebiasaan memamerkan pencapaian materi, liburan mewah, dan fasilitas keluarga di media sosial demi memancing kekaguman dan kedengkian orang lain.
+                <br>• Alihkan energi cinta keluarga (<em>an-nisā' wal-banīn</em>) dengan menegakkan majelis ta'lim dan shalat berjamaah di dalam rumah, serta mendidik anak-anak dengan adab ketakwaan dan empati terhadap kaum mustadh'afin, bukan dijejali mentalitas materialistis manja.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Seandainya sore ini malaikat maut datang menjemput nyawaku, apakah tumpukan barang mewah, kendaraan, pakaian bermerek, dan saldo rekening yang kubangga-banggakan selama ini mampu membelaku di hadapan mungkar-nakir, ataukah ia justru menjadi rantai hisab terberat yang menyiksaku di liang kubur?</li>
+            <li>Kala diriku memandang wajah pasanganku dan anak-anakku, apakah aku lebih sering mencemaskan capaian nilai akademis, karier, dan kekayaan duniawi mereka, ataukah aku menangis di sepertiga malam mengkhawatirkan keselamatan iman mereka dari jilatan api neraka?</li>
+            <li>Di manakah posisi dunia saat ini di dalam peta jiwaku: apakah ia sekadar berada di telapak tanganku untuk kubelanjakan di jalan kebaikan, ataukah ia telah meresap masuk meracuni palung hatiku hingga mengikis kerinduanku kepada perjumpaan agung dengan Allah di Husnul Ma'ab?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Raḥmānu Yā Raḥīm, Yā Badī'as-samāwāti wal-ardh, Yā Dzal-Jalāli wal-Ikrām. Ya Allah Tuhan Yang Maha Mengetahui kerapuhan jiwa kami di hadapan gemerlap tipu daya dunia ini. Kami bersujud mengakui betapa seringnya mata kami terpesona oleh perhiasan fana, betapa seringnya hati kami lalai mengejar tumpukan harta, kebanggaan dinasti, dan kemewahan kendaraan, seraya melupakan hakikat kepulangan kami kepada-Mu.
+            <br><br>
+            Allāhumma kamā zayyan-ta lanā ḥubbas-syahawāti fitnatan wal-tibāran, fa-hab lanā 'ashmatan min ma'āṣhīk, wa qidzan 'an mawāṭhini sakhathik. Ya Allah, sebagaimana Engkau telah menguji kami dengan pesona syahwat ini, maka anugerahkanlah kepada kami perisai kesucian batin untuk menepis kemaksiatan, dan selamatkanlah jiwa kami dari tempat-tempat yang mengundang murka-Mu. Jadikanlah perhiasan dunia yang Engkau titipkan kepada kami semata-mata sebagai sarana menolong agama-Mu, membela kaum dhuafa, dan memperberat timbangan amal kebaikan kami di yaumil hisab.
+            <br><br>
+            Allāhumma lā taj'alid-dunyā fī qulūbinā, balij'alhā fī aydīnā. Ya Allah, jangan pernah Engkau biarkan dunia ini merajai hati kami, melainkan jadikanlah ia sekadar berada di tangan kami. Pautkanlah kerinduan jiwa kami kepada keindahan wajah-Mu yang Maha Mulia, limpahkanlah kepada kami husnul khātimah, dan tempatkanlah kami bersama para nabi dan syuhada di kampung kepulangan terbaik di sisi-Mu (ḥusnul-ma'āb). Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-013 - QS. Ali 'Imran Ayat 13.html">&larr; Kembali ke Ayat 13 (QS. 3:13)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 14</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-015 - QS. Ali 'Imran Ayat 15.html">Lanjut ke Ayat 15 (QS. 3:15) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-048 - QS. Ali 'Imran Ayat 48 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-047 - QS. Ali 'Imran Ayat 47.html">&larr; Ayat Sebelumnya (QS. 3:47)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-049 - QS. Ali 'Imran Ayat 49.html">Ayat Berikutnya (QS. 3:49) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 3 (Ayat 45–51): Basyarah Kelahiran Al-Masih, Dekonstruksi Trinitas & Mukjizat Kalimatullah</span>
+        <span class="badge">5 Kata | 34 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 48</h1>
+    <div class="transliteration">
+        "Wa yu'allimuhul-kitāba wal-ḥikmata wat-Tawrāta wal-Injīl(a)."
+    </div>
+    <div class="thematic-title">
+        Kurikulum Peradaban Ilahi & Arsitektur Epistemologi Profetik: Integrasi Al-Kitāb (Literasi Wahyu), Al-Ḥikmah (Kearifan Rasional), At-Tawrāh (Syariat Formal) & Al-Injīl (Spiritualitas Kasih) dalam Misi Al-Masīḥ 'Īsā AS
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 3: Dialog Kenabian, Mukjizat Kalimatullah & Pelurusan Teologi Maryam)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَيُعَلِّمُهُ ٱلْكِتَـٰبَ وَٱلْحِكْمَةَ وَٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ ۝٤٨
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Dan Dia (Allah) akan mengajarkan kepadanya (Al-Masih 'Isa AS) Al-Kitab (kemahiran literasi dan pencatatan wahyu), Al-Hikmah (kearifan pemahaman hukum dan ketepatan penerapan syariat), Taurat (kitab syariat induk Bani Israil), dan Injil (kitab cahaya, penyucian batin, dan kabar gembira kesempurnaan iman)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan penegasan teologis yang sangat fundamental mengenai profil ontologis dan kapasitas epistemologis Nabi 'Isa 'alayhis-salam. Al-Qur'an memaparkan bahwa 'Isa AS bukanlah wujud ilahi yang memiliki kemahatahuan mandiri (<em>omniscience</em>), melainkan seorang hamba pilihan yang menjadi murid langsung dari Allah SWT (<em>muta'allim bi-ta'līmillāh</em>). Diksi <em>"wa yu'allimuhu"</em> (atau <em>"wa nu'allimuhu"</em> dalam qira'at mutawatirah) menempatkan Allah sebagai Maha Guru dan Maha Pendidik Tunggal, sedangkan 'Isa berada pada kedudukan penerima ilmu (<em>qābil li-at-ta'allum</em>). Hal ini secara otomatis mendekonstruksi dogma kristologis yang diusung oleh delegasi Kristen Najran: bagaimana mungkin sosok yang diajari, dibimbing, dan mengalami proses transmisi ilmu dapat diposisikan sebagai Tuhan yang Mahatahu? Lebih jauh lagi, susunan empat pilar pengetahuan dalam ayat ini—<strong>Al-Kitāb, Al-Ḥikmah, At-Tawrāh, dan Al-Injīl</strong>—bukanlah pengulangan sinonim tanpa faedah, melainkan sebuah cetak biru kurikulum kenabian yang komprehensif, memadukan kemampuan literasi formal, metodologi penalaran etis-rasional, hukum-hukum positif peradaban, dan pencerahan spiritualitas transformatif.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَيُعَلِّمُهُ</strong><br>(<em>Wa yu'allimuhū</em> / <em>Wa nu'allimuhū</em>)</td>
+                <td>
+                    <strong>Wāwu:</strong> Fathah ringan keluar dari dua bibir (asysyafatain).<br>
+                    <strong>Huruf 'Ain:</strong> Wasathul halq (tengah tenggorokan) dengan sifat tawassuth.<br>
+                    <strong>Lām Musyaddadah:</strong> Memiliki sifat tawassuth dan ditekan dengan tasydid tajam (tadzkir / taf'il).<br>
+                    <strong>Hā' Dhamīr:</strong> Memiliki sifat <strong>Hams</strong> dan <strong>Khafā'</strong>. Saat washal dibaca <strong>Mad Shilah Qashīrah</strong> 2 harakat (karena berada di antara dua huruf berharakat, di sini Mim dhammah bertemu Hamzah washal yang gugur).
+                </td>
+                <td>
+                    <strong>IKHTILAF QIRA'AT MUTAWATIRAH (HURUF MUDHARA'AH):</strong><br>
+                    • <strong>Nāfi', 'Āṣhim, Abū Ja'far, Ya'qūb:</strong> Membaca dengan <strong>Yā' Ghaibah</strong>: <em><strong>"Wa yu'allimuhū"</strong></em> (وَيُعَلِّمُهُ). Kedudukan nahwunya adalah 'athaf kepada firman Allah di ayat 47: <em>"kadzālikillāhu yakhluqu mā yasyā'... wa yu'allimuhū"</em>, atau berkedudukan sebagai khabar mu'akhkhar / jumlah isti'nafiyyah.<br>
+                    • <strong>Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Nūn Al-'Aẓhamah</strong> (kata ganti keagungan jamak mutakallim): <em><strong>"Wa nu'allimuhū"</strong></em> (وَنُعَلِّمُهُ). Kedudukan nahwunya adalah 'athaf kepada firman Allah pada ayat 44: <em>"dzālika min ambā'il-ghaibi nūḥīhi ilaika... wa nu'allimuhū"</em>. Kedua qira'at mutawatir ini menegaskan bahwa guru tunggal Nabi 'Isa adalah Allah Sang Maha Pencipta.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلْكِتَـٰبَ</strong><br>(<em>Al-Kitāb</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Saqithah (gugur) saat disambung dari ha' dhamir.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas tanpa ghunnah.<br>
+                    <strong>Kāf Kasrah:</strong> Sifat syiddah dan hams halus di pangkal lidah di bawah makhraj Qaf.<br>
+                    <strong>Tā' & Alif Khariyyah:</strong> Mad Thabi'i 2 harakat.<br>
+                    <strong>Bā' Fathah:</strong> Manshub murni.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca nashab (fathah) pada Ba' (<em>Al-Kitāba</em>) sebagai <strong>Maf'ūl bih Tsānī</strong> (objek kedua) bagi fi'il <em>yu'allimu / nu'allimu</em> (sedangkan objek pertamanya adalah dhamir Ha' yang merujuk pada 'Isa AS).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَٱلْحِكْمَةَ</strong><br>(<em>Wal-Ḥikmah</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā' Kasrah:</strong> Wasathul halq dengan sifat hams dan rikhwah murni.<br>
+                    <strong>Kāf Sākinah:</strong> Menampakkan sifat <strong>Syiddah</strong> (tertahannya suara sesaat) disusul sifat <strong>Hams</strong> (hembusan nafas lembut) secara berurutan tanpa memantul.<br>
+                    <strong>Mīm & Tā' Marbūṭhah:</strong> Manshub bil-fathah saat washal.
+                </td>
+                <td>
+                    • <strong>Al-Kisā'ī:</strong> Membaca dengan <strong>Imālah pada Hā' Ta'nīts</strong> (Ta' Marbuthah) saat waqaf: <em><strong>"wal-ḥikmeh"</strong></em>. Ini adalah kaidah ushul qira'at Al-Kisa'i pada ha' ta'nits yang didahului huruf tertentu.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca dengan Fathah murni baik saat washal maupun waqaf (<em>wal-ḥikmah</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَٱلتَّوْرَىٰةَ</strong><br>(<em>Wat-Tawrāh</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif lebur sepenuhnya ke dalam huruf Tā' musyaddadah.<br>
+                    <strong>Wāwu Līn:</strong> Huruf Wawu sukun setelah harakat fathah (dibaca lunak tanpa ketegangan bibir).<br>
+                    <strong>Huruf Rā' Fathah:</strong> Dibaca <strong>Tafkhīm (Tebal)</strong> pada qira'at fathah murni.<br>
+                    <strong>Alif Maqshūrah:</strong> Tempat berlakunya variasi imalah di kalangan para imam qira'at.
+                </td>
+                <td>
+                    <strong>VARIASI BESAR DALAM USHUL QIRA'AT SEPULUH (BAB IMALAH AT-TAWRAH):</strong><br>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir, Abū 'Amr, dan Ibnu Dzakwān (dari Ibnu 'Āmir):</strong> Membaca dengan <strong>Imālah Kubrā</strong> (memiringkan harakat fathah ke arah kasrah dan alif ke arah ya' secara sempurna: <em>"Wat-Tawreh"</em> / <em>Wat-Tawreyti</em>).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca secara konsisten dengan <strong>Taqīl / Imālah Sughrā (Bain-Bain)</strong> tanpa khilaf.<br>
+                    • <strong>Qālūn 'an Nāfi':</strong> Memiliki dua wajah riwayat: Taqīl dan Fat-ḥah.<br>
+                    • <strong>Ḥafṣh 'an 'Āṣhim, Syu'bah, Ibnu Katsīr, Abū Ja'far, Ya'qūb, dan Hisyām (dari Ibnu 'Āmir):</strong> Membaca dengan <strong>Fat-ḥah Murni</strong> (<em>Wat-Tawrāh</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَٱلْإِنجِيلَ ۝٤٨</strong><br>(<em>Wal-Injīl</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Lam:</strong> Idzhar qamariyyah saat washal biasa.<br>
+                    <strong>Nūn Sākinah bertemu Jīm:</strong> Hukum <strong>Ikhfā' Ḥaqīqī</strong> (samar disertai ghunnah sempurna 2 harakat di makhraj Jim).<br>
+                    <strong>Yā' Mad & Lām Fashilah:</strong> <strong>Mad 'Āriḍh lis-Sukūn</strong> saat waqaf di ujung ayat, dibaca dengan durasi 2, 4, atau 6 harakat disertai sifat <strong>Tawassuṭh</strong> pada huruf Lam sukun.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Melakukan kaidah <strong>Naql</strong> (memindahkan harakat kasrah dari Hamzah qatha' ke huruf Lam sukun sebelumnya dan menggugurkan hamzah): dibaca <em><strong>"Walinjīla"</strong></em> (وَلِنْجِيلَ).<br>
+                    • <strong>Ḥamzah (riwayat Khallād saat washal):</strong> Memiliki wajah saktah lathifah pada Alif Lam ta'rif (<em>"Wal - Injīla"</em>).<br>
+                    • <strong>Jumhur Imam (termasuk Ḥafṣh):</strong> Membaca tahqīq hamzah tanpa naql dan tanpa saktah.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbabun Nuzul: Bantahan Ilmiah terhadap Delegasi Kristen Najran & Pengakuan Status Kemuridan Nabi 'Isa (Tafsīr Aṭh-Ṭhabarī & Asbāb an-Nuzūl karya Al-Wāḥidī):</strong><br>
+        Ketika para pemuka Kristen Najran berdialog dengan Nabi Muhammad ﷺ di Masjid Nabawi mengenai status Al-Masih, Rasulullah ﷺ mengajukan pertanyaan rasional yang menggugah nalar fitrah mereka:<br>
+        <em>"Alastum ta'lamūna anna Rabbanā lā yu'allamu, wa anna 'Īsā 'allamahullāh?"</em><br>
+        (Bukankah kalian mengetahui bahwa Tuhan kita tidak diajari oleh siapa pun karena ilmu-Nya mutlak azali, sedangkan 'Isa diajari oleh Allah SWT?!). Para delegasi Najran tertunduk dan menjawab: <em>"Balā"</em> (Benar, kami mengakui hal itu). Maka Rasulullah ﷺ menegaskan: <em>"Fa-kaifa yakūnu ilāhan man kāna hākadzā?!"</em> (Lalu bagaimana mungkin sosok yang diajari dan membutuhkan pengajaran bisa berstatus sebagai Tuhan yang disembah?!). Ayat 48 ini turun sebagai proklamasi hakikat kenabian 'Isa yang mulia namun tetap berstatus sebagai hamba ciptaan.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhārī (No. 3442) & Sahih Muslim (No. 2365) dari Sahabat Abū Hurairah r.a. — Kesatuan Esensial Risalah Para Nabi:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; direction: rtl; display: block; margin: 8px 0;">«أَنَا أَوْلَى النَّاسِ بِعِيسَى ابْنِ مَرْيَمَ فِي الدُّنْيَا وَالآخِرَةِ، وَالأَنْبِيَاءُ إِخْوَةٌ لِعَلاَّتٍ، أُمَّهَاتُهُمْ شَتَّى وَدِينُهُمْ وَاحِدٌ»</span>
+        <em>"Aku adalah orang yang paling dekat dengan 'Isa putra Maryam di dunia dan akhirat. Para nabi itu adalah saudara satu ayah (sebapak): ibu-ibu mereka berbeda-beda, namun agama mereka adalah satu (tauhid murni)."</em><br>
+        <strong>Korelasi Ayat:</strong> Hadits ini menjelaskan kesinambungan kurikulum profetik pada QS. 3:48. Allah mengajarkan Taurat (syariat induk Nabi Musa) dan Injil (pembaruan spiritual Nabi 'Isa) sebagai satu kesatuan mata rantai wahyu ilahi yang berporos pada kalimat tauhid, yang kemudian disempurnakan puncaknya oleh Al-Qur'an melalui Nabi Muhammad ﷺ.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhārī (No. 73) & Sahih Muslim (No. 816) dari Sahabat 'Abdullah bin Mas'ūd r.a. — Kemuliaan Anugerah Al-Ḥikmah:</strong><br>
+        Rasulullah ﷺ bersabda mengenai dua karunia ilahi yang paling layak diidamkan (<em>hasad ghibṭhah</em>):<br>
+        <span style="font-family: 'Amiri', serif; font-size: 18px; direction: rtl; display: block; margin: 8px 0;">«لاَ حَسَدَ إِلَّا فِي اثْنَتَيْنِ: رَجُلٌ آتَاهُ اللَّهُ مَالًا فَسَلَّطَهُ عَلَى هَلَكَتِهِ فِي الحَقِّ، وَرَجُلٌ آتَاهُ اللَّهُ الحِكْمَةَ فَهُوَ يَقْضِي بِهَا وَيُعَلِّمُهَا»</span>
+        <em>"Tidak boleh ada hasad (iri hati yang terpuji / ghibthah) kecuali dalam dua perkara: seseorang yang dianugerahi harta oleh Allah lalu ia habiskan di jalan kebenaran, dan seseorang yang <strong>DIANUGERAHI HIKMAH OLEH ALLAH LALU IA MEMUTUSKAN PERKARA DENGANNYA SERTA MENGAJARKANNYA</strong>."</em><br>
+        <strong>Derajat Hadits:</strong> Muttafaq 'Alayh. Hadits ini menjadi tafsir nabawi atas frasa <em>"wal-ḥikmata"</em> dalam ayat 48: hikmah adalah karunia puncak berupa pemahaman mendalam atas syariat dan ketepatan bertindak yang diajarkan Allah kepada para nabi dan para pewarisnya.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. '-L-M (ع-ل-م — Yu'allimuhu / Ta'līm):</strong> Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan bahwa akar kata ini berporos pada satu makna esensial: adanya tanda, bekas, atau penanda nyata (<em>al-atsar / al-'alāmah</em>) yang dengannya sesuatu menjadi terang benderang dan terbedakan dari yang lain. Dari akar ini lahir kata <em>'ilm</em> (pengetahuan yang membedakan kebenaran dari kebatilan) dan <em>ma'lam</em> (rambu jalan). Bentuk kata kerja <em>'allama – yu'allimu</em> mengikuti wazan <em>taf'īl</em> yang memiliki faedah <strong>At-Taktsīr wat-Tadrīj</strong>: pengajaran yang berlangsung secara intensif, mendalam, bertahap, dan terstruktur hingga materi ilmu tersebut menancap kokoh menjadi watak dan karakter sang pembelajar. Ketika disandarkan kepada Allah, ini membuktikan bahwa kecerdasan luar biasa Al-Masih adalah anugerah didaktik ilahiah (<em>ladunnī</em>) langsung, bukan hasil kompilasi tradisi rabi manusia.
+        </li>
+        <li>
+            <strong>2. K-T-B (ك-ت-ب — Al-Kitāb):</strong> Maqāyīs al-Lughah: akar kata ini menunjukkan makna menghimpun, mengumpulkan, dan merangkai sesuatu dengan sesuatu yang lain (<em>dhammusy-syai' ilasy-syai'</em>). Disebut <em>kataba</em> (menulis) karena penulis merangkai huruf demi huruf menjadi kata dan kalimat yang bermakna; disebut <em>katībah</em> bagi detasemen pasukan berkuda yang berhimpun rapi. Dalam semantik Al-Qur'an, <em>Al-Kitāb</em> di sini memiliki dua dimensi makna yang saling melengkapi: (a) kemahiran literasi dasar, yaitu keterampilan membaca dan menulis dengan pena (<em>al-khaṭṭ wal-kitābah</em>), sebagaimana penafsiran Qatadah; dan (b) kategori generik bagi kumpulan wahyu syariat tertulis yang diturunkan kepada para nabi terdahulu.
+        </li>
+        <li>
+            <strong>3. Ḥ-K-M (ح-ك-م — Al-Ḥikmah):</strong> Maqāyīs al-Lughah: poros makna kata ini adalah pencegahan dari kerusakan atau penyimpangan (<em>al-man'u min al-fasād</em>). Dari sini diambil istilah <em>ḥakamatul-lijām</em> (tali kekang besi pada mulut kuda yang mencegahnya liar tak terkendali), dan <em>ḥākim</em> (hakim yang mencegah terjadinya kezaliman). Secara istilah epistemologis, <em>Al-Ḥikmah</em> adalah meletakkan segala sesuatu tepat pada tempatnya (<em>waḍ'usy-syai' fī maḥallih</em>), kemampuan menangkap rahasia dan tujuan syariat (<em>maṣhāliḥ at-tasyrī'</em>), serta keselarasan mutlak antara kebenaran ilmu dan kemurnian amal.
+        </li>
+        <li>
+            <strong>4. W-R-Y (و-ر-ي) / T-W-R (ت-و-ر — At-Tawrāh):</strong> Ibnu Fāris dan para pakar leksikografi Arab memaparkan bahwa kata <em>At-Tawrāh</em> menurut timbangan bahasa Arab berwazan <em>Faw'alah</em> (فَوْعَلَة) dari akar <em>W-R-Y</em> (seperti pada kata <em>awrā an-nāra</em>: menyalakan api pemantik hingga memancarkan cahaya terang), dinamakan demikian karena Taurat adalah cahaya hukum yang membakar kezaliman dan menyinari kegelapan Bani Israil. Namun mayoritas pakar bahasa muhaqqiqin menegaskan bahwa kata ini adalah <strong>Lafaz Mu'arrab</strong> (arabisasi) dari bahasa Ibrani <em>Torah</em> (תּוֹרָה), yang secara etimologis berakar dari kata <em>Yarah</em> yang bermakna instruksi, pengajaran moral, undang-undang, dan panduan syariat ilahi.
+        </li>
+        <li>
+            <strong>5. N-J-L (ن-ج-ل) / I-N-J-I-L (إ-ن-ج-ي-ل — Al-Injīl):</strong> Sebagian linguis Arab klasik mencoba mencari akar bahasa Arabnya dari <em>N-J-L</em> yang bermakna memancarkan air dari perut bumi (<em>istakhraja al-mā'</em>) atau melahirkan keturunan, karena Injil memancarkan mata air hikmah batiniah. Akan tetapi, ulama tahqiq bahasa seperti Al-Jawaliqi dan As-Suyuthi menetapkan bahwa <em>Al-Injīl</em> adalah lafaz serapan mu'arrab dari bahasa Yunani Koine <em>Euangelion</em> (Εὐαγγέλιον: gabungan dari <em>eu</em> = baik/indah, dan <em>angelia</em> = warta/berita), yang bermakna <strong>Kabar Gembira</strong> (<em>The Good News / Al-Bisyārah</em>), yakni warta keselamatan, pembebasan spiritual, dan kabar tentang kedatangan Nabi Akhir Zaman Muhammad ﷺ.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَيُعَلِّمُهُ</strong></td>
+                <td>
+                    <strong>Wāwu:</strong> Harf 'athaf atau isti'nafiyyah.<br>
+                    <strong>Yu'allimu:</strong> Fi'il mudhari' tsulatsi mazid bi-harf (wazan <em>Fa''ala – Yufa''ilu – Taf'īl</em>), mabni li-al-ma'lum. Fa'il dhamir mustatir takdirnya <em>Huwa</em> (Allah).<br>
+                    <strong>Hā':</strong> Dhamir muttashil ghaib mabni 'aladh-dhamm.
+                </td>
+                <td>
+                    Fi'il mudhari' marfu' bil-dhammah azh-zhahirah. Dhamir Hā' berkedudukan fi mahalli nashbin <strong>Maf'ūl bih Awwal</strong> (merujuk kepada 'Isa AS).<br>
+                    Pada qira'at <em>Nu'allimuhū</em>: Fi'il mudhari' dengan fa'il dhamir mustatir <em>Naḥnu</em> (kalam 'azhamah).<br>
+                    Jumlah fi'liyyah ma'thufah 'ala jumlah <em>yakhluqu mā yasyā'</em> atau fi mahalli nashbin <strong>Ḥāl Muqaddarah</strong> (kondisi masa depan yang dipastikan terjadi).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْكِتَـٰبَ</strong></td>
+                <td>
+                    Isim jins ma'rifah bi-al (al-qamariyyah), wazan <em>Fi'āl</em>, mufrad mudzakkar.
+                </td>
+                <td>
+                    <strong>Maf'ūl bih Tsānī</strong> (objek kedua bagi fi'il <em>yu'allimu</em>) manshub bil-fathah azh-zhahirah 'ala akhirih.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْحِكْمَةَ</strong></td>
+                <td>
+                    <strong>Wāwu:</strong> Harf 'athaf muthlaqul-jam'i.<br>
+                    <strong>Al-Ḥikmah:</strong> Isim mashdar / sifat berakhiran ta' marbuthah, wazan <em>Fi'lah</em>.
+                </td>
+                <td>
+                    <strong>Isim Ma'ṭhūf</strong> kepada <em>Al-Kitāba</em>, tabi' lahu fi al-i'rab: manshub bil-fathah azh-zhahirah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلتَّوْرَىٰةَ</strong></td>
+                <td>
+                    <strong>Wāwu:</strong> Harf 'athaf.<br>
+                    <strong>At-Tawrāh:</strong> Ism 'alam li al-kitab al-muqaddas, wazan <em>Faw'alah</em> (atau ism mu'arrab).
+                </td>
+                <td>
+                    <strong>Isim Ma'ṭhūf</strong> kepada <em>Al-Kitāba</em>, manshub bil-fathah azh-zhahirah (atau muqaddarah 'alal-alif pada pembacaan fathah mutlaq / imalah).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْإِنجِيلَ ۝٤٨</strong></td>
+                <td>
+                    <strong>Wāwu:</strong> Harf 'athaf.<br>
+                    <strong>Al-Injīl:</strong> Ism 'alam li al-kitab al-muqaddas, wazan <em>If'īl</em> (mu'arrab).
+                </td>
+                <td>
+                    <strong>Isim Ma'ṭhūf</strong> kepada <em>Al-Kitāba</em>, manshub bil-fathah azh-zhahirah. Menjadi penutup fashilah fashihah akhir ayat.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Sintaksis)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'āni — Balāghat 'Aṭhf al-Khāṣhṣh 'alā al-'Āmm (Penyebutan Spesifik Setelah Kategori Universal):</strong><br>
+            Al-Qur'an memulai penyebutan materi ajar dengan <em>Al-Kitāb</em> dan <em>Al-Ḥikmah</em> (kategori umum epistemologi: teks dan kearifan rasional-etis), lalu menyusulkan penyebutan dua kitab spesifik: <em>At-Tawrāh</em> dan <em>Al-Injīl</em>. Dalam kaidah balaghah, ini adalah teknik <em>'Athf al-Khāshsh 'alā al-'Āmm</em> yang berfaedah <strong>At-Tanwīh bi-Sya'nihimā wa Raf'u Qadrihimā</strong>: mengangkat martabat Taurat dan Injil sebagai dua manifestasi monumental dari Al-Kitab dan Al-Hikmah di tengah sejarah peradaban Bani Israil.
+        </li>
+        <li>
+            <strong>Ilmu Ma'āni — At-Tartīb at-Tadrījī al-Bidāghūjī (Hierarki Pedagogis Arsitektur Keilmuan):</strong><br>
+            Urutan keempat kata ini bukanlah acak, melainkan menyajikan tangga kurikulum pembentukan seorang pemimpin profetik yang teramat sempurna:
+            <br>• <strong>Pilar 1 (Al-Kitāb):</strong> Fondasi literasi mekanistik dan penguasaan kodifikasi teks tertulis (kemampuan mencatat dan membaca data wahyu).
+            <br>• <strong>Pilar 2 (Al-Ḥikmah):</strong> Piranti nalar metodologis untuk menafsirkan teks secara tepat, memahami 'illat hukum, dan meletakkan aturan sesuai realitas zaman.
+            <br>• <strong>Pilar 3 (At-Tawrāh):</strong> Warisan hukum positif (<em>corpus juris</em>) yang telah mapan dan mengikat struktur sosial bangsa Yahudi.
+            <br>• <strong>Pilar 4 (Al-Injīl):</strong> Puncak pembaruan spiritualitas, tazkiyatun nafs, dan pembebasan jiwa dari jeratan legalisme mati.
+        </li>
+        <li>
+            <strong>Ilmu Bayān — Al-Kināyah 'an al-Kamāl an-Nubuwwī wa Nafy az-Ziyāgh (Metonimia Kesempurnaan Kenabian):</strong><br>
+            Frasa <em>"wa yu'allimuhu"</em> merupakan kinayah tingkat tinggi atas penerimaan wahyu langsung (<em>al-wahyu al-ilāhī al-mubāsyir</em>). Dengan menegaskan bahwa Allah yang mengajarinya, Al-Qur'an mematahkan dua tuduhan kontradiktif: tuduhan kaum kafir Yahudi yang menuduh 'Isa sebagai tukang sihir liar tanpa sanad ilmu, dan tuduhan kaum Kristen Helenistik yang menuhankannya. 'Isa tidak perlu berguru ke biara esoteris atau akademi Farisi karena Allah sendiri yang menginjeksi ilmu ke dalam jiwanya; namun ia tetap seorang hamba karena predikatnya adalah murid yang diajari.
+        </li>
+        <li>
+            <strong>Ilmu Badī' — Al-I'tilāf wal-Murā'āt an-Naẓhīr (Harmoni Pasangan Konsep):</strong><br>
+            Ayat ini menghadirkan dua pasang konsep yang saling melengkapi (<em>al-muzawajah</em>): pasangan <strong>Al-Kitāb & Al-Ḥikmah</strong> melambangkan keseimbangan antara teks wahyu lahiriah dan kedalaman nalar esensial; sedangkan pasangan <strong>At-Tawrāh & Al-Injīl</strong> melambangkan keseimbangan antara ketegasan hukum syariat (keadilan formal) dan kelembutan cinta rohani (rahmat emosional).
+        </li>
+        <li>
+            <strong>Ilmu Ma'āni — I'jāz al-Iltifāt fī Ikhtilāf al-Qirā'āt (Mukjizat Sudut Pandang Qira'at Mutawatirah):</strong><br>
+            Dua qira'at mutawatir menghadirkan dinamika iltifat yang memukau: Qira'at dengan Ya' (<em>yu'allimuhu</em>) menempatkan narasi dalam koridor objektif malaikat yang memaparkan keagungan rencana Allah; sedangkan Qira'at dengan Nun (<em>nu'allimuhu</em>) memancarkan keagungan kalam langsung dari Zat Maha Penguasa Semesta yang menyatakan kepemilikan mutlak atas pembinaan sang nabi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>1. Sibāq (Korelasi Organik dengan Ayat-Ayat Sebelumnya: QS. 3:45–47):</strong><br>
+            Setelah ayat 45 mengumumkan keagungan gelar Al-Masih 'Isa ibnu Maryam, ayat 46 memaparkan keajaiban bicaranya sejak buaian hingga masa dewasa, dan ayat 47 membongkar kemustahilan biologis penciptaannya melalui titah kedaulatan <em>Kun Fayakun</em>; maka ayat 48 hadir menjawab pertanyaan kritis: <em>"Untuk tugas peradaban apa sosok ajaib ini diciptakan ke muka bumi?"</em><br>
+            Al-Qur'an mengalihkan perhatian umat manusia dari romantisme sensasi mukjizat fisik menuju substansi misi kenabian: 'Isa diciptakan bukan untuk dijadikan objek kultus pemujaan berhala baru, melainkan dibekali instrumen intelektual dan spiritual (Kitab, Hikmah, Taurat, Injil) guna mereformasi kebobrokan peradaban Bani Israil. Mukjizat biologis di ayat 47 hanyalah pintu gerbang bagi misi edukasi peradaban di ayat 48.
+        </li>
+        <li>
+            <strong>2. Siyāq (Rekonstruksi Sosio-Historis: Debat Diplomasi Madinah vs Najran):</strong><br>
+            Konteks historis turunnya ayat ini berakar kuat pada perdebatan teologis akbar antara Rasulullah ﷺ dan delegasi Kristen Najran pada tahun ke-9/10 Hijriah di Masjid Nabawi. Uskup Abu Haritsah dan para teolog Najran berusaha mempertahankan doktrin ketuhanan 'Isa dengan alasan bahwa 'Isa memiliki hikmah adikodrati dan mampu menghidupkan orang mati.<br>
+            Ayat 48 membongkar kepalsuan premis tersebut secara telak: Al-Qur'an menegaskan bahwa seluruh kapasitas ilmu dan hikmah yang dimiliki Al-Masih bukanlah bersumber dari zat keilahian dirinya, melainkan merupakan kurikulum pengajaran yang dialirkan oleh Allah SWT (<em>yu'allimuhullāh</em>). Sifat 'menerima pengajaran' (<em>al-qābiliyyah li at-ta'allum</em>) adalah atribut mutlak bagi makhluk fana yang membutuhkan tambahan kesempurnaan ilmu, sedangkan Tuhan Yang Sejati Maha Meliputi segala sesuatu tanpa pernah diajari atau dididik oleh entitas apa pun!
+        </li>
+        <li>
+            <strong>3. Liḥāq (Jembatan Menuju Ayat Sesudahnya: QS. 3:49):</strong><br>
+            Ayat 48 berfungsi sebagai tahapan <strong>At-Ta'hīl al-'Ilmī war-Rūḥī</strong> (persiapan kapasitas keilmuan dan otoritas wahyu), yang menjadi fondasi wajib sebelum melangkah ke tahapan <strong>At-Taṭhbīq al-I'jāzī wal-Irsāl</strong> (pelaksanaan misi kerasulan dan mukjizat empiris) di ayat 49: <em>"Wa rasūlan ilā banī Isrā'īla annī qad ji'tukum bi-āyatin mir-Rabbikum..."</em>.<br>
+            Hubungan ini mengajarkan sunnatullah kepemimpinan profetik: aksi mukjizat yang spektakuler (menyembuhkan kusta, membentuk burung dari tanah, menghidupkan mayat) tidak pernah berdiri sendiri dalam kehampaan nalar, melainkan dipayungi dan dijiwai oleh penguasaan Al-Kitab dan Al-Hikmah. Tanpa hikmah dan syariat, mukjizat empiris akan mudah disalahpahami sebagai sihir atau dijadikan landasan kultus penuhanan.
+        </li>
+        <li>
+            <strong>4. Rekonstruksi Sosio-Religius Yudea Abad ke-1 Masehi:</strong><br>
+            Untuk menyelami urgensi pengajaran <em>Al-Kitab, Al-Hikmah, Taurat, dan Injil</em>, kita harus menengok lanskap sosiologi keagamaan Bani Israil di Palestina pada abad ke-1 Masehi. Saat itu, masyarakat Yahudi terbelah menjadi kelompok-kelompok yang sakit secara spiritual:
+            <br>• <strong>Kaum Farisi (Pharisees):</strong> Terjebak dalam legalisme ekstrem, memuja teks hukum lahiriah secara harfiah (Taurat tanpa Hikmah), namun batin mereka dipenuhi kemunafikan, kesombongan rasial, dan komersialisasi agama.
+            <br>• <strong>Kaum Saduki (Sadducees):</strong> Golongan aristokrat dan imam kuil yang berkolaborasi dengan penjajah Romawi, berfaham materialistik, dan mengingkari adanya kebangkitan akhirat serta malaikat.
+            <br>• <strong>Dominasi Kolonial Romawi:</strong> Yang menindas rakyat dengan pajak zalim dan budaya paganisme helenistik.
+            <br>Dalam konteks krisis peradaban multidimensi inilah Nabi 'Isa diutus. Beliau diajari <strong>Taurat</strong> agar memiliki otoritas membongkar distorsi hukum para rabi; diajari <strong>Al-Hikmah</strong> agar mampu mengembalikan ruh keadilan dan esensi moral di balik teks formal; dan dianugerahi <strong>Al-Injil</strong> untuk menghidupkan kembali lentera kasih sayang, kezuhudan, dan pengharapan akhirat di tengah kegelapan materialisme.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭh-Ṭhabarī (w. 310 H) — Tafsīr Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān:</strong><br>
+        Aṭh-Ṭhabarī memaparkan riwayat otoritatif dari Qatādah dan Ibnu Zaid mengenai takwil frasa <em>"wa yu'allimuhul-kitāb"</em>. Beliau mencatat bahwa kata <em>Al-Kitāb</em> di sini bermakna <strong>Al-Khaṭṭ bil-Qalam</strong> (kemahiran menulis dengan pena), yakni Allah membekali Nabi 'Isa kemampuan membaca dan menulis secara sempurna tanpa melalui proses belajar konvensional dari guru manusia. Terkait <em>Al-Hikmah</em>, At-Tabari menegaskannya sebagai <em>Al-Fiqh fid-Dīn</em> (pemahaman mendalam terhadap hukum-hukum Allah dan kemampuan memutuskan perkara dengan tepat). Beliau juga menggarisbawahi bahwa 'Isa menghafal teks Taurat di luar kepala (<em>ḥifẓhan</em>), suatu hal yang sangat langka di kalangan rabi Yahudi saat itu yang sangat bergantung pada naskah gulungan fisik, seraya menerima wahyu baru bernama Al-Injil.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Al-Qurṭhubī (w. 671 H) — Al-Jāmi' li-Aḥkām al-Qur'ān:</strong><br>
+        Al-Qurthubi menyoroti keistimewaan anugerah <em>Al-Hikmah</em> yang disandingkan dengan <em>Al-Kitab</em>. Beliau menegaskan bahwa seseorang bisa saja membaca kitab, namun jika ia tidak dianugerahi hikmah, ilmunya akan menjadi racun yang melahirkan kekakuan dan kefanatikan. Hikmah adalah kecerdasan batiniah untuk mengamalkan apa yang diketahui. Al-Qurthubi juga membedah argumentasi fiqhiyah mengenai keharusan seorang rasul memiliki integritas literasi dan pemahaman syariat terdahulu (Taurat) agar seruannya tidak dituduh sebagai bid'ah yang merusak tatanan masyarakat. Pengajaran Injil menjadi bukti bahwa 'Isa membawa syariat yang menyempurnakan dan meringankan sebagian beban hukum yang sebelumnya diharamkan atas Bani Israil sebagai hukuman atas kezaliman mereka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Al-Imām Fakhruddīn Ar-Rāzī (w. 606 H) — Mafātīḥ al-Ghayb & Az-Zamakhsyarī (w. 538 H) — Al-Kasysyāf:</strong><br>
+        Ar-Razi membedah ayat ini dari sudut epistemologi filsafat ketuhanan (<em>Nazhariyyat al-Ma'rifah</em>). Beliau menjelaskan bahwa ilmu terbagi dua: <strong>'Ulūm Naqliyyah</strong> (ilmu periwayatan berbasis teks wahyu) yang dilambangkan oleh <em>Al-Kitāb, At-Tawrāh, dan Al-Injīl</em>; dan <strong>'Ulūm 'Aqliyyah</strong> (ilmu penalaran logis, penyucian jiwa, dan ketepatan kausalitas) yang dilambangkan oleh <em>Al-Ḥikmah</em>. Allah menganugerahkan kedua sayap ilmu ini kepada 'Isa AS secara terpadu. Az-Zamakhsyari menambahkan dari sisi balaghah bahwa pengulangan huruf 'athaf Wawu pada keempat entitas ini membuktikan bahwa masing-masing memiliki substansi keistimewaan tersendiri yang tidak dapat direduksi satu sama lain.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Al-Imām Ibnu Katsīr (w. 774 H) — Tafsīr Al-Qur'ān al-'Aẓhīm:</strong><br>
+        Ibnu Katsir menegaskan bahwa ayat ini adalah bagian dari kabar gembira yang disampaikan para malaikat kepada Sayyidah Maryam mengenai masa depan putranya. Kata <em>Al-Kitab</em> ditafsirkan sebagai kemahiran menulis (<em>al-kitābah</em>), yang merupakan instrumen peradaban tertinggi untuk menyebarkan ilmu. Ibnu Katsir mengaitkan ayat ini dengan status Nabi 'Isa sebagai salah satu rasul <em>Ulul 'Azmi</em>: beliau menguasai esensi Taurat yang diturunkan kepada Nabi Musa AS, lalu meluruskan penyimpangan yang dilakukan para rabi Yahudi, serta membimbing umat menuju cahaya Injil yang sarat dengan nasihat pembersihan kalbu, peringatan akan hari pembalasan, dan penegasan tauhid mutlak kepada Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Al-'Allāmah Ibnu 'Āsyūr (w. 1393 H) — At-Taḥrīr wat-Tanwīr:</strong><br>
+        Ibnu 'Asyur memberikan analisis sosiologis-maqashidi yang sangat tajam. Beliau membedakan antara <em>Al-Kitāb</em> dan <em>At-Tawrāh</em>: Al-Kitab adalah pengetahuan tentang genre literatur suci dan hukum-hukum doktrinal universal, sedangkan At-Tawrah adalah undang-undang positif bangsa Israel secara spesifik. Hikmah adalah <em>Ma'rifat asrār asy-syarī'ah</em> (kemampuan menyelami tujuan luhur di balik aturan lahiriah). Ibnu 'Asyur menjelaskan bahwa bangsa Yahudi di zaman Nabi 'Isa telah mengalami <strong>Sklerosis Spiritual (Pengerasan Hati Legalistik)</strong>: mereka mematuhi teks Taurat secara lahir namun memperkosa ruh keadilannya demi keuntungan materi. Oleh sebab itu, Allah mengajarkan <em>Al-Hikmah</em> dan <em>Al-Injil</em> kepada 'Isa untuk melakukan dekonstruksi atas legalisme munafik tersebut dan menghidupkan kembali nurani umat manusia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya HAMKA (w. 1981 M) — Tafsir Al-Azhar:</strong><br>
+        Buya Hamka melukiskan kepribadian agung Nabi 'Isa dengan gaya narasi yang sangat memikat kalbu. Beliau memaparkan bahwa 'Isa tidak pernah belajar di Yeshiva (sekolah tinggi rabi) di Yerusalem, namun ketika beliau berbicara di Baitul Maqdis, seluruh alim ulama Farisi dan ahli Taurat tertegun dan bungkam di hadapan kedalaman ilmunya. Hamka menulis: <em>"Bukan kepintaran duniawi yang dipelajari dari manusia, melainkan Allah sendiri yang mengajarkan Kitab dan Hikmah ke dalam jiwanya. Dengan Hikmah itulah Nabi 'Isa menyerang kaum munafik yang gemar mencuci cawan di bagian luar tetapi membiarkan bangkai kebusukan bersarang di dalamnya. Beliau membawa Injil sebagai kabar kesukaan: membebaskan jiwa manusia dari belenggu formalitas mati menuju hubungan cinta yang intim dan suci dengan Khaliqnya."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Prof. Dr. M. Quraish Shihab — Tafsir Al-Mishbah & Kemenag RI:</strong><br>
+        Quraish Shihab menjelaskan bahwa kata <em>Al-Hikmah</em> terambil dari kata <em>ihkām</em> yang berarti kokoh dan terhindar dari keretakan. Seseorang yang memiliki hikmah adalah orang yang mampu memilih yang terbaik dari dua alternatif yang baik, serta mampu mencari jalan keluar paling maslahat dari dua kondisi yang buruk. Pengajaran Taurat membuktikan bahwa misi 'Isa adalah misi kesinambungan (kontinuitas syariat), sedangkan pengajaran Injil membuktikan adanya misi pembaruan etika spiritual (transformasi moral). Catatan Kemenag RI menegaskan bahwa ayat ini memposisikan Nabi 'Isa sebagai figur pemersatu wahyu samawi yang menjunjung tinggi literasi, rasionalitas, dan kesalehan batiniah.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek / Dimensi Eksegesis</th>
+                <th>Titik Temu Konsensus (Ijmā' Mufassirīn)</th>
+                <th>Ragam Sudut Pandang Penafsiran (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna Lafaz "Al-Kitāb"</strong></td>
+                <td>Seluruh ulama sepakat bahwa kata ini menunjukkan instrumen transmisi keilmuan yang paling kokoh dan berwibawa di muka bumi.</td>
+                <td>
+                    • <strong>Qatādah, Aṭh-Ṭhabarī, Ibnu Katsīr:</strong> Bermakna keterampilan menulis dan kemahiran literasi pena (<em>al-khaṭṭ wal-kitābah</em>).<br>
+                    • <strong>Ibnu 'Āsyūr & Ar-Rāzī:</strong> Bermakna kumpulan kitab-kitab wahyu samawi terdahulu secara generik atau kaidah literasi ilahi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Substansi "Al-Ḥikmah"</strong></td>
+                <td>Seluruh mufasir bersepakat bahwa hikmah adalah tingkatan ilmu tertinggi yang membuahkan ketepatan tindakan dan keselamatan amal.</td>
+                <td>
+                    • <strong>Al-Qurṭhubī & Az-Zamakhsyarī:</strong> Pengetahuan syariat yang diamalkan dan sunnah-sunnah profetik.<br>
+                    • <strong>Ar-Rāzī:</strong> Kesempurnaan daya nalar rasional (<em>'aqlī</em>) dalam menangkap hakikat wujud.<br>
+                    • <strong>Ibnu 'Āsyūr:</strong> Pemahaman terhadap <em>Maqāṣhid asy-Syarī'ah</em> (tujuan filosofis syariat) guna merawat kemaslahatan publik.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Relasi At-Tawrāh & Al-Injīl</strong></td>
+                <td>Seluruh mazhab sepakat bahwa Nabi 'Isa diutus dengan membawa Taurat dan Injil sebagai dua kitab wahyu ilahi yang saling menguatkan.</td>
+                <td>
+                    • <strong>Jumhur Ulama Klasik:</strong> Taurat sebagai rujukan hukum pokok (<em>aṣhl</em>), sedangkan Injil sebagai penyempurna yang menasakh sebagian kecil keharaman rukhshah.<br>
+                    • <strong>Ulama Kontemporer (Hamka & Quraish Shihab):</strong> Taurat sebagai lambang keadilan hukum positif lahiriah, Injil sebagai lambang revolusi cinta kasih dan tazkiyatun nafs batiniah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Tawjīh Qirā'at (Yu'allimuhu vs Nu'allimuhu)</strong></td>
+                <td>Kedua qira'at mutawatir berasal dari Rasulullah ﷺ dan sepakat menetapkan Allah SWT sebagai sumber tunggal pengajaran Nabi 'Isa.</td>
+                <td>
+                    • <strong>Yā' (Jumhur/Ḥafṣh):</strong> Menegaskan keselarasan alur orang ketiga (ghaibah) yang bersambung dengan ayat 47.<br>
+                    • <strong>Nūn (Ibnu Katsīr, Ḥamzah, dkk):</strong> Menampilkan gaya <em>Iltifāt</em> keagungan ilahiah mutlak (kalam 'azhamah) yang menegaskan keintiman bimbingan Allah atas utusan-Nya.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Pola Pikir & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan mental model berikut merupakan ikhtiar tadabbur reflektif dan sintesis pemikiran sistemik manusiawi, steril dari pseudosains atau cocoklogi sains, serta dimaksudkan semata-mata untuk mengonversi nilai wahyu menjadi kerangka berpikir aplikatif].
+    </p>
+
+    <h3>1. Dekonstruksi 'The False Dichotomy of Text vs. Wisdom' (Dikotomi Palsu Teks vs Konteks)</h3>
+    <p>
+        Salah satu jebakan kognitif terbesar yang merusak peradaban manusia sepanjang sejarah adalah keterbelahan ekstrem antara dua kubu epistemologi: kubu <strong>Tekstualisme Kaku (Hyper-Literalism)</strong> dan kubu <strong>Relativisme Bebas (Unanchored Contextualism)</strong>. Kubu pertama memegang teks hukum secara buta tanpa memahami ruh dan tujuannya, sehingga melahirkan manusia-manusia fanatik yang dingin, kaku, dan mudah menuduh sesat siapa pun yang berbeda tafsir. Sebaliknya, kubu kedua memuja kebebasan nalar dan kearifan subjektif tanpa berjangkar pada teks wahyu yang otoritatif, sehingga melahirkan relativisme moral yang menghancurkan batasan halal-haram.
+    </p>
+    <p>
+        QS. Ali 'Imran: 48 melakukan sintesis sistemik yang teramat agung. Allah membekali Nabi 'Isa AS dengan <strong>Al-Kitāb</strong> (Jangkar Teks Otoritatif) sekaligus <strong>Al-Ḥikmah</strong> (Pisau Bedah Kontekstual). Teks tanpa hikmah adalah kezaliman administratif; sedangkan hikmah tanpa teks adalah halusinasi tanpa arah. Keselarasan kedua entitas ini membentuk arsitektur berpikir yang kokoh: setia pada teks wahyu secara metodologis, namun adaptif dan penuh kasih dalam eksekusi praktis di tengah dinamika realitas kemanusiaan.
+    </p>
+
+    <h3>2. Formula Mindset Shift: Pola Pikir Reduksionis vs Pola Pikir Epistemik Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Reduksionis-Legalistik (Jahiliyah / Farisi Kuno)</th>
+                <th>Pola Pikir Epistemik Rabbani (Berbasis QS. 3:48)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Orientasi Keilmuan</strong></td>
+                <td>Berpuas diri dengan hafalan teks dan akumulasi informasi permukaan tanpa menggali makna esensial.</td>
+                <td>Mengintegrasikan data literasi (<em>Al-Kitāb</em>) dengan kedalaman pemahaman filosofis-rasional (<em>Al-Ḥikmah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Sikap terhadap Hukum</strong></td>
+                <td>Menjadikan hukum syariat sebagai instrumen kaku untuk menghakimi dan menindas manusia lain.</td>
+                <td>Memahami hukum syariat (<em>At-Tawrāh</em>) sebagai instrumen keadilan yang dijiwai oleh kasih sayang dan penyelamatan batin (<em>Al-Injīl</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Sumber Otoritas Batin</strong></td>
+                <td>Menyandarkan otoritas pada tradisi birokrasi manusiawi dan gelar formal masyarakat (ketergantungan ego).</td>
+                <td>Merasa fakir di hadapan ilmu Allah dan senantiasa memposisikan diri sebagai murid yang haus akan bimbingan wahyu (<em>Lifelong Muta'allim</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Respons terhadap Realitas Baru</strong></td>
+                <td>Gagap, defensif, dan menolak segala bentuk pembaruan karena menganggap masa lalu adalah segalanya.</td>
+                <td>Mampu merawat kontinuitas kebenaran fundamental seraya melahirkan solusi pembaruan segar yang menenteramkan zaman.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Rumusan Mental Model: "The Dual-Engine Epistemic Model" & "The Dialectic of Justice and Grace"</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Dual-Engine Epistemic Model (Kaidah Dua Mesin Pengetahuan: Kitab & Hikmah):</strong><br>
+            <em>Premis Dasar:</em> Keberhasilan kepemimpinan dan pengambilan keputusan membutuhkan dua mesin pendorong yang bekerja simultan: (1) <em>Engine of Authority / Data</em> (Al-Kitāb: kepatuhan pada regulasi, SOP tertulis, fakta empiris, dan prinsip wahyu); dan (2) <em>Engine of Prudence / Wisdom</em> (Al-Ḥikmah: ketajaman membaca situasi, empati, fleksibilitas taktis, dan pemahaman dampak jangka panjang).<br>
+            <em>Aplikasi Praktis:</em> Jangan pernah mengambil kebijakan publik, keputusan manajerial, atau hukum keluarga hanya dengan bersandar pada bunyi pasal undang-undang semata; gunakan hikmah untuk memastikan keputusan tersebut menghasilkan keadilan nyata bagi manusia.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Dialectic of Justice and Grace (Dialektika Keadilan Hukum & Rahmat Spiritual: Taurat & Injil):</strong><br>
+            <em>Premis Dasar:</em> Ketertiban masyarakat menuntut adanya struktur hukum formal yang tegas dan berwibawa (dimensi Taurat); namun kehidupan jiwa manusia menuntut adanya kehangatan cinta, pengampunan, pemulihan mental, dan harapan (dimensi Injil). Memisahkan keduanya akan melahirkan tirani atau kekacauan.<br>
+            <em>Aplikasi Praktis:</em> Dalam mendidik anak atau memimpin organisasi, tegakkan aturan dan batasan yang jelas, namun penuhilah ruang interaksi dengan empati, penerimaan tulus, dan pintu maaf bagi mereka yang bersungguh-sungguh ingin memperbaiki diri.
+        </li>
+    </ul>
+
+    <h3>4. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs: Melawan Epistemic Arrogance</h3>
+    <p>
+        Secara neurokognitif, semakin banyak informasi yang dihafal seseorang tanpa diimbangi oleh latihan penyucian kalbu (tazkiyah), amigdala dan ego bawah sadar cenderung memproduksi <strong>Epistemic Arrogance (Kesombongan Intelektual)</strong>. Seseorang merasa dirinya lebih suci, lebih cerdas, dan memandang rendah orang lain yang belum sampai pada pengetahuannya. Inilah sindrom patologis yang menjangkiti para ahli Taurat di zaman Nabi 'Isa.
+    </p>
+    <p>
+        Penyandaran kata <em>"wa yu'allimuhu"</em> langsung kepada Allah SWT membedah terapi spiritual yang tuntas: Nabi 'Isa menyadari bahwa seluruh kecerdasan batiniahnya adalah titipan dari Sang Mahatahu. Kesadaran ini membuahkan kerendahhatian radikal (<em>at-tawāḍhu' al-muṭhlaq</em>). Jiwa yang terdidik oleh Allah tidak mencari validasi manusia, tidak silau oleh puji-pujian duniawi, dan memiliki keberanian mental yang tak tergoyahkan dalam menyuarakan kebenaran di hadapan kekuasaan yang korup.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Krisis Epistemologi Global: Fenomena "Data-Rich, Wisdom-Poor" di Era Kecerdasan Buatan (AI)</h3>
+    <p>
+        Peradaban abad ke-21 tengah berada di puncak revolusi teknologi informasi. Melalui internet, Big Data, dan model Kecerdasan Buatan Generatif (GenAI), manusia memiliki akses instan ke triliunan lembar teks, buku, dan jurnal ilmiah (<em>Al-Kitāb</em> dalam pengertian modern: ledakan data dan literasi digital). Namun secara paradoksal, dunia modern justru mengalami <strong>Kekeringan Hikmah (Wisdom Poverty)</strong> yang paling parah dalam sejarah.
+    </p>
+    <p>
+        Kita menyaksikan paradoks tragis: masyarakat semakin pintar secara teknis, namun semakin rapuh secara eksistensial. Polarisasi politik di media sosial semakin tajam, krisis kesehatan mental meledak di kalangan Generasi Z, dan para pemimpin global membuat keputusan-keputusan destruktif yang mengancam kelestarian biosfer bumi. QS. Ali 'Imran: 48 menyuarakan kritik peradaban yang tajam: kemahiran literasi data (<em>Al-Kitāb</em>) tanpa dibarengi kearifan moral-spiritual (<em>Al-Ḥikmah</em>) hanya akan melahirkan monster teknologi yang cerdas namun berhati dingin, yang mampu menghitung probabilitas perang namun buta terhadap penderitaan kemanusiaan.
+    </p>
+
+    <h3>2. Penyakit "Modern Pharisaism": Tirani Legalisme Formal dalam Korporasi & Birokrasi</h3>
+    <p>
+        Sindrom kaum Farisi kuno yang didekonstruksi oleh Nabi 'Isa kini mewujud dalam wajah baru di abad ke-21: <strong>Birokratisme Kaku & Tirani Kepatuhan Administratif</strong>. Di banyak lembaga pemerintahan, lembaga penegak hukum, korporasi multinasional, bahkan institusi keagamaan modern, kepatuhan buta pada "SOP", "dokumen formal", dan "aturan tertulis" sering kali dijadikan tameng untuk melegalkan kezaliman nyata.
+    </p>
+    <p>
+        Orang miskin dipersulit mendapatkan bantuan medis darurat karena tidak memiliki formulir administratif yang lengkap; pekerja bawahan dipecat secara sepihak atas nama klausul kontrak yang manipulatif; dan kasus-kasus korupsi raksasa lolos dari jerat hukum karena kelihaian memanipulasi pasal-pasal undang-undang. Al-Qur'an menuntut reformasi peradaban: tegakkan hukum (Taurat) dengan menyertakan ruh hikmah dan empati kasih sayang (Injil), agar hukum tidak menjadi alat pemangsa bagi kaum yang lemah.
+    </p>
+
+    <h3>3. Polarisasi Ruang Publik & Kebutuhan Kurikulum Cinta Kasih Rabbani</h3>
+    <p>
+        Di era algoritma media sosial yang mendulang keuntungan dari kemarahan (<em>anger economy</em>) dan saling hujat antar-kelompok beragama, ruang publik kita telah kehilangan adab dan kasih sayang. Masing-masing pihak mengacungkan ayat-ayat suci atau dalil hukum laksana senjata pemukul, memproyeksikan kebencian dengan kedok membela agama.
+    </p>
+    <p>
+        Ayat ini mengingatkan umat beriman bahwa Nabi 'Isa dibekali <em>Al-Injīl</em> untuk memulihkan hati yang terluka dan menyebarkan kabar gembira rahmat ilahiah. Islam sebagai penyempurna risalah 'Isa memanggil kaum beriman untuk menghadirkan dakwah yang sejuk, merangkul mereka yang tersesat dengan hikmah dan nasihat yang indah (<em>al-maw'izhah al-hasanah</em>), serta membersihkan hati dari dendam kesumat sektarian.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Operasional Kehidupan)</h3>
+        <ol>
+            <li>
+                <strong>Protokol Mikro-Habit (&lt; 5 Menit): Jeda Uji "Kitab & Hikmah" Sebelum Membagikan Informasi Digital</strong><br>
+                Setiap kali Anda hendak memposting opini, menyebarkan kutipan ayat, atau meneruskan pesan di grup obrolan media sosial (WhatsApp/Telegram/X): berhentilah sejenak selama 2 menit. Terapkan filter ganda: (1) <em>Uji Kitab:</em> Apakah data, berita, atau teks yang hendak saya bagikan ini benar-benar sahih dan akurat sumbernya? (2) <em>Uji Hikmah:</em> Meskipun berita ini benar, apakah membagikannya membawa kemaslahatan, mendamaikan hati, dan memotivasi kebaikan, ataukah justru memicu fitnah, membuka aib orang lain, dan menyulut permusuhan? Jika tidak lolos uji hikmah, hapus pesan tersebut demi menjaga kesucian ruang publik.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol): Menyeimbangkan Penegakan Aturan (Taurat) & Ruang Empati (Injil) dalam Manajemen</strong><br>
+                Dalam kapasitas Anda sebagai pemimpin tim di tempat kerja, kepala keluarga di rumah tangga, atau pendidik di sekolah: setiap kali bawahan, anak, atau anggota tim melakukan kesalahan fatal, jangan langsung menjatuhkan vonis sanksi secara mekanis. Pisahkan sesi penegakan disiplin menjadi dua langkah: pertama, evaluasi pelanggaran terhadap aturan tertulis (dimensi hukum); kedua, luangkan waktu mendengar motif batiniah dan beban psikologis yang sedang dihadapinya (dimensi hikmah & empati), lalu rumuskan solusi korektif restoratif yang mendidik jiwanya tanpa membunuh harga dirinya.
+            </li>
+            <li>
+                <strong>Protokol Komitmen Etika Relasional: Membangun Kebiasaan Belajar Seumur Hidup (Lifelong Muta'allim) & Berbagi Ilmu Tanpa Kesombongan</strong><br>
+                Alokasikan waktu terstruktur minimal 2 jam setiap pekan untuk mendalami tafsir Al-Qur'an dan literatur keilmuan otoritatif dari ulama yang terpercaya sanad ilmunya. Bersamaan dengan itu, pilihlah satu keahlian praktis atau kearifan hidup yang Anda kuasai, lalu ajarkan secara sukarela dan cuma-cuma (pro bono) kepada anak-anak yatim, masyarakat pra-sejahtera, atau generasi muda di lingkungan Anda, seraya meniatkannya sebagai wujud syukur atas pengajaran akal yang telah Allah karuniakan kepada Anda.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Ujian Motif Epistemik (Kemurnian Hajat Belajar):</strong> Ketika aku mengejar gelar akademik, memperbanyak koleksi buku, atau mendalami kajian agama, apakah niat terdalamku adalah agar hatiku semakin takut dan tunduk kepada Allah serta bermanfaat bagi sesama manusia, ataukah diam-diam aku hanya memburu validasi kecerdasan dan gengsi intelektual di hadapan manusia?
+            </li>
+            <li>
+                <strong>Ujian Keseimbangan Teks & Kearifan:</strong> Apakah dalam kehidupanku sehari-hari aku telah menjadi orang yang kaku dan gemar menghakimi kekurangan orang lain dengan dalil-dalil hukum yang kupelajari, seraya melupakan akhlak kelembutan, keadilan sosial, dan rasa kasih sayang yang diajarkan oleh Al-Masih dan Rasulullah ﷺ?
+            </li>
+            <li>
+                <strong>Ujian Kerendahhatian Pembelajar:</strong> Apakah aku masih memiliki kerendahan hati seorang murid sejati yang siap menerima nasihat kebenaran meskipun disampaikan oleh orang yang lebih muda atau berstatus sosial lebih rendah dariku, menyadari bahwa hakikat guru sejati atas seluruh ilmu di semesta ini hanyalah Allah SWT semata?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+                "Allāhumma Yā 'Alīmu Yā Ḥakīm, Yā Man 'Allama bil-Qalam, 'Allamal-Insāna Mā Lam Ya'lam.<br><br>
+                Ya Allah, Wahai Zat Yang Maha Mengetahui lagi Maha Bijaksana. Wahai Zat yang telah mengajarkan Al-Kitāb, Al-Ḥikmah, At-Tawrāh, dan Al-Injīl kepada hamba dan rasul-Mu Al-Masīḥ 'Īsā ibnu Maryam 'alayhis-salām, dan menyempurnakan puncak seluruh peradaban wahyu melalui baginda Nabi Agung Muḥammad ﷺ.<br><br>
+                Kami bersimpuh di hadapan keagungan ilmu-Mu, mengakui kebodohan, kekhilafan, dan keterbatasan nalar manusiawi kami. Ya Rabb, anugerahilah kalbu kami kemampuan untuk mencintai firman-Mu (Al-Kitāb), karuniakanlah kepada akal budi kami ketajaman hikmah (Al-Ḥikmah) agar kami mampu meletakkan segala perkara pada tempatnya yang benar, dan jangan Engkau biarkan ilmu yang kami miliki menjadi hijab kesombongan yang menjauhkan kami dari rahmat-Mu.<br><br>
+                Ya Allah, basahilah lisan kami dengan kejujuran, lembutkanlah hati kami dengan kasih sayang Al-Injīl, dan teguhkanlah pendirian kami di atas ketegasan syariat Al-Qur'an. Bimbinglah kami dalam mendidik keluarga dan generasi kami agar menjadi lentera-lentera peradaban yang berilmu amaliah dan beramal ilmiah. Lindungilah negeri kami dari kezaliman para perusak hukum dan kekeringan hikmah.<br><br>
+                Rabbanā ātinā mil-ladunka raḥmataw wa hayyi' lanā min amrinā rasyadā. Rabbanā zidnā 'ilmā, warzuqnā fahmā, wa al-ḥiqnā biṣh-ṣhāliḥīn. Wa shallallāhu 'alā Sayyidinā Muḥammadin wa 'alā ālihī wa shaḥbihī wa sallam. Wal-ḥamdu lillāhi Rabbil-'ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-047 - QS. Ali 'Imran Ayat 47.html">&larr; Kembali ke Ayat 47 (QS. 3:47)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 48</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-049 - QS. Ali 'Imran Ayat 49.html">Lanjut ke Ayat 49 (QS. 3:49) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

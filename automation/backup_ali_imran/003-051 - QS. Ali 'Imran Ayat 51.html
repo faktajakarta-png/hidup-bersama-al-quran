@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-051 - QS. Ali 'Imran Ayat 51 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-050 - QS. Ali 'Imran Ayat 50.html">&larr; Ayat Sebelumnya (QS. 3:50)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-052 - QS. Ali 'Imran Ayat 52.html">Ayat Berikutnya (QS. 3:52) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 3 (Ayat 45–51): Basyarah Kelahiran Al-Masih, Dekonstruksi Trinitas, Mukjizat Kalimatullah & Deklarasi Tauhid Murni</span>
+        <span class="badge">8 Kata | 34 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 51</h1>
+    <div class="transliteration">
+        "Inna Allāha Rabbī wa Rabbukum fa'budūh(u), hādzā shirāṭum mustaqīm(un)."
+    </div>
+    <div class="thematic-title">
+        Deklarasi Monoteisme Murni Al-Masih 'Isa AS, Dekonstruksi Radikal Penuhanan Makhluk & Konvergensi 'Shirāṭ Mustaqīm': Titik Puncak Risalah Kenabian Pembongkar Doktrin Trinitas
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 3: Basyarah Kelahiran Al-Masih, Dekonstruksi Trinitas, Mukjizat Kalimatullah & Deklarasi Tauhid Murni)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        إِنَّ ٱللَّهَ رَبِّى وَرَبُّكُمْ فَٱعْبُدُوهُ ۚ هَـٰذَا صِرَٰطٌ مُّسْتَقِيمٌۭ ۝٥١
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Sesungguhnya Allah adalah Tuhanku (Pencipta, Pemelihara, dan Pengaturku) dan Tuhanmu (Pencipta, Pemelihara, dan Pengaturmu), maka sembahlah Dia semata. Inilah jalan yang lurus (yang mengantarkan kepada kebenaran dan keselamatan sejati tanpa penyimpangan)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan klimaks doktrinal (<em>theological climax</em>) dari seluruh rangkaian mukjizat spektakuler yang dianugerahkan kepada Nabi 'Isa AS yang dipaparkan pada ayat 49 dan 50. Setelah menegaskan kemampuannya meniupkan ruh ke miniatur burung dari tanah liat, menyembuhkan penyakit kusta, mencelikkan orang yang buta sejak lahir, menghidupkan orang mati, dan menyingkap rahasia perbekalan rumah tangga kaumnya—di mana setiap mukjizat dikawal ketat oleh klausul <em>"bi-idznillāh"</em> (atas izin Allah semata)—Nabi 'Isa AS menutup risalah dasarnya dengan penegasan posisi ontologis dirinya: ia bukan tuhan, bukan anak tuhan, dan bukan oknum dari trinitas. Hubungan dirinya dengan Allah adalah hubungan kehambaan mutlak (<em>'ubūdiyyah</em>) di bawah naungan rububiyah Ilahi. Penggabungan lafaz <em>Rabbī</em> (Tuhanku) dan <em>Rabbukum</em> (Tuhanmu) menyejajarkan status Nabi 'Isa AS dan seluruh umat manusia dalam satu kategori universal: sama-sama makhluk ciptaan yang bergantung penuh kepada Allah SWT. Inilah esensi dari <em>Shirāṭum Mustaqīm</em> (Jalan yang Lurus) yang membedakan monoteisme murni kenabian dari distorsi mitologis dan penuhanan figur manusiawi.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>إِنَّ</strong><br>(<em>Inna</em>)</td>
+                <td>
+                    <strong>Hamzah Qath'i Kasrah:</strong> Keluar dari pangkal tenggorokan (<em>aqshal-halq</em>) dengan sifat tahqiq, jahr, dan istifal.<br>
+                    <strong>Nun Musyaddadah:</strong> Memiliki <strong>Ghunnah Akmal mā Takūn</strong> (tingkatan dengung paling sempurna) yang ditahan 2 harakat bergetar di rongga hidung (<em>khaisyūm</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat (ijma') membaca kasrah pada hamzah <em>Inna</em> sebagai <em>kasrah hamzah fī bad'il-istitsnāf</em> atau <em>maqwūl al-qawl</em> yang melanjutkan hikayah sabda Nabi 'Isa AS, disertai ghunnah musyaddadah sempurna pada Nun.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱللَّهَ</strong><br>(<em>Allāha</em>)</td>
+                <td>
+                    <strong>Alif Lam Syamsiyyah:</strong> Lam ta'rif diidghamkan ke dalam Lam Jalālah.<br>
+                    <strong>Taghlīzh / Tafkhīm Lam Jalālah:</strong> Karena didahului harakat fathah pada Nun bertasydid <em>Inna</em>, maka dua huruf Lam dibaca tebal dan agung dengan mengangkat pangkal lidah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fathah (manshub) pada Lam Jalālah sebagai <em>Isim Inna</em>, dan dibaca dengan kaidah tafkhim mutlak secara konsensus qira'at mutawatirah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>رَبِّى</strong><br>(<em>Rabbī / Rabbiya</em>)</td>
+                <td>
+                    <strong>Huruf Rā':</strong> Dibaca tafkhim (tebal) karena berharakat fathah.<br>
+                    <strong>Bā' Musyaddadah:</strong> Tasydid kasrah dengan sifat syiddah dan jahr yang ditekan sempurna.<br>
+                    <strong>Yā' Iḍhāfah:</strong> Mad thabi'i 2 harakat saat sukun, atau fathah ringan saat washal.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (Hafsh, Qālūn, Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, Syu'bah, Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir):</strong> Membaca dengan <strong>sukūn Yā' Iḍhāfah (رَبِّي)</strong>, panjang 2 harakat saat washal maupun waqaf.<br>
+                    • <strong>Warsy 'an Nāfi' dan Abū Ja'far:</strong> Membaca dengan <strong>fatḥah Yā' Iḍhāfah (رَبِّيَ)</strong> saat washal (<em>Rabbiya wa Rabbukum</em>), dan kembali sukun saat waqaf.<br>
+                    <em>Implikasi Teologis:</em> Bacaan sukun menekankan keintiman tawakal peribadi Nabi 'Isa, sedangkan bacaan fathah (<em>Rabbiya</em>) mempertegas deklarasi vokal di hadapan kaumnya bahwa ia tidak memiliki hak ketuhanan sedikit pun.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَرَبُّكُمْ</strong><br>(<em>wa Rabbukum</em>)</td>
+                <td>
+                    <strong>Wāw 'Athaf:</strong> Fathah tipis (tarqīq).<br>
+                    <strong>Rā' Fathah:</strong> Tafkhim.<br>
+                    <strong>Bā' Tasydid Dhammah:</strong> Syiddah mutlak.<br>
+                    <strong>Idzhār Syafawī Asyad:</strong> Pertemuan Mīm Sākinah dengan huruf Fā' (<em>hum fa'budūh</em>) menuntut kejelasan artikulasi tingkat tinggi (<em>asyaddu izhhāran</em>) agar makhraj mim bibir tidak terserap oleh makhraj fa' (<em>li-ittihādil-makhraj wal-qurb</em>).
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (termasuk Hafsh):</strong> Membaca sukun pada Mim jamak tanpa shilah: <em>wa Rabbukum fa'budūh</em>.<br>
+                    • <strong>Ibnu Katsīr dan Abū Ja'far:</strong> Membaca dengan <strong>Shilah Mīm al-Jam' (وَرَبُّكُمُو فَعْبُدُوهُ)</strong> menghubungkan mim dengan wawu mad 2 harakat.<br>
+                    • <strong>Qālūn:</strong> Memiliki dua jalur riwayat yang sah: sukun mim jamak atau shilah mim jamak 2 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَٱعْبُدُوهُ</strong><br>(<em>fa'budūh</em>)</td>
+                <td>
+                    <strong>Hamzah Washal Gugur:</strong> Langsung menyambung dari Fa' fathah ke 'Ain sukun.<br>
+                    <strong>'Ain Sākinah:</strong> Keluar dari tengah tenggorokan (<em>wasathul-halq</em>) dengan sifat <em>tawassuth / bainiyyah</em> (tidak memantul dan tidak tercekik).<br>
+                    <strong>Mad Thabī'ī / 'Āriḍh lis-Sukūn:</strong> Panjang Wawu mad 2 harakat saat washal; menjadi 2, 4, atau 6 harakat jika waqaf pada Hā' sukun yang disertai sifat hams.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il amr bentuk jamak mudzakkar <em>fa'budū</em> yang bersambung dengan dhamir maf'ul bih gha'ib mufrad mudzakkar <em>hū</em> (merujuk kepada Allah SWT semata).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>هَـٰذَا</strong><br>(<em>hādzā</em>)</td>
+                <td>
+                    <strong>Hā' Tanbīh:</strong> Mengalirkan nafas hams.<br>
+                    <strong>Alif Mad Shaghīrah:</strong> Panjang 2 harakat.<br>
+                    <strong>Huruf Dzāl:</strong> Keluar dari ujung lidah bertemu ujung gigi seri atas dengan sifat jahr dan rikhwah (lembut tanpa desis berlebihan), disusul alif mad 2 harakat.
+                </td>
+                <td>
+                    Kesepakatan mutawatir sepuluh imam membaca isim isyarah <em>hādzā</em> untuk menunjukkan ketunggalan dan kejelasan hakikat tauhid yang baru saja diproklamasikan.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>صِرَٰطٌ</strong><br>(<em>shirāṭun</em>)</td>
+                <td>
+                    <strong>Shād Kasrah:</strong> Sifat isti'la' dan ithbaq (tebal).<br>
+                    <strong>Rā' Fathah:</strong> Tafkhim, diikuti alif mad 2 harakat.<br>
+                    <strong>Thā' Dhammah Tanwin:</strong> Huruf terkuat dalam fonetika Arab (isti'la', ithbaq, syiddah, jahr).<br>
+                    <strong>Idghām Bighunnah:</strong> Pertemuan tanwin Thā' dengan Mīm bertasydid (<em>shirāṭum-mustaqīm</em>) ditahan 2 harakat secara sempurna.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (Nāfi', Ibnu Katsīr riwayat Al-Bazzī, Abū 'Amr, Ibnu 'Āmir, 'Āṣhim, Al-Kisā'ī, Abū Ja'far, Ya'qūb riwayat Ya'qūb al-Hadhrami):</strong> Membaca dengan huruf <strong>Shād murni (صِرَاطٌ)</strong>.<br>
+                    • <strong>Qunbul 'an Ibni Katsīr dan Ruwais 'an Ya'qūb:</strong> Membaca dengan huruf <strong>Sīn murni (سِرَاطٌ)</strong> berakar dari kata <em>saratha</em> (menelan pengendara karena lapangnya).<br>
+                    • <strong>Ḥamzah (Khalaf dan Khallād) serta Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Isymām ash-Shād bi-shautiz-Zāy (صِرَاط)</strong>, yakni memadukan artikulasi Shād dengan desis bergetar huruf Zāy.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مُّسْتَقِيمٌ ۝٥١</strong><br>(<em>mustaqīm</em>)</td>
+                <td>
+                    <strong>Huruf Sīn Sākinah:</strong> Sifat hams, rikhwah, dan <strong>Shafīr</strong> (desis tajam murni).<br>
+                    <strong>Tā' Fathah:</strong> Hams ringan.<br>
+                    <strong>Qāf Kasrah:</strong> Isti'la' tingkat kelima (relatif lebih lembut karena berharakat kasrah).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di akhir ayat, huruf Yā' mad dibaca 2, 4, atau 6 harakat disertai tawassuth pada Mīm sukun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca sifat <em>mustaqīm</em> dalam bentuk isim fa'il dari fi'il <em>istaqāma – yastaqīmu</em>, yang menandakan kelurusan permanen tanpa pembelokan teologis.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul Otoritatif — Debat Teologis Delegasi Kristen Najran (Sirah Ibnu Ishaq, Tafsir At-Tabari juz 3 hlm. 165, & Asbabun Nuzul karya Al-Wahidi):</strong><br>
+        Diriwayatkan dari Muhammad bin Ja'far bin Az-Zubair r.a., ia menuturkan bahwa ketika 60 orang delegasi Kristen Najran yang dipimpin oleh tokoh intelektual mereka Abdul Masih (Al-'Aqib), Sayyid Al-Ayham, dan Uskup Abu Haritsah bin 'Alqamah datang ke Madinah, mereka memasuki Masjid Nabawi mengenakan jubah sutra dan perhiasan emas. Terjadilah debat teologis mendalam dengan Rasulullah ﷺ mengenai pribadi Nabi 'Isa AS. Mereka menyatakan: <em>"Bukankah 'Isa menghidupkan orang mati, menyembuhkan penyakit sopak, membuat burung dari tanah liat, dan lahir tanpa ayah? Maka tidakkah itu membuktikan bahwa ia adalah Allah atau anak Allah?"</em><br>
+        Maka Allah SWT menurunkan pembuka Surah Ali 'Imran hingga lebih dari 80 ayat untuk mendudukkan hakikat sejarah dan teologi kenabian. Di ayat 51 ini, Allah mengutip secara harfiah pernyataan pamungkas Nabi 'Isa AS sendiri di hadapan kaumnya: bahwa seluruh mukjizat tersebut tidak menjadikan dirinya tuhan, melainkan hanya tanda kenabian untuk mengantarkan manusia menyembah Allah semata: <em>"Inna Allāha Rabbī wa Rabbukum fa'budūh, hādzā shirāṭum mustaqīm"</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Al-Bukhari (No. 3445) & Musnad Ahmad (No. 154) dari Sahabat 'Umar bin Al-Khattab r.a. — Larangan Ekstremitas Kultus Figur:</strong><br>
+        Rasulullah ﷺ menegaskan di atas mimbar Nabawi:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«لَا تُطْرُونِي كَمَا أَطْرَتِ النَّصَارَى ابْنَ مَرْيَمَ، فَإِنَّمَا أَنَا عَبْدُهُ، فَقُولُوا: عَبْدُ اللَّهِ وَرَسُولُهُ»</span>
+        <em>"Lā tuthrunī kamā athratin-nashārā-bna Maryam, fa-innamā anā 'abduh, faqūlū: 'Abdullāhi wa Rasūluh."</em><br>
+        <strong>Artinya:</strong> "Janganlah kalian berlebih-lebihan memujiku (hingga mengangkat derajatku melebihi batas kemanusiaan) sebagaimana kaum Nasrani memuji secara melampaui batas putra Maryam (hingga menuhankannya). Sesungguhnya aku hanyalah hamba-Nya, maka sebutlah aku: <strong>Hamba Allah dan Rasul-Nya!</strong>"<br>
+        <strong>Derajat Hadits:</strong> Sahih Muttafaq 'alaih (riwayat Al-Bukhari).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Riwayat Imam Al-Bukhari (No. 3435) & Imam Muslim (No. 28) dari 'Ubadah bin Ash-Shamit r.a. — Garansi Keselamatan Pengakuan Kenabian 'Isa AS:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«مَنْ شَهِدَ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَأَنَّ عِيسَى عَبْدُ اللَّهِ وَرَسُولُهُ، وَكَلِمَتُهُ أَلْقَاهَا إِلَى مَرْيَمَ وَرُوحٌ مِنْهُ، وَالجَنَّةَ حَقٌّ، وَالنَّارَ حَقٌّ، أَدْخَلَهُ اللَّهُ الجَنَّةَ عَلَى مَا كَانَ مِنَ العَمَلِ»</span>
+        <em>"Man syahida an lā ilāha illallāhu wahdahū lā syarīka lah, wa anna Muhammadan 'abduhū wa rasūluh, wa anna 'Īsā 'abdullāhi wa rasūluh, wa kalimatuhū alqāhā ilā Maryama wa rūhun minh, wal-jannata haqqun wan-nāra haqqun, adkhalahul-lāhul-jannata 'alā mā kāna minal-'amal."</em><br>
+        <strong>Artinya:</strong> "Barangsiapa bersaksi bahwa tidak ada tuhan yang berhak disembah selain Allah semata yang tiada sekutu bagi-Nya, dan bahwa Muhammad adalah hamba dan rasul-Nya, serta bahwa <strong>'Isa adalah hamba Allah dan rasul-Nya</strong>, kalimat-Nya yang disampaikan-Nya kepada Maryam dan ruh dari-Nya, serta meyakini bahwa surga itu hak dan neraka itu hak, niscaya Allah memasukkannya ke dalam surga bagaimanapun kadar amalnya."<br>
+        <strong>Derajat Hadits:</strong> Sahih Muttafaq 'alaih.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar R-B-B (ر-ب-ب — Ar-Rabb, Rabbī, Rabbukum):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ر-ب-ب) menjelaskan bahwa akar kata ini berporos pada tiga makna fundamental: pertama, kepemilikan dan kedaulatan mutlak (<em>al-mulk wal-hukm</em>); kedua, perbaikan, pemeliharaan, dan penyempurnaan sesuatu tahap demi tahap hingga mencapai kesempurnaan fitrahnya (<em>ishlāhusy-syai' wa tarbiyatuhū hālan fa-hālan ilā at-tamām</em>); dan ketiga, kemestian ditaati dan diagungkan (<em>al-luzūm wal-ithā'ah</em>). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menambahkan bahwa kata <em>Ar-Rabb</em> apabila digunakan secara mutlak dengan <em>alif lām</em> hanya boleh ditujukan kepada Allah SWT. Dalam ayat ini, Nabi 'Isa menyandarkan lafaz <em>Rabb</em> kepada dirinya (<em>Rabbī</em>) dan kaumnya (<em>Rabbukum</em>), membongkar ilusi ontologis ketuhanan dirinya: Nabi 'Isa menegaskan bahwa dirinya adalah objek yang dipelihara, diberi rezeki, dan dibimbing oleh Allah, sama persis seperti kaumnya.
+        </li>
+        <li>
+            <strong>2. Akar '-B-D (ع-ب-د — Fa'budūh):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> (entri: ع-ب-د) merumuskan bahwa poros tunggal dari akar ini adalah ketundukan yang mendalam, kelembutan ketaatan, dan kerendahan diri yang berserah penuh (<em>adz-dzull wal-istiqiyād wal-istīkānah</em>). Bangsa Arab menamai jalanan yang telah diinjak-injak kaki musafir hingga menjadi mulus dan rata untuk dilalui sebagai <em>tharīqun mu'abbad</em>. Dalam balaghah Qur'ani, <em>'ibādah</em> adalah perpaduan organik antara puncak ketundukan batin (<em>ghāyatudz-dzull</em>) dan puncak cinta suci (<em>ghāyatul-hubb</em>) yang hanya sah dialamatkan kepada Sang Khaliq.
+        </li>
+        <li>
+            <strong>3. Akar Sh-R-Th (ص-ر-ط — Shirāṭ):</strong><br>
+            Ibnu Faris memaparkan bahwa poros aslinya adalah <em>al-ibtilā' wal-murūr al-wāsi'</em> (jalan raya yang luas membentang dan lurus menelan pelintasnya tanpa kemacetan dan bahaya). Jalur ini disebut <em>shirāṭ</em> karena saking lapang dan jelasnya, ia menuntun pejalan langsung kepada keselamatan tanpa belokan yang menyesatkan (<em>al-maslak al-wādhih al-ladzī lā 'iwaja fīh</em>).
+        </li>
+        <li>
+            <strong>4. Akar Q-W-M (ق-و-م — Mustaqīm):</strong><br>
+            Berasal dari <em>qāma – yaqūmu</em>, wazan <em>istif'āl</em> (<em>mustaqīm</em>). Menandakan tuntutan ketegakan yang permanen, kokoh, tidak miring ke kiri (ekstremitas ifrath / pengkultusan nabi menjadi tuhan) dan tidak miring ke kanan (ekstremitas tafrith / penolakan dan pembunuhan para nabi sebagaimana dilakukan sebagian Bani Israil).
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>إِنَّ</strong></td>
+                <td>Harf tawkīd wa nashab, mabni 'alal-fath.</td>
+                <td>Berfungsi menasabkan isim dan merafa'kan khabar; berfungsi menetapkan kepastian absolut (<em>tahqīq al-hukm</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهَ</strong></td>
+                <td>Ism 'alam jalālah.</td>
+                <td><strong>Ism Inna</strong> manshūb bil-fathah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>رَبِّى</strong></td>
+                <td>Ism mudhāf berangkai dengan yā' mutakallim.</td>
+                <td><strong>Khabar Inna Awwal</strong> marfū' bil-dhammah al-muqaddarah 'alā ma qabla yā'il-mutakallim (terhalang munculnya dhammah karena tempatnya telah terisi harakat kasrah yang sesuai bagi huruf Yā'). <em>Yā'</em> dhamīr muttashil mabni 'alas-sukūn (atau fathah pada qira'at Warsy) fī mahalli jarrin mudhāfun ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>وَرَبُّكُمْ</strong></td>
+                <td><em>Wāw</em> harf 'athaf; <em>Rabb</em> ism mudhāf; <em>Kum</em> dhamīr jam' mukhatab.</td>
+                <td><strong>Ma'thūf</strong> kepada khabar Inna (<em>Rabbī</em>) marfū' bil-dhammah azh-zhāhirah. <em>Kāf</em> dhamīr muttashil mabni 'alad-dhammah fī mahalli jarrin mudhāfun ilayh; <em>Mīm</em> tanda jamak mudzakkar.</td>
+            </tr>
+            <tr>
+                <td><strong>فَٱعْبُدُوهُ</strong></td>
+                <td><em>Fa'</em> fashīhah; <em>u'budū</em> fī'il amr mabni 'alā hadzfin-nūn; <em>Wāw</em> fa'il; <em>Hā'</em> maf'ūl bih.</td>
+                <td><em>Fa'</em> mengikat jawaban syarat yang diandaikan (<em>fashīhah</em>: "Jika kalian telah tahu bahwa Allah adalah Tuhanku dan Tuhanmu, maka..."). <em>Wāw al-Jamā'ah</em> fī mahalli raf'in Fā'il; <em>Hā'</em> dhamīr muttashil mabni 'alad-dhammah fī mahalli nashbin Maf'ūl Bih. Jumlah fi'liyyah ini adalah <strong>Jawāb Syarth Muqaddar</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>هَـٰذَا</strong></td>
+                <td><em>Hā'</em> harf tanbīh; <em>Dzā</em> ism isyārah li-qarīb, mabni 'alas-sukūn.</td>
+                <td><strong>Mubtada'</strong> fī mahalli raf'in (merujuk kepada penghambaan mutlak dan ketauhidan yang baru saja diikrarkan).</td>
+            </tr>
+            <tr>
+                <td><strong>صِرَٰطٌ</strong></td>
+                <td>Isim jānid wazan <em>fi'āl</em>.</td>
+                <td><strong>Khabar Mubtada'</strong> marfū' bil-dhammah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>مُّسْتَقِيمٌ ۝٥١</strong></td>
+                <td>Isim Fā'il wazan <em>mustaf'il</em> dari akar <em>q-w-m</em>.</td>
+                <td><strong>Na'at / Sifat</strong> bagi <em>shirāṭun</em>, marfū' bil-dhammah azh-zhāhirah. Seluruh jumlah ismiyyah <em>(hādzā shirāṭum mustaqīm)</em> adalah <strong>Jumlah Musta'nafah Ta'kīdiyyah</strong> (kalimat penguat penutup risalah).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Iṭnāb bi-Dzikril-Khāṣh Qablal-'Āmm (Taqdim Rabbī 'alā Rabbikum):</strong><br>
+            Nabi 'Isa mendahulukan penyebutan <em>Rabbī</em> (Tuhanku) sebelum <em>Rabbukum</em> (Tuhanmu). Secara balaghah, ini adalah uslub keteladanan tertinggi: seorang dai dan rasul tidak memerintahkan manusia untuk tunduk kepada Allah sebelum ia sendiri mendeklarasikan ketundukan pribadinya secara mutlak. Dengan menempatkan dirinya sebagai pihak pertama yang bertuhan kepada Allah, Nabi 'Isa menutup rapat-rapat pintu pengkultusan bagi siapa pun yang hendak menjadikannya sekutu bagi Allah.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Faṣhl wal-Washl via Al-Fā' Al-Faṣhīḥah:</strong><br>
+            Huruf <em>Fa'</em> pada <em>fa'budūh</em> berfungsi sebagai <em>Fā' Tasabbubiyyah / Fashīhah</em>. Maknanya: pengakuan terhadap <strong>Tauhid Rububiyah</strong> (bahwa Allah adalah satu-satunya Pencipta dan Pemelihara semesta) menuntut konsekuensi logis yang tak terbantahkan berupa pelaksanaan <strong>Tauhid Uluhiyah</strong> (peribadatan murni hanya kepada-Nya). Menolak menyembah Allah semata setelah mengakui-Nya sebagai Pencipta adalah kontradiksi akal yang paling cacat.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Isti'ārah At-Taṣhrīḥiyyah fī Lafzh "Ash-Shirāṭ":</strong><br>
+            Al-Qur'an meminjam kata <em>shirāṭ</em> (jalan raya beraspal yang mulus, lebar, dan lurus tanpa kelokan) untuk menggambarkan manhaj tauhid dan ketaatan syariat. Hubungan persamaannya (<em>wajhusy-syabah</em>) adalah kejelasan rute, kemudahan ditempuh oleh fitrah yang sehat, dan kepastian menghantarkan pejalan langsung ke terminal kebahagiaan abadi tanpa tersesat di persimpangan bid'ah dan syirik.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-I'tilāf bayna Ar-Rubūbiyyah wal-'Ubūdiyyah:</strong><br>
+            Keindahan badi' terletak pada keseimbangan harmonis antara konsep <em>Rabb</em> dan <em>'Ibadah</em>. Tidak ada <em>'ibadah</em> tanpa adanya <em>Rabb</em> yang berhak disembah, dan tidak ada pengakuan <em>Rabb</em> yang sejati tanpa bukti ketundukan <em>'ibadah</em> yang nyata.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual dengan Ayat 49–50):</strong><br>
+            Ayat 49 memaparkan daftar mukjizat adikodrati Nabi 'Isa AS yang menggetarkan akal manusia (menciptakan burung dari tanah liat, menyembuhkan lepra, menghidupkan mayat). Setiap mukjizat dipagari oleh lafaz <em>"bi-idznillāh"</em>. Ayat 50 melanjutkan dengan misi sosio-religius: membenarkan kitab Taurat dan melonggarkan beberapa hukum syariat yang sebelumnya diharamkan atas Bani Israil sebagai bentuk rahmat. Maka Ayat 51 hadir sebagai <em>natijah qath'iyyah</em> (konklusi logis): seluruh mukjizat itu bukan legitimasi ketuhanan Nabi 'Isa, melainkan bukti otentik kenabian agar manusia takut kepada Allah dan taat kepada perintah-Nya. Kalimat <em>"Inna Allāha Rabbī wa Rabbukum fa'budūh"</em> adalah proklamasi resmi yang mengakhiri presentasi mukjizat tersebut.
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis Dialog Delegasi Kristen Najran di Madinah):</strong><br>
+            Ayat ini diturunkan dalam konteks dialog teologis tingkat tinggi antara Nabi Muhammad ﷺ dan delegasi 60 elit Kristen Najran di Masjid Nabawi pada tahun 9–10 Hijriyah. Umat Kristen Najran telah terbelah dan terdistorsi oleh konsili-konsili kristologi era Bizantium (seperti Konsili Nicea 325 M dan Kalsedon 451 M) yang merumuskan konsep Trinitas dan dua kodrat 'Isa. Ketika mereka mengklaim ketuhanan Al-Masih berdasarkan mukjizat-mukjizatnya, Al-Qur'an mematahkan argumen tersebut dari lisan Nabi 'Isa sendiri: Nabi 'Isa tidak pernah mengajarkan doktrin Trinitas, tidak pernah meminta dirinya disembah, dan secara terang benderang menyatakan bahwa Allah adalah Tuhannya dan Tuhan mereka!
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 52):</strong><br>
+            Setelah Nabi 'Isa mengikrarkan ayat 51 ini, ayat 52 langsung memaparkan reaksi sosiologis kaumnya: <em>"Fa-lammā aḥassa 'Īsā minhumul-kufra qāla man anṣhārī ilallāh..."</em> (Maka tatkala 'Isa merasakan keingkaran dari mereka, berkatalah ia: Siapakah yang akan menjadi penolong-penolongku untuk menegakkan agama Allah?). Sikap para pembesar Bani Israil yang menolak seruan tauhid murni ini membuktikan bahwa penolakan terhadap ayat 51 bukan karena ketidakjelasan dalil, melainkan karena arogansi kekuasaan dan kemunafikan para rabi Yahudi saat itu.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam At-Tabari menegaskan bahwa ayat ini merupakan bantahan paling telak dari Allah SWT terhadap kaum Nasrani Najran yang mempertuhankan Nabi 'Isa AS. At-Tabari memaparkan: <em>"Nabi 'Isa mengabarkan kepada kaumnya bahwa Allah adalah Pemilik tunggal dirinya dan Pemilik mereka, yang menciptakan dirinya dan menciptakan mereka, serta yang mengatur urusannya dan urusan mereka. Maka sembahlah Dia semata secara ikhlas tanpa menyekutukan-Nya dengan apa pun. Inilah ketetapan jalan yang lurus yang tiada kebengkokan di dalamnya."</em> At-Tabari menggarisbawahi bahwa siapa pun yang mengklaim Nabi 'Isa menyeru manusia untuk menyembah dirinya telah melakukan kebohongan sejarah dan pengkhianatan wahyu yang nyata.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir mengaitkan ayat ini dengan ayat serupa dalam QS. Maryam [19]: 36 saat Nabi 'Isa masih berada dalam buaian: <em>"Wa inna Allāha Rabbī wa Rabbukum fa'budūh, hādzā shirāṭum mustaqīm"</em>. Ibnu Katsir menjelaskan: <em>"Hal ini membuktikan konsistensi akidah Al-Masih sejak awal kehidupannya hingga masa dewasa kenabiannya. Beliau senantiasa menegaskan status dirinya sebagai hamba Allah yang diciptakan dan diasuh oleh Allah. Beliau menyamakan dirinya dengan seluruh manusia dalam hal kehambaan (al-'ubūdiyyah) dan ketundukan kepada rububiyah Ilahi. Maka barangsiapa yang meniti jalan penghambaan kepada Allah semata, itulah jalan yang lurus; dan barangsiapa yang menyimpang darinya menuju penuhanan makhluk, sungguh ia telah terjerumus ke dalam jurang kebinasaan."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Imam Al-Qurthubi menyoroti dimensi hukum dan teologi syariat: kalimat <em>fa'budūh</em> adalah bentuk fi'il amr yang bermakna kewajiban mutlak (<em>wujūb qath'ī</em>) untuk memurnikan ibadah hanya kepada Allah. Al-Qurthubi mencatat: <em>"Ayat ini melucuti dasar legitimasi gereja yang mengkultuskan Al-Masih. Jika Al-Masih sendiri memerintahkan kaumnya: 'Sembahlah Tuhanku dan Tuhanmu', maka penyembah Al-Masih secara yuridis syar'i telah membangkang terhadap sosok yang mereka klaim sebagai tuhan atau rasul mereka sendiri!"</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (467–538 H) & Fakhruddin Ar-Razi (544–606 H):</strong><br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menyoroti kaitan huruf <em>Fa'</em> dengan premis rasional: pengakuan atas Allah sebagai Rabb adalah sebab mutlak bagi kewajiban beribadah kepada-Nya. Barangsiapa memisahkan antara rububiyah dan uluhiyah, maka akalnya telah mengalami cacat penalaran fundamental.<br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Membedah secara teologis-filosofis: Nabi 'Isa menyebut Allah sebagai <em>Rabbī</em>, membuktikan bahwa eksistensi dirinya bersifat <em>mumkin al-wujūd</em> (keberadaannya bergantung pada pemeliharaan Sang Pencipta). Zat yang bergantung dan dipelihara mustahil berstatus sebagai <em>Wājib al-Wujūd bi-dzātih</em> (Tuhan Mutlak). Oleh karena itu, klaim Trinitas batal secara ontologis dan rasional.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur membedah orientasi maqashidi ayat ini: Frase <em>Hādzā shirāṭum mustaqīm</em> adalah definisi peradaban bagi agama samawi. Agama yang lurus adalah agama yang menghapus kasta spiritual: tidak ada manusia yang diangkat menjadi dewa, dan tidak ada manusia yang direndahkan martabatnya menjadi budak manusia lain. Semua berdiri setara sebagai hamba di hadapan Sang Rabb Yang Maha Esa. Inilah fondasi kebebasan jiwa dan keadilan sosial universal.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan getaran jiwa yang syahdu: <em>"Alangkah jujur dan tawadunya Nabi 'Isa. Setelah memperlihatkan mukjizat-mukjizat yang dapat memukau mata dan mengguncang jiwa, beliau tidak mabuk oleh sanjungan. Beliau tidak menepuk dada seraya mengaku anak Allah. Beliau segera berkata dengan lantang: 'Allah itu Tuhanku dan Tuhanmu, maka sembahlah Dia!' Inilah akhlak sejati para nabi yang steril dari ambisi penuhanan diri."</em><br>
+        • <strong>M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menggarisbawahi keindahan psikologis pendahuluan <em>Rabbī</em> sebelum <em>Rabbukum</em>: seorang pendidik dan pembimbing sejati harus menunjukkan kerendahan hati bahwa dirinya pun terikat oleh aturan yang sama. Penggunaan kata <em>Rabb</em> yang berakar pada kasih sayang dan pendidikan membimbing manusia agar menyembah Allah bukan atas dasar teror ketakutan, melainkan atas dasar rasa syukur kepada Sang Pemelihara sejati.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI menegaskan bahwa QS. Ali 'Imran: 51 adalah piagam teologis yang menjembatani hubungan antarumat beragama di Indonesia dengan meluruskan kesalahpahaman historis. Al-Qur'an memuliakan Nabi 'Isa AS sebagai rasul agung (Ulul 'Azmi), namun menolak dengan tegas deifikasi (penuhanan) atas dirinya. Penegasan <em>Shirāṭum Mustaqīm</em> mengajak seluruh umat manusia untuk kembali kepada titik temu paling hakiki: penyembahan murni kepada Tuhan Yang Maha Esa tanpa sekutu.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Ijma' / Konsensus Ulama)</th>
+                <th>Dinamika Penekanan (Ikhtilaf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Ontologis Nabi 'Isa AS</strong></td>
+                <td>Sepakat mutlak (ijma') bahwa Nabi 'Isa adalah hamba Allah dan rasul-Nya; ayat ini menolak secara kategoris segala bentuk Trinitas, inkarnasi tuhan (avatar), dan anak Allah.</td>
+                <td>• At-Tabari & Ibnu Katsir fokus pada penegasan riwayat asbabun nuzul Najran.<br>• Ar-Razi fokus pada dekonstruksi filosofis konsep <em>Wajib al-Wujud</em> vs <em>Mumkin al-Wujud</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>Fungsi Kalimat 'Shirāṭum Mustaqīm'</strong></td>
+                <td>Sepakat bahwa jalan lurus yang dimaksud adalah tauhid murni yang menyatukan seluruh ajaran para rasul sejak Nabi Adam hingga Nabi Muhammad ﷺ.</td>
+                <td>• Ibnu 'Asyur menekankan aspek sosiologis dan penghapusan kasta teologis.<br>• Buya Hamka menekankan keteladanan moral dan tawadunya pribadi Nabi 'Isa AS.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan Rububiyah & Uluhiyah</strong></td>
+                <td>Sepakat bahwa penyebutan <em>Rabbukum</em> menjadi landasan yuridis bagi kewajiban <em>fa'budūh</em>.</td>
+                <td>• Az-Zamakhsyari membedah logika sintaksis Fa' Fashihah.<br>• Quraish Shihab mengelaborasi sentuhan psikologis kasih sayang dalam tarbiyah Ilahi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan neuropsikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Jahiliyah Modern vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Sekuler Modern</th>
+                <th>Pola Pikir Qur'ani (Rabbani)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Pusat Orientasi Jiwa (Locus of Orientation)</strong></td>
+                <td><strong>Hero-Worship & Pemujaan Makhluk:</strong> Menggantungkan rasa aman batin, harapan, dan kepatuhan mutlak pada figur manusia karismatik, figur politik, atau kekayaan materi.</td>
+                <td><strong>Theocentric Monotheism:</strong> Meletakkan Allah sebagai satu-satunya <em>Rabb</em> dan objek penghambaan; menempatkan figur manusia sehebat apa pun hanya sebagai sesama hamba.</td>
+            </tr>
+            <tr>
+                <td><strong>Atribusi Keberhasilan & Bakat</strong></td>
+                <td><strong>Narsisme & Pengakuan Ego:</strong> Mengklaim mukjizat, talenta, dan prestasi sebagai bukti superioritas personal (<em>ego-inflation</em>).</td>
+                <td><strong>Prinsip 'Bi-Idznillāh' & Tawadu':</strong> Menyadari bahwa kejeniusan dan mukjizat hanyalah titipan izin Allah; semakin tinggi prestasi, semakin dalam ketundukan sujud.</td>
+            </tr>
+            <tr>
+                <td><strong>Konsepsi Kebenaran Hidup</strong></td>
+                <td><strong>Relativisme Moral:</strong> Menganggap semua kebenaran bersifat cair, subjektif, dan tidak memiliki kompas absolut (<em>anything goes</em>).</td>
+                <td><strong>Shirāṭ Mustaqīm (Objektivitas Wahyu):</strong> Meyakini adanya jalan lurus universal yang kokoh, jelas, dan mengantarkan jiwa kepada keselamatan sejati.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Equal-Servant Model (Model Kesetaraan Ontologis Makhluk):</strong><br>
+            <em>Premis:</em> Jika seorang Nabi 'Isa AS yang mampu menghidupkan mayat dan lahir tanpa ayah saja menegaskan dirinya sebagai hamba ciptaan yang bertuhan kepada Allah (<em>Rabbī</em>), maka tidak ada satu pun manusia di muka bumi ini—apakah ia konglomerat, presiden, ilmuwan jenius, atau ulama besar—yang berhak menuntut perlakuan kultus atau ketaatan mutlak layaknya tuhan.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Bebaskan diri Anda dari sindrom intimidasi sosial (<em>inferiority complex</em>) di hadapan manusia berkuasa, dan bersihkan diri dari arogansi (<em>superiority complex</em>) ketika Anda berada di puncak karier. Kita semua setara dalam kefakiran di hadapan Allah.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Straight-Path Coherence (Algoritma Shirāṭ Mustaqīm):</strong><br>
+            <em>Premis:</em> Kebenaran yang berasal dari Pencipta alam semesta selalu memiliki karakteristik jalan lurus: bebas dari paradoks kontradiktif, selaras dengan fitrah akal sehat yang bersih, dan tidak memerlukan akrobat teologi yang membingungkan jiwa manusia.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Dalam memilih jalan hidup, pilihlah prinsip-prinsip yang transparan, jujur, dan berakar pada wahyu ilahi, bukan jalan pintas manipulatif yang penuh belokan etika dan kompromi dosa.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Reduksi Disonansi Kognitif</h3>
+    <p>
+        Secara neuropsikologis, manusia yang mengkultuskan sesama manusia atau materi akan mengalami <em>cognitive dissonance</em> (gesekan batin yang menyiksa) setiap kali figur pujaan mereka memperlihatkan kelemahan, cacat moral, atau kematian. Jiwa manusia dirancang secara biologis dan spiritual (<em>fitrah</em>) untuk hanya bertaut secara mutlak kepada entitas yang Maha Sempurna dan Maha Abadi. Ketika jiwa mencoba menyembah sesuatu yang rapuh, sistem sarafnya merespons dengan kecemasan eksistensial kronis.
+    </p>
+    <p>
+        Proklamasi <em>"Inna Allāha Rabbī wa Rabbukum fa'budūh"</em> berfungsi sebagai <strong>terapi de-fragmen jiwa (tazkiyatun nafs)</strong>: ia merestorasi arsitektur batin manusia ke setelan pabrik fitrah aslinya. Ketika manusia menyadari bahwa ia dan seluruh alam semesta memiliki Tuhan yang sama yang Maha Pengasih dan Pengatur, seluruh ketakutan palsu terhadap manusia lenyap, digantikan oleh ketenangan batin (<em>thuma'nīnah</em>) yang stabil.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Kontemporer: Neo-Paganisme & Pemujaan Figur Digital</h3>
+    <p>
+        Masyarakat abad ke-21 mengklaim diri mereka sebagai peradaban paling rasional dan ilmiah yang telah meninggalkan takhayul masa lalu. Namun, diagnosis fenomenologis membuktikan terjadinya <strong>neo-paganisme modern</strong>: penyembahan tidak lagi ditujukan kepada patung batu, melainkan kepada manusia-manusia fana. Fenomena <em>celebrity worship syndrome</em>, pengkultusan para taipan teknologi Silicon Valley seolah mereka dewa penyelamat bumi, serta fanatisme buta terhadap tokoh politik telah menciptakan bentuk-bentuk Trinitas dan penuhanan baru dalam lanskap sekuler.
+    </p>
+    <p>
+        Ketika para pemuja digital ini mendapati bahwa figur yang mereka dewakan tersandung skandal korupsi, degradasi moral, atau kebangkrutan, masyarakat modern terseret ke dalam krisis depresi kolektif dan sinisme peradaban. QS. 3:51 hadir sebagai palu godam intelektual: manusia sehebat Nabi 'Isa yang mampu mengalahkan hukum biologi dan kematian saja menolak dipuja, lantas atas dasar apa manusia modern mendewakan figur-figur fana yang bahkan tidak mampu menciptakan sayap seekor lalat?
+    </p>
+
+    <h3>2. Dekonstruksi Relativisme Post-Truth & Solusi Peradaban Qur'ani</h3>
+    <p>
+        Era <em>post-truth</em> dan dekonstruksionisme posmodern mengajarkan bahwa tidak ada kebenaran objektif; semua narasi dianggap setara dan moralitas dipandang sekadar konstruksi sosial yang relatif. Akibatnya, manusia modern kehilangan arah navigasi eksistensial, terombang-ambing dalam epidemi kesepian, krisis makna, dan bunuh diri.
+    </p>
+    <p>
+        Al-Qur'an menjawab krisis ini dengan deklarasi agung: <em>"Hādzā shirāṭum mustaqīm!"</em> Ada jalan lurus yang objektif, kokoh, dan melintasi zaman. Jalan lurus itu bukan dogma tirani manusia, melainkan pengakuan jujur terhadap realitas ontologis kosmos: bahwa kita semua adalah makhluk ciptaan, dan keselamatan peradaban hanya dapat diraih ketika seluruh institusi hukum, ekonomi, dan politik tunduk kepada keadilan Ilahi.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Kalibrasi 'Bi-Idznillāh' Sebelum Memulai Karya:</strong><br>
+                Setiap kali Anda hendak membuka laptop untuk bekerja, memimpin rapat, atau mengeksekusi proyek besar, berhentilah sejenak selama 30 detik. Bacalah dengan kesadaran batin: <em>"Lā ḥawla wa lā quwwata illā billāh, inna Allāha Rabbī wa bi-idznihī a'mal"</em> (Tiada daya dan upaya kecuali dari Allah, sesungguhnya Allah adalah Tuhanku dan atas izin-Nya aku berkarya). Tindakan ini memprogram ulang otak bawah sadar agar steril dari kesombongan narsistik Nabi palsu dan membentengi diri dari sindrom keputusasaan jika hasil tidak sesuai harapan.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Filter Anti-Kultus dalam Relasi Sosial & Karier:</strong><br>
+                Terapkan aturan tegas dalam interaksi profesional dan keagamaan: Jangan pernah memberikan ketaatan mutlak tanpa reserve kepada atasan, mentor bisnis, figur politik, atau guru spiritual jika perintah mereka bertentangan dengan syariat Allah (<em>Lā thā'ata li-makhlūqin fī ma'shiyatil-Khāliq</em>). Hormati manusia karena akhlak dan ilmunya, tetapi simpan ketundukan dan penyembahan batin hanya untuk Allah SWT.
+            </li>
+            <li>
+                <strong>Komitmen Etika Relasional — Menghapus Arogansi Hierarkis:</strong><br>
+                Tataplah bawahan, asisten rumah tangga, staf junior, dan orang-orang kecil di sekitar Anda dengan paradigma <em>Rabbī wa Rabbukum</em>: sadarilah bahwa Tuhan yang memberi Anda rezeki adalah Tuhan yang sama yang menciptakan mereka. Hapuskan kata-kata merendahkan, berikan hak upah mereka sebelum keringatnya kering, dan perlakukan sesama manusia dengan martabat kehambaan yang setara di hadapan Allah.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Motif Penyembahan:</strong> Apakah rasa takut terbesarku, kecemasan finansiilku, dan harapan masa depanku lebih banyak bergantung pada belas kasihan manusia dan nominal rekening, ataukah hatiku telah benar-benar berlabuh pada keyakinan bahwa Allah adalah satu-satunya <em>Rabb</em> Pemelihara hidupku?
+            </li>
+            <li>
+                <strong>Uji Integritas Ego:</strong> Ketika aku meraih kesuksesan gemilang dan orang-orang memuji kehebatanku, apakah aku diam-diam menikmati sanjungan itu dan merasa diri ini luar biasa, ataukah aku segera menundukkan kepala seraya mengembalikan seluruh pujian kepada Allah sebagaimana ketawaduan Nabi 'Isa AS?
+            </li>
+            <li>
+                <strong>Uji Kompas Hidup (Shirāṭ Mustaqīm):</strong> Sejauh mana keputusanku dalam 24 jam terakhir benar-benar berpijak di atas Jalan yang Lurus (kejujuran, keadilan, dan ketakwaan), ataukah aku sering berkompromi menempuh jalan bengkok manipulasi demi mengejar keuntungan duniawi yang fana?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma innaka Antallāhu Rabbunā wa Rabbu kulli syay', lā ilāha illā Anta wahdaka lā syarīka lak, khalaqtanā wa nahnu 'abīduk, wa nahnu 'alā 'ahdika wa wa'dika mastatha'nā. Ya Allah, Tuhan kami dan Tuhan seluruh semesta alam! Rabb Yang disembah oleh Nabi 'Isa, Nabi Musa, Nabi Ibrahim, dan Nabi Muhammad ﷺ. Bersihkanlah kalbu kami dari noda syirik tersembunyi, dari godaan memuja makhluk, dan dari penyakit membanggakan diri sendiri. Karuniakanlah kepada kami keteguhan tauhid para nabi, bimbinglah setiap langkah kaki dan tarikan nafas kami agar senantiasa tegak di atas Shirāṭal Mustaqīm—jalan para hamba yang Engkau beri nikmat, bukan jalan mereka yang Engkau murkai dan bukan pula jalan mereka yang sesat. Jadikanlah lisan kami jujur dalam memproklamasikan kebenaran, dan wafatkanlah kami dalam keadaan bersujud mengikhlaskan penghambaan hanya kepada-Mu semata. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-050 - QS. Ali 'Imran Ayat 50.html">&larr; Kembali ke Ayat 50 (QS. 3:50)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 51</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-052 - QS. Ali 'Imran Ayat 52.html">Lanjut ke Ayat 52 (QS. 3:52) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-001 - QS. Al-Fatihah Ayat 1 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="001-002 - QS. Al-Fatihah Ayat 2.html">Ayat Berikutnya (QS. 1:2) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Blok Tunggal: Matriks Induk Al-Qur'an</span>
+        <span class="badge">4 Kata | 19 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 1</h1>
+    <div class="transliteration">
+        "Bismillāhir-Raḥmānir-Raḥīm."
+    </div>
+    <div class="thematic-title">
+        Epistemologi Basmalah sebagai Gerbang Kosmik Wahyu: Ontologi Nama Agung "Allāh", Dialektika Kasih Sayang Universal (Ar-Raḥmān) dan Spesifik-Abadi (Ar-Raḥīm), serta Dekonstruksi Ego Manusia melalui Inisiasi Tindakan Berbasis Tauhid
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 1: Fondasi Tauhid, Rububiyyah & Rahmat Ilahi)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ۝١
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Dengan menyebut (dan menyertakan) nama Allah Yang Maha Pengasih (melimpahkan rahmat luas kepada seluruh makhluk di dunia) lagi Maha Penyayang (mencurahkan rahmat khusus yang kekal bagi hamba-hamba yang beriman)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Huruf <em>Bā'</em> pada lafaz <em>Bismi</em> mengandung makna <em>al-mulābasah</em> (penyertaan mutlak) dan <em>al-isti'ānah</em> (permohonan pertolongan). Penerjemahan yang utuh bukan sekadar mengucapkan nama Allah di bibir, melainkan: <em>"Aku memulai, bergerak, membaca, dan mengada hanya dengan bertumpu pada otoritas, kekuasaan, dan keberkahan Nama Allah Yang Maha Pengasih lagi Maha Penyayang."</em>
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>بِسْمِ</strong><br>(<em>Bismi</em>)</td>
+                <td>
+                    <strong>Huruf Bā'</strong> berharakat kasrah sempurna (<em>itmamul harakah</em>) dari makhraj <em>asy-syafatain</em> dengan sifat <em>jahr</em> dan <em>syiddah</em>.<br>
+                    <strong>Huruf Sīn</strong> sukun memiliki sifat <em>hams</em>, <em>rikhwah</em> (aliran suara lunak), dan <em>shafir</em> (desis tajam proporsional tanpa memonyongkan bibir).<br>
+                    <strong>Rasm Utsmani:</strong> Huruf <em>Alif Washal</em> setelah <em>Bā'</em> sengaja dihapus secara rasm (tidak ditulis بِاسْمِ, melainkan بِسْمِ) karena tingginya frekuensi pemakaian Basmalah dan penyatuan erat antara <em>Bā'</em> dan <em>Ism</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca kasrah pada <em>Bā'</em> dan <em>Mīm</em>. Namun mengenai status <strong>Basmalah sebagai Ayat Pertama Al-Fatihah</strong>:<br>
+                    • <strong>Ulama Kufah & Makkah (Ibnu Katsir, 'Ashim, Al-Kisa'i, Hamzah, Khalaf):</strong> Menetapkan Basmalah sebagai <strong>Ayat ke-1 Surah Al-Fatihah</strong> secara mutawatir.<br>
+                    • <strong>Ulama Madinah, Bashrah & Syam (Nafi', Abu 'Amr, Ibnu 'Amir, Abu Ja'far, Ya'qub):</strong> Tidak menghitungnya sebagai nomor ayat ke-1 Al-Fatihah (melainkan ayat pemisah antar-surah), dan menghitung ayat ke-7 dengan membagi <em>Shirāthalladzīna an'amta 'alayhim</em> menjadi dua ayat.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱللَّهِ</strong><br>(<em>Allāhi</em>)</td>
+                <td>
+                    <strong>Hamzah Washal</strong> gugur dalam pengucapan saat disambung.<br>
+                    <strong>Lam Lafzhul Jalalah:</strong> Dibaca <strong>Tarqiq</strong> (tipis/ringan) karena didahului oleh huruf berharakat kasrah pada kata <em>Bismi</em>. Lidah tidak terangkat ke langit-langit atas (<em>istifal</em>). Terdapat <em>Mad Thabi'i</em> (2 harakat) pada alif muqaddarah setelah lam bertasydid.<br>
+                    <strong>Huruf Hā'</strong> di akhir kata keluar dari pangkal tenggorokan (<em>aqshal halq</em>) dengan sifat <em>hams</em> dan kasrah murni.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah (termasuk <strong>Imam Warsy</strong> yang memiliki kaidah khusus tafkhim lam) sepakat bulat (<em>ijma' qurra'</em>) membaca <em>Lam Lafzhul Jalalah</em> dengan <strong>Tarqiq</strong> setelah harakat kasrah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱلرَّحْمَـٰنِ</strong><br>(<em>Ar-Raḥmāni</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah</strong> pada <em>Lam Ta'rif</em> yang melebur sempurna ke dalam huruf <em>Rā'</em> bertasydid.<br>
+                    <strong>Huruf Rā'</strong> berharakat fathah dibaca <strong>Tafkhim</strong> (tebal) disertai sifat <em>tawassuth</em> (aliran suara sedang) dan <em>takrir</em> yang dikendalikan (getaran ujung lidah hanya sekali/tersembunyi, tidak bergetar banyak).<br>
+                    <strong>Huruf Ḥā'</strong> sukun keluar dari tengah tenggorokan (<em>wasthul halq</em>) dengan sifat <em>hams</em> dan <em>rikhwah</em> yang bersih.<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif tegak dalam rasm asli (الرَّحْمَنِ) dan diberi tanda <em>alif khanjaraniyyah</em> (mad thabi'i 2 harakat).
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at sepakat membaca <em>Ar-Raḥmāni</em> dengan <em>jarr</em> (kasrah pada <em>Nūn</em>) sebagai <em>na'at</em> (sifat) bagi lafaz <em>Allāh</em>. Dalam riwayat qira'at syadzah (di luar mutawatirah), tercatat bacaan <em>Ar-Raḥmānu</em> (rafa' sebagai khabar mubtada' mahdzuf: <em>Huwar-Raḥmānu</em>) dan <em>Ar-Raḥmāna</em> (nashab karena pujian/<em>madh</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ٱلرَّحِيمِ</strong><br>(<em>Ar-Raḥīmi</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah</strong> pada <em>Lam Ta'rif</em> bertemu <em>Rā'</em> bertasydid fathah (<strong>Tafkhim</strong>).<br>
+                    <strong>Huruf Ḥā'</strong> berharakat kasrah murni bertemu <em>Yā' Mad</em>.<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Saat waqaf di ujung ayat, mad thabi'i bertemu <em>Mīm</em> yang disukunkan, sehingga boleh dibaca <strong>Qashr</strong> (2 harakat), <strong>Tawassuth</strong> (4 harakat), atau <strong>Thul/Isyba'</strong> (6 harakat), diakhiri sifat <em>tawassuth</em> pada <em>Mīm</em> sukun.
+                </td>
+                <td>
+                    Jika pembaca menyambung (<em>washal</em>) Ayat 1 ke Ayat 2 (<em>Ar-Raḥīmi al-ḥamdu lillāh</em>), maka seluruh imam membaca kasrah pada <em>Mīm</em> dengan mad 2 harakat.<br>
+                    Mengenai penyambungan akhir surah dengan Basmalah surah berikutnya, para imam terbagi antara: <em>Basmalah</em> (Qalun, Ibnu Katsir, 'Ashim, Al-Kisa'i, Abu Ja'far), <em>Saktah</em> atau <em>Washal</em> (Warsy, Abu 'Amr, Ibnu 'Amir, Ya'qub), dan <em>Washal tanpa Basmalah</em> (Hamzah).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul, Sejarah Pewahyuan & Hadits Sahih Penjelas</h3>
+    <p>
+        Basmalah merupakan wahyu pertama yang diturunkan sebagai pembuka surah utuh ketika Surah Al-Fatihah diturunkan di Makkah, serta diturunkan kembali pada awal setiap surah (kecuali Surah At-Taubah) sebagai batas pemisah antar-surah.
+    </p>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Bukhari (No. 4474) dari Abu Sa'id bin Al-Mu'alla r.a. — Keagungan Al-Fatihah sebagai Surah Teragung:</strong><br>
+        Rasulullah ﷺ bersabda kepada Abu Sa'id bin Al-Mu'alla: <em>"La'u'allimannaka sūratan hiya a'zhamus-suwari fil-Qur'āni qabla an takhruja minal-masjid..."</em> Kemudian beliau bersabda: <em>"Al-ḥamdu lillāhi Rabbil-'ālamīn, hiya as-Sab'ul-Matsānī wal-Qur'ānul-'Azhīm alladzī ūtītuh."</em> (Sungguh aku akan mengajarkan kepadamu satu surah yang paling agung di dalam Al-Qur'an sebelum engkau keluar dari masjid... yaitu <em>Al-ḥamdu lillāhi Rabbil-'ālamīn</em> [Surah Al-Fatihah], dialah tujuh ayat yang diulang-ulang [As-Sab'ul Matsani] dan Al-Qur'an yang Agung yang diberikan kepadaku).
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 400) dari Anas bin Malik r.a. & Sunan Abu Dawud (No. 788) dari Ibnu Abbas r.a. — Turunnya Basmalah sebagai Pemisah Surah:</strong><br>
+        Ibnu Abbas r.a. meriwayatkan: <em>"Kānan-Nabiyyu ﷺ lā ya'rifu fashlas-sūrati ḥattā tanzila 'alayhi Bismillāhir-Raḥmānir-Raḥīm."</em> (Dahulu Nabi ﷺ tidak mengetahui batas pemisah berakhirnya suatu surah hingga diturunkan kepada beliau <em>Bismillāhir-Raḥmānir-Raḥīm</em>). Hadits ini dishahihkan oleh Al-Hakim dalam <em>Al-Mustadrak</em> dan disepakati oleh Adz-Dzahabi.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Riwayat Ad-Daraquthni (No. 1185) dan Al-Baihaqi (2/45) dengan Sanad Sahih dari Abu Hurairah r.a. — Basmalah sebagai Ayat Pertama Al-Fatihah:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Idzā qara'tumul-ḥamdu lillāhi faqra'ū Bismillāhir-Raḥmānir-Raḥīm, innahā Ummul-Qur'āni wa Ummul-Kitābi was-Sab'ul-Matsānī, wa Bismillāhir-Raḥmānir-Raḥīm iḥdā āyātihā."</em> (Apabila kalian membaca Al-Fatihah, maka bacalah <em>Bismillāhir-Raḥmānir-Raḥīm</em>; sesungguhnya Al-Fatihah adalah Induk Al-Qur'an, Induk Kitab, dan Tujuh Ayat yang Diulang-ulang, dan <em>Bismillāhir-Raḥmānir-Raḥīm</em> adalah salah satu ayat darinya).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Ism (ٱسْم — Akar Kata: س-م-و vs و-س-م):</strong><br>
+            Terjadi dialog filologis klasik yang mendalam antara dua mazhab besar gramatika Arab mengenai akar kata <em>Ism</em>:<br>
+            1) <strong>Mazhab Bashrah (Sibawaih, Al-Khalil, Az-Zajjaj):</strong> Berakar dari <em>Sīn-Mīm-Wāw</em> (س-م-و / <em>as-sumuww</em>) yang berarti <strong>ketinggian, keluhuran, dan keterangkatan</strong>. Nama (<em>al-ism</em>) mengangkat sesuatu yang dinamai (<em>al-musammā</em>) ke puncak kesadaran sehingga dikenal, dimuliakan, dan tampak jelas. Argumen morfologisnya: bentuk jamaknya adalah <em>asmā'</em> (أَسْمَاء) dan bentuk tashghirnya adalah <em>sumayy</em> (سُمَيّ).<br>
+            2) <strong>Mazhab Kufah (Al-Farra', Tsa'lab):</strong> Berakar dari <em>Wāw-Sīn-Mīm</em> (و-س-م / <em>al-wasm</em> atau <em>as-simah</em>) yang berarti <strong>tanda pengenal atau cap pembeda</strong>.<br>
+            <strong>Tarjih Semantik:</strong> Pendapat Mazhab Bashrah lebih kuat secara morfologis dan teologis; ketika seorang hamba mengucapkan <em>Bismillāh</em>, ia sedang meninggikan derajat perbuatannya dari aktivitas profan yang fana menuju aktivitas sakral yang terhubung dengan Yang Mahatinggi.
+        </li>
+        <li>
+            <strong>Allāh (ٱللَّه — Akar Kata: أ-ل-ه):</strong><br>
+            Mayoritas mutlak ulama bahasa dan tafsir (Al-Khalil bin Ahmad, Sibawaih, At-Tabari, Ibnu Qayyim) menetapkan bahwa lafaz <em>Allāh</em> berakar dari <em>Hamzah-Lām-Hā'</em> (أ-ل-ه): <em>Alaha – Ya'lahu – Ulūhah / Ilāhah</em>, yang membentuk kata <em>Al-Ilāh</em> (الإِلٰه), lalu hamzahnya dihapus untuk kemudahan pengucapan dan lam-nya diidghamkan menjadi <strong>اللّٰه</strong>. Medan semantik akar kata <em>A-L-H</em> merangkum empat dimensi ketuhanan sekaligus:<br>
+            1) <em>Alaha ilā fulān</em>: Merasa tenang, tenteram, dan berlindung kepada-Nya saat dilanda ketakutan.<br>
+            2) <em>Aliha al-fashīl bi ummih</em>: Kerinduan dan ketergantungan mutlak sebagaimana anak unta yang merindukan induknya.<br>
+            3) <em>Alaha ar-rajulu</em>: Terpana, takjub, dan tak sanggup menjangkau hakikat kebesaran-Nya dengan akal semata (<em>taḥayyur al-'uqūl</em>).<br>
+            4) <em>Alaha ya'lahu عبادة</em>: Menyembah dan menghambakan diri secara total.<br>
+            Lafaz <em>Allāh</em> adalah <strong>Ismul-A'zham</strong> (Nama Teragung) dan <em>'Alam 'alā adz-Dzāt al-Ilāhiyyah</em> yang tidak pernah digunakan untuk menamai siapa pun selain Dia, serta menjadi muara seluruh Asmaul Husna.
+        </li>
+        <li>
+            <strong>Ar-Raḥmān & Ar-Raḥīm (ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ — Akar Kata: ر-ح-م):</strong><br>
+            Keduanya berakar dari <em>Rā'-Ḥā'-Mīm</em> (ر-ح-م) yang secara asal merujuk pada <em>ar-raḥim</em> (rahim ibu)—lambang keterikatan kasih sayang paling tulus, perlindungan menyeluruh, dan pemeliharaan kehidupan tanpa pamrih. Dalam haq Allah, rahmat bermakna <em>irādatul-khayr wal-in'ām</em> (kehendak mutlak untuk melimpahkan kebaikan dan karunia).<br>
+            Perbedaan morfologis dan semantik antara keduanya:<br>
+            • <strong>Ar-Raḥmān (Wazan فَعْلَان / <em>Fa'lān</em>):</strong> Menunjukkan <strong>keluasan, kepenuhan, dan kemelimpahan yang meliputi segalanya saat ini</strong> (seperti <em>mal'ān</em> = penuh meluber). Oleh karena itu, sifat <em>Ar-Raḥmān</em> mencakup seluruh makhluk di alam semesta (mukmin maupun kafir, manusia, hewan, hingga ekosistem kosmik) di kehidupan dunia (<em>Raḥmānud-dunyā wal-ākhirah</em>), dan nama ini khusus milik Allah semata (tidak boleh disematkan kepada makhluk).<br>
+            • <strong>Ar-Raḥīm (Wazan فَعِيل / <em>Fa'īl</em>):</strong> Menunjukkan <strong>kelanggengan, kemantapan, dan kesinambungan abadi</strong> (<em>ats-tsubūt wad-dawām</em>). Ia merujuk pada rahmat khusus yang dianugerahkan Allah kepada hamba-hamba yang beriman berupa hidayah di dunia dan keselamatan kekal di akhirat (<em>Raḥīmul-ākhirah</em>).
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>بِسْمِ</strong></td>
+                <td>
+                    <em>Bi-</em>: Huruf jarr asli.<br>
+                    <em>Ismi</em>: Isim mufrad mudzakkar dari akar س-م-و, huruf akhirnya (wawu) terbuang dan diganti hamzah washal di awal.
+                </td>
+                <td>
+                    <em>Bi-</em> huruf jarr mabni 'alal-kasr. <em>Ismi</em> isim majrur oleh <em>Bi-</em> dengan tanda kasrah zhahirah, dan ia berkedudukan sebagai <em>mudhāf</em>.<br>
+                    <strong>Ta'alluq Jār wa Majrūr:</strong> Berhubungan (<em>muta'alliq</em>) dengan kata kerja (<em>fi'il</em>) atau <em>isim</em> yang dibuang (<em>mahdzūf</em>) yang ditakdirkan di akhir kalimat untuk faedah <em>al-ḥashr</em> (pengkhususan): <em>"Bismillāhi aqra'u / abtadi'u"</em> (Hanya dengan nama Allah aku membaca/memulai).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهِ</strong></td>
+                <td>
+                    Isim 'Alam Jamid (atau Musytaq dari <em>Al-Ilāh</em>) khusus bagi Dzat Wajibul Wujud.
+                </td>
+                <td>
+                    Lafzhul Jalalah berkedudukan sebagai <em>Mudhāfun Ilayh</em> (kata yang disandari oleh <em>Ismi</em>), majrur dengan tanda kasrah zhahirah di akhir kata.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلرَّحْمَـٰنِ</strong></td>
+                <td>
+                    Shifat Musyabbahah bi-ismil-fa'il / Sighat Mubalaghah di atas wazan فَعْلَان (<em>Fa'lān</em>) dari <em>raḥima - yarḥamu</em>.
+                </td>
+                <td>
+                    <em>Na'at</em> (sifat) pertama bagi Lafzhul Jalalah (<em>Allāhi</em>) atau <em>Badal</em> darinya, majrur dengan tanda kasrah zhahirah.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلرَّحِيمِ</strong></td>
+                <td>
+                    Shifat Musyabbahah bi-ismil-fa'il di atas wazan فَعِيل (<em>Fa'īl</em>) yang menunjukkan sifat tetap (<em>lāzim</em>).
+                </td>
+                <td>
+                    <em>Na'at</em> (sifat) kedua bagi Lafzhul Jalalah (<em>Allāhi</em>), majrur dengan tanda kasrah zhahirah.<br>
+                    <strong>Kedudukan Jumlah:</strong> Keseluruhan kalimat Basmalah adalah <em>Jumlah الابتدائية</em> (kalimat pembuka) yang <em>lā maḥalla lahā minal-i'rāb</em>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia Pembuangan Kata Kerja (<em>Ḥadzful-Mutallaaq li-Ifādatil-'Umūm wal-Ḥashr</em>):</strong><br>
+            Mengapa Al-Qur'an mengatakan <em>"Bismillāh..."</em> tanpa menyebutkan kata kerja <em>"Aku membaca"</em> atau <em>"Aku memulai"</em>? Para ulama Balaghah (Az-Zamakhsyari, Abdul Qahir Al-Jurjani, Ibnu 'Asyur) menjelaskan dua rahasia besar:<br>
+            • <strong>Pertama (<em>Al-'Umūm</em> / Universalitas Fungsi):</strong> Agar Basmalah menjadi kunci pembuka bagi segala aktivitas kebaikan. Saat makan maknanya <em>"Dengan nama Allah aku makan"</em>; saat menulis maknanya <em>"Dengan nama Allah aku menulis"</em>; saat membaca Al-Qur'an maknanya <em>"Dengan nama Allah aku membaca"</em>.<br>
+            • <strong>Kedua (<em>At-Taqdīm lil-Ikhtishāsh</em> / Pengedepanan untuk Eksklusivitas Tauhid):</strong> Dalam kaidah Arab, kata kerja yang ditakdirkan berada di belakang (<em>Bismillāhi aqra'u</em>, bukan <em>Aqra'u bismillāh</em>). Mengedepankan objek preposisi (<em>Jār wa Majrūr</em>) mendemonstrasikan <em>Al-Qashr</em>: "<strong>Hanya</strong> dengan nama Allah semata aku memulai, bukan dengan nama berhala Lata, Uzza, kekuasaan raja, ataupun kehebatan diriku sendiri!"
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Urutan Gradasi Sifat Ketuhanan (<em>At-Taraqqī minadh-Dzāt ilash-Shifāt</em>):</strong><br>
+            Basmalah disusun dengan arsitektur tiga nama yang sangat presisi: dimulai dengan <strong>Allāh</strong> (nama Dzat yang menghimpun seluruh keagungan dan kewibawaan), lalu diikuti oleh <strong>Ar-Raḥmān</strong> (rahmat kosmik-universal yang mencakup penciptaan dan pemeliharaan seluruh makhluk), kemudian dikerucutkan pada <strong>Ar-Raḥīm</strong> (rahmat ukhrawi-spesifik yang lestari bagi orang-orang beriman). Mengapa tidak ditutup dengan <em>Al-Qahhār</em> (Maha Menundukkan) atau <em>Al-Muntaqim</em> (Maha Menghukum)? Karena Allah ingin memperkenalkan Diri-Nya kepada hamba di gerbang pertama Kitab Suci melalui <strong>kasih sayang, bukan ketakutan</strong> (<em>Sabaqat raḥmatī ghadhabī</em>).
+        </li>
+        <li>
+            <strong>Ilmu Badi' & I'jaz Shauti — Harmoni Fonetik dan Jinas Isytiqاق:</strong><br>
+            Perpaduan antara <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em> membentuk keindahan <em>Jinas Isytiqاق</em> (kesamaan akar kata dengan variasi pola morfologis). Secara fonetik, ayat ini dibuka dengan bunyi bilabial <em>Bā'</em> (بِ) dan ditutup dengan bunyi bilabial <em>Mīm</em> (مِ), serta diakhiri vokal panjang <em>-īm</em> yang menenangkan sistem saraf pendengar dan membuka kesiapan batin untuk menyimak kalam Ilahi.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Konteks Pra-Teks & Keheningan Sebelum Wahyu):</strong><br>
+            Sebagai Ayat Pertama dalam tertib Mushaf Utsmani (<em>Tartīb al-Mushḥafī</em>), tidak ada ayat tekstual yang mendahului Basmalah Al-Fatihah. Namun, <em>sibāq</em> eksistensialnya adalah <strong>kondisi keterputusan manusia dari Tuhan</strong> serta <em>Isti'ādzah</em> (<em>A'ūdzu billāhi minasy-syaythānir-rajīm</em>) yang disyariatkan sebelum membaca Al-Qur'an (QS. An-Nahl: 98). Setelah seorang hamba membersihkan hatinya dari gangguan setan melalui <em>Ta'awwudz</em> (<em>takhalli</em> / pengosongan dari keburukan), ia langsung memasuki istana kehadiran Ilahi melalui <em>Basmalah</em> (<em>taḥalli</em> / pengisian dengan nama Allah). Selain itu, terdapat <em>munāsabah</em> (kesinambungan) luar biasa dengan wahyu pertama secara kronologis (<em>Tartīb an-Nuzūlī</em>), yakni <strong>QS. Al-'Alaq [96]: 1</strong>: <em>"Iqra' bismi Rabbikalladzī khalaq"</em> (Bacalah dengan nama Tuhanmu yang menciptakan!). Perintah di Gua Hira adalah: "Bacalah dengan nama Tuhanmu!", dan jawaban di halaman pertama Mushaf adalah: "<em>Bismillāhir-Raḥmānir-Raḥīm</em>!"
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Surah Al-Fatihah):</strong><br>
+            Surah Al-Fatihah adalah kontrak dialogis antara hamba dan Rabb-Nya yang terbagi menjadi dua bagian: setengah untuk Allah (pujian & pengagungan di Ayat 1–3, dipuncaki ikrar Ayat 4) dan setengah untuk hamba (permohonan hidayah di Ayat 5–7). Basmalah pada Ayat 1 meletakkan fondasi epistemologis bagi keseluruhan surah: bahwa seluruh pengetahuan, pujian, penghambaan, dan perjalanan meniti jalan lurus (<em>ash-shirāthal-mustaqīm</em>) hanya mungkin terlaksana dengan pertolongan dan rahmat Allah.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas menuju Ayat 2):</strong><br>
+            Ketika seorang hamba memulai dengan <em>Bismillāhir-Raḥmānir-Raḥīm</em> dan menyadari betapa luasnya curahan rahmat <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em> yang menyelimuti dirinya sejak sebelum ia lahir, maka respons jiwa yang paling logis dan spontan adalah meluapkan pujian syukur: <strong>"Al-ḥamdu lillāhi Rabbil-'ālamīn"</strong> (Segala puji bagi Allah, Tuhan semesta alam — Ayat 2)! Lebih jauh lagi, pengulangan sifat <em>Ar-Raḥmānir-Raḥīm</em> pada Ayat 3 menegaskan bahwa pemeliharaan Allah atas alam semesta (<em>Rubūbiyyah</em>) bukan didasarkan pada tirani kekuasaan, melainkan pada kasih sayang yang sama yang membuka Ayat 1.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Revolusi Epistemik di Tengah Masyarakat Jahiliyah Abad ke-7</h3>
+    <p>
+        Dalam lanskap kultural Jazirah Arab abad ke-7 Masehi, setiap tindakan penting, perjanjian dagang, penyembelihan hewan, maupun deklamasi syair selalu dimulai dengan mengatasnamakan berhala-berhala suku: <em>"Bismi al-Lāta wal-'Uzzā"</em> atau <em>"Bismi Hubal"</em>. Masyarakat Quraisy juga mengenal formula <em>"Bismikallāhumma"</em> (Dengan nama-Mu ya Allah), namun mereka menolak keras nama <strong>Ar-Raḥmān</strong>. Sebagaimana direkam dalam QS. Al-Furqan [25]: 60, ketika dikatakan kepada mereka: <em>"Bersujudlah kepada Ar-Raḥmān!"</em>, kaum musyrikin menjawab dengan sinis: <em>"Wa mar-Raḥmān?"</em> (Siapakah Ar-Raḥmān itu?). Bahkan dalam Perjanjian Hudaibiyah (6 H), Suhail bin 'Amr (delegasi Quraisy) menolak penulisan <em>Bismillāhir-Raḥmānir-Raḥīm</em> pada draf piagam karena alergi ideologis terhadap konsep rahmat universal Allah yang meruntuhkan kasta oligarki Makkah.<br>
+        Turunnya <em>Bismillāhir-Raḥmānir-Raḥīm</em> sebagai pembuka Al-Qur'an adalah <strong>revolusi kesadaran dan peradaban</strong>:
+        <br>1) <strong>Menghapus Otoritas Berhala dan Tirani Tribal:</strong> Memindahkan pusat legitimasi seluruh tindakan manusia dari berhala dan penguasa klan menuju Allah Yang Maha Esa.
+        <br>2) <strong>Menetapkan Paradigma Kasih Sayang di Atas Kekerasan:</strong> Di tengah masyarakat padang pasir yang mengagungkan pedang, balas dendam darah (<em>ats-tsa'r</em>), dan kesombongan suku (<em>al-ḥamīyah al-jāhiliyyah</em>), Islam menancapkan bendera peradabannya dengan dua kata kunci: <strong>Ar-Raḥmān</strong> dan <strong>Ar-Raḥīm</strong>.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Puncak Tafsir bil-Ma'tsur):</strong><br>
+        At-Tabari menegaskan bahwa Allah جل ثناؤه mengajarkan kepada Nabi-Nya Muhammad ﷺ dan seluruh umatnya adab terbaik dalam memulai setiap amal, yaitu mendahulukan penyebutan Asma-Nya yang suci. Beliau menukil riwayat dari Ibnu Abbas r.a. bahwa makna <em>Bismillāh</em> adalah: <em>"Bismillāhi astaftiḥu wa asta'īnu"</em> (Dengan nama Allah aku membuka dan memohon pertolongan). Mengenai perbedaan <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em>, At-Tabari mentarjih riwayat dari Abu Sa'id Al-Khudri dan Ibnu Abbas bahwa <em>Ar-Raḥmān</em> adalah Dzat yang rahmat-Nya meliputi seluruh makhluk di dunia dan akhirat, sedangkan <em>Ar-Raḥīm</em> adalah Dzat yang mengkhususkan rahmat-Nya bagi orang-orang mukmin.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat & Atsar Sahih):</strong><br>
+        Ibnu Katsir menghimpun dalil-dalil kesunnahan dan kewajiban membaca Basmalah di awal setiap perbuatan penting. Beliau menguraikan keberkahan nama <em>Allāh</em> sebagai nama yang tidak pernah disandang oleh selain-Nya; sebagaimana perkataan sebagian ulama salaf: <em>"Allāh memiliki seratus nama dikurangi satu, dan Allāh adalah Ismul-A'zham yang menghimpun seluruh sifat kesempurnaan."</em> Ibnu Katsir juga menjelaskan bahwa <em>Ar-Raḥmān</em> lebih kuat maknanya (<em>ablagh</em>) daripada <em>Ar-Raḥīm</em> karena penambahan huruf pada bangunan kata menunjukkan penambahan makna (<em>ziyādatul-mabnā tadullu 'alā ziyādatil-ma'nā</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih & Ahkam):</strong><br>
+        Al-Qurthubi membedah lebih dari dua puluh masalah hukum (<em>masā'il fiqhiyyah</em>) terkait Basmalah dalam shalat dan ibadah:<br>
+        • <strong>Mazhab Syafi'i:</strong> Basmalah adalah ayat pertama Al-Fatihah dan <strong>wajib dibaca dalam shalat</strong>; dalam shalat jahr (Subuh, Maghrib, Isya) disunnahkan mengeraskan bacaannya (<em>jahr bil-basmalah</em>) berdasarkan hadits Abu Hurairah dan Ummu Salamah r.a.<br>
+        • <strong>Mazhab Hanafi & Hanbali:</strong> Basmalah dibaca secara lirih (<em>sirr</em>) di dalam shalat, baik pada shalat jahr maupun sirr, berdasarkan hadits Anas bin Malik r.a.<br>
+        • <strong>Mazhab Maliki:</strong> Dalam shalat fardhu tidak membaca Basmalah (langsung <em>Al-ḥamdu lillāh</em>) demi menghindari anggapan bahwa ia bagian dari Al-Fatihah, namun disunnahkan membacanya pada shalat sunnah/nafilah.<br>
+        Al-Qurthubi juga merinci hukum membaca dan menulis Basmalah pada penyembelihan hewan (wajib), berwudhu, makan, minum, masuk-keluar rumah, hingga penulisan surat resmi negara sebagaimana surat Nabi Sulaiman a.s. (QS. An-Naml: 30).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Balaghah & Rasionalitas Teologis):</strong><br>
+        Az-Zamakhsyari menganalisis keajaiban huruf <em>Bā'</em> yang memiliki makna <em>Al-Mulābasah</em> (keterjalinan erat): seorang mukmin menjadikan seluruh tindakannya terbungkus dan tercelup dalam nama Allah. Beliau menjelaskan bahwa mendahulukan <em>Ar-Raḥmān</em> sebelum <em>Ar-Raḥīm</em> adalah mendahulukan nikmat pokok yang besar (<em>jalā'ilun-ni'am</em> seperti penciptaan hidup, akal, dan alam semesta) sebelum nikmat rincian yang halus dan abadi (<em>daqā'iqun-ni'am</em>). Sementara itu, Fakhruddin Ar-Razi menggali rahasia teologis mengapa Allah mengulang sifat rahmat dua kali tanpa menyebut sifat siksa: untuk menegaskan bahwa rahmat adalah <strong>tujuan esensial penciptaan (bil-qashdil-awwal)</strong>, sedangkan azab hanyalah konsekuensi sekunder bagi mereka yang menolak rahmat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Corak Adabi Ijtima'i & Kontekstual Nusantara):</strong><br>
+        Quraish Shihab membedah metafora huruf <em>Bā'</em> bagaikan "sumber energi listrik": peralatan elektronik secanggih apa pun tidak akan berfungsi jika tidak dihubungkan dengan sumber arus listrik. Demikian pula manusia; secerdas dan sekuat apa pun ia, seluruh ikhtiarnya akan hampa dan kehilangan nilai keabadian jika tidak dihubungkan (<em>bi-</em>) dengan Allah SWT. Dengan mengucapkan <em>Bismillāh</em>, seorang Muslim menyadari bahwa dirinya adalah <em>khalīfah</em> yang bertindak atas nama Allah, sehingga mustahil ia memulai kejahatan, korupsi, atau penindasan dengan menyebut nama Dzat Yang Maha Pengasih lagi Maha Penyayang.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em> (Tasawuf Modern & Ketahanan Jiwa):</strong><br>
+        Buya Hamka menguraikan bahwa Basmalah adalah proklamasi kemerdekaan jiwa manusia dari segala rasa takut terhadap makhluk. <em>"Bila kita telah memulai langkah dengan Bismillāhir-Raḥmānir-Raḥīm, hilanglah gentar di dada menghadapi penguasa yang zalim, hilanglah cemas menghadapi masa depan yang gelap, karena langkah kita digandeng langsung oleh Allah Yang Maha Pengasih dan Penyayang."</em> Tafsir Kemenag RI menekankan bahwa internalisasi Basmalah membentuk etos kerja yang penuh optimisme, kejujuran, dan kasih sayang sosial.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian</th>
+                <th>Titik Kesepakatan (Ijma')</th>
+                <th>Ragaman Perspektif Ulama (Ikhtilaf & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Ayat dalam Al-Fatihah</strong></td>
+                <td>Sepakat bahwa Basmalah adalah bagian dari wahyu Al-Qur'an (tercantum eksplisit di QS. An-Naml: 30) dan tertulis di awal Mushaf.</td>
+                <td>Syafi'iyyah & Qurra' Makkah-Kufah: Ayat ke-1 Al-Fatihah (wajib dibaca dalam shalat). Hanafiyyah: Ayat Al-Qur'an mandiri untuk pemisah surah (dibaca sirr). Malikiyyah: Bukan ayat Al-Fatihah.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Huruf Bā' pada Bismi</strong></td>
+                <td>Sepakat bahwa <em>Bā'</em> menghubungkan perbuatan hamba dengan nama Allah.</td>
+                <td>Ulama Fiqih & Salaf menekankan makna <em>Al-Isti'ānah</em> (memohon pertolongan) & <em>At-Tabarruk</em> (mencari berkah); Ulama Balaghah menekankan <em>Al-Mulābasah</em> (penyertaan erat).</td>
+            </tr>
+            <tr>
+                <td><strong>Relasi Ar-Raḥmān & Ar-Raḥīm</strong></td>
+                <td>Keduanya berasal dari akar kata <em>ar-raḥmah</em> (kasih sayang Ilahi).</td>
+                <td><em>Ar-Raḥmān</em> = rahmat universal bagi seluruh makhluk di dunia (skala makro-kosmik); <em>Ar-Raḥīm</em> = rahmat khusus & abadi bagi mukminin di akhirat (skala mikro-spiritual).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Dekonstruksi Narsisisme Ego & Pergeseran "Locus of Control"</h3>
+    <p>
+        Secara kognitif, penyakit paling mendasar dari pikiran manusia modern adalah <strong>ilusi otonomi ego</strong> (merasa diri sebagai pusat semesta dan penentu tunggal keberhasilan, sebagaimana mentalitas Qarun: <em>"Innamā ūtītuhū 'alā 'ilmin 'indī"</em>). Ketika seseorang memulai setiap aktivitas dengan <em>Bismillāh</em> secara sadar (<em>mindful</em>), terjadi pergeseran fundamental dalam arsitektur kognitifnya:
+    </p>
+    <ul>
+        <li><strong>Dari Ego-Sentris ke Teo-Sentris:</strong> Manusia melepaskan beban keangkuhan saat sukses (karena sadar keberhasilan adalah karunia Allah) sekaligus terbebas dari kehancuran mental (depresi/putus asa) saat gagal (karena ia bersandar pada Dzat Yang Maha Pengasih).</li>
+        <li><strong>Spiritual Priming & Penjernihan Niat (<em>Intention Setting</em>):</strong> Dalam neuropsikologi kognitif, kata-kata yang diucapkan sesaat sebelum memulai suatu tindakan berfungsi sebagai <em>cognitive priming</em> yang mengaktifkan jaringan saraf eksekutif di <em>prefrontal cortex</em>. Mengucapkan <em>Bismillāhir-Raḥmānir-Raḥīm</em> memprogram otak untuk menyaring niat: "Apakah tindakan yang hendak kulakukan ini layak membawa nama Allah Yang Maha Pengasih?" Jika tindakan itu berupa kebohongan, kecurangan, atau kezaliman, maka kesadaran Basmalah akan langsung menghentikannya.</li>
+    </ul>
+
+    <h3>2. Neurobiologi Kasih Sayang: Mengatasi Kecemasan Eksistensial</h3>
+    <p>
+        Perhatikan bagaimana Allah menyandingkan nama <em>Allāh</em> dengan <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em>—yang diulang berkali-kali setiap hari minimal 17 kali dalam shalat fardhu dan puluhan kali dalam aktivitas harian. Pengulangan afirmasi bahwa Pencipta alam semesta adalah <strong>Maha Pengasih lagi Maha Penyayang</strong> menurunkan hiperaktivitas <em>amygdala</em> (pusat rasa takut dan stres) dan menumbuhkan <em>secure attachment</em> (kelekatan batin yang aman) kepada Tuhan. Seorang mukmin tidak memandang dunia sebagai hutan rimba yang dingin dan kejam, melainkan sebagai ruang yang berada di bawah pelukan rahmat <em>Ar-Raḥmān</em>.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Krisis Sekularisasi Tindakan & Formalisme Simbolik</h3>
+    <p>
+        Dalam realitas kontemporer abad ke-21, kita menghadapi dua kutub penyimpangan terhadap filosofi Basmalah:
+    </p>
+    <ul>
+        <li>
+            <strong>Sekularisasi Ruang Publik & Sains:</strong> Peradaban materialistik memisahkan ilmu pengetahuan, ekonomi, teknologi, dan politik dari nilai ketuhanan. Akibatnya, sains dan kapitalisme bergerak "atas nama keuntungan dan hegemoni" tanpa kendali moral kasih sayang (<em>raḥmah</em>), melahirkan eksploitasi manusia, krisis ekologis, dan senjata pemusnah massal. Basmalah menawarkan paradigma <strong>Sains dan Peradaban Profetik</strong>: seluruh riset, bisnis, dan kebijakan publik harus dijalankan <em>dengan nama Allah</em> dan berorientasi pada <em>raḥmatan lil-'ālamīn</em>.
+        </li>
+        <li>
+            <strong>Paradoks Formalisme Lisan Tanpa Etika Rahmat:</strong> Di sisi lain, betapa sering kalimat <em>Bismillāh</em> diucapkan hanya sebagai mantra bibir mekanis tanpa penghayatan hati—bahkan ironisnya diucapkan sebelum menyebarkan ujaran kebencian di media sosial, merendahkan sesama, atau menjalankan proyek yang merugikan publik. Ayat 1 Surah Al-Fatihah mengkritik keras pemisahan antara ucapan <em>Bismillāh</em> dengan karakter kasih sayang (<em>Ar-Raḥmānir-Raḥīm</em>). Siapa pun yang bertindak atas nama Allah wajib memancarkan sifat kasih sayang, keadilan, dan integritas dalam karyanya.
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Jeda Kesadaran 3 Detik ("Mindful Basmalah") Sebelum Berkarya:</strong> Setiap kali hendak memulai pekerjaan, membuka laptop/gawai, menandatangani dokumen, atau melangkah keluar rumah, berhentilah sejenak selama 3 detik untuk mengucapkan <em>"Bismillāhir-Raḥmānir-Raḥīm"</em> sambil menghadirkan kesadaran penuh di hati bahwa aktivitas tersebut adalah ibadah dan amanah dari Allah.
+            </li>
+            <li>
+                <strong>Filter Etika Rahmat dalam Komunikasi & Keputusan Harian:</strong> Jadikan sifat <em>Ar-Raḥmān</em> dan <em>Ar-Raḥīm</em> sebagai standar uji sebelum berbicara atau mengambil keputusan di keluarga maupun tempat kerja: <em>"Apakah kata-kata dan keputusanku ini membawa manfaat dan kasih sayang, atau justru menyakiti dan menzalimi orang lain?"</em>
+            </li>
+            <li>
+                <strong>Menyebarkan Rahmat Inklusif (<em>Raḥmāniyyah</em>) dan Spesifik (<em>Raḥīmiyyah</em>):</strong> Meneladani sifat <em>Ar-Raḥmān</em> dengan berbuat baik, jujur, dan peduli kepada seluruh makhluk (manusia lintas latar belakang, lingkungan, dan hewan), serta meneladani sifat <em>Ar-Raḥīm</em> dengan mempererat ukhuwah, membimbing iman keluarga, dan membantu sesama mukmin dalam ketaatan.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Selama ini, ketika aku mengucapkan <em>"Bismillāhir-Raḥmānir-Raḥīm"</em> puluhan kali setiap hari, apakah kalimat agung itu benar-benar lahir dari ketundukan hatiku kepada Allah, ataukah sekadar rutinitas lisan yang kering dari kesadaran?
+            </li>
+            <li>
+                Apakah dalam mengejar karier, harta, dan pengakuan sosial, aku masih sering bergerak "atas nama egoku sendiri", sehingga aku menjadi sombong saat berhasil dan hancur berputus asa saat diuji kegagalan?
+            </li>
+            <li>
+                Sejauh mana kehadiranku di tengah keluarga, rekan kerja, dan masyarakat telah menjadi cerminan nyata dari hamba milik Dzat Yang Maha Pengasih (<em>Ar-Raḥmān</em>) lagi Maha Penyayang (<em>Ar-Raḥīm</em>)?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, Dzat Yang Maha Pengasih lagi Maha Penyayang, dengan menyebut dan menyertakan Nama-Mu yang Agung kami memulai seluruh langkah hidup kami. Bersihkanlah niat kami dari kesombongan diri dan pamrih duniawi. Selimutilah hidup kami di dunia dengan keluasan rahmat-Mu sebagai Ar-Raḥmān, dan karuniakanlah kepada kami di akhirat kelak kemuliaan rahmat khusus-Mu sebagai Ar-Raḥīm. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <span>Awal Mushaf Al-Qur'an</span>
+        <span><strong>QS. Al-Fātiḥah [1]: 1</strong></span>
+        <a href="001-002 - QS. Al-Fatihah Ayat 2.html">Lanjut ke Ayat 2 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-023 - QS. Ali 'Imran Ayat 23 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-022 - QS. Ali 'Imran Ayat 22.html">&larr; Ayat Sebelumnya (QS. 3:22)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-024 - QS. Ali 'Imran Ayat 24.html">Ayat Berikutnya (QS. 3:24) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 3 (Ayat 21–25): Patologi Pembangkangan Ahli Kitab: Pembunuhan Nabi, Penolakan Arbitrase Kitabullah & Ilusi Keselamatan Eksklusif</span>
+        <span class="badge">20 Kata | 81 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 23</h1>
+    <div class="transliteration">
+        "Alam tara ilal-ladzīna ūtū naṣhībam minal-kitābi yud'awna ilā kitābillāhi liyahkuma baynahum tsumma yatawallā farīqum minhum wa hum mu'ridhūn(a)."
+    </div>
+    <div class="thematic-title">
+        Sindiran Epistemik atas Keengganan Berhukum pada Wahyu: Pembongkaran Kontradiksi Ahli Kitab, Sikap Apatis terhadap Arbitrase Kitabullah & Jebakan Arogansi "Naṣhīb minal-Kitāb"
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 3: Anatomi Pembangkangan Ahli Kitab, Desersi Moralitas & Penolakan Supremasi Syariat)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        أَلَمْ تَرَ إِلَى ٱلَّذِينَ أُوتُوا۟ نَصِيبًۭا مِّنَ ٱلْكِتَـٰبِ يُدْعَوْنَ إِلَىٰ كِتَـٰبِ ٱللَّهِ لِيَحْكُمَ بَيْنَهُمْ ثُمَّ يَتَوَلَّىٰ فَرِيقٌۭ مِّنْهُمْ وَهُم مُّعْرِضُونَ ۝٢٣
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Tidakkah engkau memperhatikan orang-orang yang telah diberi bagian dari Kitab (Taurat)? Mereka diajak kepada Kitabullah (Taurat/Al-Qur'an) untuk memutuskan (perkara yang mereka perselisihkan) di antara mereka, kemudian sebagian dari mereka berpaling, sedang mereka (memang memiliki watak) selalu menolak kebenaran."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini membuka tirai kemunafikan intelektual dan moral kaum elit Ahli Kitab (khususnya para rabi Yahudi Madinah). Redaksi ayat ini sarat dengan kritik tajam berbobot teologis tinggi:
+    </p>
+    <ul>
+        <li><strong>Alam Tara (أَلَمْ تَرَ):</strong> Ungkapan retoris berupa <em>istifhām ta'ajjubī</em> (pertanyaan untuk membangkitkan rasa heran yang mendalam). Secara harfiah berarti "Apakah engkau tidak melihat?", namun dalam kaidah Al-Qur'an ditujukan kepada penglihatan mata batin, telaah akal sehat, dan kontemplasi mendalam atas sebuah fenomena penyimpangan yang teramat ganjil dan memalukan.</li>
+        <li><strong>Ūtū Naṣhīban minal-Kitāb (أُوتُوا نَصِيبًا مِّنَ الْكِتَابِ):</strong> Al-Qur'an tidak menyatakan bahwa mereka memiliki seluruh Kitab suci secara utuh, melainkan hanya <em>naṣhīb</em> (bagian, porsi, atau serpihan). Penggunaan diksi ini menyiratkan dua makna tajam: pertama, mereka hanya mewarisi sebagian dari kitab samawi akibat distorsi dan kehilangan naskah asli di masa lalu; kedua, mereka hanya mengambil hukum-hukum yang menguntungkan status sosial dan privilese mereka, seraya mencampakkan hukum-hukum yang memberatkan hawa nafsu mereka.</li>
+        <li><strong>Yud'awna ilā Kitābillāhi liyahkuma baynahum (يُدْعَوْنَ إِلَىٰ كِتَابِ اللَّهِ لِيَحْكُمَ بَيْنَهُمْ):</strong> Ketika terjadi perselisihan sengketa di kalangan mereka, mereka dipanggil untuk mengembalikan putusan hukum kepada Kitabullah yang mereka klaim imani. Namun, justru Kitab suci itulah yang mereka hindari manakala pasal-pasalnya mengadili kejahatan para pembesar klan mereka secara adil tanpa diskriminasi kasta.</li>
+        <li><strong>Tsumma Yatawallā Farīqum minhum wa Hum Mu'ridhūn (ثُمَّ يَتَوَلَّىٰ فَرِيقٌ مِّنْهُمْ وَهُم مُّعْرِضُونَ):</strong> Kata hubung <em>tsumma</em> menggarisbawahi jurang moralitas yang sangat kontradiktif (<em>at-tarākhī ar-rutbī</em>): orang yang mengaku memegang kitab suci semestinya paling antusias menyambut hukum wahyu, namun respons mereka justru membelakangi dan lari terbirit-birit. Penutup ayat <em>wa hum mu'ridhūn</em> dalam bentuk jumlah ismiyyah menegaskan bahwa sikap antipati dan penolakan terhadap kebenaran telah mengkristal menjadi tabiat permanen, bukan sekadar kelalaian sesaat.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>أَلَمْ تَرَ</strong><br>(<em>Alam tara</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah:</strong> Keluar dari aqshal halq.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu huruf Tā' dibaca jelas tanpa ghunnah berlebih, dengan kehati-hatian agar makhraj mīm tidak tertelan makhraj tā'.<br>
+                    <strong>Jazm Fi'il:</strong> Huruf Rā' mafthūhah dibaca <strong>Tafkhīm</strong>; alif maqshūrah gugur karena jazm oleh partikel <em>lam</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca tahqīq hamzah, idzhar syafawi pada mīm sukun, dan membuang huruf alif (<em>hadzfu harfil-'illah</em>) pada kata <em>tara</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>إِلَى ٱلَّذِينَ</strong><br>(<em>Ilal-ladzīna</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah Kasrah:</strong> Keluar dari pangkal tenggorokan.<br>
+                    <strong>Isqāṭhul-Alif:</strong> Alif layyinah pada <em>ilā</em> gugur secara fonetis saat washal guna menghindari bertemunya dua sukun (<em>iltiqā'us-sākinayn</em>).<br>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur sempurna ke dalam Lam isim maushūl.<br>
+                    <strong>Huruf Dzāl:</strong> Ujung lidah bertemu ujung dua gigi seri atas dengan sifat jahar dan rakhāwah.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' sukun setelah kasrah dibaca panjang 2 harakat.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca washal dengan menggugurkan alif layyinah dan mengidghamkan lam ke dalam lafaz <em>al-ladzīna</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>أُوتُوا۟</strong><br>(<em>Ūtū</em>)</td>
+                <td>
+                    <strong>Mad Badal:</strong> Huruf Hamzah berharakat mendahului huruf Wāwu mad.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad kedua jatuh setelah Tā' dhommah (2 harakat).<br>
+                    <strong>Alif Fāriqah:</strong> Tertulis dalam rasm utsmani dengan bulatan sukun mustadīr (tidak dibaca saat washal maupun waqaf).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca <strong>Mad Badal</strong> pada kata <em>ūtū</em> dengan 3 wajah yang masyhur: <strong>Qaṣhr (2 harakat), Tawassuṭh (4 harakat), dan Ṭhūl (6 harakat)</strong>.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca mad badal secara konsisten dengan kadar <strong>Qaṣhr (2 harakat)</strong>.<br>
+                    • Bentuk pasif (<em>mabnī lil-majhūl</em>) mengindikasikan bahwa kitab itu adalah anugerah Ilahi yang diamanahkan kepada mereka, bukan hasil ciptaan mereka sendiri.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>نَصِيبًۭا مِّنَ</strong><br>(<em>Naṣhībam mina</em>)</td>
+                <td>
+                    <strong>Huruf Ṣhād:</strong> Huruf isti'lā', ithbāq, dan shafīr yang tebal.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' sukun jatuh setelah Ṣhād kasrah (2 harakat).<br>
+                    <strong>Idghām Bighunnah Kāmilah:</strong> Tanwīn fat-ḥah pada Bā' bertemu Mīm kasrah melebur sempurna disertai dengung sempurna (<em>akmal mā yakūn</em>, 2 harakat) dari rongga hidung (<em>khaisyūm</em>).<br>
+                    <strong>Fat-ḥah 'Āridhah pada Nūn:</strong> Nūn pada <em>min</em> difat-ḥahkan untuk menghindari <em>iltiqā'us-sākinayn</em> sebelum lam sukun.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca idghām bighunnah kamilah pada tanwin bertemu mīm dan memfat-hahkan nūn pada <em>mina</em> saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱلْكِتَـٰبِ</strong><br>(<em>Al-Kitāb</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas dan bersih.<br>
+                    <strong>Huruf Kāf:</strong> Memiliki sifat syiddah disusul hams.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjariyyah setelah Tā' dibaca 2 harakat.<br>
+                    <strong>Tarqīq Huruf Bā':</strong> Bā' berharakat kasrah dibaca tipis.
+                </td>
+                <td>
+                    Seluruh imam sepakat membaca idzhar qamariyyah pada <em>al-kitāb</em> dan membacanya dengan kasrah mufrad.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>يُدْعَوْنَ</strong><br>(<em>Yud'awna</em>)</td>
+                <td>
+                    <strong>Qalqalah Shughrā:</strong> Huruf Dāl sukun berada di tengah kata, memantul dengan ringan dan jernih tanpa terpengaruh harakat sebelum atau sesudahnya.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari wasathul halq dengan sifat tawassuth.<br>
+                    <strong>Wāwu Līn:</strong> Huruf Wāwu sukun didahului harakat fat-ḥah, diucapkan lembut dan lentur tanpa pemanjangan berlebih.<br>
+                    <strong>Nūn Fathah:</strong> Makhraj ujung lidah dengan vokal jernih.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca fi'il mudhari' mabni lil-maf'ul (<em>yud'awna</em> - diajak/diseru) dengan qalqalah shughra pada Dāl.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>إِلَىٰ كِتَـٰبِ</strong><br>(<em>Ilā kitābi</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah Kasrah:</strong> Diucapkan tegas.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif layyinah pada <em>ilā</em> dan alif khanjariyyah pada <em>kitābi</em> masing-masing dipanjangkan 2 harakat.<br>
+                    <strong>Huruf Tā':</strong> Bersifat hams dan istifal.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah membaca dengan mad thabi'i pada <em>ilā</em> dan meng-kasrahkan Bā' pada <em>kitābi</em> sebagai mudhaf.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>ٱللَّهِ</strong><br>(<em>Allāh</em>)</td>
+                <td>
+                    <strong>Tarqīq Lām Jalālah:</strong> Huruf Lam pada lafaz Jalālah dibaca <strong>tipis (tarqīq)</strong> karena didahului harakat kasrah pada huruf Bā' lafaz <em>kitābi</em>.<br>
+                    <strong>Huruf Hā':</strong> Keluar dari aqshal halq dengan sifat hams dan tersembunyi (khafā').
+                </td>
+                <td>
+                    Konsensus mutawatir sepuluh imam membaca tarqiq pada Lam Jalalah karena pengaruh kasrah yang mendahuluinya.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>لِيَحْكُمَ</strong><br>(<em>Liyahkuma</em>)</td>
+                <td>
+                    <strong>Lām Kay / Ta'līl:</strong> Kasrah tipis.<br>
+                    <strong>Huruf Ḥā':</strong> Keluar dari wasathul halq, berharakat sukun dengan sifat <strong>Hams</strong> dan <strong>Rakhāwah</strong> (aliran nafas dan suara mengalir jernih tanpa desakan dahak).<br>
+                    <strong>Huruf Kāf:</strong> Berharakat dhommah dengan sifat syiddah.<br>
+                    <strong>Fat-ḥah pada Mīm:</strong> Tanda nashab fi'il mudhari' karena partikel <em>an</em> yang disembunyikan.
+                </td>
+                <td>
+                    • <strong>Sepuluh Imam Mutawatirah:</strong> Sepakat membaca dengan bentuk <strong>Mabnī lil-Ma'lūm</strong> (<strong>لِيَحْكُمَ</strong> - <em>Liyahkuma</em>) dengan fat-ḥah pada Yā' dan dhommah pada Kāf. Fa'il-nya merujuk kepada <em>Kitābullāh</em> atau kepada Nabi Muhammad ﷺ.<br>
+                    • Terdapat qira'at syādzdzah (dari Abu Haiwah dan sebagian ulama Bashrah) yang membaca dengan bentuk <em>mabnī lil-majhūl</em> (<em>liyuhkama baynahum</em>), namun qira'at mutawatirah yang sah dalam mushaf Utsmani adalah <em>liyahkuma</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>بَيْنَهُمْ</strong><br>(<em>Baynahum</em>)</td>
+                <td>
+                    <strong>Yā' Līn:</strong> Yā' sukun jatuh setelah Bā' fat-ḥah diucapkan lentur.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu huruf Tsa' bertasydid dibaca jelas dan tegas tanpa menahan dengung.
+                </td>
+                <td>
+                    • <strong>Qālūn & Ibnu Katsīr:</strong> Memiliki jalan membaca dengan <strong>Shilah Mīm al-Jam'</strong> saat washal (<strong>بَيْنَهُمُو ثُمَّ</strong> - <em>baynahumū tsumma</em> dengan mad 2 harakat).<br>
+                    • <strong>Imam-imam Lainnya:</strong> Membaca dengan sukun pada Mīm (idzhar syafawi standar).
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>ثُمَّ</strong><br>(<em>Tsumma</em>)</td>
+                <td>
+                    <strong>Huruf Tsā':</strong> Keluar dari ujung lidah bertemu ujung gigi seri atas, memiliki sifat hams dan rakhāwah.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Mīm bertasydid ditahan dengungnya selama 2 harakat penuh (<em>akmal mā yakūn</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat menyempurnakan ghunnah pada mīm bertasydid dan menjaga makhraj litsawiyyah pada Tsā'.
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><strong>يَتَوَلَّىٰ</strong><br>(<em>Yatawallā</em>)</td>
+                <td>
+                    <strong>Tā' & Wāwu:</strong> Huruf istifal dan infitah.<br>
+                    <strong>Lām Bertasydid:</strong> Memiliki sifat tawassuth.<br>
+                    <strong>Mad Ṭhabī'ī / Alif Layyinah:</strong> Dipanjangkan 2 harakat saat washal.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> pada alif layyinah kata <em>yatawallē</em> (bunyi vokal condong tajam ke arah kasrah/huruf 'e' tebal karena berakar dari ya'i: <em>waly</em>).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqīl / Imālah Shughrā</strong> (antara fat-hah dan imalah).<br>
+                    • <strong>Abū 'Amr al-Bashrī:</strong> Membaca dengan Taqīl.<br>
+                    • <strong>Imam Lainnya (Termasuk Ḥafsh):</strong> Membaca dengan <strong>Fat-ḥah Muḥaqqaqah</strong> murni (<em>yatawallā</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><strong>فَرِيقٌۭ مِّنْهُمْ</strong><br>(<em>Farīqum minhum</em>)</td>
+                <td>
+                    <strong>Tarqīq Huruf Rā':</strong> Rā' berharakat kasrah dibaca tipis.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' sukun setelah Rā' kasrah.<br>
+                    <strong>Huruf Qāf:</strong> Isti'lā' mutlak di pangkal lidah.<br>
+                    <strong>Idghām Bighunnah Kāmilah:</strong> Tanwīn dhommah pada Qāf bertemu Mīm kasrah melebur sempurna dengan dengung 2 harakat.<br>
+                    <strong>Idzhār Ḥalqī:</strong> Nūn sukun pada <em>minhum</em> bertemu huruf Hā' dibaca jelas tanpa sengau.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu Wāwu dibaca jelas dengan pengawasan ekstra agar makhraj mīm tidak tergelincir masuk ke wāwu (<em>waḥdzar ladā wāwin wa fā an takhtafī</em>).
+                </td>
+                <td>
+                    • <strong>Qālūn & Ibnu Katsīr:</strong> Menerapkan shilah mīm jam' (<em>minhumū wa hum</em>) saat washal.<br>
+                    • Seluruh imam sepakat membaca tarqīq pada Rā' dan idzhar halqi pada nūn sukun kata <em>minhum</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><strong>وَهُم مُّعْرِضُونَ ۝٢٣</strong><br>(<em>Wa hum mu'ridhūn</em>)</td>
+                <td>
+                    <strong>Idghām Mitslayn Shaghīr (Idghām Mīmī):</strong> Mīm sukun pada <em>hum</em> bertemu Mīm dhommah pada <em>mu'ridhūn</em> melebur disertai ghunnah 2 harakat penuh.<br>
+                    <strong>Huruf 'Ain:</strong> Tawassuth di tengah tenggorokan.<br>
+                    <strong>Tarqīq Huruf Rā':</strong> Rā' berharakat kasrah dibaca tipis.<br>
+                    <strong>Huruf Ḍhād:</strong> Huruf terberat dalam fonetik Arab; memiliki sifat isti'lā', ithbāq, dan <strong>Istiṭhālah</strong> (perpanjangan tepi lidah ke gigi geraham atas).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Wāwu mad bertemu Nūn yang disukunkan karena waqaf di ujung ayat, dibaca sepanjang 2, 4, atau 6 harakat disertai sifat tawassuth pada Nūn sukun.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah menerapkan idgham mimi dengan ghunnah 2 harakat, membaca tarqīq pada huruf Rā' kasrah, menyempurnakan sifat istithālah pada huruf Ḍhād, dan memilih kadar mad 'aridh lis-sukun sesuai martabat tilawah.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Utama: Skandal Pembangkangan Para Rabi Yahudi terhadap Hukum Rajam (Shahīh Al-Bukhārī No. 4556, 3635, 6819 & Shahīh Muslim No. 1699 dari Sahabat Abdullah bin Umar r.a.):</strong><br>
+        Sekelompok orang Yahudi mendatangi Rasulullah ﷺ di Madinah membawa seorang pria dan seorang wanita dari kalangan elit mereka yang telah berzina muhshan. Mereka sengaja mencari celah hukum (<em>forum shopping</em>) dengan harapan Nabi Muhammad ﷺ memberikan vonis yang lebih ringan dari hukum rajam yang tercantum dalam kitab suci mereka sendiri.<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        فَقَالَ لَهُمْ رَسُولُ اللَّهِ ﷺ: "مَا تَجِدُونَ فِي التَّوْرَاةِ فِي شَأْنِ الرَّجْمِ؟" فَقَالُوا: نَفْضَحُهُمْ وَيُجْلَدُونَ! فَقَالَ عَبْدُ اللَّهِ بْنُ سَلَامٍ: كَذَبْتُمْ، إِنَّ فِيهَا الرَّجْمَ! فَأَتَوْا بِالتَّوْرَاةِ فَنَشَرُوهَا، فَوَضَعَ أَحَدُهُمْ يَدَهُ عَلَى آيَةِ الرَّجْمِ، فَقَرَأَ مَا قَبْلَهَا وَمَا بَعْدَهَا، فَقَالَ لَهُ عَبْدُ اللَّهِ بْنُ سَلَامٍ: ارْفَعْ يَدَكَ! فَرَفَعَ يَدَهُ فَإِذَا فِيهَا آيَةُ الرَّجْمِ، قَالُوا: صَدَقَ يَا مُحَمَّدُ، فِيهَا آيَةُ الرَّجْمِ! فَأَمَرَ بِهِمَا رَسُولُ اللَّهِ ﷺ فَرُجِمَا.
+        </span>
+        <em>Rasulullah ﷺ bertanya kepada mereka: "Apa yang kalian dapati di dalam kitab Taurat tentang perkara rajam?" Para rabi Yahudi berbohong seraya menjawab: "Kami hanya mempermalukan mereka (menghitamkan wajahnya dengan arang) dan mencambuk mereka!" Maka berdirilah Abdullah bin Salam r.a. (mantan rabi besar Yahudi yang telah masuk Islam) lalu berkata: "Kalian berdusta! Sungguh di dalam Taurat ada hukum rajam!" Maka mereka membawa naskah Taurat lalu membukanya. Tiba-tiba salah seorang di antara mereka (Ibnu Shuriya) meletakkan telapak tangannya menutupi ayat rajam tersebut, lalu ia membaca ayat sebelum dan sesudahnya. Abdullah bin Salam membentak: "Angkat tanganmu!" Ketika tangan itu diangkat, tampaklah ayat rajam yang terang benderang. Mereka pun tertunduk malu seraya mengakui: "Dia benar wahai Muhammad, di dalamnya memang ada ayat rajam!" Maka Rasulullah ﷺ memerintahkan agar keduanya dirajam sesuai ketentuan Kitabullah.</em><br>
+        <strong>Derajat Riwayat:</strong> Sahih Muttafaqun 'Alaih. Peristiwa ini adalah perwujudan konkret dari lafaz: <em>Yud'awna ilā kitābillāhi liyahkuma baynahum tsumma yatawallā farīqum minhum wa hum mu'ridhūn</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Asbabun Nuzul Riwayat Ibnu Abbas r.a. — Ajakan Arbitrase di Rumah Belajar Baitul Midras (Tafsīr At-Ṭhabarī No. 6682 & Mu'jam Al-Kabīr karya Ath-Thabarani):</strong><br>
+        Diriwayatkan dari Ikrimah dan Sa'id bin Jubair dari Sahabat Abdullah bin Abbas r.a.: Suatu hari Rasulullah ﷺ memasuki <em>Baitul Midrās</em> (rumah peribadatan dan pengkajian naskah Taurat milik kaum Yahudi Madinah). Di sana Nabi menemui sekelompok pemuka rabi, di antaranya Nu'aim bin 'Amr dan Al-Harits bin Zaid. Nabi bersabda menyeru mereka dengan penuh kasih sayang:<br>
+        <em>"Celakalah kalian, bertakwalah kepada Allah! Demi Allah, sungguh kalian mengetahui dengan pasti bahwa apa yang aku bawa kepada kalian adalah kebenaran dari sisi Allah!"</em><br>
+        Mereka menjawab dengan angkuh: <em>"Kami tidak mengetahui hal itu, dan kami tetap berada di atas agama Ibrahim!"</em><br>
+        Maka Rasulullah ﷺ bersabda mengajukan arbitrase objektif:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "فَهَلُمُّوا إِلَى التَّوْرَاةِ فَهِيَ بَيْنَنَا وَبَيْنَكُمْ فَلْتَحْكُمْ بَيْنَنَا!"
+        </span>
+        <em>"Kemarilah kalian kepada kitab Taurat! Kitab itu ada di hadapan kita, biarlah ia yang menjadi hakim pemutus antara kami dan kalian!"</em><br>
+        Mendengar ajakan arbitrase yang bersumber dari kitab suci mereka sendiri, Nu'aim bin 'Amr dan para rabi lainnya terdiam membisu, memalingkan wajah mereka, dan menolak membuka lembaran naskah Taurat. Maka Allah menurunkan ayat: <em>Alam tara ilal-ladzīna ūtū naṣhībam minal-kitāb...</em>
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Shahīh Riwayat Imam Muslim (No. 1700) & Sunan Abī Dāwūd (No. 4449) dari Sahabat Al-Barā' bin 'Āzib r.a. — Konspirasi Pengubahan Hukum Demi Melindungi Elit:</strong><br>
+        Rasulullah ﷺ berpapasan dengan orang-orang Yahudi yang membawa seorang pezina yang telah dicambuk dan dihitamkan wajahnya. Nabi memanggil ulama mereka dan bertanya di bawah sumpah atas nama Zat yang menurunkan Taurat kepada Musa: <em>"Apakah demikian hukuman pezina muhshan yang kalian dapati dalam kitab kalian?"</em> Ulama itu menjawab jujur karena takut azab sumpah:<br>
+        <em>"Demi Allah, seandainya engkau tidak menyumpahku, aku tidak akan memberitahumu. Sesungguhnya hukum rajam ada dalam kitab kami. Namun perzinaan semakin marak di kalangan bangsawan dan elit kami. Apabila orang terpandang berzina, kami membiarkannya bebas; tetapi apabila orang miskin jelata yang berzina, kami menegakkan hukuman rajam atasnya. Maka para pembesar kami bermusyawarah: 'Marilah kita buat satu kesepakatan hukuman yang bisa diterapkan merata bagi bangsawan maupun orang jelata!' Lalu kami sepakat mengganti rajam dengan mencoreng arang pada wajah dan mencambuknya!"</em><br>
+        Mendengar itu, Rasulullah ﷺ berdoa mengembalikan kemurnian syariat Allah:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "اللَّهُمَّ إِنِّي أَوَّلُ مَنْ أَحْيَا أَمْرَكَ إِذْ أَمَاتُوهُ!"
+        </span>
+        <em>"Ya Allah, sesungguhnya aku adalah orang pertama yang menghidupkan kembali ketetapan hukum-Mu tatkala mereka telah mematikannya!"</em>
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. R-'-Y (ر-أ-ي — Alam Tara):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> menjelaskan bahwa akar kata <em>Ra'ā</em> memiliki dua cabang medan makna utama: <em>ru'yatul-'ayn</em> (melihat dengan mata fisik/persepsi indrawi) dan <em>ru'yatul-qalb wal-'aql</em> (melihat dengan kalbu, ilmu, kecerdasan kognitif, dan perenungan mendalam). Dalam QS. 3:23, bentuk fi'il mudhari' <em>tara</em> yang didahului istifham dan partikel nafy bermakna <strong>ru'yah 'ilmiyyah-i'tibāriyyah</strong>: "Tidakkah engkau mengetahui secara jernih, membedah secara kritis, dan mengambil pelajaran berharga atas kontradiksi perilaku mereka?"
+        </li>
+        <li><strong>2. N-Ṣh-B (ن-ص-ب — Naṣhīban):</strong>
+            Dalam <em>Lisān al-'Arab</em> karya Ibnu Manzhūr, <em>an-naṣhīb</em> adalah <em>al-ḥazhzhu wal-qisṭhu wal-ḥiṣhṣhah minal-amr</em> (bagian tertentu, kuota, atau porsi yang dipotong dari suatu keseluruhan). Berasal dari akar kata yang bermakna "menegakkan dan memancangkan" (<em>naṣhaba</em>). Bagian dinamakan <em>naṣhīb</em> karena ia dipatok atau ditetapkan menjadi jatah bagi seseorang. Penggunaan kata <em>naṣhīban</em> (dalam bentuk nakirah/indefinit) mengandung konotasi peyoratif <strong>at-taqlīl wat-tab'īdh</strong>: mereka hanyalah pemilik "sejumput porsi kecil" dari wahyu Tuhan. Hal ini menelanjangi kesombongan mereka yang berlagak memonopoli surga, padahal penguasaan mereka terhadap hakikat kitabullah teramat kerdil dan terfragmentasi.
+        </li>
+        <li><strong>3. K-T-B (ك-ت-ب — Al-Kitāb & Kitābillāh):</strong>
+            Ibnu Faris merumuskan poros maknanya pada: <strong>Al-Jam'u wad-Dhamm (الجمع والضم - menghimpun, menyatukan, dan mengikat huruf-huruf menjadi ketetapan permanen)</strong>. Dalam ayat ini terjadi repetisi indah dengan dua fungsi berbeda: lafaz pertama <em>al-kitāb</em> merujuk pada materi kodifikasi Taurat terdahulu yang ada di tangan mereka; sedangkan lafaz kedua <em>kitābillāh</em> disandarkan kepada lafaz Jalālah (<em>iḍhāfah at-tasyrīf wat-ta'ẓhīm</em>) untuk menegaskan hakikat statusnya sebagai aturan hukum absolut yang bersumber langsung dari Rabb semesta alam, yang wajib ditaati oleh siapa pun tanpa pengecualian.
+        </li>
+        <li><strong>4. D-'-W (د-ع-و — Yud'awna):</strong>
+            Porosnya adalah <strong>Imālatu syay'in ilayka bi-shawtin wa thalab (إمالة الشيء إليك - memanggil, mengajak, membimbing, dan menarik perhatian seseorang menuju suatu arah)</strong>. Bentuk pasif (<em>mabnī lil-majhūl</em>) <em>yud'awna</em> menunjukkan bahwa panggilan untuk berhukum kepada wahyu tidak hanya datang dari Nabi Muhammad ﷺ, melainkan telah diserukan berulang kali oleh hati nurani fitrah mereka, para nabi mereka terdahulu, akal sehat, dan teks kitab suci mereka sendiri.
+        </li>
+        <li><strong>5. Ḥ-K-M (ح-ك-م — Liyahkuma):</strong>
+            Ibnu Faris mencatat akar kata <em>Ḥukm</em> bermakna asal: <strong>Al-Man'u (المنع - mencegah dan menahan kezaliman)</strong>. Dari akar ini lahir istilah <em>ḥakamatud-dābbah</em> (tali kekang yang dipasang di mulut kuda untuk mencegahnya berlaku liar dan melompat ke jurang). Hukum dinamakan <em>ḥukm</em> karena ia berfungsi mengekang kebiadaban hawa nafsu dan mencegah tirani manusia atas sesamanya. Frasa <em>liyahkuma baynahum</em> mengindikasikan bahwa Kitabullah diposisikan sebagai penengah yang steril dari kepentingan subjektif dan klan.
+        </li>
+        <li><strong>6. W-L-Y (و-ل-ي — Yatawallā):</strong>
+            Poros dasarnya adalah <em>al-qurb</em> (kedekatan) atau kebalikannya: <em>al-idbār</em> (memutar punggung dan berpaling). Kata <em>tawallā</em> (wazan <em>tafa''ala</em>) menunjukkan gerakan fisik dan psikologis aktif: seseorang yang mulanya berada berhadap-hadapan dengan kebenaran, lalu secara sengaja memutar tubuhnya 180 derajat untuk membelakangi dan melarikan diri dari kebenaran tersebut karena benci dan enggan mematuhi konsekuensinya.
+        </li>
+        <li><strong>7. F-R-Q (ف-ر-ق — Farīqun):</strong>
+            Porosnya adalah <strong>Al-Faṣhlu baynas-syay'ayn (الفصل بين الشيئين - memisahkan dua hal)</strong>. <em>Al-Farīq</em> adalah sekelompok orang yang memisahkan diri dari korpus jamaah besar. Diksi <em>farīqun minhum</em> adalah bukti keadilan ilmiah Al-Qur'an (<em>al-inshāf al-Qur'ānī</em>): Al-Qur'an tidak menggeneralisasi bahwa seluruh orang Yahudi itu bejat dan menolak hukum; Al-Qur'an secara objektif membatasi vonis tersebut hanya kepada faksi elit rabi dan pengikut fanatiknya, seraya mengakui adanya segolongan kecil yang jujur dan menyambut kebenaran.
+        </li>
+        <li><strong>8. '-R-Ḍh (ع-ر-ض — Mu'ridhūn):</strong>
+            Berasal dari <em>'Aradha</em> yang bermakna menampakkan sisi samping (memalingkan wajah ke samping agar tidak melihat orang yang mengajak). Kata <em>al-i'rāḍh</em> dalam balaghah Al-Qur'an berada di atas sekadar <em>at-tawallī</em>. <em>At-Tawallī</em> adalah tindakan pembangkangan lahiriah (perbuatan fisik), sedangkan <em>Al-I'rāḍh</em> adalah penolakan batiniah yang disertai kebencian, sikap meremehkan, dan apatisme ideologis yang mendarah daging.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>أَلَمْ</strong></td>
+                <td>Hamzah istifham taqrir/ta'ajjub. <em>Lam</em>: Harf nafy wa jazm wa qalb mabni 'alas-sukun.</td>
+                <td>Amil jazm yang menafikan dan membalikkan makna mudhari' ke masa lampau.</td>
+            </tr>
+            <tr>
+                <td><strong>تَرَ</strong></td>
+                <td>Fi'il mudhari' tsulatsi mujarrad (<em>ra'ā – yarā</em>). Asalnya <em>tarā</em> (تَرَى).</td>
+                <td><strong>Fi'il Mudhari' Majzum</strong> bi <em>lam</em>, tanda jazm-nya adalah <strong>hadzfu harfil-'illah</strong> (terbuangnya alif layyinah). Fa'il-nya dhamir mustatir wujūban taqdiruhu <em>anta</em> (engkau, Muhammad/setiap penelaah).</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَى ٱلَّذِينَ</strong></td>
+                <td><em>Ilā</em>: Harf jarr. <em>Al-ladzīna</em>: Isim maushul lil-jam'il-mudzakkar mabni 'alal-fath.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>tara</em> (karena fi'il <em>tara</em> bermakna <em>yanzhur</em>/memperhatikan).</td>
+            </tr>
+            <tr>
+                <td><strong>أُوتُوا۟</strong></td>
+                <td>Fi'il madhi mabni lil-majhul / ma lam yusamma fā'iluh (wazan <em>af'ala</em> dari <em>ātā</em>).</td>
+                <td><em>Wāwu al-Jamā'ah</em> fī maḥalli raf'in <strong>Nā'ibul Fā'il</strong> (sebagai maf'ul pertama secara maknawi).</td>
+            </tr>
+            <tr>
+                <td><strong>نَصِيبًۭا</strong></td>
+                <td>Isim jamid mufrad mudzakkar, masdar bi ma'na maf'ul, nakirah manshubah.</td>
+                <td><strong>Maf'ūl bih Tsānī</strong> manshub bil-fat-ḥah azh-zhāhirah bagi fi'il <em>ūtū</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّنَ ٱلْكِتَـٰبِ</strong></td>
+                <td><em>Min</em>: Harf jarr lil-ba'īdhiyyah / tabyīn. <em>Al-Kitābi</em>: Isim majrur bil-kasrah.</td>
+                <td>Jārr wa majrūr <strong>muta'alliq</strong> bi mahdzūf na'at/sifat bagi <em>naṣhīban</em> (ditakdirkan: <em>naṣhīban kā'inan minal-kitāb</em>). Seluruh jumlah <em>ūtū naṣhībam minal-kitāb</em> adalah <strong>Shilat al-Mawṣhūl</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>يُدْعَوْنَ</strong></td>
+                <td>Fi'il mudhari' mabni lil-majhul dari <em>da'ā – yad'ū</em>. Wawu jama'ah isim dhamir.</td>
+                <td>Fi'il mudhari' marfu' bi <strong>tsubūtin-nūn</strong>, Wāwu al-Jamā'ah fī maḥalli raf'in <strong>Nā'ibul Fā'il</strong>. Jumlah fi'liyyah <em>yud'awna</em> fī maḥalli naṣhbin <strong>Ḥāl</strong> dari dhamir wāwu pada <em>ūtū</em> (kondisi mereka saat diberi kitab: senantiasa diseru kepada hukum).</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَىٰ كِتَـٰبِ ٱللَّهِ</strong></td>
+                <td><em>Ilā</em>: Harf jarr. <em>Kitābi</em>: Isim majrur mudhaf. <em>Allāhi</em>: Isim jalālah mudhaf ilayh majrur.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>yud'awna</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>لِيَحْكُمَ</strong></td>
+                <td>Lām kay / ta'līl. <em>Yahkuma</em>: Fi'il mudhari' tsulatsi mujarrad manshub bi <em>an</em> mudhmarah jawāzan ba'da lāmit-ta'līl.</td>
+                <td>Fi'il mudhari' manshub bil-fat-ḥah. Fa'il-nya dhamir mustatir jawāzan taqdiruhu <em>huwa</em> kembali kepada <em>Kitābullāh</em> (atau kepada Allah). Masdar mu'awwal (<em>li-ḥukmihī</em>) fī maḥalli jarr bil-lām, <strong>muta'alliq</strong> bi fi'il <em>yud'awna</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>بَيْنَهُمْ</strong></td>
+                <td><em>Bayna</em>: Zharf makan manshub mudhaf. <em>Hum</em>: Dhamir muttashil majrur mudhaf ilayh.</td>
+                <td>Zharf makan <strong>muta'alliq</strong> bi fi'il <em>yahkuma</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ثُمَّ</strong></td>
+                <td>Harf 'athaf li at-tartīb wat-tarākhī ar-rutbī wal-ma'nawī.</td>
+                <td>Menghubungkan jumlah fi'liyyah <em>yatawallā</em> kepada jumlah sebelumnya.</td>
+            </tr>
+            <tr>
+                <td><strong>يَتَوَلَّىٰ</strong></td>
+                <td>Fi'il mudhari' wazan <em>tafa''ala</em> dari akar <em>W-L-Y</em>.</td>
+                <td>Fi'il mudhari' marfu' bi <strong>dhammah muqaddarah</strong> 'alal-alif li at-ta'adz-dzur. Amil bagi fa'il setelahnya.</td>
+            </tr>
+            <tr>
+                <td><strong>فَرِيقٌۭ مِّنْهُمْ</strong></td>
+                <td><em>Farīqun</em>: Isim jins nakirah marfu'. <em>Minhum</em>: Harf jarr wa dhamir majrur.</td>
+                <td><em>Farīqun</em>: <strong>Fā'il</strong> marfu' bil-dhammah azh-zhāhirah bagi <em>yatawallā</em>. Syibhul jumlah <em>minhum</em> fī maḥalli raf'in <strong>Na'at / Sifat</strong> bagi <em>farīq</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَهُم</strong></td>
+                <td>Wawu al-ḥāl (wawu ḥāliyyah). <em>Hum</em>: Dhamir munfashil mabni 'alas-sukun.</td>
+                <td>Dhamir munfashil fī maḥalli raf'in <strong>Mubtada'</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>مُّعْرِضُونَ ۝٢٣</strong></td>
+                <td>Isim fā'il dari fi'il ruba'i <em>a'radha – yu'ridhu</em> (akar '-R-Ḍh), jamak mudzakkar salim.</td>
+                <td><strong>Khabar Mubtada'</strong> marfu' bil-wāwu li-annahū jam'u mudzakkar sālim. Seluruh jumlah ismiyyah (<em>wa hum mu'ridhūn</em>) fī maḥalli naṣhbin <strong>Ḥāl Mu'akkadah</strong> dari fa'il <em>farīq</em> atau dari dhamir <em>minhum</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Istifhām Ta'ajjubī wa Inqilāb al-Khitāb (Pertanyaan Keheranan Ekstrem):</strong>
+            Klausa <em>Alam tara</em> sejatinya keluar dari bentuk pertanyaan harfiah menuju <strong>at-ta'ajjub wat-tawbīkh</strong> (membangkitkan rasa heran tak habis pikir sekaligus celaan tajam). Keheranan ini muncul karena adanya jurang pemisah yang tidak masuk akal: bagaimana mungkin suatu kaum yang menyandang status bangsawan literasi wahyu (<em>ūtul-kitāb</em>) dan mengaku sebagai pewaris kebenaran langit, justru menjadi pihak yang paling ketakutan dan lari membelakangi hukum ketika diajak berhukum kepada kitab suci mereka sendiri?
+        </li>
+        <li><strong>Ilmu Ma'ani — Fadhīlatul-Iẓhhār fī Mawḍhi'il-Iḍhmār (Eksplisitasi Nama "Kitābillāh"):</strong>
+            Setelah menyebutkan <em>ūtū naṣhībam minal-kitāb</em>, secara gramatika ekonomis kalimat berikutnya bisa saja cukup menggunakan kata ganti: <em>yud'awna ilayhi liyahkuma baynahum</em> (mereka diajak kepadanya). Namun Al-Qur'an secara sengaja mengulang nomina eksplisit yang agung: <strong>ilā Kitābillāh</strong>. Teknik <em>iẓhhār fī mawḍhi'il-iḍhmār</em> ini berfungsi memberikan <strong>at-tasyrīf wat-ta'ẓhīm</strong> (penghormatan tertinggi terhadap status Kitabullah) sekaligus memperbesar kadar dosa para rabi tersebut: mereka bukan sekadar menolak ajakan Muhammad, melainkan menolak Kitab milik Allah Yang Maha Perkasa!
+        </li>
+        <li><strong>Ilmu Bayan — Majāz Isti'ārah Tamtsīliyyah pada "Liyahkuma" (Personifikasi Kitabullah):</strong>
+            Kalimat <em>liyahkuma baynahum</em> (agar Kitabullah itu memutuskan perkara di antara mereka) mengandung <strong>isti'ārah tamtsīliyyah</strong> atau majaz aqli. Kitab suci yang sejatinya berupa kumpulan lembaran teks dan hukum dipersonifikasikan seolah-olah menjadi seorang hakim agung yang hidup, adil, independen, dan berwibawa mutlak yang duduk di kursi peradilan untuk mengadili sengketa manusia. Personifikasi ini menegaskan prinsip kepastian hukum (<em>supremacy of law</em>) di atas supremasi personal manusia.
+        </li>
+        <li><strong>Ilmu Badi' — Al-I'tilāf bayna at-Tawallī wal-I'rāḍh (Gradasi Penolakan Lahir-Batin):</strong>
+            Penggabungan dua kata penolakan: <em>tsumma yatawallā</em> (tindakan motorik membelakangi secara fisik) disusul jumlah haliyyah <em>wa hum mu'ridhūn</em> (sikap mental apatis dan pembangkangan batin) merupakan puncak keindahan ilmu Badi'. Al-Qur'an membedah bahwa pengkhianatan mereka bukan sekadar aksi spontan karena kaget atau malu sesaat, melainkan lahir dari konstruksi hati yang telah membeku dalam kecongkakan (<em>al-istikbār</em>).
+        </li>
+        <li><strong>Ilmu Ma'ani — Balāghatut-Tankīr wa Adabut-Tahazzur (Keadilan Objektivitas Qur'ani):</strong>
+            Penyebutan <em>farīqum minhum</em> (sebagian/segolongan dari mereka) dalam bentuk nakirah berfungsi sebagai <strong>al-iḥtirās wal-inṣhāf</strong> (penjagaan presisi agar tidak zalim dalam menjatuhkan generalisasi). Al-Qur'an membuktikan keluhuran etika epistemologinya: tidak menyapu rata seluruh pemeluk Yahudi dan Nasrani sebagai penjahat. Selalu ada individu-individu berhati bening di antara mereka (seperti Abdullah bin Salam dan para pengikutnya) yang tunduk patuh kepada kebenaran begitu dalil dibacakan.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 21–22):</strong>
+            Pada Ayat 21 dan 22, Al-Qur'an telah membongkar rekam jejak kriminal para pendahulu Ahli Kitab: membunuh para nabi utusan Allah tanpa hak, membantai para aktivis penyeru keadilan sosial (<em>yaqtulūnal-ladzīna ya'murūna bil-qisṭh</em>), serta memvonis bahwa seluruh amal perbuatan mereka gugur binasa di dunia dan akhirat (<em>ḥabiṭhat a'māluhum</em>).
+            Timbul pertanyaan di benak generasi Madinah: <em>"Apakah anak cucu keturunan mereka di Madinah hari ini memiliki watak yang berbeda dari leluhur mereka yang bengis itu?"</em>
+            Ayat 23 seketika menjawab dengan telak: <strong>Sama sekali tidak! Mentalitas mereka setali tiga uang!</strong> Jika leluhur mereka membunuh nabi pembawa keadilan fisik, maka generasi rabi kontemporer di Madinah ini membunuh keadilan hukum wahyu dengan cara membelakangi dan menyembunyikan pasal-pasal Kitabullah tatkala dipanggil untuk berhukum secara adil!
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Dinamika Politik Hukum di Madinah Pasca-Piagam Madinah):</strong>
+            Setelah Rasulullah ﷺ hijrah ke Madinah dan merumuskan <em>Piagam Madinah (Mītsāq al-Madīnah)</em>, komunitas Yahudi (Bani Qainuqa', Bani Nadhir, dan Bani Quraizhah) diakui hak kewarganegaraan dan otonomi hukum internal mereka berdasarkan Taurat. Namun, struktur sosial internal Yahudi kala itu sangat feodal dan korup:
+            <ol>
+                <li><strong>Kasta Hukum Diskriminatif antara Bani Nadhir dan Bani Quraizhah:</strong> Bani Nadhir yang mengklaim diri sebagai bangsawan aristokrat menetapkan aturan zalim: jika orang Bani Nadhir membunuh orang Bani Quraizhah, diyat-nya (tebusan darah) hanya dibayar setengah; namun jika orang Bani Quraizhah membunuh orang Bani Nadhir, diyat-nya harus dibayar penuh dua kali lipat!</li>
+                <li><strong>Sandiwara Arbitrase ke Hadapan Nabi (Legal Opportunism):</strong> Ketika terjadi sengketa perzinaan di kalangan pembesar mereka atau pertikaian diyat, para elit rabi tidak mau memakai Taurat karena pasal Taurat menuntut keadilan mutlak (hukum qishash setara dan hukuman rajam). Mereka sengaja membawa kasus itu ke hadapan Nabi Muhammad ﷺ, bukan karena mengimani kenabian beliau, melainkan dengan mentalitas spekulatif: <em>"Siapa tahu nabi baru ini memberikan hukum kompromi yang lebih longgar sehingga privilese kita terselamatkan!"</em></li>
+                <li><strong>Respons Tegas Al-Qur'an:</strong> Begitu Nabi Muhammad ﷺ justru memutuskan perkara mereka dengan merujuk langsung kepada prinsip keadilan Taurat dan Al-Qur'an, topeng kepalsuan mereka runtuh. Mereka menolak putusan tersebut dan memalingkan muka (<em>yatawallā</em>).</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Menuju Ayat 24):</strong>
+            Pembongkaran watak pembangkangan pada Ayat 23 menimbulkan keheranan psikologis: <em>"Dari manakah datangnya keberanian nekat para rabi itu untuk menentang hukum Allah terang-terangan tanpa rasa takut sedikit pun akan azab neraka?"</em>
+            Ayat 24 langsung menyingkap akar delusi kejiwaan mereka:
+            <br><em>"Dzālika bi-annahum qālū lan tamassanan-nāru illā ayyāmam ma'dūdāt, wa gharrahum fī dīnihim mā kānū yaftarūn."</em>
+            <br>(Hal itu adalah karena mereka memiliki keyakinan sesat bahwa: "Api neraka sekali-kali tidak akan menyentuh kami kecuali hanya beberapa hari saja yang dapat dihitung." Mereka terperdaya dalam agama mereka oleh kebohongan yang selalu mereka ada-adakan!). Ayat 23 membeberkan <strong>gejala perilakunya</strong> (lari dari hukum), sedangkan Ayat 24 membongkar <strong>akar ideologinya</strong> (ilusi privilese ras pilihan Tuhan yang kebal neraka).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Dokumentasi Riwayat Salaf & Makna Hakiki "Naṣhīb minal-Kitāb":</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīli Āy Al-Qur'ān</em>, At-Tabari menegaskan bahwa ayat ini diturunkan berkaitan dengan para ulama Yahudi Madinah yang menolak berhukum kepada Taurat dalam kasus sengketa di antara mereka. Menafsirkan frasa <em>ūtū naṣhībam minal-kitāb</em>, At-Tabari memaparkan riwayat dari Qatadah dan As-Suddi: mereka disebut hanya diberi 'bagian' karena sebagian besar ajaran kitab telah mereka lenyapkan melalui distorsi (<em>tahrīf</em>) dan penyembunyian (<em>kitmān</em>). At-Tabari menggarisbawahi kebodohan sikap mereka: mereka mengaku berpegang teguh pada warisan para nabi, namun tatkala diajak menguji kebenaran nubuwah Muhammad ﷺ atau hukum rajam melalui teks asli Taurat yang mereka miliki, mereka justru melarikan diri karena takut kedok kebohongannya terbongkar di hadapan publik pengikutnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Inkonsistensi Doktrinal & Pengingkaran Sengaja:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir mengaitkan ayat ini dengan celaan keras terhadap tabiat munafik. Beliau menjelaskan bahwa orang-orang Yahudi yang memiliki kitab Taurat yang diturunkan kepada Musa AS sejatinya memegang risalah yang memerintahkan mereka untuk mengikuti Nabi Muhammad ﷺ dan menegakkan keadilan hukum Allah tanpa diskriminasi. Namun ketika Rasulullah ﷺ mengajak mereka berhukum kepada Kitabullah (baik Taurat maupun Al-Qur'an yang membenarkannya), <em>tsumma yatawallā farīqum minhum</em>—sebagian pembesar mereka membelakangi hujah tersebut seraya memalingkan wajah dengan penuh keangkuhan. Ibnu Katsir menegaskan bahwa penolakan ini bukan didasari oleh ketidaktahuan (<em>jahl</em>), melainkan pembangkangan sadar demi melindungi kekuasaan dan hegemoni status kependetaan mereka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Perspektif Fiqih Siyasah, Arbitrase Ahludz-Dzimmah & Kewajiban Syariat:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah implikasi hukum ketatanegaraan Islam:
+        <ul>
+            <li><strong>Yurisdiksi Peradilan Islam atas Warga Non-Muslim:</strong> Ayat ini menjadi dalil bahwa apabila kaum kafir dzimmi atau Ahli Kitab mendatangi pengadilan Islam untuk meminta putusan hukum, hakim muslim memiliki hak untuk memutuskan perkara mereka berdasarkan syariat Allah, sebagaimana ditegaskan dalam QS. Al-Ma'idah: 42 (<em>Fa-in jā'ūka fahkum baynahum aw a'ridh 'anhum</em>).</li>
+            <li><strong>Kewajiban Menegakkan Hukum yang Setara:</strong> Hakim tidak boleh mengikuti hawa nafsu para pemohon arbitrase yang mencari putusan diskriminatif. Keadilan syariat Allah berlaku mutlak tanpa pandang bulu, baik bagi rakyat jelata maupun para bangsawan.</li>
+            <li><strong>Peringatan Keras bagi Kaum Muslimin:</strong> Al-Qurthubi mengutip ucapan para salaf yang menegaskan: <em>"Barangsiapa di antara kaum muslimin yang diajak berhukum kepada Kitabullah dan Sunnah Rasul-Nya lalu ia menolak dan berpaling, maka ia telah menyerupai tabiat tercela orang-orang Yahudi dalam ayat ini!"</em> Menolak arbitrase syariat adalah salah satu tanda paling nyata dari kemunafikan amaliyah yang membahayakan akidah.</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Epistemologi Rasional & Hermeneutika Balaghah:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi menyoroti keindahan struktur <em>yud'awna</em>: panggilan tersebut merupakan panggilan hujah akal dan wahyu. Mengapa mereka menolak? Ar-Razi membedah problem psikologis: seseorang yang meyakini dirinya memiliki status istimewa di mata Tuhan sering kali merasa berada "di atas hukum" (<em>above the law</em>). Kitab suci bagi mereka diperlakukan sekadar sebagai jimat kebanggaan klan, bukan sebagai pedoman operasional yang mengikat perilaku. Sementara Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti balaghah lafaz <em>wa hum mu'ridhūn</em>: jumlah ismiyyah tersebut menyiratkan bahwa keengganan mereka berhukum pada Kitabullah bukanlah peristiwa kasuistik insidental, melainkan manifestasi dari penyakit watak kronis (<em>'ādah mustamirrah</em>) yang telah berurat-akar dalam kultur keagamaan elit mereka.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Sosiologi Dekadensi Moral Institusi Agama:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur menyajikan analisis sosiologis peradaban: ayat ini meletakkan diagnosis tajam mengenai fase pembusukan institusi keagamaan (<em>inḥiṭhāṭh al-hay'ah ad-dīniyyah</em>). Ketika para pemangku otoritas agama terbiasa melakukan kompromi politik dan menikmati rente materi dari umat, mereka mulai memilah-milah teks suci (<em>cherry-picking</em>). Kata <em>naṣhīban</em> melambangkan mentalitas <strong>kepatuhan selektif</strong>: mereka mempertahankan teks-teks ritualistik yang memperkuat kultus kependetaan mereka, namun membungkam dan membuang teks-teks hukum sosial, keadilan ekonomi, dan kabar nubuwah yang mengancam dominasi mereka. Ketika datang ajakan untuk kembali kepada teks orisinil (<em>Kitābillāh</em>), mereka panik dan meresponsnya dengan desersi moral (<em>yatawallā</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Kearifan Kontekstual & Cermin Introspeksi Umat:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melontarkan peringatan tajam yang menggetarkan sanubari:<br>
+        <em>"Teguran ayat ini mula-mula memang tertuju kepada rabi-rabi Yahudi yang curang di Madinah. Tetapi janganlah kita kaum muslimin membaca ayat ini dengan dada membusung seraya menertawakan orang Yahudi! Perhatikanlah keadaan umat Islam hari ini: berapa banyak di antara kita yang hafal Al-Qur'an, bangga menenteng mushaf, tetapi tatkala terjadi sengketa pembagian harta warisan, sengketa tanah, atau perniagaan, lalu diajak berhukum kepada hukum faraidh Al-Qur'an, hatinya berontak dan lari mencari hukum perdata buatan manusia semata-mata karena hukum Al-Qur'an tidak memenangkan kerakusan hawa nafsunya? Jika demikian tingkah laku kita, apa bedanya kita dengan orang yang disebut dalam ayat ini: ūtū naṣhībam minal-kitāb... tsumma yatawallā wa hum mu'ridhūn?!"</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menguraikan makna <em>naṣhīban</em> sebagai kritik terhadap orang yang beragama secara parsial. Keberagamaan yang sejati menuntut kepasrahan total (<em>kāffah</em>) untuk menerima seluruh paket syariat, baik yang selaras dengan selera pribadi maupun yang menuntut pengorbanan ego. Kemenag RI mencatat pesan pentingnya konsistensi hukum: integritas suatu bangsa runtuh tatkala hukum dipermainkan demi kepentingan oligarki politik dan para pembesar, seraya menindas rakyat kecil.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna Hakiki "Naṣhīban minal-Kitāb"</strong></td>
+                <td>Seluruh ulama sepakat bahwa mereka hanya menguasai atau memiliki sebagian/porsi dari kitab samawi, bukan keseluruhan secara sempurna.</td>
+                <td>
+                    • <strong>Pendekatan Filologis/Naskah (At-Tabari, Al-Baghawi):</strong> Sebagian naskah Taurat yang selamat dari pembakaran dan pemalsuan sejarah Babilonia.<br>
+                    • <strong>Pendekatan Hermeneutika/Kognitif (Ibnu 'Asyur, Quraish Shihab):</strong> Penguasaan pengetahuan parsial di mana mereka sengaja memotong-motong teks wahyu dan hanya mengamalkan ayat yang menguntungkan kelompoknya (<em>cherry-picking</em>).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Identitas "Kitābillāh" yang Kedua</strong></td>
+                <td>Sepakat bahwa Kitabullah adalah wahyu Ilahi yang memuat hukum keadilan mutlak yang wajib dipatuhi.</td>
+                <td>
+                    • <strong>Mayoritas Mufassir (Ibnu Abbas, At-Tabari, Ibnu Katsir):</strong> Merujuk kepada kitab Taurat asli yang ada pada mereka (sebagaimana dalam kasus ayat rajam).<br>
+                    • <strong>Sebagian Mufassir (Ar-Razi, Al-Qurthubi):</strong> Merujuk kepada Al-Qur'an yang diturunkan kepada Nabi Muhammad ﷺ yang membenarkan dan menguji kitab sebelumnya.<br>
+                    • <strong>Sintesis Ulama Kontemporer:</strong> Mencakup jenis kitab samawi secara universal (Taurat maupun Al-Qur'an), karena hukum keadilan Allah pada hakikatnya satu poros.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Status Hukum Berpaling dari Arbitrase Syariat</strong></td>
+                <td>Sepakat bahwa menolak hukum Allah secara sadar karena benci atau meremehkan hukum wahyu adalah perbuatan dosa besar dan tanda nifaq akbar.</td>
+                <td>
+                    • <strong>Kategori Kafir I'tiqadi:</strong> Jika penolakan itu disertai keyakinan bahwa hukum buatan manusia lebih unggul dan lebih adil daripada hukum Allah (<em>istihlal / istikhfaf</em>).<br>
+                    • <strong>Kategori Maksiat/Fasiq (Kufr 'Amali):</strong> Jika seseorang mengakui kebenaran hukum Allah namun enggan mematuhinya semata-mata karena kalah oleh hawa nafsu dan keserakahan harta.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Pragmatisme Oportunistik vs Pola Pikir Integritas Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Ahli Kitab Jahiliyah (Legal Opportunism)</th>
+                <th>Pola Pikir Mukmin Qur'ani (Sami'nā wa Aṭha'nā)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Motivasi Mendatangi Hukum / Arbitrase</strong></td>
+                <td><em>Forum Shopping & Self-Serving Bias:</em> Mencari lembaga peradilan atau fatwa hukum yang paling bisa dinegosiasikan demi memenangkan kepentingan materi pribadi/kelompok.</td>
+                <td><em>Search for Objective Truth:</em> Mendatangi hukum semata-mata untuk menegakkan keadilan Ilahi dan membersihkan diri dari hak orang lain, sekalipun putusan itu merugikan dirinya.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan dengan Teks Kitab Suci</strong></td>
+                <td><em>Fragmented & Instrumental ("Naṣhīb"):</em> Memperlakukan wahyu secara prasmanan (<em>cafeteria religion</em>); mengambil yang manis dan membuang yang menuntut disiplin moral.</td>
+                <td><em>Holistic & Sovereign ("Kāffah"):</em> Menerima wahyu sebagai kesatuan organik yang utuh; tunduk secara total pada perintah maupun larangan tanpa tawar-menawar.</td>
+            </tr>
+            <tr>
+                <td><strong>Reaksi Mental Saat Terkena Vonis Salah</strong></td>
+                <td><em>Tawallī & Denial (Defensif-Apatis):</em> Membelakangi putusan, memanipulasi dalil, memusuhi hakim yang adil, dan lari menghindari eksekusi hukum.</td>
+                <td><em>Taslīm & Tawbah (Kerendahan Hati):</em> Mengakui kesalahan, tunduk menerima sanksi (<em>kifārah</em>), dan memperbaiki diri demi meraih ridha Allah di akhirat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Selective Compliance Trap" (Jebakan Kepatuhan Selektif / Ilusi Beragama Parsial):</strong>
+            Secara kognitif, manusia memiliki kecenderungan alamiah untuk mengalami <em>self-deception</em> (membohongi diri sendiri). Diksi <em>ūtū naṣhībam minal-kitāb</em> menyajikan model mental tentang bahaya jebakan kepatuhan selektif. Seseorang merasa dirinya telah menjadi "hamba yang saleh" hanya karena telah mengamalkan 10% ajaran agama yang mudah dan menyenangkan (misalnya: ibadah seremonial, perayaan hari besar, pakaian simbolik), namun pada saat yang sama ia menutup mata dari 90% tuntutan integritas syariat (kejujuran berbisnis, pembagian waris yang adil, penolakan suap, dan amar ma'ruf nahi munkar). Ketika hukum 90% itu menyentuh kehidupannya, ia bereaksi persis seperti rabi Yahudi: <em>yatawallā wa hum mu'ridhūn</em>. Menyadari model mental ini menghindarkan kita dari ilusi kesalehan semu.
+        </li>
+        <li><strong>Mental Model 2: "The Sovereign Arbiter Principle" (Prinsip Supremasi Wasit Transenden):</strong>
+            Dalam teori resolusi konflik dan game theory, sengketa antar-manusia tidak akan pernah mencapai titik temu yang berkeadilan sejati jika tolok ukur yang digunakan adalah relativisme kepentingan masing-masing pihak. Diperlukan sebuah <em>Sovereign Arbiter</em> (wasit tertinggi yang berdaulat, netral, dan tidak bisa disuap). Al-Qur'an memposisikan <strong>Kitābullāh</strong> sebagai wasit transenden tersebut. Begitu suatu pihak menolak arbitrase Kitabullah, ia sejatinya tidak sedang membela haknya, melainkan sedang menuntut tirani hawa nafsunya sendiri di atas tatanan keadilan semesta.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Anatomi Kebutaan Sadar (Willful Blindness) & Disonansi Kognitif</h3>
+    <p>
+        Secara neuropsikologis, fenomena <em>tsumma yatawallā farīqum minhum wa hum mu'ridhūn</em> merefleksikan patologi <strong>Willful Blindness</strong> (kebutaan yang disengaja secara sadar) dan upaya meredakan <strong>Disonansi Kognitif</strong> (<em>cognitive dissonance reduction</em>). Ketika para rabi dihadapkan pada teks hukum rajam di dalam Taurat mereka sendiri, terjadi benturan hebat di dalam otak antara pengetahuan rasional (korteks prefrontal) dengan ambisi keserakahan sosial (sistem limbik). Mengakui hukum tersebut berarti harus mengorbankan privilese para bangsawan klan mereka, yang berisiko menurunkan status sosial dan pendapatan ekonomi para rabi.
+    </p>
+    <p>
+        Alih-alih menyelaraskan perilaku dengan kebenaran (yang menuntut rasa sakit berupa hilangnya ego kekuasaan), sistem limbik membajak kesadaran mereka: mereka memilih gerakan membelakangi (<em>tawallī</em>) dan menutup mata secara apatis (<em>i'rāḍh</em>). Menutup tangan di atas ayat rajam adalah manifestasi fisik dari represi psikologis terhadap kebenaran yang tidak disukai.
+    </p>
+    <p>
+        Dalam perspektif <strong>Tazkiyatun Nafs</strong>, penyakit ini berakar dari <em>Kibr</em> (kesombongan) yang didefinisikan Rasulullah ﷺ secara presisi: <em>Batharul-ḥaqq wa ghamṭhun-nās</em> (menolak kebenaran dan meremehkan manusia). Terapinya adalah <strong>Al-Inkisār lillāh</strong> (meremukkan keangkuhan ego di hadapan kebesaran Allah), melatih jiwa untuk bersujud menerima ketetapan wahyu sekalipun pahit bagi hawa nafsu, serta menanamkan kesadaran hisab bahwa pengadilan dunia fana ini akan segera berlanjut ke pengadilan akhirat yang mutlak tanpa kompromi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Wabah "Cafeteria Religion" & Algoritma Cherry-Picking di Era Digital</h3>
+    <p>
+        Di abad ke-21, manifestasi <em>ūtū naṣhībam minal-kitāb</em> bermutasi menjadi fenomena <strong>Agama Prasmanan (Cafeteria Religion / Pick-and-Choose Faith)</strong>. Konsumen agama modern yang dimanjakan oleh algoritma media sosial cenderung memperlakukan fatwa dan ayat Al-Qur'an seperti menu makanan di restoran: mereka hanya memilih "potongan hukum" yang sesuai dengan selera gaya hidup hedonis dan pandangan politik partisan mereka, seraya mencampakkan hukum-hukum yang menuntut disiplin moral dan pengorbanan harta.
+    </p>
+    <p>
+        Ketika muncul pembahasan mengenai larangan riba perbankan ribawi, etika pergaulan syar'i, atau kewajiban menegakkan keadilan hukum tanpa tebang pilih, para penganut agama parsial ini seketika bersikap <em>yatawallā wa hum mu'ridhūn</em>: mencap ajaran tersebut kuno, menuduh para pendakwahnya tidak toleran, atau mencari "ustadz/cendekiawan bayaran" yang bersedia memproduksi fatwa kompromistis yang melegalkan transaksi haram mereka. Ini adalah replika sempurna dari perilaku para rabi Madinah 14 abad silam.
+    </p>
+
+    <h3>2. Fenomena "Forum Shopping" & Sandiwara Penegakan Hukum Sekuler</h3>
+    <p>
+        Dalam sosiologi hukum kontemporer, praktik orang-orang Yahudi yang mendatangi Nabi Muhammad ﷺ demi mencari vonis yang lebih longgar dikenal dengan istilah <strong>Forum Shopping</strong>: taktik kotor para elit berperkara untuk memindah-mindahkan kasus ke yurisdiksi pengadilan, majelis hakim, atau regulasi yang dinilai paling bisa disuap dan dikompromikan.
+    </p>
+    <p>
+        Krisis peradilan di banyak negara modern memperlihatkan jurang keadilan yang menganga: hukum menjadi "tumpul ke atas dan tajam ke bawah". Para koruptor miliaran dolar dan oligarki politik mendapatkan vonis ringan di sel berpendingin udara, sementara pencuri kayu bakar atau rakyat jelata diganjar hukuman maksimal tanpa ampun. QS. 3:23 menelanjangi borok peradaban ini: kehancuran suatu bangsa bermula tatkala hukum dijadikan alat sandiwara oleh elit penguasa untuk melanggengkan kekuasaan, seraya mereka membelakangi hukum keadilan universal tatkala pasal-pasalnya mengancam eksistensi dinasti mereka.
+    </p>
+
+    <h3>3. Desersi Hukum Waris & Muamalah Islam di Tengah Keluarga Muslim Modern</h3>
+    <p>
+        Tragedi paling memilukan dari cermin QS. 3:23 terjadi di dalam tubuh umat Islam itu sendiri, khususnya dalam urusan pembagian warisan (<em>faraidh</em>) dan sengketa bisnis keluarga. Betapa sering kita menyaksikan suatu keluarga muslim yang taat menjalankan shalat dan telah berkali-kali menunaikan umrah, namun ketika orang tua wafat dan harta warisan bernilai miliaran rupiah hendak dibagi, mereka menolak mentah-mentah aturan faraidh Al-Qur'an!
+    </p>
+    <p>
+        Ketika diajak: <em>"Marilah kita berhukum kepada Kitabullah (QS. An-Nisa: 11–12)!"</em>, sebagian ahli waris yang serakah justru membelakangi (<em>yatawallā</em>) dan membawa sengketa tersebut ke pengadilan umum demi membatalkan hak saudara kandungnya sendiri. Mereka rela memutuskan tali silaturahmi rahim dan mencampakkan syariat demi mengeruk warisan tanah dan materi yang fana. Ayat ini menampar dada setiap muslim: apakah kita benar-benar mengimani Kitabullah, ataukah kita sekadar menjadikannya pajangan seremonial di lemari hias?
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol "Nol Pembangkangan (Zero-Defiance Pulse) Saat Terpapar Dalil Shahih":</strong>
+                <br>• Setiap kali Anda membaca, mendengar, atau diingatkan oleh seseorang tentang suatu ayat Al-Qur'an atau hadits sahih yang bertentangan dengan kebiasaan, selera pribadi, atau opini politik Anda, tahan ego Anda selama 5 detik.
+                <br>• Hentikan seketika dorongan lidah untuk berdebat mencari celah pembenaran (<em>rationalization defense</em>).
+                <br>• Ucapkan dengan lisan dan batin kalimat ketundukan mutlak: <em>"Sami'nā wa aṭha'nā, ghukfrānaka Rabbanā wa ilaykal-mashīr"</em> (Kami mendengar dan kami taat, ampunilah kami ya Tuhan kami, dan kepada-Mulah tempat kembali). Tuliskan komitmen perubahan perilaku tersebut seketika di catatan harian Anda.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "Komitmen Arbitrase Syariat Tanpa Syarat (Zero Forum Shopping in Family & Business)":</strong>
+                Saat menghadapi perselisihan kontrak bisnis, pembagian warisan keluarga, atau sengketa rumah tangga:
+                <br>• Buat klausul perjanjian tertulis sejak awal bahwa setiap sengketa wajib diselesaikan melalui mekanisme arbitrase syariat (rujuk kepada Al-Qur'an dan Sunnah melalui ulama/hakim syariah yang kredibel dan bertakwa).
+                <br>• Berikrar di hadapan Allah untuk menerima dan mengeksekusi apa pun hasil putusan arbitrase tersebut secara lapang dada, sekalipun putusan itu secara material mengurangi keuntungan finansial pribadi Anda.
+                <br>• Haramkan diri Anda membawa sengketa ke ranah manipulasi hukum hanya demi mengakali hak saudara seiman atau hak anak yatim.
+            </li>
+            <li><strong>Etika Relasional & Integritas Kepemimpinan: "Anti-Kasta Hukum dalam Lingkup Organisasi dan Rumah Tangga":</strong>
+                <br>• Terapkan prinsip kesetaraan hukum mutlak di bawah kepemimpinan Anda: jangan pernah menerapkan standar ganda (<em>double standard</em>) dalam menegakkan aturan.
+                <br>• Jika anggota keluarga dekat, anak kandung, atau staf kepercayaan Anda melakukan kesalahan, berikan sanksi dan teguran yang adil sesuai aturan yang disepakati, persis sebagaimana Anda menegur orang lain tanpa privilese klan (meneladani prinsip Nabawi: <em>"Seandainya Fatimah binti Muhammad mencuri, niscaya aku sendiri yang akan memotong tangannya!"</em>).
+                <br>• Jadikan kejujuran menegakkan kebenaran di atas loyalitas buta terhadap klan, kelompok pengajian, atau bendera organisasi.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Seandainya detik ini seseorang membacakan ayat Al-Qur'an yang menegur caraku mencari nafkah, mendidik anak, atau memperlakukan pasanganku, apakah hatiku akan tulus tunduk memperbaiki diri, ataukah diam-diam aku merasa jengkel, memutar mata, dan mencari dalih untuk membenarkan diri (<em>yatawallā wa ana mu'ridh</em>)?</li>
+            <li>Apakah aku selama ini memperlakukan Al-Qur'an secara utuh sebagai undang-undang hidupku, ataukah aku hanya mengambil sekerat 'naṣhīb'—yakni ayat-ayat yang memuji pahala dan rezeki, seraya membuang ayat-ayat tentang keadilan pembagian waris, larangan riba, dan kewajiban amar ma'ruf nahi munkar?</li>
+            <li>Ketika terjadi perselisihan harta atau kehormatan antara diriku dengan orang lain, apakah tujuan utamaku adalah tegaknya kebenaran dan ridha Allah, ataukah semata-mata demi memuaskan nafsu kesombonganku untuk menang dan mempermalukan lawan biarpun harus menginjak-injak hukum wahyu?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Munazzilal-Kitāb, Yā Mujriyas-Saḥāb, Yā Aḥkamal-Ḥākimīn. Ya Allah Tuhan Yang Menurunkan Kitab Suci Al-Qur'an sebagai pedoman pemutus perkara yang haq di antara hamba-hamba-Mu. Kami memohon perlindungan kepada-Mu dari penyakit kecongkakan intelektual, kesombongan klan, dan kemunafikan hati yang telah membinasakan umat-umat terdahulu.
+            <br><br>
+            Allāhumma lā taj'alnā mimman ūtū naṣhībam minal-kitābi tsumma tawallaw wa hum mu'ridhūn. Ya Allah, jangan Engkau jadikan kami termasuk golongan orang-orang yang hanya mengambil sebagian kecil dari Kitab suci-Mu demi memuaskan hawa nafsu duniawi, lalu kami membelakangi dan memalingkan wajah tatkala ayat-ayat-Mu menuntut kejujuran, pengorbanan, dan keadilan moral kami. Bersihkanlah dada kami dari racun kefasikan, keserakahan harta warisan, dan manipulasi hukum yang menindas sesama hamba-Mu.
+            <br><br>
+            Allāhummar-zuqnā kamālat-taslīm li-ḥukmik, war-ridhā bi-qadhā'ik, wal-inqiyāda li-syarī'atik. Ya Allah, karuniakanlah kepada kami kesempurnaan kepasrahan di hadapan hukum-Mu, keridhaan menerima ketetapan-Mu, dan ketundukan lahir-batin dalam menjalankan syariat-Mu. Jadikanlah Al-Qur'an sebagai hakim agung di dalam dada kami, pemandu setiap keputusan hidup kami, penenang di saat kami bersengketa, dan cahaya pembimbing kami saat melintasi titian Shirathal Mustaqim menuju surga-Mu yang abadi. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-022 - QS. Ali 'Imran Ayat 22.html">&larr; Kembali ke Ayat 22 (QS. 3:22)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 23</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-024 - QS. Ali 'Imran Ayat 24.html">Lanjut ke Ayat 24 (QS. 3:24) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

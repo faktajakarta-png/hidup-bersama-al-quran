@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-264 - QS. Al-Baqarah Ayat 264 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 31px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-263 - QS. Al-Baqarah Ayat 263.html">&larr; Ayat Sebelumnya (QS. 2:263)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="002-265 - QS. Al-Baqarah Ayat 265.html">Ayat Berikutnya (QS. 2:265) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Sapi Betina)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 12: Integritas Filantropi & Etika Sedekah (Ayat 261–274)</span>
+        <span class="badge">38 Kata | 158 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 264</h1>
+    <div class="transliteration">
+        "Yā ayyuhalladzīna āmanū lā tubthilū shadaqātikum bil-manni wal-adzā kalladzī yunfiqu mālahū ri'ā'an-nāsi wa lā yu'minu billāhi wal-yawmil-ākhir, famatsaluhū kamatsali shafwānin 'alayhi turābun fa ashābahū wābilun fatarakahū shaldā, lā yaqdirūna 'alā syay'im mimmā kasabū, wallāhu lā yahdil-qawmal-kāfirīn."
+    </div>
+    <div class="thematic-title">
+        Anatomi Kerapuhan Filantropi Narsistik: Dekonstruksi Perilaku Riya', Al-Mann (Mengungkit Karunia), dan Al-Adzā (Melukai Penerima) melalui Tamsil Geologis Batu Cadas Bersalut Debu (Ṣafwānin Shaldā), serta Kehancuran Nilai Spiritual dalam Transaksionalisme Ego
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa v2.0 (Gold-Standard) — Surah Al-Baqarah: Ayat 264 | Klaster Ekonomi Rabbani, Penjagaan Kehormatan Mustahiq & Tazkiyatun Nafs
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تُبْطِلُوا۟ صَدَقَـٰتِكُم بِٱلْمَنِّ وَٱلْأَذَىٰ كَٱلَّذِى يُنفِقُ مَالَهُۥ رِئَآءَ ٱلنَّاسِ وَلَا يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ ۖ فَمَثَلُهُۥ كَمَثَلِ صَفْوَانٍ عَلَيْهِ تُرَابٌ فَأَصَابَهُۥ وَابِلٌ فَتَرَكَهُۥ صَلْدًا ۖ لَّا يَقْدِرُونَ عَلَىٰ شَىْءٍ مِّمَّا كَسَبُوا۟ ۗ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلْكَـٰفِرِينَ ۝٢٦٤
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Wahai orang-orang yang beriman! Janganlah kamu membatalkan (menggugurkan pahala) sedekah-sedekahmu dengan menyebut-nyebutnya (al-mann / mengungkit-ungkit budi) dan menyakiti (perasaan si penerima), sebagaimana orang yang menginfakkan hartanya karena riya' (pamer demi mencari pujian dan citra) di hadapan manusia serta tidak beriman kepada Allah dan hari akhir. Maka perumpamaannya adalah seperti batu licin yang di atasnya ada lapisan debu tipis, lalu batu itu ditimpa hujan lebat yang deras, maka tinggallah batu itu licin tandus (bersih tanpa sisa tanah sedikit pun). Mereka tidak memperoleh kuasa apa pun atas sesuatu yang telah mereka usahakan. Dan Allah tidak memberi petunjuk kepada kaum yang kafir."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong>
+        Kata <em>lā tubthilū</em> (لَا تُبْطِلُوا) tidak sekadar bermakna "mengurangi pahala", melainkan "membatalkan, menghanguskan, dan melenyapkan substansi nilai amal hingga bernilai nol mutlak (<em>ihbāṭ al-a'māl</em>)". Lafaz <em>al-mann</em> (المَنّ) adalah racun psikologis di mana pemberi memposisikan dirinya superior dengan mengungkit-ungkit kedermawanannya, sedangkan <em>al-adzā</em> (الأَذَى) adalah agresi emosional yang melukai martabat dan kehormatan fakir miskin. Analogi geologis <em>kamatsali shafwānin 'alayhi turāb... fatarakahū shaldā</em> menggambarkan bagaimana air hujan lebat (<em>wābil</em>)—yang secara fitrah semestinya menjadi instrumen penyubur kehidupan—justru berubah menjadi agen pengelupas yang menelanjangi kepalsuan batu cadas licin tersebut, menyisakan kekerasan yang tandus tanpa sedikit pun vegetasi spiritual yang tersisa.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟</strong><br>(<em>Yā ayyuhalladzīna āmanū</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfashil:</strong> Pertemuan huruf mad dengan hamzah di lain kata (secara rasm bersambung حكمي).<br>
+                    <strong>Huruf Dzal (ذ):</strong> Makhraj ujung lidah bertemu ujung gigi seri atas, sifat <em>jahr</em> dan <em>rikhwah</em>.<br>
+                    <strong>Mad Badal:</strong> Pada lafaz <em>ءَامَنُوا</em> (hamzah mendahului alif mad).
+                </td>
+                <td>
+                    • <strong>Mad Munfashil:</strong> Dibaca <em>Qashr</em> (2 harakat) oleh Ibnu Katsir dan As-Susi; dibaca <em>Tawassuth</em> (4 harakat) oleh 'Ashim, Al-Kisa'i, Khalaf; dibaca <em>Thūl</em> (6 harakat) oleh Warsy dan Hamzah; dibaca wajah <em>Qashr/Tawassuth</em> oleh Qalun dan Abu 'Amr.<br>
+                    • <strong>Mad Badal:</strong> Khusus <strong>Imam Warsy 'an Nafi'</strong> membaca tiga jalan (<em>Tsalatsatul Badal</em>): 2, 4, atau 6 harakat. Imam lainnya sepakat 2 harakat (qashr).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>لَا تُبْطِلُوا۟ صَدَقَـٰتِكُم</strong><br>(<em>Lā tubthilū shadaqātikum</em>)</td>
+                <td>
+                    <strong>Huruf Ba' (بْ):</strong> Sukun asli berharakat dhommah sebelumnya, menampilkan <strong>Qalqalah Sughrā</strong> dengan pantulan kuat dan membal.<br>
+                    <strong>Huruf Tha' (ط):</strong> Sifat <em>Isti'lā'</em> dan <em>Ithbāq</em> yang tebal maksimal.<br>
+                    <strong>Huruf Shad (ص):</strong> <em>Isti'lā'</em>, <em>Ithbāq</em>, dan <em>Shafīr</em>.<br>
+                    <strong>Mīm Jamak:</strong> Bertemu huruf Ba' menghasilkan hukum <strong>Ikhfā' Syafawī</strong> disertai ghunnah proporsional.
+                </td>
+                <td>
+                    • <strong>Shilat Mīm Jamak:</strong> Imam Ibnu Katsir dan Abu Ja'far membaca shilah mīm jamak secara mutlak (<em>shadaqātikumū bil-manni</em>); Imam Qalun memiliki dua wajah (sukun dan shilah). Imam lainnya membaca sukun mīm tanpa shilah.<br>
+                    • Seluruh 10 Imam membaca lafaz <em>shadaqātikum</em> dalam bentuk jamak ta'nits salim (صدقاتكم) dengan tanda alif khanjaraniyyah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>بِٱلْمَنِّ وَٱلْأَذَىٰ</strong><br>(<em>Bil-manni wal-adzā</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Pada huruf Nun bertasydid (<em>al-manni</em>) ditahan sempurna 2 harakat.<br>
+                    <strong>Alif Lam Qamariyyah:</strong> Dibaca idzhar pada kedua kata.<br>
+                    <strong>Huruf Alif Maqshurah:</strong> Pada akhir kata <em>al-adzā</em> menjadi tempat waqaf mad thabi'i.
+                </td>
+                <td>
+                    • <strong>Imālah & Taqlīl:</strong> Pada lafaz <em>wal-adzā</em> (akar kata dzawatul ya' / أذي):<br>
+                    - <strong>Hamzah, Al-Kisa'i, dan Khalaf al-'Asyir:</strong> Membaca <strong>Imālah Kubrā</strong> murni (mendekatkan vokal alif ke ya' / <em>wal-adzē</em>).<br>
+                    - <strong>Warsy:</strong> Membaca <strong>Taqlīl / Bain-Bain</strong> (antara fathah dan imalah).<br>
+                    - <strong>Abu 'Amr:</strong> Membaca taqlil pada riwayat Ad-Duri.<br>
+                    - <strong>Imam Lainnya:</strong> Membaca Fathah murni.<br>
+                    • <strong>Naql Harakat:</strong> Warsy memindahkan harakat hamzah pada <em>wal-adzā</em> ke huruf lam sebelumnya (dibaca: <em>waladzā</em> tanpa hamzah).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>كَٱلَّذِى يُنفِقُ مَالَهُۥ رِئَآءَ ٱلنَّاسِ</strong><br>(<em>Kalladzī yunfiqu mālahū ri'ā'an-nāsi</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Fa' (ف) dengan tingkatan ikhfa' <em>adna</em>.<br>
+                    <strong>Mad Shilah Shughrā:</strong> Pada ha' dhamir <em>mālahū</em> (2 harakat) karena diapit huruf hidup.<br>
+                    <strong>Mad Wājib Muttashil:</strong> Huruf mad bertemu hamzah dalam satu kata pada lafaz <em>ri'ā'a</em> (wajib mad 4-5 harakat, 6 harakat menurut Warsy dan Hamzah).
+                </td>
+                <td>
+                    • <strong>Waqaf Hamzah:</strong> Jika Imam Hamzah waqaf pada kata <em>ri'ā'a</em>, ia membaca dengan <em>tashīl</em> hamzah disertai mad dan qashr, atau <em>ibdāl</em> menjadi alif.<br>
+                    • Seluruh imam sepakat membaca fathah nashab pada <em>ri'ā'an-nās</em> sebagai <em>maf'ūl li ajlih</em> atau <em>hāl</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَلَا يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ</strong><br>(<em>Wa lā yu'minu billāhi wal-yawmil-ākhir</em>)</td>
+                <td>
+                    <strong>Hamzah Sakinah:</strong> Keluar dari pangkal tenggorokan (<em>aqshal halq</em>) dengan sifat <em>syiddah</em> dan <em>jahr</em>.<br>
+                    <strong>Tarqīq Lam Jalālah:</strong> Karena didahului huruf berharakat kasrah pada <em>billāhi</em>.<br>
+                    <strong>Makhraj Ra' (رِ):</strong> Dibaca tarqiq (tipis) saat washal karena berharakat kasrah.
+                </td>
+                <td>
+                    • <strong>Ibdāl Hamzah Sakinah:</strong><br>
+                    - <strong>Warsy, As-Susi, dan Abu Ja'far:</strong> Mengganti hamzah sukun menjadi wawu mad (<strong>Ibdāl</strong>): dibaca <em>wa lā yūminu</em> (وَلَا يُومِنُ).<br>
+                    - Imam lainnya membaca dengan tahqiq hamzah (<em>yu'minu</em>).<br>
+                    • <strong>Naql & Badal:</strong> Warsy memindahkan harakat hamzah <em>al-ākhir</em> ke lam (<em>al-lākhir</em>) dan menerapkan <em>tsalatsatul badal</em> pada mad badal-nya.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>فَمَثَلُهُۥ كَمَثَلِ صَفْوَانٍ عَلَيْهِ تُرَابٌ</strong><br>(<em>Famatsaluhū kamatsali shafwānin 'alayhi turāb</em>)</td>
+                <td>
+                    <strong>Idzhār Ḥalqī:</strong> Tanwin kasrah pada <em>shafwānin</em> bertemu huruf 'Ain (ع).<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin dhommah pada <em>turābun</em> bertemu huruf Fa' (ف) pada kalimat berikutnya.<br>
+                    <strong>Huruf Shad (ص):</strong> Sifat <em>shafir</em>, <em>isti'la</em>, dan <em>ithbaq</em>. Huruf Fa' sukun mengalirkan <em>hams</em> dan <em>rikhwah</em>.
+                </td>
+                <td>
+                    • Seluruh 10 Imam membaca <em>shafwān</em> dengan harakat fathah pada shad dan sukun pada fa'.<br>
+                    • <strong>Shilat Hā' Kinaayah:</strong> Ibnu Katsir membaca shilah ha' dhamir pada <em>'alayhī</em> jika bersambung dengan sukun menurut kaidah khususnya, namun di sini seluruh imam membaca sukun tanpa mad karena huruf sebelumnya ya' layyinah.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>فَأَصَابَهُۥ وَابِلٌ فَتَرَكَهُۥ صَلْدًا</strong><br>(<em>Fa ashābahū wābilun fatarakahū shaldā</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin dhommah pada <em>wābilun</em> bertemu Fa' (ف).<br>
+                    <strong>Mad 'Iwadh:</strong> Pada lafaz <em>shaldā</em> saat waqaf, mengganti tanwin fathah menjadi alif mad sepanjang 2 harakat.<br>
+                    <strong>Huruf Lam Sukun (لْ):</strong> Pada lafaz <em>shaldan</em> memiliki sifat <em>tawassuth</em> (suara mengalir sedang, tidak membal/qalqalah).
+                </td>
+                <td>
+                    • Seluruh sepuluh imam qira'at mutawatirah sepakat membaca tanwin nashab pada <em>shaldā</em>.<br>
+                    • <strong>Taghlīẓ Lām:</strong> Khusus Imam Warsy mentaghliẓkan (menebalkan) huruf Lam pada <em>shaldā</em> karena terletak setelah huruf Shad mati/hidup yang berharakat fathah.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>لَّا يَقْدِرُونَ عَلَىٰ شَىْءٍ مِّمَّا كَسَبُوا۟</strong><br>(<em>Lā yaqdirūna 'alā syay'im mimmā kasabū</em>)</td>
+                <td>
+                    <strong>Idghām Bighunnah:</strong> Tanwin kasrah pada <em>syay'in</em> melebur sempurna ke dalam huruf Mim bertasydid.<br>
+                    <strong>Ghunnah Mīm Musyaddadah:</strong> Pada lafaz <em>mimmā</em> ditahan 2 harakat.<br>
+                    <strong>Huruf Qaf (قْ):</strong> Menampilkan Qalqalah Sughra di tengah kata <em>yaqdirūn</em>.
+                </td>
+                <td>
+                    • <strong>Mad Līn Mahmūz:</strong> Khusus Imam <strong>Warsy</strong> membaca mad lin pada kata <em>syay'in</em> dengan dua wajah: 4 harakat (tawassuth) atau 6 harakat (thūl). Imam lainnya membaca dengan sifat lin murni tanpa penambahan harakat mad saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلْكَـٰفِرِينَ</strong><br>(<em>Wallāhu lā yahdil-qawmal-kāfirīn</em>)</td>
+                <td>
+                    <strong>Tafkhīm Lam Jalālah:</strong> Karena didahului harakat fathah pada Wawu.<br>
+                    <strong>Mad 'Āridh Lissukūn:</strong> Pada waqaf akhir ayat di lafaz <em>al-kāfirīn</em> boleh dibaca 2, 4, atau 6 harakat dengan sifat tawassuth pada huruf Nun sukun.
+                </td>
+                <td>
+                    • <strong>Imālah / Taqlīl pada al-Kāfirīn:</strong><br>
+                    - <strong>Abu 'Amr, Ad-Duri 'an Abi 'Amr, Al-Kisa'i, dan Khalaf:</strong> Membaca <strong>Imālah Kubrā</strong> pada huruf alif kata <em>al-kāfirīn</em> (bunyi vokal mendekati "e" / <em>al-kēfirīn</em>).<br>
+                    - <strong>Warsy:</strong> Membaca <strong>Taqlīl</strong> (bain-bain) secara mutlak pada setiap lafaz <em>kāfirīn</em> yang bergaris kasrah.<br>
+                    - <strong>Qalun, Ibnu Katsir, 'Ashim, Ibnu 'Amir, Abu Ja'far, Ya'qub:</strong> Membaca Fathah murni (<em>al-kāfirīn</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul, Sejarah Pewahyuan & Hadits Sahih Penjelas</h3>
+    <p>
+        Ayat ini diturunkan di Madinah pada periode penataan struktur filantropi Islam, khususnya ketika para sahabat berlomba-lomba menginfakkan harta mereka untuk membiayai kaum muhajirin dhuafa (Ahlus Suffah) dan persiapan logistik perang (seperti ekspedisi Tabuk / Jaisyul 'Usrah). Turunnya ayat ini memberikan garis demarkasi yang tegas antara sedekah sejati yang berakar pada ketakwaan dan sedekah munafik yang sarat agenda pencitraan sosial dan arogansi feodal.
+    </p>
+
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Muslim (No. 106) dari Abu Dzar Al-Ghifari r.a. — Ancaman Mutlak bagi Al-Mannān (Pelaku Al-Mann):</strong><br>
+        عَنْ أَبِي ذَرٍّ رَضِيَ اللَّهُ عَنْهُ، عَنِ النَّبِيِّ ﷺ قَالَ: <em>«ثَلَاثَةٌ لَا يُكَلِّمُهُمُ اللَّهُ يَوْمَ الْقِيَامَةِ، وَلَا يَنْظُرُ إِلَيْهِمْ، وَلَا يُزَكِّيهِمْ، وَلَهُمْ عَذَابٌ أَلِيمٌ»</em>، قَالَ: فَقَرَأَهَا رَسُولُ اللَّهِ ﷺ ثَلَاثَ مِرَارٍ، قَالَ أَبُو ذَرٍّ: خَابُوا وَخَسِرُوا، مَنْ هُمْ يَا رَسُولَ اللَّهِ؟ قَالَ: <em>«الْمُسْبِلُ، وَالْمَنَّانُ الَّذِي لَا يُعْطِي شَيْئًا إِلَّا مَنَّهُ، وَالْمُنَفِّقُ سِلْعَتَهُ بِالْحَلِفِ الْكَاذِبِ»</em>.<br>
+        <em>Artinya:</em> "Tiga golongan yang tidak akan diajak bicara oleh Allah pada hari kiamat, tidak akan dilihat oleh-Nya, tidak akan disucikan, dan bagi mereka azab yang pedih." Rasulullah ﷺ mengulanginya tiga kali. Abu Dzar berkata: "Celaka dan rugilah mereka! Siapakah mereka wahai Rasulullah?" Beliau menjawab: "Orang yang menjulurkan pakaiannya karena sombong (al-musbil), <strong>orang yang suka mengungkit-ungkit pemberian di mana ia tidak memberi sesuatu melainkan selalu menyebut-nyebutnya (al-mannān)</strong>, dan orang yang melariskan barang dagangannya dengan sumpah palsu." (HR. Muslim no. 106).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Muslim (No. 1905) dari Abu Hurairah r.a. — Tragedi Filantropi Riya' pada Hari Kiamat:</strong><br>
+        Rasulullah ﷺ mengabarkan tentang tiga manusia pertama yang diadili di Padang Mahsyar, salah satunya adalah hartawan filantropis: Allah mengingatkannya akan limpahan nikmat kekayaan, lalu bertanya: <em>"Famā 'amilta fīhā?"</em> (Apa yang telah engkau perbuat dengan hartamu?). Ia menjawab: <em>"Aku tidak meninggalkan satu pun jalan yang Engkau cintai melainkan aku telah berinfak di sana semata-mata karena-Mu."</em> Allah berfirman: <em>"Kadzabta! (Engkau berdusta!), walākinnaka fa'alta liyuqāla huwa jawādun, faqad qīla"</em> (Akan tetapi engkau berinfak semata-mata agar manusia mengatakan 'Dia adalah seorang dermawan!', dan gelar itu telah kau dapatkan di dunia). Kemudian diperintahkan agar ia diseret di atas wajahnya hingga dicampakkan ke dalam kobaran api neraka. (HR. Muslim no. 1905).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Musnad Ahmad (No. 23630) dari Mahmud bin Labid r.a. — Riya' sebagai Syirik Tersembunyi (Asy-Syirk Al-Khafī):</strong><br>
+        Rasulullah ﷺ bersabda: <em>«إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الأَصْغَرُ»</em>، قَالُوا: وَمَا الشِّرْكُ الأَصْغَرُ يَا رَسُولَ اللَّهِ؟ قَالَ: <em>«الرِّيَاءُ، يَقُولُ اللَّهُ عَزَّ وَجَلَّ لَهُمْ يَوْمَ الْقِيَامَةِ إِذَا جُزِيَ النَّاسُ بِأَعْمَالِهِمْ: اذْهَبُوا إِلَى الَّذِينَ كُنْتُمْ تُرَاءُونَ فِي الدُّنْيَا فَانْظُرُوا هَلْ تَجِدُونَ عِنْدَهُمْ جَزَاءً؟»</em>.<br>
+        <em>Artinya:</em> "Sesungguhnya perkara yang paling aku takutkan menimpa kalian adalah syirik kecil." Para sahabat bertanya: "Apakah syirik kecil itu wahai Rasulullah?" Beliau bersabda: "<strong>Riya'</strong>. Allah 'Azza wa Jalla akan berfirman kepada mereka pada hari kiamat ketika manusia dibalas atas amal-amal mereka: 'Pergilah kalian kepada orang-orang yang dahulu kalian pameri di dunia, lalu lihatlah apakah kalian mendapati balasan dari sisi mereka?!'" (HR. Ahmad 5/428, dinilai Shahih oleh Syaikh Al-Albani).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Ibthāl (إِبْطَال — Akar Kata: ب-ط-ل):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ب-ط-ل) menjelaskan bahwa poros semantik akar kata ini adalah <strong>ketiadaan, kesia-siaan, dan gugurnya sesuatu hingga kehilangan hakikat dan dampaknya</strong> (<em>dhiddu ash-shihhah wal-haqq</em>). Bentuk <em>Abtala - Yubthilu - Ibthālan</em> (wazan <em>If'āl</em>) bermakna tindakan aktif merusak keabsahan suatu objek. Maka <em>lā tubthilū shadaqātikum</em> menegaskan bahwa sedekah yang semula sah secara fisik dan legal dapat dilenyapkan substansi pahalanya hingga nol mutlak oleh racun batin.
+        </li>
+        <li>
+            <strong>Shadaqah (صَدَقَة — Akar Kata: ص-د-ق):</strong><br>
+            Ibnu Faris menegaskan bahwa poros kata <em>Shad-Dal-Qaf</em> menunjukkan <strong>keteguhan, kekuatan, dan kejujuran keselarasan antara lahir dan batin</strong>. Dinamakan <em>shadaqah</em> karena pemberian materi secara sukarela merupakan <em>dalīl ash-shidq</em> (bukti empiris kejujuran klaim iman di dalam dada). Sedekah adalah manifestasi kebenaran cinta hamba kepada Allah yang melampaui kecintaannya pada harta benda.
+        </li>
+        <li>
+            <strong>Al-Mann (المَنّ — Akar Kata: م-ن-ن):</strong><br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> memaparkan dua dimensi semantik: 1) <em>Al-Qath'</em> (pemotongan), sebagaimana firman-Nya <em>ajrun ghayru mamnūn</em> (pahala yang tak terputus); 2) <em>Al-I'tidād bimā an'ama bihi 'alal-ghayr</em> (menghitung-hitung dan membanggakan karunia yang diberikan kepada orang lain hingga membebani jiwanya). Dalam relasi Allah kepada hamba, <em>Al-Mann</em> adalah sifat kemuliaan mutlak karena Allah adalah Pemilik Hakiki seluruh nikmat (QS. Ali 'Imran: 164). Namun dalam relasi antar-makhluk, <em>Al-Mann</em> adalah kejahatan moral yang menjijikkan karena manusia sekadar perantara, bukan pemilik rezeki.
+        </li>
+        <li>
+            <strong>Al-Adzā (الأَذَى — Akar Kata: أ-ذ-ي):</strong><br>
+            Poros makna asalnya adalah <strong>segala bentuk gangguan, bahaya ringan, atau kepedihan yang menimpa fisik atau psikologis seseorang</strong> (<em>adh-dharar al-khafīf</em>). Dalam konteks sedekah, <em>al-adzā</em> mewujud dalam sindiran, cibiran, gestur merendahkan, membuka aib kemiskinan si mustahiq di ruang publik, atau memperlakukannya seperti budak yang berutang budi.
+        </li>
+        <li>
+            <strong>Riyā' (رِيَاء — Akar Kata: ر-أ-ي):</strong><br>
+            Berasal dari <em>ar-ru'yah</em> (melihat secara visual). Wazan <em>Fi'āl</em> di sini mengandung makna <em>al-mubālaghah wal-mufā'alah</em> (upaya aktif mempertontonkan amal ibadah di hadapan mata manusia demi memburu pujian, kedudukan, kehormatan, atau keuntungan material). Riya' adalah pergeseran kiblat batin dari <em>Al-Khāliq</em> menuju <em>al-makhlūq</em>.
+        </li>
+        <li>
+            <strong>Shafwān & Shald (صَفْوَان & صَلْد — Akar Kata: ص-ف-و & ص-ل-د):</strong><br>
+            <em>Shafwān</em> adalah batu cadas besar yang permukaannya sangat licin, padat, dan halus (<em>al-hajar al-amlas</em>), tidak memiliki pori-pori tanah untuk menahan air. Sedangkan <em>Shald</em> adalah permukaan batu yang benar-benar bersih, keras, mengkilap, dan tandus, sama sekali hampa dari partikel tanah dan tidak memungkinkan tumbuhnya satu tunas pun.
+        </li>
+        <li>
+            <strong>Wābil (وَابِل — Akar Kata: و-ب-ل):</strong><br>
+            Poros katanya menunjukkan <strong>keberatan dan kelebatan</strong>. <em>Al-Wābil</em> adalah hujan dengan butiran air yang besar dan curah yang sangat lebat dan deras (<em>al-mathar asy-syadīd al-'azhīm al-qathr</em>).
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Penggalan Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>يَـٰٓأَيُّهَا</strong></td>
+                <td><em>Yā</em>: Huruf Nida'. <em>Ayyu</em>: Isim Mubham. <em>Hā</em>: Harf Tanbīh.</td>
+                <td><em>Yā</em> huruf nida'. <em>Ayyu</em> munada mabni 'aladh-dhammi fi mahalli nashab. <em>Hā</em> harf tanbih la mahalla lah minal i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ ءَامَنُوا۟</strong></td>
+                <td><em>Alladzīna</em>: Isim Maushul jamak. <em>Āmanū</em>: Fi'il madhi wazan <em>Af'ala</em> + Wawu Jama'ah.</td>
+                <td><em>Alladzīna</em> badal atau na'at bagi <em>ayyu</em> (mahalli nashab). <em>Āmanū</em> fi'il madhi mabni 'aladh-dhammi, wawu fa'il. Jumlah <em>shilat al-maushūl</em> la mahalla laha.</td>
+            </tr>
+            <tr>
+                <td><strong>لَا تُبْطِلُوا۟</strong></td>
+                <td><em>Lā</em>: Nahiyyah. <em>Tubthilū</em>: Fi'il mudhari' bab If'āl (<em>abtala-yubthilu</em>).</td>
+                <td><em>Lā</em> harf nahyin wa jazm. <em>Tubthilū</em> fi'il mudhari' majzum dengan hadzfun-nun (حذف النون), wawu jama'ah dhamir muttashil sebagai <strong>Fā'il</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>صَدَقَـٰتِكُم</strong></td>
+                <td>Jamak Mu'annats Salim dari <em>shadaqah</em> + Dhomir Mukhatab.</td>
+                <td><strong>Maf'ūl Bih</strong> manshub dengan kasrah pengganti fathah (نيابة عن الفتحة). <em>Kaf</em> dhamir muttashil fi mahalli jarrin bil-idhafah.</td>
+            </tr>
+            <tr>
+                <td><strong>بِٱلْمَنِّ وَٱلْأَذَىٰ</strong></td>
+                <td><em>Bi</em> harf jarr. <em>Al-Mann</em> & <em>Al-Adzā</em> isim masdar.</td>
+                <td><em>Bi</em> harf jarr sababiyyah. <em>Al-Manni</em> majrur bil-kasrah, <em>muta'alliq</em> dengan <em>tubthilū</em>. <em>Wawu</em> athaf, <em>Al-Adzā</em> ma'thuf majrur dengan kasrah muqaddarah 'alal alif.</td>
+            </tr>
+            <tr>
+                <td><strong>كَٱلَّذِى يُنفِقُ مَالَهُۥ</strong></td>
+                <td><em>Kaf</em> harf tasybih/jarr. <em>Alladzī</em> isim maushul. <em>Yunfiqu</em> mudhari' af'ala.</td>
+                <td><em>Kaf</em> harf jarr, <em>alladzī</em> majrur mahalla. Syibh al-jumlah muta'alliq dengan maf'ul muthlaq mahdzuf (<em>ibthālan ka-ibthāli alladzī...</em>). <em>Yunfiqu</em> fi'il mudhari', fa'il dhamir mustatir, <em>mālahū</em> maf'ul bih.</td>
+            </tr>
+            <tr>
+                <td><strong>رِئَآءَ ٱلنَّاسِ</strong></td>
+                <td>Masdar dari <em>rā'ā - yurā'ī</em> wazan <em>fi'āl</em> mudhaf ke isim ma'rifah.</td>
+                <td><strong>Maf'ūl li-Ajlih</strong> (alasan perbuatan: karena riya') manshub bil-fathah, atau berkedudukan sebagai <strong>Ḥāl</strong> (dalam keadaan pamer). <em>An-Nāsi</em> mudhafun ilayh majrur.</td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ</strong></td>
+                <td><em>Wawu</em> haliyyah/athaf. <em>Lā</em> nafy. <em>Yu'minu</em> mudhari' af'ala.</td>
+                <td>Jumlah ma'thufah atau <strong>Ḥāl</strong> dari dhamir fa'il pada <em>yunfiqu</em>. Jar wa majrur <em>billāhi</em> dan <em>wal-yawmil-ākhir</em> muta'alliq dengan <em>yu'minu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فَمَثَلُهُۥ كَمَثَلِ صَفْوَانٍ</strong></td>
+                <td><em>Fa'</em> isti'nafiyyah. <em>Matsal</em> isim mudhaf ke ha'. <em>Shafwān</em> isim jenis.</td>
+                <td><em>Matsaluhū</em>: <strong>Mubtada'</strong> marfu' bil-dhammah, ha' mudhafun ilayh. <em>Ka-matsali</em>: Jar wa majrur muta'alliq bil-<strong>Khabar</strong> mahdzuf. <em>Shafwānin</em>: Mudhafun ilayh majrur.</td>
+            </tr>
+            <tr>
+                <td><strong>عَلَيْهِ تُرَابٌ</strong></td>
+                <td><em>'Alayhi</em> syibh jumlah khabar muqaddam. <em>Turābun</em> isim nakirah.</td>
+                <td><em>'Alayhi</em> jar majrur khabar muqaddam. <em>Turābun</em> <strong>Mubtada' Mu'akhkhar</strong>. Jumlah ismiyyah ini berkedudukan sebagai <strong>Na'at / Sifat</strong> bagi <em>shafwān</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فَأَصَابَهُۥ وَابِلٌ</strong></td>
+                <td><em>Fa'</em> 'athifah tartibiyyah. <em>Ashāba</em> fi'il madhi. <em>Wābil</em> isim fa'il/shifah.</td>
+                <td><em>Ashāba</em> fi'il madhi, <em>hā'</em> maf'ul bih muqaddam. <em>Wābilun</em>: <strong>Fā'il</strong> mu'akhkhar marfu' bil-dhammah.</td>
+            </tr>
+            <tr>
+                <td><strong>فَتَرَكَهُۥ صَلْدًا</strong></td>
+                <td><em>Taraka</em> fi'il muta'addi li-maf'ūlayn. <em>Shaldā</em> sifat musyabbahah.</td>
+                <td><em>Taraka</em> fi'il madhi, fa'il dhamir mustatir (kembali ke wabil). <em>Hā'</em> maf'ul bih awwal. <em>Shaldā</em>: <strong>Maf'ūl bih tsānī</strong> (atau hal) manshub bil-fathah.</td>
+            </tr>
+            <tr>
+                <td><strong>لَّا يَقْدِرُونَ عَلَىٰ شَىْءٍ</strong></td>
+                <td><em>Lā</em> nafy. <em>Yaqdirūna</em> mudhari' af'alul khamsah.</td>
+                <td>Jumlah fi'liyyah berkedudukan sebagai <strong>Khabar Tsānī</strong> atau <strong>Isti'nāf Bayānī</strong> menjelaskan keadaan orang-orang munafik/riya'. Wawu adalah fa'il. <em>'Alā syay'in</em> muta'alliq dengan <em>yaqdirūna</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّمَّا كَسَبُوا۟</strong></td>
+                <td><em>Min</em> harf jarr. <em>Mā</em> maushūlah. <em>Kasabū</em> fi'il madhi.</td>
+                <td><em>Min</em> harf jarr, <em>mā</em> majrur mahalla, muta'alliq dengan na'at mahdzuf bagi <em>syay'in</em>. Jumlah <em>kasabū</em> shilat al-maushul la mahalla laha.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلْكَـٰفِرِينَ</strong></td>
+                <td><em>Lafzhul Jalālah</em> mubtada'. <em>Lā yahdī</em> fi'il mudhari' nafy.</td>
+                <td><em>Wallāhu</em>: Mubtada'. Jumlah fi'liyyah <em>lā yahdī al-qawma</em> berkedudukan sebagai <strong>Khabar</strong>. <em>Al-Kāfirīna</em>: Na'at bagi <em>al-qawma</em> manshub bil-yā'.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Seruan Kemuliaan dan Larangan Keras (<em>An-Nidā' wal-Nahyu</em>):</strong><br>
+            Ayat ini dibuka dengan <em>Nidā' at-Tasyrīf</em>: <em>"Yā ayyuhalladzīna āmanū"</em>. Allah memanggil hamba-hamba-Nya dengan atribut iman untuk menggetarkan rasa malu dan komitmen tauhid mereka. Larangan <em>lā tubthilū</em> menggunakan sighat <em>Nahyi</em> yang menunjukkan keharaman mutlak. Mengapa Allah mengatakan "Jangan batalkan sedekahmu", bukan sekadar "Jangan berbuat al-mann dan al-adza"? Ini adalah teknik <em>Tahdzīr bi-Izhhār al-Ghayah</em>: Al-Qur'an langsung menghadapkan pelaku pada akibat paling fatal dari perbuatannya, yaitu <strong>kebangkrutan total pahala</strong>.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Tasybīh Tamtsīlī Murakkab (Perumpamaan Sinematik Geologis):</strong><br>
+            Ayat ini menghadirkan salah satu <em>Tasybīh Tamtsīlī</em> teragung dalam sastra dunia. Unsur-unsur perumpamaan dirangkai secara sangat detail dan presisi:
+            <ul>
+                <li><strong>Batu Licin (<em>Shafwān</em>):</strong> Melambangkan hati yang keras membatu, beku, dan hampa dari keikhlasan kepada Allah (hati orang munafik / pelaku riya').</li>
+                <li><strong>Lapisan Debu (<em>Turāb</em>):</strong> Melambangkan amal sedekah lahiriah yang tampak kasat mata di hadapan manusia—seolah-olah tanah subur yang siap ditanami, padahal hanya polesan kosmetik tipis di atas batu karang.</li>
+                <li><strong>Hujan Lebat (<em>Wābil</em>):</strong> Secara fitrah hujan adalah rahmat yang menghidupkan bumi, namun ketika menimpa batu licin bersalut debu, hujan lebat ini bertindak sebagai <strong>agen pembuka aib</strong> (kematian, hisab hari kiamat, atau terbongkarnya motif ego) yang menyapu bersih lapisan debu tanpa sisa.</li>
+                <li><strong>Batu Licin Mengkilap (<em>Shaldā</em>):</strong> Melambangkan kehampaan mutlak, ketandusan eksistensial, dan kepunahan pahala di akhirat kelak.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Iltifāt dan Pergeseran Dhamir:</strong><br>
+            Perhatikan keajaiban transisi gramatika: ayat ini dimulai dengan panggilan jamak orang kedua mukhatab (<em>tubthilū shadaqātikum</em>), lalu beralih ke tamsil mufrad gha'ib (<em>kalladzī yunfiqu... famatsaluhū...</em>), lalu secara mengejutkan melompat ke bentuk jamak gha'ib: <strong>"Lā yaqdirūna 'alā syay'in mimmā kasabū"</strong> (<em>Mereka tidak berkuasa atas apa pun...</em>). Pergeseran dari mufrad ke jamak ini memberikan penegasan bahwa hukum kebangkrutan amal ini berlaku universal bagi seluruh kaum munafik dan pemuja riya' sepanjang sejarah manusia.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Thibāq Khafī & Harmoni Fonetik (I'jāz Shautī):</strong><br>
+            Terjadi <em>Thibāq</em> (antitesis halus) antara ekspektasi manusia terhadap fungsi hujan lebat (<em>wābil</em>) yang semestinya menyuburkan (<em>al-ihyā'</em>), dengan dampak riil yang terjadi pada batu cadas licin tersebut yang justru menghasilkan ketandusan mutlak (<em>ash-shaladah wal-halak</em>). Secara fonetik, penggunaan konsonan tebal, berdesis, dan bertekanan tinggi (Shad, Tha', Qaf, Ba') seperti pada kata <em>tubthilū</em>, <em>shadaqātikum</em>, <em>shafwān</em>, <em>wābil</em>, dan <em>shaldā</em> menggemakan suara deru air bah yang menghantam cadas keras, menyapu habis segala ilusi pencitraan manusia.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Konteks Mendahului / Ayat 261–263):</strong><br>
+            Konstruksi tema infak dalam Surah Al-Baqarah dibangun dengan gradasi pedagogis yang luar biasa:
+            <br>• <strong>Ayat 261:</strong> Menetapkan potensi pelipatgandaan pahala infak yang ikhlas secara matematis-spiritual: <em>sebutir benih menumbuhkan tujuh bulir, pada setiap bulir ada seratus biji (700 kali lipat bahkan tak terhingga)</em>.
+            <br>• <strong>Ayat 262:</strong> Mengunci syarat kelestarian pahala raksasa tersebut: <em>"tsumma lā yutbi'ūna mā anfaqū mannan wa lā adzā"</em> (tidak mengiringi infak dengan mengungkit-ungkit dan menyakiti penerima).
+            <br>• <strong>Ayat 263:</strong> Memberikan komparasi nilai etis: <em>"Qawlun ma'rūfun wa maghfiratun khayrun min shadaqatin yatba'uhā adzā"</em> (Tutur kata yang santun dan memaafkan kekasaran pemohon jauh lebih mulia daripada sedekah berlimpah harta yang disusul cercaan).
+            <br><em>Sibāq</em> ini memperlihatkan bahwa sebelum Ayat 264 melarang keras, Allah telah menyiapkan logika akal sehat bahwa sedekah yang melukai manusia adalah transaksi yang memalukan.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok Infak QS. 2:261–274):</strong><br>
+            Blok ini berada pada kuadran akhir Surah Al-Baqarah yang sedang menyusun <strong>Arsitektur Tatanan Ekonomi Madani</strong>. Setelah membahas hukum qishash, puasa, haji, dan perang fisabilillah, Al-Qur'an memaparkan pilar ekonomi: infak sukarela berbasis kasih sayang (Ayat 261–274) yang dikontraskan secara frontal dengan eksploitasi kapitalistik riba yang diharamkan mutlak (Ayat 275–281). Poros tematik Ayat 264 adalah <strong>membersihkan institusi filantropi dari relasi kuasa (power relation) dan feodalisme kultural</strong>.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas Menuju Ayat 265–266):</strong><br>
+            Tepat setelah Ayat 264 menyajikan tamsil kehancuran di atas batu cadas (<em>shafwānin shaldā</em>), <strong>Ayat 265 langsung menghadirkan antitesis simetris yang memukau</strong>: perumpamaan orang yang berinfak ikhlas mencari ridha Allah dan keteguhan jiwa, laksana <em>sebuah kebun subur di dataran tinggi (jannatin bi-rabwatin) yang disiram hujan lebat (wābil), maka kebun itu melipatgandakan buahnya dua kali lipat; bahkan jika tidak disiram hujan lebat, embun gerimis tipis (thallun) pun sudah cukup menyuburkannya!</em> Kontras antara batu cadas licin (Ayat 264) dan kebun berbukit subur (Ayat 265) adalah dialektika visual estetis tertinggi Al-Qur'an.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis & Kosmologi Peradaban: Runtuhnya Patronase Feodal Arab</h3>
+    <p>
+        Dalam masyarakat Arab pra-Islam dan komunitas aristokrasi Madinah abad ke-7, kedermawanan sering kali bukan berakar pada rasa welas asih, melainkan pada insting kekuasaan: <em>Al-Fakhr wal-Mufākharah</em> (bermegah-megahan demi mengangkat status klan) dan <em>Al-Istinā'</em> (menanam budi untuk mengikat orang miskin menjadi klien politik dan pengikut setia). Orang-orang kaya jahiliyah biasa membagi-bagikan daging unta hasil judi maysir atau menyembelih ratusan hewan hanya agar penyair memuji nama mereka di pasar 'Ukazh. Pola patron-klien feodal ini menjadikan kaum dhuafa sebagai budak psikologis yang kehilangan kemerdekaan martabatnya.<br>
+        Ketika Islam datang dan kaum munafik di Madinah mulai mengadopsi formalitas sedekah untuk menyusup ke dalam barisan kaum mukmin, mereka membawa serta penyakit kultural lama: mereka bersedekah di depan publik dengan riya', lalu menuntut kepatuhan dari fakir miskin seraya mengungkit jasanya (<em>al-mann</em>) dan menghinakan mereka jika tidak patuh (<em>al-adzā</em>).<br>
+        <strong>Ayat 264 turun sebagai Deklarasi Emansipasi Kaum Tertindas:</strong>
+        <br>1) <strong>Demolisi Hierarki Patronase:</strong> Menegaskan bahwa orang miskin yang menerima sedekah tidak berutang budi sedikit pun kepada si kaya; justru si kaya yang berutang terima kasih karena si miskin telah menjadi sarana pembersih hartanya.
+        <br>2) <strong>Kualifikasi Teologis yang Mengejutkan:</strong> Al-Qur'an menyamakan pelaku riya' dengan <em>"orang yang tidak beriman kepada Allah dan hari akhir"</em> dan menutup ayat dengan <em>"Wallāhu lā yahdil-qawmal-kāfirīn"</em>. Ini adalah vonis spiritual bahwa kesombongan filantropi narsistik secara hakiki sejiwa dengan kekufuran, karena ia memproklamirkan dirinya sebagai tuan penyelamat, menggeser posisi Allah sebagai Ar-Razzaq.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir Bil-Ma'tsur & Filologi Salaf):</strong><br>
+        At-Tabari membedah makna <em>Al-Mann</em> dan <em>Al-Adzā</em> bersandarkan atsar para sahabat dan tabi'in. Beliau mengutip Mujahid: <em>"Al-Mann adalah seseorang yang memberi sesuatu lalu berkata: 'Bukankah aku telah memberimu ini dan itu? Bukankah aku telah menolongmu?'"</em> Sedangkan <em>Al-Adzā</em> ditafsirkan sebagai cercaan dan penyingkapan kemelaratan si penerima. At-Tabari menjelaskan bahwa kata <em>shafwān</em> adalah bentuk tunggal yang juga bisa bermakna jamak dari <em>shafwānah</em>, yaitu batu licin yang tidak menahan tanah. Pelaku sedekah riya' disamakan dengan batu licin tersebut: pada hari kiamat ketika manusia sangat membutuhkan hasil amalnya, mereka mendapati timbangan kebaikan mereka kosong melompong (<em>lā yaqdirūna 'alā syay'in mimmā kasabū</em>), laksana debu yang lenyap disapu air bah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat & Korelasi Ayat Antar-Surah):</strong><br>
+        Ibnu Katsir menegaskan kaidah agung bahwa <strong>riya' menggugurkan pahala amal secara mutlak (<em>yuhbithul-'amal</em>)</strong>. Beliau menghubungkan Ayat 264 ini dengan dua ayat monumental lainnya dalam Al-Qur'an:
+        <br>• QS. Al-Furqan [25]: 23: <em>"Dan Kami hadapi segala amal yang mereka kerjakan, lalu Kami jadikan amal itu (bagaikan) debu yang beterbangan (habā'an mantsūrā)."</em>
+        <br>• QS. An-Nur [24]: 39: <em>"Dan orang-orang kafir, amal-amal mereka laksana fatamorgana di tanah datar, yang disangka air oleh orang-orang yang dahaga, tetapi bila didatanginya air itu tidak ada apa-apa."</em>
+        Ibnu Katsir menjelaskan bahwa ayat ini merupakan peringatan keras bagi orang beriman agar tidak merusak pahala sedekah mereka dengan meniru tabiat orang munafik yang beramal hanya demi sanjungan makhluk.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih & Ahkamul Qur'an):</strong><br>
+        Al-Qurthubi menguraikan perdebatan teologis dan fiqih yang sangat mendalam:
+        <br>• <strong>Status Pengguguran Amal (<em>Iḥbāṭ al-A'māl</em>):</strong> Para ulama sepakat bahwa <em>al-mann</em> dan <em>al-adzā</em> yang menyertai sedekah membatalkan pahalanya saat itu. Namun apakah ia menggugurkan pahala sedekah yang telah lalu di masa silam? Mazhab Mu'tazilah berpendapat dosa besar membatalkan seluruh amal taat terdahulu. Ahlus Sunnah wal Jama'ah menegaskan bahwa dosa besar tidak membatalkan iman dan amal lain, melainkan <strong>membatalkan pahala sedekah spesifik tersebut</strong> serta mendatangkan dosa besar kemaksiatan lisan dan kalbu.
+        <br>• <strong>Dilema Zakat Wajib vs Sedekah Sunnah:</strong> Al-Qurthubi menegaskan jika seseorang menunaikan zakat fardhu disertai riya', menurut sebagian fuqaha kewajiban hukumnya gugur secara formal (tidak wajib qadha' di dunia), namun ia tidak mendapatkan pahala sedikit pun di sisi Allah dan justru terbebani dosa kemunafikan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Rasionalitas Teologis & Balaghah):</strong><br>
+        Az-Zamakhsyari memuji estetika tamsil ayat ini: mengapa perumpamaan menggunakan batu licin berlapis debu? Karena bagi orang yang memandang dari kejauhan, batu berlapis debu itu disangka sebidang tanah subur yang siap ditanami tanaman lebat. Begitu pula orang riya'; manusia melihat amalnya megah dan mengagumkan. Tetapi ketika hujan lebat (ujian hisab Allah) turun, hakikat batunya yang licin tersingkap telanjang. Sementara Fakhruddin Ar-Razi menganalisis patologi jiwa pelaku <em>al-mann</em>: orang yang mengungkit pemberian hakikatnya adalah orang bodoh yang menderita delusi ketuhanan. Ia merasa dirinya adalah "sebab independen" atas kelangsungan hidup orang miskin, padahal harta itu milik Allah, dan taufik untuk bersedekah pun ciptaan Allah. Meminta balasan atau penghormatan dari si miskin adalah bentuk ketamakan jiwa yang paling hina.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Tinjauan Psikososial & Kontekstual Nusantara):</strong><br>
+        Quraish Shihab menyoroti dimensi psikologis <em>al-adzā</em> dalam kehidupan kontemporer: menyakiti hati penerima sedekah sering kali terjadi bukan lewat makian verbal, melainkan melalui <strong>sikap superioritas, tatapan merendahkan, dan dokumentasi visual yang melucuti martabat</strong>. Beliau mengkritik keras fenomena pembagian bantuan sosial di mana fakir miskin diantrekan berjam-jam di bawah terik matahari, difoto dengan wajah nelangsa demi laporan pertanggungjawaban atau konten publikasi donatur. Sedekah semacam ini, menurut Quraish Shihab, telah tercemar racun <em>al-mann</em> dan <em>al-adzā</em> modern yang melanggar esensi kemanusiaan ayat ini.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Tematik Kemenag RI — <em>Tafsir Al-Azhar</em> (Ketahanan Jiwa & Kritik Sosial):</strong><br>
+        Buya Hamka menguraikan dengan bahasa sastra yang menyayat hati: <em>"Berapa banyak orang kaya yang membangun masjid atau menyantuni anak yatim, tetapi di kemudian hari ketika terjadi perselisihan faham, ia mengungkit jasanya: 'Kalau bukan karena semen dan uang saya, madrasah ini tidak akan tegak!' Saat kalimat itu terlontar dari bibirnya, saat itu pula runtuhlah seluruh nilai amalnya di sisi Allah, bagaikan debu yang disiram air bah di atas batu licin."</em> Tafsir Kemenag RI menambahkan bahwa ayat ini meletakkan fondasi filantropi modern yang berkeadilan: sedekah harus berorientasi pada pemberdayaan (<em>empowerment</em>) mustahiq, bukan melestarikan ketergantungan dan hegemoni kaum borjuis atas kaum papa.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Eksegesis</th>
+                <th>Titik Temu Kesepakatan (Ijma' Mufassirin)</th>
+                <th>Dinamika & Ragam Sudut Pandang (Ikhtilaf / Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hukum Al-Mann & Al-Adzā</strong></td>
+                <td>Sepakat bulat bahwa mengungkit sedekah dan menyakiti penerima adalah <strong>Dosa Besar (Kabīrah)</strong> dan membatalkan pahala sedekah terkait.</td>
+                <td>Mu'tazilah: Membatalkan seluruh kebaikan masa lalu. Ahlus Sunnah: Hanya membatalkan pahala sedekah spesifik tersebut, tanpa menghapus iman atau amal lain.</td>
+            </tr>
+            <tr>
+                <td><strong>Korelasi Riya' dengan Kekufuran</strong></td>
+                <td>Sepakat bahwa pelaku riya' murni yang tidak beriman kepada Allah dan hari akhir diancam dengan siksa neraka jahanam.</td>
+                <td>Salaf/Tabari: Merujuk langsung pada orang munafik di Madinah. Ar-Razi & Hamka: Menjangkau pula orang mukmin yang terjangkiti "Syirik Asghar" (riya' amaliyah).</td>
+            </tr>
+            <tr>
+                <td><strong>Tafsir Tamsil Batu Cadas (Shafwān Shaldā)</strong></td>
+                <td>Sepakat bahwa analogi ini menggambarkan kemusnahan total hasil usaha di hari kiamat.</td>
+                <td>Az-Zamakhsyari: Menekankan aspek tipuan optik (debu disangka tanah). Ibnu Katsir: Menekankan kontras antara hujan lebat (rahmat vs pemusnah).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Dekonstruksi Paradigma Transaksional Menuju Stewardship Rabbani</h3>
+    <p>
+        Secara neurokognitif, QS. Al-Baqarah: 264 membongkar bias kognitif paling purba manusia: <strong>The Illusion of Absolute Ownership (Ilusi Kepemilikan Mutlak)</strong>. Ketika seseorang merasa bahwa harta yang ia miliki adalah murni hasil kecerdasan dan kerja keras pribadinya (<em>Qarūn Complex: "Innamā ūtītuhū 'alā 'ilmin 'indī"</em>), otaknya secara otomatis mengaktifkan skema berpikir feodal-transaksional: <em>"Aku memberi, maka aku berhak menerima balasan berupa kepatuhan, sanjungan, atau konsesi sosial."</em>
+    </p>
+    <ul>
+        <li><strong>Pola Pikir Jahiliyah / Filantropi Narsistik:</strong> Menjadikan sedekah sebagai instrumen pembelian status sosial, dominasi hierarkis, dan manipulasi emosional. Penerima sedekah dipandang sebagai subordinat yang berutang eksistensial.</li>
+        <li><strong>Pola Pikir Qur'ani (The Divine Stewardship Model):</strong> Menempatkan diri semata-mata sebagai <em>bendahara / kurir penyalur amanah Allah</em>. Harta adalah milik Allah (<em>Al-Māl mālullāh</em>), mustahiq adalah hamba Allah yang memiliki hak bawaan atas harta tersebut (QS. Al-Ma'arij: 24–25), dan si pemberi berutang budi kepada si penerima karena telah membuka gerbang pembersihan jiwa dan tabungan akhiratnya.</li>
+    </ul>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Soil-on-Rock Fallacy" (Kesesatan Ilusi Kesuburan Semu):</strong><br>
+            Batu licin bersalut debu mengajarkan bahwa <em>keindahan tampilan luar (debu) yang tidak ditopang oleh kedalaman karakter dan ketulusan fondasi (batu cadas tak berpori) akan hancur lebur saat menghadapi tekanan tinggi</em>. Dalam kepemimpinan, karier, dan spiritualitas, menumpuk reputasi publik tanpa integritas batin yang kokoh hanyalah membangun kastil debu; datangnya satu badai transparansi akan melucuti segalanya hingga tinggal kepunahan yang memalukan.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Zero-Sum Law of Social Validation" (Hukum Saling Peniadaan Validasi):</strong><br>
+            Kebutuhan batin akan validasi manusia (<em>ri'ā'an-nās</em>) dan ridha Allah berada pada sumbu yang saling menegasikan (<em>zero-sum</em>). Ketika radar jiwa diarahkan untuk berburu decak kagum horizontal (pujian manusia, likes medsos, prestise sosial), saat itu pula saluran vertikal penerimaan Ilahi terputus seketika. Siapa pun yang menuntut dividen sosial di dunia, kontrak dividen akhiratnya dibatalkan secara otomatis.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Riya': Candu Dopamin vs Ketenangan Serotonin</h3>
+    <p>
+        Dalam perspektif neurosains kognitif, perilaku riya' dan pamer kebaikan didorong oleh lonjakan <strong>dopamine reward pathway</strong> instan di <em>nucleus accumbens</em> saat menerima atensi, tepuk tangan, dan validasi visual dari publik. Namun, dopamin sosial ini bersifat adiktif, rapuh, dan menuntut dosis yang semakin besar, melahirkan kecemasan kronis (<em>status anxiety</em>) dan ketakutan akan kehilangan citra diri.<br>
+        Sebaliknya, keikhlasan hening (<em>al-ikhlās al-khafī</em>) yang diajarkan Islam mengaktifkan sistem <strong>serotonin dan oksitosin</strong> melalui <em>prefrontal cortex</em>: menghadirkan rasa damai yang mendalam, penerimaan diri yang utuh, dan kebebasan mutlak dari ketergantungan pada penilaian manusia. Mukmin yang ikhlas tidak goyah oleh celaan dan tidak melayang oleh pujian, karena jangkar eksistensinya tertambat kokoh pada Allah SWT.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Fenomenologi "Poverty Porn" & Komodifikasi Kemiskinan di Era Algoritma</h3>
+    <p>
+        Di abad ke-21, peringatan QS. Al-Baqarah: 264 menemukan manifestasi paling mengerikan dalam fenomena <strong>Poverty Porn</strong> di media sosial (TikTok, YouTube, Instagram Reels). Konten kreator, influencer, dan politisi mendatangi kaum rentan (pengemis lansia, anak yatim, pemulung), lalu menyorotkan lensa kamera beresolusi tinggi tepat ke air mata dan gubuk reot mereka seraya memberikan segepok uang atau sembako.<br>
+        Ini adalah reinkarnasi modern dari <strong>Riyā' + Al-Adzā</strong> dalam format digital:
+        <br>• <strong>Riyā' Digital:</strong> Kebaikan dieksploitasi sebagai komoditas penambang <em>views, subscribers, engagements</em>, dan monetisasi adsense demi memoles citra sebagai "sosok malaikat dermawan".
+        <br>• <strong>Al-Adzā Digital:</strong> Martabat dan privasi orang miskin dilucuti secara brutal di ruang siber global; wajah nelangsa mereka menjadi jejak digital abadi yang mempermalukan anak cucu mereka seumur hidup hanya demi bantuan bernilai ratusan ribu rupiah.
+    </p>
+
+    <h3>2. Politisasi Bantuan Sosial & Filantropi Korporat Narsistik</h3>
+    <p>
+        Dalam lanskap perpolitikan dan korporasi modern, kita menyaksikan sindrom <strong>Al-Mann</strong> dalam skala institusional:
+        <br>• <strong>Politisasi Bansos:</strong> Pejabat publik atau kandidat pemilu membagikan bantuan yang dibiayai oleh uang rakyat (APBN/APBD), namun membungkusnya dengan tas bergambar wajah pribadinya dan mengancam rakyat miskin agar membalas budi dengan suara elektoral. Ini adalah perampasan hak rakyat yang dibungkus topeng kedermawanan feodal.
+        <br>• <strong>Corporate Greenwashing / Social-Washing:</strong> Korporasi mengeksploitasi alam dan menindas buruh, lalu menyisihkan 0,1% keuntungan untuk program CSR yang diiklankan secara masif dengan anggaran promosi yang jauh lebih besar daripada nilai bantuan riilnya.
+    </p>
+
+    <h3>3. Solusi Peradaban: Rekonstruksi Filantropi Bermartabat (Dignity-First Philanthropy)</h3>
+    <p>
+        Al-Qur'an menawarkan cetak biru revolusioner untuk sistem kesejahteraan sosial:
+        <br>1) <strong>Protokol Anonimitas Sistemik:</strong> Menghidupkan kembali tradisi <em>sedekah sirri</em> (sembunyi-sembunyi) melalui otomatisasi transfer digital, di mana identitas muzakki/donatur dan identitas mustahiq dirahasiakan sepenuhnya untuk menjaga kemurnian niat dan kehormatan penerima.
+        <br>2) <strong>Transformasi Mustahiq Menjadi Muzakki:</strong> Filantropi Islam bukan sekadar <em>charity</em> karitatif yang melestarikan status pengemis, melainkan pemberdayaan struktural (zakat produktif) yang memerdekakan kaum dhuafa dari jerat kemiskinan dan ketergantungan pada patron mana pun.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Penerapan "The Silent Giving Protocol" (Sedekah Rahasia Digital):</strong> Alokasikan minimal 50% dari pos sedekah bulanan Anda untuk disalurkan melalui kanal yang 100% anonim (tanpa menulis nama di bukti transfer, tanpa memotret bukti donasi, dan tanpa menceritakannya kepada siapa pun termasuk pasangan atau sahabat karib). Latihlah batin untuk merasakan kenikmatan tertinggi ketika hanya Allah yang menyaksikan transaksi tersebut.
+            </li>
+            <li>
+                <strong>Pembersihan Total Dokumentasi Berwajah Mustahiq (Dignity Protection Rule):</strong> Jika Anda mengelola kepanitiaan zakat, CSR kantor, yayasan amal, atau kegiatan sosial kemanusiaan, tetapkan SOP ketat: <em>Dilarang keras mempublikasikan wajah, nama lengkap, atau air mata penerima bantuan di media sosial atau materi promosi</em>. Ganti dokumentasi visual berwajah manusia dengan infografis transparansi data keuangan atau foto lanskap fasilitas publik yang dibangun.
+            </li>
+            <li>
+                <strong>Latihan Mental "Amnesia Kebaikan Sendiri" (Memory Erasing Protocol):</strong> Setiap kali selesai menolong seseorang, memberikan pinjaman, atau memberikan hadiah besar, segera latih pikiran Anda untuk melupakan kebaikan tersebut saat itu juga. Bersumpahlah di hadapan Allah untuk tidak pernah mengungkit bantuan itu di masa depan—terutama ketika orang yang Anda tolong suatu saat berbeda pendapat, mengecewakan, atau bersikap kasar kepada Anda.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Qalbiyyah Sebelum Tidur)</h3>
+        <ol>
+            <li>
+                Ketika aku membantu seseorang dengan harta, tenaga, atau pengaruhku, apakah di sudut hatiku yang paling gelap masih terselip ekspektasi agar orang itu tunduk, menaruh hormat khusus, atau selalu membalas budi kepadaku?
+            </li>
+            <li>
+                Seandainya seluruh amal sedekah, infak, dan perbuatan baik yang kubanggakan selama puluhan tahun ini diuji oleh Allah dengan sapuan hujan lebat (<em>wābil</em>) kejujuran hisab di Padang Mahsyar, berapakah lapisan debu amal yang tersisa, dan apakah di baliknya hanya akan tersingkap batu cadas licin (<em>shafwānin shaldā</em>) yang tandus dan membeku?
+            </li>
+            <li>
+                Berapa kali jemariku tergiur untuk mengunggah bukti kedermawananku di media sosial demi memanen pujian, komentar kekaguman, dan validasi visual manusia, seraya mengabaikan pandangan Allah Yang Maha Mengetahui rahasia niat di balik dada?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma innī a'ūdzu bika an usyrika bika wa anā a'lam, wa astaghfiruka limā lā a'lam. Ya Allah, Dzat Yang Membolak-balikkan Hati, bersihkanlah kalbu kami dari noda riya', sum'ah, 'ujub, dan kesombongan menuntut balas budi atas karunia yang sejatinya adalah titipan murni dari-Mu. Selamatkanlah kami dari kehinaan tamsil batu licin yang tandus, dan jangan biarkan amal kebaikan kami hancur menjadi debu yang tersapu air bah di hari saat tiada perlindungan selain rahmat-Mu. Karuniakanlah kepada kami keikhlasan sejati dalam memberi, jadikanlah tangan kami terbiasa menyembunyikan kebaikan dari pandangan makhluk, dan lembutkanlah hati kami untuk senantiasa memuliakan martabat hamba-hamba-Mu yang lemah. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-263 - QS. Al-Baqarah Ayat 263.html">&larr; Ayat Sebelumnya (QS. 2:263)</a>
+        <span><strong>QS. Al-Baqarah [2]: 264</strong> (Juz 3)</span>
+        <a href="002-265 - QS. Al-Baqarah Ayat 265.html">Lanjut ke Ayat 265 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

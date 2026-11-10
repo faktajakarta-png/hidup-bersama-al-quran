@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-035 - QS. Ali 'Imran Ayat 35 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-034 - QS. Ali 'Imran Ayat 34.html">&larr; Ayat Sebelumnya (QS. 3:34)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-036 - QS. Ali 'Imran Ayat 36.html">Ayat Berikutnya (QS. 3:36) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian</span>
+        <span class="badge">Klaster 1 (Ayat 33–37): Pemilihan Keluarga Suci & Nadzar Istri 'Imran</span>
+        <span class="badge">18 Kata | 66 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 35</h1>
+    <div class="transliteration">
+        "Idz qālatim-ra'atu 'Imrāna Rabbi innī nadhartu laka mā fī baṭnī muḥarraran fa-taqabbal minnī, innaka Antas-Samī'ul-'Alīm(u)."
+    </div>
+    <div class="thematic-title">
+        Paradigma Parenting Transenden & Dedikasi Eksklusif Generasi Rabbani: Ikrar Nadzar Istri 'Imran (Hannah), Dekonstruksi Kepemilikan Anak Melalui Konsep "Muḥarraran", dan Puncak Ketulusan Doa yang Menembus Langit
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 1: Genealogi Kesucian, Pemilihan Keluarga 'Imran Menuju Kelahiran Maryam dan Nabi 'Isa AS)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        إِذْ قَالَتِ ٱمْرَأَتُ عِمْرَانَ رَبِّ إِنِّى نَذَرْتُ لَكَ مَا فِى بَطْنِى مُحَرَّرًا فَتَقَبَّلْ مِنِّىٓ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ ۝٣٥
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Ingatlah) ketika istri 'Imran berkata: 'Wahai Tuhanku, sesungguhnya aku bernadzar kepada-Mu apa (janin) yang ada dalam kandunganku menjadi hamba yang merdeka (dikhususkan murni berkhidmat untuk rumah-Mu dan ibadah kepada-Mu semata), maka terimalah (nadzar persembahan ini) dariku. Sungguh, Engkaulah Yang Maha Mendengar lagi Maha Mengetahui.'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini membuka babak historis-konkret dari pemenuhan janji pemilihan Ilahi atas <em>Āla 'Imrān</em> yang diproklamasikan pada ayat 33–34. Tokoh sentral dalam pembukaan narasi agung ini adalah seorang perempuan beriman bernama Hannah binti Faqudz (istri Imran bin Matsan, pembesar ulama dan imam keturunan Nabi Harun AS). Kata kunci yang menjadi mahkota ayat ini adalah <strong>مُحَرَّرًا (Muḥarraran)</strong>. Secara leksikal dan teologis, <em>muḥarrar</em> bukan sekadar berarti bebas dari perbudakan antarmanusia (<em>al-'itq minar-riqq</em>), melainkan pembebasan ontologis tertinggi: janin tersebut diwakafkan secara mutlak dari segala kepentingan eksploitasi duniawi, ambisi klan, dan keterikatan pelayanan kepada orang tua, semata-mata dibaktikan untuk berkhidmat mengabdi di Baitul Maqdis (Haikal) dan beribadah kepada Allah. Penyerahan tanpa syarat ini disertai penutupan doa yang sangat tawaduk: <em>fa-taqabbal minnī</em> (terimalah dariku), diiringi penyebutan dua asma Allah <em>As-Samī'</em> (Maha Mendengar doa keluh kesah batin) dan <em>Al-'Alīm</em> (Maha Mengetahui kemurnian niat di balik nadzar tersebut).
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>إِذْ</strong><br>(<em>Idz</em>)</td>
+                <td>
+                    <strong>Huruf Żāl (ذ):</strong> Keluar dari ujung lidah bertemu dengan ujung dua gigi seri atas (<em>tharaf al-lisan ma'a athraf ats-tsanaya al-'ulya</em>).<br>
+                    <strong>Sifat Huruf:</strong> Memiliki sifat <em>Jahr</em> (tertahan nafas), <em>Rikhwah</em> (mengalirnya suara), <em>Istifal</em>, <em>Infitah</em>, dan tidak boleh dipantulkan (menghindari tawalud qalqalah).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca sukun pada dzal dengan menyempurnakan rikhwah. Zharaf zaman madhi ini menyimpan takdir fi'il mahdzuf (<em>Udzkur</em> / Ingatlah).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>قَالَتِ ٱمْرَأَتُ</strong><br>(<em>Qālatim-ra'atu</em>)</td>
+                <td>
+                    <strong>Iltiqā'us-Sākinayn:</strong> Ta' ta'nits yang asalnya sukun diberi harakat kasrah 'aridhah (قَالَتِ) untuk menghindari bertemunya dua huruf sukun saat washal dengan hamzah washal pada <em>imra'atu</em>.<br>
+                    <strong>Kaidah Rasm Utsmani:</strong> Lafaz <em>imra'ah</em> di sini ditulis dengan <strong>Tā' Mabsūṭhah / Maftūḥah (امرأت)</strong>, bukan ta' marbuthah. Kaidah Rasm Utsmani menetapkan: setiap lafaz <em>imra'ah</em> yang disandarkan langsung kepada suaminya yang definitif (mudhaf ilaih isim 'alam) ditulis dengan Ta' Terbuka (ت).
+                </td>
+                <td>
+                    • <strong>Saat Washal:</strong> Seluruh sepuluh imam mutawatirah sepakat membaca dengan ta' kasrah (<em>Qālatim-ra'atu</em>).<br>
+                    • <strong>Saat Waqaf Ikhtibari/Idhthirari pada (امرأت):</strong><br>
+                    - <strong>Ibnu Katsir, Abu 'Amr, Al-Kisa'i, dan Ya'qub:</strong> Membaca waqaf dengan <strong>Hā' Sukun</strong> (<em>imra'ah</em>) mengembalikan pada asal ta' ta'nits.<br>
+                    - <strong>Nafi', 'Ashim, Hamzah, Ibnu 'Amir, Abu Ja'far, Khalaf al-'Asyir:</strong> Membaca waqaf dengan <strong>Tā' Sukun</strong> (<em>imra'at</em>) mutlak patuh pada rasm mushaf.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>عِمْرَانَ</strong><br>(<em>'Imrāna</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>) dengan sifat tawassuth.<br>
+                    <strong>Mim Sukun:</strong> Idzhar syafawi murni.<br>
+                    <strong>Huruf Rā':</strong> Dibaca <strong>Tafkhīm</strong> (tebal) karena berharakat fathah diikuti Alif mad thabi'i.<br>
+                    <strong>Harakat Nun:</strong> Fathah tanpa tanwin karena tergolong <em>Mamnu' minash-Sharf</em>.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca fathah tanpa tanwin pada huruf Nun sebagai mudhaf ilaih majrur bil-fathah (karena perpaduan 'illat 'alamiyyah dan ziyadah alif-nun).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>رَبِّ</strong><br>(<em>Rabbi</em>)</td>
+                <td>
+                    <strong>Rā' Mufakhkhamah:</strong> Fathah tebal.<br>
+                    <strong>Bā' Musyaddadah:</strong> Memiliki sifat <em>Syiddah</em> dan penekanan <strong>Nabr</strong> agar getaran tasydid terdengar kokoh tanpa memutus aliran suara.<br>
+                    <strong>Hadzf Yā' Idhāfah:</strong> Huruf Ya' mutakallim dibuang secara rasm dan lafaz, menyisakan kasrah sebagai dalil.
+                </td>
+                <td>
+                    Konsensus qira'at mutawatirah membaca kasrah pada Ba' tanpa memanjangkan ya' (<em>Rabbi</em>), melambangkan kedekatan munajat seorang hamba yang mendesak tanpa jarak (<em>munada mudhaf ya mahdzufah</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>إِنِّى نَذَرْتُ</strong><br>(<em>Innī nadhartu</em>)</td>
+                <td>
+                    <strong>Ghunnah Akmal mā Takūn:</strong> Pada Nun musyaddadah ditahan 2 harakat sempurna.<br>
+                    <strong>Yā' Idhāfah:</strong> Diikuti huruf Nun (bukan hamzah).<br>
+                    <strong>Żāl & Rā' pada Nadhartu:</strong> Dzal rikhwah, Ra' sukun mufakhkhamah karena didahului fathah, Ta' fa'il berharakat dhammah dengan sifat syiddah dan hams halus.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam (termasuk Hafsh 'an 'Ashim):</strong> Membaca sukun pada Ya' Idhafah (<em>Innī</em>) sebagai mad thabi'i 2 harakat.<br>
+                    • Pada beberapa bab ya'at al-idhafah umum, sebagian qari (seperti Nafi' dan Abu Ja'far) membuka ya' idhafah menjadi fathah jika bertemu hamzah, namun di sini seluruh imam sepakat membaca sukun pada Ya' karena bertemu huruf nun (<em>Innī nadhartu</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>لَكَ</strong><br>(<em>Laka</em>)</td>
+                <td>
+                    <strong>Lām Fathah & Kāf Khithāb:</strong> Dibaca tarqiq (tipis) dengan sifat hams halus saat melafalkan huruf Kaf.
+                </td>
+                <td>
+                    Seluruh imam membaca fathah pada Kaf mukhatab. Penempatan mendahului objek (<em>taqdim jar majrur</em>) adalah kaidah balaghah qashr mutlak.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>مَا فِى بَطْنِى</strong><br>(<em>Mā fī baṭnī</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Dua harakat pada Alif <em>mā</em> dan Ya' <em>fī</em>.<br>
+                    <strong>Huruf Ṭhā' (ط):</strong> Isti'la', Ithbaq, dan <strong>Qalqalah Ṣhugnrā</strong> di tengah kata dengan hentakan mantap tanpa terpengaruh vokal kasrah ba' atau nun.<br>
+                    <strong>Huruf Bā':</strong> Wajib dijaga ketipisannya (tarqiq) agar tidak tertebalkan oleh huruf Tha'.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca qalqalah kubra/sughra pada Tha' sukun dan memanjangkan mad thabi'i pada ya' mutakallim <em>baṭnī</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>مُحَرَّرًا فَتَقَبَّلْ</strong><br>(<em>Muḥarraran fa-taqabbal</em>)</td>
+                <td>
+                    <strong>Rā' Musyaddadah:</strong> Dibaca tebal (tafkhim) dengan sifat takrir yang terkontrol (maksimal satu getaran tersembunyi).<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwin fathah pada <em>muḥarraran</em> bertemu huruf Fā' (ف) dibaca samar dengan ghunnah tipis (tarqiq) 2 harakat.<br>
+                    <strong>Waqaf 'Iwadh:</strong> Jika berhenti darurat pada <em>muḥarraran</em>, tanwin diganti alif mad 2 harakat (<em>muḥarrarā</em>).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca wazan <em>mufa''alan</em> (isim maf'ul) dengan tasydid fathah pada Ra'.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>مِنِّىٓ ۖ إِنَّكَ</strong><br>(<em>Minnī innaka</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Pada nun <em>minnī</em>.<br>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Huruf mad (Ya') bertemu hamzah qatha' pada kata berikutnya (إِنَّكَ).<br>
+                    <strong>Tanda Waqaf:</strong> Terdapat tanda <em>ṣhalā</em> (al-washlu awlā), namun jika washal maka hukum mad munfashil berlaku penuh.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad munfashil dengan panjang <strong>Ṭhūl (6 Harakat)</strong>.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Tawassuṭh (4–5 Harakat)</strong>.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Membaca dengan dua wajah: <strong>Qaṣhr (2 Harakat)</strong> atau Tawassuth (4 Harakat).<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb:</strong> Membaca konsisten dengan <strong>Qaṣhr (2 Harakat)</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ ۝٣٥</strong><br>(<em>Antas-Samī'ul-'Alīm</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu Tā' pada kata <em>Anta</em>.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Pada <em>As-Samī'</em> (lam lebur ke sin).<br>
+                    <strong>Idzhār Qamariyyah:</strong> Pada <em>Al-'Alīm</em> (lam dibaca jelas).<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf akhir ayat di lafaz <em>Al-'Alīm</em>, dibaca 2, 4, atau 6 harakat disertai sifat tawassuth pada huruf Mīm sukun.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca rafa' pada kedua isim mulia tersebut sebagai khabar, dan membolehkan tiga wajah panjang (2, 4, 6 harakat) pada mad 'aridh lis-sukun saat waqaf.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul & Atsar Sahih Seputar Doa Hannah binti Faqudz:</strong><br>
+        Diriwayatkan oleh Ibnu Abi Hatim dalam <em>Tafsir-nya</em> (No. 3471), Ath-Thabari dalam <em>Jāmi' al-Bayān</em> (Jilid 5, hlm. 235), dan Al-Hakim dalam <em>Al-Mustadrak</em> (Jilid 2, hlm. 593) melalui sanad sahih dari Qatadah, Ikrimah, dan As-Suddi:<br>
+        <em>"Bahwa Hannah binti Faqudz, istri dari Imran (pemimpin ibadah Bani Israil), telah berusia lanjut dan belum pernah melahirkan anak. Suatu hari ia duduk bernaung di bawah sebatang pohon, lalu melihat seekor burung sedang menyuapi dan mengasihi anaknya dengan penuh kehangatan. Pemandangan itu menggetarkan naluri keibuannya, maka ia pun bersujud dan berdoa memohon kepada Allah agar dianugerahi seorang anak. Ia bernadzar: jika Allah menganugerahkan janin dalam rahimnya, anak itu akan dijadikan 'muharrar'—diwakafkan secara khusus dan mutlak untuk berkhidmat membersihkan dan merawat Baitul Maqdis serta beribadah di dalamnya tanpa dibebani urusan duniawi sedikit pun. Imran wafat ketika Hannah sedang mengandung janin tersebut."</em><br>
+        <strong>Status Sanad:</strong> Atsar tabi'in berderajat Hasan/Sahih dengan syawahid muta'addidah yang disepakati para imam tafsir bil-ma'tsur.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Bukhari (No. 3432 & 3815) dan Muslim (No. 2430) dari Sahabat 'Ali bin Abi Thalib r.a. — Kemuliaan Maryam binti 'Imran:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«خَيْرُ نِسَائِهَا مَرْيَمُ ابْنَتُ عِمْرَانَ، وَخَيْرُ نِسَائِهَا خَدِيجَةُ بِنْتُ خُوَيْلِدٍ»</div>
+        <em>"Sebaik-baik wanita di alam semesta (pada masanya) adalah Maryam binti 'Imran, dan sebaik-baik wanita di alam semesta (pada masa umat ini) adalah Khadijah binti Khuwailid."</em><br>
+        <strong>Korelasi Ayat:</strong> Hadits ini membuktikan bahwa buah dari ketulusan nadzar Hannah yang tercatat dalam QS. 3:35 melahirkan sosok perempuan teragung sepanjang sejarah peradaban manusia yang terpelihara kesuciannya.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Bukhari (No. 3431, 4548) dan Muslim (No. 2366) dari Sahabat Abu Hurairah r.a. — Perlindungan Ilahi atas Keturunan Maryam:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«مَا مِنْ مَوْلُودٍ يُولَدُ إِلَّا وَالشَّيْطَانُ يَمَسُّهُ حِينَ يُولَدُ فَيَسْتَهِلُّ صَارِخًا مِنْ مَسِّ الشَّيْطَانِ إِيَّاهُ، إِلَّا مَرْيَمَ وَابْنَهَا»</div>
+        <em>"Tidak ada seorang bayi pun dari anak keturunan Adam yang dilahirkan melainkan disentuh oleh setan saat ia dilahirkan, sehingga ia menangis menjerit akibat sentuhan setan itu, kecuali Maryam dan putranya ('Isa AS)."</em><br>
+        Kemudian Abu Hurairah r.a. berkata: <em>"Bacalah jika kalian menghendaki firman Allah (doa istri Imran pada ayat berikutnya): 'Wa innī u'īdzuhā bika wa dzurriyyatahā minasy-syayṭhānir-rajīm' (QS. 3:36)."</em>
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Bukhari (No. 6696) dari Ummul Mukminin 'Aisyah r.a. — Kaidah Hukum Nadzar Ketaatan:</strong><br>
+        Rasulullah ﷺ menegaskan poros syariat nadzar yang dicontohkan Hannah:<br>
+        <div style="font-family: 'Amiri', serif; font-size: 20px; direction: rtl; text-align: right; margin: 8px 0;">«مَنْ نَذَرَ أَنْ يُطِيعَ اللَّهَ فَلْيُطِعْهُ، وَمَنْ نَذَرَ أَنْ يَعْصِيَهُ فَلَا يَعْصِهِ»</div>
+        <em>"Barang siapa yang bernadzar untuk menaati Allah, maka wajib baginya untuk menaati-Nya; dan barang siapa yang bernadzar untuk bermaksiat kepada-Nya, maka janganlah ia bermaksiat kepada-Nya."</em>
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. N-Ż-R (ن-ذ-ر — Nadhartu):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ن-ذ-ر) menjelaskan bahwa akar kata ini berporos pada dua makna fundamental: (1) <em>al-i'lām bit-takhwīf</em> (peringatan yang menuntut kewaspadaan tinggi), dan (2) <em>īhāb syay'in yūjibuhu al-insānu 'alā nafsih</em> (mewajibkan atas diri sendiri suatu perbuatan kebajikan yang asalnya tidak diwajibkan oleh syariat demi mengagungkan Allah). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menambahkan bahwa kata <em>an-nadzr</em> adalah janji suci yang mengikat jiwa secara sukarela (<em>al-iltizām at-thaw'ī</em>). Ketika istri 'Imran berikrar <em>nadhartu laka</em>, ia mengalihkan kepemilikan hak privat atas buah hatinya menjadi hak mutlak persembahan kepada Allah semata.
+        </li>
+        <li>
+            <strong>2. Ḥ-R-R (ح-ر-ر — Muḥarraran):</strong><br>
+            Ibnu Faris dalam <em>Maqāyīs al-Lughah</em> memaparkan bahwa akar kata Ḥā'-Rā'-Rā' berporos pada kemurnian, kebebasan dari aib/campuran, serta panas yang membakar kotoran (seperti logam mulia yang dimurnikan dengan api disebut <em>ḥurr</em>). Dalam <em>Lisān al-'Arab</em>, <em>al-ḥurr</em> adalah lawan dari budak (<em>al-'abd</em>), serta bermakna <em>al-khāliṣh</em> (sesuatu yang steril dari segala cacat pamrih). Dalam tradisi semantik Qur'ani dan syariat Baitul Maqdis masa itu, <em>Muḥarrar</em> adalah istilah teknis berbobot tinggi: anak yang dimerdekakan secara total dari perbudakan materi, tidak boleh dipekerjakan untuk kepentingan nafkah orang tua, tidak boleh diperbudak oleh ambisi duniawi, melainkan murni diwakafkan untuk melayani rumah Allah (<em>khādimul-masjid</em>) dan fokus beribadah sepanjang hayatnya.
+        </li>
+        <li>
+            <strong>3. Q-B-L (ق-ب-ل — Fa-taqabbal):</strong><br>
+            Ibnu Faris menjelaskan akar Qāf-Bā'-Lām bermakna menghadapnya sesuatu (<em>muwājahah</em>) dan penerimaan yang disertai keridhaan. Bentuk wazan <em>Tafa''ul</em> (فَتَقَبَّلْ) bukan sekadar menerima biasa (<em>qabila</em>), melainkan penerimaan dengan penuh penghormatan, keridhaan yang mendalam, dan sambutan hangat berupa balasan pahala berlipat ganda dari Allah atas ketulusan seorang hamba.
+        </li>
+        <li>
+            <strong>4. B-Ṭ-N (ب-ط-ن — Baṭnī):</strong><br>
+            Akar kata Bā'-Ṭhā'-Nūn bermakna segala sesuatu yang tersembunyi, terlindung di bagian dalam, lawan dari <em>azh-zhāhir</em>. Penggunaan <em>mā fī baṭnī</em> (apa yang ada di dalam perutku) adalah ungkapan ketidaktahuan manusia akan misteri takdir yang sedang dikandungnya, namun disertai kepasrahan total kepada Sang Maha Mengetahui.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>إِذْ</strong></td>
+                <td>Isim zharaf zaman madhi mabni 'alas-sukun.</td>
+                <td>Fi mahalli nashbin maf'ul bih bagi fi'il mahdzuf yang ditakdirkan: <em>"Udzkur"</em> (Ingatlah wahai Muhammad ketika...).</td>
+            </tr>
+            <tr>
+                <td><strong>قَالَتِ</strong></td>
+                <td>Fi'il madhi tsulatsi mujarrad mabni 'alal-fath. Ta' ta'nits sakinah dikasrahkan 'aridhah li daf'il-tiqa'is-sakinain.</td>
+                <td>Jumlah fi'liyyah <em>qālat...</em> fi mahalli jarrin mudhaf ilaih bagi zharaf <em>idz</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱمْرَأَتُ</strong></td>
+                <td>Isim mufrad mu'annats, ditulis Ta' maftuhah dalam rasm Utsmani.</td>
+                <td><strong>Fā'il</strong> bagi fi'il <em>qālat</em>, marfu' bil-dhammah azh-zhahirah, wahuwa mudhaf.</td>
+            </tr>
+            <tr>
+                <td><strong>عِمْرَانَ</strong></td>
+                <td>Isim 'alam 'ajami, mamnu' minash-sharf.</td>
+                <td><strong>Mudhaf Ilaih</strong> majrur bil-fathah pengganti kasrah karena mamnu' minash-sharf (karena perpaduan 'alamiyyah dan ziyadah alif-nun).</td>
+            </tr>
+            <tr>
+                <td><strong>رَبِّ</strong></td>
+                <td>Isim munada mudhaf ila ya'il-mutakallim al-mahdzufah.</td>
+                <td>Munada manshub bil-fathah al-muqaddarah pada huruf sebelum ya' mutakallim. Harf nida' (<em>Yā</em>) dan Ya' mutakallim dibuang li takhfif wad-dalalah 'alal-qurb. Jumlah nida'iyyah pembuka maqul al-qaul.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنِّى</strong></td>
+                <td><em>Inna</em> harf taukid wa nashab + Dhamir mutakallim Ya'.</td>
+                <td><em>Inna</em> menashabkan isim dan merafa'kan khabar. Ya' mutakallim mabni 'alas-sukun fi mahalli nashbin <strong>Ismu Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>نَذَرْتُ</strong></td>
+                <td>Fi'il madhi mabni 'alas-sukun karena bersambung dengan Ta' fa'il mutakallim.</td>
+                <td>Ta' fa'il mabni 'alad-dhamm fi mahalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah <em>nadhartu...</em> fi mahalli raf'in <strong>Khabaru Inna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَكَ</strong></td>
+                <td>Lām harf jarr + Kāf khithāb mukhatab.</td>
+                <td>Jar wa majrur <strong>muta'alliq</strong> langsung dengan fi'il <em>nadhartu</em>. Didahulukan (<em>taqdīm</em>) untuk faedah pengkhususan (<em>al-qashr wal-ikhtishash</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>مَا</strong></td>
+                <td>Isim maushul bermakna <em>alladzī</em>, mabni 'alas-sukun.</td>
+                <td>Fi mahalli nashbin <strong>Maf'ūl Bih</strong> bagi fi'il <em>nadhartu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى بَطْنِى</strong></td>
+                <td>Harf jar <em>fī</em> + Isim majrur mudhaf + Ya' mutakallim mudhaf ilaih.</td>
+                <td>Syibhul jumlah jar wa majrur <strong>muta'alliq</strong> dengan shilah maushul yang mahdzuf, ditakdirkan: <em>istaqarra</em> atau <em>yustakannu</em> (janin yang bersemayam dalam kandunganku).</td>
+            </tr>
+            <tr>
+                <td><strong>مُحَرَّرًا</strong></td>
+                <td>Isim maf'ul wazan <em>mufa''alan</em> dari fi'il <em>ḥarrara-yuḥarriru</em>.</td>
+                <td><strong>Ḥāl</strong> (keterangan keadaan) manshub bil-fathah azh-zhahirah dari dhamir mustatir pada shilah maushul, atau maf'ul bih tsani jika <em>nadhartu</em> bermakna menjadikan.</td>
+            </tr>
+            <tr>
+                <td><strong>فَتَقَبَّلْ</strong></td>
+                <td>Fā' sababiyyah / fashīḥah + Fi'il du'ā' (shighat amr) mabni 'alas-sukun.</td>
+                <td>Fa'il-nya dhamir mustatir wujuban taqdiruhu <em>Anta</em>. Fi'il permohonan yang dihubungkan dengan ikrar nadzar sebelumnya.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنِّىٓ</strong></td>
+                <td>Harf jar <em>min</em> + Nūn wiqāyah + Yā' mutakallim.</td>
+                <td>Jar wa majrur <strong>muta'alliq</strong> dengan fi'il du'a <em>taqabbal</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِنَّكَ</strong></td>
+                <td><em>Inna</em> harf taukid wa nashab + Kāf khithāb dhamir muttashil.</td>
+                <td>Kāf mabni 'alal-fath fi mahalli nashbin <strong>Ismu Inna</strong>. Jumlah ini berfungsi sebagai <em>ta'līl</em> (alasan penguat permohonan).</td>
+            </tr>
+            <tr>
+                <td><strong>أَنتَ</strong></td>
+                <td>Dhamir munfashil mukhatab mabni 'alal-fath.</td>
+                <td>Berstatus sebagai <strong>Dhamīr Faṣhl</strong> (la mahalla lahu minal-i'rab) untuk taukid dan qashr, atau sebagai Mubtada' tsani.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلسَّمِيعُ</strong></td>
+                <td>Shighah mubalaghah wazan <em>fa'īl</em>, isim ma'rifah bil-alif wal-lam.</td>
+                <td><strong>Khabar Inna Awwal</strong> (atau khabar bagi mubtada' <em>Anta</em>) marfu' bil-dhammah azh-zhahirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعَلِيمُ ۝٣٥</strong></td>
+                <td>Shighah mubalaghah wazan <em>fa'īl</em>.</td>
+                <td><strong>Khabar Inna Tsānī</strong> marfu' bil-dhammah azh-zhahirah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & Estetika Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Ījāz bil-Ḥadzf & Kedekatan Emosional Spiritual:</strong><br>
+            Pembuangan huruf nida' (<em>Yā</em>) pada seruan <strong>رَبِّ (Rabbi)</strong> tanpa perantara <em>Yā Rabbi</em> mencerminkan kedekatan intim (<em>al-qurb al-ma'nawi</em>) yang luar biasa antara batin Hannah dengan Tuhannya. Penggunaan nama <em>Ar-Rabb</em> (Sang Pemelihara, Pendidik, Pengayom) dipilih secara presisi, bukan <em>Allāhumma</em>, karena konteks munajat ini adalah permohonan pemeliharaan janin, kehamilan, dan pengasuhan generasi.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb al-Qaṣhr bit-Taqdīm (Eksklusivitas Totalitas Dedikasi):</strong><br>
+            Mendahulukan jar-majrur <strong>لَكَ (laka)</strong> atas objek nadzar <em>mā fī baṭnī</em> (<em>nadhartu laka mā fī baṭnī</em> dan bukan <em>nadhartu mā fī baṭnī laka</em>) melahirkan faedah balaghah <em>al-ikhtishash wal-hashr</em> (pengkhususan mutlak): "Hanya untuk-Mu semata wahai Tuhanku, bukan untuk kepentingan klan, bukan untuk penopang hari tuaku, bukan untuk dibanggakan di hadapan manusia!".
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah 'anit-Tajrīd (Pelepasan Ego Kepemilikan):</strong><br>
+            Penggunaan isim maushul jenis netral <strong>مَا (mā)</strong> dalam <em>mā fī baṭnī</em> alih-alih menggunakan <em>man</em> (siapa), mengindikasikan ketidaktahuan biologis sang ibu akan jenis kelamin anaknya. Ini adalah kinayah dari kepasrahan absolut: apa pun wujud janin tersebut, ia telah diserahkan seutuhnya kepada Allah bahkan sebelum ia melihat indahnya cahaya dunia.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Ḥusnut-Ta'līl & Al-I'tināf (Penyimpulan Argumen yang Memukau):</strong><br>
+            Penutupan ayat dengan <strong>إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ</strong> adalah bentuk <em>Husnut-Ta'lil</em> yang sangat memikat. Hannah mengunci doanya dengan tiga instrumen penguat taukid (<em>Inna</em>, dhamir fashl <em>Anta</em>, dan <em>al-istighraq</em> pada Alif-Lam kedua asma). Maknanya: "Aku memohon Engkau menerimanya, karena sungguh hanya Engkau yang Maha Mendengar rintihan doaku dan Maha Mengetahui ketulusan niat paling rahasia di kedalaman lubuk hatiku."
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>1. Metodologi Integratif 2S & 1L</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Hubungan Harmonis dengan Ayat Sebelumnya - QS. 3:33–34):</strong><br>
+            Pada ayat 33–34, Allah memproklamasikan dekrit agung di panggung semesta: pemilihan keluarga-keluarga suci (Adam, Nuh, Keluarga Ibrahim, dan Keluarga 'Imran) yang saling menurunkan benih keturunan spiritual (<em>dzurriyyatan ba'dhuhā mim ba'dh</em>). Ayat 35 berfungsi sebagai pembuka tirai sejarah mikro: memperlihatkan kepada manusia bagaimana proses seleksi kesucian keluarga 'Imran itu bermula secara konkret dalam realitas bumi, yaitu berakar dari sebuah bilik sunyi tempat seorang calon ibu melantunkan ikrar nadzar yang bersih dari segala polusi duniawi.
+        </li>
+        <li>
+            <strong>Siyāq (Konteks Makro Surah & Debat Kristologi dengan Delegasi Kristen Najran):</strong><br>
+            Surah Ali 'Imran turun dengan poros utama mengokohkan tauhid dan membedah syubhat teologi trinitas yang dibawa oleh 60 tokoh delegasi Kristen Najran yang mendatangi Madinah pada tahun 9 Hijriah. Delegasi Najran mendewakan dan menuhankan Nabi 'Isa AS dengan dalih kelahirannya yang ajaib tanpa ayah biologis. Ayat 35 membongkar akar kesesatan tersebut secara telak dan elegan: Al-Qur'an menelusuri genealogi 'Isa AS secara historis dan rasional. 'Isa bukanlah anak Allah dan bukan tuhan, melainkan anak kandung dari seorang wanita suci bernama Maryam. Dan Maryam dilahirkan oleh seorang wanita biasa bernama Hannah, istri 'Imran, yang hamil secara biologis, merindukan keturunan, bersujud memohon anak, dan mengikrarkan nadzar. Ini mendemonstrasikan bahwa kemuliaan keluarga 'Imran adalah kemuliaan penghambaan (<em>'ubudiyyah</em>), bukan ketuhanan (<em>uluhiyyah</em>)!
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat Berikutnya - QS. 3:36–37):</strong><br>
+            Ikrar nadzar di ayat 35 yang menghendaki anak laki-laki untuk berkhidmat di Baitul Maqdis segera diuji oleh realitas Ilahi pada ayat 36: <em>Falammā wadha'athā qālat Rabbi innī wadha'tuhā untsā...</em> (Maka ketika ia melahirkannya, ia berkata: 'Tuhanku, sungguh aku melahirkan anak perempuan...'). Ayat 37 menyusul sebagai bukti pengabulan doa: Allah menerima anak perempuan tersebut dengan penerimaan yang sangat mulia (<em>fa-taqabbalahā Rabbuhā bi-qabūlin ḥasanin</em>), menumbuhkannya dalam kesucian di bawah asuhan Nabi Zakariya AS.
+        </li>
+    </ul>
+
+    <h3>2. Rekonstruksi Sosio-Historis & Realitas Baitul Maqdis Abad ke-1 SM</h3>
+    <p>
+        Dalam tradisi hukum dan tatanan keagamaan Bani Israil di Haikal Sulaiman (Baitul Maqdis) pada masa itu, pelayanan suci di dalam mihrab (seperti menyalakan pelita, membersihkan ruang ibadah, mengurus tirai tempat suci, dan memimpin upacara korban) secara ketat dan eksklusif hanya diperuntukkan bagi kaum laki-laki. Anak perempuan dipandang tidak memiliki kelayakan fisik untuk menetap melayani kuil karena mengalami siklus biologis alami (haid dan nifas) serta ikatan pernikahan.
+    </p>
+    <p>
+        Ketika Hannah mengikrarkan nadzar <em>muḥarraran</em>, ia berasumsi penuh bahwa janin yang dikandungnya adalah anak laki-laki. Namun, keikhlasannya yang paripurna membuat nadzar ini bernilai revolusioner di sisi Allah: nadzarnya kelak mendobrak sekat tradisi patriarkal kuil, di mana Allah justru menerima anak perempuan tersebut (Maryam) menjadi pelayan tempat suci, hingga dari rahimnya lahirlah mukjizat terbesar peradaban manusia: Nabi 'Isa AS tanpa disentuh oleh laki-laki mana pun!
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>:</strong><br>
+        At-Tabari menjelaskan bahwa makna <em>muḥarraran</em> dalam dialek Arab klasik dan adat Bani Israil adalah anak yang dibebaskan dari khidmat melayani kedua orang tuanya, dibersihkan dari urusan duniawi, lalu diserahkan semata-mata untuk melayani rumah ibadah (Baitul Maqdis). Beliau meriwayatkan bahwa Hannah melihat burung memberi makan anaknya saat duduk di bawah naungan pohon, lalu hatinya bergetar rindu memiliki buah hati seraya bernadzar. At-Tabari menegaskan bahwa nadzar menyerahkan anak untuk ibadah adalah tradisi syariat yang diakui sah pada masa itu.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menguraikan silsilah keluarga 'Imran: beliau adalah 'Imran bin Matsan, ayah dari Maryam AS. Istrinya bernama Hannah binti Faqudz, yang juga merupakan bibi dari Nabi Yahya AS (saudara perempuan dari ibunda Yahya). Ibnu Katsir menyoroti keindahan adab doa Hannah: ia menutup nadzarnya dengan kalimat <em>"innaka Antas-Samī'ul-'Alīm"</em>, yakni Engkau Maha Mendengar ikrar doaku, dan Engkau Maha Mengetahui kejujuran niat serta kelemahanku.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi fikih perbandingan syariat (<em>syar'u man qablanā</em>): Bolehkah seorang muslim bernadzar mewakafkan anaknya untuk masjid? Al-Qurthubi menetapkan konsensus ulama Islam: syariat mewakafkan anak menjadi pelayan fisik masjid telah dimansukh (dihapuskan). Dalam syariat Nabi Muhammad ﷺ, anak adalah manusia merdeka yang tidak boleh dijadikan objek wakaf layaknya barang/tanah. Namun, substansi ruhiyah dari nadzar tersebut tetap abadi, yaitu orang tua wajib bernadzar dan berkomitmen mengarahkan visi pendidikan anak agar menjadi pembela agama Allah dan menguasai ilmu syariat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (544–606 H) & Az-Zamakhsyari (467–538 H):</strong><br>
+        Ar-Razi dalam <em>Mafātīḥ al-Ghayb</em> mengulas secara psikologis dan filosofis kata <em>mā fī baṭnī</em>: mengapa menggunakan <em>mā</em> (untuk benda/umum) bukan <em>man</em> (untuk makhluk berakal)? Karena pada tahap kehamilan awal, esensi janin belum diketahui secara fisik dan gender, membuktikan bahwa kepasrahan Hannah mendahului bentuk rupa anak. Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan bahwa wazan <em>muḥarraran</em> adalah puncak ketulusan (<em>ikhlasul-amal</em>): anak tersebut dimerdekakan dari rantai nafsu duniawi agar menjadi hamba murni bagi Allah semata.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Muhammad At-Tahir Ibnu 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur menyajikan analisis sosiologis dan peradaban yang sangat tajam: kebangkitan moral suatu bangsa tidak pernah dimulai dari istana politik, melainkan bermula dari kesucian hati seorang calon ibu di dalam rumah tangganya. Doa Hannah adalah model <em>Tarbiyah Qabla al-Wilādah</em> (pendidikan pra-konsepsi dan pra-kelahiran). Dengan meniatkan anak untuk peradaban agama sejak dalam rahim, pancaran energi spiritual ibu telah membentuk ekosistem suci bagi pertumbuhan sang janin.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) — <em>Tafsir Al-Azhar</em> & Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Buya Hamka menulis dengan narasi sastra yang menyentuh kalbu: <em>"Hannah tidak meminta anak agar ada yang merawatnya di hari tua. Ia tidak meminta anak untuk menjadi penumpuk kekayaan atau penerus gelar kebangsawanan keluarganya. Ia meminta anak semata-mata untuk diserahkan kembali kepada Allah Pemilik Nyawa."</em> Sementara Quraish Shihab menggarisbawahi paradoks kepemilikan: banyak orang tua menganggap anak sebagai hak milik mutlak pribadinya, memaksakan kehendak dan ambisi ego orang tua yang gagal kepada sang anak. QS. 3:35 mengajarkan hakikat anak sebagai 'titipan Ilahi' yang harus dibebaskan dari belenggu ego orang tua.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Konseptual Kementerian Agama RI (Tafsir Tematik Kemenag):</strong><br>
+        Kemenag RI menegaskan bahwa ayat ini menjadi rujukan utama bagi arsitektur keluarga sakinah dan ketahanan generasi. Doa orang tua saat masa kehamilan memiliki pengaruh transenden terhadap kesehatan mental dan kesiapan spiritual anak di masa depan.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu / Ijma' Mufassirin (Ittifāq)</th>
+                <th>Dinamika Ikhtilaf / Ragam Sudut Pandang Penafsiran</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat Makna "Muḥarraran"</strong></td>
+                <td>Seluruh ulama sepakat maknanya adalah pembebasan janin dari urusan duniawi untuk diwakafkan berkhidmat bagi agama dan tempat suci.</td>
+                <td>
+                    • <strong>Mayoritas Mufassir Klasik:</strong> Menitikberatkan pada status fisik sebagai pelayan dan pembersih Baitul Maqdis (<em>khādimul-haikal</em>).<br>
+                    • <strong>Mufassir Kontemporer (Ibnu 'Asyur, Quraish Shihab):</strong> Menekankan pembebasan psikologis dan eksistensial anak dari eksploitasi ego dan ambisi materi orang tua.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hukum Mewakafkan Anak dalam Islam</strong></td>
+                <td>Sepakat bahwa dalam syariat Islam, tidak diperbolehkan menyerahkan hak milik anak kepada institusi fisik secara mutlak layaknya wakaf barang.</td>
+                <td>
+                    • <strong>Mazhab Syafi'i & Maliki:</strong> Hukum tersebut merupakan syariat terdahulu (<em>syar'u man qablanā</em>) yang telah dinasakh.<br>
+                    • <strong>Ulama Maqashid:</strong> Substansi nadzar tetap dianjurkan dalam bentuk komitmen orang tua untuk membiayai dan mengarahkan anak menjadi ulama atau pejuang kemaslahatan umat.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Kondisi Suami (Imran) Saat Nadzar</strong></td>
+                <td>Sepakat bahwa Imran adalah tokoh saleh yang wafat mendahului kelahiran sang anak (Maryam).</td>
+                <td>
+                    • <strong>Sebagian Riwayat:</strong> Imran wafat saat Hannah baru mengandung beberapa bulan sehingga Hannah bernadzar dalam status janda yang memohon perlindungan bagi anak yatimnya.<br>
+                    • <strong>Riwayat Lain:</strong> Nadzar diucapkan saat Imran masih hidup dengan persetujuan penuh sang suami, lalu Imran wafat menjelang kelahiran.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Tujuan Pengutipan Kisah bagi Umat Nabi Muhammad ﷺ</strong></td>
+                <td>Sepakat sebagai hujah pematah akidah ketuhanan Isa bagi delegasi Kristen Najran dan teladan parenting luhur.</td>
+                <td>
+                    • <strong>Aspek Teologis:</strong> Penegasan kemanusiaan silsilah Nabi Isa AS.<br>
+                    • <strong>Aspek Edukasi/Pedagogis:</strong> Kewajiban membersihkan niat orang tua sejak masa pra-konsepsi janin.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan arsitektur mental model berikut merupakan ikhtiar tadabbur, perenungan sistemik, dan sintesis psikologis manusiawi; bukan klaim penafsiran wahyu yang mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Materialistis vs Pola Pikir Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kesadaran</th>
+                <th>Pola Pikir Manusiawi Biasa (Materialistis / Jahiliyah Modern)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Model Hannah binti Faqudz)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Anak</strong></td>
+                <td><strong>Anak sebagai Hak Milik (Ownership):</strong> Memandang anak sebagai kepemilikan pribadi mutlak, aset hari tua, atau alat pemenuhan impian orang tua yang kandas.</td>
+                <td><strong>Anak sebagai Amanah Suci (Stewardship):</strong> Memandang anak sebagai hamba Allah yang merdeka (<em>muḥarrar</em>) dan titipan Ilahi yang wajib dihantarkan menuju Sang Penciptanya.</td>
+            </tr>
+            <tr>
+                <td><strong>Motivasi Memiliki Keturunan</strong></td>
+                <td><strong>Validasi Sosial & Penerus Klan:</strong> Takut dicap mandul, gengsi keluarga, atau menjaga keberlangsungan nama dinasti di hadapan publik.</td>
+                <td><strong>Proyek Abadi Akhirat:</strong> Menghadirkan generasi saleh penopang kebenaran yang terus mengalirkan pahala kebajikan hingga yaumul qiyamah.</td>
+            </tr>
+            <tr>
+                <td><strong>Orientasi Pendidikan (Visi Parenting)</strong></td>
+                <td><strong>Sekrup Industri & Status Sosial:</strong> Sukses diukur semata dari indeks prestasi akademis, kekayaan materi, dan jabatan bergengsi di korporasi duniawi.</td>
+                <td><strong>Khādimul-Ummah & Penegak Tauhid:</strong> Membangun integritas moral, kemerdekaan batin dari perbudakan materi, dan dedikasi pelayanan kemanusiaan lillāhi Ta'ālā.</td>
+            </tr>
+            <tr>
+                <td><strong>Sikap terhadap Hasil</strong></td>
+                <td><strong>Ekspektasi Menuntut & Kecewa:</strong> Merasa berhak menagih balas jasa anak dan frustrasi berat ketika anak tidak sesuai dengan cetak biru ambisi orang tua.</td>
+                <td><strong>Tawakal & Pasrah Total (Fa-taqabbal minnī):</strong> Berikhtiar mendidik semaksimal mungkin, lalu mengembalikan hasilnya dengan kerendahan hati kepada rahmat Allah.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Transcendent Stewardship Principle" (Prinsip Pengasuhan Amanah Transenden)</strong><br>
+            <em>Premis:</em> Seseorang tidak akan pernah bisa mendidik anak secara adil dan merdeka selama ia masih memposisikan dirinya sebagai "pemilik mutlak" anak tersebut. Hakikat pengasuhan sejati adalah reposisi psikologis dari <em>owner</em> menjadi <em>steward</em> (penjaga amanah). Ketika orang tua menyadari bahwa pemilik sejati anak adalah Allah (<em>laka mā fī baṭnī</em>), kecemasan berlebih (<em>parental anxiety</em>) dan dorongan untuk mengendalikan anak secara otoriter akan luruh berganti menjadi doa dan kasih sayang yang membebaskan.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Muḥarrar Paradox" (Paradoks Kemerdekaan Hakiki)</strong><br>
+            <em>Premis:</em> Kemerdekaan sejati manusia (<em>al-ḥurriyyah al-kāmilah</em>) tidak pernah tercapai dengan cara melepaskan diri dari segala aturan, melainkan tercapai ketika seseorang membebaskan dirinya dari seluruh perbudakan makhluk, opini sosial, dan tirani materi, untuk kemudian menghamba secara sukarela kepada Zat Yang Maha Esa. Menjadikan anak <em>muḥarraran</em> berarti membekalinya dengan sistem imun spiritual terkuat: ia tidak akan mudah diintimidasi oleh tren zaman atau dibeli oleh gemerlap dunia, karena jiwanya telah merdeka di bawah naungan Allah.
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <p>
+        Secara neuropsikologis dan psikodinamika keluarga, salah satu luka batin paling merusak yang dialami anak di kemudian hari adalah <strong>Projective Identification</strong> dan <strong>Parental Narcissistic Extension</strong>—situasi di mana orang tua memproyeksikan kecemasan, ketakutan, dan ambisi narsisistik mereka kepada anak, menjadikan sang anak terpenjara oleh ekspektasi yang menyesakkan dada.
+    </p>
+    <p>
+        Ikrar istri 'Imran dalam QS. 3:35 membedah dan memutus rantai trauma antargenerasi (<em>intergenerational trauma</em>) ini sejak titik nol (masa konsepsi). Dengan mengikrarkan <em>"innī nadhartu laka mā fī baṭnī muḥarraran"</em>, Hannah secara sadar memutus belenggu narsisme keibuannya. Ia tidak menjadikan janin itu sebagai pelampiasan kesepiannya di usia tua, melainkan memerdekakannya sejak dalam kandungan. Jiwa anak yang dibesarkan dalam aura ketulusan tanpa pamrih ini tumbuh menjadi pribadi dengan regulasi emosi yang stabil, bebas dari neurosis pencarian validasi semu manusia.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomena "Trophy Children" & Hyper-Parenting di Era Algoritma</h3>
+    <p>
+        Di abad ke-21 yang serba terkoneksi dan terobsesi dengan citra media sosial, lahir sindrom patologis yang dikenal sebagai <em>"Trophy Children"</em> (anak piala) dan <em>"Sharenting"</em> eksploitatif. Anak-anak dieksploitasi sejak bayi di platform digital demi meraup <em>engagement</em>, sponsor, dan decak kagum warganet. Orang tua terjebak dalam gaya pengasuhan <em>Hyper-Parenting</em> dan <em>Helicopter Parenting</em>: membebani anak dengan rentetan les akademis tanpa henti semata-mata agar bisa dipamerkan di ruang publik sebagai bukti keberhasilan ego orang tua.
+    </p>
+    <p>
+        Dampaknya sangat mengerikan: generasi muda hari ini mengalami ledakan krisis kesehatan mental yang belum pernah terjadi sebelumnya. Generasi Z dan Alpha mengalami tingkat <em>burnout</em> dini, depresi klinis, sindrom imposter, dan kekosongan eksistensial karena merasa kasih sayang orang tua mereka bersyarat (<em>conditional love</em>)—hanya diberikan jika mereka berprestasi secara materi dan akademis.
+    </p>
+
+    <h3>2. Kritik Peradaban: Dekonstruksi Paradigma Pendidikan Teknokratis Sekuler</h3>
+    <p>
+        Sistem peradaban sekuler modern telah mereduksi sakralitas kelahiran manusia menjadi sekadar "pencetakan tenaga kerja" (<em>human capital</em>) bagi mesin industri kapitalisme. Sekolah dan perguruan tinggi sering kali dirancang bukan untuk memerdekakan jiwa manusia, melainkan untuk mencetak sekrup-sekrup industri yang patuh pada roda konsumerisme.
+    </p>
+    <p>
+        QS. 3:35 menghantam jantung peradaban materialistis ini dengan tamparan keras: <strong>Kelahiran seorang anak adalah peristiwa spiritual transenden, bukan peristiwa produksi ekonomi!</strong> Hannah binti Faqudz tidak pernah bertanya tentang berapa gaji yang akan dihasilkan oleh anaknya kelak di Haikal Baitul Maqdis. Visi tertingginya adalah mencetak manusia yang <em>muḥarrar</em>—manusia yang merdeka jiwanya dari syahwat duniawi, berdiri tegak menjaga moralitas umat, dan mengabdi tanpa pamrih bagi kemaslahatan peradaban.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Perilaku)</h3>
+        <ol>
+            <li>
+                <strong>Protokol Doa Janin & Mikro-Habit Pelepasan Ego Kepemilikan (&lt; 5 Menit):</strong><br>
+                Bagi calon orang tua atau orang tua yang telah memiliki anak, luangkan waktu 3 menit setiap selesai salat fardhu atau sebelum tidur untuk menyentuh anak/perut dengan kesadaran penuh seraya melafalkan ikrar Hannah: <em>"Rabbi innī nadhartu laka... muḥarraran fa-taqabbal minnī"</em>. Niatkan secara sadar melepaskan klaim kepemilikan mutlak Anda atas anak tersebut dan serahkan masa depannya kepada pemeliharaan Allah.
+            </li>
+            <li>
+                <strong>Audit Visi Pendidikan & Eliminasi Proyeksi Narsisistik (Parenting Decision Protocol):</strong><br>
+                Lakukan evaluasi berkala bersama pasangan terhadap seluruh agenda pendidikan dan ekstrakurikuler anak. Tanyakan secara jujur: <em>"Apakah kita mendaftarkan anak pada program ini demi kebaikan perkembangan fitrah jiwanya, ataukah semata-mata demi memuaskan gengsi dan gengsi sosial kita di hadapan keluarga besar dan rekan kerja?"</em> Hentikan segala bentuk pemaksaan cita-cita yang merampas fitrah kemerdekaan anak.
+            </li>
+            <li>
+                <strong>Komitmen Alokasi Wakaf Diri Generasi (Dedikasi untuk Kemaslahatan Umat):</strong><br>
+                Bimbing anak untuk memiliki minimal satu bidang keahlian (baik dalam ilmu agama, sains, kedokteran, teknologi, maupun seni) yang diniatkan secara eksplisit bukan untuk mencari kekayaan pribadi, melainkan diwakafkan untuk melayani kebutuhan kaum duafa dan memuliakan dakwah Islam (menjadi <em>muḥarrar</em> modern di era kontemporer).
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Ketika aku mendidik anak-anakku (atau membina orang-orang di bawah tanggung jawabku), apakah aku sedang mempersiapkan mereka menjadi hamba Allah yang merdeka dan bertakwa, ataukah aku diam-diam sedang membentuk mereka menjadi boneka pemuas ambisi egoku sendiri?
+            </li>
+            <li>
+                Seberapa sering aku mengikhlaskan persembahan hidupku untuk Allah: apakah aku hanya memberikan sisa-sisa tenaga, sisa waktu, dan sisa hartaku bagi urusan agama-Nya, sementara yang paling segar dan berharga selalu kusimpan untuk kepentingan duniaku?
+            </li>
+            <li>
+                Jika Allah menetapkan takdir atas anak atau keluargaku yang berbeda dari skenario impian duniaku, apakah lisanku masih mampu berbisik dengan penuh ketulusan: <em>"Fa-taqabbal minnī, innaka Antas-Samī'ul-'Alīm"</em>?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Rabbanā, Yā Man lā Ya'zubu 'anhu Mitsqālu Dzarratin fis-Samāwāti wal-Arḍh. Yā Samī'u Yā 'Alīm. Wahai Allah Yang Maha Mendengar setiap desah rintihan batin kami dan Maha Mengetahui setiap niat yang terselubung di balik amal perbuatan kami. Teladanilah jiwa kami dengan ketulusan wanita suci Hannah binti Faqudz. Bersihkanlah hati kami dari syirik tersembunyi, dari narsisme kepemilikan, dan dari kecenderungan memperbudak sesama hamba-Mu demi memuaskan hawa nafsu duniawi kami. Karuniakanlah kepada kami keturunan yang Engkau merdekakan jiwanya dari perbudakan materi zaman ini, jadikanlah anak cucu kami benteng-benteng penjaga tauhid, penegak keadilan, dan pembela risalah-Mu yang mulia. Terimalah setiap ikhtiar kecil kami yang penuh kekurangan ini di sisi-Mu dengan sambutan keridhaan-Mu yang sempurna. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-034 - QS. Ali 'Imran Ayat 34.html">&larr; Kembali ke Ayat 34 (QS. 3:34)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 35</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-036 - QS. Ali 'Imran Ayat 36.html">Lanjut ke Ayat 36 (QS. 3:36) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

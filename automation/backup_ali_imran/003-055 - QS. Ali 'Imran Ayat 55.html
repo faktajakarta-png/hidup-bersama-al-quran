@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-055 - QS. Ali 'Imran Ayat 55 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-054 - QS. Ali 'Imran Ayat 54.html">&larr; Ayat Sebelumnya (QS. 3:54)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-056 - QS. Ali 'Imran Ayat 56.html">Ayat Berikutnya (QS. 3:56) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 2 (Ayat 33–63): Genealogi Kesucian & Teologi Kenabian: Narasi Keluarga 'Imran & Mubahalah</span>
+        <span class="badge">Klaster 4 (Ayat 52–58): Makar Kaum Kafir, Pemeliharaan Ilahi ('Wafat' & Pengangkatan 'Isa AS), serta Superioritas Pengikut Tauhid</span>
+        <span class="badge">30 Kata | 129 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 55</h1>
+    <div class="transliteration">
+        "Idz qālallāhu yā 'Īsā innī mutawaffīka wa rāfi'uka ilayya wa muṭahhiruka minal-ladzīna kafarū wa jā'ilul-ladzīnat-taba'ūka fawqal-ladzīna kafarū ilā yawmil-qiyāmah(ti), tsumma ilayya marji'ukum fa-aḥkumu baynakum fīmā kuntum fīhi takhtalifūn(a)."
+    </div>
+    <div class="thematic-title">
+        Penyelamatan Ilahi, Pengangkatan Al-Masih & Eskatologi Teologis: Dekonstruksi 'Wafat' (Tawaffī) dan Raf' 'Isa AS, Tri-Janji Pemurnian Spiritual, Serta Supremasi Para Pengikut Monoteisme Sejati Hingga Hari Kiamat
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 2 | Klaster 4: Makar Kaum Kafir, Pembebasan Kenabian, Eskatologi Turunnya 'Isa AS & Pengadilan Eskatologis Terakhir)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        إِذْ قَالَ ٱللَّهُ يَـٰعِيسَىٰٓ إِنِّى مُتَوَفِّيكَ وَرَافِعُكَ إِلَىَّ وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟ وَجَاعِلُ ٱلَّذِينَ ٱتَّبَعُوكَ فَوْقَ ٱلَّذِينَ كَفَرُوٓا۟ إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ ۖ ثُمَّ إِلَىَّ مَرْجِعُكُمْ فَأَحْكُمُ بَيْنَكُمْ فِيمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ ۝٥٥
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Ingatlah) ketika Allah berfirman: 'Wahai 'Isa! Sesungguhnya Aku akan mengambilmu secara sempurna (dari jangkauan musuh-musuhmu), mengangkatmu kepada-Ku, menyucikanmu dari orang-orang yang kafir, dan menjadikan orang-orang yang mengikutimu berada di atas orang-orang yang kafir hingga hari kiamat. Kemudian hanya kepada-Kulah tempat kembalimu, lalu Aku memutuskan perkara di antara kamu tentang apa yang senantiasa kamu perselisihkan padanya.'"
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan proklamasi balasan Ilahi atas makar pembunuhan dan konspirasi keji kaum kafir Bani Israil yang disebutkan pada ayat 54 (<em>"Wa makarū wa makarallāh, wallāhu khayrul-mākirīn"</em>). Dalam ayat 55 ini, Allah SWT merumuskan <strong>Empat Janji Agung (Al-Wu'ūd al-Arba'ah)</strong> kepada Nabi 'Isa AS:
+    </p>
+    <ul>
+        <li><strong>Pertama, <em>Mutawaffīka</em>:</strong> Mengambil atau menyempurnakan ajal dan penjagaan secara utuh dari dunia tanpa membiarkan sentuhan kotor kaum konspirator membunuh atau menyalibnya (baik dimaknai sebagai penjemputan jiwa-raga dalam kondisi tidur, penerimaan ruh secara sempurna, maupun pemenuhan ajal yang kelak dituntaskan setelah beliau turun kembali ke bumi di akhir zaman).</li>
+        <li><strong>Kedua, <em>Rāfi'uka Ilayya</em>:</strong> Mengangkat jasad dan ruhnya ke langit, ke alam malakut yang suci, menjauhkannya dari bumi yang dipenuhi makar jahat. Frase <em>"Ilayya"</em> (kepada-Ku) adalah penisbatan kemuliaan (<em>idhafah tasyri'iyyah</em>), bukan pembatasan ruang bagi Allah SWT yang Maha Suci dari tempat dan arah.</li>
+        <li><strong>Ketiga, <em>Muṭahhiruka minal-ladzīna kafarū</em>:</strong> Menyucikan dan membebaskan Nabi 'Isa AS dari stigma dusta kaum pembencinya (tuduhan sebagai anak zina, penyihir, atau pendusta) serta mencabutnya dari lingkungan masyarakat yang memusuhinya.</li>
+        <li><strong>Keempat, <em>Jā'ilul-ladzīnat-taba'ūka fawqal-ladzīna kafarū ilā yawmil-qiyāmah</em>:</strong> Menetapkan superioritas hakiki bagi mereka yang setia mengikuti tauhid kenabian 'Isa AS (yang puncaknya termanifestasi pada umat Nabi Muhammad ﷺ sebagai penerus sah risalah tauhid) berada di atas kaum yang mengingkarinya, baik secara argumentasi ilmiah (<em>hujjah wa burhān</em>), kekuatan politik-moral, maupun keunggulan eksistensial hingga hari kiamat.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>إِذْ قَالَ ٱللَّهُ</strong><br>(<em>Idz qālallāh</em>)</td>
+                <td>
+                    <strong>Dzāl Sākinah:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas dengan sifat jahr, rikhwah, dan istifal.<br>
+                    <strong>Qāf Fathah & Alif Mad:</strong> Isti'la' tingkat tertinggi disusul mad thabi'i 2 harakat.<br>
+                    <strong>Lam Jalālah:</strong> Dibaca <strong>Tafkhīm / Taghlīzh</strong> karena didahului harakat fathah pada Lam <em>qāla</em>.
+                </td>
+                <td>
+                    • <strong>Mayoritas Imam:</strong> Membaca idzhār pada huruf Dzāl sukun saat bertemu Qāf (<em>idz qāla</em>).<br>
+                    • <strong>Abū 'Amr, Hisyām 'an Ibni 'Āmir, Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Idghām Dzāl fīl-Qāf</strong> dalam beberapa thariq riwayat mutawatirah.<br>
+                    • Seluruh imam sepakat membaca tafkhim pada Lam Jalālah <em>Allāh</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>يَـٰعِيسَىٰٓ إِنِّى</strong><br>(<em>Yā 'Īsā innī / inniya</em>)</td>
+                <td>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Alif maqsūrah pada <em>'Īsā</em> bertemu hamzah qath'i kasrah pada <em>innī</em>.<br>
+                    <strong>Kaidah Mad:</strong> Dibaca qashr (2 harakat), tawassuth (4–5 harakat), atau thul (6 harakat).<br>
+                    <strong>Nun Musyaddadah:</strong> Ghunnah akmal mā takūn ditahan 2 harakat.
+                </td>
+                <td>
+                    • <strong>Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca dengan <strong>Imālah Kubrā</strong> pada alif maqsūrah <em>'Īsā</em> (<em>Yā 'Īsē</em>).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan <strong>Taqīl / Bayna-bayna</strong> (antara fathah dan kasrah).<br>
+                    • <strong>Imam Lainnya (Hafsh, Ibnu Katsīr, Abū 'Amr, dll.):</strong> Membaca fathah murni (<em>Fat-ḥah</em>).<br>
+                    • <strong>Nāfi' (Qālūn & Warsy), Abū 'Amr, Ibnu Katsīr, Abū Ja'far:</strong> Membaca dengan <strong>Fat-ḥah Yā' al-Iḍhāfah</strong> saat washal: <em><strong>in-ni-ya</strong> mutawaffīka</em>. Selebihnya membaca sukun: <em><strong>in-nī</strong> mutawaffīka</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>مُتَوَفِّيكَ</strong><br>(<em>mutawaffīka</em>)</td>
+                <td>
+                    <strong>Tā' Fathah:</strong> Hams ringan.<br>
+                    <strong>Wāw Fathah:</strong> Tarqiq.<br>
+                    <strong>Fā' Musyaddadah Kasrah:</strong> Sifat syiddah dan rikhwah dengan hembusan nafas hams tajam dari bibir bawah ke ujung gigi seri atas.<br>
+                    <strong>Yā' Mad Thabi'i:</strong> Panjang 2 harakat saat washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat (ijma') membaca isim fa'il <em>mutawaffīka</em> dari bab tafa''ala (<em>tawaffā – yatawaffā</em>), yang menegaskan subjek mutlak penerima ajal dan penjemputan jiwa adalah Allah SWT semata.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَرَافِعُكَ إِلَىَّ</strong><br>(<em>wa rāfi'uka ilayy</em>)</td>
+                <td>
+                    <strong>Huruf Rā':</strong> Tafkhim karena fathah.<br>
+                    <strong>'Ain Dhammah:</strong> Makhraj wasathul-halq.<br>
+                    <strong>Kāf Dhammah:</strong> Syiddah dan hams.<br>
+                    <strong>Yā' Musyaddadah Fathah pada <em>Ilayya</em>:</strong> Disertai sifat <strong>Nabr</strong> (penekanan artikulasi) saat washal; jika waqaf menjadi mad layyin sukun dengan tasydid.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca rafa' pada huruf 'Ain isim fa'il <em>rāfi'uka</em> sebagai ma'thuf atas <em>mutawaffika</em>, serta membaca fathah pada Yā' mutakallim musyaddadah <em>ilayya</em> saat washal.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَمُطَهِّرُكَ مِنَ ٱلَّذِينَ كَفَرُوا۟</strong><br>(<em>wa muṭahhiruka minal-ladzīna kafarū</em>)</td>
+                <td>
+                    <strong>Thā' Bertasydid Fathah:</strong> Isti'la' dan ithbaq mutlak.<br>
+                    <strong>Hā' Kasrah:</strong> Tarqiq.<br>
+                    <strong>Rā' Dhammah:</strong> Tafkhim.<br>
+                    <strong>Nun Fathah bertemu Lam Syamsiyyah:</strong> Idgham syamsiyyah langsung menyambung ke Lam bertasydid.<br>
+                    <strong>Wāw Mad pada <em>kafarū</em>:</strong> Mad thabi'i 2 harakat.
+                </td>
+                <td>
+                    Sepakat mutawatir sepuluh imam membaca wazan <em>Taf'īl</em> (isim fa'il <em>muṭahhiruka</em>) yang menunjukkan pensucian radikal dan intensif dari segala konspirasi fisik dan tuduhan moral kaum kafir.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَجَاعِلُ ٱلَّذِينَ ٱتَّبَعُوكَ</strong><br>(<em>wa jā'ilul-ladzīnat-taba'ūka</em>)</td>
+                <td>
+                    <strong>Jīm Fathah & Alif Mad:</strong> Sifat jahr dan syiddah.<br>
+                    <strong>Lam Dhammah Idhafah:</strong> Langsung menyambung ke Hamzah washal yang gugur pada isim maushul <em>alladzīna</em>.<br>
+                    <strong>Tā' Musyaddadah pada <em>ittaba'ūka</em>:</strong> Makhraj ujung lidah dengan penahanan nafas sempurna sebelum pelepasan hams.
+                </td>
+                <td>
+                    Seluruh sepuluh imam membaca <em>wa jā'ilu</em> dengan idhafah isim fa'il kepada isim maushul (<em>alladzīna</em>). Penyatuan ini menetapkan ketetapan hukum Ilahi (<em>qadhā' kaunī syar'ī</em>) yang tidak dapat dibatalkan oleh siapa pun.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>فَوْقَ ٱلَّذِينَ كَفَرُوٓا۟</strong><br>(<em>fawqal-ladzīna kafarū</em>)</td>
+                <td>
+                    <strong>Harf Layyin (Faw-):</strong> Fathah bertemu wawu sukun dibaca lembut tanpa goncangan.<br>
+                    <strong>Qāf Fathah:</strong> Isti'la' mutlak.<br>
+                    <strong>Mad Jā'iz Munfaṣhil pada <em>kafarū ilā</em>:</strong> Huruf Wawu mad bertemu Hamzah qath'i kasrah terpisah, dibaca 2, 4, atau 6 harakat sesuai martabat qira'at perawi.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca mad munfashil dengan panjang 6 harakat.<br>
+                    • <strong>'Āṣhim, Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca 4–5 harakat.<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far:</strong> Membaca qashr 2 harakat.<br>
+                    • <strong>Qālūn & Abū 'Amr:</strong> Boleh memilih antara 2 atau 4 harakat.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ</strong><br>(<em>ilā yawmil-qiyāmah</em>)</td>
+                <td>
+                    <strong>Wawu Layyin:</strong> Pada lafaz <em>yawmi</em>.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas pada <em>Al-Qiyāmah</em>.<br>
+                    <strong>Qāf Kasrah:</strong> Isti'la' derajat kelima.<br>
+                    <strong>Tā' Marbūṭhah:</strong> Dibaca kasrah saat washal; berubah menjadi Hā' sukun dengan hembusan nafas hams jika waqaf.
+                </td>
+                <td>
+                    Sepakat mutawatir membaca majrur pada <em>yawmi</em> dan <em>Al-Qiyāmati</em>, menegaskan durasi temporal eksistensial yang mengikat dunia hingga berakhirnya peradaban materi.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>ثُمَّ إِلَىَّ مَرْجِعُكُمْ</strong><br>(<em>tsumma ilayya marji'ukum</em>)</td>
+                <td>
+                    <strong>Huruf Tsa':</strong> Sifat hams dan rikhwah.<br>
+                    <strong>Mīm Musyaddadah:</strong> Ghunnah akmal mā takūn 2 harakat.<br>
+                    <strong>Rā' Sākinah pada <em>marji'ukum</em>:</strong> Dibaca <strong>Tafkhīm</strong> karena didahului huruf Mim berharakat fathah.<br>
+                    <strong>Idzhār Syafawī:</strong> Mim sukun bertemu Fā' (<em>-kum fa-</em>) wajib dibaca amat jelas (<em>asyaddu izhhāran</em>).
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr & Abū Ja'far:</strong> Membaca dengan <strong>Shilah Mīm al-Jam'</strong> menghubungkan mim dengan wawu mad: <em>marji'ukumū fa-aḥkumu</em>.<br>
+                    • <strong>Qālūn:</strong> Jalur sukun mim jamak atau shilah mim jamak.<br>
+                    • <strong>Mayoritas Imam (termasuk Hafsh):</strong> Membaca sukun tanpa shilah disertai kejelasan izhhar syafawi asyad.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>فَأَحْكُمُ بَيْنَكُمْ فِيمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ ۝٥٥</strong><br>(<em>fa-aḥkumu baynakum... takhtalifūn</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā' Sākinah:</strong> Sifat hams dan rikhwah dari wasathul-halq.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Pertemuan Nun sukun dengan Tā' pada lafaz <em>kuntum</em>.<br>
+                    <strong>Khā' Sākinah pada <em>takhtalifūn</em>:</strong> Isti'la', rikhwah, dan hams mendalam di pangkal tenggorokan.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada waqaf ayat 55, huruf Wawu mad dibaca 2, 4, atau 6 harakat dengan tawassuth pada Nun sukun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat atas struktur i'rab dan qira'at mutawatir fi'il mudhari' mutakallim <em>fa-aḥkumu</em> dan fi'il mudhari' mukhatab jamak <em>takhtalifūn</em>, mengunci kepastian penghakiman akhirat yang mutlak di tangan Allah SWT.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbabun Nuzul Sahih — Kronologi Penyelamatan & Pengangkatan Nabi 'Isa AS (Diriwayatkan oleh An-Nasā'ī dalam <em>As-Sunan al-Kubrā</em> No. 11591, Ibnu Abī Ḥātim dalam <em>Tafsīr-nya</em> No. 5988, dan Ibnu Jarīr At-Ṭabarī juz 3 hlm. 291):</strong><br>
+        Diriwayatkan dari Sahabat 'Abdullah bin 'Abbas r.a., beliau menceritakan peristiwa malam pengepungan:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 18px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«لَمَّا أَرَادَ اللَّهُ أَنْ يَرْفَعَ عِيسَى إِلَى السَّمَاءِ، خَرَجَ إِلَى أَصْحَابِهِ وَهُمْ فِي بَيْتٍ اثْنَا عَشَرَ رَجُلًا، فَقَالَ: إِنَّ مِنْكُمْ مَنْ يَكْفُرُ بِي اثْنَتَيْ عَشْرَةَ مَرَّةً بَعْدَ أَنْ آمَنَ بِي، ثُمَّ قَالَ: أَيُّكُمْ يُلْقَى عَلَيْهِ شَبَهِي فَيُقْتَلَ مَكَانِي وَيَكُونَ مَعِي فِي دَرَجَتِي؟ فَقَامَ شَابٌّ مِنْ أَحْدَثِهِمْ سِنًّا، فَقَالَ لَهُ: اجْلِسْ، ثُمَّ أَعَادَ عَلَيْهِمْ فَقَامَ ذَلِكَ الشَّابُّ، فَقَالَ: أَنَا، فَقَالَ: هُوَ أَنْتَ ذَاكَ، فَأُلْقِيَ عَلَيْهِ شَبَهُ عِيسَى، وَرُفِعَ عِيسَى مِنْ رَوْزَنَةٍ فِي البَيْتِ إِلَى السَّمَاءِ...»</span>
+        <em>"Ketika Allah hendak mengangkat 'Isa ke langit, beliau keluar menemui para sahabatnya (Hawariyyun) yang berjumlah 12 orang di dalam sebuah rumah. Rambut kepalanya masih meneteskan air seakan baru keluar dari pemandian. 'Isa berkata: 'Sesungguhnya di antara kalian ada yang akan mengingkariku dua belas kali setelah ia beriman kepadaku.' Kemudian 'Isa berkata: 'Siapakah di antara kalian yang bersedia diserupakan wajahnya dengan wajahku, lalu ia dibunuh menggantikanku, dan kelak ia akan bersamaku pada derajatku di surga?' Maka bangkitlah seorang pemuda yang paling belia di antara mereka seraya berkata: 'Saya!' 'Isa menyuruhnya duduk, lalu mengulangi tawarannya. Namun pemuda itu kembali bangkit dan berkata: 'Saya!' Maka 'Isa berkata: 'Engkaulah orangnya.' Seketika itu diserupakanlah wajah pemuda itu dengan wajah 'Isa, lalu Nabi 'Isa diangkat ke langit dari celah lubang atap rumah (rawzanah), sementara para pengepung merangsek masuk, menangkap pemuda yang diserupakan itu, lalu menyalib dan membunuhnya."</em><br>
+        <strong>Derajat Sanad:</strong> Dinyatakan sahih oleh Al-Hafizh Ibnu Katsir dalam <em>Tafsīr Al-Qur'ān al-'Azhīm</em> (1/450) dan Al-Hafizh Ibnu Hajar Al-'Asqalani sesuai syarat Imam Muslim.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Imam Al-Bukhārī (No. 2222, 3448) & Imam Muslim (No. 155) dari Sahabat Abū Hurairah r.a. — Doktrin Eskatologi Turunnya Nabi 'Isa AS:</strong><br>
+        Rasulullah ﷺ bersumpah dengan nama Allah:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«وَالَّذِي نَفْسِي بِيَدِهِ، لَيُوشِكَنَّ أَنْ يَنْزِلَ فِيكُمُ ابْنُ مَرْيَمَ حَكَمًا عَدْلًا، فَيَكْسِرَ الصَّلِيبَ، وَيَقْتُلَ الخِنْزِيرَ، وَيَضَعَ الجِزْيَةَ، وَيَفِيضَ المَالُ حَتَّى لَا يَقْبَلَهُ أَحَدٌ، حَتَّى تَكُونَ السَّجْدَةُ الوَاحِدَةُ خَيْرًا مِنَ الدُّنْيَا وَمَا فِيهَا»</span>
+        <em>"Walladzī nafsī bi-yadih, layūsyikanna an yanzila fīkumubnu Maryama ḥakaman 'adlan, fayaksirash-shalība, wa yaqtulal-khinzīra, wa yadha'al-jizyata, wa yafīdhal-mālu ḥattā lā yaqbalahū aḥad, ḥattā takūnas-sajdatul-wāḥidatu khayram-minad-dunyā wa mā fīhā."</em><br>
+        <strong>Artinya:</strong> "Demi Zat yang jiwaku berada di tangan-Nya! Sungguh hampir tiba saatnya putra Maryam ('Isa AS) akan turun di tengah-tengah kalian sebagai <strong>hakim yang adil</strong>. Beliau akan menghancurkan salib (simbol distorsi akidah teologi penyaliban), membunuh babi, menghapuskan jizyah (karena seluruh manusia akan masuk Islam atau dihukum), dan harta benda akan melimpah ruah hingga tak ada seorang pun yang mau menerimanya, sampai-sampai satu kali sujud lebih berharga daripada dunia beserta seluruh isinya."<br>
+        <strong>Derajat Hadits:</strong> Muttafaq 'Alaih (Hadits Mutawatir secara Maknawi).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Riwayat Imam Muslim (No. 2937) dari Sahabat An-Nawwās bin Sam'ān r.a. — Deskripsi Fisik dan Rute Pendaratan Al-Masih:</strong><br>
+        Rasulullah ﷺ memaparkan secara visual kedatangan Nabi 'Isa AS di akhir zaman:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 18px; display: block; margin: 8px 0; direction: rtl; text-align: right;">«إِذْ بَعَثَ اللَّهُ المَسِيحَ ابْنَ مَرْيَمَ، فَيَنْزِلُ عِنْدَ المَنَارَةِ البَيْضَاءِ شَرْقِيَّ دِمَشْقَ، بَيْنَ مَهْرُودَتَيْنِ، وَاضِعًا كَفَّيْهِ عَلَى أَجْنِحَةِ مَلَكَيْنِ، إِذَا طَأْطَأَ رَأْسَهُ قَطَرَ، وَإِذَا رَفَعَهُ تَحَدَّرَ مِنْهُ جُمَانٌ كَاللُّؤْلُؤِ... فَيَطْلُبُ الدَّجَّالَ حَتَّى يُدْرِكَهُ بِبَابِ لُدٍّ فَيَقْتُلَهُ...»</span>
+        <em>"Ketika Allah mengutus Al-Masih putra Maryam, beliau akan turun di dekat Menara Putih di sebelah timur Damaskus, mengenakan dua helai kain yang dicelup wars dan za'faran, seraya meletakkan kedua telapak tangannya di atas sayap-sayap dua malaikat. Apabila ia menundukkan kepalanya, meneteslah air; dan apabila ia mengangkatnya, meluncurlah butiran-butiran keringat laksana mutiara... Lalu ia memburu Dajjal hingga menemukannya di Pintu Ludd (kawasan Palestina saat ini) dan membunuhnya di sana..."</em><br>
+        <strong>Derajat Hadits:</strong> Sahih Riwayat Imam Muslim.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar W-F-Y (و-ف-ي — Tawaffā / Mutawaffīka):</strong><br>
+            Ahmad bin Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: و-ف-ي) menetapkan bahwa poros semantik tunggal dari akar ini adalah <em>tamāmusy-syai' wal-wufūr</em> (kesempurnaan sesuatu, kelengkapan kuota, dan pemenuhan hak tanpa ada yang tersisa). Dikatakan <em>awfaytul-kaila</em> (aku menyempurnakan takaran). Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menegaskan: <em>Al-Wafāt</em> asalnya adalah mengambil sesuatu secara utuh (<em>Al-Istīfā'</em>). Orang yang tidur disebut mengalami <em>tawaffī</em> karena kesadarannya dicabut sementara tanpa kematian biologis, sebagaimana firman Allah: <em>"Allāhu yatawaffal-anfusa hīna mawtihā wal-latī lam tamut fī manāmihā"</em> (QS. Az-Zumar: 42). Oleh karena itu, lafaz <em>mutawaffīka</em> dalam QS. 3:55 bermakna: <strong>"Sesungguhnya Aku mengambilmu secara utuh dan menyelamatkanmu secara paripurna dari bumi agar tidak tersentuh pembunuhan oleh musuh-musuhmu."</strong> Penggunaan kata ini menolak secara tegas klaim penyaliban, karena kematian di tiang salib adalah pembunuhan yang cacat dan hina, bukan <em>istīfā'</em> Ilahiah.
+        </li>
+        <li>
+            <strong>2. Akar R-F-' (ر-ف-ع — Rāfi'uka):</strong><br>
+            Ibnu Faris menjelaskan bahwa akar (ر-ف-ع) adalah lawan kata dari <em>al-wadh'</em> (merendahkan/meletakkan). Ia menunjukkan pergerakan ke arah atas, baik secara vertikal spasial (<em>raf' makānī</em> / pengangkatan tubuh fisik ke tempat yang tinggi) maupun secara aksial kehormatan (<em>raf' makānatī</em> / pengangkatan martabat spiritual). Penggabungan <em>rāfi'uka ilayya</em> memadukan kedua dimensi tersebut: mengangkat jasad Nabi 'Isa ke langit malakut dan memuliakan derajatnya di sisi Allah.
+        </li>
+        <li>
+            <strong>3. Akar Th-H-R (ط-ه-ر — Muṭahhiruka):</strong><br>
+            Akar kata ini berporos pada pembersihan dari segala bentuk najis, noda, kekotoran fisik, dan cacat moral (<em>an-nazhāfah wal-barā'ah minad-danas</em>). Bentuk wazan <em>Taf'īl</em> (<em>Muṭahhir</em>) menandakan pensucian yang total dan intensif. Allah menyucikan Nabi 'Isa dari dua lapis kekotoran: konspirasi sentuhan fisik kaum kafir yang hendak membunuhnya, dan tuduhan dusta kaum Farisi yang mencemarkan nasab sucinya sebagai anak zina.
+        </li>
+        <li>
+            <strong>4. Akar T-B-' (ت-ب-ع — Ittaba'ūka):</strong><br>
+            Menunjukkan tindakan berjalan persis di belakang jejak langkah pihak yang diikuti (<em>al-masy-yu 'alā atsarih</em>) dengan penuh loyalitas dan ketundukan. Pengikut sejati Nabi 'Isa (<em>alladzīnat-taba'ūka</em>) secara ontologis bukanlah mereka yang menuhankannya atau menyimpang ke ajaran Trinitas pasca-Konsili Nicea, melainkan siapa saja yang setia memegang prinsip monoteisme murni yang diajarkan 'Isa, yang mata rantai terbesarnya diwarisi secara sempurna oleh umat Nabi Muhammad ﷺ.
+        </li>
+        <li>
+            <strong>5. Akar Kh-L-F (خ-ل-ف — Takhtalifūn):</strong><br>
+            Bermakna terjadinya disonansi, persimpangan arah, dan kontradiksi tajam (<em>dhiddul-ittifāq</em>). Kaum manusia berselisih secara ekstrem mengenai figur Nabi 'Isa: orang Yahudi merendahkannya sebagai pendusta dan anak zina, orang Kristen ortodoks mengangkatnya melampaui batas menjadi anak Allah atau oknum tuhan, sementara orang mukmin mendudukkannya dengan adil sebagai hamba dan rasul-Nya.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>إِذْ</strong></td>
+                <td>Isim zharaf zaman li-mā madhā minaz-zamān mabni 'alas-sukūn.</td>
+                <td>Fī mahalli nashbin <strong>Maf'ūl Bih</strong> bagi fi'il mahdzūf yang ditakdirkan: <em>Udzkur</em> (Ingatlah ketika...).</td>
+            </tr>
+            <tr>
+                <td><strong>قَالَ</strong></td>
+                <td>Fi'il madhi tsulatsi mujarrad mabni 'alal-fath.</td>
+                <td>Fi'il yang menyandarkan perbuatan kepada fa'il; jumlah fi'liyyah <em>(qālallāh)</em> fī mahalli jarrin <strong>Mudhāfun Ilayh</strong> bagi zharaf <em>idz</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Ism 'alam jalālah.</td>
+                <td><strong>Fā'il</strong> marfū' bil-dhammah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>يَـٰعِيسَىٰٓ</strong></td>
+                <td><em>Yā</em> harf nidā'; <em>'Īsā</em> ism 'alam mufrad 'ajamī.</td>
+                <td><strong>Munādā Mufrad 'Alam</strong> mabni 'alad-dhammah al-muqaddarah 'alal-alif fī mahalli nashbin. Jumlah nidā' adalah pembuka kalimat ucapan (<em>jumlatun i'tirādhiyyah fī maqwūlil-qawl</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>إِنِّى</strong></td>
+                <td><em>Inna</em> harf tawkīd wa nashab; <em>Yā'</em> dhamīr mutakallim.</td>
+                <td><em>Yā'</em> mutakallim dhamīr muttashil mabni 'alas-sukūn (atau fathah menurut qira'at Nafi') fī mahalli nashbin <strong>Ism Inna</strong>. Seluruh jumlah <em>inna</em> dan khabarnya adalah <strong>Maqwūl al-Qawl</strong> fī mahalli nashbin.</td>
+            </tr>
+            <tr>
+                <td><strong>مُتَوَفِّيكَ</strong></td>
+                <td>Isim fā'il dari fi'il <em>tawaffā</em> (wazan <em>mutafa''il</em>); <em>Kāf</em> dhamīr khithāb.</td>
+                <td><strong>Khabar Inna Awwal</strong> marfū' bil-dhammah al-muqaddarah 'alal-yā' al-mahdzūfah lit-takhfīf aw lil-idhāfah. <em>Kāf</em> dhamīr muttashil mabni 'alal-fath fī mahalli jarrin Mudhāfun Ilayh (dari idhāfah isim fa'il kepada maf'ulnya).</td>
+            </tr>
+            <tr>
+                <td><strong>وَرَافِعُكَ</strong></td>
+                <td><em>Wāw</em> harf 'athaf; <em>rāfi'</em> isim fā'il wazan <em>fā'il</em>; <em>Kāf</em> dhamīr khithāb.</td>
+                <td><strong>Ma'thūf</strong> kepada <em>mutawaffīka</em> marfū' bil-dhammah azh-zhāhirah; <em>Kāf</em> fī mahalli jarrin Mudhāfun Ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَىَّ</strong></td>
+                <td><em>Ilā</em> harf jarr; <em>Yā'</em> dhamīr mutakallim musyaddad.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> (terikat secara semantik) kepada isim fa'il <em>rāfi'uka</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمُطَهِّرُكَ</strong></td>
+                <td><em>Wāw</em> harf 'athaf; <em>muṭahhir</em> isim fā'il wazan <em>mufa''il</em>.</td>
+                <td><strong>Ma'thūf Tsālits</strong> kepada khabar inna marfū' bil-dhammah azh-zhāhirah; <em>Kāf</em> fī mahalli jarrin Mudhāfun Ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنَ ٱلَّذِينَ</strong></td>
+                <td><em>Min</em> harf jarr; <em>alladzīna</em> ism maushūl jam' mudzakkar.</td>
+                <td>Jār wa majrūr fī mahalli jarrin <strong>Muta'alliq</strong> kepada isim fa'il <em>muṭahhiruka</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>كَفَرُوا۟</strong></td>
+                <td>Fi'il madhi mabni 'alad-dhammi li-ittishālihī bi-wāwil-jamā'ah; <em>Wāw</em> fā'il.</td>
+                <td><strong>Shilat al-Mawshūl</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>وَجَاعِلُ</strong></td>
+                <td><em>Wāw</em> harf 'athaf; <em>jā'il</em> isim fā'il wazan <em>fā'il</em>.</td>
+                <td><strong>Ma'thūf Rābi'</strong> kepada khabar inna marfū' bil-dhammah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong></td>
+                <td>Ism maushūl mabni 'alal-fath.</td>
+                <td>Fī mahalli jarrin <strong>Mudhāfun Ilayh</strong> (berasal dari maf'ul bih awwal bagi isim fa'il <em>jā'il</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱتَّبَعُوكَ</strong></td>
+                <td>Fi'il madhi wazan <em>ifta'ala</em>; <em>Wāw</em> fā'il; <em>Kāf</em> maf'ūl bih.</td>
+                <td><strong>Shilat al-Mawshūl</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>فَوْقَ</strong></td>
+                <td>Isim zharaf makān manṣhūb bil-fathah azh-zhāhirah.</td>
+                <td>Zharaf makān manshūb fī mahalli nashbin <strong>Maf'ūl Bih Tsānī</strong> bagi isim fa'il <em>jā'il</em>, atau muta'alliq bi-mahdzūf hāl.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ كَفَرُوٓا۟</strong></td>
+                <td>Ism maushūl majrūr; fi'il madhi wa fā'il shilat maushūl.</td>
+                <td><em>Alladzīna</em> fī mahalli jarrin <strong>Mudhāfun Ilayh</strong> bagi zharaf <em>fawqa</em>; <em>kafarū</em> shilat maushul.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَىٰ يَوْمِ ٱلْقِيَـٰمَةِ</strong></td>
+                <td><em>Ilā</em> harf jarr ghāyah zamāniyyah; <em>yawmi</em> majrūr; <em>al-qiyāmah</em> mudhāfun ilayh.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> kepada isim fa'il <em>jā'il</em> (menunjukkan batas akhir superioritas duniawi).</td>
+            </tr>
+            <tr>
+                <td><strong>ثُمَّ</strong></td>
+                <td>Harf 'athaf yufīd at-tartīb wat-tarākhī (jeda masa).</td>
+                <td>Menghubungkan masa duniawi dengan masa kebangkitan eskatologis di akhirat.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَىَّ</strong></td>
+                <td>Jār wa majrūr khabar muqaddam.</td>
+                <td>Muta'alliq bi-mahdzūf <strong>Khabar Muqaddam</strong> fī mahalli raf'in (taqdim lil-qashr wal-hashr).</td>
+            </tr>
+            <tr>
+                <td><strong>مَرْجِعُكُمْ</strong></td>
+                <td>Masdar mīmī wazan <em>maf'il</em>; <em>Kum</em> dhamīr jam' mukhatab.</td>
+                <td><strong>Mubtada' Mu'akhkhar</strong> marfū' bil-dhammah azh-zhāhirah; <em>Kum</em> fī mahalli jarrin Mudhāfun Ilayh.</td>
+            </tr>
+            <tr>
+                <td><strong>فَأَحْكُمُ</strong></td>
+                <td><em>Fa'</em> harf 'athaf / tartīb wa ta'qīb; <em>aḥkumu</em> fi'il mudhāri' mutakallim.</td>
+                <td>Fi'il mudhāri' marfū' bil-dhammah; fa'il dhamīr mustatir wujūban taqdīruhū <em>Anā</em> (Aku). Jumlah fi'liyyah ma'thūfah kepada jumlah ismiyyah sebelumnya.</td>
+            </tr>
+            <tr>
+                <td><strong>بَيْنَكُمْ</strong></td>
+                <td>Zharaf makān manṣhūb; <em>Kum</em> mudhāfun ilayh.</td>
+                <td><strong>Muta'alliq</strong> kepada fi'il <em>aḥkumu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فِيمَا</strong></td>
+                <td><em>Fī</em> harf jarr; <em>mā</em> ism maushūl mabni 'alas-sukūn.</td>
+                <td>Jār wa majrūr <strong>Muta'alliq</strong> kepada fi'il <em>aḥkumu</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>كُنتُمْ</strong></td>
+                <td>Fi'il madhi nāqish mabni 'alas-sukūn; <em>Tum</em> ism kāna.</td>
+                <td><em>Tum</em> dhamīr muttashil fī mahalli raf'in Isim Kāna.</td>
+            </tr>
+            <tr>
+                <td><strong>فِيهِ تَخْتَلِفُونَ ۝٥٥</strong></td>
+                <td><em>Fīhi</em> jār majrūr; <em>takhtalifūn</em> fi'il mudhāri' marfū' bi-tsubūtin-nūn; <em>wāw</em> fā'il.</td>
+                <td>Jumlah fi'liyyah <em>(takhtalifūn)</em> fī mahalli nashbin <strong>Khabar Kāna</strong>. Jumlah <em>kuntum fīhi takhtalifūn</em> adalah Shilat al-Mawshūl bagi <em>mā</em>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Kaidah Wawu 'Athaf & Taqdim-Ta'khir (Sintaksis Dekonstruksi Kronologi):</strong><br>
+            Penyebutan <em>mutawaffīka</em> mendahului <em>rāfi'uka</em> telah dibedah tuntas oleh para pakar balaghah Al-Qur'an (seperti Az-Zamakhsyari dan As-Suyuthi). Huruf <em>Wāw</em> dalam tata bahasa Arab berfungsi untuk <strong>Muṭlaqul-Jam'</strong> (penggabungan himpunan mutlak), bukan untuk <em>At-Tartīb</em> (urutan kronologis kejadian). Berbeda dengan huruf <em>Tsumma</em> atau <em>Fa'</em>, huruf <em>Wāw</em> tidak mengharuskan wafat terjadi sebelum pengangkatan. Allah mendahulukan penyebutan <em>mutawaffīka</em> untuk menenangkan batin Nabi 'Isa AS: bahwa jatah usianya tidak akan terputus secara brutal oleh pedang musuh, melainkan ia akan diselamatkan, diangkat ke langit, dan kelak wafat secara alami setelah menuntaskan seluruh tugas kenabiannya di muka bumi.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Qaṣhr wal-Ḥashr via Taqdim al-Majrūr (ثُمَّ إِلَىَّ مَرْجِعُكُمْ):</strong><br>
+            Pendahuluan jār-majrūr <em>Ilayya</em> (Hanya kepada-Kulah) sebelum mubtada' <em>marji'ukum</em> (tempat kembalimu) menghasilkan faedah <em>Al-Ikhtishāsh</em> (pengkhususan mutlak). Maknanya: segala klaim sepihak kaum kafir, para penyalib, atau para deifikator Al-Masih tidak memiliki otoritas yudisial apa pun. Pengadilan pamungkas atas kebenaran hakiki sejarah Al-Masih dimonopoli secara mutlak oleh Allah SWT di Padang Mahsyar kelak.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah 'anit-Tasyzīm wat-Taqdīs fī Lafzh "Ilayya":</strong><br>
+            Kata <em>Ilayya</em> (kepada-Ku) pada <em>rāfi'uka ilayya</em> adalah bentuk <em>Kināyah</em> yang amat halus. Allah Maha Suci dari tempat spasial, koordinat langit, maupun arah mata angin. Pengangkatan "kepada-Ku" bermakna pengangkatan menuju tempat pemuliaan para malaikat-Nya (<em>dar al-karāmah</em>), menjauhkan sang rasul dari bumi yang terkontaminasi oleh kekufuran dan tangan-tangan pembunuh yang najis.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-Muqābalah wal-I'tilāf (Keseimbangan Estetis Sempurna):</strong><br>
+            Keindahan badi' terpancar dari muqabalah antara dua golongan: <em>alladzīnat-taba'ūka</em> (para pengikut setia tauhid) yang dianugerahi derajat <em>Fawqa</em> (di atas), berhadapan dengan <em>alladzīna kafarū</em> (kaum penentang yang berkonspirasi) yang diposisikan di bawah dalam kehinaan moral dan kekalahan argumentasi peradaban.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual dengan Ayat 52–54):</strong><br>
+            Pada ayat 52, Nabi 'Isa merasakan bibit-bibit kekufuran dan pengkhianatan dari para pemuka Farisi dan Saduki, sehingga ia menyerukan: <em>"Man anṣhārī ilallāh?"</em> yang disambut oleh baiat setia kaum Hawariyyun (Ayat 53). Pada ayat 54, kaum kafir melancarkan <strong>makar rahasia</strong>: mereka menyuap penguasa Romawi (Pontius Pilatus) dengan fitnah politis bahwa 'Isa hendak memberontak terhadap Kaisar dan meruntuhkan hukum Taurat, demi mengeksekusinya di tiang salib yang terkutuk. Ayat 55 hadir sebagai <em>jawāb al-makr</em> (pembongkaran makar): ketika manusia merancang pembunuhan berdarah yang memalukan di tiang salib, Allah merancang skenario penyelamatan adikodrati yang paling agung dalam sejarah kenabian.
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis & Dialog dengan Delegasi Najran):</strong><br>
+            Ayat ini diturunkan di Madinah pada tahun ke-9 atau ke-10 Hijriyah di hadapan 60 elit Kristen Najran. Siyāq ayat ini membedah akar doktrin utama gereja: <strong>Dogma Penyaliban dan Penebusan Dosa (Atonement / Vicarious Sacrifice)</strong>. Delegasi Najran berkeyakinan bahwa keselamatan manusia hanya bisa dicapai melalui kematian terkutuk Yesus di tiang salib demi menebus dosa waris Adam. Al-Qur'an mendekonstruksi narasi ini secara radikal: Allah tidak pernah mengorbankan nabi suci-Nya untuk mati tersiksa dan terhina di tiang kayu! Allah justru memuliakan Nabi 'Isa dengan menyelamatkannya, mengangkatnya ke haribaan kemuliaan-Nya, dan menyucikannya dari cengkeraman musuh. Penyaliban adalah ilusi mata (<em>syubbiha lahum</em> dalam QS. 4:157), bukan realitas historis atas pribadi Al-Masih.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Menuju Ayat 56–58):</strong><br>
+            Klausul <em>"tsumma ilayya marji'ukum fa-aḥkumu baynakum"</em> di akhir ayat 55 langsung dieksekusi rinciannya pada ayat 56 dan 57: bagaimana vonis pengadilan Allah akan dijatuhkan secara konkret. Ayat 56 memaparkan siksa pedih bagi kaum kafir di dunia (kehinaan politik, kehancuran diaspora Baitul Maqdis oleh Romawi tahun 70 M) dan di akhirat. Sementara ayat 57 menjanjikan balasan pahala sempurna bagi orang-orang yang beriman dan beramal saleh. Rangkaian ini kemudian dikunci oleh ayat 58 sebagai wahyu yang penuh hikmah (<em>adz-dzikrul-ḥakīm</em>).
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam At-Tabari menghimpun seluruh transmisi sanad riwayat salaf mengenai makna <em>mutawaffīka</em> dan merumuskan tiga takwil utama:
+        <br>1) <em>Wafāt an-nawm</em> (kematian dalam arti tidur): Allah menidurkan Nabi 'Isa sebelum mengangkatnya ke langit agar beliau tidak merasakan kepanikan atau ketakutan saat transisi ruang kosmik, merujuk pada kebiasaan bahasa Al-Qur'an menamai tidur sebagai wafat (sebagaimana QS. 6:60).
+        <br>2) <em>Al-Qabdh wal-Istīfā'</em> (pengambilan sempurna): Maknanya Allah mengambil Nabi 'Isa secara utuh jasad dan ruh dari bumi tanpa melalui proses kematian biologis.
+        <br>3) <em>Taqdīm wat-Ta'khīr</em>: Maknanya secara kronologis adalah: <em>"Innī rāfi'uka ilayya wa muṭahhiruka minal-ladzīna kafarū, wa mutawaffīka ba'da dzālika"</em> (Sesungguhnya Aku mengangkatmu kepada-Ku dan menyucikanmu dari orang kafir, dan kelak mematikanmu setelah engkau turun ke bumi di akhir zaman).
+        <br>At-Tabari menegaskan bahwa pendapat yang paling sahih menurut riwayat mutawatir dari Rasulullah ﷺ adalah: <strong>Nabi 'Isa diangkat dalam keadaan hidup jasad dan ruh ke langit, dan beliau belum mengalami kematian biologis hingga saat ini.</strong>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir mengintegrasikan QS. 3:55 dengan QS. An-Nisa' [4]: 157–158: <em>"Wa mā qatalūhu wa mā shalabhūhu wa lākin syubbiha lahum... bal rafa'ahul-lāhu ilayh"</em>. Beliau menegaskan:<br>
+        <em>"Mayoritas ulama tafsir menetapkan bahwa firman-Nya 'mutawaffīka' bermakna menidurkannya, atau mengambilnya dari bumi hidup-hidup. Pendapat yang menyatakan bahwa beliau telah wafat secara biologis sebelum diangkat adalah pendapat yang sangat lemah dan tertolak oleh nash-nash hadits sahih mutawatir yang menegaskan bahwa Nabi 'Isa akan turun di akhir zaman membunuh Dajjal, mematahkan salib, memimpin syariat Nabi Muhammad ﷺ, hidup selama 40 tahun di bumi, lalu wafat secara alami dan dishalatkan serta dimakamkan oleh kaum muslimin di samping makam Rasulullah ﷺ di Madinah."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah dimensi akidah dan fikih kalam: penisbatan kematian salib kepada Al-Masih adalah bentuk kekufuran dan penghinaan terhadap martabat nubuwah. Al-Qurthubi memaparkan makna kalimat <em>"wa jā'ilul-ladzīnat-taba'ūka fawqal-ladzīna kafarū"</em>:
+        <br><em>"Siapakah pengikut Nabi 'Isa yang hakiki? Mereka adalah kaum muslimin yang membenarkan kenabiannya tanpa menuhankannya dan tanpa menuduhnya penipu. Adapun bangsa Romawi dan kaum Nasrani pasca-perubahan doktrin Paulus, mereka unggul atas orang Yahudi di dunia dalam hal kekuasaan politik dan imperium, namun kaum mukmin umat Muhammad ﷺ adalah pihak yang berada di puncak superioritas hujah, kebenaran wahyu, dan kemenangan eskatologis di akhirat kelak."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddin Ar-Razi (544–606 H) & Az-Zamakhsyari (467–538 H):</strong><br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Mengulas perdebatan filosofis mengenai kata <em>raf'</em>. Ar-Razi menegaskan bahwa mustahil Allah memiliki tempat di langit. Maka <em>rāfi'uka ilayya</em> adalah pengangkatan menuju alam tempat ketetapan para malaikat yang steril dari intervensi tirani manusia (<em>maqām al-karāmah</em>). Ar-Razi juga memaparkan bahwa penggunaan isim fa'il (<em>mutawaffīka, rāfi'uka</em>) memberikan kepastian realisasi yang tak terbendung (<em>wājibul-wuqū'</em>).<br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menjelaskan secara balaghah bahwa kata <em>tawaffā</em> bermakna <em>istīfā' al-ajal</em> (menyempurnakan jatah hidupnya secara selamat tanpa terpotong oleh pembunuhan di tiang salib). Allah menyelamatkan 'Isa dari skenario musuh yang ingin memotong usianya di umur 33 tahun secara nista.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur memberikan analisis sosiologis-historis yang sangat tajam mengenai janji <em>"fawqal-ladzīna kafarū ilā yawmil-qiyāmah"</em>:
+        <br><em>"Sejarah peradaban membuktikan kebenaran nubuat ayat ini secara mutlak. Sejak runtuhnya Yerusalem oleh Titus pada tahun 70 M, kaum Yahudi yang mengingkari 'Isa senantiasa berada di bawah dominasi dan tekanan bangsa-bangsa yang menisbatkan diri kepada pengikut Al-Masih (Romawi/Kristen) dan kemudian di bawah naungan peradaban Islam. Orang yang beriman kepada Al-Masih—baik kaum Nasrani awal yang memegang ajaran aslinya maupun umat Islam yang menyempurnakan keimanan kepadanya—selalu memiliki superioritas moral, demografis, dan peradaban di atas kaum yang menolak kenabian beliau hingga hari kiamat."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan gaya sastrawi yang menggugah:<br>
+        <em>"Kaum perusak menyangka mereka telah berhasil membungkam suara kebenaran Al-Masih di kayu salib. Mereka bersorak gembira menyangka telah membunuh utusan Allah. Namun di sinilah letak keagungan makar Allah: yang mereka salib hanyalah bayangan, sosok yang diserupakan! Nabi 'Isa telah diselamatkan dan diangkat ke hadirat Ilahi. Ayat 55 ini mengobati duka para pencari kebenaran: kezaliman mungkin tampak menang dalam babak-babak awal sejarah, tetapi skenario terakhir senantiasa berada di tangan Allah Yang Maha Mengatur."</em><br>
+        • <strong>Prof. Dr. M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menyoroti perdebatan modern mengenai fatwa Syaikh Mahmud Syaltut (mantan Grand Syaikh Al-Azhar) yang menafsirkan <em>tawaffi</em> sebagai kematian wajar sebelum diangkat derajatnya. Quraish Shihab mendudukkan bahwa mayoritas mutlak ulama klasik dan kontemporer tetap berpegang pada riwayat sahih pengangkatan fisik Nabi 'Isa, namun yang menjadi benang merah terpenting bagi akidah setiap muslim adalah: <strong>Nabi 'Isa selamat dari pembunuhan dan penyaliban musuh-musuhnya, disucikan kehormatannya oleh Allah, dan para pengikut tauhidnya dimenangkan di atas para penentangnya.</strong>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI menegaskan bahwa QS. Ali 'Imran: 55 adalah rujukan krusial dalam kajian perbandingan agama dan dialog teologi Islam-Kristen. Ayat ini mengklarifikasi perbedaan ontologis: Islam memuliakan Nabi 'Isa melebihi penghormatan Yahudi (yang menuduhnya penipu), namun menolak penuhanan Kristen (yang meyakini kematian salib untuk penebusan dosa). Keselamatan Al-Masih adalah bukti bahwa kebenaran nubuwah dilindungi langsung oleh kedaulatan Ilahi, dan sengketa teologis ini kelak akan dihakimi secara transparan dan adil di pengadilan akhirat.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Ijma' / Konsensus Ulama)</th>
+                <th>Dinamika Penekanan (Ikhtilaf Tanawwu' / Ijtihad)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Penolakan Penyaliban (Anti-Crucifixion)</strong></td>
+                <td>Sepakat mutlak (ijma' qath'i) bahwa Nabi 'Isa AS tidak dibunuh dan tidak disalib oleh musuh-musuhnya; beliau diselamatkan oleh Allah SWT.</td>
+                <td>• Salaf & mayoritas mufasir: Diserupakan wajah orang lain (Hawari muda atau Yudas/pengkhianat) yang disalib.<br>• Takwil minoritas modernis: Penyelamatan terjadi melalui peristiwa pingsan / koma yang disangka mati (namun tetap menolak kematian salib).</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Hakiki Kata 'Mutawaffīka'</strong></td>
+                <td>Sepakat bahwa lafaz ini menunjukkan penyempurnaan perlindungan dan pemenuhan masa hidup Nabi 'Isa di bumi tanpa campur tangan pembunuhan musuh.</td>
+                <td>• Ibnu Abbas, At-Tabari, Ibnu Katsir: Dimaknai tidur (<em>an-nawm</em>) atau pengangkatan utuh (<em>al-qabdh</em>) dengan penundaan kematian biologis hingga turun di akhir zaman.<br>• Syaikh Mahmud Syaltut: Dimaknai wafat biologis secara wajar setelah diangkat derajatnya (<em>raf'ul-makānah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat 'Rāfi'uka Ilayya'</strong></td>
+                <td>Sepakat bahwa kata <em>ilayya</em> adalah bentuk pemuliaan ilahiah (<em>tasyzīf</em>) dan penjemputan ke alam kesucian, steril dari arah spasial bagi Zat Allah.</td>
+                <td>• Jumhur Ahlus Sunnah: Pengangkatan jasad dan ruh secara fisik ke langit (<em>raf'un jismāniyyun wa rūḥiyyun</em>).<br>• Sebagian rasionalis (Mu'tazilah/Modernis): Pengangkatan derajat kedudukan dan ruhaniah (<em>raf'ul-martabah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Identitas 'Alladzīnat-Taba'ūka'</strong></td>
+                <td>Sepakat bahwa pengikut sejati adalah mereka yang berpegang teguh pada tauhid nubuwah yang diajarkan oleh Nabi 'Isa AS.</td>
+                <td>• Ibnu 'Asyur & Al-Qurthubi: Umat Islam adalah pewaris sah nubuwah 'Isa, sedangkan penganut Kristen unggul secara dominasi politik duniawi atas orang Yahudi.<br>• Buya Hamka: Keunggulan moral dan spiritual penganut tauhid yang melintasi sekat zaman.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan neuropsikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Jahiliyah / Sekuler Modern vs Pola Pikir Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Sekuler Modern</th>
+                <th>Pola Pikir Qur'ani (Rabbani)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Persepsi Kemenangan & Kekalahan</strong></td>
+                <td><strong>Optik Materialistik Sempit:</strong> Mengukur kemenangan semata-mata dari siapa yang memegang kendali kekuasaan fisik, senjata, modal finansial, dan pengadilan duniawi.</td>
+                <td><strong>Optik Transendental (Divine Intervention):</strong> Kemenangan sejati adalah terjaganya integritas risalah dan keselamatan jiwa di haribaan Allah; makar konspirator dihancurkan oleh intervensi Ilahi yang tak terduga.</td>
+            </tr>
+            <tr>
+                <td><strong>Sikap terhadap Konspirasi & Fitnah</strong></td>
+                <td><strong>Kepanikan & Keputusasaan Eksistensial:</strong> Merasa hidupnya hancur ketika diserang oleh konspirasi politik, <em>cancel culture</em>, atau fitnah publik yang masif.</td>
+                <td><strong>Prinsip 'Muthahhiruka' & Tawakal Mutlak:</strong> Yakin bahwa Allah adalah Dzat yang Maha Menyucikan hamba-Nya; fitnah manusia tidak mampu meredupkan cahaya kemuliaan yang dijaga oleh langit.</td>
+            </tr>
+            <tr>
+                <td><strong>Penyelesaian Sengketa Ideologis</strong></td>
+                <td><strong>Egoisme Polemik Tanpa Akhir:</strong> Terjebak dalam debat kusir beracun di media sosial, memaksakan pembenaran diri dengan kebencian dan permusuhan kronis.</td>
+                <td><strong>Eskatologi 'Tsumma Ilayya Marji'ukum':</strong> Menyerahkan penghakiman final kepada Allah; fokus berkarya dan berdakwah dengan hikmah seraya menjaga kebersihan hati.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Sovereign Counter-Strategy (Model Kedaulatan Kontra-Strategi Ilahi):</strong><br>
+            <em>Premis:</em> Sekuat apa pun konspirasi, makar rahasia, atau rekayasa jahat yang dirancang oleh institusi tirani duniawi (sebagaimana permufakatan jahat imam-imam Farisi dan penguasa Romawi terhadap 'Isa AS), skenario tersebut senantiasa beroperasi di dalam domain izin Allah (<em>bi-idznillāh</em>). Allah memiliki kontra-strategi absolut yang mampu membalikkan rencana pembunuhan menjadi momen pengangkatan kemuliaan (<em>raf'</em>).<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Ketika Anda menghadapi penjegalan karier, fitnah profesional, atau boikot sosial yang zalim, jangan membalas dengan kecurangan yang sama. Berpeganglah pada integritas kebenaran; fokuslah pada strategi yang halal dan serahkan hasil akhir kepada perlindungan Allah yang memiliki kalkulasi tak terbatas.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Spiritual Elevation & Quarantine (Model Pengangkatan & Karantina Spiritual):</strong><br>
+            <em>Premis:</em> Formula <em>"Rāfi'uka ilayya wa muṭahhiruka"</em> mengajarkan bahwa pemulihan martabat manusia membutuhkan dua langkah simultan: <strong>Elevasi</strong> (mengangkat standar mental dan moral melampaui level para pembenci) dan <strong>Purifikasi/Karantina</strong> (memutus kontak emosional dari toksisitas lingkungan yang korup).<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Jangan biarkan energi batin Anda terkuras untuk melayani provokasi orang-orang beracun (<em>toxic people</em>). Angkat cara berpikir Anda ke level visi jangka panjang, bersihkan kalbu dari dendam, dan bangun lingkaran pergaulan yang sehat bersama orang-orang berintegritas tinggi.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Regulasi Trauma Fitnah</h3>
+    <p>
+        Secara neurobiologis, ancaman pembunuhan karakter (<em>character assassination</em>), persekusi kelompok, dan pengkhianatan orang terdekat memicu aktivasi amigdala secara hiperaktif, menghasilkan banjir hormon kortisol dan respons <em>fight-or-flight-freeze</em> yang melumpuhkan kemampuan kognitif prefrontal korteks. Manusia yang mengalami persekusi massal rentan jatuh ke dalam depresi klinis dan trauma berkepanjangan karena merasa kehilangan rasa aman sosial (<em>social belonging</em>).
+    </p>
+    <p>
+        QS. 3:55 bekerja sebagai <strong>terapi kognitif neuro-spiritual (tazkiyatun nafs)</strong>: Kalimat <em>"Innī mutawaffīka wa rāfi'uka ilayya wa muṭahhiruka"</em> memberikan jangkar rasa aman Ilahiah yang absolut (<em>absolute divine security</em>). Ketika jiwa menyadari bahwa Allah secara personal berfirman untuk menjamin keselamatannya, menyucikannya dari noda fitnah, dan menjanjikan superioritas bagi jalannya, sistem saraf parasimpatis teraktivasi. Gelombang kecemasan amigdala teredam, tergantikan oleh ketenangan mendalam (<em>sakīnah</em>). Kesadaran bahwa ada <em>yawmul-qiyāmah</em> dan pengadilan <em>"fa-aḥkumu baynakum"</em> melenyapkan dorongan impulsif untuk membalas dendam, mentransformasikan rasa sakit menjadi ketabahan profetis yang anggun.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Kontemporer: Konspirasi Digital, Cancel Culture & Persekusi Moral Siber</h3>
+    <p>
+        Masyarakat abad ke-21 menyaksikan kebangkitan kembali "makar masa lalu" dalam wujud algoritma digital: fenomena <em>digital lynching</em> (pengadilan massa online), <em>cancel culture</em>, dan kampanye disinformasi terkoordinasi (<em>black campaigns</em>). Sebagaimana para pemuka agama munafik di Yerusalem bersekongkol dengan birokrasi Romawi untuk membunuh Nabi 'Isa dengan tuduhan palsu, hari ini klik-klik politik dan korporasi media sering kali bersekongkol melenyapkan reputasi orang-orang vokal yang membela kebenaran melalui rekayasa opini publik, potongan video manipulatif (<em>deepfake</em>), dan pembunuhan karakter virtual.
+    </p>
+    <p>
+        Dalam lanskap peradaban yang dipenuhi fitnah siber ini, QS. 3:55 menjadi benteng pertahanan moral bagi para aktivis kebenaran: kebenaran sejati tidak ditentukan oleh <em>trending topic</em> atau vonis massal warganet. Sehebat apa pun rekayasa fitnah digital dibangun, Allah menjamin bahwa Dia akan menyucikan para hamba-Nya yang berintegritas (<em>muṭahhiruka</em>) dan mengangkat kebenaran mereka melampaui kepalsuan para konspirator.
+    </p>
+
+    <h3>2. Dekonstruksi Eskapisme Modern vs Penyelamatan Profetik</h3>
+    <p>
+        Budaya populer modern sering mempromosikan fantasi eskapisme: melarikan diri dari realitas krisis bumi melalui dunia virtual (<em>metaverse</em>), obat-obatan penenang, atau obsesi kolonisasi ruang angkasa para miliarder sekuler yang putus asa menghadapi krisis iklim. Mereka mengira bahwa dengan kecerdasan buatan dan teknologi roket, mereka dapat mengangkat diri mereka (<em>self-elevation</em>) dari kehancuran moral bumi.
+    </p>
+    <p>
+        Al-Qur'an mengingatkan bahwa pengangkatan hakiki (<em>ar-raf'</em>) bukanlah pelarian fisik dari tanggung jawab duniawi, melainkan penyelamatan kehormatan dan keterpilihan ilahiah atas dasar ketakwaan. Nabi 'Isa diangkat bukan untuk lari selamanya, melainkan dipersiapkan oleh Allah untuk turun kembali di titik kritis sejarah peradaban (<em>nuzūl 'Īsā</em>) guna memulihkan keadilan, menegakkan hukum yang lurus, dan menghancurkan seluruh simbol kezaliman dan kepalsuan.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Protokol Zikir Detoksifikasi Batin dari Fitnah & Makar:</strong><br>
+                Setiap kali Anda mendengar gosip jahat, penjegalan rahasia di tempat kerja, atau ancaman permusuhan manusia, duduklah tegak selama 2 menit. Bacalah dengan tarikan nafas dalam penuh keyakinan: <em>"Ḥasbunallāhu wa ni'mal-wakīl, ni'mal-mawlā wa ni'man-nashīr; Allāhu muṭahhirī wa rāfi'ī bi-faḍhlih"</em> (Cukuplah Allah menjadi Penolong kami dan Dia adalah sebaik-baik Pelindung; Allah yang akan menyucikan kehormatanku dan mengangkat derajatku dengan karunia-Nya). Ulangi 7 kali untuk merestorasi ketenangan prefrontal korteks Anda.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Aturan 24 Jam Menghadapi Pembunuhan Karakter:</strong><br>
+                Ketika Anda diserang secara personal di media sosial atau forum profesional, terapkan <strong>Aturan Moratorium 24 Jam</strong>: Jangan langsung membalas dalam kondisi marah, defensif, atau membuat klarifikasi emosional yang memperkeruh suasana. Gunakan 24 jam pertama untuk berwudhu, shalat hajat 2 rakaat, berkonsultasi dengan penasihat hukum/etika yang tepercaya, dan serahkan urusan batin kepada Allah. Hadapi fitnah hanya dengan data faktual yang tenang, objektif, dan elegan tanpa mencaci balik.
+            </li>
+            <li>
+                <strong>Komitmen Sosial Terukur — Menjadi Bagian 'Alladzīnat-Taba'ūka' (Pembela Kebenaran yang Berani):</strong><br>
+                Di tengah lingkungan kerja atau organisasi yang korup, jangan pernah menjadi penonton pasif ketika melihat rekan kerja yang jujur dizalimi atau difitnah. Berdirilah bersamanya, berikan kesaksian yang jujur dan adil di hadapan pimpinan atau publik, serta tolak menandatangani dokumen manipulatif meskipun diancam sanksi atau pemotongan insentif. Buktikan bahwa Anda adalah pengikut tauhid yang menjunjung keadilan di atas kepentingan pragmatis.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Ketergantungan Perlindungan:</strong> Ketika orang-orang berkuasa merancang rencana untuk menjatuhkan karier atau reputasiku, apakah hatiku seketika ciut dan panik seolah masa depanku berada di tangan mereka, ataukah jiwaku kokoh meyakini bahwa perlindungan Allah (<em>makarullāh</em>) jauh lebih berkuasa daripada makar seluruh penghuni bumi?
+            </li>
+            <li>
+                <strong>Uji Kemurnian Integritas (Tathhīr):</strong> Sejauh mana aku menjaga kehormatan diriku dari lingkaran pergaulan, proyek-proyek bisnis, atau transaksi finansial yang subhat dan kotor: apakah aku berani 'diangkat' (<em>raf'</em>) keluar dari lingkungan toksik tersebut demi menjaga kesucian iman di hadapan Allah?
+            </li>
+            <li>
+                <strong>Uji Sikap Terhadap Perselisihan (Eskatologi Takhtalifūn):</strong> Ketika menghadapi perbedaan pandangan dan perselisihan tajam dengan sesama manusia, apakah aku selalu bernafsu untuk memenangkan ego dan menghancurkan lawan, ataukah aku mampu bersikap adil seraya menyerahkan hakikat kebenaran pamungkas kepada pengadilan Allah di hari kiamat kelak?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Rāfi'as-samāwāti bi-ghayri 'amadin tarawnahā, yā Man rafa'a 'abdanā wa nabiyyanā 'Īsābna Maryama ilayh, wa thahharahū min makril-kāfirīn. Ya Allah, Tuhan Yang Maha Mengangkat langit tanpa tiang, Tuhan Yang Maha Menyelamatkan dan Mengangkat hamba serta rasul-Mu 'Isa putra Maryam ke haribaan kemuliaan-Mu, dan Yang menyucikannya dari konspirasi orang-orang zalim! Kami memohon kepada-Mu dengan perantaraan asma dan sifat-Mu yang agung: Selamatkanlah diri kami, keluarga kami, dan kehormatan kami dari segala makar jahat musuh-musuh kebenaran, dari fitnah zaman yang gelap gulita, dan dari persekusi orang-orang yang mengingkari syariat-Mu. Bersihkanlah hati kami dari kekotoran riya, dengki, dan kepengecutan moral. Angkatlah derajat jiwa kami ke maqam ketakwaan yang luhur, jadikanlah kami dan anak cucu kami barisan pengikut para nabi yang setia menegakkan tauhid di muka bumi hingga hari kiamat, dan anugerahilah kami ketenangan batin saat kembali menghadap-Mu di hari pengadilan yang hakiki. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-054 - QS. Ali 'Imran Ayat 54.html">&larr; Kembali ke Ayat 54 (QS. 3:54)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 55</strong> (Blok 2: Genealogi Kesucian & Teologi Kenabian)</span>
+        <a href="003-056 - QS. Ali 'Imran Ayat 56.html">Lanjut ke Ayat 56 (QS. 3:56) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-024 - QS. Ali 'Imran Ayat 24 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-023 - QS. Ali 'Imran Ayat 23.html">&larr; Ayat Sebelumnya (QS. 3:23)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-025 - QS. Ali 'Imran Ayat 25.html">Ayat Berikutnya (QS. 3:25) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu: Dialektika Muhkamat vs Mutasyabihat</span>
+        <span class="badge">Klaster 3 (Ayat 21–25): Patologi Pembangkangan Ahli Kitab: Pembunuhan Nabi, Penolakan Arbitrase Kitabullah & Ilusi Keselamatan Eksklusif</span>
+        <span class="badge">15 Kata | 60 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 24</h1>
+    <div class="transliteration">
+        "Dzālika bi-annahum qālū lan tamassanan-nāru illā ayyāmam ma'dūdāt(in), wa gharrahum fī dīnihim mā kānū yaftarūn(a)."
+    </div>
+    <div class="thematic-title">
+        Dekonstruksi Mitos Imunitas Teologis: Pembongkaran Dogma Keselamatan Eksklusif ("Ayyāmam Ma'dūdāt"), Patologi Lisensi Moral Berbasis Nasab, dan Tipu Daya Fabrikasi Agama
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 3: Anatomi Pembangkangan Ahli Kitab, Desersi Moralitas & Penelanjangan Ilusi Keistimewaan Ras Pilihan)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ذَٰلِكَ بِأَنَّهُمْ قَالُوا۟ لَن تَمَسَّنَا ٱلنَّارُ إِلَّآ أَيَّامًۭا مَّعْدُودَٰتٍۢ ۖ وَغَرَّهُمْ فِى دِينِهِم مَّا كَانُوا۟ يَفْتَرُونَ ۝٢٤
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Sikap pembangkangan mereka) yang demikian itu adalah karena sesungguhnya mereka berkata: 'Api neraka sama sekali tidak akan menyentuh kami kecuali beberapa hari yang dapat dihitung.' Dan mereka telah diperdaya dalam agama mereka oleh apa yang selalu mereka ada-adakan (kebohongan doktrin yang mereka ciptakan sendiri)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan bedah psikologis dan diagnosis akidah yang menembus jantung motif terdalam dari pembangkangan para elit Ahli Kitab pada ayat sebelumnya (Ayat 23). Struktur bahasanya memaparkan kausalitas yang presisi antara keyakinan teologis yang rusak (<em>distorted theology</em>) dengan kebobrokan etika sosial-hukum:
+    </p>
+    <ul>
+        <li><strong>Dzālika (ذَٰلِكَ):</strong> Isim isyārah lil-ba'īd (kata tunjuk jarak jauh). Menunjuk kepada kejahatan moral yang teramat menjijikkan pada ayat 23, yaitu sikap membelakangi Kitabullah (<em>at-tawallī</em>) dan watak apatis permanen terhadap keadilan hukum wahyu (<em>al-i'rāḍh</em>). Bentuk penunjukan jauh mengindikasikan kehinaan derajat moral perbuatan tersebut (<em>li-bu'di manzilatil-fisyq war-radzālah</em>).</li>
+        <li><strong>Bi-annahum (بِأَنَّهُمْ):</strong> Huruf <em>Bā'</em> di sini adalah <em>Bā'us-sababiyyah</em> (menyatakan hubungan sebab-akibat langsung). Allah menegaskan bahwa keberanian nekat mereka menentang hukum Allah di dunia bukan lahir dari ruang hampa, melainkan dipicu oleh doktrin eskatologis palsu yang mereka instal ke dalam benak mereka: rasa kebal dari siksa Ilahi di akhirat.</li>
+        <li><strong>Qālū Lan Tamassanan-Nār (قَالُوا لَن تَمَسَّنَا النَّارُ):</strong> Diksi <em>tamassa</em> (sekadar menyentuh permukaan luar) dipadukan dengan partikel <em>lan</em> (penafian tegas masa depan) dan <em>Nūn at-Tawkīd ats-Tsaqīlah</em> (penegasan ganda mutlak). Mereka tidak sekadar mengklaim tidak akan diazab secara berat, melainkan mengeklaim bahwa jilatan api neraka bahkan tidak akan mampu menyengat kulit luar mereka secara sekilas sekalipun! Ini adalah puncak delusi superioritas spiritual.</li>
+        <li><strong>Illā Ayyāmam Ma'dūdāt (إِلَّا أَيَّامًا مَّعْدُودَاتٍ):</strong> Pengecualian dengan bentuk jamak mu'annats sālim (<em>ma'dūdāt</em>) mengindikasikan <em>jam'ul-qillah</em> (hitungan bilangan yang amat sedikit, di bawah sepuluh atau paling banyak empat puluh hari). Mereka meyakini bahwa azab neraka bagi ras mereka hanyalah formalitas singkat sekadar membersihkan dosa-dosa kecil, sebelum akhirnya mereka kembali dipindahkan ke surga abadi sebagai "anak-anak emas Tuhan".</li>
+        <li><strong>Wa Gharrahum fī Dīnihim mā Kānū Yaftarūn (وَغَرَّهُمْ فِي دِينِهِم مَّا كَانُوا يَفْتَرُونَ):</strong> Kata <em>gharrahum</em> (memperdaya/meninabobokan) menunjukkan bahwa doktrin tersebut adalah fatamorgana kejiwaan. Frasa <em>kānū yaftarūn</em> menggunakan kata kerja imperfek (mudhari') setelah <em>kānū</em>, menandakan fabrikasi kebohongan yang dilakukan secara repetitif, terstruktur, dan dilembagakan oleh para elit kependetaan mereka hingga akhirnya mereka sendiri mempercayai kebohongan buatannya tersebut sebagai ajaran agama yang suci.</li>
+    </ul>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ذَٰلِكَ</strong><br>(<em>Dzālika</em>)</td>
+                <td>
+                    <strong>Huruf Dzāl:</strong> Makhraj dari ujung lidah bertemu dengan ujung dua gigi seri atas (huruf litsawiyyah), memiliki sifat jahar dan rakhāwah.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjariyyah setelah Dzāl dibaca panjang 2 harakat.<br>
+                    <strong>Huruf Kāf:</strong> Makhraj pangkal lidah di bawah Qāf, memiliki sifat syiddah yang disusul hams.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca dengan fat-ḥah pada Dzāl, menetapkan alif mad 2 harakat, kasrah pada Lām, dan fat-ḥah pada Kāf khithāb.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>بِأَنَّهُمْ</strong><br>(<em>Bi-annahum</em>)</td>
+                <td>
+                    <strong>Tahqīq Hamzah:</strong> Huruf hamzah qatha' berharakat fat-ḥah keluar tegas dari aqshal halq.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid ditahan dengungnya selama 2 harakat penuh (<em>akmal mā yakūn</em>) dari rongga hidung (khaisyūm).<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu Qāf dibaca jelas tanpa ghunnah.
+                </td>
+                <td>
+                    • <strong>Qālūn, Ibnu Katsīr, & Abū Ja'far:</strong> Membaca dengan <strong>Shilah Mīm al-Jam'</strong> saat washal (<strong>بِأَنَّهُمُو قَالُوا</strong> - <em>bi-annahumū qālū</em>) dengan mad shilah sughrā 2 harakat.<br>
+                    • <strong>Imam-imam Lainnya (Termasuk Ḥafsh):</strong> Membaca dengan sukun pada Mīm (sukūn mufarragh) tanpa shilah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>قَالُوا۟</strong><br>(<em>Qālū</em>)</td>
+                <td>
+                    <strong>Huruf Qāf:</strong> Makhraj di pangkal lidah menempel ke langit-langit lunak (aqshal lisan ma'a ma yalih minal-hanakil-a'la), huruf isti'lā' martabat pertama karena berharakat fat-ḥah disusul alif.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif mad setelah Qāf dan Wāwu mad setelah Lām masing-masing dipanjangkan 2 harakat.<br>
+                    <strong>Alif Fāriqah:</strong> Sukun mustadīr pada alif jamā'ah, tidak dibaca baik washal maupun waqaf.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca isti'lā' tafkhīm mutlak pada Qāf dan mad thabi'i pada Wāwu jama'ah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>لَن تَمَسَّنَا</strong><br>(<em>Lan tamassanā</em>)</td>
+                <td>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Tā' disamarkan suaranya disertai dengung tipis (tarqīq) selama 2 harakat.<br>
+                    <strong>Huruf Mīm:</strong> Bersifat tawassuth.<br>
+                    <strong>Huruf Sīn Bertasydid:</strong> Memiliki sifat hams, rakhāwah, dan <strong>Shafīr</strong> (suara desis tajam serupa burung bersiul) dengan penekanan tasydid.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid (nūn taukīd tsaqīlah) ditahan dengung 2 harakat penuh.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif di akhir kata dipanjangkan 2 harakat saat washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca ikhfā' pada nūn sukun bertemu tā', mentasydidkan sīn, dan mentasydidkan nūn taukīd (<em>tamassananā</em>) yang dimabnikan fat-ḥah karena bersambung langsung dengan nūn taukīd tsaqīlah.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>ٱلنَّارُ</strong><br>(<em>An-Nāru</em>)</td>
+                <td>
+                    <strong>Idghām Syamsiyyah:</strong> Lam ta'rif melebur sempurna ke dalam huruf Nūn.<br>
+                    <strong>Ghunnah Musyaddadah:</strong> Nūn bertasydid berdegung 2 harakat.<br>
+                    <strong>Mad Ṭhabī'ī (saat washal):</strong> Alif mad dipanjangkan 2 harakat.<br>
+                    <strong>Tafkhīm Huruf Rā':</strong> Rā' berharakat dhommah dibaca tebal dengan mengangkat pangkal lidah.
+                </td>
+                <td>
+                    • <strong>Konsensus Sepuluh Imam:</strong> Membaca tafkhīm pada huruf Rā' yang marfu' dan tidak melakukan imālah pada kata <em>an-nāru</em> saat dhommah (berbeda halnya dengan kata <em>an-nāri</em> majrūrah yang di-imālah-kan oleh Abū 'Amr dan Ad-Dūrī).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan tarqīq rā' jika berharakat kasrah, namun pada posisi dhommah ini tetap dibaca tafkhīm murni.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>إِلَّآ أَيَّامًۭا</strong><br>(<em>Illā ayyāman</em>)</td>
+                <td>
+                    <strong>Idghām Mutamātsilayn:</strong> Lam kasrah melebur ke Lam tasydid.<br>
+                    <strong>Mad Jā'iz Munfashil:</strong> Huruf mad (alif pada <em>illā</em>) bertemu hamzah qatha' di kata berikutnya (<em>ayyāman</em>).<br>
+                    <strong>Tasydīd Yā':</strong> Huruf Yā' bertasydid ditekan secara nabr tanpa ghunnah.<br>
+                    <strong>Idghām Bighunnah Kāmilah:</strong> Tanwīn fat-ḥah pada Mīm bertemu Mīm tasydid pada kata berikutnya.
+                </td>
+                <td>
+                    • <strong>Warsy & Ḥamzah:</strong> Membaca <strong>Ṭhūl / Isybā' (6 harakat)</strong>.<br>
+                    • <strong>'Āṣhim (Ḥafsh & Syu'bah), Ibnu 'Āmir, Al-Kisā'ī, Khalaf al-'Āsyir:</strong> Membaca <strong>Tawassuṭh (4 harakat)</strong>.<br>
+                    • <strong>Ibnu Katsīr, Abū Ja'far, Ya'qūb, As-Sūsī 'an Abī 'Amr:</strong> Membaca <strong>Qaṣhr (2 harakat)</strong>.<br>
+                    • <strong>Qālūn & Ad-Dūrī 'an Abī 'Amr:</strong> Memiliki dua jalur: Qaṣhr (2 harakat) dan Tawassuṭh (4 harakat).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>مَّعْدُودَٰتٍۢ ۖ وَغَرَّهُمْ</strong><br>(<em>Ma'dūdātiw-wa-gharrahum</em>)</td>
+                <td>
+                    <strong>Huruf 'Ain:</strong> Sukun di tengah kata keluar dari wasathul halq dengan sifat tawassuth.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad setelah Dāl pertama dan alif khanjariyyah setelah Dāl kedua.<br>
+                    <strong>Idghām Bighunnah / Bilā Ghunnah:</strong> Tanwīn kasrah pada Tā' bertemu huruf Wāwu.
+                </td>
+                <td>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca dengan <strong>Idghām Bilā Ghunnah</strong> (<strong>مَّعْدُودَاتٍ وَغَرَّهُمْ</strong> tanpa dengung sama sekali).<br>
+                    • <strong>Sembilan Imam Lainnya (Termasuk Khallād 'an Ḥamzah & Ḥafsh):</strong> Membaca dengan <strong>Idghām Bighunnah</strong> disertai dengung 2 harakat.<br>
+                    • Penulisan rasm utsmani: <em>ma'dūdāt</em> ditulis dengan membuang alif (<em>hadzful-alif</em>) menjadi (مَعْدُودَٰتٍ).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَغَرَّهُمْ</strong><br>(<em>Wa gharrahum</em>)</td>
+                <td>
+                    <strong>Huruf Ghayn:</strong> Huruf isti'lā' yang keluar dari adnal halq (tenggorokan bagian atas), memiliki sifat rakhāwah.<br>
+                    <strong>Huruf Rā' Bertasydid:</strong> Dibaca <strong>Tafkhīm</strong> tebal dengan getaran lidah (tikrār) yang terjaga dan tidak berlebihan.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu Fā' dibaca jelas dengan kehati-hatian tinggi (<em>waḥdzar ladā wāwin wa fā an takhtafī</em>).
+                </td>
+                <td>
+                    • <strong>Qālūn, Ibnu Katsīr, Abū Ja'far:</strong> Membaca dengan shilah mīm al-jam' (<em>wa gharrahumū fī</em>) saat washal.<br>
+                    • <strong>Imam Lainnya:</strong> Membaca sukun mīm jam' dengan ketegasan idzhār syafawī di hadapan huruf Fā'.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>فِى دِينِهِم</strong><br>(<em>Fī dīnihim</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Yā' mad pada <em>fī</em> dan <em>dīni</em> masing-masing 2 harakat.<br>
+                    <strong>Tarqīq Huruf Dāl:</strong> Bersifat istifal dan infitah.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukun bertemu Mīm pada kata <em>mā</em>.
+                </td>
+                <td>
+                    • <strong>Idghām Mitslayn Shaghīr:</strong> Mīm sukun pada <em>dīnihim</em> bertemu Mīm pada <em>mā</em> melebur menjadi idghām mīmī dengan ghunnah 2 harakat penuh bagi seluruh qira'at.<br>
+                    • Bagi perawi yang membaca shilah mīm jam' (Qalun, Ibnu Katsir, Abu Ja'far), membacanya: <em>dīnihimū mā kānū</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>مَّا كَانُوا۟</strong><br>(<em>Mā kānū</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif mad pada <em>mā</em> dan <em>kā</em>, serta Wāwu mad pada <em>nū</em> masing-masing dipanjangkan 2 harakat.<br>
+                    <strong>Huruf Kāf:</strong> Syiddah disusul hams.<br>
+                    <strong>Alif Fāriqah:</strong> Sukun mustadīr di ujung wāwu jamā'ah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca mad thabi'i pada ketiga huruf mad tersebut.
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><strong>يَفْتَرُونَ ۝٢٤</strong><br>(<em>Yaftarūn</em>)</td>
+                <td>
+                    <strong>Huruf Fā':</strong> Huruf hams dan rakhāwah keluar dari bibir bawah bagian dalam menempel ujung gigi seri atas.<br>
+                    <strong>Huruf Tā':</strong> Bersifat hams dan istifal.<br>
+                    <strong>Tafkhīm Huruf Rā':</strong> Rā' berharakat dhommah dibaca tebal.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Wāwu mad bertemu Nūn yang disukunkan karena waqaf di ujung ayat, dibaca dengan 3 martabat: <strong>Qaṣhr (2 harakat), Tawassuṭh (4 harakat), atau Ṭhūl (6 harakat)</strong> disertai sifat tawassuth pada Nūn sukun.
+                </td>
+                <td>
+                    Konsensus sepuluh imam mutawatirah membaca tafkhīm pada Rā' dan memperbolehkan tiga martabat panjang mad 'āridh lis-sukūn sesuai tempo bacaan tilawah (ḥadr, tadwīr, atau tartīl).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Asbabun Nuzul Utama: Klaim Superioritas Ahli Kitab Mengenai Durasi 40 Hari dan 7 Hari Azab Neraka (Tafsīr At-Ṭhabarī No. 6689, 6690, Tafsīr Ibnu Abī Ḥātim No. 3474, dari Sahabat Abdullah bin Abbas r.a.):</strong><br>
+        Diriwayatkan dari jalur Ikrimah dan Sa'id bin Jubair, dari Sahabat Abdullah bin Abbas r.a. Beliau menuturkan:<br>
+        <em>"Ketika orang-orang Yahudi Madinah diajak beriman dan diingatkan akan dahsyatnya siksa neraka bagi orang yang mengingkari kenabian Muhammad ﷺ, para pemuka rabi mereka berkata dengan penuh kecongkakan: 'Sesungguhnya kami tidak akan diazab di dalam neraka kecuali hanya selama empat puluh hari (arba'īna yawman), yaitu sebanyak jumlah hari nenek moyang kami dahulu menyembah patung anak sapi (al-'ijl) di zaman Nabi Musa. Setelah empat puluh hari itu berlalu, siksaan atas kami akan terputus dan kami akan dikeluarkan dari neraka untuk masuk ke surga!' Dalam riwayat lain, mereka berkata: 'Umur dunia ini adalah tujuh ribu tahun, dan Allah hanya mengazab kami satu hari di akhirat untuk setiap seribu tahun umur dunia, sehingga kami hanya diazab selama tujuh hari saja!' Maka Allah menurunkan ayat ini: Dzālika bi-annahum qālū lan tamassanan-nāru illā ayyāmam ma'dūdāt, wa gharrahum fī dīnihim mā kānū yaftarūn."</em><br>
+        <strong>Derajat Riwayat:</strong> Diriwayatkan oleh At-Thabari dan Ibnu Abi Hatim dengan sanad sahih hasan sesuai kriteria mufassirin salaf. Ayat ini paralel dengan bantahan dalam QS. Al-Baqarah: 80.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Shahīh Riwayat Imam Al-Bukhārī (No. 3159, 5777) & Ahmad (No. 8286) dari Sahabat Abū Hurairah r.a. — Konfrontasi Terbuka di Khaibar Mengenai Mitos "Pertukaran Penghuni Neraka":</strong><br>
+        Tatkala benteng Khaibar ditaklukkan oleh kaum muslimin, seorang wanita Yahudi (Zainab binti Al-Harits) menghadiahkan daging kambing yang telah dilumuri racun mematikan kepada Rasulullah ﷺ. Setelah racun itu terdeteksi secara mukjizat, Rasulullah ﷺ mengumpulkan seluruh pembesar dan rabi Yahudi Khaibar untuk diinterogasi. Di akhir dialog, Nabi ﷺ menguji keyakinan eskatologis mereka:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19.5px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        فَقَالَ لَهُمْ رَسُولُ اللَّهِ ﷺ: "مَنْ أَهْلُ النَّارِ؟" قَالُوا: نَكُونُ فِيهَا يَسِيرًا، ثُمَّ تَخْلُفُونَنَا فِيهَا! فَقَالَ لَهُمْ رَسُولُ اللَّهِ ﷺ: "اخْسَئُوا فِيهَا! وَاللَّهِ لَا نَخْلُفُكُمْ فِيهَا أَبَدًا!" ثُمَّ قَالَ: "هَلْ أَنْتُمْ صَادِقِيَّ عَنْ شَيْءٍ إِنْ سَأَلْتُكُمْ عَنْهُ؟ فَهَلْ جَعَلْتُمْ فِي هَذِهِ الشَّاةِ سُمًّا؟" قَالُوا: نَعَمْ! قَالَ: "مَا حَمَلَكُمْ عَلَى ذَلِكَ؟" قَالُوا: أَرَدْنَا إِنْ كُنْتَ كَاذِبًا نَسْتَرِيحُ مِنْكَ، وَإِنْ كُنْتَ نَبِيًّا لَمْ يَضُرَّكَ!
+        </span>
+        <em>Rasulullah ﷺ bertanya kepada para rabi Yahudi: "Siapakah penghuni neraka itu menurut keyakinan kalian?" Mereka menjawab tanpa malu: "Kami hanya akan berada di dalam neraka sebentar saja (yasīran), kemudian kalian (umat Islam) yang akan menggantikan posisi kami di dalamnya untuk selama-lamanya!" Mendengar klaim keji itu, Rasulullah ﷺ membentak mereka dengan murka Ilahi: "Hinalah kalian di dalam neraka! Demi Allah, kami sekali-kali tidak akan pernah menggantikan kalian di dalamnya selama-lamanya!"</em><br>
+        <strong>Derajat Riwayat:</strong> Sahih Muttafaqun 'Alaih. Hadits ini adalah konfirmasi sejarah tak terbantahkan mengenai mentalitas delutif Ahli Kitab: mereka mengarang cerita bahwa siksa neraka bagi mereka hanyalah transit sekejap, lalu dosa mereka akan ditimpakan kepada umat lain.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Shahīh Riwayat Imam Muslim (No. 131) dari Sahabat Abdullah bin Mas'ud r.a. — Penegasan Nabi ﷺ Bahwa Kesombongan Merasa Suci Membatalkan Masuk Surga:</strong><br>
+        Rasulullah ﷺ bersabda meletakkan kaidah universal keadilan Ilahi:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 19px; display: block; margin: 8px 0; direction: rtl; text-align: right;">
+        "لَا يَدْخُلُ الْجَنَّةَ مَنْ كَانَ فِي قَلْبِهِ مِثْقَالُ ذَرَّةٍ مِنْ كِبْرٍ!" قَالَ رَجُلٌ: إِنَّ الرَّجُلَ يُحِبُّ أَنْ يَكُونَ ثَوْبُهُ حَسَنًا وَنَعْلُهُ حَسَنَةً؟ قَالَ: "إِنَّ اللَّهَ جَمِيلٌ يُحِبُّ الْجَمَالَ، الْكِبْرُ: بَطَرُ الْحَقِّ، وَغَمْطُ النَّاسِ."
+        </span>
+        <em>"Tidak akan masuk surga orang yang di dalam hatinya terdapat kesombongan seberat biji sawi!" Seorang sahabat bertanya: "Sesungguhnya seseorang suka bajunya indah dan sandalnya bagus, apakah itu sombong?" Nabi bersabda: "Sesungguhnya Allah itu Maha Indah dan mencintai keindahan. Kesombongan yang hakiki adalah: Batharul-ḥaqq (menolak kebenaran wahyu) dan Ghamṭhun-nās (meremehkan dan memandang rendah manusia lain)."</em><br>
+        <strong>Korelasi dengan QS. 3:24:</strong> Ayat 24 adalah potret klinis dari dua pilar kesombongan tersebut: mereka menolak kebenaran Kitabullah (<em>batharul-haqq</em> pada ayat 23) karena mereka merasa menjadi ras suci yang berhak memandang rendah seluruh bangsa non-Yahudi sebagai bahan bakar pengganti neraka (<em>ghamthun-nas</em> pada ayat 24).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. M-S-S (م-س-س — Tamassanā):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros maknanya pada: <strong>Ibdhā'us-syay'i syay'an bi-syarasyin aw muwāfatin fī ghayri 'unfin (إبضاء الشيء شيئاً - menyentuhkan sesuatu pada sesuatu yang lain secara lembut pada permukaan lahiriah tanpa penetrasi mendalam)</strong>. Dalam <em>Lisān al-'Arab</em>, <em>al-massa</em> berbeda secara radikal dari <em>al-iḥrāq</em> (membakar hangus) atau <em>al-adzāb</em> (siksaan mendalam). 
+            Penggunaan diksi <em>lan tamassanā</em> alih-alih <em>lan tuhriqanā</em> (api neraka tidak akan membakar kami) menunjukkan keangkuhan yang luar biasa: mereka berkeyakinan bahwa panasnya neraka Jahannam bahkan tidak akan mampu menembus kulit luar mereka. Azab neraka bagi mereka dikonsepsikan sekadar sebagai "sentuhan kilat" yang tidak meninggalkan dampak luka permanen.
+        </li>
+        <li><strong>2. N-W-R (ن-و-ر — An-Nār):</strong>
+            Ibnu Faris menjelaskan akarnya merujuk pada: <strong>Al-Iḍhā'ah wal-Iḥtiyāl wat-Tafarruq (cahaya, panas yang bergolak, dan pergerakan api yang melahap)</strong>. Dalam terminologi Al-Qur'an, kata <em>An-Nār</em> dengan alif lam ma'rifah merujuk kepada neraka Jahannam, makhluk ciptaan Allah yang menyala-nyala dengan bahan bakar manusia dan bebatuan. Penjajaran kata <em>An-Nār</em> yang dahsyat dengan kata <em>tamassa</em> menciptakan kontras ironis yang tajam: bagaimana mungkin api pemusnah yang mencairkan logam dan melumat tulang hanya "menyentuh ringan" orang-orang yang durhaka kepada Rabb-nya?
+        </li>
+        <li><strong>3. '-D-D (ع-د-د — Ma'dūdāt):</strong>
+            Porosnya menurut Ibnu Faris adalah: <strong>Iḥṣhā'us-syay'i (menghitung, membatasi, dan merinci kuantitas sesuatu)</strong>. Dalam kaidah semantik Al-Qur'an, wazan jamak mu'annats sālim (<strong>مَعْدُودَاتٍ</strong>) berfaedah <em>Jam'ul-Qillah</em> (hitungan bilangan sedikit, biasanya antara 3 hingga 10, atau bilangan yang teramat singkat). 
+            Hal ini berbeda dengan kata <em>Ma'dūdah</em> (<strong>مَعْدُودَةً</strong>) dalam QS. Al-Baqarah: 80. Penggunaan <em>ma'dūdāt</em> di sini menyiratkan bahwa mereka memandang masa pembalasan dosa mereka teramat remeh, laksana beberapa hari liburan singkat sebelum memasuki kemuliaan tak terbatas.
+        </li>
+        <li><strong>4. Gh-R-R (غ-ر-ر — Gharrahum):</strong>
+            Ibnu Faris mencatat porosnya pada dua makna: <strong>An-Nuqshān (kekurangan)</strong> dan <strong>Al-Ghaflah fī syay'in ma'a khidā' (kelalaian yang lahir dari tipu daya visual atau fatamorgana)</strong>. <em>Al-Ghurūr</em> adalah kondisi mental seseorang yang tertipu oleh kenikmatan semu atau rasa aman palsu, sehingga ia melangkah santai menuju jurang kehancuran karena menyangka dirinya sedang berada di jalan keselamatan. 
+            Frasa <em>wa gharrahum fī dīnihim</em> menunjukkan bahwa tipu daya ini tidak datang dari pihak luar, melainkan diproduksi dari dalam institusi keagamaan mereka sendiri: doktrin palsu yang mereka ciptakan perlahan-lahan membius akal sehat dan mematikan radar spiritual mereka.
+        </li>
+        <li><strong>5. D-Y-N (د-ي-ن — Dīnihim):</strong>
+            Porosnya adalah: <strong>Al-Inqiyād, ath-Ṭhā'ah, wal-Iḥsāb (ketundukan, ketaatan, tatanan hukum, dan balasan hisab)</strong>. Dalam ayat ini, kata <em>dīn</em> disandarkan kepada mereka (<em>dīnihim</em>), yang mengisyaratkan dua lapisan makna: pertama, agama wahyu yang semestinya mereka taati telah mereka ubah menjadi agama komunal buatan mereka sendiri; kedua, dalam urusan paling sakral dalam hidup mereka—yakni keselamatan akhirat—mereka justru mendasarkannya pada dongeng fabrikasi, bukan pada wahyu yang otentik.
+        </li>
+        <li><strong>6. F-R-Y (ف-ر-ي — Yaftarūn):</strong>
+            Ibnu Faris merumuskan porosnya pada: <strong>Qath'us-syay'i wa kharqil-kadzib (memotong, merobek, dan merekayasa kedustaan dari ketiadaan)</strong>. <em>Al-Firyah</em> adalah jenis dusta yang paling jahat: bukan sekadar memutarbalikkan fakta yang ada, melainkan memfabrikasi sebuah dogma palsu secara sadar dan sengaja dari nol, lalu menyandarkan kebohongan itu kepada Allah Ta'ala (<em>iftirā' 'alallāh</em>). Wazan <em>ifta'ala</em> menunjukkan usaha aktif, rekayasa cermat, dan konspirasi intelektual para rabi mereka untuk merumuskan doktrin imunitas keselamatan tersebut.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ذَٰلِكَ</strong></td>
+                <td>Isim isyārah mabni 'alal-fath (<em>dzā</em>: isim isyarah, <em>lām</em>: lil-bu'di, <em>kāf</em>: harf khithāb).</td>
+                <td>Fī maḥalli raf'in <strong>Mubtada'</strong>. Rujukannya adalah perbuatan berpaling dan apatis terhadap Kitabullah pada ayat 23.</td>
+            </tr>
+            <tr>
+                <td><strong>بِأَنَّهُمْ</strong></td>
+                <td><em>Bā'</em>: Harf jarr sababiyyah. <em>Anna</em>: Harf tawkīd wa nashab masdariyyah. <em>Hum</em>: Dhamir jamak mabni 'alas-sukun.</td>
+                <td><em>Hum</em>: Fī maḥalli nashbin <strong>Isim Anna</strong>. Masdar mu'awwal dari <em>anna</em> beserta isim dan khabarnya (<em>bi-qawlihim</em>) majrur bil-bā', syibhul jumlah fī maḥalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>dzālika</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>قَالُوا۟</strong></td>
+                <td>Fi'il madhi tsulatsi mujarrad (<em>qāla – yaqūlu</em>) mabni 'aladh-dhamm li-ittishālihī bi wāwil-jamā'ah. Wāwu: isim dhamir.</td>
+                <td>Wāwu al-Jamā'ah fī maḥalli raf'in <strong>Fā'il</strong>. Seluruh jumlah fi'liyyah <em>qālū</em> fī maḥalli raf'in <strong>Khabar Anna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَن</strong></td>
+                <td>Harf nafy, nashab, wa istiqbāl mabni 'alas-sukun.</td>
+                <td>Amil nashab yang menafikan terjadinya perbuatan di masa yang akan datang secara pasti (ta'kīdun-nafy).</td>
+            </tr>
+            <tr>
+                <td><strong>تَمَسَّنَا</strong></td>
+                <td>Fi'il mudhari' tsulatsi mujarrad (<em>massa – yamassu</em>). Bersambung dengan Nūn at-Tawkīd ats-Tsaqīlah dan dhamir <em>Nā</em>.</td>
+                <td><strong>Fi'il Mudhari' Mabni 'alal-Fat-ḥah</strong> li-ittishālihī bi nūnit-tawkīd ats-tsaqīlah mubāsyaratan, fī maḥalli nashbin bi <em>lan</em>. <em>Nā</em>: Dhamir muttashil fī maḥalli nashbin <strong>Maf'ūl bih Muqaddam</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلنَّارُ</strong></td>
+                <td>Isim jins mu'annats majazi, ma'rifah bi al, mufrad.</td>
+                <td><strong>Fā'il Mu'akhkhar</strong> marfu' bidh-dhammah azh-zhāhirah bagi fi'il <em>tamassanā</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>إِلَّآ</strong></td>
+                <td>Harf istitsnā' wa hashr / adāt mulghāh mabni 'alas-sukun.</td>
+                <td>Alat pembatas (adātul-qashr wal-ḥashr) karena didahului kalimat nafyi (kalam manfī nāqish).</td>
+            </tr>
+            <tr>
+                <td><strong>أَيَّامًۭا</strong></td>
+                <td>Isim jam' taksīr dari <em>yawm</em>, nakirah manshubah.</td>
+                <td><strong>Zharf Zamān</strong> manshub bil-fat-ḥah azh-zhāhirah, muta'alliq bi fi'il <em>tamassanā</em> (atau manshub 'alal-istitsnā' al-mufarragh).</td>
+            </tr>
+            <tr>
+                <td><strong>مَّعْدُودَٰتٍۢ</strong></td>
+                <td>Isim maf'ul jamak mu'annats salim dari akar <em>'-D-D</em>.</td>
+                <td><strong>Na'at / Sifat</strong> bagi <em>ayyāman</em>, manshub bil-kasrah niyābah 'anil-fat-ḥah li-annahū jam'u mu'annats sālim. Seluruh jumlah <em>lan tamassanan-nāru illā ayyāmam ma'dūdāt</em> fī maḥalli nashbin <strong>Maqūlul-Qawl</strong> bagi fi'il <em>qālū</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَغَرَّهُمْ</strong></td>
+                <td><em>Wāwu</em>: Harf 'athaf atau wāwu ḥāl. <em>Gharra</em>: Fi'il madhi tsulatsi mujarrad mabni 'alal-fath. <em>Hum</em>: Dhamir muttashil.</td>
+                <td><em>Gharra</em>: Fi'il madhi. <em>Hum</em>: Dhamir fī maḥalli nashbin <strong>Maf'ūl bih Muqaddam</strong>. Jumlah fi'liyyah ma'thūfah 'alā jumlah <em>qālū</em> atau musta'nafah.</td>
+            </tr>
+            <tr>
+                <td><strong>فِى دِينِهِم</strong></td>
+                <td><em>Fī</em>: Harf jarr lil-zharafiyyah al-majāziyyah. <em>Dīni</em>: Isim majrur mudhaf. <em>Him</em>: Dhamir majrur mudhaf ilayh.</td>
+                <td>Syibhul jumlah jārr wa majrūr <strong>muta'alliq</strong> bi fi'il <em>gharrahum</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَّا</strong></td>
+                <td>Isim maushūl (atau <em>mā</em> masdariyyah) mabni 'alas-sukun.</td>
+                <td>Fī maḥalli raf'in <strong>Fā'il Mu'akhkhar</strong> bagi fi'il <em>gharrahum</em> (hal yang memperdaya mereka adalah kebohongan yang mereka fabrikasi).</td>
+            </tr>
+            <tr>
+                <td><strong>كَانُوا۟</strong></td>
+                <td>Fi'il mādhi nāqish mabni 'aladh-dhamm. Wāwu al-Jamā'ah: isim kāna.</td>
+                <td>Wāwu al-Jamā'ah fī maḥalli raf'in <strong>Isim Kāna</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>يَفْتَرُونَ ۝٢٤</strong></td>
+                <td>Fi'il mudhari' wazan <em>ifta'ala</em> dari akar <em>F-R-Y</em>. Wāwu: isim dhamir.</td>
+                <td>Fi'il mudhari' marfu' bi <strong>tsubūtin-nūn</strong>. Wāwu fī maḥalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah <em>yaftarūn</em> fī maḥalli nashbin <strong>Khabar Kāna</strong>. Jumlah <em>kānū yaftarūn</em> adalah <strong>Shilat al-Mawṣhūl</strong> lā maḥalla lahā minal-i'rāb (dengan 'ā'id mahdzūf: <em>yaftarūnahū</em>).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Isti'māl Ism al-Isyārah lil-Bu'di wa Bā'us-Sababiyyah (Kausalitas Psikologis):</strong>
+            Pemilihan kata tunjuk jauh <em>Dzālika</em> berfungsi sebagai <strong>at-tahwīl wat-taqbīḥ</strong> (menggambarkan betapa mengerikan dan busuknya sikap menolak hukum wahyu). Penyambungan langsung dengan <em>bi-annahum</em> (Bā' Sababiyyah) mengajarkan prinsip balaghah tingkat tinggi: bahwa pembusukan moral dan perilaku fasik lahiriah manusia selalu berhulu dari rusaknya fondasi teologi dan keyakinan batin.
+        </li>
+        <li><strong>Ilmu Ma'ani — Al-Qashr wal-Ḥashr bi An-Nafy wal-Istitsnā' (Monopoli Dogma):</strong>
+            Konstruksi kalimat <em>lan tamassanan-nāru illā ayyāmam ma'dūdāt</em> menggunakan metode <strong>Qashr Mawsūf 'alā Shifah (Qashr Idhāfī)</strong> melalui partikel penafian <em>lan</em> dan pengecualian <em>illā</em>. Mereka membatasi masa azab neraka hanya pada rentang waktu yang teramat singkat. Balaghah ini menyingkap arogansi absolut: mereka memandang diri mereka suci dari vonis kekekalan neraka, memonopoli surga, dan memosisikan Tuhan seolah-olah terikat kontrak sepihak untuk tidak mengazab mereka layaknya manusia lain.
+        </li>
+        <li><strong>Ilmu Bayan — Majāz Isti'ārah Tahqīriyyah pada Kata "Tamassa" (Meremehkan Azab):</strong>
+            Secara semantik, berada di dalam neraka adalah peristiwa pembakaran total (<em>iḥrāq</em>). Namun mereka menggunakan kata <em>massa</em> (sentuhan ringan). Ini adalah <strong>isti'ārah</strong> yang dipakai kaum durhaka untuk meremehkan murka Allah (<em>at-tahwīn min 'adzābillāh</em>). Balaghah Al-Qur'an merekam ucapan asli mereka ini untuk menelanjangi ketidaktahuan dan ketidakberdayaan mereka di hadapan pengadilan akhirat.
+        </li>
+        <li><strong>Ilmu Badi' — Al-Muqābalah wal-Inqilāb (Ironi Kehancuran Tipu Daya):</strong>
+            Terdapat kontras tersembunyi (muqābalah ma'nawiyyah) antara klaim <em>lan tamassanā</em> (rasa kebal mutlak) dengan penutup <em>wa gharrahum... mā kānū yaftarūn</em>. Mereka menyangka klaim tersebut adalah perisai keselamatan yang kokoh, padahal Al-Qur'an memvonis bahwa perisai itu hanyalah <strong>ghurūr</strong> (jebakan halusinasi) yang diciptakan oleh racun kebohongan mereka sendiri.
+        </li>
+        <li><strong>Ilmu Ma'ani — Balāghatut-Ta'bīr bi "Mā Kānū Yaftarūn" (Dinamika Fabrikasi Berkelanjutan):</strong>
+            Penggunaan kata bantu <em>kānū</em> yang disandingkan dengan fi'il mudhari' <em>yaftarūn</em> memberikan faedah <strong>al-istimrār wat-tajaddud</strong> (kebiasaan yang dilakukan berulang-ulang dari generasi ke generasi). Doktrin tersebut bukan sekadar kekeliruan satu individu, melainkan rekayasa kependetaan sistemik yang terus diperbarui dan dipelihara guna membius para pengikutnya agar tetap loyal dan taat memberikan upeti kepada para elit rabi.
+        </li>
+        <li><strong>I'jāz Fonetik — Kadens Bunyi Akhir Ayat (Rima "Ūn"):</strong>
+            Akhir ayat ditutup dengan rima fonetis berbobot berat: <em>yaftarūn</em>. Vokal panjang <em>Wāwu</em> yang disusul konsonan sengau <em>Nūn</em> memberikan resonansi peringatan yang berdentum di telinga pendengar, seolah-olah mengetuk palu vonis bahwa seluruh mitos yang mereka agungkan akan hancur lebur menjadi debu tak bernilai saat hari berbangkit tiba.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 23):</strong>
+            Pada Ayat 23, Allah membeberkan fenomena aneh yang mengundang keheranan luar biasa: kaum yang memegang Kitab Taurat justru lari membelakangi dan menolak arbitrase hukum wahyu tatkala dipanggil untuk memutuskan perkara (<em>tsumma yatawallā farīqum minhum wa hum mu'ridhūn</em>). Secara psikologis, muncul pertanyaan mendasar: <em>"Faktor apakah yang membuat para rabi itu begitu berani, percaya diri, dan tanpa beban sedikit pun menentang Kitabullah?"</em><br>
+            Ayat 24 hadir sebagai <strong>jawaban kausalitas langsung (ta'līl)</strong>: keberanian nekat itu bersumber dari doktrin eskatologis palsu yang menjamin bahwa apa pun maksiat dan pembangkangan yang mereka lakukan di dunia, mereka tetap "anak-anak Tuhan" yang tidak akan disentuh api neraka kecuali hanya beberapa hari saja! Keyakinan semu inilah yang menjadi bahan bakar keberanian mereka menginjak-injak syariat.
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Hegemoni Kependetaan Madinah Pasca-Kemenangan Badar):</strong>
+            Setelah kemenangan gemilang kaum muslimin dalam Perang Badar (Ramadhan 2 H), peta geopolitik di Madinah bergeser drastis:
+            <ol>
+                <li><strong>Guncangan Hegemoni Ahli Kitab:</strong> Sebelum hijrah, klan Yahudi mendominasi ekonomi, kepemilikan senjata, dan prestise intelektual atas suku Aus dan Khazraj yang ummi. Kemenangan Badar membuktikan bahwa kekuatan Nabi Muhammad ﷺ bukan sekadar fenomena sementara, melainkan ancaman nyata bagi status quo mereka.</li>
+                <li><strong>Penguatan Doktrin "Bangsa Terpilih" (Am Segulah) sebagai Benteng Pertahanan Psikologis:</strong> Merasa hegemoni politiknya terancam, para rabi Yahudi Madinah (seperti Huyay bin Akhthab, Ka'ab bin Al-Asyraf, dan Nu'aim bin 'Amr) mengintensifkan indoktrinasi kepada komunitasnya: bahwa kemuliaan mereka tidak ditentukan oleh amal perbuatan atau kepatuhan hukum, melainkan oleh faktor darah dan garis keturunan biologis dari para nabi Bani Israil (Ibrahim, Ishaq, dan Ya'qub).</li>
+                <li><strong>Doktrin Transit Neraka (Purgatori Eksklusif):</strong> Mereka mengajarkan bahwa neraka Jahannam diciptakan khusus untuk bangsa-bangsa selain Yahudi (kaum Goyim/Gentiles). Jikapun ada orang Yahudi yang berbuat dosa besar (seperti korupsi, membunuh nabi, atau berzina), mereka hanya akan menjalani detoksifikasi kilat selama 7 hari atau paling lama 40 hari (senilai hari penyembahan patung anak sapi), setelah itu mereka akan langsung dipindahkan ke surga Firdaus. Doktrin inilah yang ditelanjangi dan dihancurkan oleh QS. 3:24.</li>
+            </ol>
+        </li>
+        <li><strong>Liḥāq (Jembatan Emas Menuju Ayat 25):</strong>
+            Setelah membongkar doktrin palsu dan rasa aman semu mereka di Ayat 24, Allah tidak membiarkan klaim tersebut menggantung. Ayat 25 seketika meledakkan ilusi tersebut dengan pertanyaan retoris yang mencabik-cabik keangkuhan mereka:
+            <br><em>"Fa-kayfa idzā jama'nāhum li-yawmin lā rayba fīhi wa wuffiyat kullu nafsim mā kasabat wa hum lā yuzhlamūn."</em>
+            <br>(Maka bagaimanakah keadaan mereka nanti apabila Kami mengumpulkan mereka pada hari yang tidak ada keraguan padanya, dan disempurnakan balasan bagi setiap jiwa atas apa yang telah dikerjakannya, sedang mereka sedikit pun tidak dizalimi?).
+            Ayat 23 membeberkan <strong>perilaku maksiatnya</strong>, Ayat 24 menelanjangi <strong>doktrin palsu pemicunya</strong>, dan Ayat 25 memaparkan <strong>kehancuran total ilusi tersebut di hadapan mahkamah hisab akhirat</strong>.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr At-Ṭabarī (w. 310 H) — Eksegesis Riwayat Salaf & Rekonstruksi Klaim 40 Hari:</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīli Āy Al-Qur'ān</em>, At-Tabari menegaskan bahwa ayat ini membedah alasan utama mengapa Ahli Kitab berani berpaling dari hukum Allah. Menukil riwayat Mujahid, Qatadah, dan Adh-Dhahhak, At-Tabari membedah frasa <em>illā ayyāmam ma'dūdāt</em>: kaum Yahudi meyakini bahwa azab neraka hanya berlangsung selama 40 hari, yaitu masa di mana nenek moyang mereka menyembah anak sapi yang dibuat Samiri di bukit Sinai. At-Tabari menggarisbawahi kebodohan nalar mereka: mereka mengira bahwa perbuatan syirik akbar dan pembunuhan para nabi dapat ditebus hanya dengan siksaan 40 hari. Frasa <em>wa gharrahum fī dīnihim mā kānū yaftarūn</em> dimaknai oleh At-Tabari sebagai hukuman psikologis: kebiasaan mereka mengarang kedustaan atas nama Allah pada akhirnya menjadi bumerang yang menipu dan membutakan mata batin mereka sendiri dari kebenaran Islam.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — Dekonstruksi Delusi Imunitas & Bahaya Mengikuti Jejak Ahli Kitab:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir menghubungkan ayat ini dengan firman Allah dalam QS. Al-Baqarah: 80–82. Beliau menjelaskan bahwa pemicu utama yang mendorong Ahli Kitab berani melanggar syariat, menyembunyikan kebenaran nubuwah Muhammad ﷺ, dan membelakangi Kitabullah adalah anggapan batil bahwa mereka adalah "anak-anak Allah dan kekasih-kekasih-Nya" (<em>nahnu abnā'ullāhi wa aḥibbā'uh</em>). Ibnu Katsir melontarkan peringatan keras kepada umat Islam: jangan sampai kaum muslimin terjangkit virus beracun ini! Betapa banyak orang yang mengaku muslim namun berani memakan riba, berbuat zalim, dan meninggalkan shalat, seraya berdalih dengan angan-angan kosong: <em>"Kami adalah umat Nabi Muhammad yang pasti mendapatkan syafaat, kami hanya masuk neraka sebentar untuk mencuci dosa lalu pasti masuk surga!"</em> Ibnu Katsir menegaskan bahwa siapa pun yang berbuat kejahatan dan diliputi oleh dosanya, maka neraka adalah tempat tinggalnya yang kekal, tanpa memandang garis keturunan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubī (w. 671 H) — Teologi Keadilan Ilahi & Penolakan Faham Murji'ah Ekstrem:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi menjadikan ayat ini sebagai hujah telak untuk meruntuhkan teologi Murji'ah ekstrem yang memisahkan antara iman dan amal perbuatan:
+        <ul>
+            <li><strong>Bantahan atas Konsep Imunitas Nasab:</strong> Al-Qurthubi menegaskan bahwa kemuliaan nasab kenabian tidak memberikan privilese hukum di hadapan Allah. Putra Nabi Nuh tenggelam, ayah Nabi Ibrahim kafir, dan paman Nabi Muhammad (Abu Lahab) kekal di neraka. Keselamatan akhirat semata-mata diukur oleh ketauhidan murni dan amal saleh yang selaras dengan syariat.</li>
+            <li><strong>Bahaya Al-Amn min Makrillāh (Merasa Aman dari Makar Allah):</strong> Mengklaim diri pasti selamat dan hanya mampir sebentar di neraka adalah bentuk dosa besar <em>al-amn min makrillāh</em>. Orang mukmin sejati hidup di antara rasa cemas (<em>khawf</em>) dan pengharapan (<em>rajā'</em>), tidak pernah merasa aman dari hisab Allah hingga kakinya benar-benar menjejak di surga.</li>
+            <li><strong>Makna Fabrikasi Agama (Al-Iftirā'):</strong> Al-Qurthubi mencatat bahwa setiap orang yang membuat bid'ah dalam agama, lalu meyakini bahwa bid'ah itu mendekatkan diri kepada Allah atau menjamin ampunan dosa tanpa taubat nasuha, maka ia telah masuk ke dalam lingkaran <em>wa gharrahum fī dīnihim mā kānū yaftarūn</em>.</li>
+        </ul>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Analisis Epistemologi Rasional & Hermeneutika Balaghah:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi membedah struktur epistemologi ayat ini:
+        <br>1. <strong>Fungsi Ba' Sababiyyah:</strong> Perbuatan maksiat lahiriah selalu berakar pada kerusakan akal dan akidah. Ketika akal mempercayai premis palsu (bahwa siksa neraka hanya sebentar), maka rem moral akan blong, sehingga manusia berani melakukan kejahatan apa pun.
+        <br>2. <strong>Bantahan Rasional terhadap Mitos 40 Hari:</strong> Ar-Razi bertanya secara dialektis: atas dasar apa mereka menetapkan angka 40 hari? Jika dosa menyembah anak sapi diazab 40 hari, lalu bagaimana dengan dosa-dosa mereka yang lain: membunuh nabi-nabi, merampok harta kaum miskin, dan mendustakan Al-Qur'an? Penetapan angka tanpa dalil wahyu adalah bentuk kebodohan murni (<em>jahl murakkab</em>).
+        <br>Sementara Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menyoroti balaghah lafaz <em>gharrahum</em>: penipuan ini sangat tragis karena pelakunya (subjek) dan korbannya (objek) adalah diri mereka sendiri. Para pendahulu mereka menciptakan kedustaan, lalu generasi penerusnya mewarisi kebohongan itu sebagai dogma suci, hingga akhirnya seluruh komunitas terperangkap dalam delusi massal.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thāhir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqāṣhidī & Sosiologi Pembusukan Dogma Agama:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur menyajikan analisis sosiologis peradaban: ayat ini meletakkan prinsip universal mengenai bagaimana mitos keagamaan (<em>religious myths</em>) dapat melumpuhkan daya juang moral suatu bangsa. Ketika suatu bangsa merasa bahwa mereka adalah "ras pilihan Tuhan" yang memiliki imunitas bawaan, etos kerja moral mereka akan runtuh. Mereka tidak lagi merasa perlu menegakkan keadilan, membela kaum tertindas, atau menjaga kejujuran intelektual. Kata <em>mā kānū yaftarūn</em> menggambarkan proses enkulturasi kebohongan: para rabi menciptakan hadits-hadits palsu dan riwayat-riwayat dusta dalam kitab Midrash dan Talmud mereka demi melegitimasi privilese kasta, hingga lambat laun teks fabrikasi tersebut menggeser kedudukan teks asli Taurat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Kontekstualisasi Nusantara: Cermin Tajam bagi Umat Islam:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melontarkan renungan yang merobek kepalsuan beragama kita:<br>
+        <em>"Mendengar cerita orang Yahudi yang berkata 'neraka tidak akan menyentuh kami melainkan beberapa hari saja', kita kaum muslimin kerap tersenyum sinis. Namun sadarkah kita, bahwa penyakit Yahudi ini telah menular hebat ke dalam tubuh umat Islam? Berapa banyak orang Islam yang hidup bergelimang judi, suap, korupsi, dan meninggalkan sembahyang, lalu dengan enteng berkata: 'Ah, saya kan orang Islam, punya kartu tanda penduduk muslim! Biar masuk neraka sebentar untuk dicuci dosanya, nanti kan akhirnya masuk surga juga karena syafaat!' Inilah persis penyakit 'gharrahum fī dīnihim mā kānū yaftarūn'! Mereka tertipu oleh khayalan kosong yang mereka ada-adakan sendiri, seraya melupakan firman Allah bahwa surga bukan diperuntukkan bagi pemegang klaim kosong, melainkan bagi orang yang bertakwa dan beramal saleh!"</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menegaskan bahwa kata <em>yaftarūn</em> mengisyaratkan bahwa harapan palsu itu adalah buatan manusia yang dibungkus dengan baju agama. Kemenag RI mengingatkan bahwa keselamatan hakiki di sisi Allah adalah meritokrasi spiritual yang adil: tidak ada diskriminasi ras, suku, atau nasab di hadapan timbangan hisab akhirat.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Variasi Sudut Pandang Penafsiran (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Latar Belakang Klaim "Ayyāmam Ma'dūdāt"</strong></td>
+                <td>Seluruh mufassir sepakat bahwa klaim ini adalah bualan doktrin tanpa dasar wahyu samawi yang sah, yang dirancang untuk meninabobokan pengikutnya.</td>
+                <td>
+                    • <strong>Mayoritas Salaf (Ibnu Abbas, Mujahid, Qatadah):</strong> Durasi 40 hari merujuk pada rentang waktu penyembahan patung anak sapi di bukit Sinai.<br>
+                    • <strong>Sebagian Ulama (Ikrimah, As-Suddi):</strong> Durasi 7 hari merujuk pada hitungan 1 hari akhirat untuk setiap 1.000 tahun umur dunia (yang mereka yakini 7.000 tahun).<br>
+                    • <strong>Sintesis Modern (Rasyid Ridha, Ibnu 'Asyur):</strong> Menunjukkan metafora durasi yang sangat singkat secara umum (jam'ul-qillah), apapun hitungan kalendernya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat "Mā Kānū Yaftarūn"</strong></td>
+                <td>Sepakat bahwa objek yang memperdaya mereka adalah kebohongan teologis buatan manusia yang disandarkan kepada syariat Allah.</td>
+                <td>
+                    • <strong>Pendekatan Doktrinal:</strong> Klaim bahwa nasab sebagai keturunan nabi-nabi Bani Israil secara otomatis menggugurkan kewajiban syariat dan membebaskan dari azab abadi.<br>
+                    • <strong>Pendekatan Teks Naskah:</strong> Penulisan kitab-kitab tafsir rabi (Talmud) yang menyisipkan hukum-hukum rekaan yang melonggarkan sanksi bagi kaum elit dan menjanjikan keselamatan eksklusif.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Status Hukum "Merasa Pasti Masuk Surga Tanpa Amal" bagi Muslim</strong></td>
+                <td>Sepakat bahwa merasa aman dari azab neraka (<em>al-amnu min 'adzābillāh</em>) seraya terus-menerus berbuat dosa besar adalah dosa besar yang merusak kesempurnaan iman.</td>
+                <td>
+                    • <strong>Madzhab Ahlus Sunnah:</strong> Pelaku dosa besar dari kalangan mukmin berada di bawah kehendak Allah (<em>tahta masyī'atillāh</em>); Allah berhak mengazabnya atau mengampuninya, namun tidak boleh seorang pun memastikan dirinya hanya diazab sebentar tanpa hisab.<br>
+                    • <strong>Kritik atas Murji'ah:</strong> Menyerupakan diri dengan keyakinan Yahudi jika menganggap iman di lisan sudah cukup menjamin kebal dari azab neraka.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Superioritas Genealogis vs Meritokrasi Taqwa Qur'ani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Ahli Kitab Jahiliyah (Genealogical Entitlement)</th>
+                <th>Pola Pikir Mukmin Qur'ani (Divine Meritocracy)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sumber Keselamatan Eskatologis</strong></td>
+                <td><em>Tribal & Genetic Privilege:</em> Keselamatan ditentukan oleh klan darah, garis keturunan suci, atau afiliasi formal pada institusi agama terpilih.</td>
+                <td><em>Faith & Moral Accountability:</em> Keselamatan adalah hak prerogatif Allah yang diraih melalui kemurnian tauhid, ketakwaan riil, dan amal saleh universal.</td>
+            </tr>
+            <tr>
+                <td><strong>Persepsi terhadap Siksa Akhirat</strong></td>
+                <td><em>Trivialization & Exemption ("Lan Tamassanā"):</em> Menganggap azab neraka sebagai ancaman bagi "orang lain", sementara diri sendiri kebal atau hanya transit formalitas.</td>
+                <td><em>Khasyyah & Reverence:</em> Memandang azab neraka sebagai kenyataan dahsyat yang wajib dihindari dengan kesungguhan taubat dan penjagaan diri setiap saat.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan antara Dogma dan Perilaku</strong></td>
+                <td><em>Moral Disinhibition via Fabricated Dogma:</em> Dogma pengampunan instan dijadikan lisensi untuk bebas melanggar etika dan berbuat zalim di dunia.</td>
+                <td><em>Moral Rigor via Khawf & Rajā':</em> Keyakinan akan hisab melahirkan disiplin moral yang ketat, integritas kejujuran, dan takut menzalimi sesama hamba.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Moral Licensing & Spiritual Exceptionalism Trap" (Jebakan Lisensi Moral & Pengecualian Spiritual):</strong>
+            Dalam psikologi kognitif modern, <em>Moral Licensing</em> adalah bias di mana seseorang yang merasa dirinya telah memiliki "kredit moral/spiritual" (misalnya: menyandang status ras pilihan, keturunan orang saleh, atau pemegang kartu ormas tertentu) merasa memiliki izin bawah sadar untuk melakukan pelanggaran etika. Diksi <em>lan tamassanan-nāru illā ayyāmam ma'dūdāt</em> adalah puncak dari bias spiritual exceptionalism ini: mereka meyakini bahwa aturan moral universal berlaku untuk orang lain, tetapi tidak berlaku bagi kelompok mereka. Mengadopsi mental model ini menyadarkan kita bahwa semakin tinggi status spiritual yang kita sandang, justru semakin besar tuntutan akuntabilitas moral yang dipikul.
+        </li>
+        <li><strong>Mental Model 2: "The Echo-Chamber of Fabricated Dogma" (Jebakan Ruang Gema Dogmatika Rekaan):</strong>
+            Frasa <em>wa gharrahum fī dīnihim mā kānū yaftarūn</em> menyajikan model mental tentang bahaya <em>self-deception loop</em> (lingkaran penipuan diri). Suatu kelompok merumuskan mitos pembenaran diri (<em>fabrication</em>), lalu mitos itu diulang-ulang di ruang gema internal mereka (<em>echo-chamber</em>), diajarkan kepada anak cucu, hingga akhirnya generasi berikutnya meyakini mitos tersebut sebagai kebenaran mutlak yang tak boleh diganggu gugat. Kesadaran atas model mental ini menuntut kita untuk selalu melakukan audit kritis terhadap dogma-dogma tradisi menggunakan timbangan wahyu yang shahih dan akal budi yang jernih.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Anatomi Penyakit Al-Ghurūr & Mekanisme Pertahanan Ego</h3>
+    <p>
+        Secara neuropsikologis, fenomena pada QS. 3:24 menggambarkan keruntuhan fungsi evaluasi diri (<em>self-monitoring deficit</em>) pada korteks prefrontal akibat dominasi narsisisme kelompok (<em>collective narcissism</em>). Ketika seseorang dihadapkan pada peringatan keras wahyu yang menuntut perubahan perilaku yang berat, otak bawah sadarnya secara otomatis mengaktifkan mekanisme pertahanan ego (<em>ego defense mechanism</em>) berupa <strong>Rationalization</strong> dan <strong>Denial</strong>.
+    </p>
+    <p>
+        Alih-alih merasa takut dan bertobat (yang menimbulkan rasa sakit mental akibat hancurnya rasa bangga diri), mereka meredakan kecemasan eksistensial tersebut dengan memproduksi narasi penenang palsu: <em>"Tenang saja, neraka tidak akan menyentuh kita kecuali beberapa hari saja!"</em> Narasi penenang ini memicu pelepasan dopamin kepuasan semu, yang mematikan rasa bersalah dan menghasilkan kondisi <strong>Al-Ghurūr</strong> (delusi rasa aman spiritual).
+    </p>
+    <p>
+        Dalam perspektif <strong>Tazkiyatun Nafs</strong>, penyakit <em>Ghurūr</em> ini adalah racun hati yang paling mematikan karena ia menyamar di balik jubah religiositas. Jiwa yang terjangkit ghurūr merasa dirinya berada di puncak kesucian, padahal ia sedang meluncur ke dasar neraka Jahannam. Terapinya adalah:
+    </p>
+    <ul>
+        <li><strong>Taḥqīqul-Ubūdiyyah:</strong> Menyadarkan diri bahwa hakikat kehambaan adalah kerendahan mutlak di hadapan Allah; tidak ada seorang pun yang memiliki hak istimewa atau kontrak suci yang membebaskannya dari hisab keadilan Ilahi.</li>
+        <li><strong>Mu'ādalah Al-Khawf war-Rajā':</strong> Menyeimbangkan sayap takut dan harap secara proporsional. Harap tanpa takut adalah delusi (<em>ghurūr</em>), sedangkan takut tanpa harap adalah keputusasaan (<em>qunūṭh</em>).</li>
+        <li><strong>Dawāmul-Muḥāsabah:</strong> Mengaudit amal perbuatan setiap hari tanpa bersandar pada kemuliaan orang tua, guru, atau organisasi, seraya mengingat sabda Rasulullah ﷺ kepada putri tercintanya: <em>"Wahai Fatimah binti Muhammad, beramallah engkau, karena sesungguhnya aku tidak mampu membelamu sedikit pun di hadapan Allah!"</em></li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Mitos "Surga Eksklusif" & Fenomena Komersialisasi Kesalehan Instan</h3>
+    <p>
+        Di abad ke-21, patologi <em>lan tamassanan-nāru illā ayyāmam ma'dūdāt</em> bermutasi menjadi fenomena <strong>Komersialisasi Tiket Keselamatan (Spiritual Indulgences Modern)</strong>. Dalam lanskap keberagamaan populer, sering kali muncul narasi-narasi reduksionis yang menjanjikan keselamatan akhirat secara instan dan mutlak hanya dengan ritual-ritual mekanistik minimalis tanpa tuntutan transformasi karakter.
+    </p>
+    <p>
+        Beredar doktrin di kalangan kelompok sektarian tertentu bahwa cukup dengan membaiat guru tarekat palsu, menghadiri majelis zikir tertentu sekali setahun, atau membeli jimat-jimat berlabel religius, maka seluruh dosa masa lalu dan masa depan akan diputihkan secara otomatis. Para pengikutnya dininabobokan dengan rasa aman semu bahwa mereka pasti masuk surga bersama sang guru, sekalipun di kehidupan nyata mereka memakan uang haram, menipu mitra bisnis, dan mengabaikan hak-hak sesama manusia. Ini adalah replika sempurna dari <em>wa gharrahum fī dīnihim mā kānū yaftarūn</em>.
+    </p>
+
+    <h3>2. Etnosentrisme Global, Kolonialisme & Doktrin "Exceptionalism" dalam Geopolitik Modern</h3>
+    <p>
+        Dalam ranah peradaban global, mentalitas <em>"kami adalah bangsa pilihan yang kebal dari hukum"</em> menjadi akar paling berdarah dari imperialisme, apartheid, dan genosida modern. Keyakinan teologis-politis yang dianut oleh sebagian ekstremis zionis kontemporer—yang memandang ras mereka berada di atas hukum internasional dan memandang bangsa lain sebagai manusia kelas dua yang darahnya halal ditumpahkan—berakar langsung dari mitos kekebalan ini.
+    </p>
+    <p>
+        Begitu pula fenomena <em>American Exceptionalism</em> atau ultranasionalisme di berbagai belahan dunia, di mana suatu negara adidaya merasa memiliki lisensi moral untuk menginvasi negara lain, melanggar hak asasi manusia, dan mengabaikan resolusi PBB dengan dalih "membawa demokrasi dan peradaban". QS. 3:24 adalah manifesto kritik peradaban: kehancuran tatanan dunia terjadi manakala ada satu kelompok manusia yang merasa dirinya berada di atas hukum universal (<em>above the law</em>) akibat ilusi superioritas identitas.
+    </p>
+
+    <h3>3. Sindrom "Keluarga Berdarah Biru Spiritual" & Bahaya Fetisisme Nasab di Dunia Islam</h3>
+    <p>
+        Di dalam internal umat Islam sendiri, ayat ini menampar keras fenomena <strong>Fetisisme Nasab</strong> dan feodalisme religius. Betapa sering kita melihat sebagian oknum yang membanggakan silsilah garis keturunan biologis mereka hingga bersambung kepada orang-orang saleh atau nabi, lalu mengklaim bahwa keturunan mereka memiliki "imunitas neraka", darah mereka harum, atau kesalahan moral mereka tidak dicatat oleh malaikat.
+    </p>
+    <p>
+        Klaim-klaim mistik yang meninabobokan ini membuat sebagian generasi muda mereka terlena: enggan menuntut ilmu syar'i secara mendalam, malas beribadah, dan bersikap arogan kepada kaum mukmin lainnya semata-mata karena merasa membawa "gen surga". Al-Qur'an menghancurkan feodalisme spiritual ini hingga ke akarnya: di hadapan timbangan Allah pada Hari Kiamat, ikatan nasab terputus total (<em>fa-lā ansāba baynahum yawma'idzin wa lā yatasā'alūn</em>), dan yang tersisa hanyalah timbangan iman dan ketakwaan pribadi.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol "Pembersihan Hati dari Rasa Aman Palsu (Anti-Ghurūr Reset)":</strong>
+                <br>• Setiap kali Anda selesai melaksanakan ibadah besar (seperti shalat fardhu berjamaah, berinfaq nominal besar, atau berpuasa), luangkan waktu 60 detik untuk menundukkan kepala dan beristighfar 3 kali dengan penuh perenungan.
+                <br>• Ucapkan secara sadar di dalam hati: <em>"Yā Rabb, amal ini penuh dengan kekurangan dan riya'. Jangan Engkau biarkan diriku tertipu oleh amalku sendiri (wa lā taghurranī bi-'amalī). Aku tidak memiliki jaminan keselamatan sedikit pun melainkan semata-mata karena rahmat dan ampunan-Mu."</em>
+                <br>• Tuliskan satu dosa atau kekurangan moral yang masih Anda lakukan hari ini di buku catatan pribadi, lalu buat komitmen untuk memperbaikinya sebelum tidur, guna mematahkan ilusi kesalehan semu.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "Meritokrasi Spiritual & Anti-Nepotisme Doktrinal":</strong>
+                Dalam lingkungan keluarga, kantor, organisasi keislaman, atau komunitas sosial Anda:
+                <br>• Buat keputusan tegas untuk tidak pernah memberikan hak istimewa (privilese), pembelaan hukum, atau pujian kesalehan kepada seseorang semata-mata karena garis keturunan, hubungan kekerabatan, gelar sosial, atau almamater organisasinya.
+                <br>• Terapkan standar penilaian yang objektif, transparan, dan adil berbasis integritas moral, kompetensi riil, dan ketakwaan personal.
+                <br>• Jika seorang kerabat dekat atau tokoh terpandang melakukan pelanggaran etika atau hukum, tegakkan kebenaran secara tegas tanpa diskriminasi, seraya meneladani ketegasan Rasulullah ﷺ dalam meruntuhkan kasta feodal.
+            </li>
+            <li><strong>Etika Relasional & Integritas Dakwah: "Audit Kritis terhadap Narasi 'Garansi Surga Instan'":</strong>
+                <br>• Berhenti membagikan (share), mempercayai, atau mengonsumsi pesan berantai di media sosial, ceramah keagamaan, atau buku-buku yang mengeklaim "jaminan bebas neraka secara instan" tanpa tuntutan taubat dan amal saleh yang shahih.
+                <br>• Bangun budaya literasi kritis di lingkaran keluarga dan pengajian Anda: setiap kali mendengar klaim fadhilah ibadah yang bombastis atau janji pengampunan dosa yang melampaui batas kaidah syariat, mintalah takhrij hadits dan sanad keabsahannya kepada para asatidz yang berkompeten.
+                <br>• Lindungi anak-anak dan generasi muda dari racun <em>al-iftirā'</em> (fabrikasi kebohongan agama) dengan mengajarkan Al-Qur'an dan Sunnah secara utuh, seimbang, dan membumi.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Apakah di sudut hatiku yang terdalam masih terselip rasa aman palsu (<em>ghurūr</em>)—bahwa karena aku seorang muslim, pengikut ormas tertentu, atau keturunan orang saleh, maka Allah pasti memaklumi maksiatku dan hanya akan menghukumku sebentar saja di neraka?</li>
+            <li>Apakah amal ibadah, shalat, dan sedekah yang kukerjakan selama ini telah melahirkan ketundukan, rasa takut, dan kelembutan hati di hadapan hukum Allah, ataukah justru melahirkan kesombongan terselubung yang memandang orang lain di sekitarku lebih rendah dan pasti binasa?</li>
+            <li>Seandainya detik ini malaikat maut mencabut nyawaku dan seluruh topeng status sosial, nasab keturunan, serta pujian manusia ditanggalkan, hujah apakah yang dapat kubawa ke hadapan mahkamah Allah selain limpahan rahmat-Nya dan ketulusan taubatku?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Mālikal-Mulk, Yā Ḥayyu Yā Qayyūm, Yā Syadīdal-'Iqāb, Yā Ghafūrar-Raḥīm. Ya Allah Tuhan Pemilik Kedaulatan Mutlak Alam Semesta, Yang Mengetahui setiap bisikan hati yang tersembunyi. Kami bersujud di hadapan keagungan-Mu mengakui betapa kerdilnya diri kami, betapa banyaknya lumuran dosa kami, dan betapa tidak berdayanya jasad kami di hadapan kedahsyatan api neraka-Mu.
+            <br><br>
+            Allāhumma innā na'ūdzu bika minal-ghurūri fīd-dīn, wa minal-iftirā'i 'alayka bi-ghayri 'ilm. Ya Allah, kami berlindung kepada-Mu dari penyakit terperdaya oleh angan-angan kosong keberagamaan kami. Lindungilah kami dari kesombongan merasa suci, merasa kebal dari siksa-Mu, atau merasa pasti menjadi penghuni surga semata-mata karena garis keturunan, bendera kelompok, atau amal ibadah kami yang penuh cacat. Bersihkanlah lisan, akal, dan pena kami dari mengada-adakan kedustaan atas nama syariat-Mu yang suci.
+            <br><br>
+            Allāhumma ājirnā minan-nār, Allāhumma ājirnā minan-nār, Allāhumma ājirnā minan-nār! Ya Allah selamatkanlah kami dari siksa api neraka Jahannam! Jangan biarkan kulit kami tersentuh oleh jilatannya, dan jangan campakkan kami ke dalamnya walau sekejap mata. Karuniakanlah kepada kami rasa takut yang mencegah kami dari bermaksiat kepada-Mu, dan karuniakanlah pengharapan yang membimbing kami meraih ridha dan surga Firdaus-Mu. Jadikanlah hati kami tunduk patuh pada Kitabullah, dan wafatkanlah kami dalam keadaan husnul khatimah di atas kalimat tauhid Lā Ilāha Illallāh Muḥammadur Rasūlullāh. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-023 - QS. Ali 'Imran Ayat 23.html">&larr; Kembali ke Ayat 23 (QS. 3:23)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 24</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-025 - QS. Ali 'Imran Ayat 25.html">Lanjut ke Ayat 25 (QS. 3:25) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

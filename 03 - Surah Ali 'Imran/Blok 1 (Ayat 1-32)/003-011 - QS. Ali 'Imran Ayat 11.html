@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-011 - QS. Ali 'Imran Ayat 11 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 32px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-010 - QS. Ali 'Imran Ayat 10.html">&larr; Ayat Sebelumnya (QS. 3:10)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-012 - QS. Ali 'Imran Ayat 12.html">Ayat Berikutnya (QS. 3:12) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 2 (Ayat 10–18): Sunnatullah Kehancuran Tirani Materialistik & Keadilan Mutlak</span>
+        <span class="badge">14 Kata | 64 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 11</h1>
+    <div class="transliteration">
+        "Kada’bi āli Fir‘awna walladzīna min qablihim, kadzdzabū bi-āyātinā fa-akhadzahumullāhu bi-dzunūbihim, wallāhu syadīdul-‘iqāb(i)."
+    </div>
+    <div class="thematic-title">
+        Sunnatullah Kehancuran Tirani Materialistik & Ilusi Kekebalan Penguasa: Dekonstruksi Historis Arketipe Rezim Fir'aun sebagai Keniscayaan Keadilan Retributif Ilahi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 2: Runtuhnya Hegemoni Materialis, Arketipe Sejarah & Keadilan Kosmis)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        كَدَأْبِ ءَالِ فِرْعَوْنَ وَٱلَّذِينَ مِن قَبْلِهِمْ ۚ كَذَّبُوا۟ بِـَٔايَـٰتِنَا فَأَخَذَهُمُ ٱللَّهُ بِذُنُوبِهِمْ ۗ وَٱللَّهُ شَدِيدُ ٱلْعِقَابِ ۝١١
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Keadaan, tabiat pembangkangan, dan nasib kebinasaan mereka yang ingkar itu) serupa dengan kebiasaan keluarga Fir'aun dan orang-orang sebelum mereka; mereka mendustakan ayat-ayat Kami (tanda-tanda kebesaran dan wahyu kebenaran Kami), maka Allah menyiksa dan membinasakan mereka disebabkan dosa-dosa mereka; dan Allah Maha Keras sanksi pembalasan-Nya."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan penjelas konkret (<em>bayān tamtsīlī</em>) atas maklumat doktrinal pada ayat ke-10 yang menegaskan bahwa akumulasi modal materi (<em>al-amwāl</em>) dan kekuatan demografi dinasti/militer (<em>al-awlād</em>) sama sekali tidak mampu memberi perlindungan dari keadilan hukum Allah. Melalui frasa pembuka <em>Kada'bi āli Fir'awn</em>, Al-Qur'an mengangkat rezim Fir'aun sebagai <strong>arketipe universal kemapanan tiranik</strong>: sebuah rezim yang menguasai surplus kekayaan agraria Lembah Nil, piramida peradaban megah, dan aparatur militer adidaya, namun hancur lebur seketika saat berhadapan dengan Sunnatullah keadilan. Penegasan <em>fa-akhadzahumullāhu bi-dzunūbihim</em> (maka Allah menyiksa mereka disebabkan dosa-dosa mereka) meletakkan kaidah kausalitas moral universal: kehancuran imperium tidak terjadi karena kebetulan sejarah atau takdir yang zalim, melainkan merupakan akibat wajar dan adil dari pendustaan terhadap tanda-tanda kebenaran. Ayat ini ditutup dengan sifat <em>Wallāhu syadīdul-'iqāb</em> guna menegaskan bahwa tidak ada daya kekuasaan apa pun di jagat raya yang mampu lolos dari sanksi retributif Dzat Yang Maha Perkasa.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>كَدَأْبِ</strong><br>(<em>Kada'bi</em>)</td>
+                <td>
+                    <strong>Kāf & Dāl:</strong> Sifat istifāl dan infitāḥ, huruf Kāf memiliki desis hams saat berharakat.<br>
+                    <strong>Hamzah Sākinah:</strong> Keluar dari aqshal-ḥalq dengan sifat jahrah dan syiddah mutlak (tertahannya aliran suara secara total).<br>
+                    <strong>Bā' Kasrah:</strong> Majrūr dengan tarqīq.
+                </td>
+                <td>
+                    • <strong>Abū Ja'far al-Madanī (riwayat Ibnu Wardān & Ibnu Jammāz):</strong> Membaca dengan <strong>Ibdāl Hamzah Sākinah</strong> menjadi alif mad murni: <em>Kadābi</em> (كَدَابِ) secara konsisten baik washal maupun waqaf.<br>
+                    • <strong>Sembilan Imam Lainnya (termasuk Ḥafṣh, Nāfi', Ibnu Katsīr, Abū 'Amr, Ibnu 'Āmir, Ḥamzah, Al-Kisā'ī, Ya'qūb, Khalaf al-'Āsyir):</strong> Membaca dengan <strong>Taḥqīqul-Hamzah</strong> (menetapkan hamzah sukun: <em>Kada'bi</em>).<br>
+                    <em>Catatan:</em> Warsy 'an Nāfi' membaca tahqiq pada kata ini karena hamzah sukun berkedudukan sebagai 'ainul-fi'il, bukan fa'ul-fi'il.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ءَالِ فِرْعَوْنَ</strong><br>(<em>Āli Fir'awn</em>)</td>
+                <td>
+                    <strong>Mad Badal pada "Āli":</strong> Hamzah mendahului huruf alif mad.<br>
+                    <strong>Tarqīq Huruf Rā' Sukūn pada "Fir'awn":</strong> Huruf Rā' sukūn dibaca tipis (tarqīq) secara ijma' karena didahului harakat kasrah asli pada huruf Fā' dan setelahnya bukan huruf isti'lā'.<br>
+                    <strong>Wāwu Līn:</strong> Huruf Wāwu sukun didahului fathah.<br>
+                    <strong>Mamnū' minash-Ṣharf:</strong> Kata <em>Fir'awna</em> berharakat fathah saat majrur karena 'alamiyyah dan 'ujmah.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca mad badal pada <em>Āli</em> dengan tiga wajah (<strong>Tatslītsul-Badal: 2, 4, atau 6 harakat</strong>: Qaṣhr, Tawassuṭh, Ṭhūl).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca mad badal konsisten dengan <strong>Qaṣhr (2 Harakat)</strong>.<br>
+                    Seluruh sepuluh imam mutawatirah berijma' membaca tarqiq pada huruf Ra' sukun dan membaca fathah tanpa tanwin pada <em>Fir'awna</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَٱلَّذِينَ مِن قَبْلِهِمْ</strong><br>(<em>Walladzīna min qablihim</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Idghām Syamsiyyah:</strong> Hamzah washal gugur, lam ta'rif melebur ke dalam lam tasydid.<br>
+                    <strong>Ikhfā' Ḥaqīqī pada "Min Qablihim":</strong> Nūn sukūn bertemu huruf Qāf dengan dengung tebal (<em>tafkhīm</em>) tingkat tertinggi karena Qaf adalah huruf isti'la' mutlak di pangkal lidah.<br>
+                    <strong>Qalqalah Shughrā:</strong> Huruf Bā' sukun pada <em>qablihim</em> dipantulkan ringan.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sukūn bertemu Kāf dibaca jelas tanpa ghunnah berlebih.
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr & Abū Ja'far:</strong> Membaca <strong>Ṣhilah Mīm al-Jam'</strong> secara mutlak saat washal: <em>min qablihimū kadzdzabū</em> dengan panjang 2 harakat.<br>
+                    • <strong>Qālūn 'an Nāfi':</strong> Memiliki dua jalur riwayat yang sah: sukun mim jam' (<em>qablihim</em>) atau shilah (<em>qablihimū</em>).<br>
+                    • <strong>Imam-Imam Lainnya:</strong> Membaca sukun murni pada mim jam' tanpa shilah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>كَذَّبُوا۟ بِـَٔايَـٰتِنَا</strong><br>(<em>Kadzdzabū bi-āyātinā</em>)</td>
+                <td>
+                    <strong>Huruf Dzāl Musyaddadah:</strong> Keluar dari ujung lidah bertemu ujung dua gigi seri atas dengan desis lembut rakhāwah dan jahr.<br>
+                    <strong>Mad Badal pada "Bi-āyātinā":</strong> Hamzah fathah mendahului huruf alif mad.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu mad pada <em>kadzdzabū</em> dan alif mad pada <em>tā</em> serta <em>nā</em> dibaca panjang 2 harakat.
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca mad badal pada <em>bi-āyātinā</em> dengan <strong>Tatslītsul-Badal</strong> (2, 4, atau 6 harakat).<br>
+                    • <strong>Jumhur Imam:</strong> Membaca mad badal secara konsisten dengan Qaṣhr 2 harakat.<br>
+                    • <strong>Ḥamzah:</strong> Membaca saktah atau tahqiq pada pertemuan kata terpisah sesuai thariqah riwayatnya.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَأَخَذَهُمُ ٱللَّهُ</strong><br>(<em>Fa-akhadzahumullāh</em>)</td>
+                <td>
+                    <strong>Huruf Khā':</strong> Isti'lā' dan rakhāwah di tenggorokan atas (adnal-ḥalq).<br>
+                    <strong>Dhamm Mīm al-Jam':</strong> Mīm jam' diberi harakat dhammah untuk menghindari bertemunya dua sukun (<em>li-takhallush min iltiqā'is-sākinayn</em>) saat menyambung ke lafazh Jalālah.<br>
+                    <strong>Taghlīzh / Tafkhīm Lām Jalālah:</strong> Huruf Lām pada nama Allāh dibaca tebal menggelegar karena didahului harakat dhammah pada huruf Mīm.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fi'il madhi <em>akhadha</em> dengan maf'ūl bih dhamīr <em>hum</em> yang didhammahkan mim-nya saat washal ke Lam Jalalah yang dibaca tafkhim tebal.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>بِذُنُوبِهِمْ</strong><br>(<em>Bi-dzunūbihim</em>)</td>
+                <td>
+                    <strong>Mad Ṭhabī'ī:</strong> Wāwu sukun didahului dhammah huruf Nūn panjang 2 harakat.<br>
+                    <strong>Tarqīq Bā' Kasrah:</strong> Dua huruf Ba' dibaca tipis.<br>
+                    <strong>Idzhār Syafawī Asyad:</strong> Mīm sukūn bertemu Wāwu pada kata berikutnya dibaca sangat jelas. Qari wajib waspada menjaga makhraj mim agar tidak tersamarkan atau tertelan oleh makhraj wawu karena kesamaan tempat keluar pada dua bibir (<em>ittiḥād al-makhraj</em>).
+                </td>
+                <td>
+                    • <strong>Ibnu Katsīr & Abū Ja'far:</strong> Membaca shilah mim jam' saat washal: <em>bi-dzunūbihimū wallāhu</em>.<br>
+                    • <strong>Qālūn:</strong> Dua wajah (sukun dan shilah).<br>
+                    • <strong>Imam Lainnya:</strong> Membaca idzhar syafawi mu'akkad dengan sukun mim jam'.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَٱللَّهُ شَدِيدُ ٱلْعِقَابِ ۝١١</strong><br>(<em>Wallāhu syadīdul-'iqāb</em>)</td>
+                <td>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Dibaca tebal karena didahului Wāwu fathah.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lām ta'rīf pada <em>al-'Iqāb</em> dibaca jelas.<br>
+                    <strong>Isti'lā' Huruf Qāf:</strong> Pangkal lidah terangkat maksimal.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn & Qalqalah Kubrā:</strong> Saat waqaf pada fashilah ayat 11, huruf Bā' dimatikan dan dipantulkan kuat (qalqalah kubra) dengan pilihan panjang mad 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca rafa' pada <em>syadīdu</em> (khabar mubtada') dan kasrah pada <em>al-'iqābi</em> (mudhafun ilayh). Pada waqaf, seluruh imam membaca mad 'aridh lis-sukun disertai qalqalah kubra yang mengunci akhir ayat dengan nada megah dan berwibawa.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Riwayat Asbābun Nuzūl: Arogansi Yahudi Madinah & Musyrikin Quraisy Pasca-Badar (Sunan Abī Dāwūd No. 3001; As-Sunan al-Kubrā Al-Bayhaqī No. 18274; Tafsīr Aṭh-Ṭhabarī, Jilid 6, hlm. 198 dari Sahabat Abdullah bin Abbas r.a.):</strong><br>
+        Ketika Rasulullah ﷺ meraih kemenangan gilang-gemilang atas kaum musyrikin Quraisy dalam Perang Badar, beliau kembali ke Madinah dan mengumpulkan orang-orang Yahudi (Bani Qainuqa') di pasar mereka. Beliau bersabda: <em>"Wahai kaum Yahudi, berserahdirilah (masuklah Islam) sebelum kalian ditimpa azab sebagaimana yang telah menimpa kaum Quraisy di Badar!"</em> Mendengar peringatan tersebut, para pemuka mereka dengan congkak menjawab: <em>"Wahai Muhammad, janganlah engkau tertipu oleh dirimu sendiri karena telah berhasil membunuh sekelompok orang Quraisy yang dungu dan tidak berpengalaman dalam perang! Demi Allah, jika engkau berperang melawan kami, niscaya engkau akan tahu bahwa kamilah laki-laki sejati dan engkau belum pernah menghadapi orang-orang seperti kami!"</em><br>
+        Maka Allah Tabāraka wa Ta'ālā seketika menurunkan QS. Ali 'Imran ayat 10–12. Ayat 11 ini menegaskan bahwa kebiasaan mereka membanggakan kekuatan benteng, kekayaan emas, dan aliansi politik persis seperti ilusi keluarga Fir'aun yang akhirnya dibinasakan oleh dosa-dosa mereka sendiri.<br>
+        <strong>Derajat Sanad:</strong> Sahih menurut Imam Ibnu Hajar Al-'Asqalani (<em>Al-Kāfisy-Syāf</em>, hlm. 33) dan Syaikh Al-Albani (<em>Ṣhaḥīḥ Sunan Abī Dāwūd</em>).
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Ṣhaḥīḥ Al-Bukhārī (No. 4686) & Ṣhaḥīḥ Muslim (No. 2583) dari Sahabat Abu Musa Al-Asy'ari r.a. — Kaidah Penangguhan dan Penyiksaan Tiran (Sunnatullah al-Ikhdz):</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Inna-llāha layumlī lizh-zhālimi, ḥattā idzā akhadzahū lam yufliṭh-hu!"</em><br>
+        (Sesungguhnya Allah benar-benar memberikan tempo/penangguhan kenikmatan [istidrāj] kepada orang yang berbuat zalim, hingga apabila Dia telah menjatuhkan siksa-Nya [akhadzahū], Dia sama sekali tidak akan melepaskannya lagi!).<br>
+        Kemudian Rasulullah ﷺ membaca firman Allah dalam QS. Hūd [11]: 102:<br>
+        <em>"Wa kadzālika akhdzu Rabbika idzā akhadzal-qurā wa hiya zhālimah, inna akhdzahū alīmun syadīd."</em><br>
+        (Dan begitulah siksa Tuhanmu apabila Dia mengazab negeri-negeri yang berbuat zalim; sesungguhnya siksa-Nya sangat pedih lagi sangat keras).<br>
+        Hadits ini adalah syarah nabawiyyah otentik atas frasa <em>fa-akhadzahumullāhu bi-dzunūbihim wallāhu syadīdul-'iqāb</em>.
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Ṣhaḥīḥ Muslim (No. 2865) dari Sahabat 'Iyāḍh bin Ḥimār al-Mujāsyī'ī r.a. — Murka Ilahi atas Pola Pembangkangan Sejarah:</strong><br>
+        Rasulullah ﷺ bersabda meriwayatkan firman Allah (Hadits Qudsi):<br>
+        <em>"Wa inna-llāha nazhara ilā ahlil-ardhi fa-maqatahum, 'arabahum wa 'ajamiyyahum, illā baqāyā min ahlil-kitāb... wa innamā ba'atstuka li-abtalīyaka wa abtaliya bika..."</em><br>
+        (Sesungguhnya Allah memandang kepada seluruh penduduk bumi, lalu Dia memurkai mereka—baik bangsa Arab maupun non-Arab—karena mereka telah menempuh kebiasaan kufur umat-umat terdahulu dan menyimpang dari fitrah wahyu, kecuali sisa-sisa kecil dari Ahli Kitab yang memegang tauhid murni. Dan Allah berfirman: "Sesungguhnya Aku mengutusmu [wahai Muhammad] semata-mata untuk mengujimu dan menguji manusia dengan risalahmu...").
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. D-'-B (د - أ - ب — Da'b):</strong><br>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: د-أ-ب) merumuskan bahwa akar kata ini berporos pada satu prinsip makna utama (<em>aṣhlun wāḥid</em>), yaitu <strong>kesinambungan, kesungguhan, dan keletihan yang dilakukan terus-menerus dalam suatu pekerjaan hingga menjadi tradisi atau kebiasaan yang mendarah daging (al-istimrār wal-mulāzamah wal-ijtihād fīl-'amal)</strong>. Orang Arab berkata: <em>Da'aba ar-rajulu fī 'amalih</em> jika seseorang bekerja membanting tulang tanpa henti. Di dalam <em>Lisān al-'Arab</em>, Ibnu Manzhūr menegaskan bahwa <em>ad-da'b</em> bermakna <em>al-'ādah wasy-sya'n wal-hāl</em> (adat kebiasaan, tabiat permanen, dan kondisi faktual). Dalam ayat ini, kata <em>da'b</em> membawa konotasi peyoratif tajam: kaum kafir Makkah dan para penentang wahyu seolah-olah "bekerja keras membanting tulang" melestarikan tradisi kekafiran dan permusuhan terhadap kebenaran, persis sebagaimana tradisi yang diwariskan oleh keluarga Fir'aun.
+        </li>
+        <li>
+            <strong>2. A-W-L / A-Y-L (أ - و - ل — Āl):</strong><br>
+            Ibnu Fāris menjelaskan porosnya pada makna <strong>kembali ke pangkal asal dan rujukan utama (ar-rujū' ilal-aṣhl)</strong>. Dari sini lahir kata <em>ta'wīl</em> (mengembalikan makna ke asalnya). Ibnu Manzhūr dalam <em>Lisān al-'Arab</em> membedakan secara rigid antara kata <em>Ahl</em> (أهل) dan <em>Āl</em> (آل): kata <em>Āl</em> hanya disandarkan kepada entitas yang memiliki kedudukan tinggi, otoritas kemuliaan, atau kepemimpinan politik/spiritual (dikatakan <em>Ālu Fir'awn</em>, <em>Ālu Ibrāhīm</em>, <em>Ālu Muḥammad</em>, namun orang Arab tidak mengatakan <em>Ālu al-Iskāfī</em> [keluarga si tukang sol sepatu]). Kata <em>Ālu Fir'awn</em> di sini mencakup seluruh rezim, aparatur birokrasi, bala tentara elit, dan para pengikut setia yang bersekutu dengan sistem kekuasaan Fir'aun.
+        </li>
+        <li>
+            <strong>3. F-R-'-N (ف - ر - ع - ن — Fir'awn):</strong><br>
+            Secara morfologi leksikal Arab klasik, kata ini diderivasikan menjadi <em>al-far'anah</em> yang bermakna <strong>kesombongan ekstrem, kebengisan tirani, dan pembangkangan yang melampaui batas (at-tajabbur wal-'utūw)</strong>. Namun secara etimologi historis komparatif, <em>Fir'awn</em> adalah ta'rīb (arabisasi) dari bahasa Mesir kuno <em>Per-Aa</em> yang secara harfiah berarti "Rumah Besar" (Istana Kerajaan). Al-Qur'an menggunakan nama jabatan ini bukan sekadar untuk mencatat kronik figur tertentu, melainkan meminjamnya sebagai <strong>simbol arketipal bagi puncak keangkuhan penguasa materialistis</strong> yang memproklamasikan dirinya mandiri dari Tuhan.
+        </li>
+        <li>
+            <strong>4. K-Dz-B (ك - ذ - ب — Kadzdzabū):</strong><br>
+            Akar kata ini berporos pada <strong>ketiadaan kebenaran dalam perkataan atau realitas (khilāf ash-shidq)</strong>. Mengikuti wazan <em>Taf'īl</em> (كَذَّبَ - يُكَذِّبُ) yang menunjukkan fungsi intensitas dan multiplikasi (<em>at-taktsīr wal-mubālaghah</em>). Mereka bukan sekadar bersikap skeptis atau meragukan ayat-ayat Allah, melainkan secara aktif, berulang-ulang, terorganisasi, dan agresif menuduh wahyu Ilahi sebagai kebohongan demi mempertahankan privilese status quo mereka.
+        </li>
+        <li>
+            <strong>5. '-Kh-Dz (أ - خ - ذ — Akhadzahum):</strong><br>
+            Ibnu Fāris menetapkan poros makna dasarnya pada <strong>meraih, menawan, dan menaklukkan sesuatu dengan paksaan dan kekuatan mutlak (al-ḥiyāzah wal-qahr)</strong>. Ketika kata <em>al-akhdz</em> disandarkan kepada Allah terhadap orang-orang zalim, ia bermakna penyergapan azab yang datang secara melumpuhkan, mendadak, dan mematikan tanpa menyisakan ruang sedikit pun bagi pelaku untuk berkelit atau melarikan diri.
+        </li>
+        <li>
+            <strong>6. Dz-N-B (ذ - ن - ب — Dzunūbihim):</strong><br>
+            Akar kata ini berporos pada <strong>ekor sesuatu, kelanjutan di bagian belakang, dan akibat yang mengekor (at-tāliyatul-muta'akhkhirah)</strong>. Dari sini lahir kata <em>dzanab</em> (ekor hewan). Dosa dinamakan <em>dzanb</em> (jamaknya <em>dzunūb</em>) karena setiap kemaksiatan dan pelanggaran moral tidak pernah lenyap ditelan waktu; ia memiliki "ekor panjang" berupa konsekuensi buruk dan sanksi hukum yang terus membuntuti pelakunya hingga menuntut pembalasan di dunia dan akhirat.
+        </li>
+        <li>
+            <strong>7. '-Q-B (ع - ق - ب — 'Iqāb):</strong><br>
+            Ibnu Fāris memaparkan porosnya pada <strong>sesuatu yang datang menyusul di belakang sebagai pengganti atau pembalasan (al-ityān ba'da asy-syai')</strong>. Kata <em>'iqāb</em> adalah bentuk mashdar yang menunjukkan penjatuhan sanksi hukum setimpal yang datang persis di belakang terjadinya kejahatan. Sifat <em>Syadīdul-'Iqāb</em> menegaskan bahwa pembalasan Allah memiliki intensitas keras yang melampaui segala bentuk hukuman yang dapat dibayangkan oleh manusia.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>كَدَأْبِ</strong></td>
+                <td>Kāf: Harf jarr tasybīh.<br><em>Da'bi</em>: Mashdar wazan <em>fa'l</em>, isim majrur.</td>
+                <td>Jār wa majrūr syibh jumlah fī maḥalli raf'in <strong>Khabar Mubtada' Mahdzūf</strong> (taqdīrnya: <em>Da'buhum kada'bi</em> atau <em>Amruhum kada'bi</em>), atau fī maḥalli nashbin Ḥāl dari dhamīr pada <em>kafarū</em> / <em>waqūdun-nār</em> pada ayat 10. Kata <em>da'bi</em> mudhāf.</td>
+            </tr>
+            <tr>
+                <td><strong>ءَالِ</strong></td>
+                <td>Isim jamak wazan <em>fa'l</em> (asalnya <em>ahl</em> atau <em>a-w-l</em>).</td>
+                <td><strong>Mudhāfun ilayh</strong> majrūr bil-kasrah azh-zhāhirah 'alā ākhirih, wa huwa mudhāf.</td>
+            </tr>
+            <tr>
+                <td><strong>فِرْعَوْنَ</strong></td>
+                <td>Isim 'alam 'ajamī (ta'rīb dari Mesir Kuno).</td>
+                <td><strong>Mudhāfun ilayh tsānī</strong> majrūr bil-fatḥah niyābatan 'anil-kasrah li-annahu mamnū' minash-ṣharf (disebabkan 'alamiyyah dan 'ujmah).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلَّذِينَ</strong></td>
+                <td>Wāwu: Harf 'aṭhaf.<br><em>Alladzīna</em>: Ism mawṣhūl jamak mudzakkar.</td>
+                <td>Mabnī 'alal-fatḥ fī maḥalli jarrin <strong>Ma'thūf</strong> kepada <em>āli Fir'awn</em> (atau ma'thūf kepada mudhāf <em>da'b</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>مِن قَبْلِهِمْ</strong></td>
+                <td><em>Min</em>: Harf jarr.<br><em>Qabli</em>: Isim zamān majrur.<br><em>Him</em>: Dhamīr jamak majrur.</td>
+                <td>Jār wa majrūr muta'alliq bi-shilatil-mawshūl al-mahdzūfah (taqdīrnya: <em>walladzīna kāstakannū / madhaw min qablihim</em>). <em>Him</em> mudhāfun ilayh fī maḥalli jarr.</td>
+            </tr>
+            <tr>
+                <td><strong>كَذَّبُوا۟</strong></td>
+                <td>Fi'il mādhī wazan <em>fa''ala</em> bersambung Wāwu jamā'ah.</td>
+                <td>Fi'il mādhī mabnī 'aladh-dhamm, Wāwu jamā'ah fī maḥalli raf'in <strong>Fā'il</strong>, Alif fāriqah. Jumlah fi'liyyah ini adalah <strong>Jumlah Mufassirah</strong> (penjelas bagi makna <em>da'b</em>) lā maḥalla lahā minal-i'rāb, atau jumlah musta'nafah bayāniyyah.</td>
+            </tr>
+            <tr>
+                <td><strong>بِـَٔايَـٰتِنَا</strong></td>
+                <td>Bā': Harf jarr.<br><em>Āyāti</em>: Jamak mu'annats salim majrur.<br><em>Nā</em>: Dhamīr mutakallim.</td>
+                <td>Jār wa majrūr muta'alliq bi-fi'il <em>kadzdzabū</em>. <em>Nā</em> dhamīr muttashil fī maḥalli jarr mudhāfun ilayh (menunjukkan keagungan / <em>Nā al-'azhamah</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>فَأَخَذَهُمُ</strong></td>
+                <td>Fā': Harf 'aṭhaf sababiyyah.<br><em>Akhadha</em>: Fi'il mādhī mabnī 'alal-fatḥ.<br><em>Hum</em>: Dhamīr jamak maf'ūl bih.</td>
+                <td>Fi'il mādhī ma'thūf kepada <em>kadzdzabū</em>. <em>Hum</em> dhamīr muttashil mabnī 'aladh-dhamm (diharakati dhammah lit-takhallush min iltiqā'is-sākinayn) fī maḥalli nashbin <strong>Maf'ūl bih Muqaddam</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱللَّهُ</strong></td>
+                <td>Ism 'alam jalālah.</td>
+                <td><strong>Fā'il Mu'akhkhar</strong> marfū' bidh-dhammah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>بِذُنُوبِهِمْ</strong></td>
+                <td>Bā': Harf jarr sababiyyah.<br><em>Dzunūbi</em>: Jamak taksīr majrur.<br><em>Him</em>: Dhamīr mudhāfun ilayh.</td>
+                <td>Jār wa majrūr muta'alliq bi-fi'il <em>akhadzahum</em>. Bā' bermakna kausalitas (<em>as-sababiyyah</em>): azab terjadi murni akibat dosa-dosa mereka.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ</strong></td>
+                <td>Wāwu: Isti'nāfiyyah / ḥāliyyah.<br><em>Allāh</em>: Ism jalālah.</td>
+                <td><strong>Mubtada'</strong> marfū' bidh-dhammah azh-zhāhirah 'alā ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>شَدِيدُ</strong></td>
+                <td>Ṣhifah musyabbahah wazan <em>fa'īl</em>.</td>
+                <td><strong>Khabar Mubtada'</strong> marfū' bidh-dhammah azh-zhāhirah, wa huwa mudhāf (shifah mudhafah ila fa'iliha fil-ma'na).</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْعِقَابِ ۝١١</strong></td>
+                <td>Mashdar wazan <em>fi'āl</em>, isim ma'rifah bi-al.</td>
+                <td><strong>Mudhāfun ilayh</strong> majrūr bil-kasrah azh-zhāhirah. Seluruh jumlah ismiyyah <em>Wallāhu syadīdul-'iqāb</em> adalah <strong>Jumlah Isti'nāfiyyah Muqarrirah</strong> (pengukuh atas keadilan sanksi Ilahi).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'āni — Al-Ījāz bil-Ḥadzf (Keringkasan Akseleratif Pembuangan Mubtada'):</strong><br>
+            Pembuangan mubtada' pada awal ayat (<em>Kada'bi</em> yang mentaqdirkan <em>Amruhum kada'bi</em> atau <em>Da'buhum kada'bi</em>) merupakan puncak efisiensi bahasa balaghah. Penghilangan subjek ini berfungsi mempercepat fokus audiens langsung kepada substansi perumpamaan: kemiripan perangai arogan kaum kafir Makkah dengan rezim Fir'aun sudah sedemikian mencolok sehingga tidak perlu lagi diuraikan secara bertele-tele.
+        </li>
+        <li>
+            <strong>Ilmu Ma'āni — Fā' as-Sababiyyah & Kausalitas Keadilan Kosmis:</strong><br>
+            Penggunaan huruf Fā' pada klausa <em>fa-akhadzahumullāh</em> menghadirkan makna <em>at-ta'qīb ma'as-sababiyyah</em> (konsekuensi langsung yang tak terelakkan akibat sebab sebelumnya). Ayat ini menolak faham fatalisme buta: Allah tidak menyiksa suatu kaum secara tiranik, melainkan azab tersebut datang menyergap persis seketika dosa pendustaan mereka telah mencapai titik kulminasi yang menuntut pembalasan.
+        </li>
+        <li>
+            <strong>Ilmu Bayān — At-Tasybīh at-Tamtsīlī al-Murakkab (Perumpamaan Sintetis Multidimensi):</strong><br>
+            Penyamaan kaum kafir Quraisy dengan keluarga Fir'aun bukan sekadar tasybih tunggal (menyepadankan individu dengan individu), melainkan <strong>Tasybih Tamtsili</strong>: menyamakan satu konstruksi keadaan utuh (arogansi kekayaan, kebanggaan pasukan, penolakan wahyu, dan kehancuran tragis) dengan konstruksi keadaan rezim Fir'aun di masa lampau. Perumpamaan ini membongkar kepalsuan benteng materialis yang dibanggakan kaum kafir di setiap zaman.
+        </li>
+        <li>
+            <strong>Ilmu Bayān — Isti'ārah Tashrīḥiyyah pada Diksi "Ad-Da'b":</strong><br>
+            Penggunaan kata <em>ad-da'b</em> (yang makna aslinya adalah keletihan membanting tulang dalam bekerja terus-menerus) untuk melukiskan kekafiran merupakan metafora yang amat tajam. Al-Qur'an menyindir bahwa para penentang kebenaran itu seolah-olah "bekerja lembur memeras keringat" demi memproduksi dosa dan mendustakan ayat-ayat Allah, padahal seluruh jerih payah tersebut hanya berujung pada kebinasaan diri mereka sendiri.
+        </li>
+        <li>
+            <strong>Ilmu Badī' — Al-Iltifāt & Ta'zhīm bi-Iḍhāfah pada "Bi-āyātinā":</strong><br>
+            Peralihan gaya bahasa dengan menyandarkan ayat-ayat kepada dhamir keagungan Kami (<em>Nā al-'azhamah</em>) di tengah narasi orang ketiga melahirkan efek <em>at-takhwīf wat-tahwīl</em>. Mendustakan ayat-ayat yang dinisbatkan langsung kepada Dzat Yang Maha Agung adalah kejahatan ontologis tingkat tertinggi yang meruntuhkan hak pembangkang untuk mendapatkan belas kasihan.
+        </li>
+        <li>
+            <strong>I'jāz Fonetik & Tanāsub al-Fawāṣhil:</strong><br>
+            Penutupan ayat dengan fonem bibir Bā' bersukun (<em>al-'iqāb</em>) yang memiliki sifat <strong>Qalqalah Kubrā</strong> menghasilkan resonansi akustik yang menggelegar dan mantap. Dentuman bunyi pantulan keras ini secara psikologis menyegel seluruh argumen: menutup rapat pintu kompromi bagi kaum pembangkang dan memastikan bahwa keadilan sanksi Allah adalah ketetapan absolut yang final.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual Organik dengan Ayat 10):</strong><br>
+            Pada ayat 10, Al-Qur'an memaparkan tesis doktrinal aksiologis: <em>"Innal-ladzīna kafarū lan tughniya 'anhum amwāluhum wa lā awlāduhum minallāhi syay'ā, wa ulā'ika hum waqūdun-nār"</em> (Harta dan anak-anak kaum kafir tidak akan berguna sedikit pun melindungi mereka dari siksa Allah). Ayat 11 hadir sebagai <strong>verifikasi empiris-historis (al-istisyhād at-tārīkhī)</strong> atas tesis tersebut. Seakan-akan Al-Qur'an menyatakan: "Jika kalian meragukan bahwa kekayaan dan dinasti pasukan tidak mampu menyelamatkan manusia dari murka Allah, maka bukalah lembaran sejarah: perhatikanlah apa yang dialami oleh rezim Fir'aun dan umat-umat terdahulu! Bukankah Fir'aun memiliki kekayaan emas yang jauh melampaui kalian dan bala tentara yang jauh lebih perkasa? Namun ketika azab Kami tiba, seluruh instrumen material itu musnah tak berdaya."
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis: Pasca-Badar, Menjelang Uhud & Gertakan Yahudi Madinah):</strong><br>
+            Konteks sosiologis turunnya klaster ayat ini berakar pada atmosfer politik Madinah pasca-Perang Badar (Ramadhan 2 H). Kemenangan 313 mujahid muslim atas koalisi bersenjata lengkap kafir Makkah mengejutkan konstelasi kekuasaan di seantero Jazirah Arab. Para konglomerat Makkah yang tewas di Badar (seperti Abu Jahal, Umayyah bin Khalaf, dan 'Utbah bin Rabi'ah) adalah personifikasi manusia yang membanggakan harta dan anak buah. Di Madinah, persekutuan Yahudi (Bani Qainuqa') dan kaum munafik mulai melancarkan perang urat saraf (<em>psywar</em>) dengan menggertak kaum muslimin bahwa Badar hanyalah kebetulan dan mereka memiliki benteng serta kekayaan yang tak terkalahkan. Dalam siyaq inilah ayat 11 turun laksana petir epistemik: meruntuhkan kesombongan poros penentang tauhid dan menyamakan gertakan mereka dengan gertakan rezim Fir'aun sesaat sebelum ditenggelamkan ke dasar laut.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Hermeneutis ke Ayat 12 dan 13):</strong><br>
+            Dari pemaparan hukum sejarah masa lalu pada ayat 11 (<em>Kada'bi āli Fir'awn</em>), Al-Qur'an pada ayat 12 segera melompat ke masa depan terdekat melalui nubuat kemenangan geopolitik: <em>"Qul lilladzīna kafarū satughlabūna wa tuḥsyarūna ilā jahannam, wa bi'sal-mihād"</em> (Katakanlah kepada orang-orang kafir: Kalian pasti akan dikalahkan di dunia dan digiring ke neraka Jahannam). Selanjutnya, ayat 13 membeberkan bukti lapangan Perang Badar yang baru saja disaksikan mata kepala mereka sendiri (<em>Qad kāna lakum āyatun fī fi'ataynil-taqatā...</em>). Rangkaian Sibaq-Siyaq-Lihaq ini membentuk konstruksi teologi sejarah yang utuh: <strong>Aksioma Doktrinal (Ayat 10) &rarr; Bukti Sejarah Purba (Ayat 11) &rarr; Deklarasi Nubuat Kemenangan (Ayat 12) &rarr; Verifikasi Sejarah Kontemporer (Ayat 13)</strong>.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭh-Ṭhabarī (w. 310 H) — <em>Jāmi' al-Bayān fī Ta'wīl al-Qur'ān</em>:</strong><br>
+        Aṭh-Ṭhabarī membedah secara mendalam makna kata <em>ad-da'b</em> sebagai <em>as-sunnah wal-'ādah wal-amr</em> (tradisi, kebiasaan, dan pola tindakan). At-Tabari menegaskan bahwa penyebutan <em>āli Fir'awn</em> bersama kaum-kaum sebelum mereka (seperti kaum Nuh, 'Ad, dan Tsamud) adalah bukti bahwa siapa saja dari kalangan musyrikin Makkah maupun Yahudi yang meniru pola kekufuran pendahulu mereka, niscaya akan ditimpa oleh Sunnatullah yang sama: <em>akhdzullāh</em> (penyergapan siksa Allah). At-Tabari menggarisbawahi bahwa kata <em>bi-dzunūbihim</em> menjadi dalil qath'i bahwa Allah tidak pernah menzalimi hamba-Nya; siksa tersebut adalah buah murni dari akumulasi dosa pendustaan mereka sendiri.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsīr (w. 774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsīr mengaitkan ayat ini dengan ayat kembar dalam Surah Al-Anfal (QS. 8:52 & 54). Beliau menjelaskan bahwa persamaan ini mencakup dua dimensi: kesamaan dalam tabiat mendustakan ayat-ayat Allah dan kesamaan dalam menerima kebinasaan total. Fir'aun yang memiliki istana megah, kekayaan tak tertandingi di masanya, dan kekuasaan mutlak atas Bani Israil terbukti tidak berdaya sedikit pun ketika Allah menenggelamkannya ke dasar Laut Merah bersama seluruh bala tentaranya. Ibnu Katsir menyimpulkan: <em>"Harta benda dan anak cucu yang dibanggakan kaum kafir tidak memberi manfaat sedikit pun bagi mereka di hadapan azab Allah, sebagaimana harta dan pasukan Fir'aun tidak mampu menolak kebinasaan saat ketetapan Allah tiba."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurṭhubī (w. 671 H) — <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurṭhubī menyoroti aspek keadilan teologis dan hukum sosial-politik. Beliau memaparkan bahwa huruf Bā' pada <em>bi-dzunūbihim</em> adalah <em>bā' al-sababiyyah wal-'adālah</em>: Allah menyiksa mereka murni disebabkan dosa-dosa mereka, bukan karena kesewenang-wenangan. Mengenai sifat <em>Syadīdul-'Iqāb</em>, Al-Qurthubi mengingatkan agar umat Islam tidak terpesona oleh gemerlap kekuasaan penguasa tiran yang kafir. Rezim tiranik yang dibangun di atas penindasan manusia dan penolakan kebenaran memiliki batas kedaluwarsa yang pasti; ketika Allah menjatuhkan sanksi-Nya, sanksi itu datang dengan amat keras dan tak tertahankan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Imam Az-Zamakhsyarī (w. 538 H):</strong><br>
+        Ar-Rāzī dalam <em>Mafātīḥ al-Ghayb</em> mengajukan analisis filsafat sejarah: Mengapa Allah secara spesifik memilih figur keluarga Fir'aun sebagai permisalan utama, padahal kaum 'Ad dan Tsamud dihancurkan dengan fenomena alam yang lebih dahsyat? Ar-Razi menjawab: karena Fir'aun adalah figur yang paling sempurna mewakili <strong>kebanggaan atas kekayaan material (amwāl) dan bala tentara/dinasti (awlād)</strong> yang menjadi fokus bantahan pada ayat 10. Fir'aun dengan congkak menyatakan dalam QS. Az-Zukhruf [43]: 51: <em>"Bukankah kerajaan Mesir ini milikku dan sungai-sungai ini mengalir di bawah kekuasaanku?"</em> Az-Zamakhsyari dalam <em>Al-Kasysyāf</em> menambahkan bahwa penggunaan kata <em>da'b</em> mengindikasikan kebiasaan yang dilakukan dengan tekad yang mendarah daging, sehingga sanksi pembalasan yang dijatuhkan pun setimpal dengan intensitas pembangkangan tersebut.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Āsyūr (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Āsyūr membedah ayat ini dari kacamata sosiologi peradaban dan falsafah sejarah. Beliau mencatat bahwa ayat ini merumuskan <strong>Hukum Universal Keruntuhan Peradaban</strong>: peradaban yang memisahkan diri dari nilai-nilai moral wahyu dan mendustakan tanda-tanda kebenaran akan mengalami degradasi batin yang parah. Kemajuan infrastruktur fisik dan militer tidak akan mampu menahan laju keruntuhan ketika penyakit kezaliman telah menjalar ke seluruh sendi masyarakat. Penggunaan bentuk lampau <em>fa-akhadzahumullāh</em> berfungsi sebagai aksioma empiris yang telah berulang kali terbukti di panggung sejarah dunia.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M) — <em>Tafsīr Al-Azhar</em> & Prof. Dr. M. Quraish Shihab — <em>Tafsīr Al-Mishbāḥ</em>:</strong><br>
+        Buya Hamka menguraikan dengan bahasa sastra yang menggetarkan nurani: <em>"Fir'aun menyangka sungai Nil dan piramidanya kekal abadi, namun air yang dibanggakannya mengalir di bawah istananya itulah yang pada akhirnya menenggelamkan mulut dan hidungnya hingga binasa."</em> Hamka memperingatkan para pemimpin bangsa agar tidak mengidap 'penyakit Fir'aunisme modern'—merasa kebal hukum karena dikelilingi kroni penjilat dan tumpukan modal. Sementara itu, Quraish Shihab dalam <em>Al-Mishbah</em> menggarisbawahi bahwa kata <em>da'b</em> mengisyaratkan suatu kebiasaan yang berulang hingga membentuk karakter kepribadian yang membeku. Ketika sebuah masyarakat telah menjadikan maksiat dan dusta sebagai budaya kolektif, maka sanksi pembalasan Allah (<em>al-'iqāb</em>) tinggal menunggu momentum sejarahnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Kementerian Agama Republik Indonesia — <em>Al-Qur'an dan Tafsirnya (Edisi Penyempurnaan)</em>:</strong><br>
+        Tafsir Kemenag RI menegaskan bahwa ayat ini mengandung pelajaran berharga bagi pembangunan peradaban bangsa: kejayaan suatu negara tidak semata-mata diukur dari kemegahan fisik gedung, kekuatan angkatan perang, atau kekayaan sumber daya alam. Jika kemajuan lahiriah tersebut disertai dengan pengingkaran terhadap nilai-nilai ketuhanan, keadilan sosial, dan kejujuran moral, maka bangsa tersebut sedang meniti jalan kehancuran keluarga Fir'aun. Kemenag menggarisbawahi bahwa keadilan retributif Allah berlaku adil bagi setiap bangsa tanpa diskriminasi.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Kesepakatan Ulama (Ijmā' / Ittifāq)</th>
+                <th>Dinamika Variasi Penafsiran (Ikhtilāf Tanawwu')</th>
+                <th>Implikasi Hermeneutis & Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Makna & Kedudukan Sintaksis "Kada'bi"</strong></td>
+                <td>Seluruh mufasir sepakat bahwa kata <em>ad-da'b</em> bermakna kebiasaan, tabiat mendarah daging, dan konsistensi jalan hidup kaum kafir yang serupa dengan kaum terdahulu.</td>
+                <td>
+                    • <strong>Mayoritas (At-Tabari, Az-Zamakhsyari, Ibnu 'Asyur):</strong> Kaf adalah syibh jumlah fi mahalli raf'in khabar mubtada' mahdzuf (<em>amruhum kada'bi</em>).<br>
+                    • <strong>Sebagian Nahwiyyin (Al-Farra', Al-Zajjaj):</strong> Kedudukan kaf adalah nashab sebagai hal dari kata <em>kafarū</em> atau <em>waqūdun-nār</em> pada ayat 10.<br>
+                    • <strong>Ibnu Katsir:</strong> Menekankan kesamaan substansi nasib kebinasaan ketimbang sekadar kemiripan perbuatan.
+                </td>
+                <td>Menunjukkan integrasi erat antara tata bahasa Arab tinggi dengan ketajaman pesan teologis mengenai kontinuitas watak kekufuran lintas zaman.</td>
+            </tr>
+            <tr>
+                <td><strong>Urgensi Pengangkatan Arketipe "Āli Fir'awn"</strong></td>
+                <td>Sepakat bahwa penyebutan keluarga Fir'aun adalah simbol puncak kekuasaan tiranik materialistis yang dihancurkan Allah secara telak.</td>
+                <td>
+                    • <strong>Ar-Razi:</strong> Dipilih karena Fir'aun adalah figur yang paling membanggakan harta (<em>amwal</em>) dan pasukan (<em>awlad</em>) sesuai tema ayat 10.<br>
+                    • <strong>Ibnu 'Asyur:</strong> Karena kisah Fir'aun sangat dikenal oleh bangsa Arab melalui interaksi dengan masyarakat Mesir dan kaum Yahudi.<br>
+                    • <strong>Buya Hamka:</strong> Sebagai peringatan psikologis bagi penguasa zalim di setiap era agar tidak tertipu oleh kedigdayaan fana.
+                </td>
+                <td>Menjadikan narasi Al-Qur'an relevan sepanjang zaman: Fir'aun bukan sekadar tokoh sejarah purba, melainkan sistem mentalitas arogansi kekuasaan yang bisa muncul dalam wujud modern.</td>
+            </tr>
+            <tr>
+                <td><strong>Hakikat Teologis "Bi-dzunūbihim" & "Syadīdul-'Iqāb"</strong></td>
+                <td>Sepakat bahwa Allah Maha Adil dan suci dari kezaliman; azab yang menimpa suatu kaum adalah konsekuensi langsung dari perbuatan dosa mereka sendiri.</td>
+                <td>
+                    • <strong>Asy'ariyyah (Al-Qurthubi, Ar-Razi):</strong> Huruf Ba' adalah sababiyyah zhahirah yang diciptakan Allah sebagai Sunnatullah, menegaskan keadilan hukum Ilahi.<br>
+                    • <strong>Mu'tazilah (Az-Zamakhsyari):</strong> Menekankan kepastian pembalasan (<em>wujūb al-wa'īd</em>) atas pelaku dosa besar.<br>
+                    • <strong>Salaf / Atsari (Ibnu Katsir):</strong> Menetapkan sifat <em>Syadīdul-'Iqāb</em> sebagai sifat fi'liyyah yang hakiki bagi Allah sesuai keagungan-Nya tanpa takyif.
+                </td>
+                <td>Membentengi umat dari ilusi fatalisme dan menjamin bahwa sistem moral alam semesta ditegakkan di atas akuntabilitas keadilan yang sempurna.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Ilusi Kekebalan Materialis vs Kesadaran Sunnatullah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Jahiliyah / Hegemoni Sekuler</th>
+                <th>Pola Pikir Qur'ani Rabbani (Sunnatullah Mindset)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Sumber Keamanan Eksistensial</strong></td>
+                <td><strong>Material Security Illusion:</strong> Menjadikan saldo rekening, portofolio aset, jabatan politis, dan koneksi elit kekuasaan sebagai benteng mutlak dari krisis.</td>
+                <td><strong>Tawakal & Integritas Moral:</strong> Menyadari bahwa seluruh instrumen duniawi bersifat fana; benteng sejati adalah keridhaan Allah dan kepatuhan pada hukum-Nya.</td>
+            </tr>
+            <tr>
+                <td><strong>Pembacaan Pola Sejarah</strong></td>
+                <td><strong>Random Cycle / Darwinisme Sosial:</strong> Menganggap sejarah digerakkan oleh kebetulan materi atau hukum rimba ("siapa kuat, dia yang menguasai dan berhak menindas").</td>
+                <td><strong>Moral Causality in History:</strong> Memahami bahwa panggung sejarah dipandu oleh Sunnatullah yang adil; arogansi dan kezaliman pasti memicu kehancuran dari dalam.</td>
+            </tr>
+            <tr>
+                <td><strong>Sikap terhadap Dosa Berulang</strong></td>
+                <td><strong>Normalisasi Kebiasaan Buruk (Habituated Denial):</strong> Menganggap pelanggaran etika dan penindasan kaum lemah sebagai hal wajar demi mencapai target kekuasaan.</td>
+                <td><strong>Kewaspadaan Kritis atas 'Da'b':</strong> Sadar bahwa kemaksiatan yang dibiasakan akan mengkristal menjadi tabiat permanen yang mengundang interupsi azab Ilahi.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Pharaonic Illusion Trap (Perangkap Ilusi Fir'aunistik):</strong><br>
+            Kaidah kognitif yang membedah bahaya akumulasi kekuasaan dan kekayaan yang tidak diimbangi oleh ketundukan spiritual. Ketika seseorang atau sebuah institusi berada di puncak dominasi tanpa ada pihak yang berani mengkritik, otak bawah sadarnya secara keliru mengasumsikan bahwa dirinya "kebal hukum" (<em>above the law and divine rules</em>). Perangkap ilusi ini secara sistematis mematikan fungsi empati, menolak umpan balik kebenaran (<em>kadzdzabū bi-āyātinā</em>), dan melahirkan kebutaan strategis (<em>strategic blindness</em>) yang mempercepat kejatuhannya sendiri persis di puncak kecongkakannya.
+        </li>
+        <li>
+            <strong>Mental Model 2: The Moral Feedback Loop (Kaidah Kausalitas Moralitas Kosmis):</strong><br>
+            Kaidah berpikir yang diturunkan dari frasa <em>fa-akhadzahumullāhu bi-dzunūbihim</em>. Di alam semesta ini, hukum moral memiliki derajat kepastian yang setara dengan hukum fisika. Pengabaian terhadap kebenaran dan kezaliman sosial bukanlah peristiwa yang lenyap tanpa bekas; ia adalah input destruktif yang pasti mengakumulasi "ekor konsekuensi" (<em>dzunūb</em>). Cepat atau lambat, sistem semesta yang dinaungi oleh <em>Syadīdul-'Iqāb</em> akan mengirimkan serangan balik keadilan yang melumpuhkan pelaku kezaliman.
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <p>
+        Secara neurobiologis dan psikologis, kata <strong>ad-da'b</strong> menggambarkan fenomena pembentukan jalur saraf kebiasaan (<em>neuroplastic habituation</em>). Ketika seseorang melakukan pelanggaran etika atau penolakan terhadap kebenaran untuk pertama kalinya, sistem amigdala dan korteks prefrontal memicu sinyal disonansi kognitif berupa rasa bersalah, cemas, dan gelisah.
+    </p>
+    <p>
+        Namun, jika dorongan moral tersebut ditekan berulang-ulang demi kenikmatan ego dan pembenaran kekuasaan, otak mengalami <strong>desensitisasi moral</strong>: ambang batas rasa bersalah menurun drastis, sinapsis pembenaran diri semakin menebal, hingga kemaksiatan berubah menjadi watak alami yang dipraktikkan tanpa beban nurani. Inilah yang di dalam Al-Qur'an dinamakan proses pembentukan <em>ad-da'b</em>, yang pada tingkat spiritual berujung pada penutupan kalbu oleh karat dosa (<em>Ar-Rān</em>).
+    </p>
+    <p>
+        Dalam perspektif <strong>Tazkiyatun Nafs</strong>, ayat 11 memberikan terapi kejut (<em>shock therapy</em>) bagi jiwa yang mulai terjangkit virus kesombongan. Mengingat nasib Fir'aun dan merenungkan nama sifat Allah <strong>Syadīdul-'Iqāb</strong> berfungsi sebagai instrumen <em>al-qahr wan-nadzārah</em>: meruntuhkan benteng pertahanan ego palsu, menghentikan siklus pembiasaan dosa sebelum membeku menjadi tabiat, dan mengembalikan jiwa ke derajat <em>al-inābah</em> (tunduk kembali kepada Sang Pencipta).
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi "Fir'aunisme Korporatokrasi & Oligarki Global":</h3>
+    <p>
+        Di abad ke-21, arketipe Fir'aun tidak lagi hadir dalam wujud penguasa bermahkota emas di tepi sungai Nil, melainkan bertransformasi menjadi <strong>oligarki finansial predator, korporatokrasi multinasional, dan kartel teknologi raksasa (Big Tech)</strong>. Entitas-entitas hegemonik ini menguasai surplus kekayaan duniawi yang melampaui produk domestik bruto puluhan negara berkembang, mendanai politisi untuk merekayasa undang-undang yang melegitimasi eksploitasi, serta memonopoli algoritma informasi publik.
+    </p>
+    <p>
+        Sebagaimana keluarga Fir'aun masa lalu, elit kekuasaan modern hidup dalam ilusi <em>impunity</em>: mereka merasa kebal dari hukum manusia karena memiliki tentara pengacara termahal, rekening rahasia di suaka pajak (<em>tax havens</em>), dan benteng perlindungan politik. Firman Allah <em>Kada'bi āli Fir'awn</em> menelanjangi kepalsuan ini: sejarah mencatat bahwa konglomerasi arogan yang menindas kaum lemah dan menentang ayat-ayat kebenaran pada akhirnya runtuh oleh pembusukan moral internal mereka sendiri, skandal sistemik, atau krisis finansial yang tak terhindarkan.
+    </p>
+
+    <h3>2. Kritik Peradaban: Ekosida, Kesenjangan Ekstrem, dan Dekadensi Moral:</h3>
+    <p>
+        Peradaban sekuler materialistik kontemporer sedang mempraktikkan <em>ad-da'b</em> yang merusak tatanan bumi: demi mengejar pertumbuhan ekonomi tanpa batas, industri fosil dan pertambangan rakus melakukan kejahatan lingkungan (ekosida) yang memicu krisis iklim global, menenggelamkan pulau-pulau kecil, dan memicu bencana hidrometeorologi dahsyat. Sementara itu, jurang kesenjangan semakin mengerikan: 1% populasi terkaya menguasai lebih dari separuh kekayaan bumi, membiarkan miliaran manusia berada di jurang kelaparan.
+    </p>
+    <p>
+        Klausa <strong>fa-akhadzahumullāhu bi-dzunūbihim wallāhu syadīdul-'iqāb</strong> hadir sebagai peringatan kosmis bagi peradaban modern. Krisis multidimensi—mulai dari krisis kesehatan mental, disrupsi iklim, ancaman perang nuklir, hingga instabilitas ekonomi global—adalah manifestasi awal dari sanksi pembalasan atas keserakahan manusia. Jika peradaban abad ke-21 menolak untuk bertobat dan terus melestarikan kebiasaan keluarga Fir'aun, maka Sunnatullah kehancuran peradaban akan bekerja dengan ketegasan yang sama seperti saat Laut Merah menggulung pasukan Fir'aun.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit Harian: "The Daily Habit Audit" (Memotong Rantai 'Da'b' Buruk Sebelum Mengkristal):</strong><br>
+                Sediakan waktu 3 menit setiap malam sebelum tidur untuk mengaudit satu kebiasaan kecil yang berpotensi menjadi dosa berulang (seperti: menunda shalat tepat waktu, bergunjing di grup pesan singkat, mengonsumsi tontonan sia-sia/haram, atau bersikap kasar pada bawahan). Lakukan interupsi seketika: istighfar 10 kali dengan penuh penyesalan dan pasang tindakan pencegahan fisik nyata (misal: aktifkan pembatasan durasi aplikasi layar gawai, buat alarm pengingat ibadah) agar perbuatan tersebut tidak berubah menjadi <em>da'b</em> (tradisi watak yang mengundang murka Allah).
+            </li>
+            <li>
+                <strong>Protokol Keputusan Moral: Audit "Zero Toleransi Keangkuhan" di Wilayah Otoritas:</strong><br>
+                Bagi Anda yang memegang posisi kepemimpinan keluarga, manajerial perusahaan, atau jabatan publik, tetapkan protokol integritas yang tegas: tolak mutlak segala bentuk penyalahgunaan wewenang untuk menindas bawahan, memotong hak pekerja, memanipulasi laporan keuangan, atau memperkaya kroni. Ingatkan diri Anda saat godaan arogansi kekuasaan muncul: <em>Kekuasaan dan pasukan Fir'aun yang tak tertandingi hancur lebur seketika saat berhadapan dengan Allah; bagaimana mungkin kekuasaan kecilku ini mampu bertahan jika aku berbuat zalim?</em>
+            </li>
+            <li>
+                <strong>Komitmen Sosial-Intelektual: Berpihak secara Konkret pada Kaum yang Terzalimi (Anti-Fir'aunisme):</strong><br>
+                Wujudkan komitmen ketakwaan dengan mengambil bagian nyata dalam membela dan memberdayakan kaum lemah (<em>mustadh'afīn</em>) di lingkungan Anda: sisihkan sebagian rezeki secara rutin untuk advokasi buruh yang terzalimi, berikan bantuan hukum cuma-cuma bagi warga miskin, atau suarakan kebenaran secara santun namun tegas di ruang publik digital untuk melawan narasi penindasan dan ketidakadilan oligarki.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Refleksi Kepalsuan Benteng Duniawi:</strong> Ketika aku memikirkan masa depanku, kepada apakah hatiku paling bersandar untuk merasa aman: kepada saldo rekening bank, polis asuransi, kepemilikan aset, dan jabatan pekerjaanku, ataukah kepada perlindungan dan rahmat Allah Yang Maha Kuasa?
+            </li>
+            <li>
+                <strong>Refleksi Benih Tirani Pribadi:</strong> Di bagian manakah sifat dan benih "Fir'aunisme" masih bercokol di dalam dadaku: apakah aku bersikap manis dan tunduk di depan atasanku, namun berubah menjadi tiran yang pemarah, arogan, dan gemar merendahkan pasangan, anak-anak, asisten rumah tangga, atau bawahan kantorku?
+            </li>
+            <li>
+                <strong>Refleksi Khawf terhadap Syadīdul-'Iqāb:</strong> Seberapa sering bayangan sanksi pembalasan Allah yang maha dahsyat (<em>Syadīdul-'Iqāb</em>) benar-benar hadir menggetarkan nuraniku saat nafsu mendesakku untuk melakukan dosa tersembunyi yang dianggap lumrah dan lazim oleh lingkungan pergaulan modern di sekitarku?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma Yā Allāh, Yā Mālikal-Mulk, Yā Man Huwa Syadīdul-'Iqāb, Yā Man akhadza āla Fir'awna wa man qablahum bi-dzunūbihim lammā kadzdzabū bi-āyātika.<br><br>
+            Ya Allah, Dzat Yang Maha Menguasai seluruh kerajaan langit dan bumi, Yang Maha Keras sanksi pembalasan-Nya terhadap para penantang kebenaran. Kami bersimpuh di hadapan keagungan-Mu mengakui betapa lemah dan hinanya diri kami. Bersihkanlah hati kami dari segala benih kesombongan, arogansi kekuasaan, dan ilusi rasa aman semu yang bersandar pada harta benda dan kekuatan manusiawi yang fana.<br><br>
+            Selamatkanlah jiwa kami, keluarga kami, dan bangsa kami dari terjerumus ke dalam kebiasaan buruk orang-orang kafir dan rezim tiran yang mendustakan ayat-ayat-Mu. Lindungilah kami dari sanksi azab-Mu yang melumpuhkan, dan jangan Engkau biarkan dosa-dosa kami menjadi penyebab turunnya murka-Mu atas tanah air kami.<br><br>
+            Karuniakanlah kepada kami keteguhan iman, hiasilah hidup kami dengan kerendahan hati para nabi dan orang-orang saleh, serta matikanlah kami dalam keadaan berserah diri seutuhnya di atas kalimat tauhid yang murni. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-010 - QS. Ali 'Imran Ayat 10.html">&larr; Kembali ke Ayat 10 (QS. 3:10)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 11</strong> (Blok 1: Keteguhan Akidah)</span>
+        <a href="003-012 - QS. Ali 'Imran Ayat 12.html">Lanjut ke Ayat 12 (QS. 3:12) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

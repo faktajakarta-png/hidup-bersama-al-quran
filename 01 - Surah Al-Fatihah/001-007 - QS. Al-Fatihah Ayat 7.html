@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-007 - QS. Al-Fatihah Ayat 7 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="001-006 - QS. Al-Fatihah Ayat 6.html">&larr; Ayat Sebelumnya (QS. 1:6)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="../02 - Surah Al-Baqarah/002-000 - Pengantar & Peta Maqasid Surah Al-Baqarah.html">Lanjut ke Surah Al-Baqarah &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Poros 3: Peta Tiga Golongan Peradaban Manusia</span>
+        <span class="badge">9 Kata | 43 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 7</h1>
+    <div class="transliteration">
+        "Shirāthalladzīna an'amta 'alayhim ghayril-maghdhūbi 'alayhim wa ladh-dhāllīn."
+    </div>
+    <div class="thematic-title">
+        Tipologi Tiga Jalan Peradaban Manusia: Teladan Empat Kafilah Penerima Nikmat (An'amta 'Alayhim), Patologi Pengkhianatan Ilmu yang Mengundang Murka (Al-Maghdhūb 'Alayhim), dan Tragedi Kebodohan Tanpa Ilmu (Adh-Dhāllīn)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 3: Puncak Doa & Peta Jalan Sejarah Kemanusiaan)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ ۝٧
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "(Yaitu) jalan hidup orang-orang yang telah Engkau anugerahkan nikmat (iman, ilmu, dan amal saleh) kepada mereka; bukan (jalan) mereka yang dimurkai (karena sengaja menentang kebenaran setelah mengetahuinya), dan bukan (pula jalan) mereka yang tersesat (karena beramal tanpa ilmu yang benar)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Ayat 7 menerjemahkan konsep abstrak "jalan lurus" (Ayat 6) ke dalam **model keteladanan nyata dalam sejarah manusia**. Perhatikan perbedaan struktur aktif dan pasif yang sangat halus: nikmat disandarkan langsung kepada Allah dalam bentuk kata kerja aktif (<em>An'amta 'alayhim</em> = "yang telah Engkau beri nikmat"), sedangkan kemurkaan disebutkan dalam bentuk isim maf'ul pasif tanpa menyebut subjek pelakunya (<em>Al-Maghdhūbi 'alayhim</em> = "mereka yang dimurkai") sebagai puncak kesantunan adab (<em>adabul-Qur'ān</em>) di hadapan Allah!
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>صِرَٰطَ ٱلَّذِينَ</strong><br>(<em>Shirāthalladzīna</em>)</td>
+                <td>
+                    <strong>Huruf Shād</strong> kasrah tetap menjaga sifat <em>isti'la'</em> dan <em>ithbaq</em>; <em>Rā'</em> fathah dibaca <strong>Tafkhim</strong> dengan mad 2 harakat; <em>Thā'</em> fathah tebal.<br>
+                    <strong>Lam الموصولة</strong> pada <em>Alladzīna</em> bertasydid fathah disertai huruf <em>Dzāl</em> kasrah lembut dari ujung lidah dengan ujung gigi seri atas.
+                </td>
+                <td>
+                    Sebagaimana pada Ayat 6:<br>
+                    • <strong>Mayoritas Imam:</strong> Membaca dengan <em>Shād</em> murni (<em>Shirātha</em>).<br>
+                    • <strong>Qunbul (dari Ibnu Katsir) & Ruwais (dari Ya'qub):</strong> Membaca dengan <em>Sīn</em> murni (<em>Sirātha</em>).<br>
+                    • <strong>Khalaf (dari Hamzah):</strong> Membaca dengan <em>Isymam Zāy</em> (<em>Zirātha</em>), sedangkan <strong>Khallad (dari Hamzah)</strong> membaca kata kedua ini dengan <em>Shād</em> murni.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>أَنْعَمْتَ</strong><br>(<em>An'amta</em>)</td>
+                <td>
+                    <strong>Idzhar Halqi:</strong> <em>Nūn Sukun</em> bertemu huruf tenggorokan <em>'Ain</em> dibaca jelas tanpa dengung.<br>
+                    <strong>Idzhar Syafawi Sangat Ditekankan:</strong> <em>Mīm Sukun</em> bertemu huruf <em>Tā'</em> wajib dibaca jelas tanpa memantul (<em>qalqalah</em>); Imam Al-Jazari memperingatkan dalam <em>Al-Muqaddimah</em>: <em>"Waḥdzar ladā wāwin wa fā'in an takhtafī"</em> serta menjaga <em>Mīm</em> pada <em>an'amta</em> agar tidak memantul menjadi <em>an'ameta</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>An'amta</em> dengan fathah pada <em>Tā'</em> (dhamir mukhathab untuk Allah).<br>
+                    <strong>Batas Ayat (Al-'Add al-Āyī):</strong> Bagi Qurra' Madinah, Bashrah, dan Syam (yang tidak menghitung Basmalah sebagai Ayat 1), kalimat <em>Shirāthalladzīna an'amta 'alayhim</em> adalah <strong>akhir Ayat ke-6</strong> (waqaf <em>ra'su āyah</em> pada kata <em>'alayhim</em> yang pertama)! Sedangkan bagi Qurra' Makkah dan Kufah (termasuk Hafsh dari 'Ashim), tidak ada pemenggalan ayat di sini karena seluruh kalimat hingga <em>waladh-dhāllīn</em> adalah <strong>Ayat ke-7</strong>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>عَلَيْهِمْ (١ و ٢)</strong><br>(<em>'Alayhim</em> / <em>'Alayhimū</em> / <em>'Alayhum</em>)</td>
+                <td>
+                    <strong>Harf Līn:</strong> <em>Yā' Sukun</em> didahului fathah pada <em>Lām</em>.<br>
+                    <strong>Idzhar Syafawi:</strong> Dalam riwayat Hafsh, <em>Mīm Jamak</em> sukun bertemu <em>Ghain</em> (pada yang pertama) dan <em>Wāw</em> (pada yang kedua) dibaca Idzhar Syafawi dengan perhatian ekstra saat bertemu <em>Wāw</em> agar tidak teridghamkan.
+                </td>
+                <td>
+                    Terdapat <strong>Empat Variasi Qira'at Mutawatirah</strong> pada <em>Hā' Dhamir</em> dan <em>Mīm Jamak</em> dalam kata <em>'Alayhim</em>:<br>
+                    • <strong>1. Kasrah Hā' & Sukun Mīm ('Alayhim):</strong> Bacaan mayoritas imam (Nafi' melalui Warsy dan wajah pertama Qalun, Abu 'Amr, Ibnu 'Amir, 'Ashim, Al-Kisa'i, Khalaf).<br>
+                    • <strong>2. Kasrah Hā' & Shilah Mīm dengan Wawu Mad 2 Harakat ('Alayhimū):</strong> Bacaan <strong>Ibnu Katsir</strong>, <strong>Abu Ja'far</strong>, dan wajah kedua <strong>Qalun dari Nafi'</strong>.<br>
+                    • <strong>3. Dhommah Hā' & Sukun Mīm ('Alayhum):</strong> Bacaan <strong>Hamzah</strong> dan <strong>Ya'qub</strong> (mengembalikan <em>Hā'</em> ke harakat asalnya yaitu dhommah seperti <em>hum</em>).<br>
+                    • <strong>4. Dhommah Hā' & Shilah Mīm ('Alayhumū):</strong> Bacaan <strong>Ruwais dari Ya'qub</strong> apabila disambung dalam kondisi shilah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>غَيْرِ ٱلْمَغْضُوبِ</strong><br>(<em>Ghayril-maghdhūbi</em>)</td>
+                <td>
+                    <strong>Huruf Ghain</strong> fathah tebal (<em>tafkhim</em>) diikuti <em>Yā' Līn</em> dan <em>Rā'</em> kasrah tipis (<em>tarqiq</em>).<br>
+                    Pada kata <em>Al-Maghdhūbi</em>: <strong>Hati-hati membedakan huruf Mīm (tarqiq) dengan Ghain Sukun (tafkhim wa rikhwah)</strong> agar tidak terbaca <em>al-magh-ghadhūb</em> (memantul) dan huruf <em>Dhād</em> dibaca tebal dengan sifat <em>istithalah</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Ghayri</em> dengan <strong>jarr (kasrah pada Rā')</strong> sebagai <em>na'at</em> atau <em>badal</em> dari <em>Alladzīna</em>.<br>
+                    Dalam qira'at syadzah (diriwayatkan dari Umar bin Khattab dan Ibnu Katsir dalam jalur syadz) tercatat bacaan <em>Ghayral-maghdhūbi</em> dengan <strong>nashab (fathah pada Rā')</strong> sebagai <em>ḥāl</em> atau <em>istitsnā'</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَلَا ٱلضَّآلِّينَ</strong><br>(<em>Wa ladh-dhāllīn</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah</strong> pada <em>Lam Ta'rif</em> ke dalam <em>Dhād</em> bertasydid fathah (sifat <em>isti'la'</em>, <em>ithbaq</em>, dan <em>istithalah</em> dari tepi lidah dengan gigi geraham atas).<br>
+                    <strong>Mad Lazim Kalimi Mutsaqqal:</strong> Huruf <em>Alif Mad</em> bertemu huruf <em>Lām Bertasydid</em> dalam satu kata; <strong>seluruh imam qira'at sepakat bulat (ijma') wajib membacanya panjang 6 harakat (Thul / Isyba')</strong> diikuti penekanan tasydid pada <em>Lām</em>.<br>
+                    <strong>Mad 'Aridh Lissukun</strong> di akhir ayat (2, 4, atau 6 harakat).
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <strong>Mad Lazim Kalimi Mutsaqqal 6 harakat</strong> pada <em>Adh-Dhāllīn</em> tanpa terkecuali.<br>
+                    <strong>Sunnah Mengucapkan "Āmīn":</strong> Seluruh ulama sepakat disunnahkannya mengucapkan <em>Āmīn</em> (آمِينَ — artinya: "Ya Allah, kabulkanlah!") setelah selesai membaca <em>wa ladh-dhāllīn</em>, namun <em>Āmīn</em> bukanlah ayat Al-Qur'an.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Sahih Penjelas tentang Identitas Tiga Golongan dan Keutamaan "Āmīn"</h3>
+    <div class="hadith-box">
+        <strong>1. Tafsir Al-Qur'an bil-Qur'an (QS. An-Nisa [4]: 69) — Penjelasan Eksplisit Siapakah "Alladzīna An'amta 'Alayhim":</strong><br>
+        Allah SWT merinci sendiri identitas golongan yang diberi nikmat dalam QS. An-Nisa [4]: 69: <em>"Wa man yuthi'illāha war-Rasūla fa-ulā'ika ma'alladzīna an'amallāhu 'alayhim minan-nabiyyīna wash-shiddīqīna wasy-syuhadā'i wash-shāliḥīn; wa ḥasuna ulā'ika rafīqā!"</em> (Dan barangsiapa menaati Allah dan Rasul-Nya, maka mereka itu akan bersama-sama dengan <strong>orang-orang yang dianugerahi nikmat oleh Allah, yaitu: [1] Para Nabi, [2] Para Shiddiqin [pecinta kebenaran sejati], [3] Para Syuhada, dan [4] Orang-orang Saleh</strong>. Dan mereka itulah teman yang sebaik-baiknya!).
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Tirmidzi (No. 2954), Ahmad (No. 19381), dan Ibnu Hibban dari 'Adi bin Hatim r.a. — Tafsir Langsung Rasulullah ﷺ tentang "Al-Maghdhūb 'Alayhim" dan "Adh-Dhāllīn":</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Innal-maghdhūba 'alayhim al-Yahūdu, wa innadh-dhāllīna an-Nashārā."</em> (Sesungguhnya <em>al-maghdhūb 'alayhim</em> [contoh historis kaum yang dimurkai karena mengetahui kebenaran namun membangkang] adalah kaum Yahudi [yang menyimpang], dan <em>adh-dhāllīn</em> [contoh historis kaum yang tersesat karena beribadah tanpa ilmu wahyu yang murni] adalah kaum Nasrani [yang menyimpang]). Para ulama muhaqqiqin menegaskan bahwa penyebutan kedua kaum tersebut adalah contoh puncak historis, sementara secara substansial <strong>setiap orang yang berilmu namun tidak mengamalkan ilmunya memiliki kemiripan dengan jalan Al-Maghdhūb 'alayhim, dan setiap orang yang beramal tanpa dasar ilmu memiliki kemiripan dengan jalan Adh-Dhāllīn</strong>!
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Muttafaqun 'Alaih (Sahih Bukhari No. 780 & Sahih Muslim No. 410) dari Abu Hurairah r.a. — Keagungan Mengucapkan "Āmīn" Bersama Malaikat:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Idzā ammanal-imāmu fa-amminū; fa-innahū man wāfaqa ta'mīnuhū ta'mīnal-malā'ikati ghufira lahū mā taqaddama min dzanbih."</em> (Apabila imam mengucapkan <em>Āmīn</em>, maka ucapkanlah <em>Āmīn</em>; karena sesungguhnya barangsiapa ucapan <em>Āmīn</em>-nya bertepatan dengan ucapan <em>Āmīn</em> para malaikat, niscaya diampuni dosa-dosanya yang telah lalu).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>An'amta (أَنْعَمْتَ — Akar Kata: ن-ع-م):</strong><br>
+            Berakar dari <em>Nūn-'Ain-Mīm</em> yang bermakna <strong>kelembutan, kenyamanan, dan kebaikan hidup yang menyenangkan</strong> (<em>al-līn war-rafāhiyah</em>). Wazan <em>Af'ala</em> (أَنْعَمَ) bermakna menyampaikan dan menganugerahkan nikmat. Karena di sini kata <em>An'amta</em> disebutkan secara mutlak tanpa objek pengikat (tidak dikatakan <em>an'amta 'alayhim bil-māl</em>), maka ia merujuk pada <strong>puncak segala nikmat yang hakiki</strong>, yaitu nikmat hidayah iman, ilmu yang lurus, dan amal saleh yang mengantarkan pada kebahagiaan abadi.
+        </li>
+        <li>
+            <strong>Al-Maghdhūb (ٱلْمَغْضُوبِ — Akar Kata: غ-ض-ب):</strong><br>
+            Isim Maf'ul dari <em>ghadhiba - yaghdhabu - ghadhaban</em> (kemurkaan yang hebat atas kejahatan yang disengaja). Dalam haq Allah SWT, <em>Al-Ghadhab</em> adalah sifat kemuliaan yang sesuai dengan keagungan-Nya, yang konsekuensinya adalah pencabutan berkah, laknat, dan jatuhnya sanksi hukuman bagi mereka yang membangkang terhadap kebenaran secara sadar dan sombong.
+        </li>
+        <li>
+            <strong>Adh-Dhāllīn (ٱلضَّآلِّينَ — Akar Kata: ض-ل-ل):</strong><br>
+            Jamak dari <em>Dhāll</em> (ضَالّ), Isim Fā'il dari <em>dhalla - yadhillu / yadhallu - dhalālan</em> yang bermakna <strong>kehilangan arah jalan yang benar dan menyimpang jauh dari tujuan</strong> (<em>adh-dhayā' wal-'udūl 'an tharīqil-ḥaqq</em>). Berbeda dengan <em>Al-Maghdhūb 'alayhim</em> yang rusak pada aspek **niat dan kepatuhan** (tahu jalan tapi sengaja melawan), maka <em>Adh-Dhāllīn</em> rusak pada aspek **ilmu dan kompas kebenaran** (ingin menuju Tuhan tapi menempuh jalan kebodohan dan khurafat).
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>صِرَٰطَ</strong></td>
+                <td>
+                    Isim mufrad mudzakkar nakirah yang menjadi makrifat karena idhafah.
+                </td>
+                <td>
+                    <strong>Badal Kull min Kull (Badal Muthābiq)</strong> atau <em>'Athaf Bayān</em> dari kata <em>Ash-Shirātha</em> pada Ayat 6; manshub dengan tanda fathah zhahirah, dan berkedudukan sebagai <em>mudhāf</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلَّذِينَ</strong></td>
+                <td>
+                    Isim Mawshul untuk jamak mudzakkar berakal.
+                </td>
+                <td>
+                    <strong>Mudhāfun Ilayh</strong> bagi <em>Shirātha</em>, mabni 'alal-fath fi mahalli jarr.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>أَنْعَمْتَ عَلَيْهِمْ</strong></td>
+                <td>
+                    <em>An'amta</em>: Fi'il madhi mazid ruba'i + ta' fa'il.<br>
+                    <em>'Alayhim</em>: Huruf jarr <em>'alā</em> + dhamir jamak <em>hum</em>.
+                </td>
+                <td>
+                    <em>An'amta</em> fi'il madhi mabni 'alas-sukun, dan <em>Tā'</em> dhamir muttashil mabni 'alal-fath fi mahalli raf'in sebagai <strong>Fā'il</strong>. <em>'Alayhim</em> jār wa majrūr muta'alliq dengan <em>an'amta</em>. <strong>Jumlah Shilah al-Mawshūl</strong> <em>lā maḥalla lahā minal-i'rāb</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>غَيْرِ</strong></td>
+                <td>
+                    Isim mulazim lil-idhafah yang bermakna <em>mughāyir</em> (sifat pembeda) atau <em>illā</em> (pengecualian).
+                </td>
+                <td>
+                    <strong>Na'at</strong> (sifat) bagi <em>Alladzīna</em> (sebab meskipun <em>ghayr</em> secara lafaz nakirah, namun karena ia diidhafahkan kepada isim makrifat <em>Al-Maghdhūbi</em> dan terletak di antara dua lawan kata yang spesifik, maka ia memperoleh pengkhususan makrifat), atau <strong>Badal</strong> dari <em>Alladzīna</em>; majrur dengan kasrah zhahirah, dan ia <em>mudhāf</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْمَغْضُوبِ عَلَيْهِمْ</strong></td>
+                <td>
+                    <em>Al-Maghdhūb</em>: Isim Maf'ul berwazan مَفْعُول dari <em>ghadhiba</em>.
+                </td>
+                <td>
+                    <em>Al-Maghdhūbi</em> <strong>Mudhāfun Ilayh</strong> bagi <em>ghayri</em>, majrur dengan kasrah zhahirah.<br>
+                    <em>'Alayhim</em>: Jār wa majrūr dalam posisi <strong>raf'in sebagai Nā'ibul-Fā'il</strong> (pengganti subjek pasif) bagi isim maf'ul <em>Al-Maghdhūbi</em>!
+                </td>
+            </tr>
+            <tr>
+                <td><strong>وَلَا ٱلضَّآلِّينَ</strong></td>
+                <td>
+                    <em>Wa-</em>: Huruf 'athaf.<br>
+                    <em>Lā</em>: Huruf nafyi lit-tawkīd.<br>
+                    <em>Adh-Dhāllīn</em>: Jamak mudzakkar salim dari isim fa'il <em>dhāll</em> (asalnya <em>dhālilīn</em>, diidghamkan lam pertama ke lam kedua).
+                </td>
+                <td>
+                    <em>Wa-</em> huruf 'athaf. <em>Lā</em> huruf tambahan untuk menguatkan penafian (<em>zā'idah li-tawkīdin-nafy</em> yang terkandung dalam kata <em>ghayri</em>). <em>Adh-Dhāllīna</em> ma'thuf kepada <em>Al-Maghdhūbi</em>, majrur dengan tanda huruf <em>Yā'</em> karena jamak mudzakkar salim.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi') — Empat Keajaiban Retorika Penutup Al-Fatihah</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Adab Luhur Al-Qur'an: Menyandarkan Nikmat kepada Allah ("An'amta") dan Menyamarkan Pelaku Murka ("Al-Maghdhūb"):</strong><br>
+            Perhatikan kontras luar biasa ini: ketika berbicara tentang nikmat hidayah, Al-Qur'an menyebut Allah secara eksplisit sebagai Pelaku Aktif: <strong>"Alladzīna an'amta 'alayhim"</strong> (Orang-orang yang telah <em>Engkau</em> beri nikmat). Namun ketika berbicara tentang kemurkaan, Al-Qur'an tidak mengatakan <em>"Ghayrilladzīna ghadhibta 'alayhim"</em> (Bukan orang-orang yang Engkau murkai), melainkan mengubahnya menjadi bentuk pasif: <strong>"Ghayril-maghdhūbi 'alayhim"</strong> (Bukan mereka yang dimurkai)! Mengapa?<br>
+            • <strong>Pertama (Adab di Hadapan Allah):</strong> Menyandarkan segala kebaikan dan nikmat secara langsung kepada Allah, serta tidak menyandarkan keburukan/hukuman secara langsung kepada-Nya dalam doa, sebagaimana adab Nabi Ibrahim a.s.: <em>"Wa idzā maridhtu fahuwa yasyfīn"</em> (Dan apabila aku sakit, maka Dialah yang menyembuhkanku — QS. Asy-Syu'ara: 80).<br>
+            • <strong>Kedua (Keluasan Subjek yang Memurkai):</strong> Bentuk pasif <em>Al-Maghdhūbi 'alayhim</em> menunjukkan bahwa mereka bukan hanya dimurkai oleh Allah, melainkan juga dimurkai oleh para malaikat, para nabi, dan seluruh orang beriman!
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia "Al-Ithmān bil-Badal" (Mengulang Kata "Shirāth"):</strong><br>
+            Mengapa kata <em>Shirātha</em> diulang kembali di awal Ayat 7 setelah disebut pada Ayat 6? Dalam ilmu Balaghah, pengulangan kata benda yang sama sebagai <em>Badal</em> berfungsi mengokohkan fokus pendengar: bahwa jalan lurus yang kita cari bukanlah jalan khayalan yang belum pernah ditempuh manusia, melainkan jalan nyata yang telah dilalui dengan sukses oleh kafilah para nabi dan orang-orang saleh!
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Rahasia Huruf "Lā" pada "Wa Ladh-Dhāllīn":</strong><br>
+            Kehadiran kata <em>Lā</em> setelah kata <em>Ghayr</em> menegaskan bahwa kedua kelompok menyimpang ini (<em>Al-Maghdhūb 'alayhim</em> dan <em>Adh-Dhāllīn</em>) adalah **dua kutub penyimpangan yang terpisah**, sehingga seorang mukmin wajib menjauhi keduanya secara mandiri: jangan menjadi orang berilmu yang congkak/tidak beramal, dan jangan pula menjadi ahli ibadah yang bodoh/tanpa ilmu.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Perbedaan Bentuk Kata: Fi'il Madhi ("An'amta"), Isim Maf'ul ("Al-Maghdhūb"), dan Isim Fa'il ("Adh-Dhāllīn"):</strong><br>
+            • <em>An'amta</em> (Fi'il Madhi) menunjukkan bahwa nikmat hidayah itu murni karunia Allah yang telah terbukti nyata dalam sejarah.<br>
+            • <em>Al-Maghdhūb</em> (Isim Maf'ul) menunjukkan bahwa kemurkaan telah jatuh menimpa mereka sebagai akibat pembangkangan mereka.<br>
+            • <em>Adh-Dhāllīn</em> (Isim Fa'il) menunjukkan bahwa kesesatan itu adalah tindakan yang mereka pilih sendiri secara terus-menerus.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Penjelas Konkret atas Ayat 6):</strong><br>
+            Ayat 6 memohon <em>Ash-Shirāthal-Mustaqīm</em> secara konseptual, dan Ayat 7 memberikan **peta sosiologis dan historis** dari jalan lurus tersebut beserta dua jurang di kanan-kirinya.
+        </li>
+        <li>
+            <strong>Siyāq (Khatimah / Penutup Agung Surah Al-Fatihah):</strong><br>
+            Ayat 7 menutup Surah Al-Fatihah dengan membagi seluruh umat manusia sepanjang sejarah ke dalam **tiga golongan besar**: (1) <em>Al-Mun'am 'alayhim</em> (mereka yang memadukan ilmu yang benar dan amal yang tulus), (2) <em>Al-Maghdhūb 'alayhim</em> (mereka yang memiliki ilmu namun merusak amal dan niat), dan (3) <em>Adh-Dhāllīn</em> (mereka yang bersemangat beramal namun kehilangan ilmu yang benar).
+        </li>
+        <li>
+            <strong>Liḥāq (Cetak Biru Seluruh Isi Surah Al-Baqarah dan Seluruh Al-Qur'an!):</strong><br>
+            Perhatikan hubungan struktural yang luar biasa antara Ayat 7 Al-Fatihah dengan **Surah Al-Baqarah**:<br>
+            • Tiga golongan di Ayat 7 Al-Fatihah langsung dijabarkan secara rinci pada **Blok 1 Surah Al-Baqarah (Ayat 1–20)**:<br>
+              1) Golongan <em>An'amta 'alayhim</em> dijabarkan pada **QS. Al-Baqarah Ayat 1–5** (Kaum Muttaqin).<br>
+              2) Golongan <em>Al-Maghdhūb 'alayhim</em> dan <em>Adh-Dhāllīn</em> dijabarkan pada **QS. Al-Baqarah Ayat 6–7** (Kaum Kafir yang keras kepala) dan **Ayat 8–20** (Kaum Munafik yang menipu diri dan tersesat).<br>
+            • Bahkan secara historis, seluruh **Blok 3 Surah Al-Baqarah (Ayat 40–141)** membedah secara mendalam sejarah Bani Israil agar umat Islam tidak terjerumus ke dalam jejak <em>Al-Maghdhūb 'alayhim</em>! Dengan demikian, Surah Al-Fatihah adalah miniatur seluruh Al-Qur'an, dan Al-Qur'an adalah rincian dari Surah Al-Fatihah!
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Posisi Umat Islam sebagai "Ummatan Wasathan" di Antara Dua Peradaban</h3>
+    <p>
+        Ketika Al-Qur'an turun di Jazirah Arab abad ke-7 M, bangsa Arab dikelilingi oleh dua tradisi keagamaan besar terdahulu:<br>
+        1) Di Madinah (Yatsrib) dan Khaibar, bermukim komunitas Yahudi yang memiliki warisan literasi kitab suci dan hukum yang kuat, namun sebagian tokoh mereka menyembunyikan kebenaran, memanipulasi hukum demi kepentingan duniawi, dan membunuh para nabi (ekstrem **intelektualisme kering tanpa ketundukan hati**).<br>
+        2) Di Syam (Romawi Timur), Najran, dan Habasyah, berkembang tradisi Nasrani yang sangat menekankan cinta kasih dan kerahiban (asketisme), namun sebagian sektenya melampaui batas (<em>ghuluw</em>) dalam mengkultuskan Nabi Isa a.s. tanpa pijakan wahyu yang terjaga (ekstrem **emosionalisme/spiritualisme tanpa disiplin ilmu wahyu**).<br>
+        Ayat 7 memposisikan umat Islam sebagai <strong>Ummatan Wasathan</strong> (umat pertengahan yang adil dan unggul) yang memadukan **ketajaman ilmu yang sahih** dengan **ketulusan amal dan cinta**.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān</em>:</strong><br>
+        At-Tabari meriwayatkan dengan sanad-sanad yang sahih dari Ibnu Abbas, Ibnu Mas'ud, dan 'Adi bin Hatim r.a. bahwa <em>Alladzīna an'amta 'alayhim</em> adalah para malaikat, para nabi, shiddiqin, syuhada, dan shalihin yang menaati Allah; <em>Al-Maghdhūb 'alayhim</em> adalah mereka yang dimurkai Allah sebagaimana disebutkan dalam QS. Al-Ma'idah: 60 (<em>man la'anahullāhu wa ghadhiba 'alayh</em>); dan <em>Adh-Dhāllīn</em> adalah mereka yang tersesat dari jalan lurus sebagaimana disebutkan dalam QS. Al-Ma'idah: 77 (<em>qad dhallū min qablu wa adhallū katsīrā</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em>:</strong><br>
+        Ibnu Katsir merumuskan kaidah yang sangat jernih: <em>"Jalan orang-orang yang beriman menghimpun <strong>pengetahuan tentang kebenaran (ma'rifatul-ḥaqq)</strong> dan <strong>pengamalannya (al-'amalu bih)</strong>. Sedangkan kaum Yahudi kehilangan pengamalan (berilmu tapi membangkang), dan kaum Nasrani kehilangan ilmu (beramal di atas kebodohan). Oleh karena itu, kemurkaan (al-ghadhab) menimpa orang yang tahu namun sengaja melanggar, dan kesesatan (adh-dhalāl) menimpa orang yang tidak mengetahui jalan yang benar."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membahas hukum fiqih menutup bacaan Al-Fatihah dengan kalimat <strong>Āmīn</strong>:<br>
+        • Makna <em>Āmīn</em> menurut jumhur ulama adalah <em>"Allāhumma istajib"</em> (Ya Allah, kabulkanlah doa kami!).<br>
+        • Cara membacanya yang fasih ada dua: dengan memanjangkan hamzah 2 harakat (<strong>Āmīn</strong> — وزن فاعيل) yang merupakan bacaan paling masyhur, atau memendekkan hamzah (<strong>Amīn</strong> — وزن فعيل). Adapun mentasydidkan huruf mim (<em>Āmmīn</em>) maka **tidak boleh dan merusak makna** karena berubah arti menjadi "orang-orang yang menuju suatu tempat".<br>
+        • Dalam shalat jahr, Mazhab Syafi'i dan Hanbali mensunnahkan imam dan makmum mengeraskan suara <em>Āmīn</em>, sedangkan Mazhab Hanafi dan riwayat masyhur Maliki membacanya secara lirih (<em>sirr</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Sufyan bin 'Uyainah (w. 198 H) & Ibnu Qayyim Al-Jauziyyah (w. 751 H) — <em>Madārijus-Sālikīn</em>:</strong><br>
+        Imam Sufyan bin 'Uyainah mengucapkan kalimat legendaris yang selalu dikutip oleh para mufassir sebagai cermin muhasabah internal umat Islam: <strong>"Man fasada min 'ulamā'inā fafīhi syabahun minal-Yahūd, wa man fasada min 'ubbādinā fafīhi syabahun minan-Nashārā!"</strong> (Barangsiapa yang rusak dari kalangan ulama/cendekiawan kita [karena menjual ilmu dan tidak mengamalkannya], maka pada dirinya terdapat kemiripan dengan sifat Yahudi [<em>Al-Maghdhūb 'alayhim</em>]; dan barangsiapa yang rusak dari kalangan ahli ibadah kita [karena beribadah dengan bid'ah dan tanpa ilmu], maka pada dirinya terdapat kemiripan dengan sifat Nasrani [<em>Adh-Dhāllīn</em>]!).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Quraish Shihab menyoroti dimensi psikologi keteladanan (<em>role modeling</em>) pada frasa <em>Shirāthalladzīna an'amta 'alayhim</em>: manusia jauh lebih mudah memahami dan mengikuti kebenaran ketika kebenaran itu telah terwujud dalam sosok-sosok manusia teladan. Empat kelompok teladan yang disebut Al-Qur'an (Nabi, Shiddiqin, Syuhada, Shalihin) menunjukkan bahwa pintu menjadi "orang yang diberi nikmat" (<em>shiddiqin, syuhada, shalihin</em>) tetap terbuka lebar bagi setiap Muslim hingga akhir zaman!
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka menekankan bahwa penutup Surah Al-Fatihah ini adalah peringatan abadi agar umat Islam selalu menjaga keseimbangan antara **akal/ilmu** dan **hati/amal**. Jika akal pintar tetapi hati busuk dan curang, manusia jatuh ke jurang <em>Al-Maghdhūb 'alayhim</em>; jika hati penuh semangat beragama tetapi akal malas menuntut ilmu yang sahih, manusia jatuh ke jurang <em>Adh-Dhāllīn</em>.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Golongan dalam Ayat 7</th>
+                <th>Karakteristik Epistemologis & Moral</th>
+                <th>Manifestasi Historis & Kontemporer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Alladzīna An'amta 'Alayhim</strong><br>(Yang Diberi Nikmat)</td>
+                <td>Memadukan **Ilmu yang Benar (Al-Ḥaqq)** dengan **Amal yang Tulus (Al-Khayr)**.</td>
+                <td>Para Nabi, Shiddiqin, Syuhada, dan Shalihin (QS. An-Nisa: 69) serta setiap mukmin yang meneladani mereka.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Al-Maghdhūb 'Alayhim</strong><br>(Yang Dimurkai)</td>
+                <td>Memiliki **Ilmu tentang Kebenaran**, namun **Membangkang dalam Amal** karena kesombongan, hasad, dan kerakusan duniawi.</td>
+                <td>Secara historis: Yahudi yang membangkang; secara substansial: intelektual/ulama/pejabat yang tahu kebenaran tapi mengkhianatinya.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Adh-Dhāllīn</strong><br>(Yang Tersesat)</td>
+                <td>Memiliki **Semangat Beramal**, namun **Kehilangan Ilmu yang Benar** sehingga jatuh dalam khurafat dan fanatisme buta.</td>
+                <td>Secara historis: Nasrani yang melampaui batas; secara substansial: orang yang beragama hanya dengan perasaan/tradisi tanpa dasar ilmu sahih.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Integrasi Kognitif-Konatif: Menyatukan Pengetahuan ("Knowing") dan Tindakan ("Doing")</h3>
+    <p>
+        Dalam ilmu psikologi dan pendidikan karakter, manusia memiliki dua fakultas utama: (1) **Fakultas Kognitif / Kekuatan Ilmu (Al-Quwwah Al-'Ilmiyyah)** untuk mengenali kebenaran, dan (2) **Fakultas Konatif-Volisional / Kekuatan Kehendak & Amal (Al-Quwwah Al-'Amaliyyah)** untuk melaksanakan kebenaran tersebut.
+    </p>
+    <ul>
+        <li><strong>Patologi Kesenjangan Pengetahuan-Perilaku (<em>Knowledge-Action Gap</em>):</strong> Ketika fakultas kognitif seseorang berkembang pesat (gelar tinggi, hafal dalil, paham hukum), namun fakultas kehendak moralnya lumpuh dikuasai nafsu, terjadilah patologi <em>Al-Maghdhūb 'alayhim</em>—hipokrisi intelektual yang paling dibenci Tuhan dan manusia.</li>
+        <li><strong>Patologi Semangat Tanpa Literasi (<em>Blind Zealotry</em>):</strong> Sebaliknya, ketika fakultas konatif/emosi seseorang menyala-nyala namun fakultas kognitifnya kosong dari ilmu dan berpikir kritis, ia mudah dimanipulasi, jatuh dalam takhayul, atau bersikap ekstrem tanpa dasar—inilah patologi <em>Adh-Dhāllīn</em>.</li>
+        <li><strong>Kesempurnaan Jiwa Mukmin:</strong> Doa Ayat 7 menjaga integrasi utuh antara kejernihan akal (ilmu) dan kesucian kehendak (amal).</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Dua Krisis Peradaban Modern: Kejahatan Kerah Putih Berpendidikan vs Fanatisme Tanpa Ilmu</h3>
+    <ul>
+        <li>
+            <strong>Fenomena "Al-Maghdhūb" Kontemporer (Korupsi Kaum Terpelajar & Manipulasi Hukum):</strong> Di era modern, kejahatan terbesar terhadap kemanusiaan, perekonomian, dan lingkungan hidup jarang dilakukan oleh orang yang buta huruf; justru sering dilakukan oleh para teknokrat, ahli hukum, politisi, dan ilmuwan berpendidikan tinggi yang **sangat tahu aturan namun sengaja mencari celah untuk mengakali kebenaran demi kepentingan oligarki**. Ayat 7 memperingatkan bahwa ilmu pengetahuan yang dikhianati akan mengundang kemurkaan Ilahi dan kehancuran sosial.
+        </li>
+        <li>
+            <strong>Fenomena "Adh-Dhāllīn" Kontemporer (Hoaks Keagamaan & Semangat Tanpa Sanad Ilmu):</strong> Di sisi lain, algoritma media sosial sering melahirkan fenomena keberagamaan instan: orang yang baru belajar agama dari potongan video pendek tanpa metodologi ilmu yang kokoh, namun langsung merasa paling suci dan mudah menyesatkan orang lain, atau terjebak pada ritual-ritual palsu yang tidak pernah diajarkan Nabi ﷺ. Kembali ke jalan <em>Alladzīna an'amta 'alayhim</em> menuntut kita untuk membangun budaya **ilmu yang bersanad dan beramal dengan akhlak mulia**.
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Menuntut Ilmu Sebelum Beramal ("Al-'Ilmu Qablal-Qawli wal-'Amal"):</strong> Pastikan setiap ibadah, muamalah bisnis, dan sikap keagamaan yang kita jalankan memiliki landasan ilmu yang sahih dari Al-Qur'an dan Sunnah melalui bimbingan ulama yang tepercaya, agar kita terhindar dari jalan <em>Adh-Dhāllīn</em>.
+            </li>
+            <li>
+                <strong>Mengamalkan Setiap Ilmu yang Telah Diketahui:</strong> Jangan biarkan ilmu berhenti sebagai bahan diskusi atau kebanggaan intelektual; setiap kali mempelajari satu ayat atau satu hadits, segera wujudkan minimal satu perubahan nyata pada akhlak dan perbuatan kita hari itu agar terhindar dari jalan <em>Al-Maghdhūb 'alayhim</em>.
+            </li>
+            <li>
+                <strong>Memilih Lingkungan & Tokoh Teladan yang Saleh:</strong> Bersahabatlah dengan orang-orang yang jujur (<em>shiddīqīn</em>) dan saleh (QS. At-Taubah: 119), serta pelajari sirah Nabi ﷺ, para sahabat, dan para ulama rabbani sebagai kiblat keteladanan hidup keluarga kita.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Di antara dua bahaya besar dalam Ayat 7 ini, manakah yang paling sering menjangkiti diriku saat ini: apakah aku sudah tahu mana yang benar dan mana yang salah namun masih sering sengaja melanggarnya (gejala <em>Al-Maghdhūb 'alayhim</em>), ataukah aku masih malas belajar ilmu agama yang benar sehingga hidup sekadar ikut-ikutan (gejala <em>Adh-Dhāllīn</em>)?
+            </li>
+            <li>
+                Siapakah tokoh idola yang selama ini kujadikan panutan gaya hidupku: apakah para nabi, shiddiqin, syuhada, dan shalihin (<em>Alladzīna an'amta 'alayhim</em>), ataukah tokoh-tokoh yang justru lalai dari Allah?
+            </li>
+            <li>
+                Ketika aku menutup bacaan Al-Fatihah dengan kata <em>"Āmīn"</em> di setiap rakaat shalat, apakah hatiku benar-benar bergetar merindukan pengabulan doa terbesar ini?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Penutup Surah Al-Fatihah</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, gabungkanlah kami ke dalam kafilah hamba-hamba yang telah Engkau beri nikmat: bersama para Nabi, para Shiddiqin, para Syuhada, dan orang-orang Saleh; dan sungguh merekalah sebaik-baik teman perjalanan. Lindungilah kami dari kemurkaan-Mu akibat mengkhianati ilmu, dan selamatkanlah kami dari kesesatan akibat kebodohan dan hawa nafsu. Karuniakanlah kepada kami ilmu yang bermanfaat, hati yang khusyuk, dan amal yang Engkau terima. Āmīn, Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="001-006 - QS. Al-Fatihah Ayat 6.html">&larr; Ayat Sebelumnya (QS. 1:6)</a>
+        <span><strong>QS. Al-Fātiḥah [1]: 7 (Tamat Surah Al-Fātiḥah)</strong></span>
+        <a href="../02 - Surah Al-Baqarah/002-000 - Pengantar & Peta Maqasid Surah Al-Baqarah.html">Lanjut ke Pengantar Surah Al-Baqarah &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

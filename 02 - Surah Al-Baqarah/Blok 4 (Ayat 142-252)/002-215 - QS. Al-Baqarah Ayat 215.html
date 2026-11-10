@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-215 - QS. Al-Baqarah Ayat 215 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-214 - QS. Al-Baqarah Ayat 214.html">&larr; Ayat Sebelumnya (QS. 2:214)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-216 - QS. Al-Baqarah Ayat 216.html">Ayat Berikutnya (QS. 2:216) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Fusthāthul Qur'an)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge">Blok 4 (Ayat 142–252) | Klaster 7: Dialektika Regulasi Syariat & Transformasi Sosial (Ayat 215–242)</span>
+        <span class="badge">22 Kata | 99 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 215</h1>
+    <div class="transliteration">
+        "Yas'alūnaka mādzā yunfiqūn(a), qul mā anfaqtum min khayrin fa lil-wālidayni wal-aqrabīna wal-yatāmā wal-masākīni wabnis-sabīl(i), wa mā taf'alū min khayrin fa innallāha bihī 'alīm(un)"
+    </div>
+    <div class="thematic-title">
+        Arsitektur Skala Prioritas Filantropi Islam: Pedagogi Uslūb al-Ḥakīm, Gradasi Konsentris Hak-Hak Infaq (Birrul Wālidayn hingga Ibnus-Sabīl), Dekonstruksi Filantropi Performatif, dan Kemahatahuan Mutlak Ilahi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa v2.0 (Surah Al-Baqarah: Ayat 142–252 | Blok 4: Kemandirian Umat, Syariat Ibadah, Jihad, & Hukum Keluarga — Ayat Pembuka Klaster 7: Ayat 215–242)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 7 Tokoh & Matriks</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Mental Model</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        يَسْـَٔلُونَكَ مَاذَا يُنفِقُونَ ۖ قُلْ مَآ أَنفَقْتُم مِّنْ خَيْرٍۢ فَلِلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ وَٱلْيَتَـٰمَىٰ وَٱلْمَسَـٰكِينِ وَٱبْنِ ٱلسَّبِيلِ ۗ وَمَا تَفْعَلُوا۟ مِنْ خَيْرٍۢ فَإِنَّ ٱللَّهَ بِهِۦ عَلِيمٌۭ ۝٢١٥
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Mereka bertanya kepadamu (Muhammad) tentang apa yang harus mereka infakkan. Katakanlah: 'Harta kebajikan apa saja yang kamu infakkan, maka peruntukkannya adalah bagi kedua orang tua, kerabat dekat, anak-anak yatim, orang-orang miskin, dan orang yang sedang dalam perjalanan (ibnus-sabil).' Dan kebajikan apa saja yang kamu kerjakan, maka sesungguhnya Allah Maha Mengetahui atasnya."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Ayat ini dibuka dengan formula dialektika kenabian <em>yas'alūnaka</em> (mereka bertanya kepadamu) mengenai materi yang diinfakkan (<em>mādzā yunfiqūn</em>). Namun, jawaban wahyu melalui lisan Nabi ﷺ secara mengejutkan dialihkan oleh Allah melalui gaya retorika agung <em>Uslūb al-Ḥakīm</em>: bukan membatasi nominal atau jenis komoditas, melainkan menegaskan bahwa materi infaq haruslah berupa <em>min khayr</em> (harta yang halal, bermutu baik, dan bermanfaat), serta langsung memprioritaskan saluran alokasi penerima (<em>al-mashārif</em>) secara konsentris. Penataan urutan dimulai dari <em>al-wālidayn</em> (kedua orang tua) sebagai representasi puncak kewajiban etis-biologis, lalu meluas ke sanak saudara (<em>al-aqrabīn</em>), kaum rentan generasi masa depan (<em>al-yatāmā</em>), kaum dhuafa yang lumpuh daya ekonominya (<em>al-masākīn</em>), hingga musafir asing yang kehabisan bekal (<em>ibnus-sabīl</em>). Ayat ditutup dengan perluasan cakupan dari sedekah materiil (<em>anfaqtum</em>) ke segala dimensi amal saleh (<em>taf'alū min khayrin</em>) dengan garansi pengawasan dan balasan sempurna dari Allah Yang Maha Mengetahui (<em>'Alīm</em>).
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Makharij/Sifat Huruf & Variasi Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>يَسْـَٔلُونَكَ</strong><br>(<em>Yas'alūnaka</em>)</td>
+                <td>
+                    <strong>Huruf Sīn:</strong> Makhraj dari ujung lidah di atas gigi seri bawah (<em>asalliyyah</em>). Memiliki sifat <em>hams</em> (napas berhembus), <em>rakhāwah</em> (suara mengalir), dan <em>shafīr</em> (desis tajam).<br>
+                    <strong>Hamzah Qatha':</strong> Keluar dari pangkal tenggorokan (<em>aqshal halq</em>) berharakat fathah dengan tahqiq sempurna (sifat <em>jahr</em> dan <em>syiddah</em>).<br>
+                    <strong>Mad Ashli/Thabi'i:</strong> Huruf Wawu sukun setelah dhammah dibaca 2 harakat.<br>
+                    <strong>Huruf Kāf:</strong> Makhraj pangkal lidah dengan sifat <em>hams</em> saat terlepas.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat membaca <em>tahqīq</em> pada huruf hamzah berharakat fathah (<em>yas-alūnaka</em>) dalam bentuk mudhari'. Perbedaan riwayat hanya terjadi pada bentuk fi'il amr (<em>Sal</em> alih-alih <em>Is'al</em>) pada tempat lain, sedangkan di ayat ini seluruh qurrā' sepakat tanpa khilaf.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>مَاذَا يُنفِقُونَ ۖ</strong><br>(<em>Mādzā yunfiqūn</em>)</td>
+                <td>
+                    <strong>Mad Thabi'i:</strong> Pada huruf Mim-Alif dan Żal-Alif dibaca masing-masing 2 harakat.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu huruf Fa (ف) pada kata <em>yunfiqūn</em>, disamarkan suaranya disertai ghunnah tipis (<em>tarqīq</em>) sepanjang 2 harakat.<br>
+                    <strong>Huruf Qāf:</strong> Berharakat kasrah, berada pada derajat tafkhim terendah (<em>tafkhīm nisbī</em>).<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Pada akhir waqaf ja'iz (ۖ), dibaca 2, 4, atau 6 harakat dengan sifat <em>tawassuṭ</em> pada huruf Nun sukun.
+                </td>
+                <td>
+                    Konsensus qira'at sepuluh imam menetapkan ikhfa' haqiqi pada nun sukun bertemu fa. Tanda waqaf ja'iz (ۖ) membolehkan waqaf untuk menegaskan akhir kalimat pertanyaan sebelum menyimak kalimat jawaban Ilahi (<em>Qul</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>قُلْ مَآ أَنفَقْتُم مِّنْ خَيْرٍۢ</strong><br>(<em>Qul mā anfaqtum min khayr</em>)</td>
+                <td>
+                    <strong>Huruf Qāf & Lām:</strong> Qaf dhammah (tafkhim tingkat 3), Lam sukun dibaca idzhar dengan sifat <em>tawassuṭ</em>.<br>
+                    <strong>Mad Jā'iz Munfashil:</strong> Huruf mad alif pada <em>mā</em> bertemu hamzah qatha' di kata berikutnya (<em>anfaqtum</em>).<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nun sukun bertemu Fa pada <em>anfaqtum</em>.<br>
+                    <strong>Idghām Mīmī (Mutamātsilayn Shaghīr):</strong> Mim sukun pada <em>anfaqtum</em> melebur ke Mim berharakat pada <em>min</em> dengan ghunnah 2 harakat.<br>
+                    <strong>Idzhār Ḥalqī:</strong> Nun sukun pada <em>min</em> bertemu huruf halq Kha (خ) dibaca jelas tanpa dengung.<br>
+                    <strong>Yā' Līn & Tarqīq ar-Rā':</strong> Huruf Ya sukun setelah fathah diucapkan lembut. Tanwin kasrah pada Ra bertemu Fa menghasilkan ikhfa' haqiqi bertarqiq.
+                </td>
+                <td>
+                    <strong>1. Dinamika Mad Munfashil:</strong><br>
+                    • <em>Qashr (2 harakat):</em> Ibnu Katsir, As-Susi 'an Abi 'Amr, dan Ya'qub.<br>
+                    • <em>Tawassuth (4 harakat):</em> 'Ashim (Hafsh), Ibnu 'Amir, Abu Ja'far, Khalaf al-'Asyir, dan Qalun (salah satu wajah).<br>
+                    • <em>Isyba'/Thul (6 harakat):</em> Warsy 'an Nafi' dan Hamzah.<br>
+                    <strong>2. Shilah Mīm al-Jam':</strong><br>
+                    • Imam Ibnu Katsir dan Abu Ja'far membaca dengan <em>shilah</em> mim jama' berdhamir wawu sukun: <em>anfaqtumū min khayr</em>.<br>
+                    • Imam Qalun membaca dua wajah: sukun dan shilah.<br>
+                    • Imam lainnya membaca sukun mim jama' diiringi idgham mimi ghunnah.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>فَلِلْوَٰلِدَيْنِ</strong><br>(<em>Fa lil-wālidayn</em>)</td>
+                <td>
+                    <strong>Huruf Lām Jar & Lām Ta'rīf:</strong> Dibaca idzhar qamariyyah secara jelas.<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif tegak tengah (فَلِلْوٰلِدَيْنِ), ditandai dengan alif khanjaraniyyah (mad thabi'i 2 harakat).<br>
+                    <strong>Huruf Yā' Līn:</strong> Dal berharakat fathah bertemu Ya sukun dibaca lunak tanpa tersentak.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca lafaz ini dengan kasrah pada lam jar dan ya mutsanna berharakat fathah pada dal (<em>falil-wālidayn</em>). Menandakan kesepakatan mutlak qira'at atas posisi orang tua sebagai subjek utama hak nafkah.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَٱلْأَقْرَبِينَ</strong><br>(<em>Wal-aqrabīn</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur suaranya ketika disambung dari huruf Wawu.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam sukun dibaca terang sebelum huruf hamzah.<br>
+                    <strong>Qalqalah Shughrā:</strong> Huruf Qaf sukun memantul ringan di tengah kata dengan sifat <em>isti'lā'</em> tebal.<br>
+                    <strong>Tafkhīm ar-Rā':</strong> Huruf Ra berharakat fathah dibaca tebal.<br>
+                    <strong>Mad Ashli/Thabi'i:</strong> Huruf Ba kasrah bertemu Ya sukun dibaca 2 harakat (washal).
+                </td>
+                <td>
+                    • <strong>Imam Warsy 'an Nafi':</strong> Membaca dengan kaidah <strong>Naql</strong> (memindahkan harakat fathah hamzah ke lam sukun sebelumnya seraya menggugurkan hamzah): dibaca <em>wal-laqrabīn</em>.<br>
+                    • <strong>Imam Hamzah:</strong> Membaca dengan <strong>Saktah Lathīfah</strong> (berhenti sejenak tanpa bernapas pada lam ta'rif): <em>wal... aqrabīn</em> saat washal.<br>
+                    • <strong>Delapan Imam Lainnya:</strong> Membaca <em>tahqīq</em> murni tanpa saktah dan tanpa naql (<em>wal-aqrabīn</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَٱلْيَتَـٰمَىٰ</strong><br>(<em>Wal-yatāmā</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Huruf Lam sukun terbaca jelas sebelum huruf Ya.<br>
+                    <strong>Mad Thabi'i:</strong> Pada huruf Ta dengan alif khanjaraniyyah 2 harakat.<br>
+                    <strong>Alif Maqshūrah:</strong> Huruf Mim diakhiri alif layyinah di atas rasm Ya.
+                </td>
+                <td>
+                    • <strong>Imālah Kubrā:</strong> Imam Hamzah, Al-Kisa'i, dan Khalaf al-'Asyir memiringkan bunyi harakat fathah ke kasrah dan alif ke ya (<em>wal-yatāmē</em>).<br>
+                    • <strong>Taqlīl / Imālah Sughrā (Bayna-bayna):</strong> Imam Warsy 'an Nafi' dan Abu 'Amr Al-Bashri membaca di antara fathah dan imalah (<em>wal-yatāmè</em>).<br>
+                    • <strong>Al-Fat-ḥ:</strong> Tujuh imam lainnya (Qalun, Ibnu Katsir, Ibnu 'Amir, 'Ashim, Abu Ja'far, Ya'qub) membaca fathah murni tanpa imalah (<em>wal-yatāmā</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَٱلْمَسَـٰكِينِ</strong><br>(<em>Wal-masākīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Huruf Lam sukun terbaca jelas sebelum Mim.<br>
+                    <strong>Huruf Sīn:</strong> Bersifat <em>hams</em> dan <em>shafīr</em>.<br>
+                    <strong>Rasm Utsmani:</strong> Ditulis tanpa alif tegak tengah (وَٱلْمَسَـٰكِينِ), dibaca mad thabi'i 2 harakat pada alif khanjaraniyyah.<br>
+                    <strong>Mad Thabi'i:</strong> Huruf Kaf kasrah bertemu Ya sukun dibaca 2 harakat (saat washal).
+                </td>
+                <td>
+                    Konsensus mutlak sepuluh imam mutawatirah membaca lafaz ini dengan wazan <em>mafā'īl</em> jamak taksir berharakat kasrah pada nun (<em>wal-masākīn</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَٱبْنِ ٱلسَّبِيلِ ۗ</strong><br>(<em>Wabnis-sabīl</em>)</td>
+                <td>
+                    <strong>Hamzah Washal:</strong> Gugur saat washal.<br>
+                    <strong>Qalqalah Shughrā:</strong> Huruf Ba sukun memantul di dalam kata.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Nun berharakat kasrah langsung masuk melebur ke huruf Sin bertasydid.<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Pada huruf Ba-Ya-Lam saat waqaf di tanda waqaf lazim/aula (ۗ), dibaca 2, 4, atau 6 harakat dengan tawassuth pada Lam sukun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat membaca washal dengan qalqalah sughra pada ba dan meng-idgham-kan lam ta'rif ke huruf sin (<em>wabnis-sabīl</em>). Tanda waqaf aula (ۗ) menandai sempurnanya daftar lima pilar penerima hak infaq.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>وَمَا تَفْعَلُوا۟ مِنْ خَيْرٍۢ</strong><br>(<em>Wa mā taf'alū min khayr</em>)</td>
+                <td>
+                    <strong>Mad Thabi'i:</strong> Huruf Mim-Alif dibaca 2 harakat.<br>
+                    <strong>Huruf Fā' Sukun:</strong> Memiliki sifat <em>hams</em> dan <em>rakhāwah</em> yang nyata.<br>
+                    <strong>Huruf 'Ain:</strong> Keluar dari tengah tenggorokan (<em>wasathul halq</em>) dengan sifat <em>tawassuṭ</em>.<br>
+                    <strong>Idzhār Ḥalqī & Yā' Līn:</strong> Nun sukun bertemu Kha dibaca idzhar; Ya sukun setelah fathah diucapkan lunak; tanwin kasrah Ra bertemu Fa menghasilkan ikhfa' haqiqi bertarqiq.
+                </td>
+                <td>
+                    Konsensus qira'at sepuluh imam membaca fi'il mudhari' jazm dengan membuang nun (<em>taf'alū</em>) karena amil syarth <em>mā</em>. Imam Warsy membaca tarqiq pada huruf ra kata <em>khayr</em> dalam segala kondisi.
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>فَإِنَّ ٱللَّهَ بِهِۦ عَلِيمٌۭ ۝٢١٥</strong><br>(<em>Fa innallāha bihī 'alīm</em>)</td>
+                <td>
+                    <strong>Ghunnah Musyaddadah:</strong> Huruf Nun bertasydid pada <em>Inna</em> ditahan dengungnya 2 harakat sempurna.<br>
+                    <strong>Tafkhīm Lām Jalālah:</strong> Huruf Lam pada lafazh <em>Allāh</em> dibaca tebal karena didahului harakat fathah pada nun.<br>
+                    <strong>Mad Shilah Shughrā:</strong> Ha dhamir berharakat kasrah pada <em>bihī</em> diapit dua huruf hidup (bertemu 'Ain) dibaca panjang 2 harakat.<br>
+                    <strong>Mad 'Āridh lis-Sukūn:</strong> Pada ujung fashilah ayat 215, huruf Ya mad bertemu Mim sukun waqaf dibaca 2, 4, atau 6 harakat disertai sifat <em>tawassuṭ</em> dan <em>idzhār syafawī</em> pada Mim.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah bersepakat membaca mad shilah shughra pada ha dhamir saat washal dan mengakhiri fashilah ayat dengan mad 'aridh lis-sukun marfu' (<em>'Alīm</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <p>
+        Secara sosio-historis, ayat ini menandai babak konsolidasi ketahanan sosial masyarakat Madinah pasca-Hijrah melalui dialektika edukatif antara sahabat dan Rasulullah ﷺ. Ayat ini memiliki riwayat sebab turun yang spesifik dan sahih, serta ditopang oleh hadits-hadits nabawiyyah otoritatif:
+    </p>
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbabun Nuzul: Riwayat Sahabat Amr bin Al-Jamuh Al-Anshari r.a.:</strong><br>
+        Diriwayatkan oleh Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (No. 4172 & 4173), Ibnu Abi Hatim dalam <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (No. 2095), dan Al-Wahidi dalam <em>Asbāb an-Nuzūl</em> (hal. 68) melalui sanad As-Suddi dan Ibnu Juraij dari sahabat Abdullah bin Abbas r.a.:<br>
+        Bahwa sahabat mulia <strong>Amr bin Al-Jamuh Al-Anshari r.a.</strong> (seorang tokoh sepuh suku Bani Salamah yang memiliki kekayaan melimpah di Madinah) mendatangi Rasulullah ﷺ lalu bertanya:<br>
+        <em>"Yā Rasūlallāh, inna mālī katsīr, fa-mādzā nunfiqu wa 'alā man nunfiqu?"</em><br>
+        (Wahai Rasulullah, sesungguhnya aku memiliki harta yang sangat banyak. Harta jenis apa yang sebaiknya kami infakkan di jalan Allah, dan kepada siapakah kami harus mendistribusikannya?).<br>
+        Maka Allah Ta'ala menurunkan firman-Nya: <em>"Yas'alūnaka mādzā yunfiqūn, qul mā anfaqtum min khayrin fa lil-wālidayni wal-aqrabīna..."</em> sebagai panduan komprehensif yang meluruskan skala prioritas filantropi Islam. (Derajat riwayat: <em>Hasan lighairihi</em> dengan syawahid atsar tafsir).
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Jami' At-Tirmidzi (No. 658), Sunan An-Nasa'i (No. 2182), Musnad Ahmad (No. 16227) — Skala Prioritas Dua Pahala Infaq Kerabat:</strong><br>
+        Dari sahabat Salman bin 'Amir Adh-Dhabbi r.a., Rasulullah ﷺ bersabda:<br>
+        <em>«إِنَّ الصَّدَقَةَ عَلَى الْمِسْكِينِ صَدَقَةٌ، وَعَلَى ذِي الرَّحِمِ اثْنَتَانِ: صَدَقَةٌ وَصِلَةٌ»</em><br>
+        (Sesungguhnya sedekah kepada orang miskin [yang tidak memiliki ikatan nasab] bernilai satu sedekah; sedangkan sedekah kepada kerabat yang memiliki hubungan rahim bernilai dua kebaikan sekaligus: pahala sedekah dan pahala menyambung tali silaturrahim). Hadits dinilai <strong>Sahih</strong> oleh Imam At-Tirmidzi, Ibnu Khuzaimah, dan Syaikh Al-Albani.
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Sunan Abi Dawud (No. 3530) & Sunan Ibnu Majah (No. 2291) — Hak Mutlak Orang Tua Atas Harta Anak:</strong><br>
+        Dari sahabat Jabir bin Abdillah r.a. dan Abdullah bin 'Amr r.a., bahwa seorang laki-laki datang menghadap Rasulullah ﷺ lalu mengadu: <em>"Wahai Rasulullah, sesungguhnya aku memiliki harta dan anak, namun ayahku ingin mengambil dan menghabiskan hartaku!"</em> Maka Rasulullah ﷺ bersabda dengan tegas:<br>
+        <em>«أَنْتَ وَمَالُكَ لِأَبِيكَ، إِنَّ أَوْلَادَكُمْ مِنْ أَطْيَبِ كَسْبِكُمْ، فَكُلُوا مِنْ كَسْبِ أَوْلَادِكُمْ»</em><br>
+        (Engkau dan seluruh hartamu adalah milik ayahmu! Sesungguhnya anak-anakmu adalah bagian dari sebaik-baik hasil usahamu, maka makanlah dari hasil usaha anak-anakmu dengan cara yang ma'ruf). Hadits dinilai <strong>Sahih</strong> oleh para ulama hadits, menegaskan bahwa posisi nafkah orang tua adalah kewajiban primer yang mendahului seluruh proyek sosial lainnya.
+    </div>
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Bukhari (No. 1426) & Sahih Muslim (No. 1034) — Kaidah "Abda' biman Ta'ūl":</strong><br>
+        Dari sahabat Hakim bin Hizam r.a. dan Abu Hurairah r.a., Rasulullah ﷺ bersabda meletakkan kaidah fundamental alokasi kekayaan:<br>
+        <em>«الْيَدُ الْعُلْيَا خَيْرٌ مِنَ الْيَدِ السُّفْلَى، وَابْدَأْ بِمَنْ تَعُولُ، وَخَيْرُ الصَّدَقَةِ عَنْ ظَهْرِ غِنًى»</em><br>
+        (Tangan yang di atas [pemberi] lebih baik daripada tangan yang di bawah [penerima]. Dan mulailah [berinfaq] dari orang-orang yang menjadi tanggungan nafkahmu, dan sebaik-baik sedekah adalah yang dikeluarkan dari kelebihan kebutuhan).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata (Mu'jam Maqāyīs al-Lughah & Lisān al-'Arab)</h3>
+    <ul>
+        <li>
+            <strong>1. N-F-Q (ن-ف-q — يُنفِقُونَ / أَنفَقْتُم):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> menetapkan dua poros semantik utama bagi akar <em>Nūn-Fā'-Qāf</em>: (1) <em>khurūjusy-syay' wa dzahābuh</em> (keluarnya sesuatu, habisnya, atau kelangsungannya hingga lenyap), dan (2) <em>al-inkhitām wal-istikhfā'</em> (jalan tembus yang tersembunyi). Dari poros ini lahir kata <em>an-nafaq</em> (terowongan bawah tanah yang memiliki dua lubang tembus). Dinamakan <em>infāq</em> karena harta dikeluarkan dari wadah perbendaharaan simpanan untuk dialirkan menuju kemaslahatan publik. Bahasa Arab mengibaratkan harta simpanan yang mengendap bagai air tergenang yang rawan membusuk, sedangkan infaq adalah proses membuka katup terowongan agar kekayaan terus bersirkulasi menyuburkan peradaban umat.
+        </li>
+        <li>
+            <strong>2. KH-Y-R (خ-ي-ر — خَيْرٍ):</strong><br>
+            Akar kata <em>Khā'-Yā'-Rā'</em> menurut Ibnu Faris berporos pada <em>al-'athfu wal-mayl war-raghbah fisy-syay' li-fadhlitin fīh</em> (kecondongan nurani dan kerinduan jiwa terhadap sesuatu karena keutamaan objektif yang inheren padanya), merupakan lawan kata mutlak dari <em>asy-syarr</em> (keburukan). Dalam leksikografi Al-Qur'an, kata <em>khayr</em> secara spesifik digunakan untuk menamai <strong>harta kekayaan materi yang halal, bernilai guna tinggi, diperoleh secara terhormat, dan bersih dari syubhat</strong> (sebagaimana dalam QS. Al-Baqarah: 180 dan Al-'Adiyat: 8). Penggunaan kata <em>min khayr</em> menegaskan aksioma: Al-Qur'an menolak infaq dari harta kotor, barang rongsokan sisa, atau hasil eksploitasi haram.
+        </li>
+        <li>
+            <strong>3. W-L-D (و-ل-د — فَلِلْوَٰلِدَيْنِ):</strong><br>
+            Akar <em>Wāw-Lām-Dāl</em> berporos pada makna <em>sulālatu syay'in wa tawalluduhu 'anhu</em> (lahirnya keturunan dari benih asalnya). <em>Al-Wālidān</em> adalah ayah dan ibu kandung yang menjadi sebab biologis dan eksistensial pertama hadirnya seorang manusia di muka bumi setelah kehendak Allah Ta'ala. Peletakan harf jar <em>lām</em> istihqaq pada <em>al-wālidayn</em> menempatkan orang tua pada derajat kepemilikan hak moral dan materi tertinggi.
+        </li>
+        <li>
+            <strong>4. Q-R-B (ق-ر-ب — وَٱلْأَقْرَبِينَ):</strong><br>
+            Akar <em>Qāf-Rā'-Bā'</em> berporos pada <em>khilāful bu'd</em> (lawan dari jarak jauh; yaitu kedekatan ruang, waktu, dan ikatan darah/nasab). <em>Al-Aqrabūn</em> adalah sanak saudara yang berada di dalam radius pertalian rahim terdekat.
+        </li>
+        <li>
+            <strong>5. Y-T-M (ي-ت-م — وَٱلْيَتَـٰمَىٰ):</strong><br>
+            Akar <em>Yā'-Tā'-Mīm</em> berporos pada makna <em>al-infirād</em> (kesendirian, ketiadaan pelindung atau ketiadaan tandingan). Pada manusia, <em>al-yatīm</em> secara syar'i adalah anak yang kehilangan ayahnya sebelum mencapai usia baligh, karena ayah adalah benteng nafkah dan perisai sosial sang anak di tengah kerasnya peradaban.
+        </li>
+        <li>
+            <strong>6. S-K-N (س-ك-ن — وَٱلْمَسَـٰكِينِ):</strong><br>
+            Akar <em>Sīn-Kāf-Nūn</em> berporos pada <em>khilāful harakah</em> (keheningan dan hilangnya mobilitas gerak). Dinamakan <em>al-miskīn</em> karena himpitan kemiskinan ekstrem telah melumpuhkan daya gerak fisiknya, merontokkan kemampuannya untuk berusaha secara mandiri, sehingga ia terdiam tak berdaya menanti uluran tangan sesama.
+        </li>
+        <li>
+            <strong>7. S-B-L (س-ب-ل — وَٱبْنِ ٱلسَّبِيلِ):</strong><br>
+            Akar <em>Sīn-Bā'-Lām</em> berporos pada <em>imtidādusy-syay' minal-'uluwwi ilas-sufl</em> (menjulur dan membentangnya sesuatu). Dari makna ini lahir kata <em>as-sabīl</em> (jalan panjang yang terbentang). <em>Ibnus-sabīl</em> secara metaforis disebut "anak kandung jalanan" karena musafir yang kehabisan bekal di negeri asing tidak lagi memiliki rumah pelindung selain jalanan yang sedang ia tapaki.
+        </li>
+        <li>
+            <strong>8. '-L-M (ع-ل-م — عَلِيمٌ):</strong><br>
+            Akar <em>'Ain-Lām-Mīm</em> berporos pada <em>atsarusy-syay' alladzī yutamayyazu bihī 'an ghayrih</em> (tanda terang yang membedakan hakikat sesuatu). Sifat <em>'Alīm</em> di atas wazan mubalaghah <em>fa'īl</em> menegaskan ilmu Allah yang meliputi segalanya: mengetahui substansi harta yang diinfakkan, kejujuran niat sang pemberi, serta bisikan batin yang tersembunyi dari pandangan makhluk.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>يَسْـَٔلُونَكَ</strong></td>
+                <td>Fi'il mudhāri' tsulatsi mujarrad (سَأَلَ - يَسْأَلُ) berwazan <em>yaf'alu</em>, bersambung dengan wawu jama'ah dan kaf khithab mufrad mudzakkar.</td>
+                <td>Fi'il mudhāri' marfū' bi tsubūtin-nūn (af'ālul-khamsah). Wawu dhamīr muttashil mabnī 'alas-sukūn fī maḥalli raf'in <strong>Fā'il</strong>. Kāf dhamīr muttashil mabnī 'alal-fatḥ fī maḥalli nashbin <strong>Maf'ūl bih awwal</strong>. Jumlah fi'liyyah isti'nāfiyyah lā maḥalla lahā.</td>
+            </tr>
+            <tr>
+                <td><strong>مَاذَا</strong></td>
+                <td>Isim istifhām murakkab (<em>mā</em> istifhāmiyyah + <em>dzā</em> isyāriyyah) atau satu kesatuan isim istifhām.</td>
+                <td>Mabnī 'alas-sukūn fī maḥalli nashbin <strong>Maf'ūl bih muqaddam</strong> bagi fi'il <em>yunfiqūn</em>. (Atau <em>mā</em> mubtada' dan <em>dzā</em> khabar).</td>
+            </tr>
+            <tr>
+                <td><strong>يُنفِقُونَ ۖ</strong></td>
+                <td>Fi'il mudhāri' tsulatsi mazīd bi-harf (wazan <em>af'ala - yuf'ilu</em> / أَنْفَقَ - يُنْفِقُ), bersambung dengan wawu jama'ah.</td>
+                <td>Fi'il mudhāri' marfū' bi tsubūtin-nūn. Wawu dhamīr muttashil mabnī 'alas-sukūn fī maḥalli raf'in <strong>Fā'il</strong>. Jumlah fi'liyyah fī maḥalli nashbin <strong>Maqwūlul-Qaul</strong> dari pertanyaan sahabat.</td>
+            </tr>
+            <tr>
+                <td><strong>قُلْ</strong></td>
+                <td>Fi'il amr dari <em>qāla - yaqūlu</em> di atas wazan <em>ful</em> (terjadi i'lal hadzf 'ain fi'il karena iltiqa'us-sakinain).</td>
+                <td>Fi'il amr mabnī 'alas-sukūn. Fā'il dhamīr mustatir wujūban taqdīruhū <em>anta</em> (Nabi Muhammad ﷺ). Jumlah fi'liyyah isti'nāf bayānī lā maḥalla lahā.</td>
+            </tr>
+            <tr>
+                <td><strong>مَآ</strong></td>
+                <td>Isim syarth jāzim (atau isim maushūl) yang mengandung makna generalisasi (<em>'umūm</em>).</td>
+                <td>Mabnī 'alas-sukūn fī maḥalli nashbin <strong>Maf'ūl bih muqaddam</strong> bagi fi'il <em>anfaqtum</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>أَنفَقْتُم</strong></td>
+                <td>Fi'il mādhi wazan <em>af'ala</em> (أَنْفَقَ), bersambung dengan dhamir jam'u al-mukhathabīn (<em>tum</em>).</td>
+                <td>Fi'il mādhi mabnī 'alas-sukūn fī maḥalli jazmin <strong>Fi'lusy-Syarth</strong>. <em>Tum</em> dhamīr muttashil mabnī 'alas-sukūn fī maḥalli raf'in <strong>Fā'il</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>مِّن خَيْرٍۢ</strong></td>
+                <td><em>Min</em> harf jarr lil-bayān. <em>Khayrin</em> isim jamid mashdar.</td>
+                <td><em>Min</em> harf jarr. <em>Khayrin</em> majrūr bil-kasrah. Syibhul jumlah (jār wa majrūr) muta'alliq bi maḥdzūf <strong>Hāl</strong> dari isim syarth <em>mā</em> (atau muta'alliq bi <em>anfaqtum</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>فَلِلْوَٰلِدَيْنِ</strong></td>
+                <td><em>Fā'</em> rābithah li-jawābis-syarth. <em>Lām</em> harf jarr lil-istihqāq. <em>Al-wālidayn</em> isim mutsannā.</td>
+                <td><em>Fā'</em> rābithah lazim masuk pada jawab syarth berupa jumlah ismiyyah. <em>Al-wālidayn</em> majrūr bil-yā' liannahū mutsannā. Syibhul jumlah (jār wa majrūr) berkedudukan <strong>Fī maḥalli raf'in Khabar Mubtada' maḥdzūf</strong> (taqdīruhū: <em>fa-huwa lil-wālidayn</em> atau <em>fal-yakun lil-wālidayn</em>). Jumlah ismiyyah fī maḥalli jazmin <strong>Jawābus-Syarth</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْأَقْرَبِينَ</strong></td>
+                <td>Wawu harf 'athaf. <em>Al-Aqrabīn</em> shighah af'al at-tafdhīl jamak mudzakkar salim.</td>
+                <td>Isim ma'thūf 'alā <em>al-wālidayn</em>, majrūr bil-yā' liannahū jam'u mudzakkar sālim.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْيَتَـٰمَىٰ</strong></td>
+                <td>Wawu harf 'athaf. <em>Al-Yatāmā</em> jamak taksīr dari <em>yatīm</em> di atas wazan <em>fa'ālā</em>.</td>
+                <td>Isim ma'thūf 'alā <em>al-wālidayn</em>, majrūr bil-kasrah al-muqaddarah 'alal-alif mani'a min zhuhūrihat-ta'adzdzur.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْمَسَـٰكِينِ</strong></td>
+                <td>Wawu harf 'athaf. <em>Al-Masākīn</em> jamak taksīr shighah muntahal-jumū' (wazan <em>mafā'īl</em>).</td>
+                <td>Isim ma'thūf 'alā <em>al-wālidayn</em>, majrūr bil-kasrah azh-zhāhirah fī ākhirih.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱبْنِ ٱلسَّبِيلِ ۗ</strong></td>
+                <td>Wawu harf 'athaf. <em>Ibni</em> mudhāf. <em>As-Sabīli</em> mudhāf ilayh.</td>
+                <td><em>Ibni</em> ma'thūf majrūr bil-kasrah, wa huwa mudhāf. <em>As-Sabīli</em> mudhāf ilayh majrūr bil-kasrah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا تَفْعَلُوا۟</strong></td>
+                <td>Wawu isti'nāfiyyah/'athaf. <em>Mā</em> isim syarth jāzim. <em>Taf'alū</em> fi'il mudhāri' bersambung wawu jama'ah.</td>
+                <td><em>Mā</em> fī maḥalli nashbin Maf'ūl bih muqaddam. <em>Taf'alū</em> fi'il mudhāri' fī maḥalli jazmin <strong>Fi'lusy-Syarth</strong> majzūm bi hadzfin-nūn. Wawu muttashil fī maḥalli raf'in Fā'il.</td>
+            </tr>
+            <tr>
+                <td><strong>مِنْ خَيْرٍۢ</strong></td>
+                <td><em>Min</em> harf jarr bayāniyyah. <em>Khayrin</em> isim majrūr.</td>
+                <td>Syibhul jumlah muta'alliq bi maḥdzūf Hāl dari <em>mā</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>فَإِنَّ ٱللَّهَ</strong></td>
+                <td><em>Fā'</em> rābithah li-jawābis-syarth. <em>Inna</em> harf taukīd wa nashb. Lafzhul Jalālah.</td>
+                <td><em>Inna</em> menashabkan isim. <em>Allāha</em> <strong>Ismu Inna</strong> manshūb bil-fatḥah azh-zhāhirah.</td>
+            </tr>
+            <tr>
+                <td><strong>بِهِۦ عَلِيمٌۭ ۝٢١٥</strong></td>
+                <td><em>Bihī</em> jār wa majrūr. <em>'Alīmun</em> shighah mubālaghah wazan <em>fa'īl</em>.</td>
+                <td><em>Bihī</em> muta'alliq bi lafazh <em>'Alīm</em> (taqdīmul-ma'mūl). <em>'Alīmun</em> <strong>Khabar Inna</strong> marfū' bidh-dhammah. Jumlah ismiyyah fī maḥalli jazmin <strong>Jawābus-Syarth</strong>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Uslūb al-Ḥakīm (Puncak Pedagogi Kebijaksanaan Ilahi):</strong><br>
+            Pakar balaghah ternama (Al-Khathib Al-Qazwini dalam <em>Al-Īdhāḥ</em>, As-Sakkaki dalam <em>Miftāḥ al-'Ulūm</em>, dan Ibnu 'Asyur) menempatkan ayat ini sebagai contoh paling agung dari seni retorika <strong>Uslūb al-Ḥakīm</strong> (gaya bahasa bijaksana yang menjawab penanya bukan dengan substansi yang ia tanyakan, melainkan dengan apa yang paling mendesak ia ketahui).<br>
+            • <em>Pertanyaan Sahabat:</em> Bertanya tentang jenis komoditas atau nominal harta: <em>"Mādzā yunfiqūn?"</em> (Apa yang harus kami infakkan?).<br>
+            • <em>Jawaban Wahyu:</em> Membelokkan jawaban ke arah target penerima: <em>"Falil-wālidayni wal-aqrabīn..."</em> (Peruntukkannya adalah bagi orang tua dan kerabat!).<br>
+            <strong>Rahasia Balaghah:</strong> Memperdebatkan jenis komoditas infaq adalah hal sekunder, karena apa pun harta halal yang dimiliki seseorang sudah mencukupi (<em>min khayr</em>). Hal yang jauh lebih fatal dan menentukan kemaslahatan adalah <strong>ketepatan sasaran alokasi</strong>. Mengetahui siapa yang paling berhak menerima infaq jauh lebih mendesak bagi pembangunan peradaban daripada sekadar mendebatkan klasifikasi materi.
+        </li>
+        <li>
+            <strong>Al-Irtiqā' al-Inzālī & Dawā'ir at-Tadāmul (Gradasi Empati Konsentris):</strong><br>
+            Al-Qur'an menyusun daftar penerima infaq menggunakan skema lingkaran konsentris gravitasi kemanusiaan yang sangat presisi:
+            <ul>
+                <li><em>Lingkaran Inti (Asas Eksistensi):</em> <strong>Al-Wālidayn</strong> — Hak mutlak yang tak tergantikan; orang tua adalah perantara eksistensi biologis dan pemeliharaan awal kehidupan.</li>
+                <li><em>Lingkaran Kekeluargaan (Pertalian Rahim):</em> <strong>Al-Aqrabīn</strong> — Keluarga besar dan sanak kerabat yang menopang struktur ketahanan sosial mikro.</li>
+                <li><em>Lingkaran Kerentanan Masa Depan:</em> <strong>Al-Yatāmā</strong> — Generasi muda penerus peradaban yang kehilangan figur penanggung nafkah dan perlindungan ayah.</li>
+                <li><em>Lingkaran Kerentanan Sosial Umum:</em> <strong>Al-Masākīn</strong> — Kaum dhuafa masyarakat luas yang lumpuh mobilitas ekonominya.</li>
+                <li><em>Lingkaran Eksternal / Transit:</em> <strong>Ibnus-Sabīl</strong> — Musafir asing yang terputus dari bekalnya, membuktikan universalitas perlindungan kemanusiaan Islam melintasi sekat primordial kabilah dan teritorial.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Taqdīm al-Jārr wal-Majrūr li-Ifādatil-Ikhtishāsh (Penetapan Hak Absolut):</strong><br>
+            Penggunaan huruf <em>Lām</em> pada <em>falil-wālidayn</em> yang langsung mengawali jawab syarth berfungsi menetapkan <em>al-Istihqāq wal-Ikhtishāsh</em> (hak kepemilikan dan peruntukan primer). Al-Qur'an tidak mendahulukannya dengan fi'il perintah biasa (seperti <em>anfiqū 'alā</em>), melainkan langsung menegaskan status hak: "Maka hak itu adalah milik kedua orang tua!".
+        </li>
+        <li>
+            <strong>Al-Iltifāt at-Ta'mīmī dalam "Wa Mā Taf'alū min Khayr" (Universalisasi Filantropi):</strong><br>
+            Terjadi pergeseran makna dari kata kerja spesifik <em>anfaqtum</em> (pengeluaran harta materi) di awal ayat menuju kata kerja komprehensif <em>taf'alū</em> (segala amal kebajikan perbuatan). Ini merombak paradigma kognitif manusia: filantropi bukan sekadar transaksi rupiah atau emas, melainkan mencakup senyuman tulus, waktu yang diluangkan untuk merawat orang tua renta, tenaga untuk membimbing anak yatim, hingga pembelaan terhadap musafir terlantar.
+        </li>
+        <li>
+            <strong>Taqdīm al-Ma'mūl "Bihī 'Alīm" (Eksklusivitas Pengawasan Ilahi):</strong><br>
+            Mendahulukan jār wa majrūr <em>bihī</em> sebelum khabar <em>'Alīm</em> (alih-alih mengatakan <em>'alīmun bihī</em>) mengandung fungsi <em>al-Qashr wal-Ḥashr</em> (pembatasan). Maknanya: Hanya Allah semata yang mengetahui secara mutlak bobot keikhlasan, pengorbanan tersembunyi, dan tetesan peluh seorang hamba dalam berinfaq. Konstruksi ini secara radikal memutus kecanduan jiwa terhadap validasi sosial manusia dan menghabisi bibit riya'.
+        </li>
+        <li>
+            <strong>I'jāz Shautī & Tanasub Fawāshil (Resonansi Fonetika Batin):</strong><br>
+            Penutupan fashilah dengan lafazh <em>'Alīm</em> yang berakhiran huruf Mim sukun dengan sifat <em>tawassuṭ</em> dan <em>jahr</em> menghadirkan resonansi ketenangan batin (<em>ithmi'nān</em>). Huruf-huruf di ujung ayat mengunci gelombang emosi pembaca: bahwa setiap butir kebaikan yang dialirkan ke dalam lingkaran keluarga dan kaum dhuafa tidak akan pernah hilang sia-sia, melainkan tercatat abadi dalam perbendaharaan Sang Maha Mengetahui.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Tautan Teks Terdahulu — Hubungan Organis dengan Ayat 214):</strong><br>
+            Ayat 214 menutup Klaster 6 dengan melukiskan puncak guncangan eksistensial (<em>zulzilū</em>) yang menimpa para nabi dan orang-orang beriman terdahulu hingga mereka memekikkan doa: <em>"Matā naṣrullāh?"</em> (Kapankah datangnya pertolongan Allah?), yang langsung dijawab: <em>"Alā inna naṣrallāhi qarīb"</em> (Ingatlah, sesungguhnya pertolongan Allah itu amat dekat).<br>
+            Timbul pertanyaan mendasar: <em>Bagaimana pertolongan Allah yang dekat itu dihadirkan dalam realitas sejarah?</em><br>
+            Ayat 215 seketika menjawabnya dengan meletakkan <strong>infrastruktur kohesi sosial dan ketahanan ekonomi umat</strong>! Pertolongan Allah tidak turun di ruang hampa mistis, melainkan terwujud manakala umat Islam memiliki solidaritas internal yang kokoh—saling menanggung beban finansial dari keluarga inti hingga musafir terlantar. Infaq pada Ayat 215 adalah fondasi logistik dan moral sebelum umat menghadapi ujian jihad fisik pada ayat berikutnya.
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik Blok 4: Ayat 142–252 — Pintu Gerbang Klaster 7):</strong><br>
+            Ayat 215 berkedudukan sebagai <strong>Ayat Pembuka Klaster 7 (Ayat 215–242)</strong> dalam konfigurasi Blok 4 (Kemandirian Umat, Syariat Ibadah, Jihad, dan Hukum Keluarga). Klaster ini dirancang dengan format dialektika peradaban baru melalui serial tanya-jawab kenabian (<em>yas'alūnaka... qul...</em>) untuk menata institusi masyarakat madani yang berdaulat di Madinah:<br>
+            1. Regulasi filantropi dan nafkah konsentris (Ayat 215).<br>
+            2. Regulasi perang suci membela diri dan etika bulan haram (Ayat 216–218).<br>
+            3. Dekonstruksi destruksi sosial: penghapusan khamr dan judi (Ayat 219).<br>
+            4. Perlindungan aset dan integrasi sosial anak yatim (Ayat 220).<br>
+            5. Integritas ikatan pernikahan lintas akidah (Ayat 221).<br>
+            6. Kodifikasi komprehensif hukum keluarga: nafkah, thalaq, iddah, dan persusuan (Ayat 222–242).<br>
+            Penempatan hukum infaq keluarga pada gerbang pertama klaster ini membuktikan aksioma peradaban: kedaulatan sebuah umat mustahil tegak jika ketahanan ekonomi keluarga intinya rapuh.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Kausalitas Menuju Ayat 216 — Dialektika Dua Sayap Jihad):</strong><br>
+            Tepat setelah Ayat 215 merinci infaq harta, Ayat 216 langsung memproklamirkan: <em>"Kutiba 'alaykumul-qitālu wa huwa kurhun lakum..."</em> (Diwajibkan atas kamu berperang, padahal perang itu adalah sesuatu yang kamu benci...). Hubungan kausalitasnya sangat mencengangkan: Islam menyeimbangkan <strong>Dua Sayap Pengorbanan Tertinggi</strong>:<br>
+            • <em>Jihad Harta (Jihād al-Māl):</em> Dituntaskan pada Ayat 215 melalui kerelaan memotong ego kepemilikan materi demi menafkahi keluarga dan masyarakat.<br>
+            • <em>Jihad Jiwa (Jihād an-Nafs):</em> Dituntut pada Ayat 216 melalui kesiapan mengorbankan nyawa membela keadilan dan kedaulatan akidah.<br>
+            Pasukan di garis depan perang mustahil memiliki keteguhan mental jika mereka cemas memikirkan nasib kedua orang tua renta dan anak-anak yatim yang mereka tinggalkan di rumah. Ayat 215 menyelesaikan jaminan sosial domestik agar jihad Ayat 216 dapat terlaksana dengan keikhlasan total.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis Madaniyah: Revolusi Solidaritas Pasca-Hijrah</h3>
+    <p>
+        Ketika Nabi Muhammad ﷺ hijrah ke Yatsrib (Madinah), lanskap sosial-ekonomi yang dihadapi umat Islam mengalami benturan struktural yang sangat tajam:
+    </p>
+    <ul>
+        <li>
+            <strong>Krisis Ekonomi Kaum Muhajirin:</strong> Kaum Muhajirin tiba di Madinah dalam keadaan kehilangan seluruh harta benda, tempat tinggal, dan jaringan perniagaan mereka di Makkah. Mereka ditampung oleh kaum Anshar, namun sistem ekonomi Madinah saat itu masih didominasi oleh kaum Yahudi yang menguasai pasar dan praktik pinjaman ribawi yang mencekik leher.
+        </li>
+        <li>
+            <strong>Distorsi Tradisi Filantropi Jahiliyah:</strong> Di masa pra-Islam, bangsa Arab memiliki tradisi kedermawanan sporadis yang didorong oleh motif <em>Al-Fakhr wal-Mubāhāt</em> (pamer gengsi kabilah dan berburu reputasi sosial). Seorang bangsawan Quraisy atau Anshar rela menyembelih puluhan unta untuk pesta terbuka demi dipuji sebagai orang dermawan, namun di balik itu mereka bersikap sangat dingin, kikir, dan menelantarkan orang tua mereka yang renta, saudara perempuan yang janda, serta anak-anak yatim yang tidak memiliki kekuatan politik.
+        </li>
+    </ul>
+    <p>
+        Dalam turbulensi sosio-historis inilah Ayat 215 diturunkan untuk meruntuhkan kepalsuan moral kedermawanan jahiliyah. Allah mendidik masyarakat baru Madinah: kedermawanan sejati tidak dimulai dari panggung publik yang riuh, melainkan dari bakti sunyi kepada kedua orang tua yang tak berdaya di sudut rumah, disusul pembelaan terhadap kerabat dekat, anak yatim, orang miskin, dan para musafir terlantar. Inilah cetak biru sistem jaminan sosial Islam berbasis kasih sayang dan ketakwaan.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (7 Tokoh Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur & Metodologi Tarjih):</strong><br>
+        At-Tabari membedah secara mendalam isu status hukum ayat ini: Apakah ia <em>muḥkam</em> ataukah telah dihapus (<em>mansūkh</em>) oleh pensyariatan ayat zakat 8 asnaf (QS. At-Taubah: 60)? Beliau mengutip riwayat dari Ibnu Zaid yang mengklaim ayat ini mansukh. Namun, At-Tabari membantah keras pendapat tersebut seraya menegaskan kaidah tarjihnya: <em>Ayat 215 ini muhkamah dan tetap berlaku selamanya!</em> At-Tabari menjelaskan bahwa pensyariatan zakat mal wajib tidak pernah membatalkan kewajiban nafkah keluarga. Ayat 215 mengatur dua domain syariat sekaligus: <strong>kewajiban nafkah primer (nafaqah wājibah)</strong> seorang anak kepada kedua orang tua dan kerabat yang fakir, serta <strong>sedekah sukarela (tathawwu')</strong>. Menafkahi orang tua yang tidak mampu adalah kewajiban fardhu 'ain yang disepakati, dan hak nafkah mereka sama sekali tidak gugur dengan keberadaan institusi zakat.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Hadits & Kritik Perilaku Moral):</strong><br>
+        Ibnu Katsir menekankan keagungan adab dan hierarki kebajikan: orang yang paling berhak menikmati tetesan rezekimu adalah kedua orang tuamu sendiri. Beliau menghadirkan hadits Rasulullah ﷺ: <em>"Anta wa māluka li-abīk"</em> (Engkau dan seluruh hartamu adalah milik ayahmu!). Beliau menegaskan bahwa siapa pun yang menghamburkan hartanya untuk bersedekah kepada pihak luar demi mengejar reputasi sosial, sementara kedua orang tuanya hidup dalam kesempitan dan kesengsaraan, maka amalnya adalah bentuk kebodohan moral yang tertolak. Beliau juga mengutip hadits keutamaan sedekah kepada kerabat yang menyembunyikan permusuhan (<em>ash-shadaqatu 'alā dzir-rahimil-kāsyih</em>) sebagai puncak penundukan hawa nafsu demi merekatkan persaudaraan.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Ensiklopedia Fiqih & Ahkam Mazhab):</strong><br>
+        Al-Qurthubi memaparkan konsekuensi fiqhiyyah yang sangat terperinci: <strong>Ijma' seluruh fuqaha menetapkan bahwa anak yang berkemampuan finansial wajib menanggung nafkah kedua orang tuanya yang fakir</strong>, mencakup kebutuhan pangan, sandang, obat-obatan, dan tempat tinggal yang layak. Al-Qurthubi menegaskan bahwa seorang muslim dilarang memberikan zakat mal wajibnya kepada kedua orang tuanya atau anak kandungnya, karena nafkah mereka adalah kewajiban asal (<em>ashlul-farīdhah</em>); zakat hanya dialokasikan untuk pihak di luar garis nasab langsung. Terkait <em>ibnus-sabīl</em>, Al-Qurthubi menjelaskan bahwa ia berhak menerima santunan meskipun di negeri asalnya ia orang kaya raya, karena status keterputusannya dari modal di tanah rantau menjadikannya dhuafa secara faktual.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Balaghah & Teologi Rasional):</strong><br>
+        Az-Zamakhsyari mengagumi keindahan <em>Uslūb al-Ḥakīm</em>: betapa tingginya seni pendidikan Al-Qur'an yang memalingkan pertanyaan teknis materi menuju reformasi skala prioritas etis.<br>
+        Fakhruddin Ar-Razi mengkaji secara teologis: Mengapa lafazh <em>min khayr</em> diulang dua kali dalam satu ayat? Penyebutan pertama (<em>mā anfaqtum min khayrin</em>) mengikat infaq harta pada syarat kesucian materi (halal dan thayyib). Penyebutan kedua (<em>wa mā taf'alū min khayrin</em>) meluaskan kebajikan ke seluruh tindakan ragawi dan getaran batin. Ar-Razi juga membedah rahasia penutup asma Allah <strong>'Alīm</strong>: Mengapa Allah tidak menggunakan nama <em>Syakūr</em> (Maha Membalas) atau <em>Jawād</em> (Maha Dermawan)? Karena berinfaq kepada keluarga dan kerabat sering kali menuai kekecewaan—kerabat yang dibantu kerap tidak berterima kasih atau bahkan membalas dengan kecemburuan dan fitnah. Penutup <em>'Alīm</em> hadir sebagai penenteram batin: Allah Maha Mengetahui setiap tetes peluh dan rupiah yang engkau keluarkan; jangan pernah meminta balasan atau ucapan terima kasih dari manusia, cukuplah Kemahatahuan Allah sebagai saksi dan penjamin pahalamu!
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Imam Ibnu 'Asyur (w. 1393 H) — <em>At-Taḥrīr wat-Tanwīr</em> (Maqasid Syariah & Sosiologi Peradaban):</strong><br>
+        Ibnu 'Asyur menjelaskan bahwa syariat Islam merancang tatanan peradaban di atas hukum alam penciptaan (<em>ar-rābithah ath-thabī'iyyah</em>). Manusia secara fitrah memiliki keterikatan batin terkuat dengan orang tua dan kerabatnya. Jika Al-Qur'an memerintahkan manusia langsung membantu orang asing seraya mengabaikan keluarganya, niscaya sistem sosial akan mengalami anomali dan penolakan fitrah. Dengan memprioritaskan <em>al-wālidayn wal-aqrabīn</em>, Al-Qur'an membangun jaringan pengaman sosial lapis pertama yang berbasis kasih sayang murni. Jika setiap unit keluarga di sebuah bangsa menjalankan mandat Ayat 215 untuk menjamin sanak saudaranya yang miskin, maka problem kemiskinan nasional akan teratasi secara organik tanpa membebani kas perbendaharaan negara.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Corak Adabi Ijtima'i & Kontekstual Nusantara):</strong><br>
+        Quraish Shihab menguraikan konsep <strong>Radius Tanggung Jawab Moral (Responsibility Radius)</strong>. Beliau melontarkan kritik sosial yang tajam terhadap hipokrisi filantropi modern: betapa banyak individu di era sekarang yang begitu dermawan menyumbang ratusan juta rupiah untuk pembangunan gedung megah, yayasan bergengsi, atau pesta perjamuan publik demi meraih gelar kehormatan dan pengakuan sosial (<em>social recognition</em>), namun di saat yang sama membiarkan ibu kandungnya sendiri tinggal di rumah reot dan mengeluh karena ketiadaan biaya berobat. Quraish Shihab menegaskan: Al-Qur'an memvonis filantropi semacam ini sebagai kekeliruan moral yang fatal! Berbakti dan menafkahi orang tua bukanlah opsi sambilan, melainkan kewajiban paling primer yang mendahului seluruh amal kebajikan lainnya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Buya Hamka (w. 1981 M) — <em>Tafsir Al-Azhar</em> & Kemenag RI (Spiritualitas Nusantara & Kebijakan Sosial):</strong><br>
+        Buya Hamka dengan kelembutan sastra Melayu-Minangkabau yang menghunjam sanubari menulis: <em>"Berapa banyak anak di zaman sekarang yang setelah berhasil merantau, bergelar tinggi, dan menjadi hartawan di kota besar, merasa risih dan malu mengakui orang tuanya yang sudah tua, bungkuk, dan berpakaian lusuh dari kampung. Mereka sanggup mentraktir rekan bisnis di hotel berbintang dengan tagihan jutaan rupiah, tetapi begitu mengirim uang belanja untuk ibunya sendiri di desa, tangannya gemetar dan penuh hitungan!"</em> Hamka mengingatkan: <em>"Air susu ibumu yang telah mengalir menjadi darah dagingmu, dan keringat ayahmu yang membesarkanmu, tidak akan pernah mampu engkau bayar walau engkau timbang mereka dengan emas sebesar gunung Uhud!"</em><br>
+        Tafsir Kemenag RI menambahkan dimensi regulasi kebangsaan: Ayat 215 menjadi fondasi integrasi antara tanggung jawab nafkah perdata dalam keluarga dengan sistem penanggulangan kemiskinan dan perlindungan anak yatim di tingkat nasional.
+    </div>
+
+    <h3>Tabel Matriks Komparasi Mufassirin: Titik Temu (Ijma') & Dinamika Nuansa (Ikhtilaf)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Konsensus Ulama (Ijma')</th>
+                <th>Dinamika Analisis & Sudut Pandang Khusus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Status Hukum Ayat (Muhkam vs Mansukh)</strong></td>
+                <td>Jumhur ulama sepakat ayat ini muhkamah dan tetap berlaku abadi dalam mengatur nafkah dan sedekah sukarela.</td>
+                <td>At-Tabari & Qurthubi membantah riwayat syadz Ibnu Zaid; menegaskan bahwa kewajiban nafkah primer orang tua tidak dapat digugurkan oleh ayat zakat 8 asnaf (At-Taubah: 60). Ibnu Katsir mengukuhkan posisinya sebagai sedekah tathawwu' dan birrul walidain.</td>
+            </tr>
+            <tr>
+                <td><strong>Skala Prioritas Urutan (Tartīb al-Munfaq 'alayhim)</strong></td>
+                <td>Penyebutan orang tua di urutan pertama (<em>falil-wālidayn</em>) menetapkan skala prioritas paling mutlak dalam hukum nafkah.</td>
+                <td>Al-Qurthubi & mazhab fuqaha: Nafkah orang tua adalah fardhu 'ain hukumnya haram diambilkan dari zakat mal. Ibnu 'Asyur: Gradasi konsentris mengikuti fitrah psikologis manusia demi efisiensi sosiologis masyarakat.</td>
+            </tr>
+            <tr>
+                <td><strong>Tafsir Pedagogis "Uslūb al-Ḥakīm"</strong></td>
+                <td>Pergeseran jawaban dari substansi komoditas ke target penerima merupakan metode pendidikan Ilahi tingkat tinggi.</td>
+                <td>Az-Zamakhsyari & Al-Qazwini: Menilai pergeseran ini sebagai puncak balaghah (mendidik penanya atas apa yang lebih mereka butuhkan). Quraish Shihab: Mendekonstruksi ilusi bahwa besaran materi lebih penting daripada ketepatan sasaran.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Perluasan "Min Khayr" & Penutup "'Alīm"</strong></td>
+                <td>Harta yang diinfakkan wajib halal dan baik; seluruh kebajikan diawasi dan dibalas oleh Allah secara sempurna.</td>
+                <td>Fakhruddin Ar-Razi: Menyoroti pengulangan dua kali <em>min khayr</em> sebagai transisi dari materi ke seluruh gerak tubuh; asma <em>'Alīm</em> berfungsi sebagai terapi jiwa penawar kekecewaan ketika keluarga yang dibantu tidak berterima kasih. Hamka: Menegaskan independensi ikhlas dari pamrih makhluk.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+    <p>
+        <em>Catatan Metodologis: Analisis kognitif dan neuropsikologis di bawah ini merupakan sintesis pembacaan sistemik kontemporer terhadap prinsip wahyu, disajikan sebagai pisau bedah kognitif untuk tazkiyatun nafs, bukan sebagai penafsiran otoritatif teks wahyu itu sendiri.</em>
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Jahiliyah/Sekuler vs Pola Pikir Qur'ani</h3>
+    <ul>
+        <li>
+            <strong>Pola Pikir Jahiliyah / Filantropi Performatif:</strong><br>
+            • <em>Motivasi Berbasis Vanity (Pencitraan):</em> Memberi demi membeli status sosial, validasi eksternal, dan pengaruh politik. Lebih senang berdonasi pada proyek besar yang disorot kamera media.<br>
+            • <em>Scarcity Mindset dalam Keluarga:</em> Memandang nafkah untuk orang tua renta dan saudara kandung sebagai "beban pengurang kekayaan" (<em>liability</em>), karena bantuan kepada keluarga dianggap tidak mendatangkan keuntungan modal timbal-balik.<br>
+            • <em>Kerapuhan Emosional:</em> Mudah tersinggung, sakit hati, dan mengungkit-ungkit pemberian (<em>al-mann wal-adzā</em>) jika penerima tidak menunjukkan rasa tunduk dan terima kasih.
+        </li>
+        <li>
+            <strong>Pola Pikir Qur'ani (Rabbani):</strong><br>
+            • <em>Prinsip Stewardship (Amanah Ilahi):</em> Harta disadari sepenuhnya sebagai titipan Allah; menginfakkannya adalah proses menyalurkan hak milik Allah kepada para hamba-Nya yang telah Dia tetapkan.<br>
+            • <em>Abundance Mindset & Birrul Walidayn:</em> Menyadari bahwa menafkahi orang tua dan kerabat adalah magnet pembuka pintu rezeki dan keberkahan usia (<em>ziyādatul-'umr wal-barakah</em>), bukan beban pengeluaran.<br>
+            • <em>Kemerdekaan Psikis Mutlak:</em> Jiwa terbebas 100% dari tuntutan terima kasih manusia, karena bersandar kokoh pada Asma Allah <em>Al-'Alīm</em>—kesadaran bahwa Allah Maha Mengetahui sudah lebih dari cukup memuaskan batin.
+        </li>
+    </ul>
+
+    <h3>2. Arsitektur Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: "The Concentric Circles of Responsibility" (Lingkaran Tanggung Jawab Konsentris):</strong><br>
+            <em>Premis Kaidah:</em> Sumber daya manusia (finansial, waktu, dan energi emosional) bersifat terbatas. Hukum efisiensi moral Al-Qur'an menetapkan bahwa tanggung jawab etis harus didistribusikan dari titik pusat gravitasi terdalam (orang tua), merambat ke lingkaran kedua (kerabat), lingkaran ketiga (anak yatim), lingkaran keempat (kaum miskin), hingga lingkaran terluar (musafir asing).<br>
+            <em>Dampak Pengambilan Keputusan:</em> Menghilangkan bias kognitif <strong>Virtue Signaling Fallacy</strong> (terjebak memperjuangkan isu-isu sosial global di ruang publik demi dipandang peduli, sementara ibu kandung sendiri terlantar kesepian di rumah). Sebelum seseorang melangkah ke panggung filantropi eksternal, ia wajib mengaudit integritas alokasi nafkah di lingkaran domestiknya.
+        </li>
+        <li>
+            <strong>Mental Model 2: "The Sovereign Witness Principle" (Prinsip Saksi Berdaulat / Asma 'Alīm):</strong><br>
+            <em>Premis Kaidah:</em> Menginstal kesadaran bahwa kebaikan sekecil apa pun memiliki "Saksi Mutlak" yang Kemahatahuan-Nya berdiri sendiri tanpa membutuhkan perantara opini publik.<br>
+            <em>Dampak Pengambilan Keputusan:</em> Memutus ketergantungan dopamin terhadap pujian media sosial. Ketika seorang muslim berinfaq kepada kerabat yang bersikap dingin atau membalas dengan kebencian, sistem kognitifnya tidak mengalami disonansi atau keputusasaan, karena tujuannya bukan apresiasi kerabat, melainkan pencatatan di sisi Allah Yang Maha Mengetahui (<em>fa innallāha bihī 'alīm</em>).
+        </li>
+    </ul>
+
+    <h3>3. Analisis Neuropsikologi Jiwa & Tazkiyatun Nafs</h3>
+    <ul>
+        <li>
+            <strong>Evolusi Kin Altruism & Penguatan Spiritual:</strong> Secara biologi evolusioner, manusia memiliki kecenderungan bawaan untuk menolong individu yang memiliki kesamaan genetik (<em>kin selection</em>) yang dimediasi oleh pelepasan hormon oksitosin di area hipotalamus. Al-Qur'an pada Ayat 215 mengambil fitrah biologis ini, lalu menyucikannya (<em>tazkiyah</em>) menjadi ibadah transendental tertinggi (<em>birrul wālidayn wa shilat ar-rahim</em>). Bantuan kepada keluarga bukan lagi dorongan egoisme genetik kabilah, melainkan manifestasi ketundukan syariat Ilahi.
+        </li>
+        <li>
+            <strong>Inhibisi Impuls Narsistik di Prefrontal Cortex:</strong> Memberi sedekah kepada orang tua renta di ruang privat yang sunyi dari kamera media sosial menuntut kerja keras <em>Dorsolateral Prefrontal Cortex (dlPFC)</em> untuk menekan dorongan narsisme dari <em>ventral striatum</em>. Kedermawanan sunyi melatih sirkuit otak untuk melepaskan diri dari candu validasi instan menuju kematangan spiritual tingkat tinggi (<em>ikhlās</em>).
+        </li>
+        <li>
+            <strong>Resolusi Disonansi Kognitif Filantropis:</strong> Menghilangkan kepalsuan batin antara persona publik yang dermawan dengan realitas privat yang bakhil. Penataan urutan Ayat 215 menyembuhkan keretakan kepribadian (<em>split personality</em>), menyelaraskan integritas moral seseorang di dalam rumah dengan citranya di luar rumah.
+        </li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Epidemi "Nursing Home Culture" & Krisis Penelantaran Orang Tua di Era Modern</h3>
+    <p>
+        Salah satu paradoks paling memilukan dari peradaban sekuler abad ke-21 adalah lahirnya fenomena <strong>Nursing Home Culture</strong> (budaya menitipkan orang tua ke panti jompo). Di negara-negara maju dan mulai menjalar ke kota-kota metropolitan negara berkembang, anak-anak yang telah sukses berkarier menganggap orang tua mereka yang mulai pikun dan sakit-sakitan sebagai beban finansial, penyita waktu, dan penghambat produktivitas. Orang tua diasingkan ke panti-panti jompo, hanya dikunjungi setahun sekali, dan dibiarkan meninggal dalam kehampaan isolasi emosional.
+    </p>
+    <p>
+        Ayat 215 hadir sebagai tamparan keras terhadap dekadensi moral ini. Dengan menempatkan <strong>falil-wālidayn</strong> pada garda terdepan, Islam mendeklarasikan bahwa orang tua bukan residu sosial yang boleh disingkirkan ketika sudah tidak produktif. Merawat dan menafkahi orang tua di usia senja adalah kewajiban eksistensial, pintu surga paling tengah, dan tolok ukur utama keberadaban suatu bangsa.
+    </p>
+
+    <h3>2. Dekonstruksi "Greenwashing" & Filantropi Kosmetik Korporasi (CSR Semu)</h3>
+    <p>
+        Di ranah korporasi modern, marak terjadi fenomena <em>Corporate Social Responsibility (CSR)</em> performatif dan <em>greenwashing</em>. Perusahaan-perusahaan multinasional mengalokasikan anggaran miliaran rupiah untuk kampanye amal publik di media massa—membangun citra hijau dan peduli kemanusiaan—namun di saat yang sama menindas hak buruh internal mereka dengan upah di bawah standar layak, serta membiarkan warga lokal di sekitar pagar pabrik hidup dalam kemiskinan dan polusi beracun.
+    </p>
+    <p>
+        Ini adalah perwujudan modern dari distorsi sedekah jahiliyah: mendahulukan pencitraan luar demi reputasi pasar seraya menelantarkan orang-orang terdekat (<em>wal-aqrabīn</em>). Prinsip Ayat 215 menuntut audit etika bisnis: sebuah entitas ekonomi tidak berhak mengklaim dirinya filantropis jika karyawan, buruh, dan masyarakat lingkar satu di sekitarnya masih menjerit kelaparan.
+    </p>
+
+    <h3>3. Komodifikasi Kemiskinan Anak Yatim di Industri Konten Digital</h3>
+    <p>
+        Di era algoritma media sosial (TikTok, Instagram, YouTube), muncul fenomena distopia baru: <strong>komodifikasi penderitaan dhuafa</strong>. Para pembuat konten mengeksploitasi kesedihan anak yatim (<em>al-yatāmā</em>) dan kemelaratan orang miskin (<em>al-masākīn</em>) demi meraup <em>views</em>, <em>likes</em>, dan monetisasi iklan. Kamera disorotkan tepat ke wajah anak yatim yang menangis saat diserahi santunan, merampas kehormatan dan martabat kemanusiaan mereka di depan jutaan pasang mata.
+    </p>
+    <p>
+        Ayat 215 menentang keras eksploitasi narsistik ini. Al-Qur'an menetapkan bahwa perlindungan terhadap anak yatim dan fakir miskin adalah pemenuhan hak sosial, bukan panggung sirkus digital untuk memperkaya ego sang pemberi donasi. Penutup ayat <em>fa innallāha bihī 'alīm</em> menegaskan bahwa sedekah paling mulia adalah sedekah yang sunyi dari sorotan kamera, menjaga rasa malu sang penerima, dan hanya dipersembahkan kepada Allah Ta'ala.
+    </p>
+
+    <h3>4. Krisis Kemanusiaan Ibnus-Sabīl: Tragedi Pengungsi Global Abad ke-21</h3>
+    <p>
+        Dunia hari ini menyaksikan krisis pengungsi terbesar sejak Perang Dunia II. Lebih dari 100 juta manusia terusir dari tanah air mereka akibat perang genosida, konflik geopolitik, dan bencana iklim. Para pengungsi lintas batas ini adalah representasi nyata dari <strong>Ibnus-Sabīl</strong> modern. Ironisnya, negara-negara modern yang mengaku menjunjung tinggi hak asasi manusia justru membangun tembok kawat berduri, menenggelamkan perahu pencari suaka di lautan lepas, dan mendeportasi musafir terlantar tanpa belas kasihan.
+    </p>
+    <p>
+        Ayat 215 meletakkan pilar hukum internasional Islam yang revolusioner: musafir yang terdampar di tengah perjalanan, apa pun latar belakang suku dan kewarganegaraannya, memiliki hak hukum atas jaminan logistik dan perlindungan keamanan dari masyarakat setempat.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit Finansial (< 5 Menit): Protokol "Auto-Debit Birrul Wālidayn"</strong><br>
+                Segera pasang instruksi transfer otomatis (<em>standing order / auto-debit</em>) di aplikasi perbankan Anda pada tanggal penerimaan gaji bulanan, khusus dialokasikan ke rekening ayah dan ibu kandung. Lakukan pengalokasian nafkah ini sebagai pos prioritas nomor satu <em>sebelum</em> membelanjakan penghasilan untuk kebutuhan gaya hidup pribadi atau tabungan investasi. Iringi transfer tersebut dengan panggilan telepon penuh takzim menanyakan kabar dan mendoakan mereka tanpa menunggu mereka meminta.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Rule): "Audit Filantropi Kerabat (Family-First Philanthropy)"</strong><br>
+                Terapkan kaidah penyaringan ketat: Sebelum Anda menyalurkan donasi sukarela berskala besar ke lembaga amal luar atau kampanye publik, luangkan waktu satu jam untuk mengaudit kondisi ekonomi keluarga besar. Hubungi saudara kandung, paman, bibi, atau keponakan Anda: apakah ada di antara mereka yang menunggak biaya sekolah anak, terancam putus obat medis, atau terlilit utang darurat kebutuhan pokok? Alihkan porsi sedekah utama Anda kepada mereka secara tertutup dan bermartabat, bungkus bantuan sebagai "hadiah keluarga" agar harga diri mereka tetap terjaga tanpa merasa terhina.
+            </li>
+            <li>
+                <strong>Komitmen Etika Sosial: "Pondasi Pendampingan Yatim & Pos Darurat Musafir"</strong><br>
+                Sisihkan pos dana rutin bulanan untuk menjadi orang tua asuh bagi minimal satu anak yatim di lingkungan tempat tinggal Anda hingga ia mandiri secara pendidikan. Di samping itu, sediakan alokasi "Dana Darurat Ibnus-Sabīl" (baik melalui kas masjid lingkungan maupun saldo dompet pribadi) yang siap disalurkan tanpa birokrasi berbelit untuk membantu musafir atau pekerja migran yang kehabisan ongkos perjalanan di kota Anda.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Ketika aku begitu mudah mengeluarkan jutaan rupiah untuk jamuan makan malam bersama relasi bisnis atau berdonasi di acara publik yang mencantumkan namaku di spanduk donatur, mengapa tanganku begitu kaku dan hatiku penuh hitung-hitungan saat ibuku sendiri meminta uang belanja atau ayahku membutuhkan biaya berobat?
+            </li>
+            <li>
+                Seandainya sanak kerabat yang kubantu secara finansial ternyata tidak menunjukkan rasa terima kasih, bersikap dingin, atau bahkan membalas kebaikanku dengan gunjingan di belakang layar, apakah hatiku terbakar kejengkelan dan berhenti membantu mereka—membuktikan bahwa selama ini sedekahku mengharapkan pujian makhluk, bukan bersandar pada Kemahatahuan Allah (<em>fa innallāha bihī 'alīm</em>)?
+            </li>
+            <li>
+                Apakah harta yang kuinfakkan selama ini benar-benar telah memenuhi kriteria <em>min khayr</em>—bersumber dari rezeki yang halal, suci, dan diperoleh dengan cara terhormat—ataukah aku mencoba membersihkan harta syubhat dan haram melalui sedekah kosmetik demi menenangkan rasa bersalah di hadapan manusia?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Rabbal-'izzah wal-jabarūt, yā Man bi-yadihil-mulku wa Huwa 'alā kulli syay'in qadīr. Segala puji bagi-Mu yang telah menurunkan ayat-ayat petunjuk, mengajarkan kami tata krama cinta dan skala prioritas kebajikan. Ya Allah, bersihkanlah jiwa kami dari penyakit kikir, sifat tamak, dan candu riya' mencari pujian makhluk. Karuniakanlah kepada kami rezeki yang halālan thayyiban mubārakan min khayr, dan bimbinglah tangan kami untuk senantiasa mendahulukan bakti kepada kedua orang tua kami selagi mereka masih bernapas di dunia ini. Ampunilah kelalaian kami terhadap mereka, muliakanlah hari tua mereka, dan basuhlah setiap tetes keringat serta air mata mereka dengan naungan surga-Mu. Bukakanlah hati kami untuk menyayangi sanak kerabat, melindungi anak-anak yatim, memuliakan kaum miskin, dan menolong para musafir yang terlunta-lunta. Jadikanlah setiap hembusan amal kami murni tertuju kepada-Mu, bersandar pada Kemahatahuan-Mu Yang Mutlak: 'Fa innallāha bihī 'alīm'. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-214 - QS. Al-Baqarah Ayat 214.html">&larr; Kembali ke Ayat 214 (QS. 2:214)</a>
+        <span><strong>QS. Al-Baqarah [2]: 215</strong></span>
+        <a href="002-216 - QS. Al-Baqarah Ayat 216.html">Lanjut ke Ayat 216 (QS. 2:216) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

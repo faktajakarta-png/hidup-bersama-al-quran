@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-066 - QS. Ali 'Imran Ayat 66 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-065 - QS. Ali 'Imran Ayat 65.html">&larr; Ayat Sebelumnya (QS. 3:65)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-067 - QS. Ali 'Imran Ayat 67.html">Ayat Berikutnya (QS. 3:67) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 3 (Ayat 64–101): Dialog Universal & Debat Kritis Ahli Kitab: Kalimatun Sawā' & Millah Ibrāhīm</span>
+        <span class="badge">Klaster 1 (Ayat 64–68): Rekonsiliasi Teologis Kalimatun Sawā' & Dekonstruksi Klaim Sektarian atas Ibrāhīm AS</span>
+        <span class="badge">19 Kata | 75 Huruf Rasm</span>
+        <span class="badge">Juz 3 (Hizb 6)</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 66</h1>
+    <div class="transliteration">
+        "Hā-antum hā'ulā'i ḥājajtum fīmā lakum bihī 'ilmun fa-lima tuḥājjūna fīmā laysa lakum bihī 'ilm(un), wallāhu ya'lamu wa antum lā ta'lamūn(a)."
+    </div>
+    <div class="thematic-title">
+        Kritik Epistemologis Al-Qur'an atas Pseudo-Intelektualisme & Debat Nir-Otoritas: Dekonstruksi Falasi Ahli Kitab Menuju Epistemic Humility di Hadapan Kemahatahuan Ilahi
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 3 | Klaster 1: Kritik Ilusi Pengetahuan, Batas Otoritas Nalar, dan Pembebasan Monoteisme Ibrahimiah dari Sekat Partikularistik)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        هَـٰٓأَنتُمْ هَـٰٓؤُلَآءِ حَـٰجَجْتُمْ فِيمَا لَكُم بِهِۦ عِلْمٌ فَلِمَ تُحَآجُّونَ فِيمَا لَيْسَ لَكُم بِهِۦ عِلْمٌ ۚ وَٱللَّهُ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ ۝٦٦
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "Ingatlah, kalian ini (wahai Ahli Kitab) adalah orang-orang yang telah berbantah-bantahan dalam perkara yang kalian miliki pengetahuan tentangnya (seperti hukum-hukum syariat Taurat dan Injil atau urusan Nabi Musa dan Nabi Isa yang teksnya termaktub di dalam kitab kalian); maka mengapa kalian masih tetap berbantah-bantahan pula dalam perkara yang sama sekali kalian tidak memiliki pengetahuan tentangnya (seperti hakikat agama Nabi Ibrahim AS yang hidup berabad-abad mendahului turunnya kitab-kitab kalian)? Dan Allah mengetahui (segala hakikat historis, esensi agama samawi, dan rahasia gaib), sedangkan kalian tidak mengetahui."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat 66 merupakan puncak pembongkaran epistemologi terhadap metodologi polemik Ahli Kitab (Yahudi dan Nasrani). Jika pada ayat 65 Al-Qur'an menghantam falasi historis mereka secara kronologis melalui pertanyaan retoris: <em>"Mengapa kalian memperdebatkan Ibrahim padahal Taurat dan Injil baru diturunkan sesudah beliau? Apakah kalian tidak berakal?"</em>, maka pada ayat 66 ini wahyu membedah cacat logika yang lebih fundamental: <strong>kebiasaan memperdebatkan hal gaib dan sejarah masa lalu tanpa dasar otoritas data (knowledge authority)</strong>.
+    </p>
+    <p>
+        Al-Qur'an secara cermat membedakan dua wilayah nalar: pertama, perkara yang teks kitabnya berada di tangan mereka (<em>fīmā lakum bihī 'ilm</em>)—di mana perdebatan mereka pun kerap menyimpang karena dorongan hawa nafsu; kedua, perkara yang sama sekali steril dari teks wahyu mereka (<em>fīmā laysa lakum bihī 'ilm</em>)—yakni klaim sektarian bahwa Nabi Ibrahim AS menganut Yudaisme atau Kristen. Menjadikan figur universal seperti Ibrahim sebagai komoditas perebutan klaim primordial tanpa pijakan naskah suci adalah puncak pseudo-intelektualisme. Ayat ini ditutup dengan penegasan kontras ontologis: Allah mengetahui hakikat kebenaran yang objektif, sedangkan manusia dengan segala keterbatasan persepsi dan bias kognitifnya berada dalam kubangan ketidaktahuan.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>هَـٰٓأَنتُمْ</strong><br>(<em>Hā'antum</em>)</td>
+                <td>
+                    <strong>Huruf Hā' (Tanbīh):</strong> Keluar dari aqshal-halq (pangkal tenggorokan) dengan sifat hams, rikhwah, dan istifal.<br>
+                    <strong>Mad Jā'iz Munfaṣhil:</strong> Pertemuan huruf mad dengan hamzah qatha' pada lafaz asal (<em>Hā - Antum</em>).<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sākinah bertemu huruf Tā'; dibaca samar dengan ghunnah tarqīq 2 harakat.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sākinah bertemu huruf Hā' pada kata berikutnya dibaca jelas tanpa dengung tambahan.
+                </td>
+                <td>
+                    Lafaz <em>Hā'antum</em> adalah salah satu poros perbedaan ushul qira'at terpenting:<br>
+                    • <strong>Nāfi' (Qālūn & Warsy), Abū 'Amr, dan Abū Ja'far:</strong> Membaca dengan <strong>Tashīl Hamzah</strong> (mempermudah bunyi hamzah antara hamzah dan alif). Warsy memiliki wajah kedua dengan <strong>Ibdāl</strong> (mengganti hamzah menjadi alif mad thūl 6 harakat: <em>Hāāāntum</em>). Qalun dan Abu 'Amr membaca tashil dengan pilihan alif fasl (idkhāl) atau tanpa idkhal.<br>
+                    • <strong>Ibnu Katsīr dan Ruwais:</strong> Membaca dengan membuang alif tanbih dan mentahqiq hamzah (<em>Ha-antum</em>) tanpa mad.<br>
+                    • <strong>'Āṣhim, Ḥamzah, Al-Kisā'ī, Khalaf al-'Āsyir, Ibnu 'Āmir, dan Rauh:</strong> Membaca dengan menetapkan alif tanbih dan <strong>Taḥqīq Hamzah</strong> (<em>Hā-antum</em>) dengan kadar mad munfashil masing-masing (Hamzah 6 harakat, 'Ashim 4–5 harakat). Penegasan vokal ini memperkuat intonasi teguran tajam atas kelancangan nalar mereka.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>هَـٰٓؤُلَآءِ</strong><br>(<em>Hā'ulā'i</em>)</td>
+                <td>
+                    <strong>Dua Ragam Mad:</strong> Terdapat dua jenis mad dalam satu kata: (1) <strong>Mad Jā'iz Munfaṣhil</strong> pada alif tanbih pertama (<em>Hā</em>), dan (2) <strong>Mad Wājib Muttaṣhil</strong> pada huruf mad bertemu hamzah qatha' dalam satu kata di akhir (<em>lā'i</em>).<br>
+                    <strong>Kasrah Ṭhabī'iyyah:</strong> Hamzah terakhir dibaca kasrah murni dengan sifat syiddah dan jahr.
+                </td>
+                <td>
+                    • Sepuluh imam mutawatirah sepakat membaca mad wajib muttashil pada alif kedua (4–5 harakat untuk jumhur, dan 6 harakat thūl bagi Hamzah dan Warsy).<br>
+                    • Bagi <strong>Abu 'Amr</strong>, ketika menyambung hamzah kasrah <em>Hā'ulā'i</em> dengan hamzah pada kata lain berlaku kaidah isqath/tashil, namun di sini kata berikutnya adalah huruf Ha' (<em>ḥājajtum</em>), maka seluruh imam sepakat mentahqiq kasrah pada hamzah terakhir. Isim isyarah ini berfungsi menghadirkan audiens di hadapan sidang nalar publik.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>حَـٰجَجْتُمْ</strong><br>(<em>Ḥājajtum</em>)</td>
+                <td>
+                    <strong>Huruf Ḥā':</strong> Makhraj wasathul-halq; sifat hams, rikhwah, dan istifal.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Dipanjangkan 2 harakat (karena Jim pertama berharakat fathah hidup, bukan tasydid).<br>
+                    <strong>Qalqalah Ṣhughrā:</strong> Pada huruf Jīm kedua yang berharakat sukun (<em>jaj</em>); dipantulkan secara ringan dan dinamis dari tengah lidah.<br>
+                    <strong>Huruf Tā':</strong> Sifat syiddah dan hams.<br>
+                    <strong>Idzhār Syafawī:</strong> Mīm sākinah dibaca jelas saat washal ke Fa'.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca lafaz ini dengan <strong>Idzhār dua huruf Jīm</strong> (memisahkan Jim pertama yang berharakat dengan Jim kedua yang sukun). Tidak diidghamkan karena menempel pada dhamir fa'il ta'. Menegaskan fakta historis bahwa perdebatan tersebut benar-benar telah terjadi secara riil di hadapan Nabi Muhammad ﷺ.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>فِيمَا لَكُم بِهِۦ عِلْمٌ</strong><br>(<em>Fīmā lakum bihī 'ilmun</em>)</td>
+                <td>
+                    <strong>Ikhfā' Syafawī:</strong> Mīm sākinah pada <em>lakum</em> bertemu huruf Bā' pada <em>bihī</em>; dibaca samar disertai dengung ghunnah 2 harakat dengan merapatkan bibir secara lembut.<br>
+                    <strong>Shilah Ṣhughrā:</strong> Hā' dhamir pada <em>bihī</em> diapit dua huruf hidup; dipanjangkan 2 harakat.<br>
+                    <strong>Huruf 'Ain:</strong> Wasathul-halq dengan sifat tawassuth.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Tanwīn dhammah pada <em>'ilmun</em> bertemu huruf Fā' pada kata berikutnya; disamarkan dengan ghunnah tarqīq 2 harakat saat washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat dalam kaidah ikhfa' syafawi dan shilah shughra. Pilihan diksi <em>lakum bihī 'ilm</em> menegaskan pengakuan Al-Qur'an secara adil: mereka memang memiliki porsi ilmu yang bersumber dari Taurat dan Injil, namun justru ilmu itulah yang mereka khianati.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>فَلِمَ تُحَآجُّونَ</strong><br>(<em>Fa-lima tuḥājjūna</em>)</td>
+                <td>
+                    <strong>Qashr Mim:</strong> Huruf Mīm pada <em>fa-lima</em> dibaca pendek (1 harakat); pembuangan alif istifhamiyyah sesuai kaidah ortografi rasm mushaf.<br>
+                    <strong>Mad Lāzim Kalimī Mutsaqqal:</strong> Huruf Alif mad bertemu dengan huruf Jīm bertasydid dalam satu kata. Wajib dipanjangkan <strong>6 Harakat (Ṭhūl)</strong> secara mutlak.<br>
+                    <strong>Sifat Nabr:</strong> Penekanan vokal yang sangat kuat pada huruf Jīm musyaddadah untuk memperjelas tasydid tanpa jeda terputus.
+                </td>
+                <td>
+                    • <strong>Konsensus Sepuluh Imam:</strong> Seluruh imam mutawatirah sepakat tanpa ikhtilaf memanjangkan lafaz <em>tuḥājjūna</em> sepanjang 6 harakat penuh karena hukum Mad Lazim Kalimi Mutsaqqal, serta memendekkan huruf Mim pada <em>fa-lima</em>.<br>
+                    • Dentuman fonetik 6 harakat yang diikuti tekanan nabr melukiskan secara auditif kerasnya kepala kaum yang gemar berdebat tanpa pijakan ilmu.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>فِيمَا لَيْسَ لَكُم بِهِۦ عِلْمٌۭ ۚ</strong><br>(<em>Fīmā laysa lakum bihī 'ilm</em>)</td>
+                <td>
+                    <strong>Ḥarf Līn:</strong> Ya' sukun didahului fathah pada <em>laysa</em> dilafalkan lunak.<br>
+                    <strong>Ikhfā' Syafawī & Shilah:</strong> Berlaku pada <em>lakum bihī</em>.<br>
+                    <strong>Idghām Bighunnah / Waqaf Sukūn:</strong> Jika washal ke <em>wallāhu</em>, tanwin bertemu Wawu dibaca idgham bighunnah. Jika waqaf pada tanda Ja'iz (ۚ), huruf Lām dan Mīm disukunkan secara berurutan (<em>iltiqā'us-sākinayn fīl-waqf</em>) dengan mempertahankan sifat tawassuth pada keduanya.
+                </td>
+                <td>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca idgham <strong>Bighayri Ghunnah</strong> (tanpa dengung) saat menyambung tanwin <em>'ilmun</em> ke huruf Wawu <em>wallāhu</em>.<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Membaca idgham <strong>Bighunnah</strong> sempurna sepanjang 2 harakat.<br>
+                    • Pengulangan struktur frase secara simetris menegaskan jurang pemisah antara ranah ilmu yang terverifikasi dan ranah kebodohan spekulatif.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>وَٱللَّهُ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ ۝٦٦</strong><br>(<em>Wallāhu ya'lamu wa antum lā ta'lamūn</em>)</td>
+                <td>
+                    <strong>Taghlīzh Lām Jalālah:</strong> Dua huruf Lam pada lafaz Allah dibaca tebal dan megah karena didahului harakat fathah pada Wawu.<br>
+                    <strong>Huruf 'Ain Sākinah:</strong> Sifat tawassuth dan jahr pada <em>ya'lamu</em> dan <em>ta'lamūna</em>.<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Pada <em>wa antum</em>.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada akhir ayat saat waqaf; Wawu mad bertemu Nun sukun dibaca 2, 4, atau 6 harakat dengan tawassuth pada huruf Nun yang dimatikan.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca khithāb (kata ganti orang kedua jamak): <em>wa antum lā ta'lamūn</em>. Penutupan ayat ini mengunci seluruh arogansi intelektual makhluk di hadapan kemutlakan ilmu Sang Pencipta semesta.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Takhrij Asbābun Nuzūl — Sengketa Sektarian Ahli Kitab atas Nabi Ibrahim AS (Tafsīr At-Ṭhabarī, Jilid 6, hal. 488; As-Sīrah An-Nabawiyyah karya Ibnu Isḥāq; & Asbāb An-Nuzūl karya Al-Wāḥidī, hal. 104):</strong><br>
+        Diriwayatkan dari Sahabat Abdullah bin Abbas r.a.:<br>
+        Tatkala para rabi terkemuka Yahudi Madinah dan para pendeta delegasi Nasrani dari kawasan Najran berkumpul di hadapan Rasulullah ﷺ di kota Madinah, terjadilah perdebatan sengit dan saling klaim di antara kedua belah pihak. Tokoh-tokoh Yahudi berkata: <em>"Nabi Ibrahim tiada lain adalah seorang penganut Yahudi, dan kami berada di atas agamanya!"</em> Sementara tokoh-tokoh Nasrani Najran membalas dengan keras: <em>"Nabi Ibrahim tiada lain adalah seorang penganut Nasrani, dan kami berada di atas agamanya!"</em><br>
+        Maka Allah SWT menurunkan rangkaian ayat dari QS. Āli 'Imrān: 65 hingga 68 untuk melucuti kebatilan klaim historis dan metodologis kedua kubu tersebut: <em>"Yā Ahlal-Kitābi lima tuḥājjūna fī Ibrāhīma..."</em> hingga firman-Nya: <em><strong>"Hā-antum hā'ulā'i ḥājajtum fīmā lakum bihī 'ilmun fa-lima tuḥājjūna fīmā laysa lakum bihī 'ilm, wallāhu ya'lamu wa antum lā ta'lamūn."</strong></em><br>
+        <strong>Derajat Sanad:</strong> Hasan menurut Al-Hafizh Ibnu Hajar Al-'Asqalani dan Syaikh Ahmad Syakir dalam tahqiq Tafsir At-Thabari.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Al-Bukhārī (No. 7352) & Sahīh Muslim (No. 1337) dari Abu Hurairah r.a. — Bahaya Perselisihan dan Debat Nir-Faidah:</strong><br>
+        Rasulullah ﷺ bersabda memberikan peringatan sistemik mengenai kehancuran peradaban masa lalu akibat debat kusir yang menanggalkan ketaatan praktis:<br>
+        <em>"Dzarūnī mā taraktukum, fa-innamā ahlaka man kāna qablakum katsratu su'ālihim wakhtilāfuhum 'alā anbiyā'ihim. Fa idzā nahaytukum 'an syay'in fajtanibūh, wa idzā amartukum bi-amrin fa'tū minhu mastatha'tum."</em><br>
+        (Biarkanlah apa yang aku tinggalkan untuk kalian (jangan memperumit masalah dengan spekulasi tak berujung). Sesungguhnya yang membinasakan umat-umat sebelum kalian adalah <strong>kebiasaan mereka yang terlalu banyak mendebat hal-hal tak berguna dan perselisihan mereka terhadap para nabi mereka</strong>. Maka apabila aku melarang kalian dari sesuatu jauhilah, dan jika aku memerintahkan suatu perkara, kerjakanlah semampu kalian!).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Sunan At-Tirmidzī (No. 3253) & Sunan Ibni Mājah (No. 48) dari Abu Umāmah Al-Bāhilī r.a. — Kegemaran Berdebat Sebagai Indikator Kesesatan Batin:</strong><br>
+        Rasulullah ﷺ menggarisbawahi transformasi negatif jiwa yang terjangkit virus debat spekulatif:<br>
+        <em>"Mā dhalla qawmun ba'da hudan kānū 'alayhi illā ūtūl-jadal." Tsumma talā Rasūlullāhi ﷺ hādzihil-āyah: "Mā dharabūhu laka illā jadalā, bal hum qawmun khashimūn" (QS. Az-Zukhruf: 58).</em><br>
+        (Tidaklah suatu kaum tersesat setelah sebelumnya mereka berada di atas petunjuk kebenaran, <strong>melainkan karena mereka diberi tabiat gemar berdebat kusir (jadal)</strong>. Kemudian Rasulullah ﷺ membacakan ayat: "Mereka tidak memberikan perumpamaan itu kepadamu melainkan dengan maksud membantah saja; sebenarnya mereka adalah kaum yang gemar bertengkar").<br>
+        <strong>Status Hadits:</strong> Sahih menurut Imam At-Tirmidzi, Ibnu Hibban, dan Al-Albani.
+    </div>
+
+    <div class="hadith-box">
+        <strong>4. Hadits Sahih Sunan Abī Dāwūd (No. 4800) dari Sahabat Abdullah bin 'Amr bin Al-'Āṣh r.a. — Larangan Mengadu Dalil Tanpa Otoritas Ilmu:</strong><br>
+        Suatu ketika Rasulullah ﷺ keluar menemui para sahabat yang sedang berselisih keras mengenai takdir hingga suara mereka meninggi dan wajah beliau memerah bagaikan terbelah buah delima karena murka. Beliau bersabda:<br>
+        <em>"A-bi-hādzā umirtum? Am bi-hādzā ursiltu ilaykum? Innamā halaka man kāna qablakum ḥīna tanāza'ū fī hādzal-amr. 'Azamtu 'alaykum allā tatanāza'ū fīh."</em><br>
+        (Apakah untuk perdebatan semacam ini kalian diperintahkan? Ataukah demi hal spekulatif ini aku diutus kepada kalian? <strong>Sesungguhnya binasanya umat-umat sebelum kalian adalah ketika mereka bertengkar dan saling membenturkan ayat-ayat dalam perkara ini</strong>. Aku tegaskan kepada kalian agar tidak memperdebatkannya!).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li>
+            <strong>1. Akar Ḥ-J-J (ح-ج-ج — حَـٰجَجْتُمْ / تُحَآجُّونَ):</strong><br>
+            Ahmad bin Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (entri: ح-ج-ج) menetapkan bahwa poros semantik tunggal (<em>aṣhlun wāḥid</em>) dari akar ini berputar pada dua dimensi: <em>al-qaṣhd</em> (tujuan yang konsisten dituju) dan <em>al-ghalabah bil-burhān</em> (upaya mengalahkan lawan melalui dalil). Dinamakan <em>ḥajj</em> (haji) karena seseorang menyengaja menuju Baitullah. Sedangkan <em>al-ḥujjah</em> adalah dalil yang dihadirkan seseorang untuk mengukuhkan argumennya.<br>
+            Bentuk morfologis <strong>Ḥājajtum</strong> dan <strong>Tuḥājjūna</strong> mengikuti wazan <em>Mufā'alah</em> (فاعل - يفاعل), yang secara gramatikal menandai <em>al-musyārakah bayna itsnayn</em> (interaksi resiprokal timbal-balik). Maknanya: masing-masing pihak melontarkan klaim untuk mematahkan dalil pihak lain. Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menegaskan: jika argumentasi dibangun di atas wahyu dan fakta objektif, ia disebut <em>Burhān</em>; namun jika argumentasi dilontarkan dalam perkara yang tidak dikuasai datanya (<em>bi-ghayri 'ilm</em>), maka ia berubah status menjadi <em>Mumārāh</em> dan <em>Mukābarah</em> (debat kusir yang tercela).
+        </li>
+        <li>
+            <strong>2. Akar '-L-M (ع-ل-م — عِلْمٌ / يَعْلَمُ / تَعْلَمُونَ):</strong><br>
+            Ibnu Faris mendefinisikan akar ('-L-M) sebagai <em>atsarun yatamayyazu bihisy-syay'</em> (tanda pembeda yang membuat hakikat sesuatu tersingkap jelas dari kerancuan). Lawan mutlak dari <em>Al-Jahl</em> (kegelapan ketidaktahuan). <em>Al-'Ilm</em> dalam tradisi epistemologi Islam bukan sekadar himpunan asumsi (<em>zhann</em>) atau ilusi nalar (<em>wahm</em>), melainkan persepsi tegas yang selaras dengan realitas objektif yang didukung oleh bukti (<em>idrākul-ḥaqīqah 'alā mā hiya 'alayh 'an dalīl</em>).<br>
+            Secara semantis, pengulangan kata berakar ('-l-m) sebanyak <strong>empat kali</strong> dalam satu ayat pendek ini (<em>'ilmun</em> pertama, <em>'ilmun</em> kedua, <em>ya'lamu</em>, dan <em>ta'lamūna</em>) merupakan <strong>Klimaks Epistemologis (Epistemic Climax)</strong>: Al-Qur'an memetakan batas demarkasi tegas antara pengetahuan manusia yang serba parsial dan rentan disusupi bias, dengan Kemahatahuan Allah yang meliputi segala dimensi wujud.
+        </li>
+        <li>
+            <strong>3. Partikel Majemuk Hā-antum Hā'ulā'i (هَـٰٓأَنتُمْ هَـٰٓؤُلَآءِ):</strong><br>
+            Kombinasi linguistik yang sangat unik dalam uslub bahasa Arab klasik. Terdiri atas <em>Hā' at-Tanbīh</em> (partikel pembangkit kesadaran), <em>Antum</em> (kata ganti orang kedua jamak), disusul pengulangan <em>Hā' at-Tanbīh</em> kedua yang merekat pada isim isyarah <em>Ulā'i</em>. Menurut pakar gramatika terkemuka Sibawaih dan Az-Zajjaj, susunan ini berfungsi untuk <strong>Al-Ikhthiṣhāṣh wat-Tawbīkh al-Mubāsyir</strong> (pengkhususan audiens dalam sorotan teguran tajam). Maknanya seolah-olah menyatakan: <em>"Tataplah diri kalian sendiri! Kalianlah manusia-manusia aneh yang logika berpikirnya telah jungkir balik!"</em>
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab), Ta'alluq & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>هَـٰٓأَنتُمْ</strong></td>
+                <td><em>Hā'</em>: Harf tanbīh.<br><em>Antum</em>: Dhamīr munfaṣhil lil-mukhāṭhabīn.</td>
+                <td>Dhamir munfashil mabni 'alas-sukun fī mahalli raf'in <strong>Mubtada' Awwal</strong>. Berfungsi mengunci subjek pembicaraan pada delegasi Ahli Kitab.</td>
+            </tr>
+            <tr>
+                <td><strong>هَـٰٓؤُلَآءِ</strong></td>
+                <td><em>Hā'</em>: Harf tanbīh.<br><em>Ulā'i</em>: Ism isyārah mabni 'alal-kasr.</td>
+                <td>Fī mahalli raf'in <strong>Khabar Mubtada'</strong> bagi <em>Antum</em> (atau munādā bagi huruf nida' yang dibuang: <em>Yā Hā'ulā'i</em>, atau badal/bayan).</td>
+            </tr>
+            <tr>
+                <td><strong>حَـٰجَجْتُمْ</strong></td>
+                <td>Fi'il mādhi wazan <em>fā'ala</em> mabni 'alas-sukūn; <em>Tā'</em> dhamir muttashil; <em>Mīm</em> jamak.</td>
+                <td>Ta' dhamir fī mahalli raf'in <strong>Fā'il</strong> (subjek). Jumlah fi'liyyah <em>(ḥājajtum)</em> fī mahalli raf'in <strong>Khabar Tsānī</strong> bagi <em>Antum</em>, atau jumlah isti'nāfiyyah bayan bagi isim isyarah.</td>
+            </tr>
+            <tr>
+                <td><strong>فِيمَا</strong></td>
+                <td><em>Fī</em>: Harf jarr.<br><em>Mā</em>: Ism mawṣhūl (atau mashdariyyah) mabni 'alas-sukūn.</td>
+                <td>Fī mahalli jarr bil-Fī. Jār wa majrūr <strong>Muta'alliq</strong> langsung pada fi'il <em>ḥājajtum</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>لَكُم بِهِۦ عِلْمٌ</strong></td>
+                <td><em>Lakum</em>: Jār wa majrūr.<br><em>Bihī</em>: Jār wa majrūr.<br><em>'Ilmun</em>: Ism zhāhir nakirah marfū'.</td>
+                <td><em>Lakum</em> muta'alliq bi khabar muqaddam mahdzūf. <em>Bihī</em> muta'alliq bi lafaz <em>'ilmun</em>. <em>'Ilmun</em> marfū' sebagai <strong>Mubtada' Mu'akhkhar</strong>. Seluruh jumlah ismiyyah <em>(lakum bihī 'ilmun)</em> adalah <strong>Shilat Mawṣhūl</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>فَلِمَ</strong></td>
+                <td><em>Fā'</em>: Harf 'athaf atau fashīḥah.<br><em>Li</em>: Harf jarr.<br><em>Mā</em>: Ism istifhām mahdzūf alifuhā.</td>
+                <td>Jār wa majrūr muta'alliq pada fi'il <em>tuḥājjūna</em>. Pembuangan alif pada <em>mā</em> istifhamiyyah adalah kaidah wajib bila kemasukan huruf jar untuk membedakan dari <em>mā</em> maushulah.</td>
+            </tr>
+            <tr>
+                <td><strong>تُحَآجُّونَ</strong></td>
+                <td>Fi'il mudhāri' wazan <em>yufā'ilu</em>; <em>Wāw</em>: Dhamīr muttashil jamak.</td>
+                <td>Fi'il mudhari' marfū' bi <strong>Tsubūtin-Nūn</strong>. Wawu al-jamā'ah fī mahalli raf'in <strong>Fā'il</strong>. Kalimat istifham inkari pembongkar kepalsuan logika.</td>
+            </tr>
+            <tr>
+                <td><strong>فِيمَا</strong></td>
+                <td><em>Fī</em>: Harf jarr.<br><em>Mā</em>: Ism mawṣhūl mabni 'alas-sukūn.</td>
+                <td>Fī mahalli jarr bil-Fī. Jār wa majrūr muta'alliq pada fi'il <em>tuḥājjūna</em> kedua.</td>
+            </tr>
+            <tr>
+                <td><strong>لَيْسَ لَكُم بِهِۦ عِلْمٌۭ</strong></td>
+                <td><em>Laysa</em>: Fi'il mādhi nāqiṣh jāmīd.<br><em>Lakum</em>: Jār wa majrūr.<br><em>'Ilmun</em>: Ism laysa.</td>
+                <td><em>Lakum</em> khabar laysa muqaddam. <em>Bihī</em> muta'alliq bi <em>'ilmun</em>. <em>'Ilmun</em> <strong>Ismu Laysa Mu'akhkhar</strong> marfū' bidh-dhammah. Seluruh jumlah nafiyyah <strong>Shilat Mawṣhūl</strong> lā maḥalla lahā minal-i'rāb.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱللَّهُ يَعْلَمُ</strong></td>
+                <td><em>Wāw</em>: Isti'nāfiyyah atau ḥāliyyah.<br><em>Allāhu</em>: Lafzhul-jalālah mubtada'.<br><em>Ya'lamu</em>: Fi'il mudhāri'.</td>
+                <td><em>Allāhu</em> <strong>Mubtada'</strong> marfū' bidh-dhammah. Fi'il <em>ya'lamu</em> merangkum fa'il mustatir (Huwa). Jumlah fi'liyyah <em>(ya'lamu)</em> fī mahalli raf'in <strong>Khabar Mubtada'</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَأَنتُمْ لَا تَعْلَمُونَ ۝٦٦</strong></td>
+                <td><em>Wāw</em>: 'Āṭhifah atau ḥāliyyah.<br><em>Antum</em>: Dhamīr munfaṣhil.<br><em>Lā</em>: Nāfiyah.<br><em>Ta'lamūn</em>: Fi'il mudhāri'.</td>
+                <td><em>Antum</em> fī mahalli raf'in <strong>Mubtada'</strong>. Fi'il <em>ta'lamūna</em> marfu' bi tsubutin-nun. Jumlah nafiyyah <em>(lā ta'lamūna)</em> fī mahalli raf'in <strong>Khabar Mubtada'</strong>. Seluruh jumlah ma'thūfah atas jumlah sebelumnya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Uslūb at-Tanbīh wal-Khitāb al-Mubāsyir (Pukulan Retorika Pembangkit Akal):</strong><br>
+            Frasa <em>Hā-antum hā'ulā'i</em> merupakan konstruksi tingkat tinggi dalam balaghah Ma'ani. Kehadiran partikel tanbih ganda yang membingkai pronomina subjek berfungsi menarik fokus mental pendengar secara radikal. Al-Qur'an tidak berbicara secara abstrak, melainkan menuding langsung wajah intelektual kaum penentang. Ini adalah teknik <em>Tashwīrul-Khaṭha' al-Manṭhiqī</em> (memvisualisasikan kekeliruan logika di depan mata pelakunya sendiri) agar mereka tersentak dan tidak berkutik mencari dalih pembenaran.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Al-Istifhām al-Inkārī at-Tawbīkhī (Pertanyaan Retoris Bernada Kecaman Keras):</strong><br>
+            Kalimat <em>"Fa-lima tuḥājjūna fīmā laysa lakum bihī 'ilm?"</em> tidak bertujuan mencari informasi baru (<em>istifhām ḥaqīqī</em>), melainkan berfungsi sebagai <strong>Al-Inkār wat-Tawbīkh</strong> (kecaman atas tindakan yang tidak masuk akal). Dalam kaidah logika Al-Qur'an: mendebat perkara yang ada ilmunya saja membutuhkan kehati-hatian ketat; maka mendebat hal yang sama sekali steril dari data teks wahyu adalah kebodohan mutlak yang memalukan martabat ilmu.
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Al-Kināyah 'an Wuqū'il-Kutub wa Inqithā'ihā (Metonimia Teks Kitab Suci):</strong><br>
+            Ungkapan <em>fīmā lakum bihī 'ilm</em> (apa yang kalian miliki ilmu tentangnya) adalah kinayah dari urusan hukum-hukum syariat Musa dalam Taurat dan Isa dalam Injil yang memang diturunkan kepada mereka. Sebaliknya, frasa <em>fīmā laysa lakum bihī 'ilm</em> adalah kinayah dari urusan agama Nabi Ibrahim AS yang sama sekali tidak pernah dijumpai keterangannya di dalam teks Taurat maupun Injil bahwa beliau beragama Yahudi atau Nasrani. Ini menunjukkan kehalusan bayan Al-Qur'an dalam melucuti kebohongan sejarah.
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Aṭh-Ṭhibāq as-Salbī wal-Muqābalah at-Tāmmah (Antitesis Biner Sempurna):</strong><br>
+            Puncak keindahan Badi' terpancar melalui dua pasang oposisi biner:
+            <ul>
+                <li><em>Thibaq Salab Pertama:</em> Antara <strong>Lakum bihī 'ilmun</strong> (menetapkan kepemilikan ilmu) dan <strong>Laysa lakum bihī 'ilmun</strong> (menafikan kepemilikan ilmu secara total).</li>
+                <li><em>Thibaq Salab Kedua & Muqabalah Agung:</em> Di akhir ayat, antara <strong>Wallāhu ya'lamu</strong> (Zat Yang Maha Tahu secara absolut) dan <strong>Wa antum lā ta'lamūn</strong> (kalian manusia yang bodoh dan tak berpengetahuan). Pertentangan biner ini secara artistik meruntuhkan seluruh berhala intelektual manusia di hadapan keagungan wahyu.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>I'jaz Fonetik & Ritme Akustik Fashilah:</strong><br>
+            Peralihan tempo suara dari pemanjangan 6 harakat yang sarat beban pada <strong>Mad Lāzim Kalimī Mutsaqqal</strong> (<em>tuḥāāājjūna</em>) dengan hentakan nabr pada huruf Jim, secara akustik melukiskan suasana perdebatan yang alot, tegang, dan dipenuhi urat leher yang menegang. Namun, ketegangan auditif itu segera diredam dan diakhiri oleh irama fashilah yang mengalir tenang, luas, dan berwibawa: <em>wallāhu ya'lamu wa antum lā ta'lamūn</em>, menyisakan gema ketundukan mutlak di dasar sanubari pendengar.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi Tekstual Runtun dengan Ayat 64 & 65):</strong><br>
+            Blok 3 Surah Āli 'Imrān dibuka dengan Piagam Rekonsiliasi Universal pada ayat 64 (<em>"Qul yā Ahlal-Kitābi ta'ālaw ilā kalimatin sawā'in baynanā wa baynakum..."</em>). Ketika ajakan menuju kalimatun sawa' (titik temu tauhid murni) ini ditolak, Ahli Kitab justru beralih ke ranah polemik sektarian dengan mengklaim bahwa bapak monoteisme dunia, Nabi Ibrahim AS, adalah monopoli identitas kelompok mereka. Ayat 65 menghancurkan klaim itu dengan <strong>Argumen Kronologis</strong>: Taurat baru turun kepada Nabi Musa berabad-abad setelah masa hidup Ibrahim, dan Injil baru turun kepada Nabi Isa ribuan tahun sesudahnya; maka menyebut Ibrahim sebagai orang Yahudi atau Nasrani adalah anakhronisme sejarah yang konyol (<em>afalā ta'qilūn</em>). Selanjutnya, ayat 66 masuk ke akar metodologi dengan <strong>Argumen Epistemologis</strong>: membongkar kebiasaan buruk mereka yang suka melontarkan spekulasi dan debat kosong tanpa pijakan wahyu.
+        </li>
+        <li>
+            <strong>Siyāq (Rekonstruksi Sosio-Historis Debat Ahli Kitab di Madinah):</strong><br>
+            Konteks sosiologis ayat ini berakar pada dinamika interaksi kaum Yahudi Madinah (para rabi dari Bani Qainuqa', Bani Nadhir, dan Bani Quraizhah) serta delegasi Kristen Najran yang berkunjung ke Madinah pada tahun 9–10 Hijriyah. Di hadapan Nabi Muhammad ﷺ, kedua kubu ini saling berebut pengaruh legitimasi spiritual di tanah Arab. Nabi Ibrahim AS adalah figur primordial yang dihormati oleh seluruh bangsa Arab, baik kaum pagan Quraisy, Yahudi, maupun Nasrani. Siapa yang berhasil mengidentifikasikan dirinya dengan Ibrahim, dialah yang memegang supremasi moral dan historis di jazirah Arab.<br>
+            Oleh karena itu, para rabi Yahudi mengklaim Ibrahim sebagai pelopor Yudaisme mereka, sedangkan para uskup Najran mengklaim Ibrahim sebagai penganut Kristen awal. Al-Qur'an membongkar bahwa klaim kedua belah pihak ini semata-mata adalah proyeksi politik identitas dan fabrikasi retroaktif tanpa didasari dokumen wahyu yang sah.
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Argumentatif Menuju Ayat 67 & 68):</strong><br>
+            Setelah ayat 66 menelanjangi kebodohan perdebatan mereka, ayat 67 tampil memproklamasikan identitas teologis Ibrahim yang sebenarnya secara definitif: <em>"Mā kāna Ibrāhīmu Yahūdiyyan wa lā Naṣhrāniyyan wa lākin kāna ḥanīfan muslimā, wa mā kāna minal-musyrikīn"</em> (Ibrahim bukanlah seorang Yahudi dan bukan pula seorang Nasrani, melainkan seorang yang hanif lagi berserah diri kepada Allah, dan sekali-kali bukanlah dia termasuk orang-orang musyrik). Kemudian ayat 68 menegaskan bahwa orang yang paling berhak dan paling dekat dengan Ibrahim adalah Rasulullah Muhammad ﷺ dan orang-orang yang beriman. Dengan demikian, ayat 66 adalah jembatan pembongkaran epistemik sebelum proklamasi kebenaran ditegakkan.
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (224–310 H) — <em>Jāmi' al-Bayān 'an Ta'wīli Āyil-Qur'ān</em>:</strong><br>
+        Imam At-Tabari menegaskan batas pemisah antara dua perdebatan Ahli Kitab:<br>
+        <em>"Makna firman Allah: 'Hā-antum hā'ulā'i ḥājajtum fīmā lakum bihī 'ilmun' adalah: Wahai orang-orang Yahudi dan Nasrani, anggaplah kalian telah berdebat mengenai perkara yang ada pengetahuannya di tangan kalian, yaitu seputar hukum-hukum Taurat dan Injil yang diturunkan kepada Musa dan Isa, atau mengenai perkara halal-haram yang teksnya tercantum dalam kitab suci kalian. Namun mengapa kalian lancang memperdebatkan perkara Ibrahim (fa-lima tuḥājjūna fīmā laysa lakum bihī 'ilm), padahal kalian sama sekali tidak menemukan satu huruf pun di dalam Taurat maupun Injil yang menyatakan bahwa Ibrahim itu seorang Yahudi atau seorang Nasrani? Mengapa kalian berani berbicara tanpa dasar wahyu dan tanpa sandaran sanad ilmu? 'Wallāhu ya'lamu': Dan Allah Maha Mengetahui perkara Ibrahim, agamanya, dan kemurnian tauhidnya, 'wa antum lā ta'lamūn': sedangkan kalian berada dalam kebodohan yang nyata mengenai hal tersebut karena kalian hanya mengikuti hawa nafsu dan dugaan belaka."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Al-Hafizh Ibnu Katsir (701–774 H) — <em>Tafsīr Al-Qur'ān al-'Azhīm</em>:</strong><br>
+        Ibnu Katsir menggarisbawahi kaidah ushuluddin mengenai larangan berpendapat tanpa landasan dalil:<br>
+        <em>"Ayat ini mengandung pengingkaran yang sangat keras (inkār syadīd) dari Allah terhadap siapa saja yang memperdebatkan suatu perkara tanpa memiliki ilmu dan dalil yang sah. Allah menegur Ahli Kitab karena mereka gemar berbantah-bantahan dalam perkara agama Nabi Ibrahim yang hidup sebelum diturunkannya Taurat dan Injil. Sekiranya mereka berdebat dalam perkara syariat Musa dan Isa yang teksnya ada di hadapan mereka, hal itu masih dapat dipahami secara nalar kendati mereka pun sering kali memutarbalikkannya. Tetapi memperdebatkan figur Ibrahim yang teks kitab suci mereka sendiri bungkam mengenainya adalah kebodohan ganda (jahl murakkab). Maka ayat ini menjadi kaidah agung bagi umat Islam: dilarang keras bagi siapa pun berbicara, berfatwa, atau berpolemik dalam urusan agama tanpa pijakan dalil naqli yang sahih atau dalil aqli yang qath'i."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (600–671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi membedah aspek etika munazharah (dialektika ilmiah) dan status hukum jadal:<br>
+        <em>"Ayat ini merupakan fondasi pokok dalam ilmu adab al-baḥts wal-munāẓharah (etika penelitian dan dialektika). Para ulama menetapkan bahwa debat terbagi dua: pertama, debat terpuji (al-jadal al-maḥmūd), yaitu perdebatan yang bersandar pada bukti ilmiah (bayyinah) demi menegakkan kebenaran dan menolong agama Allah. Kedua, debat tercela (al-jadal al-madzmūm), yaitu perdebatan dalam perkara yang tidak ada sandaran ilmunya, atau mendebat semata-mata demi gengsi kemenangan ego dan taklid buta. Al-Qur'an mencela Ahli Kitab karena mereka menjerumuskan diri ke dalam debat tercela. Firman-Nya 'Wallāhu ya'lamu wa antum lā ta'lamūn' mengajarkan kepada setiap penuntut ilmu untuk senantiasa memiliki kerendahan hati: jika ditanya tentang sesuatu yang tidak diketahuinya, hendaklah ia berkata 'Allāhu a'lam' (Allah lebih mengetahui), dan jangan memaksakan diri menjawab dengan prasangka."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Az-Zamakhsyari (467–538 H) & Fakhruddin Ar-Razi (544–606 H):</strong><br>
+        • <strong>Az-Zamakhsyari (<em>Al-Kasysyāf</em>):</strong> Menyoroti kecacatan logika Ahli Kitab:<br>
+        <em>"Susunan ayat ini menggunakan metode pembandingan kontras (al-ilzām bil-ḥujjah): perdebatan mereka pada perkara pertama (fīmā lakum bihī 'ilm) dicatat sebagai tindakan yang sudah salah karena mereka mendebatnya dengan bid'ah dan takwil batil. Lalu bagaimana mungkin mereka berani melangkah lebih jauh memperdebatkan perkara kedua (fīmā laysa lakum bihī 'ilm) yang pintunya tertutup rapat bagi nalar mereka? Ini adalah kebodohan di atas kebodohan."</em><br>
+        • <strong>Fakhruddin Ar-Razi (<em>Mafātīḥ al-Ghayb</em>):</strong> Mengembangkan hujah epistemologis rasional yang memukau:<br>
+        <em>"Ketahuilah bahwa argumentasi nalar tidak boleh dibangun kecuali di atas dua premis: premis aksiomatik yang telah disepakati kebenarannya (al-badīhiyyāt), atau premis yang terbukti melalui dalil demonstratif (al-burhān). Perkara sejarah dan agama para nabi terdahulu adalah perkara khabariyah (informasi historis-metafisik) yang mustahil diketahui melalui akal murni tanpa adanya wahyu yang mutawatir. Karena di dalam Taurat dan Injil tidak ada teks yang menyebut Ibrahim beragama Yahudi atau Nasrani, maka klaim mereka adalah klaim kosong yang lahir dari ilusi (takhayyulāt). Mengklaim sesuatu tanpa dalil adalah sofisme (safsaṭhah) yang merusak tatanan berpikir manusia."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir bin 'Asyur (1296–1393 H) — <em>At-Taḥrīr wat-Tanwīr</em>:</strong><br>
+        Ibnu 'Asyur menganalisis sosiologi epistemik di balik fanatisme sekte keagamaan:<br>
+        <em>"Ayat ini menelanjangi patologi psikososial kaum fanatik: kecenderungan untuk memonopoli simbol-simbol kebajikan universal demi kepentingan sekte sempit mereka. Orang Yahudi tidak rela jika kemuliaan Ibrahim diakui tanpa menyematkan label 'Yahudi' padanya; demikian pula orang Nasrani. Fenomena ini menunjukkan bagaimana hawa nafsu kelompok mampu membajak akal sehat hingga orang terpelajar sekalipun tega mengabaikan fakta sejarah yang paling terang. Penyebutan 'Wallāhu ya'lamu wa antum lā ta'lamūn' di akhir ayat adalah pembebasan tauhid dari penjara partikularisme ras dan identitas kesukuan menuju universalitas fitrah manusia."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (1908–1981 M) & Prof. Dr. M. Quraish Shihab — Tafsir Al-Azhar & Al-Mishbah:</strong><br>
+        • <strong>Buya Hamka (<em>Tafsir Al-Azhar</em>):</strong> Menulis dengan getaran refleksi kebangsaan dan keagamaan Nusantara yang renyah namun menusuk:<br>
+        <em>"Alangkah banyaknya orang yang terpelajar, bergelar tinggi, dan fasih berbicara, tetapi gemar bertengkar tentang hal-hal yang tidak diketahuinya! Di zaman Nabi, orang Yahudi dan Nasrani bertengkar berebut Nabi Ibrahim: 'Ibrahim orang kami!' kata Yahudi. 'Bukan, dia orang kami!' bantah Nasrani. Keduanya tidak punya bukti, tidak punya surat keterangan, dan kitab suci mereka pun tidak berkata demikian. Maka turunlah tamparan dari wahyu: 'Kalian ini aneh! Dalam hal yang ada kitabnya saja kalian bertengkar, sekarang mengapa kalian bertengkar pula dalam hal yang tidak ada dasarnya?' Buya Hamka mengingatkan umat Islam agar tidak meniru tabiat Ahli Kitab: gemar berdebat kusir di warung kopi, di mimbar, atau di majelis taklim tentang hal-hal ranting yang tidak dikuasai ilmunya, sementara kewajiban memajukan umat dan membangun peradaban terlantar."</em><br>
+        • <strong>Prof. Dr. M. Quraish Shihab (<em>Tafsir Al-Mishbah</em>):</strong> Menggarisbawahi urgensi kerendahan hati ilmiah (intellectual humility):<br>
+        <em>"Frasa 'Wallāhu ya'lamu wa antum lā ta'lamūn' bukan bertujuan mematikan nalar kritis manusia, melainkan meletakkan akal manusia pada tempatnya yang proporsional. Akal manusia memiliki wilayah jelajahnya sendiri, namun ia harus tunduk mengakui keterbatasannya ketika berhadapan dengan wilayah gaib dan ketetapan wahyu. Mengakui ketidaktahuan di hadapan Allah bukanlah kehinaan, melainkan puncak kejujuran intelektual tertinggi."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>7. Catatan Tafsir Tematik Kementerian Agama Republik Indonesia (Kemenag RI):</strong><br>
+        Kemenag RI mendudukkan QS. Āli 'Imrān: 66 sebagai panduan etika komunikasi dan diskursus publik di era modern. Al-Qur'an melarang keras penyebaran informasi, klaim keagamaan, dan narasi polemik yang tidak diverifikasi keabsahannya (tabayyun). Perdebatan tanpa data hanya akan melahirkan polarisasi sosial, kebencian antarkelompok, dan pembusukan nalar bangsa. Umat beragama diajak untuk mengedepankan dialog berbasis bukti ilmiah, saling menghormati batas kepakaran, dan menjauhi klaim kebenaran sepihak yang didasarkan pada fanatisme buta.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Penafsiran</th>
+                <th>Titik Temu (Konsensus Mufassir / Ijmā')</th>
+                <th>Dinamika Penekanan (Ikhtilāf Tanawwu' / Variasi Analisis)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Objek Ilmu Pertama (fīmā lakum bihī 'ilm)</strong></td>
+                <td>Sepakat merujuk pada urusan hukum-hukum syariat Taurat dan Injil serta perkara Nabi Musa dan Isa yang teksnya dijumpai pada kitab Ahli Kitab.</td>
+                <td>• At-Tabari & Ibnu Katsir: Menekankan pada hukum halal-haram dan perdebatan internal teologi mereka.<br>• Az-Zamakhsyari: Menekankan bahwa perdebatan pada perkara pertama ini pun sejatinya telah tercela karena menyimpang dari maksud syariat.</td>
+            </tr>
+            <tr>
+                <td><strong>Objek Ketiadaan Ilmu Kedua (fīmā laysa lakum bihī 'ilm)</strong></td>
+                <td>Sepakat merujuk pada perdebatan mengenai agama Nabi Ibrahim AS dan klaim anakronistik bahwa beliau penganut Yahudi atau Nasrani.</td>
+                <td>• Fakhruddin Ar-Razi: Meninjau dari kacamata epistemologi ketiadaan teks samawi dan kemustahilan nalar murni mengetahuinya.<br>• Ibnu 'Asyur: Meninjau dari psikologi pembajakan simbol universal oleh sekte partikularistik.</td>
+            </tr>
+            <tr>
+                <td><strong>Status Hukum Berdebat (Al-Jadāl wal-Munāẓharah)</strong></td>
+                <td>Sepakat bahwa berdebat tanpa pijakan ilmu (otoritas teks atau rasionalitas yang sahih) adalah haram secara mutlak dalam agama.</td>
+                <td>• Al-Qurthubi: Mengembangkan klasifikasi hukum debat ushul fiqih antara jadal terpuji dan jadal terlarang.<br>• Buya Hamka: Mengaitkannya dengan bahaya kepalsuan sosial dan debat kusir yang merusak ukhuwah masyarakat.</td>
+            </tr>
+            <tr>
+                <td><strong>Fungsi Kalimat Penutup (Wallāhu ya'lamu...)</strong></td>
+                <td>Sepakat bahwa kalimat ini menetapkan kemutlakan ilmu Allah dan keterbatasan pengetahuan manusia sebagai pemutus akhir sengketa.</td>
+                <td>• Quraish Shihab: Menjadikannya fondasi lahirnya etika kerendahan hati intelektual (epistemic humility).<br>• Razi: Menjadikannya dalil bahwa kebenaran agama harus berpijak pada wahyu Allah yang mutlak, bukan ijtihad liar akal manusia.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif dan neuropsikologis berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Pola Pikir: Pola Pikir Pseudo-Intelektual Dogmatis vs Pola Pikir Qur'ani Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kognitif</th>
+                <th>Pola Pikir Pseudo-Intelektual Dogmatis (Jadaliyyah)</th>
+                <th>Pola Pikir Qur'ani Rabbani (Epistemic Humility)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Orientasi dalam Berdiskusi / Berdebat</strong></td>
+                <td><strong>Ego-Centric & Defending Tribe:</strong> Berdebat demi memenangkan kelompok, mempertahankan superioritas status sosial, dan mempermalukan lawan bicara.</td>
+                <td><strong>Truth-Centric (Ṭhalabul-Ḥaqq):</strong> Berdiskusi demi mencari kebenaran objektif di hadapan Allah; siap menerima kebenaran dari mana pun datangnya.</td>
+            </tr>
+            <tr>
+                <td><strong>Perlakuan Terhadap Batas Pengetahuan Diri</strong></td>
+                <td><strong>Ultracrepidarianism & Ilusi Kompetensi:</strong> Memaksa beropini dan berfatwa dalam ranah yang tidak dikuasai datanya karena gengsi dianggap bodoh (Dunning-Kruger Effect).</td>
+                <td><strong>Epistemic Humility & Inshāf:</strong> Berani dan bangga menyatakan <em>"Lā adrī"</em> (Saya tidak tahu) ketika berada di luar batas otoritas kompetensi dan data valid.</td>
+            </tr>
+            <tr>
+                <td><strong>Metodologi Pengambilan Kesimpulan</strong></td>
+                <td><strong>Retroactive Projection & Confirmation Bias:</strong> Membajak fakta sejarah atau teks untuk mencocok-cocokkannya dengan dogma dan kesimpulan awal yang dipaksakan.</td>
+                <td><strong>Bayyinah-First & Objective Deduction:</strong> Mengumpulkan bukti empiris dan wahyu secara utuh sebelum menarik kesimpulan yang bertanggung jawab.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Rumusan Dua Mental Model Aplikatif</h3>
+    <ul>
+        <li>
+            <strong>Mental Model 1: The Circle of Epistemic Competence (Kaidah Batas Kompetensi Epistemik):</strong><br>
+            <em>Premis Filosofis:</em> Berpijak pada dikotomi ayat: <em>fīmā lakum bihī 'ilm</em> (wilayah yang Anda miliki ilmu tentangnya) versus <em>fīmā laysa lakum bihī 'ilm</em> (wilayah yang Anda tidak miliki ilmunya). Kaidah ini menetapkan bahwa setiap manusia memiliki lingkaran kompetensi kognitif yang terbatas. Bertindak, memutuskan, atau mendebat di dalam lingkaran kompetensi yang terverifikasi adalah tindakan bernalar yang sah. Namun melompat keluar dari lingkaran kompetensi untuk berdebat dalam perkara yang tidak dikuasai datanya adalah resep pasti menuju kehancuran reputasi, kesalahan fatal, dan dosa epistemik.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Sebelum Anda merespons sebuah isu rumit (dalam bisnis, hukum, medis, maupun keagamaan), petakan posisi Anda: <em>"Apakah aku memiliki data primer dan metodologi yang sah untuk berbicara dalam hal ini? Ataukah aku hanya mengulang desas-desus media?"</em> Jika berada di luar lingkaran kompetensi, tahan lisan Anda dan delegasikan kepada ahlinya (<em>Ahludz-Dzikr</em>).
+        </li>
+        <li>
+            <strong>Mental Model 2: The Anachronistic Projection Fallacy (Falasi Proyeksi Anakronistik & Pembajakan Simbol):</strong><br>
+            <em>Premis Filosofis:</em> Penyakit kognitif Ahli Kitab yang memaksakan identitas "Yahudi" dan "Nasrani" pada Nabi Ibrahim AS merumuskan kaidah bias proyeksi sejarah: kecenderungan nalar manusia untuk memproyeksikan kategori, istilah, dan kepentingan politik masa kini ke dalam realitas masa lalu yang sama sekali tidak mengenalnya.<br>
+            <em>Aplikasi Pengambilan Keputusan:</em> Jangan pernah membajak figur luhur masa lalu (para pendiri bangsa, tokoh ulama salaf, atau nabi-nabi) untuk melegitimasi kepentingan faksi politik praktis Anda hari ini. Bersikaplah adil dan jujur terhadap konteks historis yang objektif.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Membedah Dunning-Kruger Effect via Kesadaran Transendental</h3>
+    <p>
+        Dalam perspektif sains kognitif modern, fenomena Ahli Kitab yang disorot dalam ayat 66 adalah gambaran arketipal dari <strong>Dunning-Kruger Effect</strong>: sebuah bias kognitif di mana individu dengan tingkat pengetahuan atau kompetensi yang sangat rendah dalam suatu domain justru mengalami ilusi superioritas kognitif (<em>illusory superiority</em>)—merasa diri paling tahu, paling benar, dan paling berhak mendikte orang lain. Secara neurobiologis, ketika seseorang kekurangan pemahaman komprehensif atas kompleksitas suatu masalah, otak gagal mengaktifkan sirkuit <em>metakognisi</em> (kemampuan untuk memonitor keterbatasan berpikir diri sendiri). Akibatnya, ia melontarkan argumen-argumen spekulatif dengan rasa percaya diri yang berlebihan.
+    </p>
+    <p>
+        Al-Qur'an menyembuhkan patologi kognitif ini melalui terapi guncangan eksistensial pada akhir ayat: <strong>"Wallāhu ya'lamu wa antum lā ta'lamūn"</strong>. Di ranah Tazkiyatun Nafs, kalimat ini meruntuhkan berhala keangkuhan intelektual (<em>Al-Kibr</em>) dan penyakit gemar mendebat (<em>Al-Mirā'</em>). Kesadaran bahwa ilmu Allah meliputi triliunan galaksi, kedalaman samudera, hingga detak niat terdalam manusia menghadirkan rasa kerdil di hadapan-Nya. Siklus pertahanan ego amigdala yang reaktif dipadamkan, dan jiwa dipandu mencapai maqam <strong>Al-Inshāf</strong>: kerelaan penuh untuk tunduk kepada kebenaran, mendengarkan argumen yang lebih kuat, dan tidak malu mengakui keterbatasan nalar manusia di hadapan Wahyu Ilahi.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Fenomenologi Kontemporer: Wabah 'Ultracrepidarianism', Debat Medsos, dan Matinya Kepakaran</h3>
+    <p>
+        Ayat 66 memotret realitas kehidupan manusia modern abad ke-21 dengan akurasi yang mencengangkan. Di era ledakan media sosial (X/Twitter, TikTok, Instagram, podcast), peradaban manusia terjangkit epidemi <strong>Ultracrepidarianism</strong>—yakni kebiasaan massal mengekspresikan opini, menghakimi, dan mendebat topik-topik rumit di luar batas pengetahuan dan kompetensi pelakunya. Hari ini, setiap orang dengan bermodalkan kuota internet merasa berhak menjadi ahli virologi saat pandemi, menjadi pakar hukum tata negara saat sidang konstitusi, menjadi jenderal militer saat geopolitik global memanas, hingga menjadi mufti fatwa instan yang mengafirkan sesama muslim.
+    </p>
+    <p>
+        Fenomena ini mengonfirmasi tesis Tom Nichols dalam <em>The Death of Expertise</em> (Matinya Kepakaran): algoritma digital sengaja mengamplifikasi konten-konten polemik yang emosional dan sensasional demi mendulang <em>engagement</em>, bukan mengedepankan kebenaran berbasis data. Ruang publik kita dibanjiri oleh perdebatan tanpa ilmu (<em>fīmā laysa lakum bihī 'ilm</em>). Para pakar yang menghabiskan puluhan tahun meneliti data disingkirkan oleh <em>influencer</em> yang fasih merangkai retorika kosong dan teori konspirasi.
+    </p>
+
+    <h3>2. Dekonstruksi Peradaban Pascamodern: Era Post-Truth & Pembajakan Narasi Universal</h3>
+    <p>
+        Di ranah peradaban global, ayat ini mendekonstruksi era <strong>Post-Truth</strong>, di mana fakta objektif menjadi kurang berpengaruh dalam membentuk opini publik dibandingkan daya tarik emosi dan keyakinan personal. Kita menyaksikan bagaimana para politisi dan negara-negara adidaya membajak nilai-nilai universal—sebagaimana Ahli Kitab membajak figur Nabi Ibrahim AS. Retorika "Hak Asasi Manusia", "Demokrasi", dan "Tatanan Berbasis Aturan" (<em>Rules-Based Order</em>) diproklamasikan secara lantang, namun digunakan secara hipokrit untuk membenarkan agresi militer, sanksi ekonomi sepihak, dan genosida terhadap bangsa-bangsa tertindas.
+    </p>
+    <p>
+        Ketika masyarakat global menuntut konsistensi moral atas kejahatan perang yang nyata, para pemimpin oligarki memalingkan muka dan menciptakan debat narasi semu di forum internasional. QS. 3:66 membongkar kepalsuan ini: peradaban yang memanipulasi kebenaran dan gemar mendebat narasi kosong pada akhirnya akan kehilangan legitimasi moral di hadapan sejarah kemanusiaan dan di hadapan pengadilan mutlak Allah SWT.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur (Protokol Transformasi Hidup)</h3>
+        <ol>
+            <li>
+                <strong>Mikro-Habit (< 5 Menit) — Protokol 'Tahan Jemari & Ucap Lā Adrī':</strong><br>
+                Setiap kali Anda melihat perdebatan panas yang viral di media sosial atau grup percakapan (WhatsApp/Telegram), terapkan jeda 15 detik sebelum jari Anda mengetik komentar. Ajukan pertanyaan filter: <em>"Apakah aku memiliki data primer yang terverifikasi atas isu ini?"</em> Jika tidak, tahan jemari Anda dari berkomentar, matikan layar ponsel, dan biasakan melafalkan kalimat penunduk ego: <em>"Allāhu a'lam, saya tidak memiliki ilmu tentang hal ini."</em> Melatih kebiasaan mikro ini menjaga jiwa Anda dari dosa <em>Al-Jadal bil-Bāṭhil</em>.
+            </li>
+            <li>
+                <strong>Protokol Keputusan (Decision Protocol) — Audit Otoritas Tiga Lapis Sebelum Berpendapat:</strong><br>
+                Ketika Anda dituntut memberikan opini profesional, fatwa keagamaan, atau keputusan manajerial dalam rapat penting, terapkan <strong>Filter Tiga Lapis</strong>:
+                <ul>
+                    <li><em>Lapis 1 (Verifikasi Data):</em> Apakah argumenku bersumber dari fakta primer (<em>fīmā lakum bihī 'ilm</em>) atau sekadar asumsi sekunder?</li>
+                    <li><em>Lapis 2 (Batas Kompetensi):</em> Apakah aku pemegang otoritas yang sah dalam domain ini, ataukah aku perlu mengundang pakar yang lebih kompeten?</li>
+                    <li><em>Lapis 3 (Uji Motif):</em> Apakah tujuanku berbicara untuk mencari kebenaran yang maslahat, ataukah semata-mata untuk memuaskan syahwat tampil pintar di depan manusia?</li>
+                </ul>
+                Jika gagal di salah satu lapis, tarik diri secara ksatria demi integritas moral.
+            </li>
+            <li>
+                <strong>Komitmen Hidup Berkelanjutan — Menjadi Agen Diskursus Berbasis Bukti (Bayyinah-Driven Life):</strong><br>
+                Di lingkungan keluarga, tempat kerja, dan komunitas, berkomitmenlah untuk tidak pernah meneruskan (<em>forward/share</em>) sebuah berita, dokumen, atau narasi polemik sebelum melakukan <em>tabayyun</em> (verifikasi sumber resmi). Jika Anda berada di tengah perdebatan kusir yang mengarah pada sentimen kelompok, jadilah penengah yang mendudukkan fakta objektif secara tenang, atau ajak pihak-pihak yang berdebat untuk mengalihkan energi pertikaian menjadi aksi nyata pemberdayaan umat yang konkret.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>
+                <strong>Uji Kejujuran Motif Debat:</strong> Berapa kali dalam hidupku aku bersikukuh mempertahankan sebuah perdebatan semata-mata karena gengsi dan rasa malu untuk kalah di mata manusia, padahal di dasar nuraniku yang paling dalam aku tahu bahwa aku tidak memiliki data dan dalil yang cukup tentang apa yang kuperdebatkan?
+            </li>
+            <li>
+                <strong>Uji Kerendahan Hati Intelektual:</strong> Apakah aku merasa rendah diri, cemas, atau gengsi ketika harus mengucapkan kalimat <em>"Saya tidak tahu"</em> di hadapan forum teman, kolega, atau jamaahku; ataukah aku lebih takut di hadapan Allah SWT karena berbicara lancang tanpa landasan ilmu?
+            </li>
+            <li>
+                <strong>Uji Kesadaran di Hadapan Kemahatahuan Ilahi:</strong> Ketika aku membaca firman-Nya <em>"Wallāhu ya'lamu wa antum lā ta'lamūn"</em>, sejauh mana rasa takjub, khusyuk, dan kerendahan hati tumbuh di dalam jiwaku bahwa seluruh pencapaian gelar, kecerdasan, dan wawasanku hanyalah sebutir debu di hamparan samudra ilmu Allah yang tak bertepi?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā 'Ālimas-sirri wan-najwā, yā Man bi-yadihi maqalīdush-shidqi wal-hudā! Ya Allah, Dzat Yang Maha Mengetahui segala rahasia langit dan bumi, sementara kami adalah hamba-hamba-Mu yang fakir dan serba tidak mengetahui! Kami bersujud mengakui kelemahan nalar dan kefakiran ilmu kami di hadapan kemutlakan ilmu-Mu yang tak bertepi. Lindungilah akal pikiran dan lisan kami dari kelancangan memperdebatkan perkara yang tidak kami ketahui ilmunya. Bersihkanlah kalbu kami dari penyakit kesombongan intelektual, dari riya' dan gemar berdebat kusir demi memenangkan hawa nafsu ego kami. Karuniakanlah kepada kami ketundukan jiwa Nabi Ibrahim AS yang hanif dan berserah diri, hiasilah pribadi kami dengan kerendahan hati untuk senantiasa mencintai kebenaran, dan jadikanlah ilmu yang Engkau anugerahkan kepada kami sebagai sarana untuk semakin mendekat kepada-Mu, bukan untuk membodohi sesama hamba-Mu. Allāhumma arinal-ḥaqqa ḥaqqan warzuqnattibā'ah, wa arinal-bāṭhila bāṭhilan warzuqnajtinābah. Āmīn Yā Rabbal-'Ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-065 - QS. Ali 'Imran Ayat 65.html">&larr; Kembali ke Ayat 65 (QS. 3:65)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 66</strong> (Blok 3: Dialog Universal & Millah Ibrahim)</span>
+        <a href="003-067 - QS. Ali 'Imran Ayat 67.html">Lanjut ke Ayat 67 (QS. 3:67) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

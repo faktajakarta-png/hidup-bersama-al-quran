@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>001-004 - QS. Al-Fatihah Ayat 4 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="001-003 - QS. Al-Fatihah Ayat 3.html">&larr; Ayat Sebelumnya (QS. 1:3)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="001-005 - QS. Al-Fatihah Ayat 5.html">Ayat Berikutnya (QS. 1:5) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-1: Al-Fātiḥah (Ummul Qur'ān)</span>
+        <span class="badge">Makkiyah (7 Ayat)</span>
+        <span class="badge">Poros 1: Fondasi Tauhid, Rububiyyah & Keadilan Akhirat</span>
+        <span class="badge">3 Kata | 11 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Fātiḥah [1]: 4</h1>
+    <div class="transliteration">
+        "Māliki yawmid-dīn." (Qira'at Mutawatirah Kedua: "Maliki yawmid-dīn.")
+    </div>
+    <div class="thematic-title">
+        Kedaulatan Mutlak di Panggung Pengadilan Kosmik: Komplementaritas Qira'at "Mālik" (Pemilik) dan "Malik" (Raja), Runtuhnya Seluruh Kekuasaan Semu Duniawi, serta Akuntabilitas Moral di Hari Pembalasan (Yawmid-Dīn)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Fātiḥah: Ayat 1–7 | Poros 1: Fondasi Tauhid, Rububiyyah & Keadilan Akhirat)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        مَـٰلِكِ يَوْمِ ٱلدِّينِ ۝٤
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Yang Menguasai (Raja Tertinggi sekaligus Pemilik Mutlak) Hari Pembalasan (hari perhitungan dan pemberian balasan seadil-adilnya atas seluruh amal perbuatan)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Dalam terjemahan Bahasa Indonesia, kata <em>"Yang Menguasai"</em> dipilih oleh para ulama tim penerjemah untuk merangkum sekaligus dua bacaan (<em>Qira'at</em>) mutawatirah pada lafaz <strong>مَـٰلِكِ</strong>: pertama, <strong>Māliki</strong> (dengan alif panjang = Pemilik mutlak yang berhak bertindak penuh atas kepemilikan-Nya); kedua, <strong>Maliki</strong> (tanpa alif = Raja Diraja yang memegang titah tertinggi dan kekuasaan absolut). Sedangkan kata <em>Ad-Dīn</em> pada ayat ini bermakna <em>Al-Jazā' wal-Ḥisāb</em> (pembalasan dan perhitungan amal).
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>مَـٰلِكِ</strong><br>(<em>Māliki</em> / <em>Maliki</em>)</td>
+                <td>
+                    <strong>Huruf Mīm</strong> fathah dari <em>asy-syafatain</em> diikuti <em>Mad Thabi'i</em> (2 harakat pada alif khanjaraniyyah dalam riwayat Hafsh).<br>
+                    <strong>Huruf Lām</strong> dan <strong>Kāf</strong> berharakat kasrah murni. Huruf <em>Kāf</em> memiliki sifat <em>syiddah</em> dan <em>hams</em> ringan tanpa berubah menjadi desis <em>syīn</em>.<br>
+                    <strong>Rasm Utsmani:</strong> Dalam Mushaf Induk Utsmani ditulis <strong>مَلِكِ</strong> (tanpa huruf alif), sehingga mengakomodasi kedua qira'at mutawatirah sekaligus!
+                </td>
+                <td>
+                    Terdapat dua Qira'at Mutawatirah yang masyhur dari Rasulullah ﷺ:<br>
+                    • <strong>1. Bacaan "Māliki" (مَالِكِ — dengan itsbat alif / mad 2 harakat):</strong> Diriwayatkan oleh <strong>4 Imam</strong> dari 10 Imam Qira'at: <strong>'Ashim</strong> (Syu'bah & Hafsh), <strong>Al-Kisa'i</strong>, <strong>Ya'qub</strong>, dan <strong>Khalaf Al-'Asyir</strong>.<br>
+                    • <strong>2. Bacaan "Maliki" (مَلِكِ — dengan hadzf alif / tanpa mad):</strong> Diriwayatkan oleh <strong>6 Imam</strong>: <strong>Nafi'</strong> (Qalun & Warsy), <strong>Ibnu Katsir</strong>, <strong>Abu 'Amr</strong>, <strong>Ibnu 'Amir</strong>, <strong>Hamzah</strong>, dan <strong>Abu Ja'far</strong>.<br>
+                    <strong>Komplementaritas Makna:</strong> Di dunia, ada pemilik barang (<em>mālik</em>) yang bukan raja, dan ada raja (<em>malik</em>) yang tidak memiliki harta pribadi rakyatnya secara mutlak. Di Hari Kiamat, Allah menghimpun kedua otoritas tersebut secara eksklusif: Dialah <strong>Al-Mālik</strong> (Pemilik mutlak seluruh zarah semesta) sekaligus <strong>Al-Malik</strong> (Raja Tunggal yang memutuskan seluruh perkara)!
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>يَوْمِ</strong><br>(<em>Yawmi</em>)</td>
+                <td>
+                    <strong>Huruf Yā'</strong> fathah dari tengah lidah (<em>wasthul lisan</em>).<br>
+                    <strong>Huruf Wāw Sukun (Harf Līn):</strong> Didahului fathah, diucapkan secara lembut dan mengalir (<em>līn</em>) tanpa tekanan keras atau memantul.<br>
+                    <strong>Huruf Mīm</strong> berharakat kasrah sempurna.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Yawmi</em> dengan <em>jarr</em> (kasrah pada <em>Mīm</em>) sebagai <em>mudhāfun ilayh</em> bagi kata <em>Māliki / Maliki</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>ٱلدِّينِ</strong><br>(<em>Ad-Dīni</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah</strong> pada <em>Lam Ta'rif</em> yang melebur ke dalam huruf <em>Dāl</em> bertasydid kasrah.<br>
+                    <strong>Huruf Dāl</strong> memiliki sifat <em>jahr</em> dan <em>syiddah</em> (ujung lidah menempel kuat pada pangkal gigi seri atas, tidak bocor nafas/hams seperti huruf <em>Tā'</em>).<br>
+                    <strong>Mad 'Aridh Lissukun:</strong> Saat waqaf dibaca 2, 4, atau 6 harakat dengan penghentian suara <em>tawassuth</em> pada <em>Nūn</em> sukun.
+                </td>
+                <td>
+                    Seluruh sepuluh imam qira'at mutawatirah sepakat membaca <em>Ad-Dīni</em> dengan kasrah pada <em>Dāl</em> dan <em>Nūn</em> (saat washal).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits Sahih & Atsar Tafsir Al-Qur'an bil-Qur'an</h3>
+    <div class="hadith-box">
+        <strong>1. Lanjutan Hadits Qudsi Sahih Muslim (No. 395) dari Abu Hurairah r.a. — Pengakuan Kemuliaan Allah atas Dua Qira'at:</strong><br>
+        Rasulullah ﷺ bersabda bahwa Allah Ta'ala berfirman: <em>"Fa-idzā qāla: 'Māliki yawmid-dīn', qāla: 'Majjadanī 'abdī' — wa qāla marratan: 'Fawwadha ilayya 'abdī'..."</em> (Apabila hamba mengucapkan: <em>"Māliki yawmid-dīn"</em>, maka Allah berfirman: <strong>"Hamba-Ku telah mengagungkan kemuliaan-Ku [Majjadanī 'abdī]!"</strong> — dan dalam satu riwayat: <strong>"Hamba-Ku telah menyerahkan segala urusannya kepada-Ku!"</strong>).
+    </div>
+    <div class="hadith-box">
+        <strong>2. Tafsir Al-Qur'an bil-Qur'an (QS. Al-Infithar [82]: 17–19 & QS. Ghafir [40]: 16) — Penjelasan Langsung Allah tentang "Yawmid-Dīn":</strong><br>
+        Allah SWT sendiri menafsirkan makna <em>Yawmid-Dīn</em> dan mengonfirmasi kedua qira'at (<em>Mālik</em> dan <em>Malik</em>) di dalam ayat-ayat lain:<br>
+        • Untuk bacaan <strong>Mālik</strong> (Pemilik Kekuasaan): <em>"Wa mā adrāka mā yawmud-dīn, tsumma mā adrāka mā yawmud-dīn; yawma lā tamliku nafsun linafsin syay'ā, wal-amru yawma'idzin lillāh"</em> (Tahukah kamu apakah Hari Pembalasan itu? Yaitu hari ketika seseorang tidak berdaya memiliki/menolong sedikit pun bagi orang lain, dan segala urusan pada hari itu hanyalah milik Allah — QS. Al-Infithar: 17–19).<br>
+        • Untuk bacaan <strong>Malik</strong> (Raja): <em>"Limanil-mulkul-yawm? Lillāhil-Wāḥidil-Qahhār!"</em> (Milik siapakah kerajaan pada hari ini? Milik Allah Yang Maha Esa lagi Maha Mengalahkan! — QS. Ghafir: 16).
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Muttafaqun 'Alaih (Sahih Bukhari No. 6519 & Sahih Muslim No. 2788) dari Abu Hurairah r.a. — Allah Menggenggam Bumi di Hari Kiamat:</strong><br>
+        Rasulullah ﷺ bersabda: <em>"Yaqbidhullāhul-ardha yawmal-qiyāmati, wa yathwīs-samā'a bi-yamīnihī, tsumma yaqūlu: Anal-Maliku! Ayna mulūkul-ardhi?"</em> (Allah menggenggam bumi pada hari kiamat dan menggulung langit dengan tangan kanan-Nya, kemudian Dia berfirman: <strong>"Akulah Sang Maharaja [Al-Malik]! Di manakah para raja bumi dahulu?"</strong>).
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Mālik vs Malik (مَـٰلِك vs مَلِك — Akar Kata: م-ل-ك):</strong><br>
+            Berakar dari <em>Mīm-Lām-Kāf</em> yang bermakna penguasaan, genggaman yang kokoh, dan wewenang mengatur (<em>ar-rabth wasy-syadd wal-iḥtirāz</em>).<br>
+            • <strong>Mālik (مَالِك — Isim Fā'il dari <em>malaka - yamliku - milkan</em>):</strong> Berarti <strong>Pemilik</strong>. Cakupannya meliputi hak kepemilikan atas zat benda, makhluk hidup, maupun tindakan. Seorang <em>mālik</em> bebas melakukan <em>tasharruf</em> (pengelolaan, pemberian, atau pencabutan) terhadap apa yang dimilikinya.<br>
+            • <strong>Malik (مَلِك — Shifat Musyabbahah dari <em>malaka - yamliku - mulkan</em>):</strong> Berarti <strong>Raja / Penguasa Tertinggi</strong>. Cakupannya meliputi kewibawaan politik-hukum, titah perintah dan larangan (<em>al-amr wan-nahy</em>), serta putusan pengadilan terhadap makhluk berakal.
+        </li>
+        <li>
+            <strong>Yawm (يَوْم — Akar Kata: ي-و-م):</strong><br>
+            Dalam bahasa Arab dan terminologi Al-Qur'an, kata <em>Yawm</em> tidak hanya berarti rentang waktu 24 jam dari terbit fajar hingga terbenam matahari, melainkan bermakna <strong>rentang masa atau fase peristiwa besar</strong> (<em>muthlaquz-zamān</em>), seperti <em>Yawm Badr</em> (Peristiwa Perang Badar). <em>Yawmud-Dīn</em> mencakup seluruh rangkaian peristiwa sejak tiupan sangkakala kebangkitan, pengumpulan di Mahsyar, hisab, mizan, shirath, hingga penetapan abadi di surga atau neraka.
+        </li>
+        <li>
+            <strong>Ad-Dīn (ٱلدِّين — Akar Kata: د-ي-ن):</strong><br>
+            Akar kata <em>Dāl-Yā'-Nūn</em> memiliki struktur semantik yang unik tergantung preposisi yang mengikutinya:<br>
+            1) <em>Dānahu - yadīnuhu</em> (tanpa huruf jarr): <strong>Membalas perbuatannya dan menghisabnya</strong>. Dari sinilah lahir pepatah Arab klasik: <em>"Kamā tadīnu tudānu"</em> (Sebagaimana engkau berbuat, demikian pula engkau akan dibalas). Dalam konteks Ayat 4, seluruh mufassirin sepakat bahwa makna <em>Ad-Dīn</em> adalah <strong>Al-Jazā' wal-Ḥisāb</strong> (Pembalasan dan Perhitungan Amal).<br>
+            2) <em>Dāna lahu</em> (dengan huruf <em>Lām</em>): <strong>Tunduk, patuh, dan merendahkan diri</strong>.<br>
+            3) <em>Dāna bihi</em> (dengan huruf <em>Bā'</em>): <strong>Memeluk suatu keyakinan atau jalan hidup (agama)</strong>.<br>
+            Ketiga makna ini terhubung secara filosofis: karena manusia memilih suatu jalan hidup (<em>dīn</em>) dan ketundukan di dunia, maka ia pasti akan menghadapi pembalasan (<em>Yawmud-Dīn</em>) di akhirat!
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Segmen Lafaz</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Ta'alluq</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>مَـٰلِكِ</strong></td>
+                <td>
+                    Dalam qira'at <em>Māliki</em>: Isim Fā'il di atas wazan فَاعِل dari fi'il tsulatsi <em>malaka</em>.<br>
+                    Dalam qira'at <em>Maliki</em>: Shifat Musyabbahah di atas wazan فَعِل yang menunjukkan kemantapan sifat kerajaan.
+                </td>
+                <td>
+                    <strong>Na'at</strong> (sifat) keempat bagi Lafzhul Jalalah <em>Allāhi</em> pada Ayat 2 (atau <em>Badal</em> darinya), majrur dengan tanda kasrah zhahirah, dan berkedudukan sebagai <em>mudhāf</em>.<br>
+                    <strong>Kaidah Idhafah Lafzhiyyah vs Ma'nawiyyah:</strong> Karena <em>Mālik</em> merujuk pada waktu yang akan datang (Hari Kiamat), para ulama Nahwu membahas bagaimana idhafah isim fa'il <em>Mālik</em> ke <em>Yawm</em> tetap memberi faedah <em>at-ta'rīf</em> (pengkhususan makrifat) sehingga sah menjadi na'at bagi isim makrifat <em>Allāhi</em>—karena sifat kepemilikan Allah bersifat azali dan abadi, serta di sini terjadi perluasan majazi (<em>ittisā'</em>) dengan menempatkan <em>zharf</em> (<em>yawm</em>) pada posisi <em>maf'ūl bih</em>.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>يَوْمِ</strong></td>
+                <td>
+                    Isim zaman jamid mufrad mudzakkar.
+                </td>
+                <td>
+                    <strong>Mudhāfun Ilayh</strong> bagi <em>Māliki</em>, majrur dengan tanda kasrah zhahirah, sekaligus berkedudukan sebagai <em>mudhāf</em> bagi kata setelahnya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>ٱلدِّينِ</strong></td>
+                <td>
+                    Mashdar dari <em>dāna - yadīnu - dīnan</em> bermakna <em>al-jazā'</em>.
+                </td>
+                <td>
+                    <strong>Mudhāfun Ilayh</strong> bagi <em>Yawmi</em>, majrur dengan tanda kasrah zhahirah.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Mengapa Dikhususkan "Māliki Yawmid-Dīn", Padahal Allah Pemilik Dunia dan Akhirat?</strong><br>
+            Allah adalah Pemilik setiap hari di dunia dan akhirat; mengapa pada ayat ini Dia mengkhususkan penyebutan <strong>Hari Pembalasan (Yawmid-Dīn)</strong>? Para ulama Balaghah menjawab:<br>
+            • Di dunia, Allah memberikan pinjaman kepemilikan sementara (<em>milkiyyah majāziyyah</em>) dan kekuasaan semu kepada manusia: ada orang yang mengklaim "ini tanahku, ini hartaku, ini kerajaanku".<br>
+            • Namun pada <strong>Hari Pembalasan (Yawmid-Dīn)</strong>, seluruh klaim kepemilikan, jabatan, kekuasaan politik, dan harta manusia <strong>gugur total</strong>! Tidak ada satu pun presiden, raja, miliarder, atau hakim dunia yang memiliki wewenang sedikit pun. Pengkhususan <em>Yawmid-Dīn</em> menunjukkan keagungan dan kedahsyatan hari tersebut (<em>lit-ta'zhīm wat-tahwīl</em>).
+        </li>
+        <li>
+            <strong>Ilmu Bayan — Majaz Mursal / Ittisā' pada Idhafah "Māliki Yawmid-Dīn":</strong><br>
+            Secara hakikat, yang dimiliki dan diatur bukanlah "waktu/hari"-nya semata, melainkan <strong>seluruh makhluk, peristiwa, dan putusan hukum yang terjadi di dalam hari tersebut</strong> (<em>Māliki kulli syay'in wa kulli amrin fī yawmid-dīn</em>). Menyandarkan kepemilikan langsung kepada "Hari"-nya adalah gaya bahasa <em>Ittisā'</em> (perluasan makna) yang sangat kuat: jika wadah waktunya saja sepenuhnya berada dalam genggaman Allah, apalagi seluruh makhluk yang berada di dalamnya!
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Korelasi dengan Ayat 2 dan 3):</strong><br>
+            Setelah Ayat 2 menegaskan pemeliharaan Allah atas alam semesta (<em>Rabbil-'ālamīn</em>) dan Ayat 3 menegaskan bahwa pemeliharaan itu dilandasi kasih sayang tak terbatas (<em>Ar-Raḥmānir-Raḥīm</em>), Ayat 4 hadir untuk melengkapi kesempurnaan sistem kosmik: kasih sayang Allah tidak boleh disalahpahami sebagai ketiadaan hukum dan keadilan. Jika di dunia ada penindas yang hidup makmur dan orang jujur yang teraniaya tanpa sempat mendapat keadilan di pengadilan dunia, maka <strong>Māliki yawmid-dīn</strong> adalah jaminan mutlak bahwa keadilan kosmik pasti ditegakkan!
+        </li>
+        <li>
+            <strong>Siyāq (Penutup Paruh Pertama Surah Al-Fatihah — Bagian Hak Allah):</strong><br>
+            Ayat 4 adalah puncak dari tiga ayat pengenalan Tuhan (<em>Ta'rīf bil-Ma'būd</em>): Tuhan adalah Pencipta-Pendidik (<em>Rabb</em>), Pengasih-Penyayang (<em>Raḥmān-Raḥīm</em>), dan Hakim Agung Hari Akhir (<em>Māliki yawmid-dīn</em>).
+        </li>
+        <li>
+            <strong>Liḥāq (Jembatan Logis Menuju Ikrar Ayat 5 "Iyyāka Na'budu"):</strong><br>
+            Mengapa seorang hamba baru mengucapkan <em>"Iyyāka na'budu wa iyyāka nasta'īn"</em> (Hanya kepada-Mu kami menyembah dan hanya kepada-Mu kami memohon pertolongan — Ayat 5) setelah membaca Ayat 2, 3, dan 4? Karena akal yang sehat hanya akan mau menyembah Dzat yang memiliki tiga kualifikasi ini: Dia yang menciptakan dan memberi rezeki (Ayat 2), Dia yang mencintai dan menyayangi hamba-Nya (Ayat 3), dan Dia yang memegang nasib akhir serta pembalasan abadi di Hari Kiamat (Ayat 4)! Kesadaran akan ketiga sifat inilah yang memicu peralihan sapaan langsung (<em>iltifāt</em>) di Ayat 5.
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Menggugat Materialisme Makkah yang Mengingkari Hari Kebangkitan</h3>
+    <p>
+        Akar kerusakan moral, penindasan budak, perampasan harta anak yatim, dan kecurangan timbangan yang dilakukan oleh oligarki Quraisy di Makkah adalah <strong>pengingkaran terhadap Hari Pembalasan (Yawmid-Dīn)</strong>. Mereka berkata sebagaimana direkam dalam QS. Al-Jatsiyah [45]: 24: <em>"Kehidupan ini tidak lain hanyalah kehidupan kita di dunia saja; kita mati dan kita hidup, dan tidak ada yang membinasakan kita selain masa."</em> Bahkan mereka mengejek: <em>"Apakah apabila kami telah mati dan menjadi tanah serta tulang-belulang, apakah benar-benar kami akan dibangkitkan untuk diberi pembalasan (la-madīnūn)?"</em> (QS. Ash-Shaffat: 53).<br>
+        Karena merasa tidak akan pernah diadili setelah mati, para elite Makkah bebas menindas kaum lemah. Turunnya ayat <strong>"Māliki yawmid-dīn"</strong> yang dibaca di setiap rakaat shalat menanamkan kesadaran eskatologis yang revolusioner: setiap ucapan, setiap dirham harta, dan setiap tetes air mata orang yang terzalimi tercatat rapi dan akan diadili di hadapan Sang Pemilik Hari Pembalasan.
+    </p>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān</em>:</strong><br>
+        At-Tabari memaparkan kedua qira'at (<em>Maliki</em> dan <em>Māliki</em>) beserta hujjah masing-masing, lalu memilih bahwa makna <em>Malik</em> (Raja) lebih mencakup keagungan karena setiap Raja Agung di Hari Kiamat pasti sekaligus Pemilik, sedangkan tidak setiap pemilik benda di dunia berstatus sebagai raja. Beliau menukil riwayat dari Ibnu Abbas dan Ibnu Mas'ud r.a. bahwa <em>Yawmud-Dīn</em> adalah <em>Yawmu ḥisābil-khalā'iq</em> (hari perhitungan seluruh makhluk), di mana Allah membalas setiap jiwa sesuai amalnya: jika baik dibalas berlipat ganda, dan jika buruk dibalas setimpal kecuali jika Allah mengampuninya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em>:</strong><br>
+        Ibnu Katsir menegaskan bahwa kedua bacaan (<em>Mālik</em> dengan alif dan <em>Malik</em> tanpa alif) adalah <strong>shahih dan mutawatir</strong>, saling melengkapi dan memperindah makna. Bacaan <em>Mālik</em> didukung oleh firman Allah: <em>"Inna naḥnu naritsul-ardha wa man 'alayhā"</em> (QS. Maryam: 40), sedangkan bacaan <em>Malik</em> didukung oleh firman Allah: <em>"Al-mulku yawma'idzinil-ḥaqqu lir-Raḥmān"</em> (QS. Al-Furqan: 26).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em>:</strong><br>
+        Al-Qurthubi mengutip pendapat Abu 'Ubaidah dan Al-Mubarrad mengenai keunggulan masing-masing qira'at, lalu menyimpulkan pandangan yang paling adil: keduanya wajib diimani karena keduanya adalah wahyu yang diturunkan kepada Rasulullah ﷺ. Al-Qurthubi juga mengingatkan implikasi hukum syariat: karena hanya Allah yang menjadi <em>Malikul-Amlāk</em> (Raja Diraja) yang mutlak, maka haram hukumnya seseorang menamai dirinya atau penguasa dunia dengan gelar <em>"Syāhansyāh / Malikul-Amlāk"</em> (Raja segala raja), berdasarkan hadits sahih Bukhari-Muslim: <em>"Inna akhna'a ismin 'indallāhi rajulun tasammā Malikal-Amlāk; lā Mālika illallāh."</em>
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Asy-Syaukani (w. 1250 H) — <em>Al-Kasysyāf</em> & <em>Fatḥul-Qadīr</em>:</strong><br>
+        Az-Zamakhsyari dan Asy-Syaukani membedah kekuatan bacaan <em>Māliki</em> (Pemilik): kepemilikan Allah di Hari Pembalasan begitu mutlak hingga tak seorang pun berani berbicara kecuali dengan izin-Nya (<em>Lā yatakallamūna illā man adzina lahur-Raḥmānu wa qāla shawābā</em> — QS. An-Naba': 38). Seluruh hubungan nasab, suap, dan lobi politik terputus total pada hari itu.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em>:</strong><br>
+        Quraish Shihab menekankan bagaimana perpaduan Ayat 3 (<em>Ar-Raḥmānir-Raḥīm</em>) dan Ayat 4 (<em>Māliki yawmid-dīn</em>) melahirkan optimisme yang bertanggung jawab: seorang mukmin menyongsong Hari Perhitungan bukan dengan keputusasaan yang melumpuhkan, karena ia tahu bahwa Hakim Tunggal yang menguasai Hari Pembalasan itu tiada lain adalah Dzat yang baru saja disebut pada ayat sebelumnya sebagai <strong>Yang Maha Pengasih lagi Maha Penyayang</strong>!
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka & Tafsir Kemenag RI — <em>Tafsir Al-Azhar</em>:</strong><br>
+        Buya Hamka menuliskan renungan yang sangat menggetarkan: <em>"Di dunia ini, banyak pengadilan yang bisa dibeli dengan uang, banyak hakim yang bisa diintimidasi oleh kekuasaan, dan banyak orang kecil yang menangis karena haknya dirampas tanpa bisa mengadu. Maka ayat 'Māliki yawmid-dīn' adalah pelipur lara bagi orang yang teraniaya dan peringatan geledek bagi para penguasa yang zalim: Tunggulah Hari Pembalasan! Di sana kursi pengadilan hanya milik Allah semata."</em>
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Kajian</th>
+                <th>Titik Kesepakatan (Ijma')</th>
+                <th>Ragaman Perspektif Ulama (Ikhtilaf & Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Qira'at Mālik vs Malik</strong></td>
+                <td>Sepakat bahwa kedua bacaan adalah mutawatirah dari Nabi ﷺ dan sah dibaca di dalam maupun di luar shalat.</td>
+                <td>Ulama yang mentarjih keluasan <em>Mālik</em> (Ibnu Jarir dalam satu sisi, Az-Zamakhsyari) menekankan mutlaknya kepemilikan zat & tindakan; ulama yang mentarjih <em>Malik</em> (At-Tabari, Al-Qurthubi) menekankan keagungan titah kerajaan di atas setiap pemilik. Sintesis terbaik: keduanya saling menyempurnakan.</td>
+            </tr>
+            <tr>
+                <td><strong>Makna Ad-Dīn pada Ayat 4</strong></td>
+                <td>Sepakat bermakna <em>Al-Jazā' wal-Ḥisāb</em> (Pembalasan dan Perhitungan Amal).</td>
+                <td>Sebagian mufassir menghubungkan korelasi etimologis antara <em>Ad-Dīn</em> sebagai agama/kepatuhan di dunia dengan <em>Ad-Dīn</em> sebagai pembalasan di akhirat.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Psikologi Akuntabilitas Akhirat ("Eschatological Accountability") & Integritas Saat Sendiri</h3>
+    <p>
+        Dalam psikologi moral, tantangan terbesar manusia adalah <strong>The Ring of Gyges Problem</strong> (masalah cincin tembus pandang yang dikemukakan Plato): <em>"Apakah manusia tetap akan berbuat jujur dan adil jika ia yakin tidak ada polisi, kamera pengawas, atau manusia lain yang melihatnya, dan ia pasti lolos dari hukuman dunia?"</em>
+    </p>
+    <ul>
+        <li><strong>Membangun Pengawas Internal Mutlak:</strong> Kesadaran akan <em>Māliki yawmid-dīn</em> menjawab tuntas dilema tersebut. Seorang mukmin yang menghayati Ayat 4 menyadari bahwa tidak ada kejahatan yang benar-benar tersembunyi dan tidak ada kebaikan sekecil biji sawi pun yang sia-sia (QS. Al-Zalzalah: 7–8). Kesadaran ini membentuk <strong>integritas moral otonom</strong>: ia menolak suap meskipun tidak ada audit, dan ia tetap berbuat ihsan meskipun tidak ada yang memuji.</li>
+        <li><strong>Ketahanan Mental Menghadapi Ketidakadilan Dunia (<em>Moral Resilience</em>):</strong> Banyak manusia mengalami trauma dan sinisme akut ketika melihat orang jahat tampak menang di dunia sementara orang jujur disingkirkan. Keyakinan pada <em>Yawmid-Dīn</em> menjaga kesehatan jiwa seorang mukmin agar tidak patah arang: dunia hanyalah babak ujian sementara, sedangkan babak penyelesaian dan keadilan paripurna ada di tangan <em>Māliki yawmid-dīn</em>.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Krisis Impunitas Hukum, Korupsi Sistemik & Ilusi Kekekalan Jabatan</h3>
+    <ul>
+        <li>
+            <strong>Kritik atas Budaya Impunitas & Penyalahgunaan Wewenang:</strong> Dalam realitas kontemporer, krisis kepercayaan publik sering dipicu oleh fenomena "hukum yang tajam ke bawah namun tumpul ke atas", korupsi kerah putih, dan manipulasi peradilan. Ayat <em>Māliki yawmid-dīn</em> adalah peringatan keras bagi setiap pejabat, hakim, penegak hukum, dan pelaku bisnis: setiap tanda tangan kebijakan, setiap putusan palu sidang, dan setiap rupiah anggaran publik akan diaudit ulang di Mahkamah Agung Ilahi di mana tidak ada kekebalan diplomatik maupun pembela bayaran.
+        </li>
+        <li>
+            <strong>Dekonstruksi Ilusi Kepemilikan Absolut Kapitalisme:</strong> Manusia modern sering terperangkap dalam delusi bahwa harta dan kekayaan yang ia kumpulkan adalah miliknya secara mutlak sehingga ia bebas menghamburkannya atau menahan hak orang miskin. Mengucapkan <em>Māliki yawmid-dīn</em> setiap hari menyadarkan manusia bahwa seluruh aset duniawi hanyalah hak guna pakai sementara (<em>amanah</em>) yang kelak harus dipertanggungjawabkan dari mana diperoleh dan ke mana dibelanjakan.
+        </li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Aksi Konkret Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Audit Harian ("Hisab Mandiri") Sebelum Tidur:</strong> Mengamalkan pesan Khalifah Umar bin Khattab r.a. (<em>"Ḥāsibū anfusakum qabla an tuḥāsabū"</em>): luangkan 5 menit setiap malam untuk mengevaluasi perkataan, transaksi keuangan, dan sikap kita hari itu; segera beristighfar dan perbaiki jika ada hak orang lain yang terlanggar.
+            </li>
+            <li>
+                <strong>Menyelesaikan Sengketa, Utang, dan Kezaliman Sejak di Dunia:</strong> Jangan menunda pembayaran utang yang sudah jatuh tempo dan segera minta maaf secara tulus kepada siapa pun yang pernah kita sakiti lisan atau hartanya sebelum tiba hari di mana pembayaran tidak lagi menggunakan dinar dan dirham, melainkan pahala dan dosa.
+            </li>
+            <li>
+                <strong>Integritas Tanpa Pengawasan ("Zero-Corruption Standard"):</strong> Menolak segala bentuk kecurangan, manipulasi laporan, suap, atau pengurangan kualitas kerja meskipun berada dalam situasi yang aman dari pengawasan atasan manusia, demi menjaga keselamatan diri di hadapan <em>Māliki yawmid-dīn</em>.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial)</h3>
+        <ol>
+            <li>
+                Seandainya malam ini adalah malam terakhirku di dunia dan esok pagi aku harus berdiri seorang diri di hadapan <em>Māliki yawmid-dīn</em>, sudah siapkah aku mempertanggungjawabkan dari mana setiap rupiah hartaku berasal dan untuk apa kugunakan?
+            </li>
+            <li>
+                Adakah hak orang lain—baik berupa utang materi, janji yang belum ditepati, maupun luka hati akibat lisanku—yang masih kubawa dengan santai seolah-olah tidak akan ada Hari Perhitungan?
+            </li>
+            <li>
+                Apakah keyakinanku pada Hari Pembalasan sudah benar-benar menjadi rem yang menghentikanku saat tergoda bermaksiat di kala sepi?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Ya Allah, Maharaja dan Pemilik Tunggal Hari Pembalasan, pada hari ketika harta dan anak-anak tidak lagi berguna kecuali orang yang menghadap-Mu dengan hati yang bersih (qalbun salīm), hisablah kami dengan hisab yang mudah (ḥisāban yasīrā). Naungilah kami di bawah naungan 'Arsy-Mu pada hari tiada naungan selain naungan-Mu, dan perlakukanlah kami dengan keluasan rahmat dan ampunan-Mu, bukan semata-mata dengan keadilan hitung-hitungan amal kami yang penuh kekurangan. Āmīn yā Mālika Yawmid-Dīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="001-003 - QS. Al-Fatihah Ayat 3.html">&larr; Ayat Sebelumnya (QS. 1:3)</a>
+        <span><strong>QS. Al-Fātiḥah [1]: 4</strong></span>
+        <a href="001-005 - QS. Al-Fatihah Ayat 5.html">Lanjut ke Ayat 5 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

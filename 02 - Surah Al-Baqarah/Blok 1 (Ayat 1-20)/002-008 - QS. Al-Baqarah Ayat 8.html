@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002-008 - QS. Al-Baqarah Ayat 8 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --crimson-accent: #9b2c2c;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover {
+        background: #bee3f8;
+    }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    .badge-crimson {
+        background: #fed7d7;
+        color: #742a2a;
+        border: 1px solid #feb2b2;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 34px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.3;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul {
+        padding-left: 24px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="002-007 - QS. Al-Baqarah Ayat 7.html">&larr; Ayat Sebelumnya (QS. 2:7)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa)</span>
+        <a href="002-009 - QS. Al-Baqarah Ayat 9.html">Ayat Berikutnya (QS. 2:9) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-2: Al-Baqarah (Sanām al-Qur'ān)</span>
+        <span class="badge">Madaniyah (286 Ayat)</span>
+        <span class="badge badge-crimson">Blok 1 Klaster 3: Patologi Kaum Munafik [Inisiasi Golongan Ketiga] (Ayat 8-20)</span>
+        <span class="badge">11 Kata | 49 Huruf Rasm</span>
+    </div>
+
+    <h1>Surah Al-Baqarah [2]: 8</h1>
+    <div class="transliteration">
+        "Wa minan-nāsi may yaqūlu āmannā billāhi wa bil-yaumil-ākhiri wa mā hum bimu'minīn(a)"
+    </div>
+    <div class="thematic-title">
+        Genesis Fenomenologi Kemunafikan: Jurang Menganga antara Klaim Verbal dan Kepalsuan Ontologis Hati, Dialektika Nifaq di Madinah, dan Penafian Kategoris Ilahi (Wa Mā Hum Bimu'minīn)
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berbasis Kerangka 7 Lensa (Surah Al-Baqarah: Ayat 8 | Blok 1 Klaster 3: Karakteristik, Tipologi Mental & Patologi Kaum Munafik)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir 6 Ulama</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        وَمِنَ ٱلنَّاسِ مَن يَقُولُ ءَامَنَّا بِٱللَّهِ وَبِٱلْيَوْمِ ٱلْـَٔاخِرِ وَمَا هُم بِمُؤْمِنِينَ ۝٨
+    </div>
+
+    <h3>Terjemahan Presisi & Nuansa Makna</h3>
+    <div class="translation">
+        "Dan di antara manusia ada yang berkata: 'Kami telah beriman kepada Allah dan hari akhir,' padahal sejatinya sama sekali mereka bukanlah orang-orang yang beriman."
+    </div>
+    <p>
+        <strong>Catatan Presisi Terjemahan:</strong> Penerjemahan frasa <em>"wa minan-nās"</em> (وَمِنَ ٱلنَّاسِ) menggunakan kata <em>"Dan di antara manusia"</em> yang mengandung fungsi <em>at-tab'īdh</em> (menunjukkan sebagian kecil dari populasi manusia namun memiliki dampak sosial yang sangat destruktif). Kata kerja <em>yaqūlu</em> (يَقُولُ) berakar dari fi'il <em>mudhāri'</em> yang menyiratkan perbuatan berulang, terus-menerus, dan menjadi kebiasaan retoris (<em>al-istimrār at-tajaddudī</em>). Sebaliknya, klaim mereka dinyatakan dalam bentuk fi'il <em>mādhī</em>: <em>āmannā</em> (ءَامَنَّا - "kami telah beriman secara mantap dan tuntas"). Mereka mengklaim keimanan pada dua poros teologis: <em>billāh</em> (pilar permulaan penciptaan / <em>al-mabda'</em>) dan <em>bil-yaumil-ākhir</em> (pilar pertanggungjawaban ukhrawi / <em>al-ma'ād</em>). Namun kalimat penutup ayat ini menghancurkan klaim tersebut secara mutlak melalui struktur <em>jumlah ismiyyah manfiyyah</em> dengan <em>bā' zā'idah li-ta'kīd an-nafy</em>: <em>"wa mā hum bimu'minīn"</em> (وَمَا هُم بِمُؤْمِنِينَ). Terjemahan <em>"padahal sejatinya sama sekali mereka bukanlah orang-orang yang beriman"</em> secara tepat merefleksikan penafian ontologis ilahi—bahwa hakikat iman telah tercabut seakar-akarnya dari substansi kepribadian mereka.
+    </p>
+
+    <h3>Tabel Analisis Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Mutawatirah (10 Imam) & Implikasi Makna</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>وَمِنَ</strong><br>(<em>Wa mina</em>)</td>
+                <td>
+                    <strong>Wawu Isti'naf / 'Athaf:</strong> Huruf wau keluar dari dua bibir (<em>asy-syafatain</em>) dengan membulat, bersifat <em>jahr</em> dan <em>rakhwah</em>.<br>
+                    <strong>Fathah 'Aridhah pada Huruf Nun:</strong> Asalnya adalah preposisi sukun <em>min</em> (مِنْ), namun huruf nun difathahkan untuk mencegah bertemunya dua huruf sukun (<em>li-man'i iltiqā'is-sākinain</em>) saat disambung dengan alif lam syamsiyyah pada kata berikutnya.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca fathah pada huruf <em>Nūn</em> (<em>wa mina</em>) saat disambung (<em>washal</em>) dengan kata <em>an-nās</em>.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>ٱلنَّاسِ</strong><br>(<em>An-nās</em>)</td>
+                <td>
+                    <strong>Idgham Syamsiyyah:</strong> Lam ta'rif melebur sempurna ke dalam huruf nun.<br>
+                    <strong>Ghunnah Akmalu mā Takūn:</strong> Nun bertasydid ditahan dengungannya selama 2 harakat sempurna.<br>
+                    <strong>Makhraj Nun:</strong> Keluar dari ujung lidah (<em>tharful lisān</em>) sedikit di bawah makhraj lam, bersentuhan dengan gusi gigi seri atas.<br>
+                    <strong>Mad Thabi'i / Mad 'Aridh:</strong> Saat washal dibaca 2 harakat; jika waqaf menjadi mad 'aridh lissukun dengan kasrah pada sin yang memiliki sifat <em>hams</em> dan <em>shafir</em>.
+                </td>
+                <td>
+                    <strong>Imālah / Taqlīl pada Lafaz <em>An-Nās</em> Majrūr:</strong><br>
+                    • <strong>Ad-Dūrī 'an Abī 'Amr:</strong> Membaca dengan <strong>Imālah Kubrā</strong> (condong penuh ke arah bunyi 'e' atau kasrah: <em>an-nēs</em>) khusus pada kata <em>an-nās</em> yang berharakat kasrah (majrur).<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Memiliki riwayat <em>Taqīl</em> (bain-bain) dalam jalur tertentu saat waqaf.<br>
+                    • <strong>Jumhur Sembilan Imam:</strong> Membaca dengan <em>Fath</em> murni (tanpa condong ke vokal 'e'). Implikasi fonetik: imālah pada Ad-Duri memberikan aksentuasi kelembutan dan pergeseran vokal khas dialek Hijaz-Bashrah.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>مَن يَقُولُ</strong><br>(<em>May yaqūlu</em>)</td>
+                <td>
+                    <strong>Idgham Ma'al Ghunnah (Idgham Naqish):</strong> Nun sukun pada isim maushul <em>man</em> bertemu huruf <em>Yā'</em>, melebur disertai dengungan hidung (<em>khaisyūm</em>) sepanjang 2 harakat menurut riwayat Hafsh.<br>
+                    <strong>Huruf Qāf:</strong> Keluar dari pangkal lidah terdalam (<em>aqshal lisān</em>) dengan langit-langit lunak, bersifat <em>jahr, syiddah, isti'lā'</em> (tebal), dan <em>infitāḥ</em>.
+                </td>
+                <td>
+                    <strong>Idgham Bighunnah vs Bila Ghunnah:</strong><br>
+                    • <strong>Khalaf 'an Ḥamzah:</strong> Membaca dengan <strong>Idgham Bīlā Ghunnah</strong> (tanpa dengung sama sekali): <em>"may-yaqūlu"</em> dengan leburan murni ke huruf Ya' secara padat.<br>
+                    • <strong>Sembilan Imam Lainnya (termasuk Khallad dari Hamzah):</strong> Membaca dengan <strong>Idgham Bighunnah</strong> (disertai dengung nasal sempurna).
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>ءَامَنَّا</strong><br>(<em>Āmannā</em>)</td>
+                <td>
+                    <strong>Mad Badal:</strong> Huruf hamzah berharakat fathah mendahului huruf alif mad, dibaca 2 harakat menurut jumhur.<br>
+                    <strong>Nun Bertasydid:</strong> <em>Ghunnah akmalu mā takūn</em> pada pertemuan nun fi'il dengan nun dhamir fa'il (<em>nā</em>).<br>
+                    <strong>Mad Thabi'i:</strong> Alif di akhir kata dibaca panjang 2 harakat saat washal.
+                </td>
+                <td>
+                    <strong>Tingkat Panjang Mad Badal:</strong><br>
+                    • <strong>Warsy 'an Nāfi':</strong> Memiliki tiga wajah pembacaan pada Mad Badal: <em>Qashr</em> (2 harakat), <em>Tawassuth</em> (4 harakat), dan <em>Thūl / Isybā'</em> (6 harakat).<br>
+                    • <strong>Sembilan Imam Lainnya:</strong> Hanya membaca dengan <em>Qashr</em> (2 harakat) secara konsisten.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>بِٱللَّهِ</strong><br>(<em>Billāh</em>)</td>
+                <td>
+                    <strong>Tarqīq Lafzhul Jalālah:</strong> Huruf lam pada <em>Allāh</em> dibaca tipis (<em>tarqīq</em>) karena didahului oleh huruf berharakat kasrah (ba' jarr: <em>bi-</em>).<br>
+                    <strong>Hamzatul Washli:</strong> Gugur saat dibaca washal.<br>
+                    <strong>Makhraj Hā':</strong> Dari tenggorokan terdalam (<em>aqshal ḥalq</em>) dengan sifat <em>hams</em> dan <em>rakhwah</em>.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca <em>tarqīq</em> pada lam jalālah karena kasrah yang mendahuluinya.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>وَبِٱلْيَوْمِ</strong><br>(<em>Wa bil-yaum</em>)</td>
+                <td>
+                    <strong>Wawu 'Athaf & Ba' Jarr:</strong> Dibaca pendek dan jelas.<br>
+                    <strong>Alif Lam Qamariyyah:</strong> Lam dibaca idzhar terang.<br>
+                    <strong>Harf Līn (Wau Sukun):</strong> Huruf wau sukun didahului fathah, dilafalkan dengan lembut tanpa hentakan. Huruf <em>Mīm</em> berharakat kasrah zhahirah.
+                </td>
+                <td>
+                    Seluruh sepuluh imam sepakat membaca idzhar qamariyyah dan kasrah pada mim saat washal ke kata berikutnya.
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>ٱلْـَٔاخِرِ</strong><br>(<em>Al-ākhir</em>)</td>
+                <td>
+                    <strong>Alif Lam Qamariyyah:</strong> Idzhar qamari.<br>
+                    <strong>Mad Badal:</strong> Hamzah mendahului alif, 2 harakat.<br>
+                    <strong>Huruf Khā':</strong> Keluar dari tenggorokan atas (<em>adnal ḥalq</em>), bersifat <em>isti'lā'</em> dan <em>hams</em>.<br>
+                    <strong>Tarqīq Huruf Rā':</strong> Dibaca tipis karena berharakat kasrah.
+                </td>
+                <td>
+                    <strong>Kaidah Mad Badal & Tarqiq Ra':</strong><br>
+                    • <strong>Warsy:</strong> Membaca mad badal dengan tiga wajah (2, 4, 6 harakat), serta men-<em>tarqīq</em> huruf <em>Rā'</em> secara konsisten karena didahului kasrah muttashilah.<br>
+                    • <strong>Jumhur Imam:</strong> Membaca mad badal 2 harakat dan men-tarqiq rā' karena kasrahnya.
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>وَمَا هُم</strong><br>(<em>Wa mā hum</em>)</td>
+                <td>
+                    <strong>Wawu Ḥāl:</strong> Dibaca fathah murni.<br>
+                    <strong>Mad Thabi'i:</strong> Huruf alif pada <em>mā</em> nafiyah dipanjangkan 2 harakat.<br>
+                    <strong>Ikhfā' Syafawī:</strong> Huruf mim sukun pada <em>hum</em> bertemu huruf ba' pada <em>bimu'minīn</em>, dibaca samar di bibir disertai dengungan (<em>ghunnah</em>) menurut jumhur qurra'.
+                </td>
+                <td>
+                    <strong>Shilah Mīm Jamak:</strong><br>
+                    • <strong>Ibnu Katsīr & Abū Ja'far:</strong> Membaca dengan <strong>Shilah Mīm Jamak</strong> (<em>wa mā humū bimu'minīn</em>) dengan menambahkan wau mad 2 harakat.<br>
+                    • <strong>Qālūn 'an Nāfi':</strong> Memiliki dua wajah yang sah: sukun mim atau shilah.<br>
+                    • <strong>Jumhur (termasuk Ḥafsh):</strong> Membaca dengan sukun mim disertai Ikhfa' Syafawi yang sempurna.
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>بِمُؤْمِنِينَ</strong><br>(<em>Bimu'minīn</em>)</td>
+                <td>
+                    <strong>Ba' Zā'idah li-Ta'kīd an-Nafy:</strong> Dibaca kasrah murni.<br>
+                    <strong>Tahqīq Hamzah Sukun:</strong> Menurut riwayat Hafsh, hamzah sukun diucapkan tegas dari <em>aqshal ḥalq</em> dengan sifat <em>syiddah</em> (tertahan nafas dan suara).<br>
+                    <strong>Mad 'Aridh Lissukūn:</strong> Huruf ya' mad bertemu nun sukun sukun 'aridh saat waqaf di akhir ayat, boleh dibaca 2, 4, atau 6 harakat.
+                </td>
+                <td>
+                    <strong>Ibdāl Hamzah Sukun Menjadi Wau Mad (بِمُومِنِينَ):</strong><br>
+                    • <strong>Abū Ja'far:</strong> Mengganti (<em>ibdāl</em>) setiap hamzah sukun menjadi huruf mad yang sejenis dengan harakat sebelumnya; di sini dhommah bertemu hamzah sukun diganti menjadi wau mad: dibaca <strong>bimūminīn</strong> (بِمُومِنِينَ) baik washal maupun waqaf.<br>
+                    • <strong>Warsy 'an Nāfi':</strong> Mengganti hamzah sukun yang menjadi fa' fi'il (<em>fā'ul-kalimah</em>) menjadi wau: dibaca <strong>bimūminīn</strong>.<br>
+                    • <strong>As-Sūsī 'an Abī 'Amr:</strong> Membaca dengan ibdal wau secara konsisten (<strong>bimūminīn</strong>).<br>
+                    • <strong>Ḥamzah:</strong> Membaca ibdal wau (<strong>bimūminīn</strong>) khusus ketika waqaf padanya.<br>
+                    • <strong>Jumhur (Ḥafsh, Syu'bah, Qālūn, Ibnu Katsīr, Ad-Dūrī, Ibnu 'Āmir, Al-Kisā'ī, Khalaf, Ya'qūb):</strong> Membaca dengan <strong>Taḥqīq Hamzah</strong> murni (<em>bimu'minīn</em>).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Hadits-Hadits Sahih Penjelas Patologi Kemunafikan</h3>
+    <p>
+        Ayat 8 Surah Al-Baqarah merupakan tonggak permulaan dari 13 ayat berturut-turut (Ayat 8–20) yang membedah anatomi kemunafikan secara klinis dan mendalam. Hadits-hadits Rasulullah ﷺ secara eksplisit mengonfirmasi kriteria, karakteristik operasional, dan identitas kelompok ini:
+    </p>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Riwayat Al-Bukhari (No. 33) & Muslim (No. 59) dari Sahabat Abu Hurairah r.a. — Tiga Parameter Pokok Nifaq:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Āyatul-munāfiqi tsalātsun: idzā ḥaddatsa kadzaba, wa idzā wa'ada akhlafa, wa idzā'tumina khāna."</em><br>
+        (Tanda-tanda orang munafik itu ada tiga: apabila berbicara ia berdusta, apabila berjanji ia mengingkari, dan apabila dipercaya ia berkhianat).<br>
+        Dalam riwayat Shahih Muslim ditambahkan matn yang sangat relevan dengan QS. 2:8: <em>"Wa in shāma wa shallā wa za'ama annahu muslimun"</em> (Meskipun ia rajin berpuasa, mendirikan shalat, dan secara verbal mengklaim bahwa dirinya adalah seorang muslim). Hadits ini secara telak mencocoki frasa <em>"may yaqūlu āmannā... wa mā hum bimu'minīn"</em>.
+    </div>
+    <div class="hadith-box">
+        <strong>2. Hadits Sahih Riwayat Al-Bukhari (No. 34) & Muslim (No. 58) dari Sahabat Abdullah bin 'Amr bin Al-'Ash r.a. — Empat Karakter Munafik Murni:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <em>"Arba'un man kunna fīhi kāna munāfiqan khāliṣhan, wa man kānat fīhi khashlatun minhunna kānat fīhi khashlatun minan-nifāqi ḥattā yada'ahā: idzā'tumina khāna, wa idzā ḥaddatsa kadzaba, wa idzā 'āhada ghadara, wa idzā khāshama fajara."</em><br>
+        (Empat perkara yang apabila seluruhnya berhimpun pada diri seseorang, maka ia adalah seorang munafik tulen/murni; dan barangsiapa yang padanya terdapat salah satu dari sifat tersebut, maka pada dirinya ada satu cabang kemunafikan hingga ia meninggalkannya: apabila diberi amanah ia khianat, apabila berbicara ia berdusta, apabila mengikat perjanjian ia membatalkannya secara licik, dan apabila berselisih ia melampaui batas dengan berbuat curang dan keji).
+    </div>
+    <div class="hadith-box">
+        <strong>3. Hadits Sahih Riwayat Muslim (No. 2779) dari Sahabat Qatadah r.a. — Rahasia Dua Belas Tokoh Munafik Madinah:</strong><br>
+        Rasulullah ﷺ bersabda kepada Hudzaifah bin Al-Yaman r.a. (pemegang rahasia Nabi):<br>
+        <em>"Fī ash-ḥābī itsnā 'asyara munāfiqan, fīhim tsamāniyatun lā yadkhulūnal-jannata ḥattā yalijal-jamalu fī sammil-khiyāṭ..."</em><br>
+        (Di antara orang-orang yang mengaku sahabatku ada dua belas orang munafik, delapan di antara mereka tidak akan pernah masuk surga hingga unta sanggup masuk ke lubang jarum...). Riwayat ini membuktikan keberadaan faksi rahasia di Madinah yang secara formal berbaur dalam shaf kaum muslimin namun batin mereka memusuhi risalah Islam.
+    </div>
+    <div class="hadith-box">
+        <strong>4. Atsar Riwayat Imam Ibnu Jarir At-Tabari dalam <em>Jāmi' al-Bayān</em> (1/268) & Ibnu Abi Hatim dari Abdullah bin Abbas r.a. — Sabab Nuzul Khusus Ayat 8:</strong><br>
+        Ibnu Abbas r.a. menjelaskan:<br>
+        <em>"Nuzilat hādzihil-āyātu fī munāfiqī ahlil-Madīnati wa minhum 'Abdullāh bin Ubayy bin Salūl, wa Mu'attib bin Qusyair, wa Jadd bin Qais, kānū idzā laqūl-mu'minīna qālū: Innā ma'akum wa nahanu 'alā dīnikum, fa-idzal-khalaw ilā syayāṭīnihim min ahlil-kitābi qālū: Innā ma'akum innamā naḥnu mustahzi'ūn."</em><br>
+        (Ayat-ayat ini diturunkan berkenaan dengan kaum munafik penduduk Madinah, di antara gembong mereka adalah Abdullah bin Ubay bin Salul, Mu'attib bin Qusyair, dan Jadd bin Qais. Mereka apabila menjumpai orang-orang beriman berkata: 'Sesungguhnya kami bersama kalian dan kami memeluk agama kalian,' namun apabila mereka kembali menyendiri kepada dedengkot mereka dari kalangan Ahli Kitab, mereka berkata: 'Sesungguhnya kami tetap bersama kalian, kami hanyalah berolok-olok').
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik (Ilmu ad-Dalālah)</h3>
+    <ul>
+        <li>
+            <strong>Akar Kata N-F-Q (ن - ف - ق — Anatomi Liang Bawah Tanah & Jalur Pelarian Rahasia):</strong><br>
+            Ibnu Faris dalam <em>Mu'jam Maqāyīs al-Lughah</em> (Jilid 5, entri: ن-ف-ق) merumuskan kaidah orisinal bahwa akar kata Nun, Fa', dan Qaf berporos pada dua makna pokok: <em>"Ahaduhumā: inqithā'u syai'in wa dzahābuh, wal-ākhar: ikhfā'u syai'in wa satruh"</em> (Salah satunya adalah terputus atau habisnya sesuatu, dan yang kedua adalah <strong>menyembunyikan sesuatu serta menutupinya di balik tirai kepalsuan</strong>).<br>
+            Secara biologis-antropologis bangsa Arab, istilah <em>Nifāq</em> diambil dari kata <strong>An-Nāfiqā'</strong> (ٱلنَّافِقَاءُ), yaitu salah satu dari dua lubang persembunyian tikus padang pasir (<em>al-yarbū'</em>). Tikus gurun dikenal sangat cerdik membuat sarang bawah tanah dengan dua pintu: pintu pertama dinamakan <em>al-Qāshi'ā'</em> yang tampak terbuka dan nyata bagi predator; sedangkan pintu kedua dinamakan <em>an-Nāfiqā'</em>, yaitu terowongan rahasia yang sengaja digali dari dalam mendekati permukaan tanah namun disisakan selapis tipis tanah rapuh sehingga tampak tertutup dari luar. Apabila ada musuh yang hendak menyergapnya dari pintu <em>al-Qāshi'ā'</em>, tikus tersebut segera membenturkan kepalanya ke lapisan tipis <em>an-nāfiqā'</em> lalu meloloskan diri dengan cepat ke alam bebas.<br>
+            Ibnu Manzhur dalam <em>Lisān al-'Arab</em> menegaskan bahwa dinamakan orang <strong>Munafik</strong> karena ia masuk ke dalam pintu Islam dari pintu lahiriah, namun bersiap meloloskan diri keluar dari pintu kekufuran secara sembunyi-sembunyi. Demikian pula kata <strong>An-Nafaq</strong> (ٱلنَّفَقُ) yang bermakna terowongan bawah tanah yang tembus di dua ujungnya, sebagaimana firman Allah: <em>"fayastaghriqū fī nafaqin fil-ardh"</em> (QS. Al-An'am: 35). Kaum munafik adalah manusia yang hidup di terowongan bawah tanah psikologis: gelap, bersembunyi, dan memiliki banyak jalan keluar oportunistik untuk menyelamatkan kepentingannya.
+        </li>
+        <li>
+            <strong>Akar Kata N-W-S / A-N-S (ن - و - س / أ - ن - س — Dinamika Goyah & Relasi Horisontal "An-Nās"):</strong><br>
+            Kata <em>An-Nās</em> (ٱلنَّاسِ) memiliki dua akar leksikal yang diperdebatkan para pakar bahasa. Sebagian pakar menyatakan ia berakar dari <strong>An-Naws</strong> (ٱلنَّوْسُ) yang bermakna gerak berayun-ayun, goyah, tidak stabil, dan mudah berbolak-balik (<em>at-taharruk wal-idhthirāb</em>). Sebagian pakar lainnya menyatakan ia berakar dari <strong>An-Nisyān</strong> (ٱلنِّسْيَانُ - kelupaan fitrah) atau <strong>Al-Inās</strong> (ٱلْإِينَاسُ - kejinakan bersosial). Pemilihan diksi <em>wa minan-nās</em> di awal ayat mengisyaratkan bahwa sosok munafik adalah representasi manusia yang terombang-ambing jiwanya tanpa jangkar prinsip yang kokoh; orientasi hidup mereka murni horizontal antar-manusia (takut dicela manusia, mencari pujian manusia), terputus dari orientasi vertikal ilahi.
+        </li>
+        <li>
+            <strong>Akar Kata Q-W-L (ق - و - ل — Emisi Verbal Tanpa Penetrasi Qalb):</strong><br>
+            Akar kata <em>Qāla - Yaqūlu - Qawlan</em> menunjukkan gerakan suara atau emisi kata-kata dari lidah dan bibir. Al-Qur'an secara spesifik menggunakan kalimat <em>"may yaqūlu"</em> (orang yang berkata), bukan <em>"man yu'minu"</em> (orang yang beriman). Ini adalah dekonstruksi linguistik terhadap ucapan kaum munafik: bahwa apa yang meluncur dari mulut mereka hanyalah desiran angin akustik (<em>kalam zhahiri</em>) yang sama sekali tidak memiliki substansi di dalam kedalaman bejana hati (<em>al-qalb</em>).
+        </li>
+        <li>
+            <strong>Akar Kata A-M-N (أ - م - ن — Paradoks Klaim Rasa Aman & Keyakinan):</strong><br>
+            Akar kata <em>A-M-N</em> berporos pada ketenangan jiwa, hilangnya rasa takut, kejujuran batin, dan kepasrahan total. Munafik mengklaim <em>āmannā</em> (kami telah aman dan beriman), namun ironisnya jiwa mereka adalah jiwa yang paling dicekam ketakutan, kecurigaan kronis, dan kepalsuan eksistensial.
+        </li>
+    </ul>
+
+    <h3>Tabel Analisis Morfosintaksis (Sharaf & I'rab) Kata demi Kata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Rasm</th>
+                <th>Tinjauan Morfologis (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Peran Struktur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>وَمِنَ</strong></td>
+                <td><em>Wawu</em>: Huruf istiknafiyah/athaf.<br><em>Min</em>: Huruf jarr ashli berfaedah <em>at-tab'īdh</em> (sebagian).</td>
+                <td><em>Wawu</em> mabni 'alal-fath. <em>Mina</em> huruf jarr mabni 'alas-sukun yang difathahkan nun-nya karena iltiqa'us sakinain, tidak memiliki mahall i'rab tersendiri.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلنَّاسِ</strong></td>
+                <td>Isim jins jamak, berakar dari <em>n-w-s</em> atau <em>a-n-s</em>, ma'rifah dengan <em>al-ta'rif</em>.</td>
+                <td>Isim majrur oleh <em>min</em> dengan tanda kasrah zhahirah di akhirnya.<br>
+                <strong>Ta'alluq:</strong> <em>Jār wa majrūr</em> (<em>minan-nās</em>) berkaitan (<em>muta'alliq</em>) dengan khabar muqaddam mahdzuf yang ditakdirkan: <em>kā'inun / mustaqirrun</em>, menempati kedudukan <strong>Khabar Muqaddam</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>مَن</strong></td>
+                <td>Isim Maushul bermakna <em>alladzī</em>, berstatus isim nakirah maushufah menurut analisis gramatika alternatif.</td>
+                <td>Isim maushul mabni 'alas-sukun menempati <strong>Maḥall Rafa' Mubtada' Mu'akhkhar</strong> (subjek kalimat yang diakhirkan).</td>
+            </tr>
+            <tr>
+                <td><strong>يَقُولُ</strong></td>
+                <td>Fi'il Mudhāri' tsulatsi mujarrad (<em>qāla - yaqūlu</em>, akar ق-و-ل), wazan <em>yaf'ulu</em>.</td>
+                <td>Fi'il mudhāri' marfu' dengan tanda dhommah zhahirah karena tidak kemasukan 'amil nashab maupun jazm. Fa'il-nya adalah <strong>Dhamīr Mustatir</strong> jawazan takdirnya <em>huwa</em> (merujuk pada lafaz <em>man</em> yang mufrad).<br>
+                <strong>Shilat al-Maushūl:</strong> Jumlah fi'liyyah (<em>yaqūlu</em> beserta fa'il-nya) adalah <em>shilat al-maushūl</em> bagi <em>man</em> yang <em>lā maḥalla lahā minal-i'rāb</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ءَامَنَّا</strong></td>
+                <td>Fi'il Mādhi tsulatsi mazid rubā'ī (<em>āmana - yu'minu</em>, wazan <em>af'ala</em>, akar أ-م-ن). Bersambung dengan dhamir <em>nā</em> al-fā'ilīn.</td>
+                <td>Fi'il mādhi mabni 'alas-sukūn karena bersambung dengan dhamir rafa' mutaharrik (<em>nā</em>). <em>Nā</em> adalah dhamir muttashil mabni 'alas-sukun menempati <strong>Maḥall Rafa' Fā'il</strong>.<br>
+                <strong>Maqūlul-Qawl:</strong> Jumlah fi'liyyah (<em>āmannā</em>) menempati <strong>Maḥall Nashab Maqūl al-Qawl</strong> (kalimat objek langsung yang diucapkan).</td>
+            </tr>
+            <tr>
+                <td><strong>بِٱللَّهِ</strong></td>
+                <td><em>Ba'</em>: Huruf jarr ashli li-ilshāq wal-i'tiqād.<br><em>Allāh</em>: Lafzhul Jalālah, 'Alam 'ala adz-Dzāt al-Wājibul Wujūd.</td>
+                <td><em>Ba'</em> huruf jarr mabni 'alal-kasr. <em>Lafzhul Jalālah</em> majrur dengan kasrah zhahirah.<br>
+                <strong>Ta'alluq:</strong> <em>Jār wa majrūr</em> bertaut langsung (<em>muta'alliq</em>) dengan fi'il <em>āmannā</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَبِٱلْيَوْمِ</strong></td>
+                <td><em>Wawu</em>: Harf 'Athaf muthlaqul-jam'i.<br><em>Ba'</em>: Huruf jarr.<br><em>Al-Yaum</em>: Isim majrur.</td>
+                <td><em>Wawu</em> huruf 'athaf. <em>Ba'</em> huruf jarr. Kata <em>al-yaumi</em> majrur dengan kasrah zhahirah, ma'thūf kepada <em>lafzhil-jalālah</em> (<em>billāh</em>). Ta'alluq ikut kepada <em>āmannā</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>ٱلْـَٔاخِرِ</strong></td>
+                <td>Isim sifat / na'at berakar dari <em>a-kh-r</em>, wazan <em>fā'il</em>, ma'rifah dengan <em>al-</em>.</td>
+                <td><strong>Na'at (Sifat)</strong> bagi kata <em>al-yaumi</em>, majrur dengan tanda kasrah zhahirah di akhirnya mengikuti <em>man'ūt</em>-nya.</td>
+            </tr>
+            <tr>
+                <td><strong>وَمَا</strong></td>
+                <td><em>Wawu</em>: Wawu Ḥāl (menunjukkan keadaan faktual kontras).<br><em>Mā</em>: Harf Nafyin Hijāziyyah (beramal seperti <em>laisa</em>) menurut dialek Hijaz, atau Nafiyah Ghairu 'Amilah menurut dialek Bani Tamim.</td>
+                <td><em>Wawu</em> mabni 'alal-fath untuk <em>hāl</em>. <em>Mā</em> huruf nafyi mabni 'alas-sukun, tidak memiliki mahall i'rab.</td>
+            </tr>
+            <tr>
+                <td><strong>هُم</strong></td>
+                <td>Dhamīr Munfashil untuk jamak mudzakkar gha'ib.</td>
+                <td>Dhamir mabni 'alas-sukun dalam kedudukan <strong>Isim Mā Hijāziyyah</strong> menempati <em>mahall rafa'</em> (atau berkedudukan sebagai <em>Mubtada'</em> menurut gramatika Bani Tamim).</td>
+            </tr>
+            <tr>
+                <td><strong>بِمُؤْمِنِينَ</strong></td>
+                <td><em>Ba'</em>: Huruf jarr zā'idah li-ta'kīd an-nafy.<br><em>Mu'minīn</em>: Isim Fā'il jamak mudzakkar salim dari <em>āmana</em>.</td>
+                <td><em>Ba'</em> huruf jarr tambahan. Kata <em>mu'minīn</em> adalah <strong>Khabar Mā Hijāziyyah</strong>, majrūr secara lafaz (<em>lafzhan</em>) oleh huruf ba' za'idah dan manshūb secara posisi gramatika (<em>maḥallan</em>), bertanda huruf <strong>Yā'</strong> karena merupakan Jamak Mudzakkar Salim.<br>
+                (Menurut qaul Tamim: majrur lafzhan marfu' mahallan khabar mubtada').<br>
+                <strong>Maḥallul-Jumlah:</strong> Seluruh jumlah ismiyyah (<em>wa mā hum bimu'minīn</em>) menempati <strong>Maḥall Nashab Ḥāl</strong> (kondisi faktual yang membongkar kebohongan klaim ucapan mereka).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah Tingkat Tinggi (Ma'ani, Bayan, & Badi')</h3>
+    <ol>
+        <li>
+            <strong>Ilmu Ma'ani — Taqdim al-Khabar Syibhul Jumlah (وَمِنَ ٱلنَّاسِ):</strong><br>
+            Penyebutan preposisi <em>wa minan-nās</em> mendahului subjeknya (<em>al-mubtada' al-mu'akhkhar: man yaqūlu</em>) berfungsi untuk <strong>at-tasywīq wal-istighrāb</strong> (menarik perhatian penuh dan memancing keheranan mendalam). Pendengar dirangsang untuk bertanya-tanya: <em>"Siapakah gerangan di antara genus manusia yang memiliki kelainan jiwa sedemikian ganjil?"</em> Selain itu, <em>at-tab'īdh</em> (sebagian) memberikan rasa optimisme bagi umat bahwa mayoritas manusia pada fitrah dasarnya tidaklah munafik; kemunafikan adalah penyakit tumor moral yang menjangkiti segelintir elite sosiologis yang manipulatif.
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Paradoks Gramatika: Fi'il Mudhari' (يَقُولُ) vs Fi'il Madhi (ءَامَنَّا):</strong><br>
+            Sebuah keajaiban sastra Al-Qur'an terungkap pada kontras dua bentuk waktu kata kerja:
+            <ul>
+                <li>Kaum munafik memilih fi'il <em>mādhī</em> (ءَامَنَّا - "kami telah beriman"). Mereka menggunakan bentuk lampau untuk memberi kesan bahwa keimanan mereka telah selesai, telah kokoh sejak dahulu, terbukti, dan tidak perlu diuji atau diragukan lagi.</li>
+                <li>Namun Allah menyifati aksi mereka dengan fi'il <em>mudhāri'</em> (يَقُولُ - "ia/mereka senantiasa berkata"). Bentuk mudhari' menunjukkan <em>at-tajaddud wal-istimrār at-takallufī</em> (ucapan yang terus diproduksi secara mekanis, repetitif, dan dipaksakan). Mereka harus terus-menerus mengulang-ulang pengakuan iman tersebut di hadapan publik muslim karena mereka dihantui rasa takut terbongkar; produksi kata-kata verbal menjadi kompensasi neurotik atas ketiadaan iman di dalam dada.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ilmu Bayan & Ma'ani — Pembatasan Rukun Iman pada Allah dan Hari Akhir:</strong><br>
+            Mengapa kaum munafik hanya mengklaim beriman kepada Allah dan Hari Akhir, tanpa menyebut Rasulullah ﷺ di ayat ini?
+            <ul>
+                <li><strong>Secara Teologis:</strong> Mengimani Allah mewakili poros permulaan (<em>al-mabda'</em>) dan Hari Akhir mewakili poros pertanggungjawaban pembalasan (<em>al-ma'ād</em>). Mereka mengira dengan menyebut dua kutub kosmik ini, kaum muslimin sudah akan mempercayai integritas mereka secara otomatis.</li>
+                <li><strong>Secara Politis-Psikologis:</strong> Kaum munafik Madinah (terutama Abdullah bin Ubay bin Salul) memendam rasa dengki dan penolakan personal yang luar biasa terhadap kerasulan Muhammad ﷺ yang telah merebut singgasana kepemimpinan Yatsrib. Lidah mereka terasa amat berat dan enggan untuk melafalkan pengakuan kenabian Nabi Muhammad ﷺ secara tulus, sehingga mereka mencari dalih pengakuan teologis yang lebih abstrak (Allah dan Hari Akhir).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ilmu Ma'ani — Arsitektur Penafian Kategoris Multilapis (وَمَا هُم بِمُؤْمِنِينَ):</strong><br>
+            Al-Qur'an tidak mendiskualifikasi klaim mereka dengan kalimat verbal sederhana seperti: <em>"wa lam yu'minū"</em> (dan mereka belum beriman) atau <em>"wa mā āmanū"</em> (dan mereka tidak beriman). Al-Qur'an merancang kalimat bantahan dengan arsitektur penafian paling kokoh dalam sastra Arab:
+            <ul>
+                <li><strong>Penggunaan Jumlah Ismiyyah:</strong> Menafikan esensi dan eksistensi ketetapan iman pada diri mereka secara permanen (<em>nafyuts-tsubūt wal-istimrār</em>).</li>
+                <li><strong>Penyebutan Isim Fa'il (مُؤْمِنِينَ):</strong> Menafikan bahwa mereka memiliki sifat atau karakter dasar orang beriman.</li>
+                <li><strong>Penyertaan Huruf Ba' Za'idah (بِمُؤْمِنِينَ):</strong> Huruf <em>bā' zā'idah</em> berfungsi untuk <em>ta'kīd an-nafy</em> (mempertegas penafian hingga ke derajat mutlak). Maknanya: <em>"Sama sekali, sedikit pun, dalam bentuk apa pun, mereka bukanlah orang-orang beriman!"</em> Langit memvonis kebohongan ontologis mereka tanpa sisa kompromi.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ilmu Badi' — Al-Iltifāt al-'Adadī (Dinamika Pergeseran Jumlah Gramatikal):</strong><br>
+            Terjadi transisi memukau: dimulai dari bentuk mufrad pada lafaz <em>man</em> dan fi'il <em>yaqūlu</em> (ia berkata), lalu beralih ke bentuk jamak mutakallim pada <em>āmannā</em> (kami telah beriman), dan ditutup dengan bentuk jamak gha'ib pada <em>wa mā hum bimu'minīn</em> (mereka bukanlah orang beriman). Ini membongkar psikologi kawanan (<em>herd psychology</em>) kaum munafik: secara individu seorang munafik itu pengecut, maka ketika berbicara ia selalu berlindung di balik tameng kelompok kolektif (<em>"Kami orang Madinah telah beriman..."</em>); lalu Allah membongkar kedok seluruh kawanan tersebut secara kolektif (<em>"Mereka itu semua pembohong!"</em>).
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+
+    <h3>Integrasi Metodologi 2S & 1L (Sibāq, Siyāq, Liḥāq)</h3>
+    <ul>
+        <li>
+            <strong>Sibāq (Kausalitas Teks Sebelumnya: Simetri Tiga Tipologi Manusia):</strong><br>
+            Surah Al-Baqarah membuka cetak biru peradaban dengan mengklasifikasikan seluruh umat manusia ke dalam tiga tipologi eksistensial:
+            <ol>
+                <li><strong>Kelompok Pertama: Kaum Mukminin / Muttaqin (Ayat 1–5):</strong> Lahir dan batinnya bersatu dalam cahaya keimanan. Dipaparkan dalam 5 ayat penuh sanjungan dan diakhiri dengan mahkota falah.</li>
+                <li><strong>Kelompok Kedua: Kaum Kafir Terang-terangan (Ayat 6–7):</strong> Lahir dan batinnya bersatu dalam kegelapan penolakan. Dipaparkan secara padat hanya dalam 2 ayat, karena posisi mereka jelas, transparan, dan tidak menyamarkan permusuhan.</li>
+                <li><strong>Kelompok Ketiga: Kaum Munafik (Ayat 8–20):</strong> Lahirnya menampakkan iman, namun batinnya menyembunyikan kekufuran. Keberadaan Ayat 8 adalah gerbang pembuka (<em>al-istiftāḥ</em>) bagi pembedahan golongan ketiga ini.</li>
+            </ol>
+        </li>
+        <li>
+            <strong>Siyāq (Poros Tematik: Mengapa Munafik Dibedah 13 Ayat Penuh?):</strong><br>
+            Sebuah pertanyaan fundamental muncul: <em>Mengapa Al-Qur'an hanya mengalokasikan 2 ayat untuk kaum kafir murni, namun mencurahkan 13 ayat panjang lebar (Ayat 8–20) untuk kaum munafik?</em><br>
+            Para ulama tafsir (Al-Biqa'i dalam <em>Nazhm ad-Durar</em> dan Ar-Razi) menjelaskan rahasia agung ini:
+            <ul>
+                <li><strong>Bahaya 'Musuh dalam Selimut' (The Fifth Column):</strong> Musuh yang terang-terangan mudah diantisipasi dan dihadapi secara militer. Namun musuh internal yang shalat di belakang Nabi ﷺ, berpakaian seperti muslim, dan membaur dalam majelis adalah racun laten yang dapat meruntuhkan sendi-sendi peradaban dari dalam.</li>
+                <li><strong>Kerumitan Psikologis & Penyakit Menular:</strong> Kaum kafir tidak membingungkan masyarakat; kekafiran mereka nyata. Tetapi kaum munafik menebarkan kabut syubhat, provokasi terselubung, dan perpecahan sosial. Oleh karena itu, Al-Qur'an membutuhkan 13 ayat dengan dua perumpamaan spektakuler (perumpamaan api di Ayat 17-18 dan perumpamaan badai petir di Ayat 19-20) untuk menguliti topeng psikologis mereka selapis demi selapis.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Liḥāq (Koneksitas Teks Sesudahnya Menuju Ayat 9 & 10):</strong><br>
+            Ayat 8 mendiagnosis klaim palsu mereka (<em>āmannā</em>), yang kemudian langsung dihubungkan oleh Ayat 9 dengan motif kejiwaan mereka: <em>"Yukhādi'ūnallāha wal-ladzīna āmanū..."</em> (Mereka hendak menipu Allah dan orang-orang beriman). Penafian di Ayat 8 menjadi dasar legal-spiritual bagi vonis di Ayat 9 dan penetapan penyakit kronis di hati mereka pada Ayat 10 (<em>Fī qulūbihim maraḍh</em>).
+        </li>
+    </ul>
+
+    <h3>Rekonstruksi Sosio-Historis: Madinah Pasca-Hijrah dan Perang Badar</h3>
+    <p>
+        Fenomena kemunafikan (<em>an-nifāq</em>) adalah produk sosiologis murni periode Madinah; ia sama sekali tidak pernah eksis pada periode Makkah. Di Makkah, umat Islam adalah minoritas tertindas, disiksa, dan diboikot secara ekonomi. Tidak ada satu manusia waras pun di Makkah yang berpura-pura masuk Islam demi mencari keuntungan duniawi, karena memeluk Islam di Makkah berarti siap menanggung risiko penganiayaan dan kemiskinan.<br>
+        Namun peta sosiologis berubah secara radikal ketika Rasulullah ﷺ hijrah ke Yatsrib (Madinah):
+    </p>
+    <ul>
+        <li><strong>Pupusnya Ambisi Monarki Abdullah bin Ubay bin Salul:</strong> Sebelum peristiwa hijrah, dua suku besar Madinah yang saling berperang selama 120 tahun (Aus dan Khazraj) telah sepakat untuk mengakhiri perang saudara dan mengangkat Abdullah bin Ubay bin Salul sebagai Raja Madinah. Butiran mahkota emas permata bahkan sedang dirangkai oleh para pengrajin perhiasan Yatsrib. Kedatangan Nabi Muhammad ﷺ menyatukan Aus dan Khazraj di bawah panji Islam, dan rakyat berbondong-bondong menyerahkan kepemimpinan kepada Rasulullah ﷺ. Impian kekuasaan Ibnu Ubay musnah seketika. Dendam politik dan luka narsistik inilah yang melahirkan faksi munafik di Madinah.</li>
+        <li><strong>Kemenangan Spektakuler Perang Badar (Tahun 2 H) sebagai Titik Balik Taktis:</strong> Awalnya, pasca-hijrah, Ibnu Ubay dan para pengikutnya masih berani menampakkan ketidaksenangan secara terbuka. Namun ketika 313 pasukan muslim berhasil meluluhlantakkan pasukan elit Quraisy Makkah dalam Perang Badar pada bulan Ramadhan tahun 2 H, otoritas Islam di Madinah menjadi hegemoni politik dan militer yang tak tertandingi (<em>shārat li-ahlil-Islāmi syawkah</em>). Melihat kenyataan ini, Abdullah bin Ubay berkata kepada para pendukungnya: <em>"Hādzā amrun qad tawajjaha"</em> (Urusan orang ini [Nabi Muhammad] telah menang dan berakar kuat, tidak ada jalan lain bagi kita). Maka mereka menyusun siasat baru: <strong>berpura-pura masuk Islam secara formal demi mempertahankan status sosial, mengamankan aset kekayaan, dan menghancurkan Islam dari dalam melalui spionase serta konspirasi bersama kaum Yahudi Madinah</strong>.</li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab (6 Ulama Besar)</h2>
+
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarir At-Tabari (w. 310 H) — <em>Jāmi' al-Bayān 'an Ta'wīl Āyil-Qur'ān</em> (Tafsir bil-Ma'tsur & Filologi Salaf):</strong><br>
+        At-Tabari menjelaskan bahwa Allah SWT membuka babak penjelasan tentang kaum munafik dengan membongkar kontradiksi antara lisan dan hati mereka. Beliau menegaskan: <em>"Innamā qāla jalla tsanā'uhu: 'Wa mā hum bimu'minīn', li-annahum kānū yuzhhirūna bi-alsinatihimu at-tashdīqa billāhi wa birasūlihi wa bi-mā jā'a bihi min 'indillāhi, wa yusirrūna ghaira dzālik"</em> (Sesungguhnya Allah Yang Maha Mulia berfirman: 'Dan sekali-kali mereka bukanlah orang-orang beriman', karena mereka menampakkan dengan lisan mereka pembenaran kepada Allah, Rasul-Nya, dan apa yang dibawanya, namun mereka merahasiakan kekufuran yang bertolak belakang di dalam dada mereka). At-Tabari men-tarjih bahwa ayat ini diturunkan untuk mendidik komunitas mukminin agar tidak mudah terpesona oleh kefasihan retorika lahiriah sebelum menguji rekam jejak loyalitas dan ketulusan amal seseorang.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Ibnu Katsir (w. 774 H) — <em>Tafsīr al-Qur'ān al-'Aẓīm</em> (Integrasi Riwayat Sahih & Genealogi Nifaq):</strong><br>
+        Ibnu Katsir memberikan penjelasan historis-teologis yang sangat tajam: <em>"An-Nifāqu huwa izhhārul-khairi wa biṭhānusy-syarr"</em> (Kemunafikan adalah menampakkan kebaikan lahiriah dan menyembunyikan kejahatan batiniah). Beliau membedakan secara tegas antara nifaq i'tiqadi (kemunafikan keyakinan akidah yang mengeluarkan pelakunya dari Islam dan mengekalkannya di kerak terbawah neraka) dan nifaq 'amali (kemunafikan perilaku yang merupakan dosa besar namun tidak membatalkan keislaman). Ibnu Katsir menyoroti hikmah ilahi mengapa kelompok munafik ini diposisikan tepat setelah kaum kafir murni: agar umat waspada bahwa musuh domestik yang memakai jubah keagamaan jauh lebih berbahaya bagi keutuhan jamaah daripada musuh asing yang terang-terangan menabuh genderang perang.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Al-Qurthubi (w. 671 H) — <em>Al-Jāmi' li-Aḥkām al-Qur'ān</em> (Dimensi Fiqih Siyasah & Status Hukum):</strong><br>
+        Al-Qurthubi mengupas status hukum fiqih kaum munafik di dunia dan di akhirat. Secara fiqih duniawi, Nabi Muhammad ﷺ memperlakukan mereka berdasarkan kaidah agung: <em>"Nahnu naḥkumu bizh-zhawāhir wallāhu yatawallās-sarā'ir"</em> (Kita menghukumi berdasarkan apa yang tampak di permukaan, dan Allah-lah yang mengadili apa yang tersembunyi di dalam rahasia hati). Oleh karena itu, darah dan harta mereka terjaga, pernikahan mereka sah secara syariat, dan mereka berhak mendapat warisan dari kerabat muslimnya. Mengapa Rasulullah ﷺ tidak menghukum mati mereka padahal wahyu telah memberitahukan kepalsuan mereka? Al-Qurthubi mengutip sabda Nabi ﷺ: <em>"Lā yataḥaddatsun-nāsu anna Muḥammadan yaqtulu ash-ḥābah"</em> (Agar opini publik dunia tidak menuduh bahwa Muhammad membunuhi sahabat-sahabatnya sendiri). Ini adalah puncak kecerdasan diplomasi dan strategi siyasah syar'iyyah kenabian. Namun di akhirat, vonis Allah adalah mutlak: <em>"Innal-munāfiqīna fid-darkil-asfali minan-nār"</em> (QS. An-Nisa: 145).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Az-Zamakhsyari (w. 538 H) & Fakhruddin Ar-Razi (w. 606 H) — <em>Al-Kasysyāf</em> & <em>Mafātīḥul-Ghayb</em> (Rasionalitas Teologis & Sastra Balaghah):</strong><br>
+        Az-Zamakhsyari membedah keindahan sastra ba' za'idah pada <em>bimu'minīn</em> yang membatalkan pengakuan <em>āmannā</em> mereka sampai ke akar terdalam. Sementara itu, Fakhruddin Ar-Razi mengulas paradoks kognitif: Apakah ucapan orang munafik <em>"Āmannā billāhi"</em> itu dusta secara esensial atau dusta secara relasional? Ar-Razi memaparkan bahwa jika dilihat dari substansi kalimatnya sendiri ("Allah itu ada dan Hari Akhir itu nyata"), kalimat itu sendiri adalah kebenaran objektif (<em>haqq</em>). Namun ketika kalimat tersebut diucapkan oleh seorang munafik yang hatinya mendustakan, maka kalimat itu menjadi <strong>kedustaan mutlak dari sudut pandang pembicara (al-kadzibu fil-khabar an-nisbī)</strong>. Di sinilah terbukti bahwa iman dalam Islam bukanlah sekadar formulasi kata-kata (<em>bukan verbalisme kosong</em>), melainkan keterpaduan mutlak antara pembenaran hati (<em>tashdīq</em>), ucapan lisan (<em>iqrār</em>), dan pembuktian anggota badan (<em>'amal</em>).
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Prof. Dr. M. Quraish Shihab — <em>Tafsir Al-Mishbah</em> (Kajian Sosio-Psikologis & Konteks Keindonesiaan):</strong><br>
+        Quraish Shihab menggarisbawahi pemilihan kata <em>An-Nās</em> yang bersifat generik: bahwa potensi kemunafikan adalah penyakit universal yang dapat menjangkiti siapa saja di sepanjang sejarah manusia. Munafik adalah sosok "bunglon sosial" yang tidak memiliki keteguhan moral; di hadapan orang shalih ia berpura-pura shalih demi mendapat kehormatan atau proyek, namun di belakang ia berkhianat. Quraish Shihab mengingatkan bahaya formalisme agama di era modern: ketika agama hanya dipahami sebatas simbol, baju gamis, peci, atau slogan politik tanpa diiringi transformasi karakter dan integritas moral, maka saat itulah masyarakat modern sedang mereproduksi benih-benih kemunafikan yang disindir secara keras oleh Ayat 8 ini.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka — <em>Tafsir Al-Azhar</em> (Eksistensialisme Pejuang & Kehinaan Karakter Bunglon):</strong><br>
+        Dengan gaya sastra yang menggugah jiwa, Buya Hamka menulis: <em>"Alangkah sengsaranya hidup orang yang berwajah dua! Di hadapan Nabi dan orang beriman ia mengaku seiman, tersenyum manis dan bersumpah setia; tetapi bila telah berhadapan dengan kawan-kawan gelapnya, ia memuntahkan kebenciannya. Jiwa orang munafik adalah jiwa yang selalu tersiksa oleh rasa takut dan curiga. Ia takut rahasianya terbongkar, ia cemas kalau kedoknya tersingkap."</em> Hamka merefleksikan ayat ini pada masa revolusi kemerdekaan Indonesia: banyak orang yang mengaku pejuang di siang hari, namun menjadi mata-mata penjajah di malam hari demi uang dan kedudukan. Hamka menegaskan bahwa tidak ada musuh yang lebih berbahaya bagi kemerdekaan bangsa dan keagungan agama selain kaum munafik yang menjual kehormatan diri demi serpihan materi dunia.
+    </div>
+
+    <h3>Tabel Matriks Komparasi & Sintesis Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Penafsiran</th>
+                <th>Titik Temu Kesepakatan (Ijma')</th>
+                <th>Nuansa & Ragaman Pandangan Mufassirin (Ikhtilaf / Pengayaan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hakikat & Definisi Nifaq</strong></td>
+                <td>Seluruh ulama sepakat bahwa nifaq adalah diskoneksi total antara apa yang ditampakkan di lisan dengan apa yang disembunyikan di dalam hati.</td>
+                <td>• <strong>Ibnu Katsir & Al-Qurthubi:</strong> Membagi nifaq menjadi dua level: <em>I'tiqādī</em> (keluar dari Islam) dan <em>'Amalī</em> (dosa besar kemunafikan perilaku).<br>• <strong>Ar-Razi:</strong> Menyoroti dari aspek epistemologi kebohongan kognitif (kontradiksi antara keyakinan mental dan emisi ujaran).</td>
+            </tr>
+            <tr>
+                <td><strong>Status Hukum Fiqih Duniawi</strong></td>
+                <td>Sepakat diperlakukan sebagai muslim secara lahiriah dalam urusan darah, harta warisan, dan perkawinan demi maslahat sosial umat.</td>
+                <td>• <strong>Al-Qurthubi:</strong> Menekankan aspek <em>Siyasah Syar'iyyah</em> (menjaga stabilitas internal negara dari isu pembersihan etnis/sahabat).<br>• <strong>At-Tabari:</strong> Menekankan bahwa perlakuan lahiriah ini adalah ujian bagi orang beriman agar tetap berpegang pada syariat formal tanpa menghakimi isi dada manusia.</td>
+            </tr>
+            <tr>
+                <td><strong>Relevansi Eksistensial Modern</strong></td>
+                <td>Sepakat bahwa ayat ini bukan sekadar catatan fosil sejarah Madinah abad ke-7, melainkan peringatan abadi bagi seluruh generasi.</td>
+                <td>• <strong>Quraish Shihab:</strong> Mendiagnosis bahaya formalisme dan hipokrisi religius dalam panggung politik kontemporer.<br>• <strong>Buya Hamka:</strong> Mengaitkannya dengan mentalitas oportunisme, penjilatan kekuasaan, dan pengkhianatan dalam dinamika perjuangan bangsa.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik, Neuropsikologi & Arsitektur Jiwa)</h2>
+
+    <h3>1. Perombakan Paradigma Berpikir: Old Mindset vs Quranic Mindset</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Oportunis / Nifaq (Split-Self Paradigm)</th>
+                <th>Pola Pikir Qur'ani Ayat 8 (Radical Integrity / Ikhlash Paradigm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Integritas Pribadi</strong></td>
+                <td>Kepribadian ganda (<em>fragmented identity</em>); memisahkan antara citra publik (<em>public persona</em>) dengan realitas privat (<em>private reality</em>) demi keuntungan sosial.</td>
+                <td>Integritas radikal (<em>aṣ-ṣidq</em>); apa yang ada di dalam dada identik sempurna dengan apa yang diucapkan di bibir dan dilakukan oleh raga, baik saat sendiri maupun di tengah keramaian.</td>
+            </tr>
+            <tr>
+                <td><strong>Motivasi Utama Pengakuan Iman</strong></td>
+                <td>Transaksional dan pragmatis; mengaku beriman untuk mendapatkan proteksi hukum, akses pasar, jaringan bisnis, status sosial, dan rasa aman semu.</td>
+                <td>Transendental dan eksistensial; beriman semata-mata karena tunduk pada kebenaran objektif wahyu dan mengharap ridha Allah tanpa pamrih duniawi.</td>
+            </tr>
+            <tr>
+                <td><strong>Validasi Kebenaran</strong></td>
+                <td>Terpaku pada tepuk tangan manusia dan opini publik; menganggap kesuksesan adalah kelihaian menyembunyikan kebusukan di balik topeng kesalehan.</td>
+                <td>Sadar mutlak akan <em>Muraqabatullah</em>; yakin bahwa Allah Maha Mengetahui rahasia terhalus di dalam dada, dan seluruh topeng akan dilucuti pada Hari Perhitungan.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Sistemik Mental Model: Model Kepribadian Terbelah & Jerat Disonansi (The Split-Brain Deception Model)</h3>
+    <p>
+        Ayat 8 memetakan sebuah model mental sistemik tentang bagaimana kebohongan moral merusak arsitektur internal manusia:
+    </p>
+    <ul>
+        <li><strong>Dual-Track Reality Maintenance (Pemeliharaan Dua Realitas):</strong> Seorang munafik terpaksa mengoperasikan dua sistem komputasi mental secara simultan: <em>Track A</em> (narasi kebohongan publik yang harus dipoles agar tampak meyakinkan) dan <em>Track B</em> (realitas rahasia batin yang sebenarnya penuh kebencian dan keraguan). Memelihara dua jalur realitas ini membutuhkan energi psikis yang luar biasa masif.</li>
+        <li><strong>The Cognitive Load of Lying (Beban Kognitif Kebohongan):</strong> Otak manusia secara alami didesain untuk menyelaraskan persepsi dengan ekspresi. Ketika seseorang secara sadar berbohong (<em>"May yaqūlu āmannā... wa mā hum bimu'minīn"</em>), sistem sarafnya mengalami ketegangan konstan. Ia harus selalu mengingat kepada siapa ia berbohong, menyelaraskan ekspresi wajah, dan waspada terhadap kebocoran informasi tak disengaja (<em>Freudian slip</em>).</li>
+        <li><strong>Paranoia Kronis sebagai Umpan Balik Negatif (Negative Feedback Loop):</strong> Akibat keterbelahan ini, sang munafik hidup dalam teror kecemasan permanen: <em>"Bagaimana jika orang lain mengetahui isi hatiku yang sebenarnya?"</em> Ketakutan ini diabadikan di Ayat 10 sebagai <em>"fī qulūbihim maraḍh"</em> (penyakit hati yang kian membesar) dan di Surah Al-Munafiqun: 4: <em>"Yahsabūna kulla shaiḥatin 'alaihim"</em> (Mereka mengira setiap teriakan ditujukan untuk membongkar kedok mereka).</li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa: Psychological Masking & Biologi Kepalsuan</h3>
+    <p>
+        Penelitian neurosains kontemporer tentang penipuan moral (<em>moral deception</em>) memberikan konfirmasi empiris yang menakjubkan terhadap diagnosa Al-Qur'an:
+    </p>
+    <ul>
+        <li><strong>Aktivasi Berlebihan pada Dorsolateral Prefrontal Cortex (DLPFC):</strong> Ketika seseorang mengucapkan kebenaran yang diyakini hatinya, otak bekerja secara efisien dengan konsumsi glukosa minimal. Namun ketika seseorang melakukan <em>psychological masking</em> (berpura-pura beriman padahal menolak), DLPFC dan <em>Anterior Cingulate Cortex</em> (ACC) terpaksa bekerja keras untuk menekan respons kebenaran alami (<em>inhibition of truth</em>) dan memfabrikasi respon kepalsuan. Ini memicu stres oksidatif saraf dan kelelahan mental kronis.</li>
+        <li><strong>Reverse Impostor Syndrome (Sindrom Penipu Terbalik):</strong> Berbeda dengan <em>Impostor Syndrome</em> klasik di mana orang berbakat merasa dirinya penipu, kaum munafik mengalami kebalikannya: mereka adalah penipu moral sejati yang berusaha meyakinkan diri sendiri bahwa mereka adalah pihak yang paling cerdas, paling rasional, dan paling progresif di Madinah. Penyangkalan diri (<em>self-deception</em>) ini mematikan kompas moral nurani hingga mereka tidak mampu lagi membedakan mana kebenaran dan mana ilusi kepalsuan mereka sendiri.</li>
+    </ul>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer & Kritik Peradaban)</h2>
+
+    <h3>1. Diagnosis Problematika Abad ke-21: Epidemi "Virtue Signalling" & Moral Posturing</h3>
+    <p>
+        Di abad ke-21, di tengah ledakan media sosial (Instagram, X/Twitter, TikTok, LinkedIn), ayat 8 termanifestasi secara telanjang dalam fenomena yang oleh para sosiolog disebut sebagai <strong>Virtue Signalling</strong> dan <strong>Moral Posturing</strong>. Jutaan manusia modern memproduksi kata-kata bijak, mengunggah potongan ayat suci, mengibarkan tagar kepedulian kemanusiaan, atau menampilkan simbol-simbol kesalehan digital semata-mata demi memanen <em>likes, retweets, engagement</em>, dan validasi sosial:
+    </p>
+    <ul>
+        <li><strong>Jurang antara Persona Digital dan Kenyataan Privat:</strong> Seseorang dapat tampil bagaikan malaikat pembela keadilan di lini masa media sosial, namun dalam kehidupan nyata ia bersikap dingin kepada orang tuanya, kasar kepada pasangannya, dan korup di tempat kerjanya. Ayat 8 mendekonstruksi delusi ini: Allah tidak menilai siapa yang paling fasih merangkai kata di ruang publik (<em>may yaqūlu</em>), melainkan siapa yang integritas hatinya terbukti di hadapan-Nya (<em>wa mā hum bimu'minīn</em>).</li>
+        <li><strong>Agama sebagai Komoditas Branding & Algoritma:</strong> Kesalehan telah terkomodifikasi menjadi alat pemasaran personal branding. Orang rela menyewa gamis termahal dan fotografer profesional saat umrah hanya demi konten estetik, sementara kekhusyukan sujud di hadapan Ka'bah terabaikan. Ini adalah mutasi modern dari penyakit nifaq Madinah: menjadikan ibadah sakral sebagai panggung pameran horizontal kepada manusia.</li>
+    </ul>
+
+    <h3>2. Dekonstruksi Paradigma Sekuler: Hipokrisi Korporat (Greenwashing) & Oportunisme Politik</h3>
+    <p>
+        Penyakit kemunafikan yang digambarkan Ayat 8 bukan hanya menjangkiti individu, melainkan telah melembaga ke dalam sistem ekonomi dan politik global:
+    </p>
+    <ul>
+        <li><strong>Korporatisme & Fenomena "Greenwashing / Woke-washing":</strong> Raksasa korporasi multinasional menghabiskan jutaan dolar untuk kampanye iklan ramah lingkungan, keberlanjutan (<em>sustainability</em>), dan keadilan sosial; namun di balik pintu tertutup mereka tetap membuang limbah beracun ke sungai di negara berkembang, menghindari pajak, dan menindas serikat buruh. Slogan ESG (<em>Environmental, Social, Governance</em>) mereka persis seperti klaim <em>"Āmannā"</em>, sementara operasi faktual mereka adalah perwujudan dari <em>"Wa mā hum bimu'minīn"</em>.</li>
+        <li><strong>Demokrasi Transaksional & Oportunisme Elektoral:</strong> Menjelang pemilihan umum di berbagai belahan dunia muslim, para politisi sekuler yang selama ini anti terhadap syariat tiba-tiba mendadak religius: berziarah ke makam para wali, mengenakan surban, mendatangi pesantren dengan membagi-bagikan sumbangan, dan mengutip dalil Al-Qur'an demi meraup suara umat. Namun begitu kekuasaan diraih, kebijakan yang mereka sahkan justru menindas kaum beriman dan memfasilitasi oligarki. Mereka adalah duplikasi sempurna dari faksi Abdullah bin Ubay bin Salul di era modern.</li>
+    </ul>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (Rencana Aksi Konkret & Muhasabah Eksistensial)</h2>
+
+    <div class="highlight-box">
+        <h3>Tepat 3 Tindakan Nyata (Protokol Aksi Operasional Terukur)</h3>
+        <ol>
+            <li>
+                <strong>Audit Integritas Harian: Sinkronisasi Privat vs Publik (Private vs Public Consistency Audit - 5 Menit):</strong> Setiap malam sebelum tidur, luangkan waktu 5 menit dalam keheningan total untuk melakukan konfrontasi jujur terhadap diri sendiri. Tanyakan pada batin Anda: <em>"Apakah ada kata-kata, nasihat bijak, atau status media sosial yang kubagikan hari ini yang sebenarnya bertolak belakang 180 derajat dengan apa yang kurasakan dan kulakukan saat aku sendirian di kamar?"</em> Jika ada ketidaksinkronan, segera hapus status tersebut, lakukan istighfar taubat nasuha, dan batasi produksi ujaran sampai hati Anda mampu menyamai ucapan tersebut.
+            </li>
+            <li>
+                <strong>Protokol Amal Senyap Tanpa Jejak Jejak Digital (The Silent Good Protocol):</strong> Sebagai vaksin penawar penyakit nifaq, tetapkan minimal satu amal kebaikan setiap pekan yang <strong>wajib dirahasiakan 100% dari siapa pun di muka bumi</strong>: tidak boleh diketahui oleh pasangan hidup, anak, sahabat, apalagi diunggah ke media sosial. Bisa berupa sedekah transfer tanpa nama (hamba Allah), shalat tahajjud di kegelapan malam saat seisi rumah tertidur lelap, atau membersihkan toilet masjid secara diam-diam. Amal rahasia ini adalah benteng pertahanan paling kokoh untuk memastikan bahwa Anda beramal murni demi Allah, bukan demi pandangan manusia.
+            </li>
+            <li>
+                <strong>Protokol Penyelarasan Janji & Kejujuran Radikal (Radical Candor & Commitment Rule):</strong> Hancurkan salah satu pilar utama kemunafikan praktis dengan menerapkan disiplin ketat dalam ucapan: jangan pernah mengobral kata <em>"Insya Allah"</em> sebagai dalih halus untuk menolak secara pasif-agresif atau menutupi kemalasan menepati janji. Jika Anda mampu dan berniat hadir, katakan <em>"Insya Allah saya hadir"</em> dan perjuangkan sekuat tenaga; jika Anda ragu atau tidak bisa, katakan dengan jujur dan sopan: <em>"Maaf, saya tidak bisa berjanji karena ada kendala lain."</em> Kejujuran yang pahit jauh lebih diridhai Allah daripada kesopanan palsu yang berujung pada pengkhianatan janji.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Tepat 3 Pertanyaan Refleksi Batin (Muhasabah Eksistensial Qalbiyyah)</h3>
+        <ol>
+            <li>
+                Jujurkah aku di hadapan Allah yang Menatap hatiku: Jika seluruh fasilitas pengawasan manusia, hukum positif duniawi, rasa takut kehilangan jabatan, dan pencitraan media sosial dicabut total dari hidupku—apakah aku masih akan tetap sujud menyembah Allah, ataukah selama ini aku beragama hanya karena takut pada sanksi sosial sesama manusia?
+            </li>
+            <li>
+                Ketika lisanku begitu lancar mengklaim <em>"Aku beriman kepada Allah dan Hari Akhir"</em>, seberapa seringkah keyakinan akan kedahsyatan Pengadilan Akhirat itu benar-benar menghentikan jemariku dari mengetik fitnah, menahan mataku dari memandang yang haram, dan membatalkan niatku mengambil harta yang syubhat?
+            </li>
+            <li>
+                Apakah aku sedang membangun kepribadian yang utuh di hadapan Sang Pencipta, ataukah tanpa sadar aku telah bermutasi menjadi aktor panggung kehidupan yang mahir berakting shalih di depan manusia namun membiarkan hatiku membusuk dalam keraguan dan kedurhakaan kepada Allah?
+            </li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3>Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>"Allāhumma yā Muqallibal-qulūb, Dzat Yang Membolak-balikkan bejana hati dan Mengetahui setiap detak rahasia yang tersembunyi di kedalaman dada! Kami berlindung kepada-Mu dari kehinaan jurang kemunafikan; selamatkanlah kami dari bencana menjadi manusia yang fasih bertutur kata iman di hadapan sesama namun kafir dan berkhianat di hadapan tatapan-Mu. Allāhumma thahhir qulūbanā minan-nifāq, wa a'mālanā minar-riyā', wa alsinatanā minal-kadzib, wa a'yunanā minal-khiyānah, fa-innaka ta'lamu khā'inatal-a'yuni wa mā tukhfīsh-shudūr. Ya Allah, karuniakanlah kepada kami keimanan yang tulus dan jujur, satukanlah lahiriah kami dengan batiniah kami dalam ketundukan sejati kepada-Mu, dan jangan cabut nyawa kami melainkan dalam keadaan iman yang murni tanpa setitik pun noda kepalsuan. Āmīn yā Rabbal-'ālamīn."</em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="002-007 - QS. Al-Baqarah Ayat 7.html">&larr; Kembali ke Ayat 7</a>
+        <span><strong>QS. Al-Baqarah [2]: 8</strong> (Awal Blok 1 Klaster 3: Patologi Kaum Munafik)</span>
+        <a href="002-009 - QS. Al-Baqarah Ayat 9.html">Lanjut ke Ayat 9 &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>

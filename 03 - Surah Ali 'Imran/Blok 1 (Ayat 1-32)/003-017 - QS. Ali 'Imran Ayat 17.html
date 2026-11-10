@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>003-017 - QS. Ali 'Imran Ayat 17 | Hidup Bersama Al-Qur'an</title>
+<style>
+    :root {
+        --primary-dark: #1a365d;
+        --primary-mid: #2c5282;
+        --primary-accent: #2b6cb0;
+        --gold-accent: #b7791f;
+        --emerald-accent: #2f855a;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-light: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.85;
+        color: var(--text-main);
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 36px 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: var(--bg-card);
+        padding: 55px 65px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border-radius: 12px;
+        border: 1px solid var(--border-light);
+    }
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 14px;
+        margin-bottom: 28px;
+    }
+    .top-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: #ebf8ff;
+        transition: background 0.2s;
+    }
+    .top-nav a:hover { background: #bee3f8; }
+    .badge-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+    }
+    .badge {
+        background: #edf2f7;
+        color: #2d3748;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+    .badge-gold {
+        background: #fefcbf;
+        color: #744210;
+        border: 1px solid #f6e05e;
+    }
+    h1 {
+        font-size: 28px;
+        color: var(--primary-dark);
+        margin: 0 0 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    .transliteration {
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        color: #4a5568;
+        font-size: 16.5px;
+        margin-bottom: 14px;
+        line-height: 1.6;
+    }
+    .thematic-title {
+        font-size: 21px;
+        font-weight: bold;
+        color: var(--primary-accent);
+        text-align: center;
+        margin-bottom: 8px;
+        line-height: 1.45;
+    }
+    .subtitle {
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 18px;
+    }
+    .lens-toc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 36px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .lens-toc a {
+        font-size: 12.5px;
+        color: var(--primary-mid);
+        background: #f1f5f9;
+        padding: 6px 13px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid #cbd5e1;
+    }
+    .lens-toc a:hover {
+        background: var(--primary-accent);
+        color: #ffffff;
+        border-color: var(--primary-accent);
+    }
+    h2 {
+        font-size: 20px;
+        color: var(--primary-mid);
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    h3 {
+        font-size: 16.5px;
+        color: #1e293b;
+        margin-top: 26px;
+        margin-bottom: 12px;
+    }
+    p, li {
+        font-size: 15.5px;
+        color: #2d3748;
+        text-align: justify;
+    }
+    .arabic {
+        font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade New', serif;
+        font-size: 33px;
+        direction: rtl;
+        text-align: center;
+        line-height: 2.2;
+        margin: 25px 0;
+        padding: 26px 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        border-right: 5px solid var(--primary-accent);
+        border-left: 5px solid var(--primary-accent);
+        border-radius: 8px;
+        color: #0f172a;
+    }
+    .translation {
+        background-color: #ebf8ff;
+        border-left: 4px solid #3182ce;
+        padding: 18px 22px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-style: italic;
+        color: #1a365d;
+        border-radius: 0 6px 6px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 22px 0;
+        font-size: 14px;
+    }
+    th, td {
+        border: 1px solid #cbd5e1;
+        padding: 11px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: var(--primary-dark);
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    .tafsir-quote {
+        background-color: #fffaf0;
+        border-left: 4px solid #dd6b20;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .hadith-box {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0284c7;
+        padding: 16px 22px;
+        margin-bottom: 16px;
+        border-radius: 0 6px 6px 0;
+    }
+    .highlight-box {
+        background-color: #f0fff4;
+        border-left: 4px solid #38a169;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .reflection-box {
+        background-color: #faf5ff;
+        border-left: 4px solid #805ad5;
+        padding: 20px 24px;
+        margin: 22px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .doa-box {
+        background: linear-gradient(to right, #fffbeb, #fef3c7);
+        border: 1px solid #fcd34d;
+        border-left: 5px solid #d97706;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 8px;
+    }
+    ol, ul { padding-left: 24px; }
+    li { margin-bottom: 10px; }
+    .footer-nav {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 2px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+    }
+    .footer-nav a {
+        color: var(--primary-accent);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #ebf8ff;
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .container { box-shadow: none; border: none; padding: 20px; max-width: 100%; }
+        .top-nav, .lens-toc, .footer-nav { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-nav">
+        <a href="003-016 - QS. Ali 'Imran Ayat 16.html">&larr; Ayat Sebelumnya (QS. 3:16)</a>
+        <span><strong>Proyek Ensiklopedis:</strong> Hidup Bersama Al-Qur'an (Kerangka 7 Lensa v2.0)</span>
+        <a href="003-018 - QS. Ali 'Imran Ayat 18.html">Ayat Berikutnya (QS. 3:18) &rarr;</a>
+    </div>
+
+    <!-- HEADER DOKUMEN -->
+    <div class="badge-meta">
+        <span class="badge badge-gold">Surah ke-3: Āli 'Imrān (Madaniyah)</span>
+        <span class="badge">Blok 1 (Ayat 1–32): Keteguhan Akidah & Hermeneutika Wahyu</span>
+        <span class="badge">Klaster 2 (Ayat 10–18): Kepalsuan Materialisme Kafir, Kenikmatan Abadi & Karakteristik Al-Muttaqīn</span>
+        <span class="badge">6 Kata | 50 Huruf Rasm</span>
+        <span class="badge">Juz 3</span>
+    </div>
+
+    <h1>Surah Āli 'Imrān [3]: 17</h1>
+    <div class="transliteration">
+        "Aṣh-ṣhābirīna waṣh-ṣhōdiqīna wal-qōnitīna wal-munfiqīna wal-mustaghfirīna bil-as-ḥār(i)."
+    </div>
+    <div class="thematic-title">
+        Arsitektur Paripurna Karakter Al-Muttaqīn: Integrasi Resiliensi Sabar, Integritas Kejujuran, Keheningan Ibadah, Altruisme Sosial, dan Pembebasan 'Ujub Lewat Istighfar di Penghujung Malam
+    </div>
+    <div class="subtitle">
+        Kajian Ensiklopedis Berstandar Gold-Standard v2.0 (Surah Āli 'Imrān: Blok 1 | Klaster 2: Kontras Dialektis Pengejar Syahwat Fana versus Lima Pilar Kepribadian Rabbani Pewaris Surga)
+    </div>
+
+    <div class="lens-toc">
+        <a href="#lensa-1">Lensa 1: Teks & Qira'at</a>
+        <a href="#lensa-2">Lensa 2: Bahasa & Balaghah</a>
+        <a href="#lensa-3">Lensa 3: Konteks (2S & 1L)</a>
+        <a href="#lensa-4">Lensa 4: Tafsir Komparatif</a>
+        <a href="#lensa-5">Lensa 5: Kognisi & Jiwa</a>
+        <a href="#lensa-6">Lensa 6: Realitas Kontemporer</a>
+        <a href="#lensa-7">Lensa 7: Praksis & Muhasabah</a>
+    </div>
+
+    <!-- LENSA 1: TEKS -->
+    <h2 id="lensa-1">Lensa 1: Teks (Nash, Tajwid, Qira'at Sepuluh Imam Mutawatirah & Takhrij)</h2>
+
+    <h3>Teks Wahyu (Rasm Utsmani)</h3>
+    <div class="arabic">
+        ٱلصَّـٰبِرِينَ وَٱلصَّـٰدِقِينَ وَٱلْقَـٰنِتِينَ وَٱلْمُنفِقِينَ وَٱلْمُسْتَغْفِرِينَ بِٱلْأَسْحَارِ ۝١٧
+    </div>
+
+    <h3>Terjemahan Presisi & Catatan Nuansa Makna</h3>
+    <div class="translation">
+        "(Yaitu) orang-orang yang senantiasa bersabar (teguh menghadapi ujian ketaatan, menjauhi larangan maksiat, dan memikul ketetapan takdir), yang senantiasa benar dan jujur (dalam niat batin, ucapan lisan, dan integritas perbuatan), yang senantiasa tunduk taat (dengan penuh ketundukan dan kekhusyukan yang langgeng), yang senantiasa menginfakkan hartanya (di jalan kebajikan secara ikhlas), dan yang senantiasa memohon ampunan (beristighfar merendahkan diri di hadapan Allah) di waktu sahur (sepertiga malam terakhir menjelang terbitnya fajar)."
+    </div>
+    <p>
+        <strong>Catatan Presisi Makna & Fondasi Teologis:</strong> Ayat ini merupakan mata rantai deskriptif yang menyempurnakan profil insan takwa (<em>al-muttaqīn</em>) yang telah diproklamasikan pada Ayat 15 (<em>lil-ladzīnat-taqaw 'inda rabbihim...</em>) dan Ayat 16 (<em>alladzīna yaqūlūna rabbanā innanā āmannā faghfir lanā...</em>). Seluruh kata pembentuk ayat ini dirangkai dalam wujud <em>Ism Fā'il</em> berbentuk jamak mudzakkar salim berkedudukan majrur/manshub (<em>ash-shābirīn, wash-shādiqīn, wal-qānitīn, wal-munfiqīn, wal-mustaghfirīn</em>). Bentuk isim fa'il dalam tata bahasa Arab klasik memberikan faedah <em>ats-tsubūt wal-istimrār</em> (sifat yang telah menghunjam kuat, melekat permanen, dan dipraktikkan secara konsisten seumur hidup), bukan sekadar perbuatan temporer yang timbul tenggelam. Kelima sifat ini memadukan secara harmonis seluruh dimensi eksistensial manusia: penempaan daya tahan batiniah (<em>ash-shabr</em>), integritas moral verbal dan perilaku (<em>ash-shidq</em>), loyalitas vertikal penghambaan ritual (<em>al-qunūt</em>), tanggung jawab horizontal kedermawanan sosial (<em>al-infāq</em>), serta pemungkas spiritual tertinggi yang melucuti segala bentuk narsisme dan kesombongan amal melalui permohonan ampunan di waktu sahur (<em>al-istighfār bil-as-ḥār</em>).
+    </p>
+
+    <h3>Tabel Analisis Lafaz demi Lafaz: Tajwid, Fonetika & Qira'at Sepuluh Imam Mutawatirah</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Lafaz & Rasm</th>
+                <th>Kaidah Tajwid, Makharij & Sifat Huruf</th>
+                <th>Variasi Qira'at Sepuluh Imam Mutawatirah & Implikasi Teologis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>ٱلصَّـٰبِرِينَ</strong><br>(<em>Aṣh-ṣhābirīn</em>)</td>
+                <td>
+                    <strong>Hamzah Washal & Idghām Syamsiyyah:</strong> Jika ibtida', hamzah dibaca fathah; Lam ta'rif melebur sepenuhnya ke dalam huruf Ṣhād.<br>
+                    <strong>Huruf Ṣhād (ص):</strong> Makhraj di ujung lidah bertemu bagian dalam gigi seri bawah (huruf shafīr). Memiliki 5 sifat permanen: <em>hams</em> (aliran nafas), <em>rakhāwah</em> (aliran suara), <em>isti'lā'</em> (pangkal lidah naik ke langit-langit), <em>iṭhbāq</em> (lidah menempel kuat menutupi langit-langit rongga mulut), serta <em>shafīr</em> (desis tajam).<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjariyyah setelah Shād dipanjangkan 2 harakat.<br>
+                    <strong>Tarqīq Huruf Rā':</strong> Huruf Rā' dibaca tipis (tarqīq) karena berharakat kasrah asli.<br>
+                    <strong>Yā' Mad & Nūn:</strong> Mad thabi'i 2 harakat saat washal.
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah sepakat membaca lafaz ini dengan <strong>Yā' Jar/Nashab</strong> (<em>aṣh-ṣhābirīna</em>) berkedudukan sebagai <em>na'at</em> (sifat penjelas) bagi <em>lil-ladzīnat-taqaw</em> pada Ayat 15. Sepuluh imam sepakat pada ketebalan (ithbaq) huruf Shād dan tipisnya (tarqīq) huruf Rā'. Terdapat qira'at syādzah yang membaca marfu' (<em>aṣh-ṣhābirūna</em>) dengan wajh <em>qath'un-na'at 'alal-mad-ḥi</em> (sebagai khabar bagi mubtada' mahdzuf: <em>humush-shābirūn</em>), namun mushaf Utsmani yang mutawatir menetapkan rasm dengan huruf Ya' (<em>aṣh-ṣhābirīna</em>).
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>وَٱلصَّـٰدِقِينَ</strong><br>(<em>Waṣh-ṣhōdiqīn</em>)</td>
+                <td>
+                    <strong>Wāwu 'Aṭhaf:</strong> Dibaca fathah tipis (tarqīq) dan lembut.<br>
+                    <strong>Idghām Syamsiyyah:</strong> Hamzah washal gugur, Lam melebur ke Shād musyaddadah berharakat fathah.<br>
+                    <strong>Huruf Dāl (د):</strong> Makhraj di ujung lidah bertemu pangkal gigi seri atas. Memiliki sifat <em>syiddah</em> (suara tertahan kuat), <em>jahr</em>, dan <em>istifāl</em> (tipis/tarqīq).<br>
+                    <strong>Huruf Qāf (ق):</strong> Makhraj di aqshal lisan (pangkal lidah paling belakang) bertemu langit-langit lunak. Memiliki sifat <em>isti'lā'</em> dan <em>jahr</em>. Karena berharakat kasrah, ketebalannya berada pada martabat paling rendah (<em>adnā darajātul-isti'lā'</em>) namun tetap haram dibaca tipis seperti huruf Kaf.
+                </td>
+                <td>
+                    Seluruh imam qira'at sepuluh mutawatirah sepakat membaca <em>waṣh-ṣhōdiqīna</em> dengan huruf Wawu athaf dan kasrah pada huruf Dal dan Qaf. Hadirnya huruf athaf Wawu menegaskan prinsip balaghah <em>mughāyaratush-shifāt</em>: sifat kejujuran adalah kebajikan luhur tersendiri yang berpadu dengan kesabaran di dalam jiwa mukmin sejati.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>وَٱلْقَـٰنِتِينَ</strong><br>(<em>Wal-qōnitīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas dengan sifat <em>tawassuṭh</em> (aliran suara sedang).<br>
+                    <strong>Huruf Qāf Maftūḥah:</strong> Berada pada derajat ketebalan tertinggi (<em>a'lā darajātul-isti'lā'</em>) karena berharakat fathah disusul huruf Alif mad.<br>
+                    <strong>Mad Ṭhabī'ī:</strong> Alif khanjariyyah dipanjangkan 2 harakat.<br>
+                    <strong>Huruf Nūn & Tā':</strong> Nūn kasrah tarqīq. Huruf Tā' kasrah memiliki makhraj ujung lidah bertemu pangkal gigi seri atas dengan sifat <em>syiddah</em> dan <em>hams</em> (hembusan nafas halus yang terlepas setelah suara tertahan).
+                </td>
+                <td>
+                    Seluruh sepuluh imam mutawatirah membaca dengan wazan isim fa'il wazan <em>fā'ilīn</em> (<em>al-qānitīna</em>). Menandakan ketaatan, kepatuhan, ketundukan, dan kekhusyukan ibadah yang berlangsung lama dan tidak terputus. Konsensus tanpa ada ikhtilaf bacaan di antara jalur syathibiyyah maupun thayyibatun nasyr.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>وَٱلْمُنفِقِينَ</strong><br>(<em>Wal-munfiqīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif diucapkan terang dan jelas.<br>
+                    <strong>Huruf Mīm:</strong> Dhammah tarqīq keluar dari pertemuan dua bibir (syafawī).<br>
+                    <strong>Ikhfā' Ḥaqīqī:</strong> Nūn sukun bertemu huruf Fā' (ف). Makhraj ikhfā' berada pada bibir bawah bagian dalam yang menyentuh ujung dua gigi seri atas, disertai <em>ghunnah muraqqaqah</em> (dengung tipis) sepanjang 2 harakat melalui rongga hidung (<em>khaisyūm</em>).<br>
+                    <strong>Huruf Fā' & Qāf:</strong> Kasrah pada Fā' dan Qāf dibaca presisi tanpa memanjangkan vokal sebelum Ya' mad.
+                </td>
+                <td>
+                    Seluruh imam mutawatirah sepakat membaca wazan <em>muf'ilīn</em> dari fi'il rubā'ī <em>anfaqa - yunfiqu - munfiq</em> (<em>wal-munfiqīna</em>). Wazan ini menegaskan pengeluaran harta secara sengaja, terencana, dan berulang kali demi meraih ridha Allah semata.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>وَٱلْمُسْتَغْفِرِينَ</strong><br>(<em>Wal-mustaghfirīn</em>)</td>
+                <td>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif jelas.<br>
+                    <strong>Huruf Sīn (س):</strong> Sukun dengan kesempurnaan sifat <em>hams</em>, <em>rakhāwah</em>, dan <em>shafīr</em> (desis bersih).<br>
+                    <strong>Huruf Tā' (ت):</strong> Maftuhah tipis dengan hams terkendali.<br>
+                    <strong>Huruf Ghayn (غ):</strong> Berada di adnal halq (tenggorokan atas dekat anak tekak), sukun dengan sifat <em>isti'lā'</em> (tebal) dan <em>rakhāwah</em> (aliran suara mengalir lembut tanpa sentakan qalqalah).<br>
+                    <strong>Huruf Fā' & Rā':</strong> Fā' kasrah; Huruf Rā' kasrah dibaca <em>tarqīq</em> murni karena berharakat kasrah.
+                </td>
+                <td>
+                    Sepuluh imam mutawatirah sepakat membaca dengan wazan <em>mustaf'ilīn</em> dari fi'il sudāsī <em>istaghfara - yastaghfiru</em>. Wazan <em>istif'āl</em> secara morfologis bermakna <em>aṭh-ṭhalab</em> (pencarian, permohonan, dan penuntutan yang dilakukan secara amat bersungguh-sungguh dan berulang-ulang dari lubuk hati terdalam).
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>بِٱلْأَسْحَارِ ۝١٧</strong><br>(<em>Bil-as-ḥār</em>)</td>
+                <td>
+                    <strong>Bā' Harf Jarr & Hamzah Washal:</strong> Bā' kasrah menyambung langsung ke Lam ta'rif; hamzah washal gugur.<br>
+                    <strong>Idzhār Qamariyyah:</strong> Lam ta'rif dibaca jelas.<br>
+                    <strong>Hamzah Qathā' Maftūḥah:</strong> Tahqīq tajam dari aqshal halq.<br>
+                    <strong>Huruf Sīn (س):</strong> Sukun dengan hams dan shafīr.<br>
+                    <strong>Huruf Ḥā' (ح):</strong> Keluar dari wasathul halq (tengah tenggorokan) dengan sifat hams dan rakhāwah yang bersih dan dalam.<br>
+                    <strong>Mad 'Āriḍh lis-Sukūn:</strong> Pada saat waqaf di ujung ayat, huruf Alif mad bertemu Rā' sukun 'āridh dibaca 2, 4, atau 6 harakat.<br>
+                    <strong>Tafkhīm / Tarqīq Huruf Rā' Waqfan:</strong> Saat waqaf, huruf Rā' disukunkan. Menurut mayoritas ulama tajwid, Rā' dibaca <em>tafkhīm</em> (tebal) karena didahului oleh Alif maddiyyah maftūḥ mā qablahā; namun jika dibaca washal ke Ayat 18, Rā' dibaca <em>tarqīq</em> karena berharakat kasrah (<em>bil-as-ḥāri syahidallāh</em>).
+                </td>
+                <td>
+                    • <strong>Warsy 'an Nāfi':</strong> Membaca dengan kaidah <strong>Naql</strong> (memindahkan harakat fathah hamzah qatha' ke huruf Lam ta'rif sukun sebelumnya seraya menggugurkan hamzah): dibaca <em>bilas-ḥār</em>.<br>
+                    • <strong>Ḥamzah:</strong> Memiliki riwayat <strong>Saktah Laṭhīfah</strong> pada huruf Lam sebelum hamzah saat washal (<em>bil-as-ḥār</em>) serta wajah <em>naql</em>, <em>tahqīq</em>, dan <em>saktah</em> saat waqaf.<br>
+                    • <strong>Abū 'Amr, Ad-Dūrī, dan Al-Kisā'ī:</strong> Membaca dengan <strong>Taqīl / Imālah Shughrā</strong> pada huruf Alif sebelum huruf Rā' makshūrah mutatharrifah (suara condong antara fathah ke kasrah).<br>
+                    • <strong>Jumhur Imam (termasuk Ḥafsh 'an 'Āṣhim):</strong> Membaca dengan <strong>Tahqīq</strong> pada hamzah dan <strong>Fat-ḥah Muḥaqqaqah</strong> murni (tanpa imalah) pada huruf Alif.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Takhrij Asbabun Nuzul & Hadits Sahih Penjelas</h3>
+    <div class="hadith-box">
+        <strong>1. Hadits Sahih Muttafaqun 'Alaih — HR. Al-Bukhārī (No. 1145) & Muslim (No. 758) dari Sahabat Abū Hurairah r.a. — Nuzūl Ilāhī di Waktu Sahur Menjawab Istighfar Hamba:</strong><br>
+        Rasulullah ﷺ bersabda:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 21px; display: block; margin: 10px 0; direction: rtl; text-align: right; line-height: 1.8;">
+        "يَنْزِلُ رَبُّنَا تَبَارَكَ وَتَعَالَى كُلَّ لَيْلَةٍ إِلَى السَّمَاءِ الدُّنْيَا حِينَ يَبْقَى ثُلُثُ اللَّيْلِ الآخِرُ، يَقُولُ: مَنْ يَدْعُونِي فَأَسْتَجِيبَ لَهُ، مَنْ يَسْأَلُنِي فَأُعْطِيَهُ، مَنْ يَسْتَغْفِرُنِي فَأَغْفِرَ لَهُ!"
+        </span>
+        <em>"Tuhan kita Yang Maha Memberkahi dan Maha Tinggi turun setiap malam ke langit dunia ketika tersisa sepertiga malam terakhir, seraya berfirman: 'Siapa yang memanjatkan doa kepada-Ku niscaya Aku kabulkan doanya, siapa yang memohon sesuatu kepada-Ku niscaya Aku berikan permohonannya, dan siapa yang memohon ampunan kepada-Ku niscaya Aku ampuni dosa-dosanya!'"</em><br>
+        <strong>Derajat Sanad:</strong> Sahih Muttafaqun 'Alaih. Hadits ini adalah penjelas otoritatif paling agung bagi lafaz <em>wal-mustaghfirīna bil-as-ḥār</em>: Allah secara khusus membuka pintu ijabah dan curahan maghfirah seluas-luasnya pada waktu sahur bagi hamba-hamba-Nya yang bersujud merendahkan diri.
+    </div>
+
+    <div class="hadith-box">
+        <strong>2. Atsar Sahih Sahabat Abdullah bin 'Umar r.a. — HR. Ibnu Jarīr Aṭh-Ṭhabarī dalam Jāmi' al-Bayān (No. 6636) & Ibnu Abī Ḥātim melalui Nāfi' Mawlā Ibni 'Umar:</strong><br>
+        Diriwayatkan dari Nafi' rahimahullah, ia menuturkan amaliah malam Ibnu Umar radhiyallahu 'anhuma:<br>
+        <span style="font-family: 'Amiri', serif; font-size: 20px; display: block; margin: 8px 0; direction: rtl; text-align: right; line-height: 1.8;">
+        "أَنَّ ابْنَ عُمَرَ كَانَ يُحْيِي اللَّيْلَ صَلَاةً، ثُمَّ يَقُولُ: «يَا نَافِعُ، أَسْحَرْنَا؟» فَيَقُولُ: «لَا»، فَيُعَاوِدُ الصَّلَاةَ، فَإِذَا قَالَ: «نَعَمْ»، قَعَدَ يَسْتَغْفِرُ اللهَ وَيَدْعُو حَتَّى يُصْبِحَ."
+        </span>
+        <em>"Bahwasanya Abdullah bin Umar r.a. senantiasa menghidupkan malam dengan shalat tahajjud. Kemudian beliau bertanya: 'Wahai Nafi', apakah kita telah memasuki waktu sahur?' Jika Nafi' menjawab: 'Belum', beliau kembali melanjutkan shalatnya. Dan apabila Nafi' menjawab: 'Ya, waktu sahur telah tiba', maka Ibnu Umar duduk bersimpuh memanjatkan istighfar dan berdoa kepada Allah hingga terbit fajar."</em><br>
+        <strong>Status Sanad:</strong> Sahih menurut para imam ahli hadits. Atsar ini membuktikan secara empiris bagaimana generasi sahabat Nabi membagi malam: menghidupkan malam dengan shalat (<em>al-qunūt</em>) dan menutupnya dengan istighfar khusyuk di waktu sahur (<em>al-istighfār bil-as-ḥār</em>).
+    </div>
+
+    <div class="hadith-box">
+        <strong>3. Asbabun Nuzul Makro & Korelasi Sosio-Spiritual:</strong><br>
+        Para mufasir salaf dan khalaf (At-Tabari, Al-Wahidi, As-Suyuthi) menegaskan bahwa Ayat 15, 16, dan 17 turun sebagai satu kesatuan khithab pasca-peringatan keras pada Ayat 14 mengenai fitnah syahwat materiil duniawi (wanita, anak keturunan, timbunan emas perak, kuda pacuan, hewan ternak, dan sawah ladang). Ketika kaum mukminin di Madinah mulai menghadapi limpahan harta rampasan perang dan godaan duniawi yang berpotensi melunturkan kemurnian tauhid mereka, Allah menurunkan rangkaian ayat ini untuk menetapkan <strong>Puncak Profil Manusia Rabbani</strong>: surga abadi hanya diperuntukkan bagi mereka yang mampu menundukkan tarikan syahwat tersebut dengan perisai kesabaran, kejujuran, ketundukan ritual, kedermawanan harta, dan kerendahan hati batiniah di keheningan waktu sahur.
+    </div>
+
+    <!-- LENSA 2: BAHASA -->
+    <h2 id="lensa-2">Lensa 2: Bahasa (Etimologi, Semantik, Morfosintaksis & Balaghah)</h2>
+
+    <h3>Analisis Etimologi & Medan Semantik Akar Kata</h3>
+    <ul>
+        <li><strong>1. Sh-B-R (ص-ب-ر — Aṣh-Ṣhābirīn):</strong>
+            Ibnu Fāris dalam <em>Mu'jam Maqāyīs al-Lughah</em> merumuskan poros tunggal akar Shād-Bā'-Rā' pada makna: <strong>Al-Ḥabsu wal-Kaffu fī Dhyīq (الْحَبْسُ وَالْكَفُّ - menahan, membelenggu, dan mengekang sesuatu dari kebebasan meluap)</strong>. Batu yang padat dan keras tak tergoyahkan disebut <em>ṣhubrah</em>. Secara semantik Al-Qur'an, <em>ash-shabr</em> bukanlah kepasrahan pasif (fatalisme), melainkan ketahanan aktif jiwa dalam tiga gelanggang:
+            <br>• <em>Ash-Shabru 'alā thā'atillāh:</em> Menahan diri agar konsisten mendirikan ketaatan meski fisik terasa berat dan lelah.
+            <br>• <em>Ash-Shabru 'an ma'shiyatillāh:</em> Menahan hawa nafsu dari melanggar larangan Allah meski dorongan biologis dan sosial begitu kuat.
+            <br>• <em>Ash-Shabru 'alā aqdārillāhil-mu'limah:</em> Menahan lisan dan batin dari berkeluh kesah saat ditimpa musibah dan ketetapan takdir yang pahit.
+        </li>
+        <li><strong>2. Sh-D-Q (ص-د-ق — Aṣh-Ṣhōdiqīn):</strong>
+            Ibnu Fāris menegaskan porosnya pada <strong>Al-Quwwah fisy-Syay' qawlan aw ghayrah wa Kamāluh (الْقُوَّةُ فِي الشَّيْءِ - kekuatan, kekokohan, dan kesempurnaan pada sesuatu, lawan dari kelemahan dan kedustaan)</strong>. Tombak yang lurus, padat, dan tidak melengkung disebut <em>rumḥun ṣhadqun</em>. Shidq menuntut keselarasan tiga dimensi: kejujuran niat dalam kalbu, kejujuran lisan dalam perkataan, dan pembuktian nyata melalui amal perbuatan tanpa ada kepalsuan (hipokrisi).
+        </li>
+        <li><strong>3. Q-N-T (ق-ن-ت — Al-Qōnitīn):</strong>
+            Ibnu Manzhūr dalam <em>Lisān al-'Arab</em> dan Ibnu Fāris mencatat porosnya adalah <strong>Aṭh-Ṭhā'ah ma'as-Sukūn wal-Khusyū' wal-Iqrār bil-'Ubūdiyyah (طاعة مع سكوت وخضوع - ketaatan sukarela yang diselimuti ketenangan, keheningan, dan ketundukan mutlak)</strong>. Sikap diam khusyuk mendengarkan perintah Ilahi dan berdiri lama dalam shalat tanpa menoleh disebut <em>qunūt</em> (sebagaimana QS. Al-Baqarah: 238: <em>wa qūmū lillāhi qānitīn</em>).
+        </li>
+        <li><strong>4. N-F-Q (ن-ف-ق — Al-Munfiqīn):</strong>
+            Ibnu Fāris merumuskan porosnya pada <strong>Inqidhyā'usy-Syay' wa Khurūjuh (خروج الشيء وانقضاؤه - keluarnya sesuatu, berlalunya, atau terowongan yang tembus dua arah)</strong>. Dinamakan <em>nafaq</em> karena ia adalah liang bawah tanah yang menembus dari satu sisi ke sisi lain. Pengeluaran harta disebut <em>infāq</em> karena seorang mukmin mengalirkan hartanya menembus benteng kerakusan ego pribadi menuju kemaslahatan umat, menjaganya agar tidak mandek (<em>stagnant</em>) di pundi-pundi penimbunan.
+        </li>
+        <li><strong>5. Gh-F-R (غ-ف-ر — Al-Mustaghfirīn):</strong>
+            Ibnu Fāris mencatat poros maknanya adalah <strong>As-Satru wal-Wiqāyah (السَّتْرُ وَالتَّغْطِيَةُ - menutupi, membalut, dan melindungi)</strong>. Baju besi pelindung kepala prajurit dari tebasan pedang disebut <em>mighfar</em>. Wazan <em>istaf'ala</em> (<em>istaghfara</em>) bermakna <em>ṭhalabul-maghfirah</em>: permohonan aktif seorang hamba agar Allah menutupi aib-aib dosanya dari pandangan makhluk sekaligus membentenginya dari siksa dan konsekuensi buruk dosa tersebut.
+        </li>
+        <li><strong>6. S-Ḥ-R (س-ح-ر — Al-As-ḥār):</strong>
+            Ibnu Fāris merumuskan porosnya pada <strong>Khafā'usy-Syay' wa Diqqatuh (خفاء الشيء - sesuatu yang tersembunyi, halus, dan remang-remang karena percampuran dua kondisi)</strong>. Jamak dari kata <em>saḥar</em>, yaitu rentang waktu di ujung malam tatkala kepekatan malam mulai bercampur samar dengan semburat putih fajar. Waktu ini dinamai sahar karena suasana alam hening tanpa kepalsuan, pandangan kasat mata masih remang-remang, dan doa dipanjatkan dalam kesunyian rahasia antara hamba dengan Khaliknya.
+        </li>
+    </ul>
+
+    <h3>Struktur Morfosintaksis & I'rab Komprehensif</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Lafaz Al-Qur'an</th>
+                <th>Analisis Morfologi (Sharaf)</th>
+                <th>Kedudukan Sintaksis (I'rab) & Mahallul-Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>ٱلصَّـٰبِرِينَ</strong></td>
+                <td>Isim Fā'il jamak mudzakkar sālim dari fi'il tsulātsī mujarrad <em>shabara - yashbiru</em> (wazan <em>fā'ilūn / fā'ilīn</em>).</td>
+                <td><strong>Na'at (Sifat)</strong> bagi lafaz <em>lil-ladzīnat-taqaw</em> pada Ayat 15 (atau Badal), majrūr dengan tanda jar huruf <strong>Yā'</strong> karena jamak mudzakkar salim, dan Nūn sebagai pengganti tanwin. (Boleh pula fī maḥalli nashbin atas dasar <em>mad-ḥ</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلصَّـٰدِقِينَ</strong></td>
+                <td>Wāwu: Harf 'athaf mabni 'alal-fath. <em>Ash-Shādiqīn</em>: Isim Fā'il jamak mudzakkar salim dari <em>shadaqa - yashduqu</em>.</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>ash-shābirīn</em>, majrūr dengan tanda jar huruf <strong>Yā'</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْقَـٰنِتِينَ</strong></td>
+                <td>Wāwu: Harf 'athaf mabni 'alal-fath. <em>Al-Qānitīn</em>: Isim Fā'il jamak mudzakkar salim dari <em>qanata - yaqnutu</em>.</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>ash-shābirīn</em>, majrūr dengan tanda jar huruf <strong>Yā'</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْمُنفِقِينَ</strong></td>
+                <td>Wāwu: Harf 'athaf mabni 'alal-fath. <em>Al-Munfiqīn</em>: Isim Fā'il jamak mudzakkar salim dari fi'il rubā'ī mazīd <em>anfaqa - yunfiqu</em> (wazan <em>muf'ilūn / muf'ilīn</em>).</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>ash-shābirīn</em>, majrūr dengan tanda jar huruf <strong>Yā'</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>وَٱلْمُسْتَغْفِرِينَ</strong></td>
+                <td>Wāwu: Harf 'athaf mabni 'alal-fath. <em>Al-Mustaghfirīn</em>: Isim Fā'il jamak mudzakkar salim dari fi'il sudāsī mazīd <em>istaghfara - yastaghfiru</em> (wazan <em>mustaf'ilūn / mustaf'ilīn</em>).</td>
+                <td><strong>Ma'ṭhūf</strong> 'alā <em>ash-shābirīn</em>, majrūr dengan tanda jar huruf <strong>Yā'</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>بِٱلْأَسْحَارِ ۝١٧</strong></td>
+                <td><em>Al-Bā'</em>: Harf jarr li zharafiyyatiz-zamān mabni 'alal-kasr. <em>Al-As-ḥāri</em>: Isim majrur bil-kasrah zhahirah, jamak taksīr dari <em>saḥar</em> (wazan <em>af'āl</em>).</td>
+                <td>Jārr wa majrūr <strong>Muta'alliq</strong> bil-ismil-fā'il <em>al-mustaghfirīna</em> (berkaitan langsung dengan perbuatan istighfar yang dikhususkan pada waktu sahur).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Kajian Balaghah (Ma'ani, Bayan, Badi' & I'jaz Fonetik)</h3>
+    <ol>
+        <li><strong>Ilmu Ma'ani — Pengulangan Huruf Wāwu al-'Aṭhaf baynash-Shifāt (Tegaknya Kemandirian Setiap Kebajikan):</strong>
+            Secara gramatika, pensifatan majemuk dapat diungkapkan tanpa huruf athaf (seperti: <em>ash-shābirīnash-shādiqīnal-qānitīn...</em>). Namun Al-Qur'an secara sengaja menyisipkan huruf Wawu pada setiap pergantian kata: <em>waṣh-ṣhōdiqīna wal-qōnitīna wal-munfiqīna wal-mustaghfirīn</em>. Dalam ilmu balaghah, ini disebut <em>al-washlu li-dalālati istiqlāli kulli washfin bil-mad-ḥ</em>. Pengulangan ini mengajarkan bahwa setiap sifat dari kelima kebajikan ini adalah pilar kemuliaan yang agung secara mandiri; barangsiapa menghimpun kelimanya sekaligus, ia telah mencapai derajat takwa yang paripurna.
+        </li>
+        <li><strong>Ilmu Badi' & Ma'ani — Al-Irtiqā' wat-Tadarrudj (Tangga Kenaikan Spiritual dari Lahir ke Batin):</strong>
+            Urutan kelima sifat ini menyajikan arsitektur pendakian spiritual yang sangat memukau:
+            <br>• <strong>Pondasi (Ash-Shabr):</strong> Penempaan ketahanan nafsu agar tidak goyah di hadapan ujian.
+            <br>• <strong>Verifikasi Nilai (Ash-Shidq):</strong> Penyatuan ucapan dengan kenyataan integritas moral.
+            <br>• <strong>Realisasi Ritual (Al-Qunūt):</strong> Ketundukan ragawi dan batiniah di hadapan Sang Pencipta.
+            <br>• <strong>Dampak Sosial (Al-Infāq):</strong> Pembuktian iman melalui pengorbanan materi demi menolong sesama.
+            <br>• <strong>Puncak Penyucian (Al-Istighfār bil-As-ḥār):</strong> Penghancuran racun kesombongan ('ujub) di penghujung malam. Setelah bersabar, jujur, shalat khusyuk, dan berderma, hamba tersebut tidak merasa bangga atas amalnya, melainkan justru bersimpuh memohon ampunan Allah!
+        </li>
+        <li><strong>Ilmu Badi' — Al-Muqābalah Asy-Syarīfah (Simetri Sempurna Penakluk Syahwat Ayat 14):</strong>
+            Terdapat kontras simetris yang sangat tajam antara 5 jerat syahwat duniawi pada Ayat 14 dengan 5 karakter takwa pada Ayat 17:
+            <br>• Fitnah wanita dan syahwat biologis ditundukkan oleh <strong>Ash-Shabr</strong>.
+            <br>• Fitnah kemunafikan demi mengejar status sosial ditundukkan oleh <strong>Ash-Shidq</strong>.
+            <br>• Fitnah kepongahan anak keturunan dan klan penindas ditundukkan oleh <strong>Al-Qunūt</strong>.
+            <br>• Fitnah tumpukan emas, perak, dan sawah ladang ditundukkan oleh <strong>Al-Infāq</strong>.
+            <br>• Fitnah ilusi kekekalan duniawi ditundukkan oleh <strong>Al-Istighfār bil-As-ḥār</strong>.
+        </li>
+        <li><strong>Ilmu Ma'ani — Taqyīd al-Istighfār bi Zharaf az-Zamān "Bil-As-ḥār" (Keheningan Tanpa Riya'):</strong>
+            Penyebutan waktu sahur secara spesifik mengisyaratkan puncak keikhlasan (<em>tajrīdul-ikhlāṣh</em>). Waktu sahur adalah saat di mana seluruh manusia terlelap dalam tidur ternyenyak, sehingga istighfar pada waktu ini mustahil terkontaminasi oleh motif ingin dipuji manusia (riya'). Ini adalah pertemuan rahasia paling intim antara seorang hamba dengan Tuhannya.
+        </li>
+    </ol>
+
+    <!-- LENSA 3: KONTEKS -->
+    <h2 id="lensa-3">Lensa 3: Konteks (Integrasi Metodologi 2S & 1L: Sibāq, Siyāq, Liḥāq + Sosio-Historis)</h2>
+    <ul>
+        <li><strong>Sibāq (Korelasi Organik dengan Ayat 14, 15, dan 16):</strong>
+            Struktur diskursus Al-Qur'an pada Klaster 2 bergerak dalam dinamika komparasi yang sangat kuat:
+            <br>• <strong>Ayat 14:</strong> Membedah anatomi syahwat duniawi yang dihiaskan indah pada pandangan manusia (<em>zuyyina lin-nāsi ḥubbusy-syahawāti minan-nisā'i wal-banīna wal-qanāṭīril-muqanṭharah...</em>).
+            <br>• <strong>Ayat 15:</strong> Membuka wawasan transendental dengan menawarkan alternatif kenikmatan yang jauh lebih agung dan abadi di sisi Allah bagi orang-orang bertakwa (<em>lil-ladzīnat-taqaw 'inda rabbihim jannātun tajrī min taḥtihal-anhār...</em>).
+            <br>• <strong>Ayat 16:</strong> Menggambarkan doa perendahan diri orang-orang bertakwa tersebut yang tidak membanggakan kekayaannya, melainkan mengakui imannya seraya memohon pembebasan dari azab api neraka (<em>alladzīna yaqūlūna rabbanā innanā āmannā faghfir lanā dzunūbanā wa qinā 'adzāban-nār</em>).
+            <br>• <strong>Ayat 17:</strong> Hadir memvalidasi doa tersebut ke dalam aksi amaliah nyata. Doa pada Ayat 16 bukanlah angan-angan kosong (<em>tamannī</em>), melainkan dimanifestasikan melalui lima pilar tindakan konkret di Ayat 17.
+        </li>
+        <li><strong>Siyāq (Rekonstruksi Sosio-Historis: Ujian Komunitas Madinah Pasca-Badar & Delegasi Najran):</strong>
+            Ayat ini diturunkan pada lanskap Madaniyah awal saat kaum muslimin baru saja memenangkan Perang Badar (2 H). Kemenangan Badar membawa masuknya harta rampasan perang (<em>ghanīmah</em>) dan terbukanya peluang ekspansi ekonomi di Madinah. Komunitas mukmin yang sebelumnya miskin dan tertindas di Makkah kini berpotensi dijangkiti godaan kekayaan materiil (fitnah <em>amwāl</em> dan <em>syahawāt</em>). Ayat 17 turun sebagai benteng moral: kejayaan politik dan ekonomi tidak boleh melahirkan aristokrasi baru yang congkak; identitas sejati mukmin Madinah harus tetap bertumpu pada ketabahan, kejujuran, ibadah malam, dan kedermawanan sosial. Di sisi lain, ketika 60 bangsawan dan uskup delegasi Kristen Najran tiba di Madinah dengan memamerkan jubah sutra bersulam emas dan kemewahan lahiriah, Ayat 17 mendekonstruksi tolok ukur kemuliaan tersebut: manusia termulia di hadapan Allah bukanlah para bangsawan yang bertabur perhiasan, melainkan mereka yang bersujud dan meneteskan air mata tobat di sepertiga malam terakhir!
+        </li>
+        <li><strong>Liḥāq (Jembatan Menuju Proklamasi Kesaksian Tauhid pada Ayat 18):</strong>
+            Setelah melukiskan kepribadian hamba-hamba pilihan di Ayat 17 yang menyeimbangkan antara ilmu, amal, dan penyucian batin, Al-Qur'an melangkah pada Ayat 18 menuju salah satu deklarasi tauhid teragung dalam wahyu:
+            <br><em>"Syahidallāhu annahū lā ilāha illā Huwa wal-malā'ikatu wa ulul-'ilmi qā'imam-bil-qisṭh..."</em> (Allah menyatakan bahwasanya tidak ada tuhan melainkan Dia, Yang menegakkan keadilan, dan para malaikat serta orang-orang yang berilmu).
+            Keterkaitan ini membuktikan bahwa <strong>Ulul-'Ilm</strong> (orang-orang yang berilmu) yang diangkat derajatnya sejajar dengan para malaikat sebagai saksi keesaan Allah pada Ayat 18 bukanlah ilmuwan rasionalis yang kering dari amal ibadah, melainkan para ilmuwan rabbani yang memiliki lima karakter pada Ayat 17: mereka yang berilmu, bersabar, jujur, khusyuk beribadah, dermawan, dan senantiasa beristighfar di keheningan waktu sahur!
+        </li>
+    </ul>
+
+    <!-- LENSA 4: TAFSIR KOMPARATIF -->
+    <h2 id="lensa-4">Lensa 4: Tafsir Komparatif Lintas Generasi & Mazhab</h2>
+    <div class="tafsir-quote">
+        <strong>1. Imam Ibnu Jarīr Aṭh-Ṭhabarī (w. 310 H) — Riwayat Salaf & Kedudukan Waktu Sahur:</strong><br>
+        Dalam <em>Jāmi' al-Bayān 'an Ta'wīl Āyi al-Qur'ān</em>, At-Tabari menegaskan bahwa ayat ini mensifati orang-orang bertakwa di ayat sebelumnya. Beliau membedah makna <em>al-qānitīn</em> sebagai orang-orang yang taat patuh dan menegakkan shalat secara khusyuk. Menjelaskan <em>wal-mustaghfirīna bil-as-ḥār</em>, At-Tabari meriwayatkan penafsiran para sahabat dan tabi'in (seperti Ibnu Abbas, Qatadah, dan Mujahid) yang menegaskan bahwa waktu sahur adalah waktu yang paling mustajab untuk berdoa dan memohon ampunan. At-Tabari mengutip dialog Nabi Ya'qub AS kepada anak-anaknya tatkala mereka meminta didoakan ampunan: <em>"Sawfa astaghfiru lakum rabbī"</em> (Aku akan memohonkan ampunan bagimu kepada Tuhanku - QS. Yusuf: 98); Ibnu Mas'ud dan Ibnu Abbas menafsirkan bahwa Ya'qub sengaja mengakhirkan doa permohonan ampunan itu hingga tiba waktu sahur.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>2. Imam Al-Qurthubī (w. 671 H) — Perspektif Fiqih, Hakikat Qunut, & Adab Istighfar Sahur:</strong><br>
+        Dalam <em>Al-Jāmi' li Aḥkām al-Qur'ān</em>, Al-Qurthubi membedah dimensi syariah kata <em>Al-Qānitīn</em>: kata qunut dalam sunnah mencakup berdiri lama dalam shalat (<em>ṭhūlul-qiyām</em>), kepatuhan mutlak tanpa bantahan, dan keheningan hati dari perkara sia-sia. Mengenai istighfar di waktu sahur, Al-Qurthubi menegaskan bahwa ini adalah anjuran syar'i yang sangat ditekankan. Beliau menjelaskan hubungan indah dalam penempatan ayat: orang-orang beriman ini menghidupkan malam mereka dengan shalat (sebagaimana firman-Nya dalam QS. Adz-Dzariyat: 17: <em>kānū qalīlam-minal-layli mā yahja'ūn</em>), namun di akhir malam mereka tidak merasa bangga atas tahajjud mereka; mereka duduk bersimpuh melafalkan istighfar, memposisikan diri mereka layaknya para pendosa besar yang sangat membutuhkan ampunan Allah.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>3. Imam Fakhruddīn Ar-Rāzī (w. 606 H) & Az-Zamakhsyarī (w. 538 H) — Dialektika Teologis & Hirarki Jiwa:</strong><br>
+        Dalam <em>Mafātīḥ al-Ghayb</em>, Ar-Razi mengemukakan pertanyaan filosofis: <em>"Mengapa istighfar diletakkan paling akhir setelah sabar, jujur, qunut, dan infaq?"</em> Ar-Razi menjawab dengan analisis psikologis-spiritual yang sangat tajam:
+        <br>• Kebajikan bermula dari <strong>At-Takhliyah</strong> (mengosongkan diri dari maksiat melalui <em>ash-shabr</em>).
+        <br>• Dilanjutkan dengan <strong>At-Tahliyah</strong> (menghiasi diri dengan kebenaran batin dan lahir melalui <em>ash-shidq</em>).
+        <br>• Diwujudkan dalam <strong>Penyempurnaan Hubungan Vertikal</strong> dengan Allah melalui <em>al-qunūt</em>.
+        <br>• Disempurnakan dalam <strong>Hubungan Horizontal</strong> dengan makhluk melalui <em>al-infāq</em>.
+        <br>• Dan tatkala seluruh amal shalih itu telah sempurna ditunaikan, jiwa manusia sangat rentan terjangkit penyakit mematikan bernama <strong>Al-'Ujub</strong> (kagum pada kesalehan diri sendiri) dan merasa telah memiliki hak atas surga. Maka datanglah <em>al-istighfār bil-as-ḥār</em> di akhir ayat untuk meruntuhkan kesombongan spiritual itu! Seorang mukmin menatap seluruh amalnya serba cacat di hadapan keagungan Allah, sehingga sandaran keselamatannya dikembalikan murni kepada rahmat dan maghfirah-Nya.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>4. Imam Ibnu Katsīr (w. 774 H) — Harmonisasi Ayat-Ayat Al-Qur'an & Sunnah Nabawiyyah:</strong><br>
+        Dalam <em>Tafsīr Al-Qur'ān al-'Aẓhīm</em>, Ibnu Katsir mengaitkan QS. 3:17 dengan QS. Adz-Dzāriyāt [51]: 17–18 (<em>"Kānū qalīlam-minal-layli mā yahja'ūn, wa bil-as-ḥāri hum yastaghfirūn"</em>) dan QS. As-Sajdah [32]: 16. Beliau menegaskan bahwa mengkhususkan istighfar di waktu sahur membuktikan bahwa waktu tersebut memiliki keutamaan tak tertandingi dalam penerimaan doa. Ibnu Katsir meriwayatkan hadits Anas bin Malik bahwa para sahabat diperintahkan apabila shalat malam untuk beristighfar di penghujung malam sebanyak tujuh puluh kali.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>5. Syaikh Thahir Ibnu 'Āsyūr (w. 1393 H) — Hermeneutika Maqashidi & Pembangunan Karakter Peradaban:</strong><br>
+        Dalam <em>At-Taḥrīr wat-Tanwīr</em>, Ibnu 'Asyur memaparkan analisis sosiologis peradaban: Lima karakter ini adalah formula pembentukan "Generasi Rabbani" yang mampu memimpin dunia tanpa terjebak imperialisme tirani. Resiliensi (<em>ash-shabr</em>) memberi ketahanan menghadapi krisis; integritas (<em>ash-shidq</em>) membangun modal sosial dan kepercayaan publik (<em>social trust</em>); kepatuhan spiritual (<em>al-qunūt</em>) menjaga arah moral hukum; kedermawanan (<em>al-infāq</em>) menyelesaikan problem kemiskinan dan kesenjangan ekonomi; sedangkan kebiasaan istighfar di waktu sahur (<em>al-istighfār</em>) melahirkan para pemimpin yang rendah hati, tidak mabuk kekuasaan, dan steril dari arogansi oligarki.
+    </div>
+
+    <div class="tafsir-quote">
+        <strong>6. Buya Hamka (w. 1981 M), Prof. Dr. M. Quraish Shihab & Kemenag RI — Sentuhan Jiwa Nusantara:</strong><br>
+        Buya Hamka dalam <em>Tafsir Al-Azhar</em> melukiskan suasana sahur dengan keindahan sastra yang mengharukan: <em>"Alangkah indahnya waktu sahur itu! Di saat bumi masih diselimuti kegelapan yang sunyi senyap, ketika orang-orang yang mengejar kemewahan dunia terkapar kelelahan dalam tidurnya yang dibuai mimpi, hamba-hamba Allah yang bertakwa bangun dari peraduannya. Mereka mengambil air wudhu yang sejuk, bersujud di hadapan Tuhannya, lalu mengangkat kedua belah tangannya memohon ampun dengan air mata berlinang. Di waktu hening itulah hubungan batin antara hamba dengan Khaliknya mencapai puncak kemesraan yang tiada tara."</em><br>
+        Prof. Quraish Shihab dalam <em>Tafsir Al-Mishbah</em> menggarisbawahi bahwa huruf athaf Wawu di antara setiap sifat mengajarkan kita untuk tidak memilih-milih kebajikan secara parsial: jangan mengaku shalih hanya karena rajin shalat malam (qunut), tetapi kikir mengeluarkan sedekah (munfiqin); dan jangan merasa telah dermawan, namun lisannya gemar berdusta (shadiqin). Kemenag RI menegaskan bahwa ayat ini adalah cetak biru pembinaan moral bangsa: bangsa yang kokoh adalah bangsa yang rakyat dan pemimpinnya jujur, ulet bekerja keras, berjiwa sosial, dan senantiasa bersandar kepada Tuhan Yang Maha Esa.
+    </div>
+
+    <h3>Matriks Komparasi Ijma' & Ikhtilaf Mufassirin</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspek Eksegesis</th>
+                <th>Titik Temu Konsensus Ulama (Ijmā' / Ittifāq)</th>
+                <th>Ragam Sudut Pandang Ijtihad (Ikhtilāf Tanawwu')</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Hubungan Sintaksis dengan Ayat Sebelumnya</strong></td>
+                <td>Sepakat bahwa ayat ini mensifati golongan orang-orang bertakwa (<em>al-muttaqīn</em>) yang disebutkan pada Ayat 15 dan 16.</td>
+                <td>
+                    • <strong>Jumhur Mufasir:</strong> Berkedudukan sebagai <em>na'at</em> majrur bagi <em>lil-ladzīnat-taqaw</em>.<br>
+                    • <strong>Sebagian Ahli Nahwu (Az-Zajjaj, Al-Farra'):</strong> Membuka kemungkinan <em>nashab 'alal-mad-ḥ</em> (memuji) dengan memperkirakan fi'il mahdzuf: <em>amdahu ash-shābirīn</em> (aku memuji orang-orang yang bersabar).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Makna Hakiki "Al-Qānitīn"</strong></td>
+                <td>Sepakat bahwa qunut mengandung unsur kepatuhan dan ketaatan ibadah yang mendalam kepada Allah SWT.</td>
+                <td>
+                    • <strong>Mujahid & Qatadah:</strong> Ketaatan mutlak dalam seluruh aspek syariat.<br>
+                    • <strong>Ibnu Mas'ud & Al-Qurthubi:</strong> Khusus menunjuk pada shalat malam yang panjang berdirinya (<em>ṭhūlul-qiyām</em>) dan khusyuk bacaannya.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Bentuk Istighfar di Waktu Sahur</strong></td>
+                <td>Sepakat bahwa waktu sahur adalah sepertiga malam terakhir menjelang fajar dan merupakan waktu mustajab untuk maghfirah.</td>
+                <td>
+                    • <strong>Mayoritas Salaf (Ibnu Umar, Ibnu Abbas):</strong> Istighfar lisan dan permohonan ampunan batin yang dipanjatkan secara sadar sesudah shalat tahajjud.<br>
+                    • <strong>Sebagian Riwayat (Ibnu Jarir):</strong> Mencakup penegakan shalat Subuh secara berjamaah tepat pada awal waktunya setelah bangun di waktu sahur.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- LENSA 5: KOGNISI -->
+    <h2 id="lensa-5">Lensa 5: Kognisi (Sintesis Sistemik & Arsitektur Jiwa)</h2>
+    <p style="font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+        [Catatan Metodologis: Analisis kognitif berikut merupakan ikhtiar tadabbur dan sintesis analitis reflektif manusiawi, bukan klaim penafsiran wahyu mutlak dan steril dari cocoklogi sains].
+    </p>
+
+    <h3>1. Perombakan Paradigma: Pola Pikir Pengejar Syahwat vs Pola Pikir Rabbani</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Dimensi Mental</th>
+                <th>Pola Pikir Pengejar Syahwat (Ayat 14)</th>
+                <th>Pola Pikir Qur'ani Al-Muttaqīn (Ayat 17)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Regulasi Diri (Self-Regulation)</strong></td>
+                <td><em>Impulsive Gratification:</em> Bertindak reaktif menuruti dorongan insting biologis dan emosi sesaat demi memuaskan kesenangan instan (<em>hedonic treadmill</em>).</td>
+                <td><em>Strategic Delayed Gratification (Aṣh-Ṣhabr):</em> Memiliki ketahanan mental tinggi untuk menunda kesenangan fana demi meraih kemuliaan abadi di sisi Allah.</td>
+            </tr>
+            <tr>
+                <td><strong>Integritas Diri (Authenticity)</strong></td>
+                <td><em>Performative Image-Crafting:</em> Berpura-pura baik demi validasi publik, memanipulasi fakta, dan menyembunyikan keburukan demi mempertahankan reputasi duniawi.</td>
+                <td><em>Radical Truthfulness (Aṣh-Ṣhidq):</em> Menjunjung transparansi niat, keselarasan antara suara batin dengan perbuatan, serta konsistensi moral baik di ruang publik maupun ruang sunyi.</td>
+            </tr>
+            <tr>
+                <td><strong>Hubungan dengan Harta</strong></td>
+                <td><em>Hoarding & Scarcity Mindset:</em> Menimbun kekayaan karena cemas akan kemiskinan; memandang harta sebagai sumber rasa aman dan instrumen dominasi sosial.</td>
+                <td><em>Abundance Flow Mindset (Al-Infāq):</em> Memandang harta sebagai energi titipan Ilahi yang harus dialirkan secara produktif untuk mengangkat derajat sesama manusia.</td>
+            </tr>
+            <tr>
+                <td><strong>Evaluasi Diri Pasca-Kinerja</strong></td>
+                <td><em>Spiritual Narcissism & Entitlement:</em> Merasa diri telah banyak berjasa, mengagumi kehebatan prestasi pribadi ('ujub), dan menuntut perlakuan istimewa dari sesama.</td>
+                <td><em>Radical Humility (Al-Istighfār bil-As-ḥār):</em> Mengikis kesombongan amal melalui pengakuan kelemahan diri di hadapan Allah; menyadari bahwa seluruh pencapaian adalah anugerah murni dari-Nya.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Arsitektur Mental Model Terapan</h3>
+    <ul>
+        <li><strong>Mental Model 1: "The Anti-Fragility Virtue Architecture" (Arsitektur Kebajikan Antirapuh):</strong>
+            Dalam psikologi kepribadian, kebajikan parsial sangat rentan runtuh jika berdiri sendiri. Seseorang yang hanya mengandalkan ketabahan (<em>shabr</em>) tanpa kejujuran (<em>shidq</em>) bisa terperosok menjadi penjahat yang ulet dan dingin. Seseorang yang tekun beribadah ritual (<em>qunūt</em>) tanpa kedermawanan sosial (<em>infāq</em>) akan melahirkan kesalehan individual yang egois dan anti-sosial. Al-Qur'an membangun arsitektur antirapuh (<em>antifragile</em>): kelima sifat pada QS. 3:17 saling mengunci, menyeimbangkan, dan memperkokoh satu sama lain. Daya tahan batin (shabr) dituntun oleh integritas (shidq), dihidupkan oleh ketundukan (qunut), disalurkan melalui altruisme (infaq), dan dijaga dari racun narsisme oleh kerendahan hati istighfar (istighfar).
+        </li>
+        <li><strong>Mental Model 2: "The Post-Exertion Humility Protocol" (Protokol Kerendahan Hati Pasca-Kinerja):</strong>
+            Manusia secara kognitif memiliki bias yang disebut <em>moral licensing</em>—yakni kecenderungan psikologis untuk merasa berhak berbuat curang atau sombong setelah dirinya sukses melakukan perbuatan baik berskala besar. QS. 3:17 merancang sebuah protokol penyucian mental yang jenius: penempatan <em>al-mustaghfirīna bil-as-ḥār</em> tepat setelah deretan amal-amal puncak (sabar, jujur, shalat malam, dan infaq). Setiap kali seorang insan selesai mengerahkan energi optimal dalam kebaikan, protokol penutupnya adalah memohon ampunan (istighfar). Langkah ini seketika menetralkan lonjakan ego, memulihkan <em>locus of control</em> ke titik nol tawadhu', dan mencegah jiwa tergelincir ke dalam kultus kesucian diri.
+        </li>
+    </ul>
+
+    <h3>3. Neuropsikologi Jiwa & Tazkiyatun Nafs: Anatomi Waktu Sahur</h3>
+    <p>
+        Secara neurobiologis, sepertiga malam terakhir (waktu sahur) menghadirkan kondisi fisiologis yang sangat unik pada tubuh dan otak manusia. Pada jam-jam sebelum fajar, stimulasi sensorik eksternal (kebisingan suara, visual kota, notifikasi gawai) berada pada titik terendah. Ritme sirkadian tubuh menurunkan suhu basal dan melepaskan hormon melatonin, sementara gelombang otak manusia yang baru terbangun dari tidur bertransisi secara alami antara gelombang <em>Delta</em>, <em>Theta</em>, dan <em>Alpha</em> (keadaan relaksasi mendalam dan keterbukaan bawah sadar).
+    </p>
+    <p>
+        Ketika seorang hamba bangkit mengambil air wudhu di waktu sahur, aktivitas korteks prefrontal (pusat kesadaran moral dan pengambilan keputusan) teraktivasi kembali tanpa dibebani oleh kebisingan mental duniawi. Bersujud dan melafalkan istighfar pada fase hening ini merangsang kerja sistem saraf parasimpatis, meredakan ketegangan amigdala (pusat kecemasan), serta memfasilitasi rekonsolidasi memori emosional. Penyesalan dosa yang diiringi derai air mata di waktu sahur adalah terapi <em>catharsis</em> terdalam dalam tazkiyatun nafs: ia membersihkan endapan trauma rasa bersalah, melenyapkan stres eksistensial, dan menyuntikkan ketenangan batin (<em>sakīnah</em>) yang menyegarkan jiwa untuk menyongsong hari baru.
+    </p>
+
+    <!-- LENSA 6: REALITAS -->
+    <h2 id="lensa-6">Lensa 6: Realitas (Fenomenologi Kontemporer Abad ke-21)</h2>
+
+    <h3>1. Epidemi Impulsivitas & Krisis Atensi di Era Dopamin Instan (Krisis Aṣh-Ṣhabr)</h3>
+    <p>
+        Masyarakat abad ke-21 tengah terperangkap dalam epidemi penurunan rentang atensi (<em>attention deficit</em>) dan kecanduan dopamin instan akibat algoritma media sosial (TikTok, Instagram Reels, YouTube Shorts). Budaya konsumerisme modern mengkondisikan manusia untuk menuntut kepuasan instan (<em>instant gratification</em>): makanan siap saji, pinjaman online dalam hitungan menit, dan validasi kilat lewat tombol <em>likes</em>. Akibatnya, kapasitas daya tahan jiwa (<em>ash-shabr</em>) manusia modern mengalami atrofi parah. Manusia menjadi sangat rapuh (<em>fragile</em>), mudah tersinggung (<em>easily offended</em>), cepat menyerah saat menghadapi rintangan karier, dan rentan jatuh ke dalam depresi ketika keinginannya tertunda. QS. 3:17 menyerukan revolusi mental: keunggulan peradaban hanya dapat dibangun oleh individu-individu yang memiliki stamina kesabaran panjang untuk menuntaskan proses perjuangan.
+    </p>
+
+    <h3>2. Krisis Integritas di Era Post-Truth & Manipulasi Citra (Krisis Aṣh-Ṣhidq)</h3>
+    <p>
+        Di era digital kontemporer, batas antara kebenaran faktual dan manipulasi persepsi semakin kabur (era <em>post-truth</em>). Tokoh publik, politisi, dan influencer terbiasa membangun persona kepalsuan melalui jasa agensi <em>public relations</em>, filter visual, dan buzzer politik. Citra kejujuran dijual sebagai komoditas kampanye, sementara di balik layar mereka melakukan korupsi, manipulasi data, dan kebohongan publik tanpa rasa bersalah. Sifat <strong>Ash-Shādiqīn</strong> pada Ayat 17 menampar budaya munafik ini: integritas sejati bukanlah apa yang dipamerkan di panggung media, melainkan keselarasan mutlak antara apa yang diyakini dalam kalbu, apa yang diucapkan di depan publik, dan apa yang dikerjakan saat berada dalam kerahasiaan kamar pribadi.
+    </p>
+
+    <h3>3. Narsisme Spiritual & Sindrom "Moral Licensing" (Krisis Al-Istighfār bil-As-ḥār)</h3>
+    <p>
+        Gejala narsisme di era internet tidak hanya menjangkiti kaum sekuler, melainkan juga merambah ke dalam ruang keagamaan modern (<em>spiritual narcissism</em>). Kita menyaksikan fenomena orang-orang yang gemar memamerkan ibadahnya di media sosial: swafoto saat umrah, siaran langsung saat shalat tahajjud, dan pamer bukti transfer sedekah demi membangun reputasi sebagai sosok saleh. Pamer ibadah ini sering kali melahirkan arogansi moral: merasa diri paling suci seraya memandang rendah kelompok lain yang belum hijrah. Perintah <strong>Al-Mustaghfirīna bil-As-ḥār</strong> meruntuhkan kepalsuan narsisme spiritual ini. Al-Qur'an mengajarkan bahwa ibadah malam teragung bukanlah yang diunggah ke internet demi mendulang jutaan penonton, melainkan permohonan ampunan yang diratapi dalam keheningan sepertiga malam terakhir, saat mata manusia tertutup dan hanya Allah Yang Maha Mendengar rintihan tobat hamba-Nya.
+    </p>
+
+    <h3>4. Jurang Ketimpangan Turbokapitalisme & Komersialisasi Empati (Krisis Al-Infāq)</h3>
+    <p>
+        Sistem ekonomi turbokapitalisme global saat ini memicu ketimpangan ekonomi paling ekstrem dalam sejarah peradaban: segelintir miliarder menguasai kekayaan setara dengan miliaran penduduk miskin bumi. Alih-alih mendistribusikan asetnya secara berkeadilan, para oligarki kerap menimbun kekayaan di surga suaka pajak (<em>tax havens</em>) dan memanfaatkan yayasan filantropi sekadar sebagai tameng pengurangan pajak. Ayat 17 menghadirkan karakter <strong>Al-Munfiqīn</strong> sebagai antitesis terhadap kerakusan kapitalistik: kedermawanan seorang mukmin bukanlah strategi pencitraan korporasi, melainkan panggilan iman yang mengalirkan kekayaan riil untuk mengentaskan kemiskinan, membiayai pendidikan dhuafa, dan menegakkan keadilan distributif di tengah masyarakat.
+    </p>
+
+    <!-- LENSA 7: PRAKSIS -->
+    <h2 id="lensa-7">Lensa 7: Praksis (3 Tindakan Nyata, 3 Refleksi Batin & Doa Tadabbur)</h2>
+
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: var(--emerald-accent);">Tepat 3 Tindakan Nyata Terukur</h3>
+        <ol>
+            <li><strong>Mikro-Habit (&lt; 5 Menit): Protokol "Istighfar Sahur 3 Menit & Detoks Layar Sebelum Fajar":</strong>
+                <br>• Pasang alarm 15 menit sebelum azan Subuh berkumandang setiap hari.
+                <br>• Duduklah bersimpuh di atas sajadah dalam kondisi telah berwudhu tanpa menyentuh layar ponsel pintar (matikan seluruh notifikasi media sosial).
+                <br>• Luangkan waktu tepat 3 menit untuk melafalkan <em>Sayyidul Istighfār</em> atau istighfar nabawiyyah (minimal 70 kali) dengan penuh penghayatan arti, meratapi kekhilafan dosa masa lalu, dan memohon perlindungan dari sifat riya' dan kesombongan sebelum melangkah shalat Subuh.
+            </li>
+            <li><strong>Protokol Keputusan (Decision Protocol): "The Alignment Test on Speech & Commitments":</strong>
+                Setiap kali Anda hendak membuat pernyataan publik, menandatangani kontrak bisnis, atau memberikan janji kepada pasangan, anak, atau rekan kerja, lakukan audit integritas 3 detik:
+                <br>• <em>"Apakah ucapanku ini 100% selaras dengan kenyataan faktual dan niat batiniahku, ataukah mengandung bumbu manipulasi demi mencari muka dan keuntungan pribadi?"</em>
+                <br>• Jika terdeteksi secuil saja ketidakjujuran, batalkan atau koreksi seketika tanpa kompromi! Jadikan kejujuran (<em>ash-shidq</em>) sebagai prinsip tanpa negosiasi dalam seluruh ekosistem profesional dan personal Anda.
+            </li>
+            <li><strong>Komitmen Etika Relasional: "Automasi Sedekah Anonim (Infaq Khofiy) & Nol Pamer Kebaikan":</strong>
+                Siapkan skema autodebet perbankan syariah atau sedekah tunai harian/mingguan yang disalurkan langsung kepada fakir miskin, anak yatim, atau pembangunan sarana dakwah tanpa mencantumkan nama Anda (gunakan status 'Hamba Allah'). Terapkan aturan keras pada diri sendiri: haram hukumnya menceritakan, memotret, atau mengunggah aktivitas sedekah dan ibadah malam Anda ke platform media sosial apa pun demi menjaga kemurnian ikhlas di hadapan Allah.
+            </li>
+        </ol>
+    </div>
+
+    <div class="reflection-box">
+        <h3 style="margin-top: 0; color: #6b46c1;">Tepat 3 Pertanyaan Refleksi Batin (Muhāsabah Qalbiyyah)</h3>
+        <ol>
+            <li>Seandainya pintu kamarku tertutup rapat di tengah malam, dan tidak ada satu pun manusia di muka bumi yang melihat tindak-tandukku, apakah kepribadian dan moralitas ibadahku tetap sama mulianya dengan apa yang kupamerkan di hadapan khalayak ramai (Ash-Shidq vs Kemunafikan)?</li>
+            <li>Ketika aku telah berhasil menuntaskan suatu amal ibadah besar, proyek dakwah, atau pengorbanan harta yang melelahkan, apakah gerak batin pertamaku adalah merasa bangga dan merasa lebih suci daripada orang lain ('ujub), ataukah aku segera bersujud memohon ampunan Allah atas segala cacat dan kekuranganku dalam beramal (Al-Istighfar)?</li>
+            <li>Dari hal-hal yang paling kucintai di dunia ini—waktu tidur lelapku yang nyaman, tabungan uang yang kukumpulkan dengan susah payah, dan egoku untuk selalu merasa benar—seberapa banyakkah yang rela kukorbankan demi menolong sesama hamba Allah dan menegakkan ketaatan kepada-Nya (Ash-Shabr & Al-Infaq)?</li>
+        </ol>
+    </div>
+
+    <div class="doa-box">
+        <h3 style="margin-top: 0; color: #b45309;">Munajat & Doa Tadabbur Ayat</h3>
+        <p style="margin-bottom: 0;">
+            <em>
+            "Allāhumma Yā Hayyu Yā Qayyūm, Yā Ghafūru Yā Syakūr, Yā Dzal-Jalāli wal-Ikrām. Ya Allah, Tuhan Yang Maha Hidup Abadi, Yang Maha Mandiri Menegakkan alam semesta, Yang Maha Pengampun lagi Maha Menerima rasa syukur hamba-hamba-Nya. Kami bersujud mengakui betapa kerdil dan fakirnya jiwa kami di hadapan keagungan sifat-sifat-Mu, dan betapa seringnya hati kami terombang-ambing oleh buaian syahwat duniawi yang fana.
+            <br><br>
+            Allāhummaj'alnā minash-shābirīna 'alā thā'atik, wash-shābirīna 'an ma'shiyatik, wash-shābirīna 'alā aqdārikal-mu'limah. Ya Allah, hiasilah peribadi kami dengan indahnya kesabaran yang tak bertepi: sabar dalam menegakkan ketaatan kepada-Mu, sabar dalam membentengi diri dari gelora maksiat, dan sabar memikul ketetapan takdir-Mu dengan penuh keridhaan. Anugerahilah kami lisan yang senantiasa jujur, niat batin yang lurus bersih dari kepalsuan, serta gerak langkah yang membuktikan kebenaran iman kami (ash-shādiqīn).
+            <br><br>
+            Allāhummarzuqnā qunūtan dā'imā, wa khusyū'an khālishā, wa infāqan fī sabīlika sirran wa 'alāniyah. Karuniakanlah kepada kami ketundukan jiwa dan kekhusyukan ibadah yang langgeng di hadapan-Mu (al-qānitīn), lapangkanlah dada kami untuk senantiasa menginfakkan harta yang Engkau titipkan kepada kaum dhuafa dan penegakan agama-Mu tanpa pamrih (al-munfiqīn), dan jangan biarkan hati kami terjangkit penyakit kikir dan cinta dunia yang membinasakan.
+            <br><br>
+            Allāhummaj'alnā minal-mustaghfirīna bil-as-ḥār. Ya Allah Yang Maha Luas ampunan-Nya, bangunkanlah tubuh kami di keheningan sepertiga malam terakhir, lembutkanlah kalbu kami untuk bersujud di hadapan-Mu tatkala manusia terlelap tidur, basahilah lisan kami dengan istighfar yang tulus meratapi dosa-dosa kami, dan cucilah noktah hitam di hati kami dengan air mata tobat di waktu sahur. Cabutlah dari jiwa kami benih-benih kesombongan, rasa ujub, dan riya', serta masukkanlah kami ke dalam surga kenikmatan-Mu bersama hamba-hamba-Mu yang bertakwa berkat limpahan rahmat dan kasih sayang-Mu semata. Āmīn Yā Rabbal-'Ālamīn."
+            </em>
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="003-016 - QS. Ali 'Imran Ayat 16.html">&larr; Kembali ke Ayat 16 (QS. 3:16)</a>
+        <span><strong>QS. Āli 'Imrān [3]: 17</strong> (Blok 1: Keteguhan Akidah & Hermeneutika Wahyu)</span>
+        <a href="003-018 - QS. Ali 'Imran Ayat 18.html">Lanjut ke Ayat 18 (QS. 3:18) &rarr;</a>
+    </div>
+
+</div>
+
+</body>
+</html>
