@@ -1,7 +1,7 @@
 ﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $root = "C:\Users\X250\Documents\Hidup Bersama Al-Qur'an"
 
-function Extract-Meta($filePath, $relPath, $surahName, $blockName) {
+function Extract-Meta($filePath, $relPath, $surahName, $blockName, $surahNum) {
     $raw = [System.IO.File]::ReadAllText($filePath, [System.Text.Encoding]::UTF8)
     $theme = ""
     if ($raw -match '<div class="thematic-title">\s*([\s\S]*?)\s*</div>') {
@@ -12,10 +12,14 @@ function Extract-Meta($filePath, $relPath, $surahName, $blockName) {
         $title = $matches[1].Trim()
     }
     $ayat = 0
-    if ($filePath -match 'Ayat\s*(\d+)') {
+    $leaf = [System.IO.Path]::GetFileName($filePath)
+    if ($leaf -match '^\d{3}-(\d{3})') {
+        $ayat = [int]$matches[1]
+    } elseif ($leaf -match 'Ayat\s*(\d+)') {
         $ayat = [int]$matches[1]
     }
     return [PSCustomObject]@{
+        SurahNum = $surahNum
         Surah = $surahName
         Block = $blockName
         Ayat = $ayat
@@ -27,21 +31,21 @@ function Extract-Meta($filePath, $relPath, $surahName, $blockName) {
 
 $items = [System.Collections.Generic.List[PSCustomObject]]::new()
 
-# Fatihah
+# 1. Surah Al-Fatihah
 $fatihahFiles = Get-ChildItem "$root\01 - Surah Al-Fatihah" -Filter "*.html" | Sort-Object Name
 foreach ($f in $fatihahFiles) {
     $rel = "01 - Surah Al-Fatihah/$($f.Name)"
-    $items.Add((Extract-Meta $f.FullName $rel "Surah Al-Fātihah" "Ummul Qur'ān"))
+    $items.Add((Extract-Meta $f.FullName $rel "Surah Al-Fātihah" "Ummul Qur'ān" 1))
 }
 
-# Baqarah 000
+# 2. Surah Al-Baqarah 000
 $baqarah000 = "$root\02 - Surah Al-Baqarah\002-000 - Pengantar & Peta Maqasid Surah Al-Baqarah.html"
 if (Test-Path $baqarah000) {
     $rel = "02 - Surah Al-Baqarah/002-000 - Pengantar & Peta Maqasid Surah Al-Baqarah.html"
-    $items.Add((Extract-Meta $baqarah000 $rel "Surah Al-Baqarah" "Pengantar & Maqasid"))
+    $items.Add((Extract-Meta $baqarah000 $rel "Surah Al-Baqarah" "Pengantar & Maqasid" 2))
 }
 
-# Baqarah Blocks
+# 2b. Surah Al-Baqarah Blocks
 $blockDirs = @(
     @{ Name = "Blok 1 (Ayat 1-20)"; Label = "Blok 1: Tipologi Manusia (1–20)" },
     @{ Name = "Blok 2 (Ayat 21-39)"; Label = "Blok 2: Ibadah & Khalifah Adam (21–39)" },
@@ -54,9 +58,41 @@ foreach ($b in $blockDirs) {
     $bFiles = Get-ChildItem "$root\02 - Surah Al-Baqarah\$($b.Name)" -Filter "*.html" | Sort-Object Name
     foreach ($f in $bFiles) {
         $rel = "02 - Surah Al-Baqarah/$($b.Name)/$($f.Name)"
-        $items.Add((Extract-Meta $f.FullName $rel "Surah Al-Baqarah" $b.Label))
+        $items.Add((Extract-Meta $f.FullName $rel "Surah Al-Baqarah" $b.Label 2))
     }
 }
+
+# 3. Surah Ali 'Imran 000
+$aliImran000 = "$root\03 - Surah Ali 'Imran\003-000 - Pengantar & Peta Maqasid Surah Ali 'Imran.html"
+if (Test-Path -LiteralPath $aliImran000) {
+    $rel = "03 - Surah Ali 'Imran/003-000 - Pengantar & Peta Maqasid Surah Ali 'Imran.html"
+    $items.Add((Extract-Meta $aliImran000 $rel "Surah Āli 'Imrān" "Pengantar & Maqasid" 3))
+}
+
+# 3b. Surah Ali 'Imran Blocks
+$aliImranBlocks = @(
+    @{ Name = "Blok 1 (Ayat 1-32)"; Label = "Blok 1: Keteguhan Akidah & Hermeneutika Wahyu (1–32)" },
+    @{ Name = "Blok 2 (Ayat 33-63)"; Label = "Blok 2: Keluarga 'Imran, Maryam & Isa AS (33–63)" },
+    @{ Name = "Blok 3 (Ayat 64-101)"; Label = "Blok 3: Dialog Kalimatun Sawa' & Ahli Kitab (64–101)" },
+    @{ Name = "Blok 4 (Ayat 102-151)"; Label = "Blok 4: Solidaritas Umat & Dinamika Uhud (102–151)" },
+    @{ Name = "Blok 5 (Ayat 152-200)"; Label = "Blok 5: Evaluasi Uhud, Ulul Albab & Sabar (152–200)" }
+)
+
+foreach ($b in $aliImranBlocks) {
+    $dirPath = "$root\03 - Surah Ali 'Imran\$($b.Name)"
+    if (Test-Path -LiteralPath $dirPath) {
+        $bFiles = Get-ChildItem -LiteralPath $dirPath -Filter "*.html" | Sort-Object Name
+        foreach ($f in $bFiles) {
+            $rel = "03 - Surah Ali 'Imran/$($b.Name)/$($f.Name)"
+            $items.Add((Extract-Meta $f.FullName $rel "Surah Āli 'Imrān" $b.Label 3))
+        }
+    }
+}
+
+$totalCount = $items.Count
+$fatihahCount = ($items | Where-Object { $_.SurahNum -eq 1 }).Count
+$baqarahCount = ($items | Where-Object { $_.SurahNum -eq 2 }).Count
+$aliImranCount = ($items | Where-Object { $_.SurahNum -eq 3 }).Count
 
 $sb = [System.Text.StringBuilder]::new()
 [void]$sb.AppendLine(@"
@@ -65,7 +101,7 @@ $sb = [System.Text.StringBuilder]::new()
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MASTER PORTAL & INDEKS ENSIKLOPEDIA: VOLUME 1 | Hidup Bersama Al-Qur'an</title>
+<title>MASTER PORTAL & INDEKS ENSIKLOPEDIA | Hidup Bersama Al-Qur'an</title>
 <style>
     :root {
         --primary-dark: #0f172a;
@@ -215,6 +251,10 @@ $sb = [System.Text.StringBuilder]::new()
         margin-bottom: 8px;
         text-transform: uppercase;
     }
+    .jilid-tag-emerald {
+        background: var(--emerald-light);
+        color: var(--emerald-dark);
+    }
     .jilid-title {
         font-size: 14.5px;
         font-weight: 700;
@@ -340,6 +380,7 @@ $sb = [System.Text.StringBuilder]::new()
         font-size: 12.5px;
         color: var(--text-muted);
         display: flex;
+        flex-wrap: wrap;
         gap: 12px;
         align-items: center;
     }
@@ -370,18 +411,33 @@ $sb = [System.Text.StringBuilder]::new()
         font-size: 13px;
         color: var(--text-muted);
     }
+    @media (max-width: 680px) {
+        .ayat-card {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .ayat-left {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .ayat-btn-open {
+            align-self: flex-end;
+        }
+        .hero h1 { font-size: 24px; }
+    }
 </style>
 </head>
 <body>
 
 <header class="hero">
     <div class="tagline">Hidup Bersama Al-Qur'an: Dari Ayat, Menjadi Cara Berpikir, Menjadi Cara Hidup</div>
-    <h1>MASTER PORTAL ENSIKLOPEDIA &bull; VOLUME 1</h1>
+    <h1>MASTER PORTAL ENSIKLOPEDIA &bull; KERANGKA 7 LENSA</h1>
     <div class="author">Kajian Komprehensif Berbasis Kerangka 7 Lensa (The 7-Lens Framework v2.0) &bull; Inisiator: Eizar Aswad</div>
     <div class="badge-container">
-        <span class="hero-badge">📖 Surah Al-Fātihah & Surah Al-Baqarah</span>
-        <span class="hero-badge">📜 295 Berkas Kajian Paripurna</span>
-        <span class="hero-badge">🔤 ~2.090.000 Kata Eksegesis</span>
+        <span class="hero-badge">📖 QS. Al-Fātihah, Al-Baqarah & Āli 'Imrān</span>
+        <span class="hero-badge">📜 $totalCount Berkas Kajian Paripurna</span>
+        <span class="hero-badge">🔤 >2.500.000 Kata Eksegesis</span>
         <span class="hero-badge">⭐ Gold-Standard v2.0</span>
     </div>
 </header>
@@ -390,27 +446,27 @@ $sb = [System.Text.StringBuilder]::new()
 
     <div class="stats-grid">
         <div class="stat-card">
-            <div class="stat-val">295</div>
+            <div class="stat-val">$totalCount</div>
             <div class="stat-label">Total Berkas Kajian</div>
         </div>
         <div class="stat-card">
-            <div class="stat-val">2.09 Juta</div>
-            <div class="stat-label">Estimasi Kata Teks</div>
+            <div class="stat-val">3 Surah</div>
+            <div class="stat-label">Al-Fātihah, Al-Baqarah & Āli 'Imrān</div>
         </div>
         <div class="stat-card">
-            <div class="stat-val">7.112</div>
-            <div class="stat-label">Rata-rata Kata / Ayat</div>
+            <div class="stat-val">7 Lensa</div>
+            <div class="stat-label">Teks, Lughah, Konteks, Tafsir, Kognisi, Krisis, Praksis</div>
         </div>
         <div class="stat-card">
-            <div class="stat-val">5 Sub-Jilid</div>
-            <div class="stat-label">Rekomendasi Format Cetak</div>
+            <div class="stat-val">>2.5 Juta</div>
+            <div class="stat-label">Estimasi Kata Eksegesis</div>
         </div>
     </div>
 
     <section class="section-card">
-        <h2>📚 Arsitektur Volume 1 & Rekomendasi 5 Sub-Jilid Cetak</h2>
+        <h2>📚 Peta Arsitektur Volume 1 & Volume 2</h2>
         <p style="font-size: 14.5px; color: #475569; margin-top: 0;">
-            Karena Volume 1 memiliki kedalaman luar biasa setara dengan ~5.970 halaman cetak, untuk edisi terbit fisik ensiklopedia dibagi menjadi 5 Sub-Jilid tematik:
+            Portal ensiklopedia ini memuat kajian tuntas <strong>Volume 1 (Surah Al-Fātihah & Al-Baqarah)</strong> serta <strong>Volume 2 (Surah Āli 'Imrān)</strong>:
         </p>
         <div class="jilid-grid">
             <div class="jilid-item">
@@ -438,24 +494,30 @@ $sb = [System.Text.StringBuilder]::new()
                 <div class="jilid-title">Ayat Kursi & Tauhid Finansial</div>
                 <div class="jilid-range">QS. Al-Baqarah [2:253–286] (Infaq vs Riba & Doa)</div>
             </div>
+            <div class="jilid-item">
+                <span class="jilid-tag jilid-tag-emerald">Volume 2</span>
+                <div class="jilid-title">Keteguhan Iman & Keluarga 'Imran</div>
+                <div class="jilid-range">QS. Āli 'Imrān [3:0–67+] (Mitra Az-Zahrāwān)</div>
+            </div>
         </div>
     </section>
 
     <!-- SEARCH & FILTER BAR -->
     <div class="search-bar">
         <div class="search-input-wrapper">
-            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Cari nomor ayat (misal: 255, 183) atau kata kunci tema (misal: infaq, riba, ibrahim, adam, shalat, takwa)...">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Cari nomor ayat (misal: 2:255, 3:18, 183) atau kata kunci tema (misal: infaq, riba, ibrahim, maryam, isa, shalat, takwa)...">
         </div>
         <div class="filter-tabs">
-            <button class="tab-btn active" data-filter="all">Semua Ayat (295)</button>
-            <button class="tab-btn" data-filter="fatihah">QS. Al-Fātihah (8)</button>
+            <button class="tab-btn active" data-filter="all">Semua Kajian ($totalCount)</button>
+            <button class="tab-btn" data-filter="fatihah">QS. Al-Fātihah ($fatihahCount)</button>
             <button class="tab-btn" data-filter="blok1">Al-Baqarah Blok 1 (21)</button>
             <button class="tab-btn" data-filter="blok2">Blok 2 (19)</button>
             <button class="tab-btn" data-filter="blok3">Blok 3 (102)</button>
             <button class="tab-btn" data-filter="blok4">Blok 4 (111)</button>
             <button class="tab-btn" data-filter="blok5">Blok 5 (34)</button>
+            <button class="tab-btn" data-filter="aliimran">QS. Āli 'Imrān ($aliImranCount)</button>
         </div>
-        <div class="items-count-indicator" id="countIndicator">Menampilkan 295 dari 295 berkas kajian</div>
+        <div class="items-count-indicator" id="countIndicator">Menampilkan $totalCount dari $totalCount berkas kajian</div>
     </div>
 
     <!-- LIST OF AYAT -->
@@ -464,8 +526,10 @@ $sb = [System.Text.StringBuilder]::new()
 
 foreach ($item in $items) {
     $category = "all"
-    if ($item.Surah -match "Fātihah") {
+    if ($item.SurahNum -eq 1) {
         $category = "fatihah"
+    } elseif ($item.SurahNum -eq 3) {
+        $category = "aliimran"
     } elseif ($item.Block -match "Pengantar|Blok 1") {
         $category = "blok1"
     } elseif ($item.Block -match "Blok 2") {
@@ -479,10 +543,10 @@ foreach ($item in $items) {
     }
 
     $badgeLabel = ""
-    if ($item.Surah -match "Fātihah") {
-        if ($item.Ayat -eq 0) { $badgeLabel = "QS. 1:0 (Maqasid)" } else { $badgeLabel = "QS. 1:$($item.Ayat)" }
+    if ($item.Ayat -eq 0) {
+        $badgeLabel = "QS. $($item.SurahNum):0 (Maqasid)"
     } else {
-        if ($item.Ayat -eq 0) { $badgeLabel = "QS. 2:0 (Maqasid)" } else { $badgeLabel = "QS. 2:$($item.Ayat)" }
+        $badgeLabel = "QS. $($item.SurahNum):$($item.Ayat)"
     }
 
     $themeText = $item.ThematicTitle
@@ -547,7 +611,7 @@ foreach ($item in $items) {
             }
         });
 
-        countIndicator.textContent = `Menampilkan ${visibleCount} dari ${cards.length} berkas kajian`;
+        countIndicator.textContent = 'Menampilkan ' + visibleCount + ' dari ' + cards.length + ' berkas kajian';
     }
 
     searchInput.addEventListener('input', filterItems);
@@ -566,5 +630,7 @@ foreach ($item in $items) {
 </html>
 "@)
 
-[System.IO.File]::WriteAllText("$root\Volume_1_Master_Index.html", $sb.ToString(), [System.Text.Encoding]::UTF8)
-Write-Host "SUCCESS: Volume_1_Master_Index.html written! Bytes: $((Get-Item "$root\Volume_1_Master_Index.html").Length)"
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText("$root\Volume_1_Master_Index.html", $sb.ToString(), $utf8NoBom)
+[System.IO.File]::WriteAllText("$root\index.html", $sb.ToString(), $utf8NoBom)
+Write-Host "SUCCESS: index.html & Volume_1_Master_Index.html written! Total items: $totalCount, Bytes: $((Get-Item "$root\index.html").Length)"
